@@ -1,0 +1,381 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fyzika Studio</title>
+<style>
+  :root {
+    --bg: #0b1020; --panel: #121a30; --panel2: #18223d; --line: #26324f; --ink: #eef3ff; --muted: #8e9cc0;
+    --yellow: #ffc83d; --teal: #4fe3c1; --red: #ff6b6b; --blue: #7cc4ff; --ok: #3dd68c;
+    --r: 16px;
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.45 "Segoe UI", system-ui, -apple-system, sans-serif; }
+  body { background-image: linear-gradient(rgba(124,196,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(124,196,255,.05) 1px, transparent 1px); background-size: 32px 32px; min-height: 100vh; }
+  header { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 18px; padding: 14px 24px; background: rgba(11,16,32,.92); backdrop-filter: blur(8px); border-bottom: 1px solid var(--line); }
+  .logo { display: flex; align-items: center; gap: 10px; font-weight: 800; letter-spacing: .5px; }
+  .logo i { width: 14px; height: 14px; border-radius: 4px; background: var(--yellow); display: inline-block; box-shadow: 0 0 16px var(--yellow); }
+  nav { display: flex; gap: 4px; margin-left: 12px; flex-wrap: wrap; }
+  nav button { background: none; border: 0; color: var(--muted); font: inherit; font-weight: 600; padding: 8px 14px; border-radius: 10px; cursor: pointer; }
+  nav button.on { color: var(--ink); background: var(--panel2); }
+  .status { margin-left: auto; font-size: 13px; color: var(--muted); text-align: right; }
+  main { max-width: 1240px; margin: 0 auto; padding: 22px 24px 80px; }
+  section { display: none; } section.on { display: block; }
+  h2 { font-size: 20px; margin: 4px 0 14px; } h3 { font-size: 15px; margin: 0 0 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 1.5px; font-weight: 700; }
+  .grid { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); margin-bottom: 18px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r); padding: 18px; margin-bottom: 16px; }
+  .stat .big { font-size: 34px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .stat .sub { color: var(--muted); font-size: 13px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; border: 1px solid var(--line); background: var(--panel2); color: var(--ink); padding: 9px 15px; border-radius: 11px; font: inherit; font-weight: 650; cursor: pointer; white-space: nowrap; }
+  .btn:hover { border-color: var(--blue); }
+  .btn.primary { background: var(--yellow); color: #1b1503; border-color: var(--yellow); }
+  .btn.danger { color: var(--red); }
+  .btn.sm { padding: 5px 10px; font-size: 13px; border-radius: 9px; }
+  .btn:disabled { opacity: .45; cursor: not-allowed; }
+  .row { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+  .bar { height: 14px; background: #0d1427; border-radius: 99px; overflow: hidden; border: 1px solid var(--line); }
+  .bar > div { height: 100%; width: 0; background: linear-gradient(90deg, var(--yellow), #ff9f1c); transition: width .6s; }
+  .log { background: #070b16; border: 1px solid var(--line); border-radius: 12px; padding: 12px; height: 260px; overflow: auto; font: 12.5px/1.5 Consolas, ui-monospace, monospace; color: #b9c6e8; white-space: pre-wrap; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { text-align: left; padding: 9px 8px; border-bottom: 1px solid var(--line); vertical-align: middle; }
+  th { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
+  .chip { display: inline-flex; align-items: center; gap: 4px; padding: 3px 8px; border-radius: 99px; font-size: 12px; font-weight: 700; background: #0d1427; border: 1px solid var(--line); color: var(--muted); margin: 1px; cursor: default; }
+  .chip.ok { color: var(--ok); border-color: #1f5f45; } .chip.voice { color: var(--blue); border-color: #2a4a72; } .chip.warn { color: var(--yellow); border-color: #6b5520; } .chip.err { color: var(--red); border-color: #6b2a2a; }
+  .chip.click { cursor: pointer; }
+  .muted { color: var(--muted); } .small { font-size: 13px; }
+  input, select { background: #0d1427; border: 1px solid var(--line); color: var(--ink); padding: 8px 10px; border-radius: 10px; font: inherit; }
+  input[type=checkbox] { width: 18px; height: 18px; accent-color: var(--yellow); }
+  label.f { display: block; margin-bottom: 12px; } label.f span { display: block; font-size: 13px; color: var(--muted); margin-bottom: 4px; } label.f input, label.f select { width: 100%; }
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; } @media (max-width: 860px) { .two { grid-template-columns: 1fr; } }
+  .toggle { display: inline-flex; align-items: center; gap: 10px; font-weight: 700; cursor: pointer; }
+  .pill-on { color: var(--ok); } .pill-off { color: var(--muted); }
+  dialog { background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 20px; padding: 18px; max-width: 760px; width: 94vw; }
+  dialog::backdrop { background: rgba(0,0,0,.6); }
+  .player { display: grid; grid-template-columns: 300px 1fr; gap: 18px; } @media (max-width: 700px) { .player { grid-template-columns: 1fr; } }
+  video { width: 100%; border-radius: 14px; background: #000; aspect-ratio: 9/16; }
+  textarea { width: 100%; min-height: 220px; background: #0d1427; color: var(--ink); border: 1px solid var(--line); border-radius: 12px; padding: 10px; font: 13px/1.5 inherit; resize: vertical; }
+  .hint { font-size: 13px; color: var(--muted); background: #0d1427; border: 1px dashed var(--line); border-radius: 12px; padding: 10px 12px; margin: 10px 0; }
+  .tag { font-family: Consolas, monospace; font-size: 12px; color: var(--muted); }
+  .ch { display: grid; grid-template-columns: 1.3fr 1fr .8fr auto auto auto; gap: 8px; align-items: center; padding: 10px 0; border-bottom: 1px solid var(--line); }
+  @media (max-width: 860px) { .ch { grid-template-columns: 1fr 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <div class="logo"><i></i> FYZIKA STUDIO</div>
+  <nav>
+    <button data-tab="home" class="on">Přehled</button>
+    <button data-tab="videos">Videa</button>
+    <button data-tab="publish">Publikování</button>
+    <button data-tab="settings">Nastavení</button>
+  </nav>
+  <div class="status" id="hdrStatus">…</div>
+</header>
+<main>
+  <!-- ============ PŘEHLED ============ -->
+  <section id="home" class="on">
+    <div class="grid" id="stats"></div>
+    <div class="card">
+      <h3>Výroba</h3>
+      <div class="row" style="margin-bottom:12px">
+        <button class="btn primary" id="makeAll">🎬 Vyrobit všechna nová videa</button>
+        <select id="makeLangs">
+          <option value="cs,en,ro">CZ + EN + RO</option>
+          <option value="cs">jen CZ</option><option value="en">jen EN</option><option value="ro">jen RO</option>
+        </select>
+        <button class="btn danger" id="stopBtn">⏹ Zastavit</button>
+        <span class="muted small" id="jobNow"></span>
+      </div>
+      <div class="bar"><div id="renderBar"></div></div>
+      <div class="row small muted" style="margin-top:8px" id="renderTxt">Nic neběží.</div>
+      <div class="hint">Vyrobí hlas (ElevenLabs, dokud máš kredity – pak zdarma hlas Microsoft) a vyrenderuje videa do
+        <span class="tag">out/videos/&lt;číslo-název&gt;/CZ|EN|RO/video.mp4</span> + <span class="tag">popis.txt</span>. Hotové se přeskočí, jde to kdykoli přerušit.</div>
+    </div>
+    <div class="two">
+      <div class="card"><h3>Úlohy</h3><div id="jobs" class="small"></div></div>
+      <div class="card"><h3>Další publikování</h3><div id="nextPosts" class="small"></div></div>
+    </div>
+    <div class="card"><h3>Záznam</h3><div class="log" id="log"></div></div>
+  </section>
+
+  <!-- ============ VIDEA ============ -->
+  <section id="videos">
+    <div class="row" style="justify-content:space-between;margin-bottom:12px">
+      <h2 style="margin:0">Videa</h2>
+      <div class="row">
+        <select id="vFilter"><option value="new">Nová (15+)</option><option value="all">Všechna</option><option value="old">Stará (1–14)</option><option value="todo">Nehotová</option></select>
+        <button class="btn" id="openOut">📁 Otevřít složku s videi</button>
+      </div>
+    </div>
+    <div class="card" style="padding:6px 14px">
+      <table><thead><tr><th>#</th><th>Název</th><th>CZ</th><th>EN</th><th>RO</th><th>Publikovat</th><th></th></tr></thead><tbody id="vRows"></tbody></table>
+    </div>
+    <p class="muted small">🎙 = namluveno (E = ElevenLabs, M = Microsoft zdarma) · 🎬 = vyrenderováno (klikni pro přehrání) · ✓ u účtů = už publikováno.</p>
+  </section>
+
+  <!-- ============ PUBLIKOVÁNÍ ============ -->
+  <section id="publish">
+    <div class="card">
+      <div class="row" style="justify-content:space-between">
+        <h2 style="margin:0">Automatické publikování</h2>
+        <label class="toggle"><input type="checkbox" id="schedOn"> <span id="schedTxt">Vypnuto</span></label>
+      </div>
+      <p class="muted">V každém čase níže Studio na každý zapnutý účet nahraje <b>jedno</b> další hotové video (nejnižší číslo, které tam ještě není). Dva časy = 2 videa denně na každém účtu. Počítač a Studio musí v tu dobu běžet; zmeškaný čas se dožene do 3 hodin.</p>
+      <div class="row"><span>Časy:</span><input id="t1" type="time" value="11:30"><input id="t2" type="time" value="18:30"><input id="t3" type="time" placeholder="volitelný 3."><button class="btn sm" id="saveTimes">Uložit časy</button></div>
+    </div>
+    <div class="card">
+      <div class="row" style="justify-content:space-between"><h3 style="margin:0">Účty</h3><button class="btn sm" id="addCh">+ Přidat účet</button></div>
+      <div id="chList"></div>
+      <div class="row" style="margin-top:12px"><button class="btn primary" id="saveCh">Uložit účty</button></div>
+      <div class="hint">
+        <b>Jak to propojit:</b> 1) U účtu klikni <b>Přihlásit</b> – otevře se okno Chrome/Edge s vlastním profilem tohoto účtu. 2) Přihlas se jako normálně (klidně i s 2FA) a okno zavři. 3) Hotovo – Studio si přihlášení pamatuje a nahrává samo.
+        Zkus to nejdřív tlačítkem <b>Publikovat teď</b>. Když se web TikToku/Instagramu/YouTube změní a automatika se zasekne, okno zůstane otevřené – dokliknes to ručně a v historii dáš „Označit jako publikované“.
+      </div>
+      <div class="muted small" id="browserInfo"></div>
+    </div>
+    <div class="card">
+      <h3>Historie</h3>
+      <table><thead><tr><th>Kdy</th><th>Účet</th><th>Video</th><th>Stav</th><th></th></tr></thead><tbody id="hist"></tbody></table>
+    </div>
+  </section>
+
+  <!-- ============ NASTAVENÍ ============ -->
+  <section id="settings">
+    <div class="two">
+      <div class="card">
+        <h3>Hlas</h3>
+        <label class="f"><span>ElevenLabs API klíč</span><input id="ELEVENLABS_API_KEY" placeholder="sk_…"></label>
+        <div class="row">
+          <label class="f" style="flex:1"><span>Hlas ID – CZ</span><input id="ELEVENLABS_VOICE_CS"></label>
+          <label class="f" style="flex:1"><span>EN</span><input id="ELEVENLABS_VOICE_EN"></label>
+          <label class="f" style="flex:1"><span>RO</span><input id="ELEVENLABS_VOICE_RO"></label>
+        </div>
+        <div class="row">
+          <label class="f" style="flex:1"><span>Kdo mluví – CZ</span><select id="VOICE_PROVIDER_CS"></select></label>
+          <label class="f" style="flex:1"><span>EN</span><select id="VOICE_PROVIDER_EN"></select></label>
+          <label class="f" style="flex:1"><span>RO</span><select id="VOICE_PROVIDER_RO"></select></label>
+        </div>
+        <div class="row">
+          <label class="f" style="flex:1"><span>Microsoft hlas CZ</span><select id="EDGE_VOICE_CS"><option value="">Antonín (muž)</option><option value="cs-CZ-VlastaNeural">Vlasta (žena)</option></select></label>
+          <label class="f" style="flex:1"><span>EN</span><select id="EDGE_VOICE_EN"><option value="">Andrew (muž)</option><option value="en-US-AvaNeural">Ava (žena)</option><option value="en-US-BrianNeural">Brian (muž)</option><option value="en-GB-RyanNeural">Ryan (UK)</option></select></label>
+          <label class="f" style="flex:1"><span>RO</span><select id="EDGE_VOICE_RO"><option value="">Emil (muž)</option><option value="ro-RO-AlinaNeural">Alina (žena)</option></select></label>
+        </div>
+        <div class="hint" id="voiceHint"></div>
+      </div>
+      <div class="card">
+        <h3>AI scénáře (Claude)</h3>
+        <label class="f"><span>Anthropic API klíč</span><input id="ANTHROPIC_API_KEY" placeholder="sk-ant-…"></label>
+        <label class="f"><span>Rozpočet v USD (nepřekročí ho)</span><input id="AI_BUDGET_USD" placeholder="2.1"></label>
+        <div class="hint" id="aiHint"></div>
+        <div class="row"><input id="genCount" type="number" min="1" max="10" value="3" style="width:80px"><button class="btn" id="genBtn">✨ Vymyslet nová videa</button></div>
+        <p class="muted small">Témata bere z <span class="tag">napady/napady.json</span> (další v pořadí, která ještě nemají scénář). Jeden scénář stojí přibližně 0,15–0,25 $.</p>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Ostatní</h3>
+      <label class="f"><span>Cesta k prohlížeči (nech prázdné = najde Chrome/Edge sám)</span><input id="BROWSER_PATH"></label>
+      <div class="row">
+        <button class="btn primary" id="saveSet">Uložit nastavení</button>
+        <button class="btn" id="migrate">📁 Uspořádat stará videa do nových složek</button>
+        <label class="toggle" id="autoWrap"><input type="checkbox" id="autostart"> Spouštět Studio se systémem Windows</label>
+      </div>
+    </div>
+  </section>
+</main>
+
+<dialog id="dlg">
+  <div class="row" style="justify-content:space-between;margin-bottom:10px"><b id="dlgTitle"></b><button class="btn sm" onclick="dlg.close()">✕</button></div>
+  <div class="player">
+    <div><video id="dlgVideo" controls playsinline></video>
+      <div class="row" style="margin-top:8px" id="dlgLangs"></div></div>
+    <div>
+      <h3>Popisek k příspěvku</h3>
+      <textarea id="dlgCap" readonly></textarea>
+      <div class="row" style="margin-top:8px"><button class="btn sm" id="copyCap">📋 Kopírovat</button><button class="btn sm" id="dlgFolder">📁 Složka</button></div>
+    </div>
+  </div>
+</dialog>
+
+<script>
+const $ = (s) => document.querySelector(s);
+const api = async (url, data) => {
+  const r = await fetch(url, data === undefined ? {} : {method: 'POST', headers: {'Content-Type': 'application/json'}, body: JSON.stringify(data)});
+  const ct = r.headers.get('content-type') || '';
+  const j = ct.includes('json') ? await r.json() : await r.text();
+  if (!r.ok) { alert((j && j.error) || 'Chyba'); throw new Error('api'); }
+  return j;
+};
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;'}[c]));
+const LANGS = ['cs', 'en', 'ro']; const LBL = {cs: 'CZ', en: 'EN', ro: 'RO'};
+const PLAT = {tiktok: 'TikTok', instagram: 'Instagram', youtube: 'YouTube'};
+let S = null; let channelsDraft = null;
+
+document.querySelectorAll('nav button').forEach((b) => b.onclick = () => {
+  document.querySelectorAll('nav button').forEach((x) => x.classList.toggle('on', x === b));
+  document.querySelectorAll('section').forEach((s) => s.classList.toggle('on', s.id === b.dataset.tab));
+  if (b.dataset.tab === 'settings') loadSettings();
+});
+
+const fmtTime = (iso) => iso ? new Date(iso).toLocaleString('cs-CZ', {weekday: 'short', day: 'numeric', month: 'numeric', hour: '2-digit', minute: '2-digit'}) : '–';
+
+function renderHome() {
+  const v = S.videos; const nw = v.filter((x) => x.id >= 15);
+  const cnt = (arr, k) => arr.reduce((n, x) => n + LANGS.filter((l) => x.langs[l][k]).length, 0);
+  const posted = S.posts.filter((p) => p.status !== 'error').length;
+  const el = S.eleven.value;
+  $('#stats').innerHTML = `
+    <div class="card stat"><div class="sub">Hotová videa (všechny jazyky)</div><div class="big">${cnt(v, 'rendered')}<span class="muted" style="font-size:18px"> / ${v.length * 3}</span></div><div class="sub">nová: ${cnt(nw, 'rendered')} / ${nw.length * 3}</div></div>
+    <div class="card stat"><div class="sub">ElevenLabs kredity</div><div class="big">${el == null ? '–' : el.toLocaleString('cs-CZ')}</div><div class="sub">${el == null ? 'bez klíče → mluví zdarma Microsoft' : `≈ ${Math.floor(el / 430)} namluvených videí (1 jazyk)`}</div></div>
+    <div class="card stat"><div class="sub">AI rozpočet (Claude)</div><div class="big">${(S.ai.budget - S.ai.spent).toFixed(2)} $</div><div class="sub">utraceno ${S.ai.spent.toFixed(2)} $ · nápadů v zásobě: ${S.ideasLeft}</div></div>
+    <div class="card stat"><div class="sub">Další publikování</div><div class="big" style="font-size:22px;margin:8px 0">${S.schedule.enabled ? fmtTime(S.nextRun) : 'vypnuto'}</div><div class="sub">publikováno celkem: ${posted}</div></div>`;
+  const r = S.render;
+  const busy = !!S.running;
+  $('#jobNow').textContent = busy ? `Běží: ${S.running}` : '';
+  if (r && !r.finished && busy) {
+    $('#renderBar').style.width = `${Math.round(r.overall * 100)}%`;
+    $('#renderTxt').textContent = `${Math.round(r.overall * 100)} % · ${r.done}/${r.total} hotovo${r.current ? ` · teď ${r.current} ${Math.round(r.pct * 100)} %` : ''}${r.etaMin != null ? ` · zbývá ~${Math.max(1, Math.round(r.etaMin))} min` : ''}`;
+  } else {
+    $('#renderBar').style.width = '0';
+    $('#renderTxt').textContent = busy ? 'Připravuji (hlas / bundle)…' : 'Nic neběží.';
+  }
+  $('#jobs').innerHTML = S.jobs.length ? S.jobs.map((j) => `<div>${{queued: '⏳', running: '▶️', done: '✅', failed: '❌', stopped: '⏹️'}[j.status]} ${esc(j.label)}</div>`).join('') : '<span class="muted">Zatím nic.</span>';
+  $('#nextPosts').innerHTML = S.channels.map((c) => {
+    const next = v.find((x) => !x.skip && x.langs[c.lang].rendered && !x.posted.includes(c.id));
+    return `<div>${c.enabled ? '🟢' : '⚪'} <b>${esc(c.name)}</b> <span class="muted">(${PLAT[c.platform]}, ${LBL[c.lang]})</span> → ${next ? `#${next.id} ${esc(next.title)}` : '<span class="muted">nic připraveného</span>'}</div>`;
+  }).join('') + (S.pubBusy ? `<div style="margin-top:8px">📤 Právě: ${esc(S.pubBusy)}</div>` : '');
+  $('#hdrStatus').innerHTML = `${busy ? '▶️ ' + esc(S.running) : 'Připraveno'}<br>${S.schedule.enabled ? '🗓️ plán zapnut' : '🗓️ plán vypnut'}`;
+}
+
+function chips(x) {
+  return LANGS.map((l) => {
+    const s = x.langs[l];
+    const voice = s.voiced ? `<span class="chip voice" title="${s.provider === 'edge' ? 'Microsoft (zdarma)' : 'ElevenLabs'}">🎙 ${s.provider === 'edge' ? 'M' : 'E'}</span>` : '<span class="chip">🎙 –</span>';
+    const vid = s.rendered ? `<span class="chip ok click" data-play="${x.id}" data-lang="${l}">🎬 ▶</span>` : s.old ? '<span class="chip warn" title="Ve staré složce – Nastavení → Uspořádat">🎬 stará</span>' : '<span class="chip">🎬 –</span>';
+    return `<td>${voice}${vid}</td>`;
+  }).join('');
+}
+
+function renderVideos() {
+  const f = $('#vFilter').value;
+  const list = S.videos.filter((x) => f === 'all' || (f === 'new' && x.id >= 15) || (f === 'old' && x.id < 15) || (f === 'todo' && LANGS.some((l) => !x.langs[l].rendered)));
+  $('#vRows').innerHTML = list.map((x) => {
+    const posted = S.channels.map((c) => x.posted.includes(c.id) ? `<span class="chip ok" title="${esc(c.name)}">✓ ${esc(c.name)}</span>` : '').join('');
+    return `<tr>
+      <td class="muted">${x.id}</td>
+      <td><b>${esc(x.title)}</b><div class="muted small">${x.short ? 'krátké 2D' : 'původní 3D'} · ${x.scenes} scén</div></td>
+      ${chips(x)}
+      <td><label class="toggle small"><input type="checkbox" data-skip="${x.id}" ${x.skip ? '' : 'checked'}> ${x.skip ? 'ne' : 'ano'}</label><div>${posted}</div></td>
+      <td><button class="btn sm" data-make="${x.id}">Vyrobit</button></td>
+    </tr>`;
+  }).join('');
+}
+
+function renderPublish() {
+  $('#schedOn').checked = S.schedule.enabled;
+  $('#schedTxt').innerHTML = S.schedule.enabled ? `<span class="pill-on">Zapnuto</span> · další ${fmtTime(S.nextRun)}` : '<span class="pill-off">Vypnuto</span>';
+  if (!document.activeElement || !document.activeElement.matches('#t1,#t2,#t3')) {
+    $('#t1').value = S.schedule.times[0] || ''; $('#t2').value = S.schedule.times[1] || ''; $('#t3').value = S.schedule.times[2] || '';
+  }
+  if (!channelsDraft) channelsDraft = JSON.parse(JSON.stringify(S.channels));
+  if (!$('#chList').contains(document.activeElement)) drawChannels();
+  $('#browserInfo').textContent = S.browser ? `Prohlížeč: ${S.browser}` : '⚠️ Nenašel jsem Chrome ani Edge – nainstaluj Google Chrome.';
+  const name = (id) => (S.channels.find((c) => c.id === id) || {name: id}).name;
+  const title = (id) => (S.videos.find((v) => v.id === id) || {title: ''}).title;
+  $('#hist').innerHTML = S.posts.length ? S.posts.map((p) => `<tr>
+      <td class="small">${fmtTime(p.at)}</td><td>${esc(name(p.channelId))}</td><td>#${p.videoId} ${esc(title(p.videoId))}</td>
+      <td>${p.status === 'ok' ? '<span class="chip ok">✓ automaticky</span>' : p.status === 'manual' ? '<span class="chip ok">✓ ručně</span>' : `<span class="chip err" title="${esc(p.message)}">✕ chyba</span> <span class="small muted">${esc((p.message || '').slice(0, 90))}</span>`}</td>
+      <td>${p.status === 'error' ? `<button class="btn sm" data-mark="${p.channelId}|${p.videoId}">Označit jako publikované</button>` : `<button class="btn sm" data-unmark="${p.channelId}|${p.videoId}" title="Zruší záznam – video se zařadí znovu">↺</button>`}</td></tr>`).join('') : '<tr><td colspan="5" class="muted">Zatím nic nepublikováno.</td></tr>';
+}
+
+function drawChannels() {
+  $('#chList').innerHTML = channelsDraft.map((c, i) => `<div class="ch">
+    <input data-ci="${i}" data-k="name" value="${esc(c.name)}" placeholder="Název účtu">
+    <select data-ci="${i}" data-k="platform">${Object.entries(PLAT).map(([k, v]) => `<option value="${k}" ${c.platform === k ? 'selected' : ''}>${v}</option>`).join('')}</select>
+    <select data-ci="${i}" data-k="lang">${LANGS.map((l) => `<option value="${l}" ${c.lang === l ? 'selected' : ''}>${LBL[l]}</option>`).join('')}</select>
+    <label class="toggle small"><input type="checkbox" data-ci="${i}" data-k="enabled" ${c.enabled ? 'checked' : ''}> zapnuto</label>
+    <div class="row"><button class="btn sm" data-login="${esc(c.id)}">🔑 Přihlásit</button><button class="btn sm" data-postnow="${esc(c.id)}">📤 Publikovat teď</button></div>
+    <button class="btn sm danger" data-del="${i}">✕</button></div>`).join('');
+}
+
+async function refresh() {
+  try { S = await api('/api/overview'); } catch { return; }
+  renderHome(); renderVideos(); renderPublish();
+  const logs = await api('/api/log');
+  const box = $('#log'); const atEnd = box.scrollTop + box.clientHeight >= box.scrollHeight - 30;
+  box.textContent = logs.join('\n'); if (atEnd) box.scrollTop = box.scrollHeight;
+  const busy = !!S.running; $('#makeAll').disabled = busy;
+}
+
+/* ---------- akce ---------- */
+$('#makeAll').onclick = async () => {
+  const langs = $('#makeLangs').value.split(',');
+  const ids = S.videos.filter((x) => x.id >= 15 && langs.some((l) => !x.langs[l].rendered)).map((x) => x.id);
+  if (!ids.length) return alert('Všechna nová videa jsou hotová 🎉');
+  await api('/api/make', {ids, langs, what: 'make'}); refresh();
+};
+$('#stopBtn').onclick = () => api('/api/stop', {}).then(refresh);
+$('#vFilter').onchange = renderVideos;
+$('#openOut').onclick = () => api('/api/open', {});
+document.addEventListener('click', async (e) => {
+  const t = e.target.closest('[data-play],[data-make],[data-login],[data-postnow],[data-del],[data-mark],[data-unmark]');
+  if (!t) return;
+  if (t.dataset.play) openPlayer(Number(t.dataset.play), t.dataset.lang);
+  if (t.dataset.make) { await api('/api/make', {ids: [Number(t.dataset.make)], langs: LANGS, what: 'make'}); refresh(); }
+  if (t.dataset.login) api('/api/login', {channelId: t.dataset.login});
+  if (t.dataset.postnow) { if (confirm('Publikovat teď další video na tento účet?')) { await api('/api/post-now', {channelId: t.dataset.postnow}); refresh(); } }
+  if (t.dataset.del) { channelsDraft.splice(Number(t.dataset.del), 1); drawChannels(); }
+  if (t.dataset.mark) { const [c, v] = t.dataset.mark.split('|'); await api('/api/mark', {channelId: c, videoId: Number(v)}); refresh(); }
+  if (t.dataset.unmark) { const [c, v] = t.dataset.unmark.split('|'); if (confirm('Zrušit záznam? Video se zařadí k publikování znovu.')) { await api('/api/mark', {channelId: c, videoId: Number(v), unmark: true}); refresh(); } }
+});
+document.addEventListener('change', async (e) => {
+  const t = e.target;
+  if (t.dataset.skip) { await api('/api/skip', {ids: [Number(t.dataset.skip)], skip: !t.checked}); refresh(); }
+  if (t.dataset.ci !== undefined) { const c = channelsDraft[Number(t.dataset.ci)]; c[t.dataset.k] = t.type === 'checkbox' ? t.checked : t.value; }
+});
+$('#addCh').onclick = () => { channelsDraft.push({id: '', name: 'Nový účet', platform: 'tiktok', lang: 'cs', enabled: true}); drawChannels(); };
+$('#saveCh').onclick = async () => { await api('/api/channels', {channels: channelsDraft}); channelsDraft = null; refresh(); };
+$('#schedOn').onchange = async (e) => { await api('/api/schedule', {enabled: e.target.checked}); refresh(); };
+$('#saveTimes').onclick = async () => { await api('/api/schedule', {times: [$('#t1').value, $('#t2').value, $('#t3').value].filter(Boolean)}); refresh(); };
+
+/* ---------- přehrávač ---------- */
+let cur = {id: 0, lang: 'cs'};
+async function openPlayer(id, lang) {
+  cur = {id, lang};
+  const x = S.videos.find((v) => v.id === id);
+  $('#dlgTitle').textContent = `#${id} ${x.titles[lang]}`;
+  $('#dlgVideo').src = `/media/${id}/${lang}.mp4?t=${Date.now()}`;
+  $('#dlgCap').value = await api(`/api/caption?id=${id}&lang=${lang}`);
+  $('#dlgLangs').innerHTML = LANGS.map((l) => `<button class="btn sm" ${x.langs[l].rendered ? '' : 'disabled'} onclick="openPlayer(${id}, '${l}')" style="${l === lang ? 'border-color:var(--yellow)' : ''}">${LBL[l]}</button>`).join('');
+  if (!dlg.open) dlg.showModal();
+}
+$('#dlg').addEventListener('close', () => { $('#dlgVideo').pause(); $('#dlgVideo').removeAttribute('src'); $('#dlgVideo').load(); });
+$('#copyCap').onclick = () => { navigator.clipboard.writeText($('#dlgCap').value); $('#copyCap').textContent = '✓ Zkopírováno'; setTimeout(() => $('#copyCap').textContent = '📋 Kopírovat', 1500); };
+$('#dlgFolder').onclick = () => api('/api/open', cur);
+
+/* ---------- nastavení ---------- */
+const PROV = '<option value="">automaticky (ElevenLabs → pak zdarma)</option><option value="elevenlabs">vždy ElevenLabs</option><option value="edge">vždy zdarma (Microsoft)</option>';
+['VOICE_PROVIDER_CS', 'VOICE_PROVIDER_EN', 'VOICE_PROVIDER_RO'].forEach((k) => $('#' + k).innerHTML = PROV);
+async function loadSettings() {
+  const s = await api('/api/settings');
+  for (const [k, v] of Object.entries(s)) { const el = document.getElementById(k); if (el) el.value = v; }
+  const el = S && S.eleven.value;
+  $('#voiceHint').innerHTML = el == null ? 'Bez ElevenLabs klíče mluví zdarma hlas Microsoft Edge (Antonín / Andrew / Emil).' :
+    `Zbývá <b>${el.toLocaleString('cs-CZ')}</b> znaků ≈ ${Math.floor(el / 430)} namluvených videí v jednom jazyce. Tip: nastav ElevenLabs jen pro CZ („vždy ElevenLabs“) a EN/RO dej „vždy zdarma“ – kredity pak vystačí na ~${Math.floor(el / 430)} českých videí.`;
+  $('#aiHint').innerHTML = S ? `Zbývá ${(S.ai.budget - S.ai.spent).toFixed(2)} $ ≈ ${Math.max(0, Math.floor((S.ai.budget - S.ai.spent) / 0.2))} nových scénářů.` : '';
+  $('#autostart').checked = !!(S && S.autostart);
+  $('#autoWrap').style.display = S && S.platform === 'win32' ? '' : 'none';
+}
+$('#saveSet').onclick = async () => {
+  const keys = ['ELEVENLABS_API_KEY', 'ELEVENLABS_VOICE_CS', 'ELEVENLABS_VOICE_EN', 'ELEVENLABS_VOICE_RO', 'VOICE_PROVIDER_CS', 'VOICE_PROVIDER_EN', 'VOICE_PROVIDER_RO', 'EDGE_VOICE_CS', 'EDGE_VOICE_EN', 'EDGE_VOICE_RO', 'ANTHROPIC_API_KEY', 'AI_BUDGET_USD', 'BROWSER_PATH'];
+  await api('/api/settings', Object.fromEntries(keys.map((k) => [k, document.getElementById(k).value])));
+  await refresh(); loadSettings(); $('#saveSet').textContent = '✓ Uloženo'; setTimeout(() => $('#saveSet').textContent = 'Uložit nastavení', 1500);
+};
+$('#genBtn').onclick = async () => { await api('/api/generate', {count: Number($('#genCount').value)}); document.querySelector('nav button[data-tab=home]').click(); refresh(); };
+$('#migrate').onclick = async () => { const r = await api('/api/migrate', {}); alert(`Přesunuto ${r.moved} videí.`); refresh(); };
+$('#autostart').onchange = (e) => api('/api/autostart', {on: e.target.checked});
+
+refresh(); setInterval(refresh, 2500);
+</script>
+</body>
+</html>

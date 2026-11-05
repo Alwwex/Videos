@@ -1,0 +1,251 @@
+{
+  "engine": "blueprint",
+  "id": 16,
+  "title": {
+    "cs": "Proč hrom slyšíš až po blesku",
+    "en": "Why thunder comes after lightning",
+    "ro": "De ce auzi tunetul după fulger"
+  },
+  "description": {
+    "cs": "Blesk a hrom vzniknou ve stejnou chvíli. Proč je tedy neslyšíš současně? ⚡",
+    "en": "Lightning and thunder happen at the same moment. So why don't they arrive together? ⚡",
+    "ro": "Fulgerul și tunetul apar în același moment. Atunci de ce nu ajung odată? ⚡"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "blesk",
+    "bourka",
+    "lightning"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Blesk a hrom vzniknou *přesně ve stejnou chvíli*.",
+        "en": "Lightning and thunder happen at the *exact same moment*.",
+        "ro": "Fulgerul și tunetul apar în *exact același moment*."
+      },
+      "headline": {
+        "cs": "STEJNÝ OKAMŽIK|JINÝ PŘÍCHOD",
+        "en": "SAME MOMENT|DIFFERENT ARRIVAL",
+        "ro": "ACELAȘI MOMENT|ALTĂ SOSIRE"
+      },
+      "tag": "STORM OBSERVATION",
+      "accent": "yellow",
+      "visual": {
+        "type": "field",
+        "mode": "spark",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Tak proč nejdřív vidíš záblesk a pak teprve hřmí?",
+        "en": "So why do you see the flash first, and hear it later?",
+        "ro": "Atunci de ce vezi întâi lumina și abia apoi auzi?"
+      },
+      "headline": {
+        "cs": "NEJDŘÍV|ZÁBLESK",
+        "en": "FLASH|FIRST",
+        "ro": "ÎNTÂI|LUMINA"
+      },
+      "tag": "QUESTION",
+      "accent": "red",
+      "visual": {
+        "type": "icon",
+        "icon": "eye",
+        "icon2": "ear",
+        "relation": "vs",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Světlo letí rychlostí *300 000 kilometrů* za sekundu.",
+        "en": "Light travels *300,000 kilometers* every second.",
+        "ro": "Lumina parcurge *300.000 de kilometri* pe secundă."
+      },
+      "headline": {
+        "cs": "RYCHLOST|SVĚTLA",
+        "en": "SPEED OF|LIGHT",
+        "ro": "VITEZA|LUMINII"
+      },
+      "tag": "c = 3·10⁸ m/s",
+      "accent": "yellow",
+      "visual": {
+        "type": "counter",
+        "from": 0,
+        "to": 300000,
+        "decimals": 0,
+        "unit": {
+          "cs": " km/s",
+          "en": " km/s",
+          "ro": " km/s"
+        },
+        "caption": {
+          "cs": "k tobě dorazí prakticky okamžitě",
+          "en": "it reaches you almost instantly",
+          "ro": "ajunge la tine aproape instant"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Zvuk je strašně pomalý, jen asi *343 metrů* za sekundu.",
+        "en": "Sound is painfully slow, only about *343 meters* per second.",
+        "ro": "Sunetul e foarte lent, doar vreo *343 de metri* pe secundă."
+      },
+      "headline": {
+        "cs": "RYCHLOST|ZVUKU",
+        "en": "SPEED OF|SOUND",
+        "ro": "VITEZA|SUNETULUI"
+      },
+      "tag": "AIR · 20 °C",
+      "accent": "red",
+      "visual": {
+        "type": "counter",
+        "from": 0,
+        "to": 343,
+        "decimals": 0,
+        "unit": {
+          "cs": " m/s",
+          "en": " m/s",
+          "ro": " m/s"
+        },
+        "caption": {
+          "cs": "téměř milionkrát pomalejší než světlo",
+          "en": "almost a million times slower than light",
+          "ro": "de aproape un milion de ori mai lent"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Na jeden kilometr potřebuje zvuk zhruba *tři sekundy*.",
+        "en": "Sound needs about *three seconds* for one kilometer.",
+        "ro": "Sunetului îi trebuie vreo *trei secunde* pe kilometru."
+      },
+      "headline": {
+        "cs": "1 KM =|3 SEKUNDY",
+        "en": "1 KM =|3 SECONDS",
+        "ro": "1 KM =|3 SECUNDE"
+      },
+      "tag": "DELAY PER KILOMETER",
+      "accent": "teal",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "světlo",
+              "en": "light",
+              "ro": "lumina"
+            },
+            "value": 3.3e-06,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "zvuk",
+              "en": "sound",
+              "ro": "sunetul"
+            },
+            "value": 2.9,
+            "highlight": true
+          }
+        ],
+        "unit": {
+          "cs": " s",
+          "en": " s",
+          "ro": " s"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Takže počítej sekundy mezi zábleskem a hromem.",
+        "en": "So count the seconds between the flash and the boom.",
+        "ro": "Deci numără secundele dintre fulger și tunet."
+      },
+      "headline": {
+        "cs": "POČÍTEJ|SEKUNDY",
+        "en": "COUNT THE|SECONDS",
+        "ro": "NUMĂRĂ|SECUNDELE"
+      },
+      "tag": "FIELD METHOD",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "clock",
+        "icon2": null,
+        "relation": "none",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Vyděl je *třemi* a máš vzdálenost bouřky v kilometrech.",
+        "en": "Divide by *three* and you get the distance in kilometers.",
+        "ro": "Împarte la *trei* și afli distanța în kilometri."
+      },
+      "headline": {
+        "cs": "DĚLENO|TŘEMI",
+        "en": "DIVIDE BY|THREE",
+        "ro": "ÎMPARTE|LA TREI"
+      },
+      "tag": "DISTANCE",
+      "accent": "yellow",
+      "visual": {
+        "type": "formula",
+        "tex": "d \\approx \\frac{t}{\\hl{3}}\\ \\text{km}",
+        "caption": {
+          "cs": "9 sekund = bouřka asi 3 km daleko",
+          "en": "9 seconds = storm about 3 km away",
+          "ro": "9 secunde = furtuna e la vreo 3 km"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Když hřmí hned se zábleskem, bouřka je *přímo nad tebou*.",
+        "en": "If the boom comes with the flash, the storm is *right above you*.",
+        "ro": "Dacă tună odată cu fulgerul, furtuna e *chiar deasupra ta*."
+      },
+      "headline": {
+        "cs": "ŽÁDNÁ PAUZA =|NEBEZPEČÍ",
+        "en": "NO PAUSE =|DANGER",
+        "ro": "FĂRĂ PAUZĂ =|PERICOL"
+      },
+      "tag": "SAFETY",
+      "accent": "red",
+      "visual": {
+        "type": "icon",
+        "icon": "lightning",
+        "icon2": "house",
+        "relation": "arrow",
+        "effect": "shake",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
+        "en": "Follow for more *physics around you*.",
+        "ro": "Urmărește pentru mai multă *fizică din jurul tău*."
+      },
+      "headline": {
+        "cs": "SLEDUJ|PRO VÍC",
+        "en": "FOLLOW|FOR MORE",
+        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

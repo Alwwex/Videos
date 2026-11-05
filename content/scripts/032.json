@@ -1,0 +1,250 @@
+{
+  "engine": "blueprint",
+  "id": 32,
+  "title": {
+    "cs": "Jak GPS ví, kde jsi",
+    "en": "How GPS knows where you are",
+    "ro": "Cum știe GPS-ul unde ești"
+  },
+  "description": {
+    "cs": "Bez Einsteinovy teorie relativity by se tvoje GPS každý den spletlo o kilometry. 🛰️",
+    "en": "Without Einstein's relativity, your GPS would be off by kilometers every day. 🛰️",
+    "ro": "Fără relativitatea lui Einstein, GPS-ul ar greși cu kilometri în fiecare zi. 🛰️"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "gps",
+    "einstein",
+    "relativity"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Tvoje GPS by bez *Einsteina* nefungovalo.",
+        "en": "Your GPS wouldn't work without *Einstein*.",
+        "ro": "GPS-ul tău n-ar merge fără *Einstein*."
+      },
+      "headline": {
+        "cs": "GPS POTŘEBUJE|EINSTEINA",
+        "en": "GPS NEEDS|EINSTEIN",
+        "ro": "GPS-UL ARE NEVOIE|DE EINSTEIN"
+      },
+      "tag": "NAVIGATION",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "phone",
+        "icon2": "satellite",
+        "relation": "arrow",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Nad Zemí krouží přes *30 satelitů* s atomovými hodinami.",
+        "en": "Over *30 satellites* with atomic clocks circle the Earth.",
+        "ro": "Peste *30 de sateliți* cu ceasuri atomice orbitează Pământul."
+      },
+      "headline": {
+        "cs": "ATOMOVÉ|HODINY",
+        "en": "ATOMIC|CLOCKS",
+        "ro": "CEASURI|ATOMICE"
+      },
+      "tag": "20 200 km",
+      "accent": "blue",
+      "visual": {
+        "type": "orbit",
+        "mode": "orbit",
+        "center": "earth",
+        "body": "satellite",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Každý pořád vysílá *přesný čas*, kdy signál odeslal.",
+        "en": "Each one keeps broadcasting the *exact time* it sent the signal.",
+        "ro": "Fiecare transmite continuu *ora exactă* a semnalului."
+      },
+      "headline": {
+        "cs": "SIGNÁL|S ČASEM",
+        "en": "A TIME|STAMP",
+        "ro": "SEMNAL|CU ORĂ"
+      },
+      "tag": "TIME SIGNAL",
+      "accent": "teal",
+      "visual": {
+        "type": "icon",
+        "icon": "satellite",
+        "icon2": "clock",
+        "relation": "plus",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Mobil změří, jak dlouho signál *letěl*.",
+        "en": "Your phone measures how long each signal *traveled*.",
+        "ro": "Telefonul măsoară cât a *călătorit* semnalul."
+      },
+      "headline": {
+        "cs": "ČAS LETU|= VZDÁLENOST",
+        "en": "TRAVEL TIME|= DISTANCE",
+        "ro": "TIMPUL|= DISTANȚA"
+      },
+      "tag": "d = c · t",
+      "accent": "yellow",
+      "visual": {
+        "type": "formula",
+        "tex": "d = c \\cdot \\hl{\\Delta t}",
+        "caption": {
+          "cs": "světlo urazí 30 cm za nanosekundu",
+          "en": "light covers 30 cm per nanosecond",
+          "ro": "lumina parcurge 30 cm pe nanosecundă"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Ze *čtyř satelitů* spočítá tvou přesnou polohu.",
+        "en": "With *four satellites*, it calculates exactly where you are.",
+        "ro": "Din *patru sateliți* calculează exact unde ești."
+      },
+      "headline": {
+        "cs": "ČTYŘI|SATELITY",
+        "en": "FOUR|SATELLITES",
+        "ro": "PATRU|SATELIȚI"
+      },
+      "tag": "TRILATERATION",
+      "accent": "teal",
+      "visual": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "3 satelity = poloha",
+            "en": "3 satellites = position",
+            "ro": "3 sateliți = poziție"
+          },
+          {
+            "cs": "4. satelit = přesný čas",
+            "en": "4th satellite = exact time",
+            "ro": "al 4-lea = ora exactă"
+          },
+          {
+            "cs": "výsledek na metr",
+            "en": "accurate to meters",
+            "ro": "precizie de metri"
+          }
+        ],
+        "active": 1
+      }
+    },
+    {
+      "narration": {
+        "cs": "Hodiny na satelitech ale jdou o *38 mikrosekund* denně rychleji.",
+        "en": "But satellite clocks run *38 microseconds* fast every day.",
+        "ro": "Dar ceasurile sateliților o iau înainte cu *38 de microsecunde* pe zi."
+      },
+      "headline": {
+        "cs": "ČAS BĚŽÍ|JINAK",
+        "en": "TIME RUNS|DIFFERENTLY",
+        "ro": "TIMPUL|CURGE ALTFEL"
+      },
+      "tag": "RELATIVITY",
+      "accent": "red",
+      "visual": {
+        "type": "counter",
+        "from": 0,
+        "to": 38,
+        "decimals": 0,
+        "unit": {
+          "cs": " µs/den",
+          "en": " µs/day",
+          "ro": " µs/zi"
+        },
+        "caption": {
+          "cs": "slabší gravitace zrychlí čas víc, než ho zpomalí rychlost",
+          "en": "weaker gravity speeds time up more than speed slows it",
+          "ro": "gravitația slabă accelerează timpul mai mult decât îl încetinește viteza"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Bez opravy by se poloha spletla o *10 kilometrů* denně.",
+        "en": "Without correction, your position would drift *10 kilometers* a day.",
+        "ro": "Fără corecție, poziția ar greși cu *10 kilometri* pe zi."
+      },
+      "headline": {
+        "cs": "CHYBA|10 KM DENNĚ",
+        "en": "ERROR|10 KM A DAY",
+        "ro": "EROARE|10 KM PE ZI"
+      },
+      "tag": "UNCORRECTED DRIFT",
+      "accent": "red",
+      "visual": {
+        "type": "graph",
+        "curve": "linear",
+        "curve2": null,
+        "x": {
+          "cs": "dny",
+          "en": "days",
+          "ro": "zile"
+        },
+        "y": {
+          "cs": "chyba",
+          "en": "error",
+          "ro": "eroare"
+        },
+        "markLabel": {
+          "cs": "+10 km každý den",
+          "en": "+10 km every day",
+          "ro": "+10 km în fiecare zi"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Takže teorii relativity nosíš *v kapse* každý den.",
+        "en": "So you carry relativity *in your pocket* every day.",
+        "ro": "Deci porți relativitatea *în buzunar* în fiecare zi."
+      },
+      "headline": {
+        "cs": "RELATIVITA|V KAPSE",
+        "en": "RELATIVITY|IN YOUR POCKET",
+        "ro": "RELATIVITATEA|ÎN BUZUNAR"
+      },
+      "tag": "E = mc²",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "phone",
+        "icon2": null,
+        "relation": "none",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
+        "en": "Follow for more *physics around you*.",
+        "ro": "Urmărește pentru mai multă *fizică din jurul tău*."
+      },
+      "headline": {
+        "cs": "SLEDUJ|PRO VÍC",
+        "en": "FOLLOW|FOR MORE",
+        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

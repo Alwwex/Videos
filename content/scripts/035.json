@@ -1,0 +1,290 @@
+{
+  "engine": "blueprint",
+  "id": 35,
+  "title": {
+    "cs": "Proč máme roční období",
+    "en": "Why we have seasons",
+    "ro": "De ce avem anotimpuri"
+  },
+  "description": {
+    "cs": "Léto není proto, že jsme blíž Slunci. V lednu jsme mu totiž nejblíž. 🌍☀️",
+    "en": "Summer isn't because we're closer to the Sun. We're actually closest in January. 🌍☀️",
+    "ro": "Vara nu e pentru că suntem mai aproape de Soare. Suntem cel mai aproape în ianuarie. 🌍☀️"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "leto",
+    "zima",
+    "seasons"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Léto není proto, že jsme blíž *Slunci*.",
+        "en": "Summer is not because we're closer to the *Sun*.",
+        "ro": "Vara nu e pentru că suntem mai aproape de *Soare*."
+      },
+      "headline": {
+        "cs": "MÝTUS:|VZDÁLENOST",
+        "en": "MYTH:|DISTANCE",
+        "ro": "MIT:|DISTANȚA"
+      },
+      "tag": "COMMON MYTH",
+      "accent": "red",
+      "visual": {
+        "type": "icon",
+        "icon": "sun",
+        "icon2": "earth",
+        "relation": "arrow",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Nejblíž Slunci jsme ve skutečnosti *v lednu*.",
+        "en": "We're actually closest to the Sun *in January*.",
+        "ro": "De fapt, suntem cel mai aproape de Soare *în ianuarie*."
+      },
+      "headline": {
+        "cs": "NEJBLÍŽ|V LEDNU",
+        "en": "CLOSEST IN|JANUARY",
+        "ro": "CEL MAI APROAPE|ÎN IANUARIE"
+      },
+      "tag": "PERIHELION",
+      "accent": "blue",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "leden",
+              "en": "January",
+              "ro": "ianuarie"
+            },
+            "value": 147,
+            "highlight": true
+          },
+          {
+            "label": {
+              "cs": "červenec",
+              "en": "July",
+              "ro": "iulie"
+            },
+            "value": 152,
+            "highlight": false
+          }
+        ],
+        "unit": {
+          "cs": " mil. km",
+          "en": "M km",
+          "ro": " mil. km"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Za všechno může *naklonění* zemské osy.",
+        "en": "It's all because Earth's axis is *tilted*.",
+        "ro": "Totul vine de la *înclinarea* axei Pământului."
+      },
+      "headline": {
+        "cs": "NAKLONĚNÁ|OSA",
+        "en": "TILTED|AXIS",
+        "ro": "AXA|ÎNCLINATĂ"
+      },
+      "tag": "AXIAL TILT",
+      "accent": "yellow",
+      "visual": {
+        "type": "gauge",
+        "from": 0,
+        "to": 23.4,
+        "max": 90,
+        "unit": {
+          "cs": "°",
+          "en": "°",
+          "ro": "°"
+        },
+        "caption": {
+          "cs": "osa míří pořád stejným směrem",
+          "en": "the axis always points the same way",
+          "ro": "axa arată mereu în aceeași direcție"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Když je k Slunci nakloněná naše polokoule, máme *léto*.",
+        "en": "When our hemisphere tilts toward the Sun, it's *summer*.",
+        "ro": "Când emisfera noastră e înclinată spre Soare, e *vară*."
+      },
+      "headline": {
+        "cs": "NAKLONĚNÍ|= LÉTO",
+        "en": "TILTED TOWARD|= SUMMER",
+        "ro": "ÎNCLINARE|= VARĂ"
+      },
+      "tag": "ORBIT",
+      "accent": "teal",
+      "visual": {
+        "type": "orbit",
+        "mode": "tilt",
+        "center": "sun",
+        "body": "earth",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Slunce je výš a paprsky dopadají *kolměji*.",
+        "en": "The Sun is higher and its rays hit more *directly*.",
+        "ro": "Soarele e mai sus și razele cad mai *direct*."
+      },
+      "headline": {
+        "cs": "STRMĚJŠÍ|PAPRSKY",
+        "en": "STEEPER|RAYS",
+        "ro": "RAZE|MAI DIRECTE"
+      },
+      "tag": "SOLAR ANGLE",
+      "accent": "yellow",
+      "visual": {
+        "type": "compare",
+        "left": {
+          "icon": "sun",
+          "label": {
+            "cs": "léto",
+            "en": "summer",
+            "ro": "vară"
+          },
+          "value": {
+            "cs": "vysoko",
+            "en": "high",
+            "ro": "sus"
+          }
+        },
+        "right": {
+          "icon": "sun",
+          "label": {
+            "cs": "zima",
+            "en": "winter",
+            "ro": "iarnă"
+          },
+          "value": {
+            "cs": "nízko",
+            "en": "low",
+            "ro": "jos"
+          }
+        },
+        "winner": "left"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Stejná energie se soustředí na *menší plochu*.",
+        "en": "The same energy lands on a *smaller area*.",
+        "ro": "Aceeași energie cade pe o *suprafață mai mică*."
+      },
+      "headline": {
+        "cs": "VÍC ENERGIE|NA M²",
+        "en": "MORE ENERGY|PER M²",
+        "ro": "MAI MULTĂ ENERGIE|PE M²"
+      },
+      "tag": "INTENSITY",
+      "accent": "red",
+      "visual": {
+        "type": "formula",
+        "tex": "I = I_0 \\cdot \\hl{\\sin \\alpha}",
+        "caption": {
+          "cs": "α = výška Slunce nad obzorem",
+          "en": "α = Sun's height above the horizon",
+          "ro": "α = înălțimea Soarelui"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "A dny jsou delší, takže Slunce hřeje *víc hodin*.",
+        "en": "And days are longer, so the Sun heats for *more hours*.",
+        "ro": "Iar zilele sunt mai lungi, deci Soarele încălzește *mai multe ore*."
+      },
+      "headline": {
+        "cs": "DELŠÍ|DNY",
+        "en": "LONGER|DAYS",
+        "ro": "ZILE|MAI LUNGI"
+      },
+      "tag": "DAYLIGHT",
+      "accent": "yellow",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "červen",
+              "en": "June",
+              "ro": "iunie"
+            },
+            "value": 16,
+            "highlight": true
+          },
+          {
+            "label": {
+              "cs": "prosinec",
+              "en": "December",
+              "ro": "decembrie"
+            },
+            "value": 8,
+            "highlight": false
+          }
+        ],
+        "unit": {
+          "cs": " h",
+          "en": " h",
+          "ro": " h"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Proto má Austrálie Vánoce *v létě*.",
+        "en": "That's why Australia has Christmas *in summer*.",
+        "ro": "De aceea Australia are Crăciunul *vara*."
+      },
+      "headline": {
+        "cs": "VÁNOCE|V LÉTĚ",
+        "en": "CHRISTMAS|IN SUMMER",
+        "ro": "CRĂCIUN|VARA"
+      },
+      "tag": "SOUTHERN HEMISPHERE",
+      "accent": "teal",
+      "visual": {
+        "type": "orbit",
+        "mode": "tilt",
+        "center": "sun",
+        "body": "earth",
+        "label": {
+          "cs": "jižní polokoule má roční období obráceně",
+          "en": "the south has opposite seasons",
+          "ro": "emisfera sudică are anotimpuri inverse"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Pošli to někomu, kdo to neví, a *sleduj* nás.",
+        "en": "Send this to someone who didn't know, and *follow*.",
+        "ro": "Trimite asta cuiva care nu știa și dă *follow*."
+      },
+      "headline": {
+        "cs": "DALŠÍ DÍL|UŽ BRZY",
+        "en": "NEXT EPISODE|SOON",
+        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

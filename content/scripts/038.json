@@ -1,0 +1,311 @@
+{
+  "engine": "blueprint",
+  "id": 38,
+  "title": {
+    "cs": "Balónek v autě letí dopředu",
+    "en": "A balloon in a car flies forward",
+    "ro": "Balonul din mașină zboară înainte"
+  },
+  "description": {
+    "cs": "Auto se rozjede, ty letíš do sedadla. Ale héliový balónek letí dopředu. Proč? 🎈🚗",
+    "en": "The car speeds up, you're pushed back. But a helium balloon moves forward. Why? 🎈🚗",
+    "ro": "Mașina accelerează, tu ești împins înapoi. Dar balonul cu heliu merge înainte. De ce? 🎈🚗"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "auto",
+    "setrvacnost",
+    "inertia"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Auto se rozjede a tebe to *zatlačí do sedadla*.",
+        "en": "The car speeds up and you get *pushed into your seat*.",
+        "ro": "Mașina accelerează și ești *împins în scaun*."
+      },
+      "headline": {
+        "cs": "TEBE TO|TLAČÍ DOZADU",
+        "en": "YOU GET|PUSHED BACK",
+        "ro": "EȘTI|ÎMPINS ÎNAPOI"
+      },
+      "tag": "ACCELERATION",
+      "accent": "yellow",
+      "visual": {
+        "type": "forces",
+        "body": "person",
+        "arrows": [
+          {
+            "dir": "left",
+            "size": 2,
+            "label": {
+              "cs": "setrvačnost",
+              "en": "inertia",
+              "ro": "inerție"
+            },
+            "color": "red"
+          },
+          {
+            "dir": "right",
+            "size": 2,
+            "label": {
+              "cs": "auto zrychluje",
+              "en": "car speeds up",
+              "ro": "mașina accelerează"
+            },
+            "color": "teal"
+          }
+        ],
+        "motion": "none"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Ale balónek s héliem se pohne *dopředu*.",
+        "en": "But a helium balloon moves *forward*.",
+        "ro": "Dar un balon cu heliu se mișcă *înainte*."
+      },
+      "headline": {
+        "cs": "BALÓNEK|LETÍ DOPŘEDU",
+        "en": "THE BALLOON|GOES FORWARD",
+        "ro": "BALONUL|MERGE ÎNAINTE"
+      },
+      "tag": "SURPRISE",
+      "accent": "red",
+      "visual": {
+        "type": "quiz",
+        "question": {
+          "cs": "Kam se pohne héliový balónek při rozjezdu?",
+          "en": "Where does a helium balloon go when the car speeds up?",
+          "ro": "Încotro merge balonul cu heliu la accelerare?"
+        },
+        "options": [
+          {
+            "cs": "dozadu",
+            "en": "backward",
+            "ro": "înapoi"
+          },
+          {
+            "cs": "dopředu",
+            "en": "forward",
+            "ro": "înainte"
+          },
+          {
+            "cs": "nikam",
+            "en": "nowhere",
+            "ro": "nicăieri"
+          }
+        ],
+        "answer": 1
+      }
+    },
+    {
+      "narration": {
+        "cs": "Setrvačnost totiž tlačí dozadu i *vzduch* v autě.",
+        "en": "Inertia pushes the *air* in the car backward too.",
+        "ro": "Inerția împinge înapoi și *aerul* din mașină."
+      },
+      "headline": {
+        "cs": "I VZDUCH|JDE DOZADU",
+        "en": "THE AIR|SHIFTS BACK",
+        "ro": "ȘI AERUL|MERGE ÎNAPOI"
+      },
+      "tag": "AIR HAS MASS",
+      "accent": "blue",
+      "visual": {
+        "type": "particles",
+        "mode": "pressure",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Vzadu se nahromadí *hustší* vzduch, vpředu řidší.",
+        "en": "*Denser* air piles up at the back, thinner air at the front.",
+        "ro": "În spate se strânge aer *mai dens*, în față mai rar."
+      },
+      "headline": {
+        "cs": "VZADU|HUSTŠÍ",
+        "en": "DENSER|AT THE BACK",
+        "ro": "MAI DENS|ÎN SPATE"
+      },
+      "tag": "PRESSURE GRADIENT",
+      "accent": "teal",
+      "visual": {
+        "type": "compare",
+        "left": {
+          "icon": "wind",
+          "label": {
+            "cs": "vpředu",
+            "en": "front",
+            "ro": "față"
+          },
+          "value": {
+            "cs": "nižší tlak",
+            "en": "lower pressure",
+            "ro": "presiune mică"
+          }
+        },
+        "right": {
+          "icon": "wind",
+          "label": {
+            "cs": "vzadu",
+            "en": "back",
+            "ro": "spate"
+          },
+          "value": {
+            "cs": "vyšší tlak",
+            "en": "higher pressure",
+            "ro": "presiune mare"
+          }
+        },
+        "winner": "none"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Ten tlak *vystrčí* lehký balónek dopředu.",
+        "en": "That pressure *pushes* the light balloon forward.",
+        "ro": "Presiunea asta *împinge* balonul ușor înainte."
+      },
+      "headline": {
+        "cs": "TLAK|HO VYSTRČÍ",
+        "en": "PRESSURE|PUSHES IT",
+        "ro": "PRESIUNEA|ÎL ÎMPINGE"
+      },
+      "tag": "BUOYANCY",
+      "accent": "yellow",
+      "visual": {
+        "type": "forces",
+        "body": "balloon",
+        "arrows": [
+          {
+            "dir": "right",
+            "size": 2.5,
+            "label": {
+              "cs": "vztlak",
+              "en": "buoyancy",
+              "ro": "flotabilitate"
+            },
+            "color": "yellow"
+          }
+        ],
+        "motion": "right"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Je to stejný důvod, proč balónek *stoupá* vzhůru.",
+        "en": "It's the same reason a balloon *rises* upward.",
+        "ro": "E același motiv pentru care balonul *urcă*."
+      },
+      "headline": {
+        "cs": "JAKO|VZTLAK",
+        "en": "SAME AS|FLOATING",
+        "ro": "CA LA|PLUTIRE"
+      },
+      "tag": "EQUIVALENCE",
+      "accent": "teal",
+      "visual": {
+        "type": "forces",
+        "body": "balloon",
+        "arrows": [
+          {
+            "dir": "up",
+            "size": 2.5,
+            "label": {
+              "cs": "vztlak",
+              "en": "buoyancy",
+              "ro": "flotabilitate"
+            },
+            "color": "teal"
+          },
+          {
+            "dir": "down",
+            "size": 1,
+            "label": {
+              "cs": "tíha",
+              "en": "weight",
+              "ro": "greutate"
+            },
+            "color": "red"
+          }
+        ],
+        "motion": "up"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Zrychlení se pro vzduch chová *jako gravitace*.",
+        "en": "To the air, acceleration acts *just like gravity*.",
+        "ro": "Pentru aer, accelerația se comportă *exact ca gravitația*."
+      },
+      "headline": {
+        "cs": "ZRYCHLENÍ|= GRAVITACE",
+        "en": "ACCELERATION|= GRAVITY",
+        "ro": "ACCELERAȚIA|= GRAVITAȚIA"
+      },
+      "tag": "EINSTEIN",
+      "accent": "red",
+      "visual": {
+        "type": "formula",
+        "tex": "\\vec{a} \\equiv \\hl{\\vec{g}}",
+        "caption": {
+          "cs": "princip ekvivalence",
+          "en": "the equivalence principle",
+          "ro": "principiul echivalenței"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Při brzdění to funguje obráceně, balónek jde *dozadu*.",
+        "en": "When braking, it flips, and the balloon goes *backward*.",
+        "ro": "La frânare e invers, balonul merge *înapoi*."
+      },
+      "headline": {
+        "cs": "BRZDA =|DOZADU",
+        "en": "BRAKES =|BACKWARD",
+        "ro": "FRÂNĂ =|ÎNAPOI"
+      },
+      "tag": "TRY IT",
+      "accent": "yellow",
+      "visual": {
+        "type": "forces",
+        "body": "balloon",
+        "arrows": [
+          {
+            "dir": "left",
+            "size": 2.5,
+            "label": {
+              "cs": "brzdění",
+              "en": "braking",
+              "ro": "frânare"
+            },
+            "color": "yellow"
+          }
+        ],
+        "motion": "left"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Napiš do komentářů, co tě zajímá, a *sleduj*.",
+        "en": "Tell us what to explain next, and *follow*.",
+        "ro": "Scrie-ne ce să explicăm și dă *follow*."
+      },
+      "headline": {
+        "cs": "SLEDUJ|PRO VÍC",
+        "en": "FOLLOW|FOR MORE",
+        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {LANGS, VideoScriptSchema, type Lang, type Timeline, type VideoScript} from '../src/engine/schema';
+import {ShortScriptSchema, type ShortScript} from '../src/v2/schema';
 
 export const ROOT = process.cwd();
 export const P = {
@@ -13,18 +14,45 @@ export const P = {
 
 if (fs.existsSync(path.join(ROOT, '.env'))) process.loadEnvFile(path.join(ROOT, '.env'));
 
-export type Idea = {id: number; kategorie: string; tema: string};
+export type Idea = {id: number; kategorie: string; tema: string; hotovo?: boolean};
 export const loadIdeas = (): Idea[] => JSON.parse(fs.readFileSync(P.ideas, 'utf8')).napady;
 
 export const pad = (id: number) => String(id).padStart(3, '0');
 export const scriptPath = (id: number) => path.join(P.scripts, `${pad(id)}.json`);
 export const timelinePath = (id: number, lang: Lang) => path.join(P.timelines, `${pad(id)}.${lang}.json`);
 
-export const loadScript = (id: number): VideoScript | null => {
+/** Scénář v1 (3D, videa 1–14) nebo v2 (2D blueprint, krátká videa). */
+export type AnyScript = VideoScript | ShortScript;
+export const isShort = (s: AnyScript): s is ShortScript => (s as ShortScript).engine === 'blueprint';
+
+export const loadScript = (id: number): AnyScript | null => {
   const f = scriptPath(id);
   if (!fs.existsSync(f)) return null;
-  return VideoScriptSchema.parse(JSON.parse(fs.readFileSync(f, 'utf8')));
+  const raw = JSON.parse(fs.readFileSync(f, 'utf8'));
+  return raw.engine === 'blueprint' ? ShortScriptSchema.parse(raw) : VideoScriptSchema.parse(raw);
 };
+
+/** Všechna čísla videí, která mají scénář. */
+export const allScriptIds = (): number[] =>
+  fs.existsSync(P.scripts)
+    ? fs
+        .readdirSync(P.scripts)
+        .map((f) => f.match(/^(\d{3})\.json$/)?.[1])
+        .filter((x): x is string => !!x)
+        .map(Number)
+        .sort((a, b) => a - b)
+    : [];
+
+/** Název složky videa: "015-proc-je-obloha-modra" */
+export const videoFolderName = (s: AnyScript) => `${pad(s.id)}-${slug(s.title.cs)}`;
+/** Složka jazyka uvnitř složky videa */
+export const LANG_DIR: Record<Lang, string> = {cs: 'CZ', en: 'EN', ro: 'RO'};
+export const videoOutDir = (s: AnyScript, lang: Lang) => path.join(P.videos, videoFolderName(s), LANG_DIR[lang]);
+export const videoOutFile = (s: AnyScript, lang: Lang) => path.join(videoOutDir(s, lang), 'video.mp4');
+
+/** Popisek pro sociální sítě (titulek, popis, hashtagy). */
+export const captionText = (s: AnyScript, lang: Lang) =>
+  [s.title[lang], '', s.description[lang], '', s.hashtags.map((h) => `#${h.replace(/^#/, '')}`).join(' ')].join('\n');
 export const loadTimeline = (id: number, lang: Lang): Timeline | null => {
   const f = timelinePath(id, lang);
   return fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, 'utf8')) : null;
@@ -51,13 +79,16 @@ export const parseArgs = (argv = process.argv.slice(2)) => {
   let force = false;
   let concurrency = 0;
   let noMusic = false;
+  let provider = '';
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     if (a === '--force') force = true;
     else if (a === '--no-music') noMusic = true;
     else if (a === '--langs') langs = argv[++i].split(',').filter((l): l is Lang => (LANGS as readonly string[]).includes(l));
     else if (a === '--concurrency') concurrency = Number(argv[++i]);
-    else if (a === 'all') loadIdeas().forEach((x) => ids.add(x.id));
+    else if (a === 'all') allScriptIds().forEach((x) => ids.add(x));
+    else if (a === 'new') allScriptIds().filter((x) => x >= 15).forEach((x) => ids.add(x));
+    else if (a === '--provider') provider = argv[++i];
     else
       for (const part of a.split(',')) {
         const [from, to] = part.split('-').map(Number);
@@ -69,7 +100,7 @@ export const parseArgs = (argv = process.argv.slice(2)) => {
     console.error('Zadej čísla nápadů, např.:  npm run generate -- 1-10   (nebo "all")');
     process.exit(1);
   }
-  return {ids: [...ids].sort((x, y) => x - y), langs, force, concurrency, noMusic};
+  return {ids: [...ids].sort((x, y) => x - y), langs, force, concurrency, noMusic, provider};
 };
 
 /** Pustí úlohy s omezeným počtem souběžných. */

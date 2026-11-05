@@ -1,0 +1,272 @@
+{
+  "engine": "blueprint",
+  "id": 26,
+  "title": {
+    "cs": "Proč horký vzduch stoupá",
+    "en": "Why hot air rises",
+    "ro": "De ce urcă aerul cald"
+  },
+  "description": {
+    "cs": "Horký vzduch nemá žádnou sílu, která by ho táhla nahoru. Vytlačí ho tam studený. 🎈",
+    "en": "Nothing pulls hot air up. Cold air pushes it there. 🎈",
+    "ro": "Nimic nu trage aerul cald în sus. Aerul rece îl împinge acolo. 🎈"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "teplo",
+    "vzduch",
+    "heat"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Horký vzduch stoupá. Ale *nic ho netáhne* nahoru.",
+        "en": "Hot air rises. But *nothing pulls it* upward.",
+        "ro": "Aerul cald urcă. Dar *nimic nu-l trage* în sus."
+      },
+      "headline": {
+        "cs": "CO HO|TÁHNE?",
+        "en": "WHAT PULLS|IT UP?",
+        "ro": "CE ÎL|TRAGE?"
+      },
+      "tag": "CONVECTION",
+      "accent": "red",
+      "visual": {
+        "type": "icon",
+        "icon": "balloon",
+        "icon2": "flame",
+        "relation": "none",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Když vzduch ohřeješ, molekuly se *rozběhnou rychleji*.",
+        "en": "Heat the air, and its molecules *move faster*.",
+        "ro": "Încălzești aerul și moleculele *se mișcă mai repede*."
+      },
+      "headline": {
+        "cs": "TEPLO =|RYCHLOST",
+        "en": "HEAT =|SPEED",
+        "ro": "CĂLDURA =|VITEZĂ"
+      },
+      "tag": "KINETIC ENERGY",
+      "accent": "yellow",
+      "visual": {
+        "type": "particles",
+        "mode": "hotcold",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Víc se roztlačí, takže je horký vzduch *řidší*.",
+        "en": "They push apart, so hot air becomes *less dense*.",
+        "ro": "Se împing între ele, așa că aerul cald e *mai rar*."
+      },
+      "headline": {
+        "cs": "HORKÝ =|ŘIDŠÍ",
+        "en": "HOT =|LESS DENSE",
+        "ro": "CALD =|MAI RAR"
+      },
+      "tag": "DENSITY",
+      "accent": "red",
+      "visual": {
+        "type": "compare",
+        "left": {
+          "icon": "snowflake",
+          "label": {
+            "cs": "studený",
+            "en": "cold",
+            "ro": "rece"
+          },
+          "value": {
+            "cs": "hustý",
+            "en": "dense",
+            "ro": "dens"
+          }
+        },
+        "right": {
+          "icon": "flame",
+          "label": {
+            "cs": "horký",
+            "en": "hot",
+            "ro": "cald"
+          },
+          "value": {
+            "cs": "řídký",
+            "en": "thin",
+            "ro": "rar"
+          }
+        },
+        "winner": "none"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Stejný objem horkého vzduchu je až o *pětinu lehčí*.",
+        "en": "The same volume of hot air can be about *a fifth lighter*.",
+        "ro": "Același volum de aer cald e cu aproape *o cincime mai ușor*."
+      },
+      "headline": {
+        "cs": "O PĚTINU|LEHČÍ",
+        "en": "A FIFTH|LIGHTER",
+        "ro": "CU O CINCIME|MAI UȘOR"
+      },
+      "tag": "1 m³ OF AIR",
+      "accent": "teal",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "20 °C",
+              "en": "20 °C",
+              "ro": "20 °C"
+            },
+            "value": 1.2,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "100 °C",
+              "en": "100 °C",
+              "ro": "100 °C"
+            },
+            "value": 0.95,
+            "highlight": true
+          }
+        ],
+        "unit": {
+          "cs": " kg",
+          "en": " kg",
+          "ro": " kg"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Těžší studený vzduch klesá dolů a horký *vytlačí nahoru*.",
+        "en": "Heavier cold air sinks and *pushes* the hot air up.",
+        "ro": "Aerul rece, mai greu, coboară și îl *împinge* pe cel cald în sus."
+      },
+      "headline": {
+        "cs": "STUDENÝ|TLAČÍ",
+        "en": "COLD AIR|PUSHES",
+        "ro": "AERUL RECE|ÎMPINGE"
+      },
+      "tag": "BUOYANCY",
+      "accent": "blue",
+      "visual": {
+        "type": "particles",
+        "mode": "rise",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Je to stejné, jako když *bublina* vyletí ve vodě.",
+        "en": "It's just like a *bubble* rising through water.",
+        "ro": "E exact ca o *bulă* care urcă prin apă."
+      },
+      "headline": {
+        "cs": "JAKO|BUBLINA",
+        "en": "LIKE A|BUBBLE",
+        "ro": "CA O|BULĂ"
+      },
+      "tag": "SAME PHYSICS",
+      "accent": "teal",
+      "visual": {
+        "type": "forces",
+        "body": "balloon",
+        "arrows": [
+          {
+            "dir": "up",
+            "size": 2.5,
+            "label": {
+              "cs": "vztlak",
+              "en": "buoyancy",
+              "ro": "flotabilitate"
+            },
+            "color": "teal"
+          },
+          {
+            "dir": "down",
+            "size": 1.2,
+            "label": {
+              "cs": "tíha",
+              "en": "weight",
+              "ro": "greutate"
+            },
+            "color": "red"
+          }
+        ],
+        "motion": "up"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Na tom létá *horkovzdušný balón*.",
+        "en": "That's how a *hot air balloon* flies.",
+        "ro": "Așa zboară *balonul cu aer cald*."
+      },
+      "headline": {
+        "cs": "HORKOVZDUŠNÝ|BALÓN",
+        "en": "HOT AIR|BALLOON",
+        "ro": "BALON CU|AER CALD"
+      },
+      "tag": "APPLICATION",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "balloon",
+        "icon2": "flame",
+        "relation": "plus",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "A proto je u stropu teplo, zatímco u podlahy *táhne*.",
+        "en": "And that's why the ceiling is warm while the floor feels *drafty*.",
+        "ro": "De aceea la tavan e cald, iar la podea *trage*."
+      },
+      "headline": {
+        "cs": "NAHOŘE|TEPLO",
+        "en": "WARM AT|THE TOP",
+        "ro": "CALD|SUS"
+      },
+      "tag": "ROOM CONVECTION",
+      "accent": "red",
+      "visual": {
+        "type": "icon",
+        "icon": "house",
+        "icon2": "thermometer",
+        "relation": "none",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Napiš do komentářů, co tě zajímá, a *sleduj*.",
+        "en": "Tell us what to explain next, and *follow*.",
+        "ro": "Scrie-ne ce să explicăm și dă *follow*."
+      },
+      "headline": {
+        "cs": "SLEDUJ|PRO VÍC",
+        "en": "FOLLOW|FOR MORE",
+        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

@@ -1,0 +1,278 @@
+{
+  "engine": "blueprint",
+  "id": 34,
+  "title": {
+    "cs": "Proč WiFi neprojde zdí",
+    "en": "Why WiFi struggles through walls",
+    "ro": "De ce WiFi trece greu prin pereți"
+  },
+  "description": {
+    "cs": "WiFi je světlo, které nevidíš. A zdi mu dávají zabrat. 📶",
+    "en": "WiFi is light you can't see. And walls give it a hard time. 📶",
+    "ro": "WiFi e lumină pe care n-o vezi. Iar pereții îi dau bătăi de cap. 📶"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "wifi",
+    "internet",
+    "technology"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "O jednu zeď dál a WiFi *skoro nejde*. Proč?",
+        "en": "One wall away and the WiFi *barely works*. Why?",
+        "ro": "Un perete mai încolo și WiFi-ul *abia merge*. De ce?"
+      },
+      "headline": {
+        "cs": "O ZEĎ DÁL|A NIC",
+        "en": "ONE WALL|AND IT'S GONE",
+        "ro": "UN PERETE|ȘI GATA"
+      },
+      "tag": "SIGNAL LOSS",
+      "accent": "red",
+      "visual": {
+        "type": "icon",
+        "icon": "router",
+        "icon2": "wall",
+        "relation": "vs",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "WiFi jsou *rádiové vlny*, příbuzné světla.",
+        "en": "WiFi is made of *radio waves*, cousins of light.",
+        "ro": "WiFi înseamnă *unde radio*, rude cu lumina."
+      },
+      "headline": {
+        "cs": "NEVIDITELNÉ|SVĚTLO",
+        "en": "INVISIBLE|LIGHT",
+        "ro": "LUMINĂ|INVIZIBILĂ"
+      },
+      "tag": "2,4 / 5 GHz",
+      "accent": "blue",
+      "visual": {
+        "type": "wave",
+        "mode": "single",
+        "label": {
+          "cs": "vlna dlouhá 6 až 12 centimetrů",
+          "en": "a wave 6 to 12 centimeters long",
+          "ro": "o undă de 6 până la 12 centimetri"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Zeď část vln *pohltí* a část odrazí.",
+        "en": "A wall *absorbs* some waves and reflects others.",
+        "ro": "Peretele *absoarbe* o parte și reflectă alta."
+      },
+      "headline": {
+        "cs": "ZEĎ|POLYKÁ",
+        "en": "THE WALL|ABSORBS",
+        "ro": "PERETELE|ABSOARBE"
+      },
+      "tag": "ATTENUATION",
+      "accent": "red",
+      "visual": {
+        "type": "wave",
+        "mode": "blocked",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Nejvíc vadí *voda* v betonu a kovové pruty.",
+        "en": "The worst culprits are *water* in concrete and steel rods.",
+        "ro": "Cel mai rău sunt *apa* din beton și armătura de metal."
+      },
+      "headline": {
+        "cs": "VODA|A KOV",
+        "en": "WATER|AND METAL",
+        "ro": "APĂ|ȘI METAL"
+      },
+      "tag": "WORST MATERIALS",
+      "accent": "yellow",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "dřevo",
+              "en": "wood",
+              "ro": "lemn"
+            },
+            "value": 3,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "cihla",
+              "en": "brick",
+              "ro": "cărămidă"
+            },
+            "value": 8,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "beton",
+              "en": "concrete",
+              "ro": "beton"
+            },
+            "value": 15,
+            "highlight": true
+          }
+        ],
+        "unit": {
+          "cs": " dB",
+          "en": " dB",
+          "ro": " dB"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Jedna betonová zeď sníží signál klidně *desetkrát*.",
+        "en": "One concrete wall can cut the signal *tenfold*.",
+        "ro": "Un perete de beton poate reduce semnalul de *zece ori*."
+      },
+      "headline": {
+        "cs": "DESETKRÁT|SLABŠÍ",
+        "en": "TEN TIMES|WEAKER",
+        "ro": "DE ZECE ORI|MAI SLAB"
+      },
+      "tag": "−10 dB",
+      "accent": "red",
+      "visual": {
+        "type": "graph",
+        "curve": "decay",
+        "curve2": null,
+        "x": {
+          "cs": "zdi",
+          "en": "walls",
+          "ro": "pereți"
+        },
+        "y": {
+          "cs": "signál",
+          "en": "signal",
+          "ro": "semnal"
+        },
+        "markLabel": {
+          "cs": "každá zeď ubere",
+          "en": "every wall takes a cut",
+          "ro": "fiecare perete taie din el"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Pásmo *5 GHz* je rychlejší, ale zdmi prochází hůř.",
+        "en": "The *5 GHz* band is faster, but worse through walls.",
+        "ro": "Banda de *5 GHz* e mai rapidă, dar trece mai greu prin pereți."
+      },
+      "headline": {
+        "cs": "2,4 VS|5 GHZ",
+        "en": "2.4 VS|5 GHZ",
+        "ro": "2,4 VS|5 GHZ"
+      },
+      "tag": "FREQUENCY BANDS",
+      "accent": "teal",
+      "visual": {
+        "type": "compare",
+        "left": {
+          "icon": "router",
+          "label": {
+            "cs": "2,4 GHz",
+            "en": "2.4 GHz",
+            "ro": "2,4 GHz"
+          },
+          "value": {
+            "cs": "dosah",
+            "en": "range",
+            "ro": "acoperire"
+          }
+        },
+        "right": {
+          "icon": "router",
+          "label": {
+            "cs": "5 GHz",
+            "en": "5 GHz",
+            "ro": "5 GHz"
+          },
+          "value": {
+            "cs": "rychlost",
+            "en": "speed",
+            "ro": "viteză"
+          }
+        },
+        "winner": "none"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Router proto dej *vysoko a doprostřed* bytu.",
+        "en": "So put your router *high up and central*.",
+        "ro": "Așa că pune routerul *sus și în centru*."
+      },
+      "headline": {
+        "cs": "VYSOKO A|DOPROSTŘED",
+        "en": "HIGH AND|CENTRAL",
+        "ro": "SUS ȘI|ÎN CENTRU"
+      },
+      "tag": "PRO TIP",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "router",
+        "icon2": "house",
+        "relation": "none",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "A nikdy ne za *akvárium*, voda je pro WiFi zeď.",
+        "en": "And never behind a *fish tank*, water blocks WiFi.",
+        "ro": "Și niciodată după un *acvariu*, apa blochează WiFi-ul."
+      },
+      "headline": {
+        "cs": "POZOR NA|AKVÁRIUM",
+        "en": "WATCH THE|FISH TANK",
+        "ro": "ATENȚIE LA|ACVARIU"
+      },
+      "tag": "WATER = WALL",
+      "accent": "blue",
+      "visual": {
+        "type": "icon",
+        "icon": "drop",
+        "icon2": "router",
+        "relation": "vs",
+        "effect": "shake",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Napiš do komentářů, co tě zajímá, a *sleduj*.",
+        "en": "Tell us what to explain next, and *follow*.",
+        "ro": "Scrie-ne ce să explicăm și dă *follow*."
+      },
+      "headline": {
+        "cs": "SLEDUJ|PRO VÍC",
+        "en": "FOLLOW|FOR MORE",
+        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

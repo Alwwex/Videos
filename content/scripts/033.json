@@ -1,0 +1,262 @@
+{
+  "engine": "blueprint",
+  "id": 33,
+  "title": {
+    "cs": "Proč se krasobruslařka roztočí",
+    "en": "Why figure skaters spin faster",
+    "ro": "De ce patinatoarea se rotește mai repede"
+  },
+  "description": {
+    "cs": "Stačí přitáhnout ruce a otáčky vystřelí nahoru. Žádná síla navíc, jen fyzika. ⛸️",
+    "en": "Pull the arms in and the spin shoots up. No extra force, just physics. ⛸️",
+    "ro": "Își strânge brațele și rotația explodează. Fără forță în plus, doar fizică. ⛸️"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "krasobrusleni",
+    "rotace",
+    "skating"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Krasobruslařka přitáhne ruce a *roztočí se* jako vrtule.",
+        "en": "A skater pulls in her arms and *spins up* like a propeller.",
+        "ro": "Patinatoarea își strânge brațele și *se rotește* ca o elice."
+      },
+      "headline": {
+        "cs": "RUCE K TĚLU|= TURBO",
+        "en": "ARMS IN|= TURBO",
+        "ro": "BRAȚELE STRÂNSE|= TURBO"
+      },
+      "tag": "SPIN",
+      "accent": "teal",
+      "visual": {
+        "type": "icon",
+        "icon": "skater",
+        "icon2": null,
+        "relation": "none",
+        "effect": "spin",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Nikdo ji přitom *neroztlačuje*. Kde se bere rychlost?",
+        "en": "Nobody is *pushing* her. So where does the speed come from?",
+        "ro": "Nimeni n-o *împinge*. De unde vine viteza?"
+      },
+      "headline": {
+        "cs": "ODKUD|RYCHLOST?",
+        "en": "WHERE DOES|SPEED COME FROM?",
+        "ro": "DE UNDE|VITEZA?"
+      },
+      "tag": "QUESTION",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "question",
+        "icon2": "skater",
+        "relation": "none",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Rotace má veličinu, která se *zachovává*: moment hybnosti.",
+        "en": "Spinning has a quantity that's *conserved*: angular momentum.",
+        "ro": "Rotația are o mărime care *se conservă*: momentul cinetic."
+      },
+      "headline": {
+        "cs": "MOMENT|HYBNOSTI",
+        "en": "ANGULAR|MOMENTUM",
+        "ro": "MOMENTUL|CINETIC"
+      },
+      "tag": "CONSERVATION",
+      "accent": "blue",
+      "visual": {
+        "type": "formula",
+        "tex": "L = \\hl{I} \\cdot \\omega = \\text{konst.}",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Závisí na tom, jak daleko od osy je *hmotnost*.",
+        "en": "It depends on how far the *mass* is from the axis.",
+        "ro": "Depinde cât de departe de axă e *masa*."
+      },
+      "headline": {
+        "cs": "DALEKO|OD OSY",
+        "en": "FAR FROM|THE AXIS",
+        "ro": "DEPARTE|DE AXĂ"
+      },
+      "tag": "MOMENT OF INERTIA",
+      "accent": "yellow",
+      "visual": {
+        "type": "compare",
+        "left": {
+          "icon": "skater",
+          "label": {
+            "cs": "ruce od těla",
+            "en": "arms out",
+            "ro": "brațe întinse"
+          },
+          "value": {
+            "cs": "velké I",
+            "en": "big I",
+            "ro": "I mare"
+          }
+        },
+        "right": {
+          "icon": "person",
+          "label": {
+            "cs": "ruce u těla",
+            "en": "arms in",
+            "ro": "brațe strânse"
+          },
+          "value": {
+            "cs": "malé I",
+            "en": "small I",
+            "ro": "I mic"
+          }
+        },
+        "winner": "none"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Když hmotnost přitáhne blíž, musí se točit *rychleji*.",
+        "en": "Bring the mass closer, and it has to spin *faster*.",
+        "ro": "Când aduce masa mai aproape, trebuie să se rotească *mai repede*."
+      },
+      "headline": {
+        "cs": "MENŠÍ I =|VĚTŠÍ ω",
+        "en": "SMALLER I =|BIGGER ω",
+        "ro": "I MAI MIC =|ω MAI MARE"
+      },
+      "tag": "TRADE-OFF",
+      "accent": "red",
+      "visual": {
+        "type": "formula",
+        "tex": "\\downarrow I \\;\\Rightarrow\\; \\hl{\\uparrow \\omega}",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Otáčky klidně *ztrojnásobí*, až na pět za sekundu.",
+        "en": "Spin rate can *triple*, up to five turns per second.",
+        "ro": "Rotația se poate *tripla*, până la cinci ture pe secundă."
+      },
+      "headline": {
+        "cs": "AŽ 5 OTÁČEK|ZA SEKUNDU",
+        "en": "UP TO 5 SPINS|PER SECOND",
+        "ro": "PÂNĂ LA 5 TURE|PE SECUNDĂ"
+      },
+      "tag": "RPS",
+      "accent": "teal",
+      "visual": {
+        "type": "gauge",
+        "from": 1.5,
+        "to": 5,
+        "max": 6,
+        "unit": {
+          "cs": " ot/s",
+          "en": " rev/s",
+          "ro": " rot/s"
+        },
+        "caption": {
+          "cs": "rychlejší než pračka při praní",
+          "en": "faster than a washing machine wash cycle",
+          "ro": "mai rapid decât o mașină de spălat"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Stejně funguje točící se židle s *činkami* v rukou.",
+        "en": "Try it on a spinning chair holding *weights*.",
+        "ro": "Încearcă pe un scaun rotativ ținând *greutăți*."
+      },
+      "headline": {
+        "cs": "ZKUS TO|DOMA",
+        "en": "TRY IT|AT HOME",
+        "ro": "ÎNCEARCĂ|ACASĂ"
+      },
+      "tag": "EXPERIMENT",
+      "accent": "yellow",
+      "visual": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "roztoč se s rukama od těla",
+            "en": "spin with arms out",
+            "ro": "rotește-te cu brațele întinse"
+          },
+          {
+            "cs": "přitáhni ruce",
+            "en": "pull arms in",
+            "ro": "strânge brațele"
+          },
+          {
+            "cs": "drž se!",
+            "en": "hold on!",
+            "ro": "ține-te bine!"
+          }
+        ],
+        "active": 1
+      }
+    },
+    {
+      "narration": {
+        "cs": "A stejný zákon roztáčí i *neutronové hvězdy*.",
+        "en": "The same law spins up *neutron stars*.",
+        "ro": "Aceeași lege învârte și *stelele neutronice*."
+      },
+      "headline": {
+        "cs": "I HVĚZDY|SE TOČÍ",
+        "en": "STARS|SPIN TOO",
+        "ro": "ȘI STELELE|SE ROTESC"
+      },
+      "tag": "PULSARS",
+      "accent": "red",
+      "visual": {
+        "type": "counter",
+        "from": 0,
+        "to": 716,
+        "decimals": 0,
+        "unit": {
+          "cs": " ot/s",
+          "en": " rev/s",
+          "ro": " rot/s"
+        },
+        "caption": {
+          "cs": "rekordní pulsar",
+          "en": "the record-holding pulsar",
+          "ro": "pulsarul record"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Překvapilo tě to? Dej *sledovat* pro další díl.",
+        "en": "Surprised? Hit *follow* for the next one.",
+        "ro": "Te-a surprins? Dă *follow* pentru următorul."
+      },
+      "headline": {
+        "cs": "DALŠÍ DÍL|UŽ BRZY",
+        "en": "NEXT EPISODE|SOON",
+        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

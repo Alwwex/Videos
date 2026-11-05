@@ -1,0 +1,259 @@
+{
+  "engine": "blueprint",
+  "id": 15,
+  "title": {
+    "cs": "Proč je obloha modrá",
+    "en": "Why the sky is blue",
+    "ro": "De ce cerul e albastru"
+  },
+  "description": {
+    "cs": "Slunce svítí bíle, tak proč je nebe modré a ne fialové? Za všechno může rozptyl světla. 🌤️",
+    "en": "Sunlight is white, so why is the sky blue and not violet? It's all about scattering. 🌤️",
+    "ro": "Lumina Soarelui e albă, deci de ce cerul e albastru și nu violet? Totul ține de împrăștiere. 🌤️"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "obloha",
+    "science",
+    "vedanakazdyden",
+    "learnontiktok"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Slunce svítí *bíle*. Tak proč je nebe *modré*?",
+        "en": "The Sun shines *white*. So why is the sky *blue*?",
+        "ro": "Soarele luminează *alb*. Atunci de ce e cerul *albastru*?"
+      },
+      "headline": {
+        "cs": "BÍLÉ SLUNCE|MODRÉ NEBE?",
+        "en": "WHITE SUN|BLUE SKY?",
+        "ro": "SOARE ALB|CER ALBASTRU?"
+      },
+      "tag": "OBSERVATION",
+      "accent": "blue",
+      "visual": {
+        "type": "icon",
+        "icon": "sun",
+        "icon2": "cloud",
+        "relation": "arrow",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Bílé světlo je ve skutečnosti *směs všech barev*.",
+        "en": "White light is really a *mix of every color*.",
+        "ro": "Lumina albă e de fapt un *amestec de culori*."
+      },
+      "headline": {
+        "cs": "BÍLÁ =|VŠECHNY BARVY",
+        "en": "WHITE =|ALL COLORS",
+        "ro": "ALB =|TOATE CULORILE"
+      },
+      "tag": "DISPERSION",
+      "accent": "yellow",
+      "visual": {
+        "type": "rays",
+        "mode": "prism",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Každá barva má jinou *vlnovou délku*.",
+        "en": "Each color has a different *wavelength*.",
+        "ro": "Fiecare culoare are altă *lungime de undă*."
+      },
+      "headline": {
+        "cs": "ČERVENÁ VS|MODRÁ",
+        "en": "RED VS|BLUE",
+        "ro": "ROȘU VS|ALBASTRU"
+      },
+      "tag": "WAVELENGTH λ",
+      "accent": "red",
+      "visual": {
+        "type": "wave",
+        "mode": "compare",
+        "label": {
+          "cs": "červená 700 nm · modrá 450 nm",
+          "en": "red 700 nm · blue 450 nm",
+          "ro": "roșu 700 nm · albastru 450 nm"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Molekuly vzduchu krátké *modré vlny* rozhazují všude kolem.",
+        "en": "Air molecules *scatter* short blue waves in every direction.",
+        "ro": "Moleculele de aer *împrăștie* undele albastre în toate direcțiile."
+      },
+      "headline": {
+        "cs": "VZDUCH|ROZPTYLUJE",
+        "en": "AIR|SCATTERS",
+        "ro": "AERUL|ÎMPRĂȘTIE"
+      },
+      "tag": "RAYLEIGH SCATTERING",
+      "accent": "blue",
+      "visual": {
+        "type": "rays",
+        "mode": "scatter",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Rozptyl roste se *čtvrtou mocninou* frekvence.",
+        "en": "Scattering grows with the *fourth power* of frequency.",
+        "ro": "Împrăștierea crește cu *puterea a patra* a frecvenței."
+      },
+      "headline": {
+        "cs": "ČTVRTÁ|MOCNINA",
+        "en": "FOURTH|POWER",
+        "ro": "PUTEREA|A PATRA"
+      },
+      "tag": "RAYLEIGH LAW",
+      "accent": "yellow",
+      "visual": {
+        "type": "formula",
+        "tex": "I \\propto \\frac{1}{\\hl{\\lambda^4}}",
+        "caption": {
+          "cs": "kratší vlna = mnohem víc rozptylu",
+          "en": "shorter wave = far more scattering",
+          "ro": "undă mai scurtă = mult mai multă împrăștiere"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Modrá se rozptýlí zhruba *pětkrát víc* než červená.",
+        "en": "Blue scatters about *five times more* than red.",
+        "ro": "Albastrul se împrăștie de vreo *cinci ori mai mult*."
+      },
+      "headline": {
+        "cs": "5× VÍC|MODRÉ",
+        "en": "5× MORE|BLUE",
+        "ro": "DE 5× MAI|MULT ALBASTRU"
+      },
+      "tag": "RELATIVE SCATTERING",
+      "accent": "blue",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "červená",
+              "en": "red",
+              "ro": "roșu"
+            },
+            "value": 1,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "zelená",
+              "en": "green",
+              "ro": "verde"
+            },
+            "value": 2.4,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "modrá",
+              "en": "blue",
+              "ro": "albastru"
+            },
+            "value": 5.5,
+            "highlight": true
+          }
+        ],
+        "unit": {
+          "cs": "×",
+          "en": "×",
+          "ro": "×"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "A proč ne fialová? Té je ve slunci méně a oči na ni nejsou citlivé.",
+        "en": "Why not violet? Sunlight has less of it, and our eyes barely see it.",
+        "ro": "De ce nu violet? Soarele are mai puțin, iar ochii o văd slab."
+      },
+      "headline": {
+        "cs": "PROČ NE|FIALOVÁ?",
+        "en": "WHY NOT|VIOLET?",
+        "ro": "DE CE NU|VIOLET?"
+      },
+      "tag": "HUMAN EYE",
+      "accent": "teal",
+      "visual": {
+        "type": "icon",
+        "icon": "eye",
+        "icon2": null,
+        "relation": "none",
+        "effect": "pulse",
+        "caption": {
+          "cs": "oko je nejcitlivější na modrou a zelenou",
+          "en": "eyes love blue and green, not violet",
+          "ro": "ochiul e sensibil la albastru și verde"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Takže nebe je vlastně *rozptýlené sluneční světlo*.",
+        "en": "So the sky is really *scattered sunlight*.",
+        "ro": "Deci cerul e de fapt *lumină solară împrăștiată*."
+      },
+      "headline": {
+        "cs": "NEBE =|ROZPTÝLENÉ SVĚTLO",
+        "en": "SKY =|SCATTERED LIGHT",
+        "ro": "CERUL =|LUMINĂ ÎMPRĂȘTIATĂ"
+      },
+      "tag": "CONCLUSION",
+      "accent": "blue",
+      "visual": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "bílé světlo",
+            "en": "white light",
+            "ro": "lumină albă"
+          },
+          {
+            "cs": "vzduch rozptýlí modrou",
+            "en": "air scatters blue",
+            "ro": "aerul împrăștie albastrul"
+          },
+          {
+            "cs": "modrá k nám letí odevšad",
+            "en": "blue reaches us from everywhere",
+            "ro": "albastrul vine din toate părțile"
+          }
+        ],
+        "active": 2
+      }
+    },
+    {
+      "narration": {
+        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
+        "en": "Follow so you don't miss more *physics around you*.",
+        "ro": "Urmărește ca să nu ratezi mai multă *fizică din jurul tău*."
+      },
+      "headline": {
+        "cs": "SLEDUJ|PRO VÍC",
+        "en": "FOLLOW|FOR MORE",
+        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

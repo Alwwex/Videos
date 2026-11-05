@@ -1,0 +1,315 @@
+{
+  "engine": "blueprint",
+  "id": 19,
+  "title": {
+    "cs": "Proč se ocelová loď nepotopí",
+    "en": "Why steel ships don't sink",
+    "ro": "De ce nu se scufundă vapoarele de oțel"
+  },
+  "description": {
+    "cs": "Ocel je osmkrát těžší než voda. Jak to, že obří loď plave? 🚢",
+    "en": "Steel is eight times denser than water. So how does a giant ship float? 🚢",
+    "ro": "Oțelul e de opt ori mai dens decât apa. Cum plutește atunci un vapor uriaș? 🚢"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "lod",
+    "archimedes",
+    "ship"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Ocelový hřebík se potopí. Ale ocelová loď *plave*.",
+        "en": "A steel nail sinks. But a steel ship *floats*.",
+        "ro": "Un cui de oțel se scufundă. Dar un vapor de oțel *plutește*."
+      },
+      "headline": {
+        "cs": "HŘEBÍK TONE|LOĎ PLAVE",
+        "en": "NAIL SINKS|SHIP FLOATS",
+        "ro": "CUIUL CADE|VAPORUL PLUTEȘTE"
+      },
+      "tag": "PARADOX",
+      "accent": "blue",
+      "visual": {
+        "type": "icon",
+        "icon": "hammer",
+        "icon2": "ship",
+        "relation": "vs",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Ocel je zhruba *osmkrát hustší* než voda.",
+        "en": "Steel is about *eight times denser* than water.",
+        "ro": "Oțelul e de vreo *opt ori mai dens* decât apa."
+      },
+      "headline": {
+        "cs": "OCEL VS|VODA",
+        "en": "STEEL VS|WATER",
+        "ro": "OȚEL VS|APĂ"
+      },
+      "tag": "DENSITY kg/m³",
+      "accent": "red",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "voda",
+              "en": "water",
+              "ro": "apă"
+            },
+            "value": 1000,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "ocel",
+              "en": "steel",
+              "ro": "oțel"
+            },
+            "value": 7850,
+            "highlight": true
+          }
+        ],
+        "unit": {
+          "cs": "",
+          "en": "",
+          "ro": ""
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Tajemství objevil už *Archimédes*.",
+        "en": "The secret was found by *Archimedes*.",
+        "ro": "Secretul l-a descoperit *Arhimede*."
+      },
+      "headline": {
+        "cs": "ARCHIMÉDŮV|ZÁKON",
+        "en": "ARCHIMEDES'|PRINCIPLE",
+        "ro": "LEGEA LUI|ARHIMEDE"
+      },
+      "tag": "BUOYANCY",
+      "accent": "yellow",
+      "visual": {
+        "type": "formula",
+        "tex": "F_{vz} = \\hl{\\rho V g}",
+        "caption": {
+          "cs": "vztlak = tíha vytlačené vody",
+          "en": "buoyancy = weight of displaced water",
+          "ro": "forța = greutatea apei dislocate"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Voda tlačí nahoru silou jako *tíha vody*, kterou předmět odsune.",
+        "en": "Water pushes up as hard as *the weight of water* pushed aside.",
+        "ro": "Apa împinge în sus cât *greutatea apei* dislocate."
+      },
+      "headline": {
+        "cs": "VODA|TLAČÍ NAHORU",
+        "en": "WATER|PUSHES UP",
+        "ro": "APA|ÎMPINGE ÎN SUS"
+      },
+      "tag": "FORCE BALANCE",
+      "accent": "teal",
+      "visual": {
+        "type": "forces",
+        "body": "ship",
+        "arrows": [
+          {
+            "dir": "up",
+            "size": 2.5,
+            "label": {
+              "cs": "vztlak",
+              "en": "buoyancy",
+              "ro": "flotabilitate"
+            },
+            "color": "teal"
+          },
+          {
+            "dir": "down",
+            "size": 2.5,
+            "label": {
+              "cs": "tíha",
+              "en": "weight",
+              "ro": "greutate"
+            },
+            "color": "red"
+          }
+        ],
+        "motion": "none"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Trup lodi je dutý a plný *vzduchu*.",
+        "en": "A ship's hull is hollow and full of *air*.",
+        "ro": "Corpul vaporului e gol și plin de *aer*."
+      },
+      "headline": {
+        "cs": "DUTÝ|TRUP",
+        "en": "HOLLOW|HULL",
+        "ro": "CORP|GOL"
+      },
+      "tag": "HULL SHAPE",
+      "accent": "blue",
+      "visual": {
+        "type": "icon",
+        "icon": "ship",
+        "icon2": null,
+        "relation": "none",
+        "effect": "float",
+        "caption": {
+          "cs": "vytlačí obrovský objem vody",
+          "en": "it pushes aside a huge volume of water",
+          "ro": "dislocă un volum uriaș de apă"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Ocel a vzduch dohromady jsou *lehčí* než stejný objem vody.",
+        "en": "Steel plus air together are *lighter* than the same volume of water.",
+        "ro": "Oțelul plus aerul sunt *mai ușoare* decât același volum de apă."
+      },
+      "headline": {
+        "cs": "PRŮMĚRNÁ|HUSTOTA",
+        "en": "AVERAGE|DENSITY",
+        "ro": "DENSITATEA|MEDIE"
+      },
+      "tag": "STEEL + AIR",
+      "accent": "teal",
+      "visual": {
+        "type": "compare",
+        "left": {
+          "icon": "box",
+          "label": {
+            "cs": "kostka oceli",
+            "en": "steel block",
+            "ro": "bloc de oțel"
+          },
+          "value": {
+            "cs": "7 850 kg/m³",
+            "en": "7,850 kg/m³",
+            "ro": "7.850 kg/m³"
+          }
+        },
+        "right": {
+          "icon": "ship",
+          "label": {
+            "cs": "celá loď",
+            "en": "whole ship",
+            "ro": "tot vaporul"
+          },
+          "value": {
+            "cs": "~ 300 kg/m³",
+            "en": "~300 kg/m³",
+            "ro": "~300 kg/m³"
+          }
+        },
+        "winner": "right"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Když loď nabere vodu, vzduch zmizí a *potopí se*.",
+        "en": "If the hull fills with water, the air is gone and it *sinks*.",
+        "ro": "Dacă ia apă, aerul dispare și vaporul *se scufundă*."
+      },
+      "headline": {
+        "cs": "BEZ VZDUCHU|KE DNU",
+        "en": "NO AIR|IT SINKS",
+        "ro": "FĂRĂ AER|LA FUND"
+      },
+      "tag": "TITANIC",
+      "accent": "red",
+      "visual": {
+        "type": "forces",
+        "body": "ship",
+        "arrows": [
+          {
+            "dir": "down",
+            "size": 3,
+            "label": {
+              "cs": "tíha",
+              "en": "weight",
+              "ro": "greutate"
+            },
+            "color": "red"
+          },
+          {
+            "dir": "up",
+            "size": 1,
+            "label": {
+              "cs": "vztlak",
+              "en": "buoyancy",
+              "ro": "flotabilitate"
+            },
+            "color": "teal"
+          }
+        ],
+        "motion": "down"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Nejde o materiál, ale o *tvar a objem*.",
+        "en": "It's not the material, it's the *shape and volume*.",
+        "ro": "Nu contează materialul, ci *forma și volumul*."
+      },
+      "headline": {
+        "cs": "TVAR|VYHRÁVÁ",
+        "en": "SHAPE|WINS",
+        "ro": "FORMA|CÂȘTIGĂ"
+      },
+      "tag": "CONCLUSION",
+      "accent": "yellow",
+      "visual": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "ocel je těžká",
+            "en": "steel is heavy",
+            "ro": "oțelul e greu"
+          },
+          {
+            "cs": "trup je dutý",
+            "en": "the hull is hollow",
+            "ro": "corpul e gol"
+          },
+          {
+            "cs": "vytlačí hodně vody",
+            "en": "it displaces lots of water",
+            "ro": "dislocă multă apă"
+          }
+        ],
+        "active": 2
+      }
+    },
+    {
+      "narration": {
+        "cs": "Pošli to někomu, kdo to neví, a *sleduj* nás.",
+        "en": "Send this to someone who didn't know, and *follow*.",
+        "ro": "Trimite asta cuiva care nu știa și dă *follow*."
+      },
+      "headline": {
+        "cs": "DALŠÍ DÍL|UŽ BRZY",
+        "en": "NEXT EPISODE|SOON",
+        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

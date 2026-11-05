@@ -1,0 +1,270 @@
+{
+  "engine": "blueprint",
+  "id": 24,
+  "title": {
+    "cs": "Proč ptáky na drátech nezabije proud",
+    "en": "Why birds on power lines don't get fried",
+    "ro": "De ce păsările de pe fire nu se electrocutează"
+  },
+  "description": {
+    "cs": "V drátech je obrovské napětí, a vrabci si na nich klidně sedí. Proč? 🐦⚡",
+    "en": "Power lines carry huge voltage, yet sparrows sit on them calmly. Why? 🐦⚡",
+    "ro": "Firele au tensiune uriașă, totuși vrăbiile stau liniștite pe ele. De ce? 🐦⚡"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "elektrina",
+    "ptaci",
+    "electricity"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "V drátu jsou *tisíce voltů*. Pták si na něm klidně sedí.",
+        "en": "That wire carries *thousands of volts*. The bird just sits there.",
+        "ro": "Firul are *mii de volți*. Pasărea stă liniștită pe el."
+      },
+      "headline": {
+        "cs": "TISÍCE VOLTŮ|A NIC?",
+        "en": "THOUSANDS OF VOLTS|AND NOTHING?",
+        "ro": "MII DE VOLȚI|ȘI NIMIC?"
+      },
+      "tag": "POWER LINE",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "bird",
+        "icon2": "wire",
+        "relation": "plus",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Proud neteče kvůli napětí, ale kvůli *rozdílu napětí*.",
+        "en": "Current doesn't flow because of voltage, but a *voltage difference*.",
+        "ro": "Curentul nu curge din cauza tensiunii, ci a *diferenței de tensiune*."
+      },
+      "headline": {
+        "cs": "JDE O|ROZDÍL",
+        "en": "IT'S ABOUT THE|DIFFERENCE",
+        "ro": "CONTEAZĂ|DIFERENȚA"
+      },
+      "tag": "OHM'S LAW",
+      "accent": "teal",
+      "visual": {
+        "type": "formula",
+        "tex": "I = \\frac{\\hl{\\Delta U}}{R}",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Obě nohy ptáka jsou na *stejném drátě*.",
+        "en": "Both of the bird's feet are on *the same wire*.",
+        "ro": "Ambele picioare ale păsării sunt pe *același fir*."
+      },
+      "headline": {
+        "cs": "STEJNÝ|DRÁT",
+        "en": "SAME|WIRE",
+        "ro": "ACELAȘI|FIR"
+      },
+      "tag": "TWO FEET",
+      "accent": "yellow",
+      "visual": {
+        "type": "compare",
+        "left": {
+          "icon": "bird",
+          "label": {
+            "cs": "levá noha",
+            "en": "left foot",
+            "ro": "piciorul stâng"
+          },
+          "value": {
+            "cs": "22 000 V",
+            "en": "22,000 V",
+            "ro": "22.000 V"
+          }
+        },
+        "right": {
+          "icon": "bird",
+          "label": {
+            "cs": "pravá noha",
+            "en": "right foot",
+            "ro": "piciorul drept"
+          },
+          "value": {
+            "cs": "22 000 V",
+            "en": "22,000 V",
+            "ro": "22.000 V"
+          }
+        },
+        "winner": "none"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Rozdíl mezi nimi je skoro *nula*, takže proud jde dál drátem.",
+        "en": "The difference is almost *zero*, so current stays in the wire.",
+        "ro": "Diferența e aproape *zero*, deci curentul rămâne în fir."
+      },
+      "headline": {
+        "cs": "ROZDÍL|≈ 0",
+        "en": "DIFFERENCE|≈ 0",
+        "ro": "DIFERENȚA|≈ 0"
+      },
+      "tag": "NO CURRENT PATH",
+      "accent": "teal",
+      "visual": {
+        "type": "gauge",
+        "from": 0,
+        "to": 0,
+        "max": 100,
+        "unit": {
+          "cs": " V",
+          "en": " V",
+          "ro": " V"
+        },
+        "caption": {
+          "cs": "mezi nohama ptáka",
+          "en": "between the bird's feet",
+          "ro": "între picioarele păsării"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Problém nastane, když se dotkne *dvou drátů* najednou.",
+        "en": "The trouble starts if it touches *two wires* at once.",
+        "ro": "Problema apare dacă atinge *două fire* deodată."
+      },
+      "headline": {
+        "cs": "DVA DRÁTY|= RÁNA",
+        "en": "TWO WIRES|= ZAP",
+        "ro": "DOUĂ FIRE|= ȘOC"
+      },
+      "tag": "DANGER",
+      "accent": "red",
+      "visual": {
+        "type": "field",
+        "mode": "spark",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Nebo drátu a *sloupu*, který vede do země.",
+        "en": "Or a wire and the *pole* that leads to the ground.",
+        "ro": "Sau un fir și *stâlpul* care duce în pământ."
+      },
+      "headline": {
+        "cs": "DRÁT +|ZEMĚ",
+        "en": "WIRE +|GROUND",
+        "ro": "FIR +|PĂMÂNT"
+      },
+      "tag": "GROUNDING",
+      "accent": "red",
+      "visual": {
+        "type": "forces",
+        "body": "bird",
+        "arrows": [
+          {
+            "dir": "down",
+            "size": 2.5,
+            "label": {
+              "cs": "proud do země",
+              "en": "current to ground",
+              "ro": "curent spre pământ"
+            },
+            "color": "red"
+          }
+        ],
+        "motion": "shake"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Proto velcí ptáci s velkým rozpětím křídel *umírají častěji*.",
+        "en": "That's why big birds with wide wings *die more often*.",
+        "ro": "De aceea păsările mari, cu aripi largi, *mor mai des*."
+      },
+      "headline": {
+        "cs": "VELKÁ|KŘÍDLA",
+        "en": "WIDE|WINGS",
+        "ro": "ARIPI|MARI"
+      },
+      "tag": "WINGSPAN RISK",
+      "accent": "yellow",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "vrabec",
+              "en": "sparrow",
+              "ro": "vrabie"
+            },
+            "value": 0.25,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "čáp",
+              "en": "stork",
+              "ro": "barză"
+            },
+            "value": 2,
+            "highlight": true
+          }
+        ],
+        "unit": {
+          "cs": " m",
+          "en": " m",
+          "ro": " m"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "A ty se drátů nikdy nedotýkej, *stojíš na zemi*.",
+        "en": "And never touch power lines yourself, you're *standing on the ground*.",
+        "ro": "Iar tu nu atinge niciodată firele, *stai pe pământ*."
+      },
+      "headline": {
+        "cs": "TY|NIKDY!",
+        "en": "YOU|NEVER!",
+        "ro": "TU|NICIODATĂ!"
+      },
+      "tag": "SAFETY",
+      "accent": "red",
+      "visual": {
+        "type": "icon",
+        "icon": "person",
+        "icon2": "lightning",
+        "relation": "vs",
+        "effect": "shake",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
+        "en": "Follow for more *physics around you*.",
+        "ro": "Urmărește pentru mai multă *fizică din jurul tău*."
+      },
+      "headline": {
+        "cs": "SLEDUJ|PRO VÍC",
+        "en": "FOLLOW|FOR MORE",
+        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}
