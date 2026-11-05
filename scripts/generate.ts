@@ -8,7 +8,6 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import Anthropic from '@anthropic-ai/sdk';
-import {betaZodOutputFormat} from '@anthropic-ai/sdk/helpers/beta/zod';
 import {CURVES, ICONS, ShortScriptSchema, checkShortScript, type ShortScript} from '../src/v2/schema';
 import {ROOT, allScriptIds, loadIdeas, parseArgs, pool, scriptPath, writeJson, type Idea} from './lib';
 
@@ -73,8 +72,48 @@ The look is a clean technical "engineer's notebook": a big two-line headline at 
 - outro: follow card (last scene only).
 Icons available: ${ICONS.join(', ')}.
 
+## Exact JSON format (TypeScript notation; T = {cs: string, en: string, ro: string})
+type Script = {engine: "blueprint", id: number, title: T, description: T, hashtags: string[], scenes: Scene[]}
+type Scene = {narration: T, headline: T, tag: string | null, accent: "yellow"|"teal"|"red"|"blue", visual: Visual}
+type Icon = one of the icons listed above
+type Visual =
+ | {type:"icon", icon: Icon, icon2: Icon|null, relation: "arrow"|"vs"|"plus"|"none", effect: "pulse"|"shake"|"spin"|"float"|"none", caption: T|null}
+ | {type:"formula", tex: string, caption: T|null}
+ | {type:"counter", from: number, to: number, decimals: number, unit: T, caption: T}
+ | {type:"gauge", from: number, to: number, max: number, unit: T, caption: T}
+ | {type:"graph", curve: Curve, curve2: Curve|null, x: T, y: T, markLabel: T|null}   // Curve = ${CURVES.map((c) => `"${c}"`).join('|')}
+ | {type:"bars", items: {label: T, value: number, highlight: boolean}[], unit: T}
+ | {type:"compare", left: {icon: Icon, label: T, value: T|null}, right: {icon: Icon, label: T, value: T|null}, winner: "left"|"right"|"none"}
+ | {type:"steps", items: T[], active: number}
+ | {type:"forces", body: Icon, arrows: {dir: "up"|"down"|"left"|"right"|"upLeft"|"upRight"|"downLeft"|"downRight", size: number, label: T, color: "yellow"|"teal"|"red"|"blue"}[], motion: "none"|"up"|"down"|"left"|"right"|"shake"}
+ | {type:"wave", mode: "single"|"compare"|"cancel"|"doppler"|"blocked", label: T|null}
+ | {type:"particles", mode: "solid"|"liquid"|"gas"|"hotcold"|"rise"|"pressure"|"evaporate", label: T|null}
+ | {type:"orbit", mode: "orbit"|"tilt"|"tides"|"spin", center: Icon, body: Icon, label: T|null}
+ | {type:"rays", mode: "scatter"|"prism"|"refract"|"mirror"|"twinkle"|"sunset", label: T|null}
+ | {type:"field", mode: "magnet"|"coil"|"charge"|"spark", label: T|null}
+ | {type:"fall", left: Icon, right: Icon, air: boolean, label: T|null}
+ | {type:"quiz", question: T, options: T[], answer: number}
+ | {type:"outro"}
+Every field is required (use null where allowed). Reply with ONLY the JSON object: no prose, no markdown code fences.
+
 ## Example of a complete, correct script
 ${example}`;
+
+/** Vytáhne JSON z odpovědi a zkontroluje ho schématem; vrátí skript nebo seznam chyb. */
+const parseReply = (text: string): {script: ShortScript | null; errors: string[]} => {
+  const a = text.indexOf('{');
+  const b = text.lastIndexOf('}');
+  if (a < 0 || b <= a) return {script: null, errors: ['The answer did not contain a JSON object.']};
+  let raw: unknown;
+  try {
+    raw = JSON.parse(text.slice(a, b + 1));
+  } catch (e) {
+    return {script: null, errors: [`Invalid JSON: ${(e as Error).message}`]};
+  }
+  const r = ShortScriptSchema.safeParse(raw);
+  if (!r.success) return {script: null, errors: r.error.issues.slice(0, 12).map((i) => `${i.path.join('.')}: ${i.message}`)};
+  return {script: r.data, errors: []};
+};
 
 const client = new Anthropic();
 
@@ -97,7 +136,7 @@ const generateOne = async (idea: Idea, force: boolean) => {
       betas: ['server-side-fallback-2026-07-01'],
       fallbacks: 'default',
       thinking: {type: 'adaptive'},
-      output_config: {effort: EFFORT, format: betaZodOutputFormat(ShortScriptSchema)},
+      output_config: {effort: EFFORT},
       system: [{type: 'text', text: SYSTEM, cache_control: {type: 'ephemeral', ttl: '1h'}}],
       messages: [
         {
@@ -121,9 +160,12 @@ const generateOne = async (idea: Idea, force: boolean) => {
       feedback = '\n\nYour previous answer was too long and got cut off. Be more concise.';
       continue;
     }
-    const script = msg.parsed_output as ShortScript | null;
+    const text = msg.content.map((c) => (c.type === 'text' ? c.text : '')).join('');
+    const parsed = parseReply(text);
+    const script = parsed.script;
     if (!script) {
-      feedback = '\n\nYour previous answer was not valid JSON for the schema. Try again.';
+      console.warn(`🔁 #${idea.id} pokus ${attempt}: odpověď neodpovídá formátu – opravuji`);
+      feedback = `\n\nYour previous answer did not match the JSON format:\n- ${parsed.errors.join('\n- ')}\nReply with the complete corrected JSON only.`;
       continue;
     }
     script.id = idea.id;
@@ -145,7 +187,7 @@ const main = async () => {
   const argv = process.argv.slice(2);
   let ideas: Idea[];
   let force = false;
-  let concurrency = 2;
+  let concurrency = 1;
   const done = new Set(allScriptIds());
   if (argv[0] === 'next') {
     const n = Number(argv[1] || 1);
@@ -154,7 +196,7 @@ const main = async () => {
   } else {
     const a = parseArgs();
     force = a.force;
-    concurrency = a.concurrency || 2;
+    concurrency = a.concurrency || 1;
     ideas = loadIdeas().filter((i) => a.ids.includes(i.id));
   }
   if (!process.env.ANTHROPIC_API_KEY && !process.env.ANTHROPIC_AUTH_TOKEN) {
