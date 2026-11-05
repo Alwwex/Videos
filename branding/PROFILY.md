@@ -1,11 +1,12 @@
 # Jak mají vypadat účty
 
-Všechny účty mají **stejnou značku**: tmavě modrý „blueprint“ podklad s mřížkou, bílé **F** a žlutá oběžná dráha s elektronem. Je to stejný styl jako ve videích, takže je profil hned poznat.
+Všechny účty mají **stejný ručně kreslený styl**: papír se čtverečky, nápis fixou s duhovým zvýrazňovačem a kolem něj barevné čmáranice z fyziky (jablko, žárovka, magnet, atom, planeta, raketa, blesk, vlna). Působí to jako poznámky v sešitě, ne jako firma.
 
 | Soubor | Kam patří |
 |---|---|
-| `profilovka.png` (1080×1080) | profilová fotka na TikToku, Instagramu i YouTube (všechny jazyky) |
-| `youtube-banner-cs.png` / `-en` / `-ro` (2560×1440) | YouTube → Přizpůsobit kanál → Branding → Obrázek banneru |
+| `profilovka-cs.png` / `-en` / `-ro` (1080×1080) | profilová fotka – každý jazyk má svou („fyzika kolem tebe“ / „physics around you“ / „fizica din jurul tău“) |
+| `youtube-banner-cs.png` / `-en` / `-ro` (2560×1440) | YouTube → Přizpůsobit kanál → Branding → Obrázek banneru (nápis je v bezpečné zóně uprostřed) |
+| `nahled-profilovek.png` | jen náhled, jak profilovky vypadají v kolečku |
 
 > Uživatelská jména jsem nemohl ověřit, jestli jsou volná. Když je obsazené první, zkus další v pořadí.
 
@@ -112,7 +113,7 @@ Clipuri noi în fiecare zi. Abonează-te și scrie-mi în comentarii ce să expl
 - Vytvoř kanál s názvem výše a nastav handle (`@…`).
 - Nastavení → Kanál → Upřesňující nastavení: **„Není určeno dětem“** (Studio to nastavuje i u každého videa).
 - Nastavení → Kanál → Základní informace: země podle jazyka, klíčová slova: `fyzika, věda, vzdělávání, shorts`.
-- Vodoznak: Přizpůsobit kanál → Branding → Vodoznak videa → `profilovka.png`.
+- Vodoznak: Přizpůsobit kanál → Branding → Vodoznak videa → `profilovka-<jazyk>.png`.
 
 ## Tipy na první dny
 - **Připni** (na TikToku a Instagramu) 3 nejsilnější videa, třeba *Proč tě kopne klika*, *Padají těžší věci rychleji?* a *Balónek v autě letí dopředu*.
