@@ -1,0 +1,1219 @@
+{
+  "id": 7,
+  "title": {
+    "cs": "Proč termoska drží teplo",
+    "en": "Why a thermos keeps drinks hot",
+    "ro": "De ce termosul păstrează căldura"
+  },
+  "description": {
+    "cs": "Vakuum, stříbrné stěny a zátka: tři triky, kterými termoska zastaví únik tepla. ☕",
+    "en": "Vacuum, silvered walls and a stopper: three tricks a thermos uses to stop heat escaping. ☕",
+    "ro": "Vid, pereți argintați și un dop: trei trucuri prin care termosul oprește pierderea căldurii. ☕"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "termoska",
+    "thermos",
+    "science",
+    "kuchyne"
+  ],
+  "scenes": [
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Jak to, že termoska drží čaj *horký* celé hodiny?",
+        "en": "How does a thermos keep tea *hot* for hours?",
+        "ro": "Cum ține un termos ceaiul *fierbinte* ore întregi?"
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "fl",
+          "type": "cup",
+          "position": [
+            -0.3,
+            0.85,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": "#9fb3c2",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mug",
+          "type": "cup",
+          "position": [
+            0.5,
+            0.85,
+            0.2
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#d9643a",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "mug",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "fl",
+        "distance": 4,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "fl",
+          "emoji": "☕",
+          "text": {
+            "cs": "Termoska",
+            "en": "Thermos",
+            "ro": "Termos"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Teplo vždycky proudí z *teplého* do studeného.",
+        "en": "Heat always flows from *hot* to cold.",
+        "ro": "Căldura trece mereu de la *cald* la rece."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mug",
+          "type": "cup",
+          "position": [
+            -0.4,
+            0.85,
+            0
+          ],
+          "scale": 1.3,
+          "rotationY": 0,
+          "color": "#d9643a",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "tm",
+          "type": "thermometer",
+          "position": [
+            0.5,
+            0.85,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "mug",
+          "to": "tm",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "mug",
+        "distance": 3.5,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Obyčejný hrnek ho ztrácí třemi *cestami*.",
+        "en": "A normal mug loses it in three *ways*.",
+        "ro": "O cană obișnuită o pierde pe trei *căi*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mug",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": "#d9643a",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "mug",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "mug",
+        "distance": 3,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": {
+        "from": 90,
+        "to": 25,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "čaj v hrnku chladne",
+          "en": "tea in a mug cools",
+          "ro": "ceaiul din cană se răcește"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Zaprvé *vedením*: kmitající molekuly předávají teplo stěně.",
+        "en": "First, *conduction*: jiggling molecules pass heat into the wall.",
+        "ro": "Întâi, *conducția*: moleculele agitate dau căldura peretelui."
+      },
+      "props": [
+        {
+          "id": "a1",
+          "type": "atom",
+          "position": [
+            -0.5,
+            1.6,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "a2",
+          "type": "atom",
+          "position": [
+            0.5,
+            1.6,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "a1",
+          "to": "a2",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "a1",
+        "distance": 5,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "a1",
+          "emoji": "🔥",
+          "text": {
+            "cs": "Vedení",
+            "en": "Conduction",
+            "ro": "Conducție"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Zadruhé *prouděním*: ohřátý vzduch stoupá a teplo odnáší.",
+        "en": "Second, *convection*: warm air rises and carries heat away.",
+        "ro": "Apoi, *convecția*: aerul cald urcă și duce căldura cu el."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mug",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": "#d9643a",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "up",
+          "type": "arrowUp",
+          "position": [
+            0,
+            2,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "mug",
+          "to": "up",
+          "kind": "air"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "mug",
+        "distance": 4,
+        "angle": "side",
+        "move": "rise"
+      },
+      "labels": [
+        {
+          "prop": "up",
+          "emoji": "💨",
+          "text": {
+            "cs": "Proudění",
+            "en": "Convection",
+            "ro": "Convecție"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Zatřetí *zářením*: každá teplá věc vyzařuje infračervené světlo.",
+        "en": "Third, *radiation*: every warm thing gives off infrared light.",
+        "ro": "În al treilea rând, *radiația*: orice obiect cald emite lumină infraroșie."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mug",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": "#d9643a",
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "mug",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "mug",
+        "distance": 3.5,
+        "angle": "front",
+        "move": "dollyOut"
+      },
+      "labels": [
+        {
+          "prop": "mug",
+          "emoji": "🌡️",
+          "text": {
+            "cs": "Infračervené",
+            "en": "Infrared",
+            "ro": "Infraroșu"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Termoska má *dvě stěny*, jednu uvnitř druhé.",
+        "en": "A thermos has *two walls*, one inside the other.",
+        "ro": "Termosul are *doi pereți*, unul în interiorul celuilalt."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "fl",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": "#9fb3c2",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "in",
+          "type": "cup",
+          "position": [
+            0,
+            0.9,
+            0
+          ],
+          "scale": 1.3,
+          "rotationY": 0,
+          "color": "#c9d3da",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "fl",
+        "distance": 3.5,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "fl",
+          "emoji": "🧱",
+          "text": {
+            "cs": "Dvojitá stěna",
+            "en": "Double wall",
+            "ro": "Perete dublu"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Mezi nimi je *vakuum*, skoro žádný vzduch.",
+        "en": "Between them is a *vacuum*, almost no air at all.",
+        "ro": "Între ei e *vid*, aproape deloc aer."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "fl",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": "#9fb3c2",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "in",
+          "type": "cup",
+          "position": [
+            0,
+            0.9,
+            0
+          ],
+          "scale": 1.3,
+          "rotationY": 0,
+          "color": "#c9d3da",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "fl",
+        "distance": 3,
+        "angle": "top",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "fl",
+          "emoji": "⚪",
+          "text": {
+            "cs": "Vakuum",
+            "en": "Vacuum",
+            "ro": "Vid"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Bez molekul tam nefunguje *vedení* ani proudění.",
+        "en": "No molecules means no *conduction* and no convection.",
+        "ro": "Fără molecule nu există nici *conducție*, nici convecție."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "fl",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": "#9fb3c2",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a1",
+          "type": "atom",
+          "position": [
+            0.4,
+            1.4,
+            0.2
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0.7,
+            2.4,
+            0.2
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "fl",
+        "distance": 3.5,
+        "angle": "frontLeft",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "a1",
+          "emoji": "🚫",
+          "text": {
+            "cs": "Žádné molekuly",
+            "en": "No molecules",
+            "ro": "Fără molecule"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "space",
+      "narration": {
+        "cs": "Záření ale vakuem *projde*, jako sluneční světlo vesmírem.",
+        "en": "But radiation *crosses* a vacuum, like sunlight through space.",
+        "ro": "Dar radiația *traversează* vidul, ca lumina Soarelui prin spațiu."
+      },
+      "props": [
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            0,
+            2,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            0,
+            -2,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "sun",
+          "to": "earth",
+          "kind": "photons"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "sun",
+        "distance": 12,
+        "angle": "front",
+        "move": "rise"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Proto jsou stěny uvnitř *postříbřené* jako zrcadlo.",
+        "en": "That's why the walls are *silvered* like a mirror.",
+        "ro": "De aceea pereții sunt *argintați*, ca o oglindă."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "fl",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": "#e6eef3",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "fl",
+        "distance": 3,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "fl",
+          "emoji": "🪞",
+          "text": {
+            "cs": "Zrcadlo",
+            "en": "Mirror",
+            "ro": "Oglindă"
+          }
+        }
+      ],
+      "counter": {
+        "from": 0,
+        "to": 95,
+        "decimals": 0,
+        "unit": {
+          "cs": " %",
+          "en": " %",
+          "ro": " %"
+        },
+        "label": {
+          "cs": "odražené záření",
+          "en": "radiation reflected",
+          "ro": "radiație reflectată"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Infračervené záření se *odrazí* zpátky do čaje.",
+        "en": "The infrared *bounces* right back into the tea.",
+        "ro": "Radiația infraroșie se *reflectă* înapoi în ceai."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "fl",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": "#e6eef3",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "bk",
+          "type": "arrow",
+          "position": [
+            0.7,
+            1.3,
+            0.2
+          ],
+          "scale": 0.5,
+          "rotationY": 180,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "bk",
+          "to": "fl",
+          "kind": "heat"
+        }
+      ],
+      "waves": [
+        {
+          "from": "fl",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "fl",
+        "distance": 3.5,
+        "angle": "front",
+        "move": "orbitRight"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Nejslabší místo je *zátka*, tudy uniká nejvíc tepla.",
+        "en": "The weak spot is the *stopper*, where most heat escapes.",
+        "ro": "Punctul slab e *dopul*, pe acolo scapă cea mai multă căldură."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "fl",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": "#9fb3c2",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cap",
+          "type": "cup",
+          "position": [
+            0,
+            1.75,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": "#444c55",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "up",
+          "type": "arrowUp",
+          "position": [
+            0,
+            2.3,
+            0
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "cap",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "cap",
+        "distance": 3,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "cap",
+          "emoji": "🔩",
+          "text": {
+            "cs": "Zátka",
+            "en": "Stopper",
+            "ro": "Dop"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Dobrá termoska tak udrží čaj teplý i šest *hodin*.",
+        "en": "So a good thermos keeps tea warm for six *hours*.",
+        "ro": "Așa, un termos bun ține ceaiul cald și șase *ore*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "fl",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": "#9fb3c2",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cap",
+          "type": "cup",
+          "position": [
+            0,
+            1.75,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": "#444c55",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tm",
+          "type": "thermometer",
+          "position": [
+            0.6,
+            0.85,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "fl",
+        "distance": 3.5,
+        "angle": "frontLeft",
+        "move": "orbitLeft"
+      },
+      "labels": [],
+      "counter": {
+        "from": 90,
+        "to": 70,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "po šesti hodinách",
+          "en": "after six hours",
+          "ro": "după șase ore"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "A funguje to i *naopak*: ledová limonáda zůstane studená.",
+        "en": "It works *backwards* too: iced lemonade stays cold.",
+        "ro": "Și merge și *invers*: limonada cu gheață rămâne rece."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "fl",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": "#9fb3c2",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ice",
+          "type": "iceCube",
+          "position": [
+            0.6,
+            0.85,
+            0.2
+          ],
+          "scale": 0.8,
+          "rotationY": 20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "snow",
+          "type": "snowflake",
+          "position": [
+            0.6,
+            1.9,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "fl",
+        "distance": 4,
+        "angle": "side",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "fl",
+          "emoji": "❄️",
+          "text": {
+            "cs": "Drží i chlad",
+            "en": "Keeps cold too",
+            "ro": "Ține și rece"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Sleduj nás a objevuj fyziku ve své *kuchyni*!",
+        "en": "Follow us to find more physics in your *kitchen*!",
+        "ro": "Urmărește-ne și descoperă fizica din *bucătăria* ta!"
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "idea",
+          "type": "bulb",
+          "position": [
+            0,
+            2.1,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "kid",
+        "distance": 4.5,
+        "angle": "low",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    }
+  ]
+}

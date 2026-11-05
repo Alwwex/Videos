@@ -1,0 +1,984 @@
+{
+  "id": 6,
+  "title": {
+    "cs": "Jak lednička vyrábí chlad",
+    "en": "How a fridge makes cold",
+    "ro": "Cum face frigiderul frig"
+  },
+  "description": {
+    "cs": "Lednička chlad nevyrábí, ale přenáší teplo ven. Podívej se, jak funguje chladivo a kompresor. ❄️",
+    "en": "A fridge doesn't create cold, it moves heat out. See how the refrigerant and the compressor do it. ❄️",
+    "ro": "Frigiderul nu creează frig, ci mută căldura afară. Vezi cum lucrează agentul frigorific și compresorul. ❄️"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "lednicka",
+    "kuchyne",
+    "science",
+    "vzdelavani"
+  ],
+  "scenes": [
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Věděl jsi, že tvoje lednička vůbec nevyrábí *chlad*?",
+        "en": "Did you know your fridge doesn't actually make any *cold*?",
+        "ro": "Știai că frigiderul tău nu produce, de fapt, deloc *frig*?"
+      },
+      "props": [
+        {
+          "id": "fr",
+          "type": "fridge",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "snow",
+          "type": "snowflake",
+          "position": [
+            0.9,
+            2.3,
+            0.4
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "fr",
+        "distance": 6,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "fr",
+          "emoji": "🧊",
+          "text": {
+            "cs": "Lednička",
+            "en": "Fridge",
+            "ro": "Frigider"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Místo toho z vnitřku *odčerpává teplo* ven.",
+        "en": "Instead, it *pumps heat* out of its inside.",
+        "ro": "În schimb, *pompează căldura* afară din interior."
+      },
+      "props": [
+        {
+          "id": "fr",
+          "type": "fridge",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "out",
+          "type": "arrow",
+          "position": [
+            0.9,
+            1.4,
+            0.3
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": "#ff7744",
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "fr",
+          "to": "out",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "fr",
+        "distance": 5.5,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "labels": [],
+      "counter": {
+        "from": 20,
+        "to": 4,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "teplota uvnitř",
+          "en": "temperature inside",
+          "ro": "temperatura în interior"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Trubkami uvnitř proudí zvláštní látka, které se říká *chladivo*.",
+        "en": "Its hidden pipes carry a special substance called *refrigerant*.",
+        "ro": "Prin țevile ascunse circulă o substanță specială, *agentul frigorific*."
+      },
+      "props": [
+        {
+          "id": "fr",
+          "type": "fridge",
+          "position": [
+            -0.6,
+            0,
+            -0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mol",
+          "type": "atom",
+          "position": [
+            0.7,
+            1.5,
+            0.4
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#66ccff",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "mol",
+        "distance": 4.5,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "mol",
+          "emoji": "🧪",
+          "text": {
+            "cs": "Chladivo",
+            "en": "Refrigerant",
+            "ro": "Agent frigorific"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Vře už při mínus *dvanácti* stupních.",
+        "en": "It boils at just minus *twelve* degrees.",
+        "ro": "Fierbe deja la minus *douăsprezece* grade."
+      },
+      "props": [
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            -0.5,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mol",
+          "type": "atom",
+          "position": [
+            0.6,
+            1.2,
+            0.3
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#66ccff",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "th",
+        "distance": 4,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "labels": [],
+      "counter": {
+        "from": 20,
+        "to": -12,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "bod varu chladiva",
+          "en": "refrigerant boiling point",
+          "ro": "punctul de fierbere"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Když se *vypařuje*, bere teplo z tvého jídla.",
+        "en": "As it *evaporates*, it soaks up heat from your food.",
+        "ro": "Când se *evaporă*, absoarbe căldura din mâncarea ta."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "food",
+          "type": "cup",
+          "position": [
+            -0.5,
+            0.85,
+            0
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": "#e8a060",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mol",
+          "type": "atom",
+          "position": [
+            0.6,
+            1.8,
+            0.2
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": "#66ccff",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "food",
+          "to": "mol",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "food",
+        "distance": 3.8,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "mol",
+          "emoji": "💨",
+          "text": {
+            "cs": "Vypařování",
+            "en": "Evaporation",
+            "ro": "Evaporare"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Stejně tě chladí *pot*, když se ti odpařuje z kůže.",
+        "en": "It's the same way *sweat* cools you as it dries.",
+        "ro": "La fel te răcorește *transpirația* când se evaporă de pe piele."
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "snow",
+          "type": "snowflake",
+          "position": [
+            0.8,
+            2,
+            0.3
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "kid",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "kid",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "kid",
+          "emoji": "💧",
+          "text": {
+            "cs": "Pot",
+            "en": "Sweat",
+            "ro": "Transpirație"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Plyn pak stlačí *kompresor* schovaný dole vzadu.",
+        "en": "Then the *compressor* at the bottom back squeezes the gas.",
+        "ro": "Apoi *compresorul* ascuns jos, în spate, comprimă gazul."
+      },
+      "props": [
+        {
+          "id": "fr",
+          "type": "fridge",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 180,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mol",
+          "type": "atom",
+          "position": [
+            0.8,
+            0.6,
+            0.5
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": "#ff9955",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "fr",
+        "distance": 5,
+        "angle": "low",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "mol",
+          "emoji": "⚙️",
+          "text": {
+            "cs": "Kompresor",
+            "en": "Compressor",
+            "ro": "Compresor"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Stlačený plyn se *zahřeje*, víc než tvoje kuchyně.",
+        "en": "Squeezed gas gets *hot*, hotter than your kitchen.",
+        "ro": "Gazul comprimat se *încălzește*, mai tare decât bucătăria."
+      },
+      "props": [
+        {
+          "id": "mol",
+          "type": "atom",
+          "position": [
+            0,
+            1.4,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#ff6633",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            0.9,
+            0,
+            0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "mol",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "mol",
+        "distance": 4.5,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": {
+        "from": 20,
+        "to": 50,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "stlačený plyn",
+          "en": "compressed gas",
+          "ro": "gaz comprimat"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Mřížka vzadu to teplo *předá* vzduchu v místnosti.",
+        "en": "The *grille* on the back hands that heat to the room.",
+        "ro": "*Grila* din spate cedează căldura aerului din cameră."
+      },
+      "props": [
+        {
+          "id": "fr",
+          "type": "fridge",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 180,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "up",
+          "type": "arrowUp",
+          "position": [
+            0.9,
+            2.2,
+            -0.4
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": "#ff7744",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "fr",
+          "to": "up",
+          "kind": "air"
+        }
+      ],
+      "waves": [
+        {
+          "from": "fr",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "fr",
+        "distance": 5.5,
+        "angle": "side",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "fr",
+          "emoji": "🔥",
+          "text": {
+            "cs": "Kondenzátor",
+            "en": "Condenser",
+            "ro": "Condensator"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Plyn se tím ochladí a znovu *zkapalní*.",
+        "en": "The gas cools down and turns back into *liquid*.",
+        "ro": "Gazul se răcește și redevine *lichid*."
+      },
+      "props": [
+        {
+          "id": "mol",
+          "type": "atom",
+          "position": [
+            0,
+            1.8,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#66ccff",
+          "anim": "slide",
+          "slideTo": [
+            0,
+            0.6,
+            0
+          ],
+          "glow": false
+        },
+        {
+          "id": "pool",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            -0.5
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": "#4499dd",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "mol",
+        "distance": 4,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "pool",
+          "emoji": "💧",
+          "text": {
+            "cs": "Kapalina",
+            "en": "Liquid",
+            "ro": "Lichid"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Úzká trubička mu sníží *tlak* a chladivo zase vychladne.",
+        "en": "A narrow tube drops its *pressure*, and it turns cold again.",
+        "ro": "Un tub îngust îi scade *presiunea*, iar agentul se răcește iar."
+      },
+      "props": [
+        {
+          "id": "down",
+          "type": "arrowDown",
+          "position": [
+            -0.6,
+            1.6,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "snow",
+          "type": "snowflake",
+          "position": [
+            0.6,
+            1.5,
+            0.2
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "snow",
+        "distance": 4,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "down",
+          "emoji": "📉",
+          "text": {
+            "cs": "Nižší tlak",
+            "en": "Lower pressure",
+            "ro": "Presiune mică"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "A celý *koloběh* se pořád dokola opakuje.",
+        "en": "Then the whole *cycle* repeats over and over again.",
+        "ro": "Apoi tot *ciclul* se repetă iar și iar."
+      },
+      "props": [
+        {
+          "id": "fr",
+          "type": "fridge",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mol",
+          "type": "atom",
+          "position": [
+            0.9,
+            1.6,
+            0.4
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": "#66ccff",
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "fr",
+          "to": "mol",
+          "kind": "cold"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "fr",
+        "distance": 6,
+        "angle": "frontLeft",
+        "move": "rise"
+      },
+      "labels": [
+        {
+          "prop": "mol",
+          "emoji": "🔄",
+          "text": {
+            "cs": "Koloběh",
+            "en": "Cycle",
+            "ro": "Ciclu"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Proto je lednička vzadu na dotek *teplá*.",
+        "en": "That's why your fridge feels *warm* at the back.",
+        "ro": "De aceea frigiderul e *cald* în spate."
+      },
+      "props": [
+        {
+          "id": "fr",
+          "type": "fridge",
+          "position": [
+            -0.5,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 180,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0.8,
+            0,
+            0.6
+          ],
+          "scale": 1,
+          "rotationY": -60,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "fr",
+          "to": "kid",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "fr",
+        "distance": 6,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Otevřená lednička kuchyň nezchladí, naopak ji ještě *ohřeje*.",
+        "en": "An open fridge won't cool your kitchen, it *warms* it.",
+        "ro": "Un frigider deschis nu răcește bucătăria, ci o *încălzește*."
+      },
+      "props": [
+        {
+          "id": "fr",
+          "type": "fridge",
+          "position": [
+            -0.5,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            0.8,
+            0,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "fr",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "fr",
+        "distance": 6,
+        "angle": "front",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "th",
+          "emoji": "🌡️",
+          "text": {
+            "cs": "Tepleji!",
+            "en": "Warmer!",
+            "ro": "Mai cald!"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Sleduj nás a objevuj fyziku ve své *kuchyni*!",
+        "en": "Follow for more physics hiding in your *kitchen*!",
+        "ro": "Urmărește-ne pentru mai multă fizică din *bucătărie*!"
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "idea",
+          "type": "bulb",
+          "position": [
+            0,
+            2.1,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "kid",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    }
+  ]
+}

@@ -1,0 +1,239 @@
+{
+  "lang": "cs",
+  "scenes": [
+    {
+      "audioSrc": "generated/014/cs/s001.mp3",
+      "durationSec": 3.872,
+      "wordStarts": [
+        0,
+        0.29,
+        0.615,
+        1.254,
+        1.463,
+        1.753,
+        2.09,
+        2.485
+      ]
+    },
+    {
+      "audioSrc": "generated/014/cs/s002.mp3",
+      "durationSec": 3.733,
+      "wordStarts": [
+        0,
+        0.383,
+        0.464,
+        0.813,
+        0.894,
+        1.707,
+        2.113,
+        2.635
+      ]
+    },
+    {
+      "audioSrc": "generated/014/cs/s003.mp3",
+      "durationSec": 3.965,
+      "wordStarts": [
+        0,
+        0.255,
+        0.731,
+        0.813,
+        1.8,
+        2.125,
+        2.229,
+        2.705
+      ]
+    },
+    {
+      "audioSrc": "generated/014/cs/s004.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.267,
+        0.673,
+        0.813,
+        1.091,
+        1.544,
+        1.985,
+        2.09
+      ]
+    },
+    {
+      "audioSrc": "generated/014/cs/s005.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.197,
+        0.592,
+        0.673,
+        0.94,
+        1.393,
+        1.765,
+        2.125
+      ]
+    },
+    {
+      "audioSrc": "generated/014/cs/s006.mp3",
+      "durationSec": 4.105,
+      "wordStarts": [
+        0,
+        0.337,
+        0.592,
+        0.894,
+        1.347,
+        1.463,
+        1.95,
+        2.403,
+        2.914
+      ]
+    },
+    {
+      "audioSrc": "generated/014/cs/s007.mp3",
+      "durationSec": 3.965,
+      "wordStarts": [
+        0,
+        0.151,
+        0.511,
+        0.766,
+        1.161,
+        1.649,
+        2.241,
+        2.38,
+        2.647
+      ]
+    },
+    {
+      "audioSrc": "generated/014/cs/s008.mp3",
+      "durationSec": 3.083,
+      "wordStarts": [
+        0,
+        0.186,
+        0.546,
+        0.673,
+        0.871,
+        1.393,
+        1.8,
+        1.985
+      ]
+    },
+    {
+      "audioSrc": "generated/014/cs/s009.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.615,
+        0.72,
+        0.929,
+        1.242,
+        1.556,
+        1.904,
+        2.461,
+        2.577,
+        2.949
+      ]
+    },
+    {
+      "audioSrc": "generated/014/cs/s010.mp3",
+      "durationSec": 3.687,
+      "wordStarts": [
+        0,
+        0.476,
+        0.604,
+        0.789,
+        1.196,
+        1.416,
+        1.533,
+        2.032,
+        2.171,
+        2.554
+      ]
+    },
+    {
+      "audioSrc": "generated/014/cs/s011.mp3",
+      "durationSec": 4.29,
+      "wordStarts": [
+        0,
+        0.36,
+        0.697,
+        1.533,
+        1.66,
+        1.927,
+        2.345,
+        2.635,
+        2.856
+      ]
+    },
+    {
+      "audioSrc": "generated/014/cs/s012.mp3",
+      "durationSec": 3.501,
+      "wordStarts": [
+        0,
+        0.43,
+        0.72,
+        1.428,
+        1.544,
+        1.927,
+        2.299,
+        2.426
+      ]
+    },
+    {
+      "audioSrc": "generated/014/cs/s013.mp3",
+      "durationSec": 4.801,
+      "wordStarts": [
+        0,
+        0.929,
+        1.37,
+        1.881,
+        2.02,
+        2.786,
+        3.042,
+        3.506
+      ]
+    },
+    {
+      "audioSrc": "generated/014/cs/s014.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.163,
+        0.546,
+        0.964,
+        1.149,
+        1.579,
+        1.858,
+        2.194
+      ]
+    },
+    {
+      "audioSrc": "generated/014/cs/s015.mp3",
+      "durationSec": 3.408,
+      "wordStarts": [
+        0,
+        0.383,
+        1.022,
+        1.161,
+        1.533,
+        1.637,
+        2.02,
+        2.334
+      ]
+    }
+  ],
+  "texts": [
+    "Voda klidně vře, tak proč mléko najednou překypí?",
+    "Mléko je zhruba z 87 procent obyčejná voda.",
+    "Ale obsahuje i bílkoviny, tuk a mléčný cukr.",
+    "Při ohřevu se část bílkovin rozvine a slepí.",
+    "Na hladině z nich vznikne tenký pružný škraloup.",
+    "Kolem bodu varu vznikají u horkého dna bubliny páry.",
+    "V čisté vodě bubliny vyplavou nahoru a hned prasknou.",
+    "V mléce je ale škraloup uvězní pod sebou.",
+    "Bílkoviny a tuk navíc obalí každou bublinu a zpevní ji.",
+    "Bubliny se tak hromadí jedna na druhou do husté pěny.",
+    "Pára pořád přibývá a pěna vyroste během pár vteřin.",
+    "Přeleze okraj hrnce a vyteče rovnou na sporák.",
+    "Tip: stáhni plamen a míchej, tím škraloup rozbiješ.",
+    "A širší hrnec dá bublinám víc místa prasknout.",
+    "Sleduj nás, v kuchyni je fyziky ještě spousta!"
+  ]
+}

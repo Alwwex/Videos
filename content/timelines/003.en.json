@@ -1,0 +1,267 @@
+{
+  "lang": "en",
+  "scenes": [
+    {
+      "audioSrc": "generated/003/en/s001.mp3",
+      "durationSec": 3.64,
+      "wordStarts": [
+        0,
+        0.209,
+        0.476,
+        1.149,
+        1.533,
+        1.892,
+        2.009,
+        2.229,
+        2.612
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s002.mp3",
+      "durationSec": 4.848,
+      "wordStarts": [
+        0,
+        1.103,
+        1.579,
+        1.974,
+        2.125,
+        2.38,
+        3.065,
+        3.286,
+        3.553
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s003.mp3",
+      "durationSec": 3.408,
+      "wordStarts": [
+        0,
+        0.464,
+        0.639,
+        0.894,
+        0.987,
+        1.428,
+        1.765,
+        2.194,
+        2.357
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s004.mp3",
+      "durationSec": 4.894,
+      "wordStarts": [
+        0,
+        0.267,
+        0.499,
+        0.824,
+        0.964,
+        1.451,
+        1.66,
+        2.009,
+        2.949
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s005.mp3",
+      "durationSec": 3.826,
+      "wordStarts": [
+        0,
+        0.418,
+        0.673,
+        1.022,
+        1.649,
+        1.881,
+        2.345,
+        2.496
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s006.mp3",
+      "durationSec": 4.105,
+      "wordStarts": [
+        0,
+        0.232,
+        0.778,
+        1.161,
+        1.44,
+        1.823,
+        1.95,
+        2.368,
+        2.728,
+        2.856
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s007.mp3",
+      "durationSec": 3.129,
+      "wordStarts": [
+        0,
+        0.232,
+        0.383,
+        0.615,
+        0.998,
+        1.358,
+        1.498,
+        1.962,
+        2.09
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s008.mp3",
+      "durationSec": 3.826,
+      "wordStarts": [
+        0,
+        0.406,
+        0.801,
+        1.068,
+        1.405,
+        1.741,
+        1.892,
+        2.171,
+        2.299,
+        2.438
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s009.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.279,
+        0.546,
+        0.894,
+        1.126,
+        1.533,
+        1.649,
+        2.136
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s010.mp3",
+      "durationSec": 3.733,
+      "wordStarts": [
+        0,
+        0.209,
+        0.522,
+        0.72,
+        1.289,
+        1.509,
+        1.811,
+        2.078,
+        2.206,
+        2.566
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s011.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.313,
+        0.894,
+        1.068,
+        1.509,
+        1.916,
+        2.113,
+        2.392,
+        2.485
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s012.mp3",
+      "durationSec": 4.244,
+      "wordStarts": [
+        0,
+        0.383,
+        0.673,
+        0.917,
+        1.358,
+        1.579,
+        1.939,
+        2.334,
+        2.473,
+        2.821
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s013.mp3",
+      "durationSec": 4.569,
+      "wordStarts": [
+        0,
+        0.29,
+        0.639,
+        0.789,
+        1.567,
+        1.869,
+        2.229,
+        2.392,
+        2.868,
+        3.17
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s014.mp3",
+      "durationSec": 3.687,
+      "wordStarts": [
+        0,
+        0.163,
+        0.557,
+        0.894,
+        1.126,
+        1.277,
+        1.8,
+        1.95,
+        2.38,
+        2.496
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s015.mp3",
+      "durationSec": 6.148,
+      "wordStarts": [
+        0,
+        0.418,
+        0.848,
+        1.196,
+        1.521,
+        2.171,
+        3.007,
+        3.251,
+        3.541,
+        3.831
+      ]
+    },
+    {
+      "audioSrc": "generated/003/en/s016.mp3",
+      "durationSec": 2.572,
+      "wordStarts": [
+        0,
+        0.383,
+        0.511,
+        0.708,
+        1.057,
+        1.37,
+        1.463,
+        1.614
+      ]
+    }
+  ],
+  "texts": [
+    "On Mount Everest, water boils at just 70 degrees.",
+    "Why? Boiling depends on air pressure, not just heat.",
+    "Above you sits a huge, heavy column of air.",
+    "At sea level it presses with about 1013 hectopascals.",
+    "Heating makes water molecules move faster and faster.",
+    "The fastest ones form bubbles of steam inside the water.",
+    "But the air pushes back and crushes the bubbles.",
+    "Water boils once steam pushes as hard as the air.",
+    "At sea level, that happens at 100 degrees.",
+    "The higher you go, the less air is above you.",
+    "On Everest, the pressure drops to about a third.",
+    "Steam wins much sooner, so water boils at 70 degrees.",
+    "That water is cooler, so eggs and pasta cook slower.",
+    "A pressure cooker does the opposite and raises the pressure.",
+    "Water inside boils around 120 degrees, so food cooks faster.",
+    "Follow for more physics hiding in your kitchen!"
+  ]
+}

@@ -1,0 +1,255 @@
+{
+  "lang": "en",
+  "scenes": [
+    {
+      "audioSrc": "generated/012/en/s001.mp3",
+      "durationSec": 3.361,
+      "wordStarts": [
+        0,
+        0.244,
+        0.418,
+        0.743,
+        1.01,
+        1.324,
+        1.591,
+        1.741,
+        1.916,
+        2.322
+      ]
+    },
+    {
+      "audioSrc": "generated/012/en/s002.mp3",
+      "durationSec": 4.105,
+      "wordStarts": [
+        0,
+        0.406,
+        0.604,
+        0.998,
+        1.695,
+        2.032,
+        2.125,
+        2.229,
+        2.566
+      ]
+    },
+    {
+      "audioSrc": "generated/012/en/s003.mp3",
+      "durationSec": 5.776,
+      "wordStarts": [
+        0,
+        0.499,
+        0.743,
+        0.929,
+        1.846,
+        2.519,
+        3.17,
+        3.506,
+        3.901,
+        4.098
+      ]
+    },
+    {
+      "audioSrc": "generated/012/en/s004.mp3",
+      "durationSec": 5.266,
+      "wordStarts": [
+        0,
+        0.255,
+        0.627,
+        1.149,
+        1.474,
+        1.858,
+        2.368,
+        3.077,
+        3.251,
+        3.715
+      ]
+    },
+    {
+      "audioSrc": "generated/012/en/s005.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.372,
+        0.848,
+        0.94,
+        1.068,
+        1.347,
+        1.637,
+        1.753,
+        2.101,
+        2.218,
+        2.368
+      ]
+    },
+    {
+      "audioSrc": "generated/012/en/s006.mp3",
+      "durationSec": 4.105,
+      "wordStarts": [
+        0,
+        0.255,
+        0.848,
+        1.033,
+        1.138,
+        1.265,
+        1.486,
+        1.625,
+        1.985,
+        2.31,
+        2.426
+      ]
+    },
+    {
+      "audioSrc": "generated/012/en/s007.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.627,
+        0.894,
+        1.126,
+        1.289,
+        1.846,
+        2.067,
+        2.461,
+        2.717
+      ]
+    },
+    {
+      "audioSrc": "generated/012/en/s008.mp3",
+      "durationSec": 3.826,
+      "wordStarts": [
+        0,
+        0.244,
+        0.627,
+        1.022,
+        1.335,
+        1.834,
+        2.009,
+        2.101,
+        2.415
+      ]
+    },
+    {
+      "audioSrc": "generated/012/en/s009.mp3",
+      "durationSec": 3.64,
+      "wordStarts": [
+        0,
+        0.302,
+        0.708,
+        1.01,
+        1.533,
+        1.73,
+        1.834,
+        2.229,
+        2.334,
+        2.543
+      ]
+    },
+    {
+      "audioSrc": "generated/012/en/s010.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.267,
+        0.708,
+        1.115,
+        1.289,
+        1.486,
+        1.939,
+        2.136,
+        2.496
+      ]
+    },
+    {
+      "audioSrc": "generated/012/en/s011.mp3",
+      "durationSec": 3.083,
+      "wordStarts": [
+        0,
+        0.29,
+        0.441,
+        0.604,
+        0.766,
+        0.987,
+        1.242,
+        1.521,
+        1.834,
+        1.916
+      ]
+    },
+    {
+      "audioSrc": "generated/012/en/s012.mp3",
+      "durationSec": 3.408,
+      "wordStarts": [
+        0,
+        0.325,
+        0.464,
+        0.755,
+        0.848,
+        0.94,
+        1.173,
+        1.44,
+        1.544,
+        1.881,
+        2.206
+      ]
+    },
+    {
+      "audioSrc": "generated/012/en/s013.mp3",
+      "durationSec": 4.244,
+      "wordStarts": [
+        0,
+        0.395,
+        0.755,
+        1.428,
+        1.741,
+        2.078,
+        2.496,
+        2.798
+      ]
+    },
+    {
+      "audioSrc": "generated/012/en/s014.mp3",
+      "durationSec": 3.872,
+      "wordStarts": [
+        0,
+        0.406,
+        0.673,
+        1.01,
+        1.393,
+        1.869,
+        2.125,
+        2.624
+      ]
+    },
+    {
+      "audioSrc": "generated/012/en/s015.mp3",
+      "durationSec": 2.758,
+      "wordStarts": [
+        0,
+        0.383,
+        0.546,
+        0.755,
+        1.149,
+        1.474,
+        1.602,
+        1.776
+      ]
+    }
+  ],
+  "texts": [
+    "Why does salt melt ice even when it's below zero?",
+    "Ice is water molecules locked in a rigid crystal.",
+    "But at the surface, molecules constantly break free and refreeze.",
+    "At zero degrees both happen equally fast, a perfect balance.",
+    "Salt dissolves in the thin film of water on the ice.",
+    "Its particles get in the way of water trying to rejoin.",
+    "Molecules still leave the ice, but fewer come back.",
+    "So salty water only freezes at a lower temperature.",
+    "But melting needs heat, and it steals it from around.",
+    "So salty slush can get colder than plain ice.",
+    "That's how you can make ice cream without a freezer.",
+    "Ice and salt in a bowl drop to nearly minus 20.",
+    "Below minus 10, road salt barely helps anymore.",
+    "Then road crews spread sand or stronger salts.",
+    "Follow for more physics hiding in your kitchen!"
+  ]
+}

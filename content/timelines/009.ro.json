@@ -1,0 +1,244 @@
+{
+  "lang": "ro",
+  "scenes": [
+    {
+      "audioSrc": "generated/009/ro/s001.mp3",
+      "durationSec": 2.479,
+      "wordStarts": [
+        0,
+        0.186,
+        0.325,
+        0.406,
+        0.662,
+        1.184,
+        1.335,
+        1.509,
+        1.66
+      ]
+    },
+    {
+      "audioSrc": "generated/009/ro/s002.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.418,
+        0.917,
+        1.207,
+        1.393,
+        1.66,
+        1.765,
+        2.218,
+        2.392
+      ]
+    },
+    {
+      "audioSrc": "generated/009/ro/s003.mp3",
+      "durationSec": 3.129,
+      "wordStarts": [
+        0,
+        0.464,
+        0.894,
+        1.01,
+        1.3,
+        1.66,
+        1.927
+      ]
+    },
+    {
+      "audioSrc": "generated/009/ro/s004.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.43,
+        0.871,
+        1.231,
+        1.591,
+        1.683,
+        1.823,
+        2.206
+      ]
+    },
+    {
+      "audioSrc": "generated/009/ro/s005.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.29,
+        0.522,
+        0.859,
+        1.324,
+        1.544,
+        1.974,
+        2.287,
+        2.438
+      ]
+    },
+    {
+      "audioSrc": "generated/009/ro/s006.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.546,
+        0.72,
+        0.824,
+        1.324,
+        1.753,
+        2.032,
+        2.171,
+        2.496
+      ]
+    },
+    {
+      "audioSrc": "generated/009/ro/s007.mp3",
+      "durationSec": 3.501,
+      "wordStarts": [
+        0,
+        0.232,
+        0.546,
+        0.987,
+        1.115,
+        1.428,
+        2.043,
+        2.415
+      ]
+    },
+    {
+      "audioSrc": "generated/009/ro/s008.mp3",
+      "durationSec": 2.758,
+      "wordStarts": [
+        0,
+        0.244,
+        0.615,
+        1.149,
+        1.335,
+        1.707,
+        1.834
+      ]
+    },
+    {
+      "audioSrc": "generated/009/ro/s009.mp3",
+      "durationSec": 4.244,
+      "wordStarts": [
+        0,
+        0.464,
+        0.848,
+        1.242,
+        1.358,
+        1.707,
+        1.823,
+        2.125,
+        2.229,
+        2.368,
+        2.543,
+        2.786,
+        3.088
+      ]
+    },
+    {
+      "audioSrc": "generated/009/ro/s010.mp3",
+      "durationSec": 4.0120000000000005,
+      "wordStarts": [
+        0,
+        0.441,
+        0.604,
+        0.755,
+        1.277,
+        1.811,
+        2.09,
+        2.368,
+        2.844,
+        2.984
+      ]
+    },
+    {
+      "audioSrc": "generated/009/ro/s011.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.534,
+        0.685,
+        1.242,
+        1.637,
+        1.753,
+        2.171,
+        2.508
+      ]
+    },
+    {
+      "audioSrc": "generated/009/ro/s012.mp3",
+      "durationSec": 4.476,
+      "wordStarts": [
+        0,
+        0.337,
+        0.94,
+        1.126,
+        1.474,
+        1.614,
+        2.252,
+        2.67,
+        3.251
+      ]
+    },
+    {
+      "audioSrc": "generated/009/ro/s013.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.267,
+        0.627,
+        0.964,
+        1.405,
+        1.649,
+        1.985,
+        2.136,
+        2.426
+      ]
+    },
+    {
+      "audioSrc": "generated/009/ro/s014.mp3",
+      "durationSec": 3.408,
+      "wordStarts": [
+        0,
+        0.197,
+        0.534,
+        0.906,
+        1.045,
+        1.393,
+        1.579,
+        2.078,
+        2.322
+      ]
+    },
+    {
+      "audioSrc": "generated/009/ro/s015.mp3",
+      "durationSec": 2.851,
+      "wordStarts": [
+        0,
+        0.743,
+        0.882,
+        1.138,
+        1.591,
+        1.718,
+        1.846,
+        2.02
+      ]
+    }
+  ],
+  "texts": [
+    "De ce te arde lingurița din ceai la degete?",
+    "Ceaiul proaspăt are în jur de optzeci de grade.",
+    "Căldura înseamnă de fapt atomi care vibrează.",
+    "Ceaiul fierbinte agită atomii de la vârful linguriței.",
+    "Ei își împing vecinii, iar mișcarea merge mai departe.",
+    "Metalul are și electroni liberi care se mișcă ușor.",
+    "Ei duc căldura de-a lungul linguriței foarte repede.",
+    "În scurt timp, și coada se încinge.",
+    "Oțelul conduce căldura de circa o sută de ori mai bine decât lemnul.",
+    "Lemnul nu are electroni liberi, așa că căldura se târăște.",
+    "Metalul îți transferă căldura în degete foarte rapid.",
+    "Peste patruzeci și cinci de grade, nervii semnalează durere.",
+    "Din același motiv metalul pare atât de rece iarna.",
+    "De aceea oalele au mânere din plastic sau lemn.",
+    "Urmărește-ne și data viitoare nu te mai arzi!"
+  ]
+}

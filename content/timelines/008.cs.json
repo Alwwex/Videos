@@ -1,0 +1,237 @@
+{
+  "lang": "cs",
+  "scenes": [
+    {
+      "audioSrc": "generated/008/cs/s001.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.29,
+        0.395,
+        0.453,
+        0.859,
+        1.207,
+        1.521,
+        2.078
+      ]
+    },
+    {
+      "audioSrc": "generated/008/cs/s002.mp3",
+      "durationSec": 4.476,
+      "wordStarts": [
+        0,
+        0.406,
+        0.766,
+        0.952,
+        1.289,
+        2.078,
+        2.415,
+        2.728,
+        3.402
+      ]
+    },
+    {
+      "audioSrc": "generated/008/cs/s003.mp3",
+      "durationSec": 4.244,
+      "wordStarts": [
+        0,
+        0.488,
+        0.592,
+        0.964,
+        1.057,
+        1.393,
+        2.043,
+        2.345,
+        2.833
+      ]
+    },
+    {
+      "audioSrc": "generated/008/cs/s004.mp3",
+      "durationSec": 3.919,
+      "wordStarts": [
+        0,
+        0.325,
+        0.673,
+        1.126,
+        1.173,
+        1.823,
+        2.113,
+        2.496,
+        2.635
+      ]
+    },
+    {
+      "audioSrc": "generated/008/cs/s005.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.232,
+        0.441,
+        0.871,
+        1.01,
+        1.265,
+        1.358,
+        1.858,
+        2.032,
+        2.322,
+        2.577
+      ]
+    },
+    {
+      "audioSrc": "generated/008/cs/s006.mp3",
+      "durationSec": 3.361,
+      "wordStarts": [
+        0,
+        0.337,
+        0.871,
+        1.219,
+        1.405,
+        1.521,
+        1.834
+      ]
+    },
+    {
+      "audioSrc": "generated/008/cs/s007.mp3",
+      "durationSec": 3.594,
+      "wordStarts": [
+        0,
+        0.43,
+        0.917,
+        1.428,
+        1.683,
+        2.067,
+        2.183,
+        2.519
+      ]
+    },
+    {
+      "audioSrc": "generated/008/cs/s008.mp3",
+      "durationSec": 3.687,
+      "wordStarts": [
+        0,
+        0.348,
+        0.546,
+        1.196,
+        1.591,
+        1.974,
+        2.264
+      ]
+    },
+    {
+      "audioSrc": "generated/008/cs/s009.mp3",
+      "durationSec": 3.826,
+      "wordStarts": [
+        0,
+        0.383,
+        0.755,
+        1.289,
+        1.416,
+        1.741,
+        1.858,
+        2.334,
+        2.601
+      ]
+    },
+    {
+      "audioSrc": "generated/008/cs/s010.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.441,
+        0.615,
+        1.01,
+        1.37,
+        1.625
+      ]
+    },
+    {
+      "audioSrc": "generated/008/cs/s011.mp3",
+      "durationSec": 2.944,
+      "wordStarts": [
+        0,
+        0.372,
+        0.65,
+        1.068,
+        1.173,
+        1.521,
+        1.637
+      ]
+    },
+    {
+      "audioSrc": "generated/008/cs/s012.mp3",
+      "durationSec": 5.266,
+      "wordStarts": [
+        0,
+        0.221,
+        0.824,
+        1.126,
+        1.753,
+        2.38,
+        2.81,
+        3.042,
+        3.402
+      ]
+    },
+    {
+      "audioSrc": "generated/008/cs/s013.mp3",
+      "durationSec": 3.965,
+      "wordStarts": [
+        0,
+        0.615,
+        0.929,
+        1.045,
+        1.451,
+        1.637,
+        2.276,
+        2.392,
+        2.752
+      ]
+    },
+    {
+      "audioSrc": "generated/008/cs/s014.mp3",
+      "durationSec": 4.197,
+      "wordStarts": [
+        0,
+        0.464,
+        0.546,
+        1.01,
+        1.463,
+        1.823,
+        2.577,
+        2.717
+      ]
+    },
+    {
+      "audioSrc": "generated/008/cs/s015.mp3",
+      "durationSec": 2.851,
+      "wordStarts": [
+        0,
+        0.372,
+        0.917,
+        1.126,
+        1.335,
+        1.474,
+        1.591,
+        1.776,
+        1.858
+      ]
+    }
+  ],
+  "texts": [
+    "Jak se z tvrdého zrnka stane načechraný popcorn?",
+    "Každé zrnko má tuhou slupku, která skoro nepropouští vodu.",
+    "Uvnitř je škrob a trocha vody, asi čtrnáct procent.",
+    "Když zrnka zahřeješ v hrnci, voda uvnitř se ohřívá.",
+    "Nad sto stupňů se mění v páru, ale nemá kudy ven.",
+    "Tlak uvnitř roste až na devět atmosfér.",
+    "Horká pára mezitím mění škrob v měkký gel.",
+    "Kolem sto osmdesáti stupňů slupka tlak nevydrží.",
+    "Pára prudce uniká a škrob se nafoukne jako pěna.",
+    "Zrnko tak zvětší objem až čtyřicetkrát.",
+    "Pěna rychle chladne a ztuhne do křupava.",
+    "To prásknutí dělá unikající pára, podobně jako zátka šampaňského.",
+    "Vyboulený škrob se odrazí ode dna a zrnko vyskočí.",
+    "Zrnka s prasklou slupkou páru pustí a nevybuchnou.",
+    "Sleduj nás, ať víš, co se děje v kuchyni!"
+  ]
+}

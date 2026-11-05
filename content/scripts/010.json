@@ -1,0 +1,1226 @@
+{
+  "id": 10,
+  "title": {
+    "cs": "Jak funguje rychlovarná konvice",
+    "en": "How an electric kettle works",
+    "ro": "Cum funcționează fierbătorul electric"
+  },
+  "description": {
+    "cs": "Proč konvice hučí, proč pak ztichne a co ji samo vypne. ☕",
+    "en": "Why a kettle rumbles, why it goes quiet, and what switches it off. ☕",
+    "ro": "De ce vuiește fierbătorul, de ce se liniștește și ce îl oprește singur. ☕"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "konvice",
+    "kettle",
+    "science",
+    "vzdelavani"
+  ],
+  "scenes": [
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Jak konvice uvaří vodu za pouhé *tři minuty*?",
+        "en": "How does a kettle boil water in just *three minutes*?",
+        "ro": "Cum dă în clocot fierbătorul apa în doar *trei minute*?"
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kettle",
+          "type": "pot",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#c8d0d8",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0.7,
+            0.85,
+            0.25
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "kettle",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "kettle",
+        "distance": 4,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "kettle",
+          "emoji": "☕",
+          "text": {
+            "cs": "Konvice",
+            "en": "Kettle",
+            "ro": "Fierbător"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Ve dně se skrývá kovové *topné těleso*.",
+        "en": "Under its bottom hides a metal *heating element*.",
+        "ro": "În fundul lui se ascunde o *rezistență* de metal."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kettle",
+          "type": "pot",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#c8d0d8",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "kettle",
+        "distance": 3,
+        "angle": "low",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "kettle",
+          "emoji": "🔥",
+          "text": {
+            "cs": "Topné těleso",
+            "en": "Heating element",
+            "ro": "Rezistență"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Když ji zapneš, proženou se tělesem *elektrony*.",
+        "en": "When you switch it on, *electrons* rush through it.",
+        "ro": "Când îl pornești, prin rezistență năvălesc *electronii*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bat",
+          "type": "battery",
+          "position": [
+            -0.5,
+            0.85,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kettle",
+          "type": "pot",
+          "position": [
+            0.5,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#c8d0d8",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [
+        {
+          "from": "bat",
+          "to": "kettle",
+          "kind": "electrons"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "kettle",
+        "distance": 5,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "bat",
+          "emoji": "⚡",
+          "text": {
+            "cs": "Proud",
+            "en": "Current",
+            "ro": "Curent"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Cestou neustále narážejí do *atomů* kovu.",
+        "en": "They keep crashing into the metal's *atoms*.",
+        "ro": "Pe drum se tot ciocnesc de *atomii* metalului."
+      },
+      "props": [
+        {
+          "id": "a1",
+          "type": "atom",
+          "position": [
+            -0.6,
+            1.6,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a2",
+          "type": "atom",
+          "position": [
+            0.6,
+            1.5,
+            0.2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a3",
+          "type": "atom",
+          "position": [
+            0,
+            2.3,
+            -0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "a1",
+          "to": "a2",
+          "kind": "electrons"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "a3",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "a3",
+          "emoji": "⚛️",
+          "text": {
+            "cs": "Atom kovu",
+            "en": "Metal atom",
+            "ro": "Atom de metal"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Každá srážka mění elektrickou energii na *teplo*.",
+        "en": "Each collision turns electrical energy into *heat*.",
+        "ro": "Fiecare ciocnire transformă energia electrică în *căldură*."
+      },
+      "props": [
+        {
+          "id": "a1",
+          "type": "atom",
+          "position": [
+            -0.6,
+            1.6,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "a2",
+          "type": "atom",
+          "position": [
+            0.6,
+            1.5,
+            0.2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "a3",
+          "type": "atom",
+          "position": [
+            0,
+            2.3,
+            -0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "a2",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "a3",
+        "distance": 4,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "a2",
+          "emoji": "🔥",
+          "text": {
+            "cs": "Teplo",
+            "en": "Heat",
+            "ro": "Căldură"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Běžná konvice má příkon kolem *2000 wattů*.",
+        "en": "A typical kettle uses about *2000 watts*.",
+        "ro": "Un fierbător obișnuit consumă cam *2000 de wați*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kettle",
+          "type": "pot",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#c8d0d8",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "kettle",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "kettle",
+        "distance": 3.5,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": {
+        "from": 0,
+        "to": 2000,
+        "decimals": 0,
+        "unit": {
+          "cs": " W",
+          "en": " W",
+          "ro": " W"
+        },
+        "label": {
+          "cs": "příkon konvice",
+          "en": "kettle power",
+          "ro": "puterea fierbătorului"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Těleso nejdřív ohřeje vodu u *dna*.",
+        "en": "The element heats the water at the *bottom* first.",
+        "ro": "Rezistența încălzește întâi apa de pe *fund*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kettle",
+          "type": "pot",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#c8d0d8",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "kettle",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "kettle",
+        "distance": 3,
+        "angle": "low",
+        "move": "rise"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Teplá voda je řidší, a tak *stoupá* nahoru.",
+        "en": "Warm water is less dense, so it *rises*.",
+        "ro": "Apa caldă e mai puțin densă, așa că *urcă*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kettle",
+          "type": "pot",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#c8d0d8",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "up",
+          "type": "arrowUp",
+          "position": [
+            0.6,
+            1.7,
+            0.3
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": "#ff7a45",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "kettle",
+          "to": "up",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "kettle",
+        "distance": 3.5,
+        "angle": "frontLeft",
+        "move": "orbitRight"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Studená klesá dolů a vzniká *proudění*.",
+        "en": "Cold water sinks, creating a *convection* loop.",
+        "ro": "Apa rece coboară și apare un circuit de *convecție*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kettle",
+          "type": "pot",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#c8d0d8",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "up",
+          "type": "arrowUp",
+          "position": [
+            -0.5,
+            1.7,
+            0.4
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": "#ff7a45",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "down",
+          "type": "arrowDown",
+          "position": [
+            0.5,
+            1.7,
+            0.4
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": "#4aa3ff",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "up",
+          "to": "down",
+          "kind": "water"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "kettle",
+        "distance": 3.5,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "down",
+          "emoji": "🔄",
+          "text": {
+            "cs": "Proudění",
+            "en": "Convection",
+            "ro": "Convecție"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "To *hučení* dělají bublinky páry, které ve studenější vodě zanikají.",
+        "en": "That *rumbling* is steam bubbles collapsing in cooler water.",
+        "ro": "*Vuietul* vine din bule de abur care se prăbușesc în apa rece."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kettle",
+          "type": "pot",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#c8d0d8",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "kettle",
+          "kind": "sound"
+        }
+      ],
+      "camera": {
+        "focus": "kettle",
+        "distance": 3,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "kettle",
+          "emoji": "🔊",
+          "text": {
+            "cs": "Hučení",
+            "en": "Rumble",
+            "ro": "Vuiet"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Při *100 stupních* bubliny vyplavou až nahoru a konvice ztichne.",
+        "en": "At *100 degrees*, bubbles reach the surface and it goes quieter.",
+        "ro": "La *100 de grade*, bulele urcă la suprafață și zgomotul scade."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kettle",
+          "type": "pot",
+          "position": [
+            -0.4,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#c8d0d8",
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            0.6,
+            0.85,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "kettle",
+          "to": "th",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "kettle",
+        "distance": 4,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "labels": [],
+      "counter": {
+        "from": 20,
+        "to": 100,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "teplota vody",
+          "en": "water temperature",
+          "ro": "temperatura apei"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Jeden litr na to potřebuje asi *335 kilojoulů*.",
+        "en": "One liter needs about *335 kilojoules* to get there.",
+        "ro": "Un litru are nevoie de circa *335 de kilojouli*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bat",
+          "type": "battery",
+          "position": [
+            -0.5,
+            0.85,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kettle",
+          "type": "pot",
+          "position": [
+            0.5,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#c8d0d8",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [
+        {
+          "from": "bat",
+          "to": "kettle",
+          "kind": "electrons"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "kettle",
+        "distance": 5,
+        "angle": "side",
+        "move": "dollyOut"
+      },
+      "labels": [],
+      "counter": {
+        "from": 0,
+        "to": 335,
+        "decimals": 0,
+        "unit": {
+          "cs": " kJ",
+          "en": " kJ",
+          "ro": " kJ"
+        },
+        "label": {
+          "cs": "energie na 1 litr",
+          "en": "energy for 1 liter",
+          "ro": "energie pentru 1 litru"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Při 2000 wattech to zabere zhruba *tři minuty*.",
+        "en": "At 2000 watts, that takes roughly *three minutes*.",
+        "ro": "La 2000 de wați, durează cam *trei minute*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kettle",
+          "type": "pot",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#c8d0d8",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0.7,
+            0.85,
+            0.25
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "kettle",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "kettle",
+        "distance": 4,
+        "angle": "top",
+        "move": "rise"
+      },
+      "labels": [],
+      "counter": {
+        "from": 0,
+        "to": 168,
+        "decimals": 0,
+        "unit": {
+          "cs": " s",
+          "en": " s",
+          "ro": " s"
+        },
+        "label": {
+          "cs": "čas bez ztrát",
+          "en": "time without losses",
+          "ro": "timp fără pierderi"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Pak pára ohřeje *bimetalový pásek* u vypínače.",
+        "en": "Then steam heats a *bimetallic strip* near the switch.",
+        "ro": "Apoi aburul încălzește o *lamelă bimetalică* lângă întrerupător."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kettle",
+          "type": "pot",
+          "position": [
+            -0.3,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#c8d0d8",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "strip",
+          "type": "magnet",
+          "position": [
+            0.5,
+            1.3,
+            0.2
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": "#c9a24a",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "kettle",
+          "to": "strip",
+          "kind": "air"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "strip",
+        "distance": 3,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "strip",
+          "emoji": "🌡️",
+          "text": {
+            "cs": "Bimetal",
+            "en": "Bimetal strip",
+            "ro": "Lamelă bimetalică"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Dva kovy se roztahují různě, pásek se ohne a *cvak*, vypnuto.",
+        "en": "Its two metals expand differently, so it bends and *clicks* off.",
+        "ro": "Cele două metale se dilată diferit, lamela se îndoaie și *clic*!"
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kettle",
+          "type": "pot",
+          "position": [
+            -0.3,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#c8d0d8",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "strip",
+          "type": "magnet",
+          "position": [
+            0.5,
+            1.3,
+            0.2
+          ],
+          "scale": 0.4,
+          "rotationY": 30,
+          "color": "#c9a24a",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "strip",
+          "kind": "sound"
+        }
+      ],
+      "camera": {
+        "focus": "strip",
+        "distance": 2.8,
+        "angle": "frontLeft",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "strip",
+          "emoji": "🔌",
+          "text": {
+            "cs": "Vypnuto",
+            "en": "Off",
+            "ro": "Oprit"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Sleduj nás, v kuchyni se skrývá víc *fyziky*!",
+        "en": "Follow for more physics hiding in your *kitchen*!",
+        "ro": "Urmărește-ne pentru mai multă fizică din *bucătărie*!"
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "idea",
+          "type": "bulb",
+          "position": [
+            0,
+            2.1,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "kid",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    }
+  ]
+}

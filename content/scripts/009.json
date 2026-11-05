@@ -1,0 +1,1155 @@
+{
+  "id": 9,
+  "title": {
+    "cs": "Proč kovová lžíce v čaji pálí",
+    "en": "Why a metal spoon in tea burns",
+    "ro": "De ce arde lingurița de metal în ceai"
+  },
+  "description": {
+    "cs": "Jak volné elektrony v kovu rozvedou teplo až do tvých prstů a proč dřevo nepálí. 🔥",
+    "en": "How free electrons in metal carry heat all the way to your fingers, and why wood doesn't burn. 🔥",
+    "ro": "Cum electronii liberi din metal duc căldura până la degetele tale și de ce lemnul nu arde. 🔥"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "kuchyne",
+    "teplo",
+    "science",
+    "vzdelavani"
+  ],
+  "scenes": [
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Proč lžička v čaji *pálí*, když je ponořená jen napůl?",
+        "en": "Why does a spoon in tea *burn* your fingers?",
+        "ro": "De ce te *arde* lingurița din ceai la degete?"
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "spoon",
+          "type": "arrowUp",
+          "position": [
+            0.15,
+            1.4,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": "#c0c6cc",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "cup",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "cup",
+        "distance": 3.5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "spoon",
+          "emoji": "🥄",
+          "text": {
+            "cs": "Kovová lžička",
+            "en": "Metal spoon",
+            "ro": "Linguriță metalică"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Čerstvý čaj má kolem *osmdesáti stupňů*.",
+        "en": "Fresh tea is around *eighty degrees* Celsius.",
+        "ro": "Ceaiul proaspăt are în jur de *optzeci de grade*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            0.6,
+            0.85,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "cup",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "cup",
+        "distance": 3.5,
+        "angle": "frontLeft",
+        "move": "orbitLeft"
+      },
+      "labels": [],
+      "counter": {
+        "from": 20,
+        "to": 80,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "teplota čaje",
+          "en": "tea temperature",
+          "ro": "temperatura ceaiului"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Teplo je vlastně *kmitání* atomů a molekul.",
+        "en": "Heat is really just atoms *jiggling* around.",
+        "ro": "Căldura înseamnă de fapt atomi care *vibrează*."
+      },
+      "props": [
+        {
+          "id": "a1",
+          "type": "atom",
+          "position": [
+            -0.5,
+            1.5,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a2",
+          "type": "atom",
+          "position": [
+            0.5,
+            1.4,
+            0.2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a3",
+          "type": "atom",
+          "position": [
+            0,
+            2.4,
+            -0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "a1",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "a1",
+          "emoji": "⚛️",
+          "text": {
+            "cs": "Atom",
+            "en": "Atom",
+            "ro": "Atom"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Horký čaj rozkmitá atomy na *spodku* lžičky.",
+        "en": "Hot tea makes the atoms at the spoon's *tip* shake.",
+        "ro": "Ceaiul fierbinte agită atomii de la *vârful* linguriței."
+      },
+      "props": [
+        {
+          "id": "a1",
+          "type": "atom",
+          "position": [
+            -0.4,
+            1.5,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "a2",
+          "type": "atom",
+          "position": [
+            0.4,
+            1.5,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "a1",
+          "to": "a2",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "a1",
+        "distance": 5,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "a1",
+          "emoji": "🔥",
+          "text": {
+            "cs": "Horký atom",
+            "en": "Hot atom",
+            "ro": "Atom fierbinte"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Ty pak strkají do svých *sousedů* dál a dál.",
+        "en": "They nudge their *neighbors*, passing the motion along.",
+        "ro": "Ei își împing *vecinii*, iar mișcarea merge mai departe."
+      },
+      "props": [
+        {
+          "id": "a1",
+          "type": "atom",
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "a2",
+          "type": "atom",
+          "position": [
+            0,
+            1.8,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a3",
+          "type": "atom",
+          "position": [
+            0,
+            2.6,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "a1",
+          "to": "a2",
+          "kind": "heat"
+        },
+        {
+          "from": "a2",
+          "to": "a3",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "a2",
+        "distance": 5,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Kov má navíc *volné elektrony*, které se snadno pohybují.",
+        "en": "Metal also has *free electrons* that roam around.",
+        "ro": "Metalul are și *electroni liberi* care se mișcă ușor."
+      },
+      "props": [
+        {
+          "id": "a1",
+          "type": "atom",
+          "position": [
+            0,
+            1.4,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#c0c6cc",
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a2",
+          "type": "atom",
+          "position": [
+            0,
+            2.4,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#c0c6cc",
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "a1",
+          "to": "a2",
+          "kind": "electrons"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "a1",
+        "distance": 4.5,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "a1",
+          "emoji": "⚡",
+          "text": {
+            "cs": "Volné elektrony",
+            "en": "Free electrons",
+            "ro": "Electroni liberi"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Ty teplo roznesou po lžičce bleskově *rychle*.",
+        "en": "They carry heat along the spoon really *fast*.",
+        "ro": "Ei duc căldura de-a lungul linguriței foarte *repede*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "spoon",
+          "type": "arrowUp",
+          "position": [
+            0.15,
+            1.4,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": "#c0c6cc",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "cup",
+          "to": "spoon",
+          "kind": "electrons"
+        },
+        {
+          "from": "cup",
+          "to": "spoon",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "spoon",
+        "distance": 3.5,
+        "angle": "low",
+        "move": "rise"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Za chvilku je horká i *rukojeť*.",
+        "en": "Soon, the *handle* gets hot too.",
+        "ro": "În scurt timp, și *coada* se încinge."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "spoon",
+          "type": "arrowUp",
+          "position": [
+            0.15,
+            1.4,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": "#c0c6cc",
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            0.6,
+            0.85,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "spoon",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "spoon",
+        "distance": 3.5,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "spoon",
+          "emoji": "🔥",
+          "text": {
+            "cs": "Horká rukojeť",
+            "en": "Hot handle",
+            "ro": "Coadă fierbinte"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Ocel vede teplo zhruba *stokrát* lépe než dřevo.",
+        "en": "Steel conducts heat about a *hundred times* better than wood.",
+        "ro": "Oțelul conduce căldura de circa *o sută de ori* mai bine decât lemnul."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "spoon",
+          "type": "arrowUp",
+          "position": [
+            -0.4,
+            1.4,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": "#c0c6cc",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "wood",
+          "type": "arrowUp",
+          "position": [
+            0.4,
+            1.4,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": "#a0703c",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "spoon",
+        "distance": 4,
+        "angle": "front",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "spoon",
+          "emoji": "🔩",
+          "text": {
+            "cs": "Ocel",
+            "en": "Steel",
+            "ro": "Oțel"
+          }
+        },
+        {
+          "prop": "wood",
+          "emoji": "🪵",
+          "text": {
+            "cs": "Dřevo",
+            "en": "Wood",
+            "ro": "Lemn"
+          }
+        }
+      ],
+      "counter": {
+        "from": 1,
+        "to": 100,
+        "decimals": 0,
+        "unit": {
+          "cs": "×",
+          "en": "×",
+          "ro": "×"
+        },
+        "label": {
+          "cs": "ocel proti dřevu",
+          "en": "steel vs. wood",
+          "ro": "oțel față de lemn"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Dřevo volné elektrony nemá, takže se teplo jen *plazí*.",
+        "en": "Wood has no free electrons, so heat just *crawls*.",
+        "ro": "Lemnul nu are electroni liberi, așa că căldura se *târăște*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "wood",
+          "type": "arrowUp",
+          "position": [
+            0.15,
+            1.4,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": "#a0703c",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "cup",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "cup",
+        "distance": 3.5,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "wood",
+          "emoji": "🪵",
+          "text": {
+            "cs": "Dřevěná vařečka",
+            "en": "Wooden spoon",
+            "ro": "Lingură de lemn"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Kov navíc předá teplo do prstů velmi *rychle*.",
+        "en": "Metal also dumps heat into your fingers very *quickly*.",
+        "ro": "Metalul îți transferă căldura în degete foarte *rapid*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0.8,
+            0,
+            0.6
+          ],
+          "scale": 1,
+          "rotationY": -30,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "cup",
+          "to": "kid",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "cup",
+        "distance": 5,
+        "angle": "frontRight",
+        "move": "orbitLeft"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Nad čtyřiceti pěti stupni začnou nervy hlásit *bolest*.",
+        "en": "Above forty-five degrees, your nerves start signaling *pain*.",
+        "ro": "Peste patruzeci și cinci de grade, nervii semnalează *durere*."
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            0.7,
+            0,
+            0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "kid",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "kid",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": {
+        "from": 36,
+        "to": 45,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "práh bolesti",
+          "en": "pain threshold",
+          "ro": "pragul durerii"
+        }
+      }
+    },
+    {
+      "environment": "outdoor",
+      "narration": {
+        "cs": "Ze stejného důvodu je kov v zimě tak *studený*.",
+        "en": "Same reason metal feels so *cold* in winter.",
+        "ro": "Din același motiv metalul pare atât de *rece* iarna."
+      },
+      "props": [
+        {
+          "id": "snow",
+          "type": "snowflake",
+          "position": [
+            0,
+            2.4,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "car",
+          "type": "car",
+          "position": [
+            0.8,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 90,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            -0.7,
+            0,
+            0.5
+          ],
+          "scale": 1,
+          "rotationY": 30,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "kid",
+          "to": "car",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "snow",
+        "distance": 6,
+        "angle": "frontLeft",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "car",
+          "emoji": "❄️",
+          "text": {
+            "cs": "Studený kov",
+            "en": "Cold metal",
+            "ro": "Metal rece"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Proto mají hrnce *rukojeti* z plastu nebo dřeva.",
+        "en": "That's why pots have *handles* made of plastic or wood.",
+        "ro": "De aceea oalele au *mânere* din plastic sau lemn."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1.2,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "pot",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "pot",
+        "distance": 4,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "pot",
+          "emoji": "🪵",
+          "text": {
+            "cs": "Rukojeť",
+            "en": "Handle",
+            "ro": "Mâner"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Sleduj nás a příště už se *nespálíš*!",
+        "en": "Follow for more, and stay *burn-free* next time!",
+        "ro": "Urmărește-ne și data viitoare nu te mai *arzi*!"
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "idea",
+          "type": "bulb",
+          "position": [
+            0,
+            2.1,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "kid",
+        "distance": 4.5,
+        "angle": "low",
+        "move": "rise"
+      },
+      "labels": [],
+      "counter": null
+    }
+  ]
+}

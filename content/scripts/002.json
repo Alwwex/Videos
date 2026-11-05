@@ -1,0 +1,1011 @@
+{
+  "id": 2,
+  "title": {
+    "cs": "Jak funguje indukční deska",
+    "en": "How an induction hob works",
+    "ro": "Cum funcționează plita cu inducție"
+  },
+  "description": {
+    "cs": "Proč indukce ohřeje hrnec, ale ne samotnou desku, a proč potřebuješ magnetické nádobí. 🧲",
+    "en": "Why induction heats the pot but not the hob itself, and why you need magnetic cookware. 🧲",
+    "ro": "De ce inducția încălzește oala, dar nu plita, și de ce ai nevoie de vase magnetice. 🧲"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "indukce",
+    "kuchyne",
+    "science",
+    "fizica"
+  ],
+  "scenes": [
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Indukční deska uvaří vodu, ale sama vůbec *nehřeje*. Jak?",
+        "en": "An induction hob boils water, yet makes no *heat* itself. How?",
+        "ro": "Plita cu inducție fierbe apa, dar ea însăși nu *încălzește*. Cum?"
+      },
+      "props": [
+        {
+          "id": "hob",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "pot",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "pot",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "hob",
+          "emoji": "🍳",
+          "text": {
+            "cs": "Indukce",
+            "en": "Induction",
+            "ro": "Inducție"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Pod sklem se schovává měděná *cívka*.",
+        "en": "Under the glass hides a copper *coil*.",
+        "ro": "Sub sticlă se ascunde o *bobină* de cupru."
+      },
+      "props": [
+        {
+          "id": "hob",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "hob",
+        "distance": 3.5,
+        "angle": "top",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "hob",
+          "emoji": "🌀",
+          "text": {
+            "cs": "Měděná cívka",
+            "en": "Copper coil",
+            "ro": "Bobină de cupru"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Teče jí *střídavý proud*, který mění směr desetitisíckrát za sekundu.",
+        "en": "*Alternating current* flips direction tens of thousands of times a second.",
+        "ro": "Prin ea circulă *curent alternativ*, schimbând sensul de zeci de mii de ori."
+      },
+      "props": [
+        {
+          "id": "hob",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "plug",
+          "type": "battery",
+          "position": [
+            -0.9,
+            0,
+            0.4
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "plug",
+          "to": "hob",
+          "kind": "electrons"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "hob",
+        "distance": 4.5,
+        "angle": "frontLeft",
+        "move": "orbitLeft"
+      },
+      "labels": [],
+      "counter": {
+        "from": 0,
+        "to": 25,
+        "decimals": 0,
+        "unit": {
+          "cs": " kHz",
+          "en": " kHz",
+          "ro": " kHz"
+        },
+        "label": {
+          "cs": "frekvence proudu",
+          "en": "current frequency",
+          "ro": "frecvența curentului"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Proud kolem cívky vytváří *magnetické pole*, které se neustále mění.",
+        "en": "The current creates a *magnetic field* that keeps changing.",
+        "ro": "Curentul creează un *câmp magnetic* care se schimbă continuu."
+      },
+      "props": [
+        {
+          "id": "hob",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "field",
+          "type": "arrowUp",
+          "position": [
+            0,
+            1.7,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#66ccff",
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "hob",
+        "distance": 4,
+        "angle": "front",
+        "move": "rise"
+      },
+      "labels": [
+        {
+          "prop": "field",
+          "emoji": "🧲",
+          "text": {
+            "cs": "Magnetické pole",
+            "en": "Magnetic field",
+            "ro": "Câmp magnetic"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Pole projde sklem až do *dna hrnce*.",
+        "en": "The field passes through the glass into the *pot's bottom*.",
+        "ro": "Câmpul trece prin sticlă până în *fundul oalei*."
+      },
+      "props": [
+        {
+          "id": "hob",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "field",
+          "type": "arrowUp",
+          "position": [
+            0.55,
+            1.1,
+            0.3
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": "#66ccff",
+          "anim": "slide",
+          "slideTo": [
+            0.55,
+            1.5,
+            0.3
+          ],
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 3.5,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "pot",
+          "emoji": "🍲",
+          "text": {
+            "cs": "Dno hrnce",
+            "en": "Pot bottom",
+            "ro": "Fundul oalei"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Měnící se pole v kovu *indukuje* elektrický proud.",
+        "en": "A changing field *induces* electric current in the metal.",
+        "ro": "Câmpul variabil *induce* curent electric în metal."
+      },
+      "props": [
+        {
+          "id": "hob",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "e1",
+          "type": "atom",
+          "position": [
+            -0.55,
+            1.15,
+            0.4
+          ],
+          "scale": 0.35,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "e2",
+          "type": "atom",
+          "position": [
+            0.55,
+            1.15,
+            0.4
+          ],
+          "scale": 0.35,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [
+        {
+          "from": "e1",
+          "to": "e2",
+          "kind": "electrons"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 3,
+        "angle": "low",
+        "move": "orbitRight"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Tyto *vířivé proudy* krouží dnem hrnce dokola.",
+        "en": "These *eddy currents* swirl in circles inside the pot.",
+        "ro": "Acești *curenți turbionari* se rotesc în cerc prin fundul oalei."
+      },
+      "props": [
+        {
+          "id": "hob",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 3,
+        "angle": "top",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "pot",
+          "emoji": "🌀",
+          "text": {
+            "cs": "Vířivé proudy",
+            "en": "Eddy currents",
+            "ro": "Curenți turbionari"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Kov proudu klade *odpor*, a ten mění energii v teplo.",
+        "en": "The metal *resists* the current, turning its energy into heat.",
+        "ro": "Metalul opune *rezistență* curentului și îi transformă energia în căldură."
+      },
+      "props": [
+        {
+          "id": "hob",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "pot",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "pot",
+        "distance": 3.5,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "pot",
+          "emoji": "🔥",
+          "text": {
+            "cs": "Teplo",
+            "en": "Heat",
+            "ro": "Căldură"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Topením je tedy *samotný hrnec*, ne deska.",
+        "en": "So the *pot itself* is the heater, not the hob.",
+        "ro": "Deci *oala însăși* este încălzitorul, nu plita."
+      },
+      "props": [
+        {
+          "id": "hob",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "pot",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "pot",
+        "distance": 5,
+        "angle": "side",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "pot",
+          "emoji": "♨️",
+          "text": {
+            "cs": "Topí hrnec",
+            "en": "The pot heats",
+            "ro": "Oala încălzește"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Sklo se ohřeje jen *od horkého hrnce*.",
+        "en": "The glass only gets warm *from the hot pot*.",
+        "ro": "Sticla se încălzește doar *de la oala fierbinte*."
+      },
+      "props": [
+        {
+          "id": "hob",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [
+        {
+          "from": "pot",
+          "to": "hob",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "hob",
+        "distance": 4,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Nejlépe funguje *magnetický* hrnec, vyzkoušej to magnetkou.",
+        "en": "It works best with a *magnetic* pot, test it with a magnet.",
+        "ro": "Merge cel mai bine cu o oală *magnetică*, testeaz-o cu un magnet."
+      },
+      "props": [
+        {
+          "id": "hob",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mag",
+          "type": "magnet",
+          "position": [
+            0.75,
+            0.8,
+            0.4
+          ],
+          "scale": 0.4,
+          "rotationY": -20,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0.4,
+            0.8,
+            0.3
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 3,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "mag",
+          "emoji": "🧲",
+          "text": {
+            "cs": "Drží? Funguje!",
+            "en": "Sticks? Works!",
+            "ro": "Se lipește? Merge!"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Hliníkový nebo skleněný hrnec na většině desek *nehřeje*.",
+        "en": "Aluminum or glass pots *won't heat* on most hobs.",
+        "ro": "Oalele de aluminiu sau sticlă *nu se încălzesc* pe majoritatea plitelor."
+      },
+      "props": [
+        {
+          "id": "hob",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#c9ced6",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cold",
+          "type": "snowflake",
+          "position": [
+            0.6,
+            1.9,
+            0.2
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 3.5,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "pot",
+          "emoji": "🥫",
+          "text": {
+            "cs": "Hliník",
+            "en": "Aluminum",
+            "ro": "Aluminiu"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Do jídla jde skoro *devadesát procent* energie, u plynu jen čtyřicet.",
+        "en": "About *ninety percent* of the energy reaches the food, gas only forty.",
+        "ro": "Aproape *nouăzeci la sută* din energie ajunge în mâncare, la gaz doar patruzeci."
+      },
+      "props": [
+        {
+          "id": "hob",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "pot",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "hob",
+        "distance": 5,
+        "angle": "frontLeft",
+        "move": "rise"
+      },
+      "labels": [],
+      "counter": {
+        "from": 40,
+        "to": 90,
+        "decimals": 0,
+        "unit": {
+          "cs": " %",
+          "en": " %",
+          "ro": " %"
+        },
+        "label": {
+          "cs": "účinnost indukce",
+          "en": "induction efficiency",
+          "ro": "eficiența inducției"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Sundej hrnec a deska pole hned *vypne*.",
+        "en": "Lift the pot and the hob *switches off* the field.",
+        "ro": "Ridică oala și plita *oprește* imediat câmpul."
+      },
+      "props": [
+        {
+          "id": "hob",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0,
+            1.7,
+            0
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "hob",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "dollyOut"
+      },
+      "labels": [
+        {
+          "prop": "hob",
+          "emoji": "⏻",
+          "text": {
+            "cs": "Vypnuto",
+            "en": "Off",
+            "ro": "Oprit"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Sleduj nás pro další *fyziku z kuchyně*!",
+        "en": "Follow for more *kitchen physics*!",
+        "ro": "Urmărește-ne pentru mai multă *fizică din bucătărie*!"
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "idea",
+          "type": "bulb",
+          "position": [
+            0,
+            2.1,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "kid",
+        "distance": 4.5,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    }
+  ]
+}

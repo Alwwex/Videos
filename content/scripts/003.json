@@ -1,0 +1,1264 @@
+{
+  "id": 3,
+  "title": {
+    "cs": "Proč voda na horách vaří dřív",
+    "en": "Why water boils sooner in the mountains",
+    "ro": "De ce apa fierbe mai repede la munte"
+  },
+  "description": {
+    "cs": "Jak tlak vzduchu rozhoduje o tom, kdy voda začne vřít, a proč tlakový hrnec vaří rychleji. 🏔️",
+    "en": "How air pressure decides when water starts to boil, and why a pressure cooker cooks faster. 🏔️",
+    "ro": "Cum presiunea aerului decide când începe apa să fiarbă și de ce oala sub presiune gătește mai repede. 🏔️"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "kuchyne",
+    "varvody",
+    "tlakvzduchu",
+    "science",
+    "vzdelavani"
+  ],
+  "scenes": [
+    {
+      "environment": "outdoor",
+      "narration": {
+        "cs": "Na Everestu se voda vaří už při *70* stupních.",
+        "en": "On Mount Everest, water boils at just *70* degrees.",
+        "ro": "Pe Everest, apa fierbe la doar *70* de grade."
+      },
+      "props": [
+        {
+          "id": "mtn",
+          "type": "mountain",
+          "position": [
+            -0.5,
+            0,
+            -5
+          ],
+          "scale": 2.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0.5,
+            0,
+            1.5
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "hiker",
+          "type": "person",
+          "position": [
+            -0.8,
+            0,
+            1
+          ],
+          "scale": 1,
+          "rotationY": 20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "pot",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "pot",
+        "distance": 8,
+        "angle": "low",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "mtn",
+          "emoji": "🏔️",
+          "text": {
+            "cs": "Everest",
+            "en": "Everest",
+            "ro": "Everest"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Proč? Var nezávisí jen na teplotě, ale i na *tlaku vzduchu*.",
+        "en": "Why? Boiling depends on *air pressure*, not just heat.",
+        "ro": "De ce? Fierberea depinde și de *presiunea aerului*."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1.2,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "down",
+          "type": "arrowDown",
+          "position": [
+            0,
+            2.6,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "stove",
+          "to": "pot",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 4.5,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "down",
+          "emoji": "💨",
+          "text": {
+            "cs": "Tlak vzduchu",
+            "en": "Air pressure",
+            "ro": "Presiunea aerului"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "outdoor",
+      "narration": {
+        "cs": "Nad tebou je obrovský a těžký *sloupec vzduchu*.",
+        "en": "Above you sits a huge, heavy *column of air*.",
+        "ro": "Deasupra ta apasă o *coloană de aer* uriașă."
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a1",
+          "type": "arrowDown",
+          "position": [
+            0,
+            2.8,
+            0
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a2",
+          "type": "arrowDown",
+          "position": [
+            0,
+            4,
+            0
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cl",
+          "type": "cloud",
+          "position": [
+            1,
+            4.6,
+            -1
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "kid",
+        "distance": 8,
+        "angle": "low",
+        "move": "rise"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "outdoor",
+      "narration": {
+        "cs": "U moře tlačí silou zhruba 1013 *hektopascalů*.",
+        "en": "At sea level it presses with about 1013 *hectopascals*.",
+        "ro": "La nivelul mării apasă cu circa 1013 *hectopascali*."
+      },
+      "props": [
+        {
+          "id": "sea",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0.5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a1",
+          "type": "arrowDown",
+          "position": [
+            0,
+            3,
+            0.5
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "kid",
+        "distance": 7,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": {
+        "from": 0,
+        "to": 1013,
+        "decimals": 0,
+        "unit": {
+          "cs": " hPa",
+          "en": " hPa",
+          "ro": " hPa"
+        },
+        "label": {
+          "cs": "tlak u hladiny moře",
+          "en": "pressure at sea level",
+          "ro": "presiunea la nivelul mării"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Když vodu ohříváš, molekuly se hýbou čím dál *rychleji*.",
+        "en": "Heating makes water molecules move *faster and faster*.",
+        "ro": "Când încălzești apa, moleculele se mișcă tot mai *repede*."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "m1",
+          "type": "atom",
+          "position": [
+            -0.6,
+            2.2,
+            0.3
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "m2",
+          "type": "atom",
+          "position": [
+            0.6,
+            2.6,
+            0.2
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "stove",
+          "to": "m1",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "m1",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "m2",
+          "emoji": "💧",
+          "text": {
+            "cs": "Molekula vody",
+            "en": "Water molecule",
+            "ro": "Moleculă de apă"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Ty nejrychlejší vytvoří uvnitř vody *bubliny* páry.",
+        "en": "The fastest ones form *bubbles* of steam inside the water.",
+        "ro": "Cele mai rapide formează în apă *bule* de vapori."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1.2,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bub",
+          "type": "atom",
+          "position": [
+            0,
+            1.6,
+            0.3
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": "#bfe6ff",
+          "anim": "slide",
+          "slideTo": [
+            0,
+            2.4,
+            0.3
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "stove",
+          "to": "pot",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 3.5,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "bub",
+          "emoji": "🫧",
+          "text": {
+            "cs": "Bublina páry",
+            "en": "Steam bubble",
+            "ro": "Bulă de vapori"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Jenže vzduch tlačí zpátky a bubliny *zmáčkne*.",
+        "en": "But the air pushes back and *crushes* the bubbles.",
+        "ro": "Dar aerul apasă înapoi și *strivește* bulele."
+      },
+      "props": [
+        {
+          "id": "bub",
+          "type": "atom",
+          "position": [
+            0,
+            1.6,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#bfe6ff",
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "d1",
+          "type": "arrowDown",
+          "position": [
+            0,
+            2.8,
+            0
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "r1",
+          "type": "arrow",
+          "position": [
+            -1.2,
+            1.6,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "r2",
+          "type": "arrow",
+          "position": [
+            1.2,
+            1.6,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 180,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bub",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Voda se *vaří*, až když pára přetlačí vzduch.",
+        "en": "Water *boils* once steam pushes as hard as the air.",
+        "ro": "Apa *fierbe* abia când vaporii împing cât aerul."
+      },
+      "props": [
+        {
+          "id": "bub",
+          "type": "atom",
+          "position": [
+            0,
+            1.6,
+            0
+          ],
+          "scale": 1.3,
+          "rotationY": 0,
+          "color": "#bfe6ff",
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "up",
+          "type": "arrowUp",
+          "position": [
+            -0.7,
+            1.6,
+            0.3
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "d1",
+          "type": "arrowDown",
+          "position": [
+            0.7,
+            1.6,
+            0.3
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bub",
+        "distance": 4.5,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "up",
+          "emoji": "♨️",
+          "text": {
+            "cs": "Tlak páry",
+            "en": "Steam pressure",
+            "ro": "Presiunea aburului"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "U moře se to stane při *100* stupních.",
+        "en": "At sea level, that happens at *100* degrees.",
+        "ro": "La nivelul mării, asta se întâmplă la *100* de grade."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1.2,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            1,
+            0,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "pot",
+          "to": "th",
+          "kind": "heat"
+        }
+      ],
+      "waves": [
+        {
+          "from": "pot",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "pot",
+        "distance": 5,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "th",
+          "emoji": "🌡️",
+          "text": {
+            "cs": "Bod varu",
+            "en": "Boiling point",
+            "ro": "Punct de fierbere"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "outdoor",
+      "narration": {
+        "cs": "Čím výš jdeš, tím *méně vzduchu* nad tebou je.",
+        "en": "The higher you go, the *less air* is above you.",
+        "ro": "Cu cât urci mai sus, ai *mai puțin aer* deasupra."
+      },
+      "props": [
+        {
+          "id": "mtn",
+          "type": "mountain",
+          "position": [
+            0,
+            0,
+            -5
+          ],
+          "scale": 2.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bal",
+          "type": "hotAirBalloon",
+          "position": [
+            0.8,
+            0,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0.8,
+            3,
+            0
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bal",
+        "distance": 11,
+        "angle": "front",
+        "move": "rise"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "outdoor",
+      "narration": {
+        "cs": "Na Everestu klesne tlak zhruba na *třetinu*.",
+        "en": "On Everest, the pressure drops to about *a third*.",
+        "ro": "Pe Everest, presiunea scade la aproximativ *o treime*."
+      },
+      "props": [
+        {
+          "id": "mtn",
+          "type": "mountain",
+          "position": [
+            0,
+            0,
+            -2
+          ],
+          "scale": 2.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "d1",
+          "type": "arrowDown",
+          "position": [
+            0,
+            6,
+            -2
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "mtn",
+        "distance": 13,
+        "angle": "frontRight",
+        "move": "orbitLeft"
+      },
+      "labels": [],
+      "counter": {
+        "from": 1013,
+        "to": 337,
+        "decimals": 0,
+        "unit": {
+          "cs": " hPa",
+          "en": " hPa",
+          "ro": " hPa"
+        },
+        "label": {
+          "cs": "tlak na vrcholu Everestu",
+          "en": "pressure on Everest's peak",
+          "ro": "presiunea pe vârful Everest"
+        }
+      }
+    },
+    {
+      "environment": "outdoor",
+      "narration": {
+        "cs": "Pára vyhraje mnohem dřív, voda se vaří při *70* stupních.",
+        "en": "Steam wins much sooner, so water boils at *70* degrees.",
+        "ro": "Vaporii câștigă mult mai devreme, apa fierbe la *70* de grade."
+      },
+      "props": [
+        {
+          "id": "mtn",
+          "type": "mountain",
+          "position": [
+            -0.5,
+            0,
+            -5
+          ],
+          "scale": 2.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0,
+            1
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            1,
+            0,
+            1.2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "pot",
+          "to": "th",
+          "kind": "heat"
+        }
+      ],
+      "waves": [
+        {
+          "from": "pot",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "pot",
+        "distance": 5,
+        "angle": "low",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": {
+        "from": 100,
+        "to": 70,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "bod varu na Everestu",
+          "en": "boiling point on Everest",
+          "ro": "fierbere pe Everest"
+        }
+      }
+    },
+    {
+      "environment": "outdoor",
+      "narration": {
+        "cs": "Taková voda je *chladnější*, takže těstoviny se vaří déle.",
+        "en": "That water is *cooler*, so eggs and pasta cook slower.",
+        "ro": "Apa e mai *rece*, așa că ouăle și pastele fierb mai greu."
+      },
+      "props": [
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0,
+            1
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "egg",
+          "type": "ball",
+          "position": [
+            0.9,
+            0,
+            1.3
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": "#f5ecd9",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "hiker",
+          "type": "person",
+          "position": [
+            -1,
+            0,
+            0.6
+          ],
+          "scale": 1,
+          "rotationY": 30,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 5,
+        "angle": "frontLeft",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "egg",
+          "emoji": "⏳",
+          "text": {
+            "cs": "Vaří se déle",
+            "en": "Cooks longer",
+            "ro": "Fierbe mai greu"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "*Tlakový hrnec* dělá opak a tlak zvýší.",
+        "en": "A *pressure cooker* does the opposite and raises the pressure.",
+        "ro": "*Oala sub presiune* face invers și crește presiunea."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1.2,
+            0
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": "#5a6470",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "d1",
+          "type": "arrowDown",
+          "position": [
+            0,
+            2.5,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 4,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "pot",
+          "emoji": "🍲",
+          "text": {
+            "cs": "Tlakový hrnec",
+            "en": "Pressure cooker",
+            "ro": "Oală sub presiune"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Voda v něm vře kolem *120* stupňů, jídlo je rychle hotové.",
+        "en": "Water inside boils around *120* degrees, so food cooks faster.",
+        "ro": "Apa din ea fierbe pe la *120* de grade, deci gătești repede."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            1.2,
+            0
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": "#5a6470",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            1,
+            0,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "pot",
+          "to": "th",
+          "kind": "heat"
+        }
+      ],
+      "waves": [
+        {
+          "from": "pot",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "pot",
+        "distance": 4.5,
+        "angle": "frontRight",
+        "move": "orbitLeft"
+      },
+      "labels": [],
+      "counter": {
+        "from": 100,
+        "to": 120,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "var v tlakovém hrnci",
+          "en": "boiling in the cooker",
+          "ro": "fierbere în oală"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Sleduj nás a objev další fyziku ve své *kuchyni*!",
+        "en": "Follow for more physics hiding in your *kitchen*!",
+        "ro": "Urmărește-ne pentru mai multă fizică din *bucătărie*!"
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "idea",
+          "type": "bulb",
+          "position": [
+            0,
+            2.1,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0.9,
+            0,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "kid",
+        "distance": 4.5,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    }
+  ]
+}

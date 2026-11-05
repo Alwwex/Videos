@@ -1,0 +1,255 @@
+{
+  "lang": "cs",
+  "scenes": [
+    {
+      "audioSrc": "generated/003/cs/s001.mp3",
+      "durationSec": 3.501,
+      "wordStarts": [
+        0,
+        0.174,
+        0.685,
+        0.813,
+        1.057,
+        1.347,
+        1.533,
+        1.718,
+        2.218
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s002.mp3",
+      "durationSec": 5.08,
+      "wordStarts": [
+        0,
+        1.091,
+        1.324,
+        1.846,
+        2.078,
+        2.194,
+        3.1,
+        3.332,
+        3.425,
+        3.564,
+        3.878
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s003.mp3",
+      "durationSec": 3.408,
+      "wordStarts": [
+        0,
+        0.267,
+        0.592,
+        0.72,
+        1.254,
+        1.358,
+        1.8,
+        2.218
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s004.mp3",
+      "durationSec": 4.522,
+      "wordStarts": [
+        0,
+        0.163,
+        0.441,
+        0.813,
+        1.115,
+        1.498,
+        2.763
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s005.mp3",
+      "durationSec": 4.43,
+      "wordStarts": [
+        0,
+        0.313,
+        0.546,
+        1.567,
+        2.055,
+        2.206,
+        2.577,
+        2.891,
+        3.158
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s006.mp3",
+      "durationSec": 3.594,
+      "wordStarts": [
+        0,
+        0.221,
+        0.894,
+        1.312,
+        1.718,
+        1.962,
+        2.38
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s007.mp3",
+      "durationSec": 3.733,
+      "wordStarts": [
+        0,
+        0.325,
+        0.639,
+        0.964,
+        1.753,
+        1.892,
+        2.287
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s008.mp3",
+      "durationSec": 3.501,
+      "wordStarts": [
+        0,
+        0.325,
+        0.464,
+        1.149,
+        1.312,
+        1.544,
+        1.869,
+        2.392
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s009.mp3",
+      "durationSec": 2.665,
+      "wordStarts": [
+        0,
+        0.139,
+        0.418,
+        0.546,
+        0.685,
+        0.998,
+        1.196,
+        1.382
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s010.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.302,
+        0.546,
+        1.022,
+        1.265,
+        1.509,
+        1.881,
+        2.078,
+        2.403
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s011.mp3",
+      "durationSec": 3.036,
+      "wordStarts": [
+        0,
+        0.174,
+        0.662,
+        1.033,
+        1.3,
+        1.649,
+        1.765
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s012.mp3",
+      "durationSec": 4.662,
+      "wordStarts": [
+        0,
+        0.372,
+        0.673,
+        1.045,
+        1.788,
+        2.067,
+        2.206,
+        2.496,
+        2.705,
+        3.344
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s013.mp3",
+      "durationSec": 4.105,
+      "wordStarts": [
+        0,
+        0.453,
+        0.673,
+        0.755,
+        1.788,
+        2.078,
+        2.612,
+        2.763,
+        3.042
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s014.mp3",
+      "durationSec": 3.176,
+      "wordStarts": [
+        0,
+        0.499,
+        0.871,
+        1.149,
+        1.498,
+        1.614,
+        1.858
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s015.mp3",
+      "durationSec": 4.708,
+      "wordStarts": [
+        0,
+        0.302,
+        0.383,
+        0.557,
+        0.755,
+        1.022,
+        1.602,
+        2.543,
+        2.891,
+        2.984,
+        3.297
+      ]
+    },
+    {
+      "audioSrc": "generated/003/cs/s016.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.441,
+        0.848,
+        1.01,
+        1.335,
+        1.672,
+        2.067,
+        2.206,
+        2.45
+      ]
+    }
+  ],
+  "texts": [
+    "Na Everestu se voda vaří už při 70 stupních.",
+    "Proč? Var nezávisí jen na teplotě, ale i na tlaku vzduchu.",
+    "Nad tebou je obrovský a těžký sloupec vzduchu.",
+    "U moře tlačí silou zhruba 1013 hektopascalů.",
+    "Když vodu ohříváš, molekuly se hýbou čím dál rychleji.",
+    "Ty nejrychlejší vytvoří uvnitř vody bubliny páry.",
+    "Jenže vzduch tlačí zpátky a bubliny zmáčkne.",
+    "Voda se vaří, až když pára přetlačí vzduch.",
+    "U moře se to stane při 100 stupních.",
+    "Čím výš jdeš, tím méně vzduchu nad tebou je.",
+    "Na Everestu klesne tlak zhruba na třetinu.",
+    "Pára vyhraje mnohem dřív, voda se vaří při 70 stupních.",
+    "Taková voda je chladnější, takže těstoviny se vaří déle.",
+    "Tlakový hrnec dělá opak a tlak zvýší.",
+    "Voda v něm vře kolem 120 stupňů, jídlo je rychle hotové.",
+    "Sleduj nás a objev další fyziku ve své kuchyni!"
+  ]
+}

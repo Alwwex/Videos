@@ -1,0 +1,230 @@
+{
+  "lang": "cs",
+  "scenes": [
+    {
+      "audioSrc": "generated/009/cs/s001.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.395,
+        0.801,
+        0.882,
+        1.138,
+        1.73,
+        1.939,
+        2.032,
+        2.566,
+        2.798
+      ]
+    },
+    {
+      "audioSrc": "generated/009/cs/s002.mp3",
+      "durationSec": 3.361,
+      "wordStarts": [
+        0,
+        0.511,
+        0.917,
+        1.103,
+        1.382,
+        2.067
+      ]
+    },
+    {
+      "audioSrc": "generated/009/cs/s003.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.372,
+        0.453,
+        0.871,
+        1.382,
+        1.962,
+        2.09
+      ]
+    },
+    {
+      "audioSrc": "generated/009/cs/s004.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.441,
+        0.882,
+        1.416,
+        1.73,
+        1.858,
+        2.241
+      ]
+    },
+    {
+      "audioSrc": "generated/009/cs/s005.mp3",
+      "durationSec": 3.036,
+      "wordStarts": [
+        0,
+        0.197,
+        0.383,
+        0.743,
+        0.871,
+        1.08,
+        1.579,
+        1.881,
+        1.985
+      ]
+    },
+    {
+      "audioSrc": "generated/009/cs/s006.mp3",
+      "durationSec": 4.383,
+      "wordStarts": [
+        0,
+        0.29,
+        0.453,
+        0.824,
+        1.173,
+        2.09,
+        2.403,
+        2.543,
+        2.926
+      ]
+    },
+    {
+      "audioSrc": "generated/009/cs/s007.mp3",
+      "durationSec": 3.222,
+      "wordStarts": [
+        0,
+        0.197,
+        0.522,
+        0.998,
+        1.115,
+        1.602,
+        2.101
+      ]
+    },
+    {
+      "audioSrc": "generated/009/cs/s008.mp3",
+      "durationSec": 2.479,
+      "wordStarts": [
+        0,
+        0.163,
+        0.522,
+        0.615,
+        1.08,
+        1.149
+      ]
+    },
+    {
+      "audioSrc": "generated/009/cs/s009.mp3",
+      "durationSec": 3.64,
+      "wordStarts": [
+        0,
+        0.406,
+        0.627,
+        0.964,
+        1.324,
+        1.869,
+        2.136,
+        2.322
+      ]
+    },
+    {
+      "audioSrc": "generated/009/cs/s010.mp3",
+      "durationSec": 4.0120000000000005,
+      "wordStarts": [
+        0,
+        0.36,
+        0.685,
+        1.254,
+        1.858,
+        2.148,
+        2.276,
+        2.554,
+        2.717
+      ]
+    },
+    {
+      "audioSrc": "generated/009/cs/s011.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.255,
+        0.58,
+        0.906,
+        1.196,
+        1.312,
+        1.776,
+        2.078
+      ]
+    },
+    {
+      "audioSrc": "generated/009/cs/s012.mp3",
+      "durationSec": 3.965,
+      "wordStarts": [
+        0,
+        0.29,
+        0.882,
+        1.184,
+        1.556,
+        1.927,
+        2.241,
+        2.682
+      ]
+    },
+    {
+      "audioSrc": "generated/009/cs/s013.mp3",
+      "durationSec": 3.501,
+      "wordStarts": [
+        0,
+        0.186,
+        0.615,
+        1.219,
+        1.393,
+        1.683,
+        1.776,
+        2.055,
+        2.241
+      ]
+    },
+    {
+      "audioSrc": "generated/009/cs/s014.mp3",
+      "durationSec": 3.176,
+      "wordStarts": [
+        0,
+        0.36,
+        0.569,
+        0.917,
+        1.347,
+        1.428,
+        1.8,
+        1.997
+      ]
+    },
+    {
+      "audioSrc": "generated/009/cs/s015.mp3",
+      "durationSec": 2.99,
+      "wordStarts": [
+        0,
+        0.43,
+        0.882,
+        1.022,
+        1.486,
+        1.614,
+        1.753
+      ]
+    }
+  ],
+  "texts": [
+    "Proč lžička v čaji pálí, když je ponořená jen napůl?",
+    "Čerstvý čaj má kolem osmdesáti stupňů.",
+    "Teplo je vlastně kmitání atomů a molekul.",
+    "Horký čaj rozkmitá atomy na spodku lžičky.",
+    "Ty pak strkají do svých sousedů dál a dál.",
+    "Kov má navíc volné elektrony, které se snadno pohybují.",
+    "Ty teplo roznesou po lžičce bleskově rychle.",
+    "Za chvilku je horká i rukojeť.",
+    "Ocel vede teplo zhruba stokrát lépe než dřevo.",
+    "Dřevo volné elektrony nemá, takže se teplo jen plazí.",
+    "Kov navíc předá teplo do prstů velmi rychle.",
+    "Nad čtyřiceti pěti stupni začnou nervy hlásit bolest.",
+    "Ze stejného důvodu je kov v zimě tak studený.",
+    "Proto mají hrnce rukojeti z plastu nebo dřeva.",
+    "Sleduj nás a příště už se nespálíš!"
+  ]
+}

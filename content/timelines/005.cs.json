@@ -1,0 +1,239 @@
+{
+  "lang": "cs",
+  "scenes": [
+    {
+      "audioSrc": "generated/005/cs/s001.mp3",
+      "durationSec": 3.919,
+      "wordStarts": [
+        0,
+        0.36,
+        0.534,
+        1.161,
+        1.405,
+        1.823,
+        2.218,
+        2.624
+      ]
+    },
+    {
+      "audioSrc": "generated/005/cs/s002.mp3",
+      "durationSec": 2.386,
+      "wordStarts": [
+        0,
+        0.255,
+        0.348,
+        0.639,
+        0.824,
+        1.254
+      ]
+    },
+    {
+      "audioSrc": "generated/005/cs/s003.mp3",
+      "durationSec": 4.197,
+      "wordStarts": [
+        0,
+        0.522,
+        1.242,
+        1.486,
+        1.788,
+        2.334,
+        2.508,
+        2.798,
+        2.914
+      ]
+    },
+    {
+      "audioSrc": "generated/005/cs/s004.mp3",
+      "durationSec": 3.872,
+      "wordStarts": [
+        0,
+        0.255,
+        0.36,
+        0.627,
+        0.72,
+        1.207,
+        1.904,
+        2.101,
+        2.519,
+        2.844
+      ]
+    },
+    {
+      "audioSrc": "generated/005/cs/s005.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.499,
+        0.743,
+        0.882,
+        1.161,
+        1.707,
+        2.287
+      ]
+    },
+    {
+      "audioSrc": "generated/005/cs/s006.mp3",
+      "durationSec": 4.43,
+      "wordStarts": [
+        0,
+        0.151,
+        0.592,
+        0.894,
+        1.057,
+        1.405,
+        2.055,
+        2.183,
+        2.624,
+        2.961,
+        3.03
+      ]
+    },
+    {
+      "audioSrc": "generated/005/cs/s007.mp3",
+      "durationSec": 4.476,
+      "wordStarts": [
+        0,
+        0.244,
+        0.964,
+        1.126,
+        1.509,
+        1.637,
+        2.543,
+        2.972,
+        3.309
+      ]
+    },
+    {
+      "audioSrc": "generated/005/cs/s008.mp3",
+      "durationSec": 4.105,
+      "wordStarts": [
+        0,
+        0.348,
+        0.569,
+        0.755,
+        1.335,
+        1.765,
+        2.125,
+        2.403,
+        2.496,
+        2.763
+      ]
+    },
+    {
+      "audioSrc": "generated/005/cs/s009.mp3",
+      "durationSec": 3.269,
+      "wordStarts": [
+        0,
+        0.36,
+        0.778,
+        0.882,
+        1.405,
+        1.66,
+        1.927
+      ]
+    },
+    {
+      "audioSrc": "generated/005/cs/s010.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.313,
+        0.673,
+        1.022,
+        1.44,
+        1.788,
+        2.426
+      ]
+    },
+    {
+      "audioSrc": "generated/005/cs/s011.mp3",
+      "durationSec": 3.872,
+      "wordStarts": [
+        0,
+        0.244,
+        0.383,
+        1.254,
+        1.591,
+        2.136,
+        2.38,
+        2.45,
+        2.67
+      ]
+    },
+    {
+      "audioSrc": "generated/005/cs/s012.mp3",
+      "durationSec": 4.0120000000000005,
+      "wordStarts": [
+        0,
+        0.302,
+        0.395,
+        0.615,
+        1.196,
+        1.579,
+        1.985,
+        2.345,
+        2.531
+      ]
+    },
+    {
+      "audioSrc": "generated/005/cs/s013.mp3",
+      "durationSec": 3.872,
+      "wordStarts": [
+        0,
+        0.94,
+        1.091,
+        1.358,
+        1.556,
+        1.927,
+        2.368
+      ]
+    },
+    {
+      "audioSrc": "generated/005/cs/s014.mp3",
+      "durationSec": 4.29,
+      "wordStarts": [
+        0,
+        0.418,
+        0.72,
+        1.231,
+        1.846,
+        2.009,
+        2.299,
+        2.531,
+        2.798
+      ]
+    },
+    {
+      "audioSrc": "generated/005/cs/s015.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.383,
+        0.673,
+        0.824,
+        1.161,
+        1.509,
+        1.962,
+        2.345,
+        2.426
+      ]
+    }
+  ],
+  "texts": [
+    "Proč led plave, když většina pevných látek klesne?",
+    "Led je přece jen zmrzlá voda.",
+    "Rozhoduje hustota, tedy kolik hmoty se vejde do objemu.",
+    "Led je asi o desetinu lehčí než stejný objem vody.",
+    "Molekuly vody se drží pohromadě vodíkovými můstky.",
+    "V kapalné vodě se pořád pohybují a mačkají těsně k sobě.",
+    "Při mrznutí se zamknou do šestiúhelníkové mřížky plné děr.",
+    "Proto voda při zamrznutí zvětší objem asi o 9 procent.",
+    "Plná láhev v mrazáku proto může prasknout.",
+    "Voda tlačí každé těleso nahoru vztlakovou silou.",
+    "Led se ponoří, dokud nevytlačí vodu o své váze.",
+    "Proto je asi 90 procent ledovce skryto pod hladinou.",
+    "Nejhustší je voda při čtyřech stupních Celsia.",
+    "Jezera proto zamrzají shora a ryby pod ledem přežijí.",
+    "Sleduj nás pro další ledově chladnou fyziku z kuchyně!"
+  ]
+}

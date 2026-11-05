@@ -1,0 +1,1191 @@
+{
+  "id": 13,
+  "title": {
+    "cs": "Jak kávovar dělá espresso tlakem",
+    "en": "How an espresso machine uses pressure",
+    "ro": "Cum face espressorul cafea cu presiune"
+  },
+  "description": {
+    "cs": "Proč espresso potřebuje tlak devět barů, jak vzniká hustá chuť a odkud se bere crema. ☕",
+    "en": "Why espresso needs nine bar of pressure, where the thick taste comes from, and how crema forms. ☕",
+    "ro": "De ce espressoul are nevoie de nouă bari, de unde vine gustul dens și cum se formează crema. ☕"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "espresso",
+    "kava",
+    "coffee",
+    "science",
+    "fizica"
+  ],
+  "scenes": [
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Proč kávovar tlačí vodu tlakem jako *90 metrů* pod mořem?",
+        "en": "Why does an espresso machine push water like *90 meters* underwater?",
+        "ro": "De ce împinge espressorul apa ca la *90 de metri* sub mare?"
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mach",
+          "type": "microwave",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#3b3b3b",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0.75,
+            0.85,
+            0.25
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "mach",
+        "distance": 5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "mach",
+          "emoji": "☕",
+          "text": {
+            "cs": "Kávovar",
+            "en": "Espresso machine",
+            "ro": "Espressor"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Espresso vzniká při tlaku zhruba *devět barů*.",
+        "en": "Espresso is made at about *nine bar* of pressure.",
+        "ro": "Espressoul se face la o presiune de circa *nouă bari*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mach",
+          "type": "microwave",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#3b3b3b",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "p",
+          "type": "arrowDown",
+          "position": [
+            0,
+            1.9,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "mach",
+        "distance": 4.5,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "labels": [],
+      "counter": {
+        "from": 0,
+        "to": 9,
+        "decimals": 0,
+        "unit": {
+          "cs": " bar",
+          "en": " bar",
+          "ro": " bar"
+        },
+        "label": {
+          "cs": "tlak v kávovaru",
+          "en": "pressure in the machine",
+          "ro": "presiunea în espressor"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "To je *devětkrát* víc než tlak vzduchu kolem tebe.",
+        "en": "That's *nine times* the air pressure around you.",
+        "ro": "Asta e de *nouă ori* presiunea aerului din jurul tău."
+      },
+      "props": [
+        {
+          "id": "you",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "air",
+          "type": "arrowDown",
+          "position": [
+            0,
+            2.8,
+            0
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "you",
+        "distance": 5,
+        "angle": "low",
+        "move": "dollyOut"
+      },
+      "labels": [
+        {
+          "prop": "air",
+          "emoji": "🌍",
+          "text": {
+            "cs": "Tlak vzduchu",
+            "en": "Air pressure",
+            "ro": "Presiunea aerului"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Nejdřív se voda v bojleru ohřeje asi na *93 stupňů*.",
+        "en": "First, a boiler heats water to about *93 degrees*.",
+        "ro": "Mai întâi, boilerul încălzește apa la circa *93 de grade*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "boil",
+          "type": "pot",
+          "position": [
+            -0.4,
+            0.85,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            0.5,
+            0.85,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "boil",
+          "to": "th",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "boil",
+        "distance": 4,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "boil",
+          "emoji": "🔥",
+          "text": {
+            "cs": "Bojler",
+            "en": "Boiler",
+            "ro": "Boiler"
+          }
+        }
+      ],
+      "counter": {
+        "from": 20,
+        "to": 93,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "teplota vody",
+          "en": "water temperature",
+          "ro": "temperatura apei"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Vroucí voda by vytáhla příliš mnoho *hořkých* látek.",
+        "en": "Boiling water would pull out too many *bitter* compounds.",
+        "ro": "Apa clocotită ar extrage prea multe substanțe *amare*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "pot",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "pot",
+        "distance": 3.5,
+        "angle": "side",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "pot",
+          "emoji": "😖",
+          "text": {
+            "cs": "Hořké látky",
+            "en": "Bitter compounds",
+            "ro": "Substanțe amare"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Pak horkou vodu stlačí malé *čerpadlo*.",
+        "en": "Then a small *pump* squeezes the hot water.",
+        "ro": "Apoi o mică *pompă* pune apa fierbinte sub presiune."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "boil",
+          "type": "pot",
+          "position": [
+            -0.5,
+            0.85,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "mach",
+          "type": "microwave",
+          "position": [
+            0.5,
+            0.85,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#3b3b3b",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [
+        {
+          "from": "boil",
+          "to": "mach",
+          "kind": "water"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "mach",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "mach",
+          "emoji": "⚙️",
+          "text": {
+            "cs": "Čerpadlo",
+            "en": "Pump",
+            "ro": "Pompă"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Káva je namletá na jemný *prášek* a pevně upěchovaná.",
+        "en": "The coffee is ground to fine *powder* and packed tight.",
+        "ro": "Cafeaua e măcinată *fin* și presată bine."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "grounds",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": "#5a3a22",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tamp",
+          "type": "arrowDown",
+          "position": [
+            0,
+            1.7,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0,
+            1.35,
+            0
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "grounds",
+        "distance": 3,
+        "angle": "top",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "grounds",
+          "emoji": "☕",
+          "text": {
+            "cs": "Jemně mletá",
+            "en": "Finely ground",
+            "ro": "Măcinată fin"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Taková vrstva klade vodě obrovský *odpor*, skoro jako zeď.",
+        "en": "That layer *resists* the water almost like a wall.",
+        "ro": "Stratul acesta *rezistă* apei aproape ca un zid."
+      },
+      "props": [
+        {
+          "id": "g1",
+          "type": "atom",
+          "position": [
+            -0.5,
+            1.3,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#6b4226",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "g2",
+          "type": "atom",
+          "position": [
+            0.5,
+            1.3,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#6b4226",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "g3",
+          "type": "atom",
+          "position": [
+            0,
+            1.3,
+            0.3
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#6b4226",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "w",
+          "type": "arrowDown",
+          "position": [
+            0,
+            2.4,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": "#4aa3ff",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "w",
+          "to": "g3",
+          "kind": "water"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "g3",
+        "distance": 4,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "g3",
+          "emoji": "🧱",
+          "text": {
+            "cs": "Odpor",
+            "en": "Resistance",
+            "ro": "Rezistență"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Tlak ji přesto protlačí asi za *25 sekund*.",
+        "en": "Pressure still forces it through in about *25 seconds*.",
+        "ro": "Presiunea o împinge totuși prin el în vreo *25 de secunde*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mach",
+          "type": "microwave",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#3b3b3b",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0.75,
+            0.85,
+            0.25
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "mach",
+          "to": "cup",
+          "kind": "water"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "cup",
+        "distance": 3.5,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": {
+        "from": 0,
+        "to": 25,
+        "decimals": 0,
+        "unit": {
+          "cs": " s",
+          "en": " s",
+          "ro": " s"
+        },
+        "label": {
+          "cs": "doba přípravy",
+          "en": "brewing time",
+          "ro": "timp de preparare"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Drobná zrnka mají obrovský *povrch*, takže chuť se uvolní rychle.",
+        "en": "Tiny grains have a huge *surface*, so flavor dissolves fast.",
+        "ro": "Granulele mici au o *suprafață* uriașă, deci aroma se dizolvă repede."
+      },
+      "props": [
+        {
+          "id": "a1",
+          "type": "atom",
+          "position": [
+            -0.6,
+            1.5,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#6b4226",
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a2",
+          "type": "atom",
+          "position": [
+            0.6,
+            1.6,
+            0.2
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#6b4226",
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a3",
+          "type": "atom",
+          "position": [
+            0,
+            2.3,
+            -0.3
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#6b4226",
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "a3",
+        "distance": 4.5,
+        "angle": "low",
+        "move": "orbitLeft"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Tlak vymyje i kapičky *olejů*, proto je espresso husté.",
+        "en": "Pressure also carries out tiny *oil* droplets, making espresso thick.",
+        "ro": "Presiunea scoate și picături de *ulei*, de aceea espressoul e dens."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mach",
+          "type": "microwave",
+          "position": [
+            -0.7,
+            0.85,
+            -0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#3b3b3b",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": "#4a2a14",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "mach",
+          "to": "cup",
+          "kind": "water"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "cup",
+        "distance": 3.2,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "cup",
+          "emoji": "💧",
+          "text": {
+            "cs": "Oleje",
+            "en": "Oils",
+            "ro": "Uleiuri"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Pod tlakem se ve vodě rozpustí víc *oxidu uhličitého*.",
+        "en": "Under pressure, more *carbon dioxide* dissolves into the water.",
+        "ro": "Sub presiune, în apă se dizolvă mai mult *dioxid de carbon*."
+      },
+      "props": [
+        {
+          "id": "co2",
+          "type": "atom",
+          "position": [
+            0,
+            1.6,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#cfd8dc",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "p",
+          "type": "arrowDown",
+          "position": [
+            0,
+            2.6,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "co2",
+        "distance": 3.5,
+        "angle": "front",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "co2",
+          "emoji": "🫧",
+          "text": {
+            "cs": "CO₂",
+            "en": "CO₂",
+            "ro": "CO₂"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "V šálku tlak klesne a bublinky vytvoří pěnu *crema*.",
+        "en": "In the cup, pressure drops and bubbles form the *crema*.",
+        "ro": "În ceașcă presiunea scade, iar bulele formează *crema*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": "#c8955a",
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "b1",
+          "type": "atom",
+          "position": [
+            -0.3,
+            1.4,
+            0
+          ],
+          "scale": 0.3,
+          "rotationY": 0,
+          "color": "#f2e0c4",
+          "anim": "slide",
+          "slideTo": [
+            -0.3,
+            2,
+            0
+          ],
+          "glow": false
+        },
+        {
+          "id": "b2",
+          "type": "atom",
+          "position": [
+            0.3,
+            1.4,
+            0.1
+          ],
+          "scale": 0.3,
+          "rotationY": 0,
+          "color": "#f2e0c4",
+          "anim": "slide",
+          "slideTo": [
+            0.4,
+            2.1,
+            0
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cup",
+        "distance": 3,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "cup",
+          "emoji": "🟤",
+          "text": {
+            "cs": "Crema",
+            "en": "Crema",
+            "ro": "Crema"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Je to stejné, jako když otevřeš *limonádu*.",
+        "en": "Just like when you open a bottle of *soda*.",
+        "ro": "La fel ca atunci când deschizi o sticlă de *suc acidulat*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "soda",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.3,
+          "rotationY": 0,
+          "color": "#7fd0ff",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "b1",
+          "type": "atom",
+          "position": [
+            -0.2,
+            1.3,
+            0
+          ],
+          "scale": 0.25,
+          "rotationY": 0,
+          "color": "#ffffff",
+          "anim": "slide",
+          "slideTo": [
+            -0.25,
+            2.1,
+            0
+          ],
+          "glow": false
+        },
+        {
+          "id": "b2",
+          "type": "atom",
+          "position": [
+            0.2,
+            1.3,
+            0
+          ],
+          "scale": 0.25,
+          "rotationY": 0,
+          "color": "#ffffff",
+          "anim": "slide",
+          "slideTo": [
+            0.3,
+            2,
+            0
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "soda",
+        "distance": 3,
+        "angle": "side",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "soda",
+          "emoji": "🥤",
+          "text": {
+            "cs": "Limonáda",
+            "en": "Soda",
+            "ro": "Suc acidulat"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Sleduj nás, ať víš, co se děje ve tvém *hrnku*!",
+        "en": "Follow for more physics hiding in your *mug*!",
+        "ro": "Urmărește-ne pentru mai multă fizică din *cana* ta!"
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "idea",
+          "type": "bulb",
+          "position": [
+            0,
+            2.1,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "kid",
+        "distance": 4.5,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    }
+  ]
+}

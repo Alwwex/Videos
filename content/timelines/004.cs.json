@@ -1,0 +1,249 @@
+{
+  "lang": "cs",
+  "scenes": [
+    {
+      "audioSrc": "generated/004/cs/s001.mp3",
+      "durationSec": 3.361,
+      "wordStarts": [
+        0,
+        0.244,
+        0.662,
+        1.045,
+        1.382,
+        1.741,
+        2.264
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s002.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.139,
+        0.662,
+        1.324,
+        1.591,
+        1.788,
+        1.985,
+        2.194
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s003.mp3",
+      "durationSec": 3.269,
+      "wordStarts": [
+        0,
+        0.279,
+        0.604,
+        1.44,
+        1.974,
+        2.218
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s004.mp3",
+      "durationSec": 2.99,
+      "wordStarts": [
+        0,
+        0.488,
+        0.824,
+        0.952,
+        1.196,
+        1.556,
+        1.788,
+        1.869
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s005.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.209,
+        0.604,
+        0.952,
+        1.428,
+        1.8,
+        2.426,
+        2.612
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s006.mp3",
+      "durationSec": 3.872,
+      "wordStarts": [
+        0,
+        0.546,
+        1.033,
+        1.277,
+        1.44,
+        1.683,
+        2.218,
+        2.426,
+        2.659
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s007.mp3",
+      "durationSec": 3.176,
+      "wordStarts": [
+        0,
+        0.511,
+        0.929,
+        1.103,
+        1.335,
+        1.416,
+        1.811
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s008.mp3",
+      "durationSec": 3.733,
+      "wordStarts": [
+        0,
+        0.36,
+        0.731,
+        1.498,
+        1.614,
+        1.8,
+        2.287,
+        2.612
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s009.mp3",
+      "durationSec": 3.965,
+      "wordStarts": [
+        0,
+        0.221,
+        0.94,
+        1.289,
+        1.474,
+        1.718,
+        1.904,
+        2.078,
+        2.589
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s010.mp3",
+      "durationSec": 3.408,
+      "wordStarts": [
+        0,
+        0.209,
+        0.534,
+        0.94,
+        1.428,
+        1.66,
+        1.95,
+        2.345
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s011.mp3",
+      "durationSec": 3.965,
+      "wordStarts": [
+        0,
+        0.488,
+        0.789,
+        1.022,
+        1.567,
+        2.101,
+        2.264,
+        2.763
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s012.mp3",
+      "durationSec": 4.476,
+      "wordStarts": [
+        0,
+        0.406,
+        0.789,
+        1.416,
+        1.811,
+        2.276,
+        2.508,
+        2.67,
+        3.042
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s013.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.313,
+        0.43,
+        0.929,
+        1.149,
+        1.95,
+        2.218,
+        2.357,
+        2.682
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s014.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.186,
+        0.639,
+        0.72,
+        0.848,
+        1.37,
+        1.637,
+        1.881,
+        2.055,
+        2.218,
+        2.786
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s015.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.36,
+        0.882,
+        1.161,
+        1.614,
+        2.032,
+        2.125,
+        2.241
+      ]
+    },
+    {
+      "audioSrc": "generated/004/cs/s016.mp3",
+      "durationSec": 2.618,
+      "wordStarts": [
+        0,
+        0.43,
+        0.789,
+        0.917,
+        1.161,
+        1.242,
+        1.637
+      ]
+    }
+  ],
+  "texts": [
+    "Jak tlakový hrnec uvaří fazole třikrát rychleji?",
+    "V obyčejném hrnci voda vře při 100 stupních.",
+    "Ať topíš sebevíc, teplejší voda nebude.",
+    "Energie navíc jen mění další vodu v páru.",
+    "Na hladinu přitom tlačí celá atmosféra nad ní.",
+    "Bublinky páry musí ten tlak přetlačit, aby voda vřela.",
+    "Tlakový hrnec má víko s gumovým těsněním.",
+    "Pára nemůže uniknout, a tak uvnitř roste tlak.",
+    "Při dvojnásobném tlaku vře voda až při 120 stupních.",
+    "O 20 stupňů teplejší voda vaří mnohem rychleji.",
+    "Hovězí místo dvou hodin zvládneš za 40 minut.",
+    "Ventil pouští přebytečnou páru ven, aby byl hrnec bezpečný.",
+    "Nikdy ho neotvírej pod tlakem, voda by prudce vzkypěla.",
+    "Na Everestu je to naopak, voda vře už při 70 stupních.",
+    "Proto horolezci nosí tlakové hrnce i do hor.",
+    "Sleduj nás a vař s fyzikou chytřeji!"
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "lang": "ro",
+  "scenes": [
+    {
+      "audioSrc": "generated/013/ro/s001.mp3",
+      "durationSec": 4.244,
+      "wordStarts": [
+        0,
+        0.209,
+        0.337,
+        0.755,
+        1.416,
+        1.73,
+        1.892,
+        2.148,
+        2.554,
+        2.682,
+        3.007,
+        3.286
+      ]
+    },
+    {
+      "audioSrc": "generated/013/ro/s002.mp3",
+      "durationSec": 4.337,
+      "wordStarts": [
+        0,
+        0.743,
+        0.906,
+        1.231,
+        1.37,
+        1.451,
+        1.916,
+        2.055,
+        2.74,
+        3.146
+      ]
+    },
+    {
+      "audioSrc": "generated/013/ro/s003.mp3",
+      "durationSec": 4.151,
+      "wordStarts": [
+        0,
+        0.441,
+        0.546,
+        0.72,
+        1.033,
+        1.347,
+        1.95,
+        2.485,
+        2.728,
+        3.1
+      ]
+    },
+    {
+      "audioSrc": "generated/013/ro/s004.mp3",
+      "durationSec": 4.522,
+      "wordStarts": [
+        0,
+        0.232,
+        0.639,
+        1.219,
+        1.8,
+        2.02,
+        2.159,
+        2.624,
+        3.425,
+        3.553
+      ]
+    },
+    {
+      "audioSrc": "generated/013/ro/s005.mp3",
+      "durationSec": 3.501,
+      "wordStarts": [
+        0,
+        0.313,
+        0.848,
+        0.975,
+        1.463,
+        1.683,
+        2.009,
+        2.531
+      ]
+    },
+    {
+      "audioSrc": "generated/013/ro/s006.mp3",
+      "durationSec": 3.361,
+      "wordStarts": [
+        0,
+        0.36,
+        0.453,
+        0.708,
+        1.08,
+        1.335,
+        1.579,
+        2.101,
+        2.264
+      ]
+    },
+    {
+      "audioSrc": "generated/013/ro/s007.mp3",
+      "durationSec": 2.897,
+      "wordStarts": [
+        0,
+        0.511,
+        0.592,
+        1.115,
+        1.602,
+        1.753,
+        2.241
+      ]
+    },
+    {
+      "audioSrc": "generated/013/ro/s008.mp3",
+      "durationSec": 3.176,
+      "wordStarts": [
+        0,
+        0.464,
+        0.813,
+        1.3,
+        1.649,
+        2.101,
+        2.252,
+        2.415
+      ]
+    },
+    {
+      "audioSrc": "generated/013/ro/s009.mp3",
+      "durationSec": 4.708,
+      "wordStarts": [
+        0,
+        0.604,
+        0.685,
+        1.161,
+        1.474,
+        1.73,
+        1.892,
+        1.997,
+        2.438,
+        3.146,
+        3.297
+      ]
+    },
+    {
+      "audioSrc": "generated/013/ro/s010.mp3",
+      "durationSec": 4.522,
+      "wordStarts": [
+        0,
+        0.592,
+        0.871,
+        1.01,
+        1.08,
+        1.591,
+        2.09,
+        2.415,
+        2.81,
+        2.949,
+        3.39
+      ]
+    },
+    {
+      "audioSrc": "generated/013/ro/s011.mp3",
+      "durationSec": 3.965,
+      "wordStarts": [
+        0,
+        0.511,
+        0.848,
+        1.01,
+        1.509,
+        1.637,
+        1.997,
+        2.148,
+        2.485,
+        3.146,
+        3.239
+      ]
+    },
+    {
+      "audioSrc": "generated/013/ro/s012.mp3",
+      "durationSec": 4.383,
+      "wordStarts": [
+        0,
+        0.325,
+        0.952,
+        1.103,
+        1.324,
+        1.463,
+        1.95,
+        2.113,
+        2.415,
+        2.995,
+        3.17
+      ]
+    },
+    {
+      "audioSrc": "generated/013/ro/s013.mp3",
+      "durationSec": 3.826,
+      "wordStarts": [
+        0,
+        0.232,
+        0.615,
+        1.091,
+        1.579,
+        1.834,
+        2.287,
+        2.833
+      ]
+    },
+    {
+      "audioSrc": "generated/013/ro/s014.mp3",
+      "durationSec": 3.687,
+      "wordStarts": [
+        0,
+        0.197,
+        0.406,
+        0.534,
+        0.871,
+        1.149,
+        1.66,
+        1.73,
+        2.125,
+        2.264,
+        2.496
+      ]
+    },
+    {
+      "audioSrc": "generated/013/ro/s015.mp3",
+      "durationSec": 3.129,
+      "wordStarts": [
+        0,
+        0.72,
+        1.022,
+        1.184,
+        1.498,
+        1.927,
+        2.113,
+        2.415
+      ]
+    }
+  ],
+  "texts": [
+    "De ce împinge espressorul apa ca la 90 de metri sub mare?",
+    "Espressoul se face la o presiune de circa nouă bari.",
+    "Asta e de nouă ori presiunea aerului din jurul tău.",
+    "Mai întâi, boilerul încălzește apa la circa 93 de grade.",
+    "Apa clocotită ar extrage prea multe substanțe amare.",
+    "Apoi o mică pompă pune apa fierbinte sub presiune.",
+    "Cafeaua e măcinată fin și presată bine.",
+    "Stratul acesta rezistă apei aproape ca un zid.",
+    "Presiunea o împinge totuși prin el în vreo 25 de secunde.",
+    "Granulele mici au o suprafață uriașă, deci aroma se dizolvă repede.",
+    "Presiunea scoate și picături de ulei, de aceea espressoul e dens.",
+    "Sub presiune, în apă se dizolvă mai mult dioxid de carbon.",
+    "În ceașcă presiunea scade, iar bulele formează crema.",
+    "La fel ca atunci când deschizi o sticlă de suc acidulat.",
+    "Urmărește-ne pentru mai multă fizică din cana ta!"
+  ]
+}

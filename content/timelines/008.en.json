@@ -1,0 +1,253 @@
+{
+  "lang": "en",
+  "scenes": [
+    {
+      "audioSrc": "generated/008/en/s001.mp3",
+      "durationSec": 2.804,
+      "wordStarts": [
+        0,
+        0.186,
+        0.348,
+        0.441,
+        0.685,
+        1.01,
+        1.219,
+        1.405,
+        1.765
+      ]
+    },
+    {
+      "audioSrc": "generated/008/en/s002.mp3",
+      "durationSec": 4.244,
+      "wordStarts": [
+        0,
+        0.313,
+        0.662,
+        0.848,
+        0.94,
+        1.231,
+        1.533,
+        1.718,
+        2.113,
+        2.38,
+        2.74
+      ]
+    },
+    {
+      "audioSrc": "generated/008/en/s003.mp3",
+      "durationSec": 4.337,
+      "wordStarts": [
+        0,
+        0.58,
+        0.697,
+        1.138,
+        1.347,
+        1.428,
+        1.707,
+        2.264,
+        2.577,
+        3.019
+      ]
+    },
+    {
+      "audioSrc": "generated/008/en/s004.mp3",
+      "durationSec": 4.337,
+      "wordStarts": [
+        0,
+        0.29,
+        0.43,
+        0.836,
+        0.952,
+        1.033,
+        1.625,
+        1.823,
+        1.962,
+        2.334,
+        2.949,
+        3.367
+      ]
+    },
+    {
+      "audioSrc": "generated/008/en/s005.mp3",
+      "durationSec": 5.591,
+      "wordStarts": [
+        0,
+        0.441,
+        0.964,
+        1.533,
+        1.683,
+        2.159,
+        3.135,
+        3.379,
+        3.518,
+        3.936
+      ]
+    },
+    {
+      "audioSrc": "generated/008/en/s006.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.476,
+        0.998,
+        1.428,
+        1.602,
+        1.916,
+        2.229
+      ]
+    },
+    {
+      "audioSrc": "generated/008/en/s007.mp3",
+      "durationSec": 4.383,
+      "wordStarts": [
+        0,
+        0.766,
+        0.94,
+        1.219,
+        1.567,
+        1.939,
+        2.067,
+        2.45,
+        2.705,
+        2.798,
+        3.193
+      ]
+    },
+    {
+      "audioSrc": "generated/008/en/s008.mp3",
+      "durationSec": 4.987,
+      "wordStarts": [
+        0,
+        0.255,
+        0.673,
+        1.591,
+        2.496,
+        2.682,
+        3.065,
+        3.564,
+        3.878
+      ]
+    },
+    {
+      "audioSrc": "generated/008/en/s009.mp3",
+      "durationSec": 3.919,
+      "wordStarts": [
+        0,
+        0.453,
+        0.859,
+        1.161,
+        1.312,
+        1.44,
+        1.869,
+        2.252,
+        2.438,
+        2.705
+      ]
+    },
+    {
+      "audioSrc": "generated/008/en/s010.mp3",
+      "durationSec": 3.129,
+      "wordStarts": [
+        0,
+        0.209,
+        0.546,
+        0.859,
+        0.998,
+        1.138,
+        1.451,
+        1.788,
+        1.916
+      ]
+    },
+    {
+      "audioSrc": "generated/008/en/s011.mp3",
+      "durationSec": 3.083,
+      "wordStarts": [
+        0,
+        0.232,
+        0.604,
+        0.929,
+        1.358,
+        1.509,
+        1.834
+      ]
+    },
+    {
+      "audioSrc": "generated/008/en/s012.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.197,
+        0.522,
+        0.778,
+        0.964,
+        1.416,
+        2.136,
+        2.334,
+        2.415,
+        2.972
+      ]
+    },
+    {
+      "audioSrc": "generated/008/en/s013.mp3",
+      "durationSec": 4.151,
+      "wordStarts": [
+        0,
+        0.569,
+        1.022,
+        1.358,
+        1.509,
+        2.136,
+        2.322,
+        2.461,
+        2.914
+      ]
+    },
+    {
+      "audioSrc": "generated/008/en/s014.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.453,
+        0.639,
+        1.01,
+        1.428,
+        1.695,
+        2.113,
+        2.299,
+        2.601
+      ]
+    },
+    {
+      "audioSrc": "generated/008/en/s015.mp3",
+      "durationSec": 3.036,
+      "wordStarts": [
+        0,
+        0.383,
+        0.557,
+        0.778,
+        1.138,
+        1.556,
+        1.707,
+        1.985
+      ]
+    }
+  ],
+  "texts": [
+    "How does a hard kernel turn into fluffy popcorn?",
+    "Each kernel has a tough shell that barely lets water through.",
+    "Inside is starch and a little water, about fourteen percent.",
+    "Heat the kernels in a pot, and the water inside warms up.",
+    "Above 100 degrees it becomes steam, but it cannot escape.",
+    "Pressure inside climbs to about nine atmospheres.",
+    "Meanwhile, the hot steam turns the starch into a soft gel.",
+    "At around 180 degrees, the shell finally gives way.",
+    "Steam bursts out and the starch puffs up like foam.",
+    "The kernel grows up to forty times in volume.",
+    "The foam cools fast and sets crispy.",
+    "The pop comes from escaping steam, like a champagne cork.",
+    "Bulging starch kicks the pot, so the kernel jumps.",
+    "Kernels with cracked shells leak steam and never pop.",
+    "Follow for more kitchen physics you never noticed!"
+  ]
+}

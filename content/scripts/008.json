@@ -1,0 +1,1171 @@
+{
+  "id": 8,
+  "title": {
+    "cs": "Proč popcorn praská",
+    "en": "Why popcorn pops",
+    "ro": "De ce pocnește popcornul"
+  },
+  "description": {
+    "cs": "Jak pára uvězněná v kukuřičném zrnku vyrobí z tvrdého semínka křupavou pěnu. 🍿",
+    "en": "How steam trapped inside a corn kernel turns a hard seed into crispy foam. 🍿",
+    "ro": "Cum aburul prins într-un bob de porumb transformă o sămânță tare într-o spumă crocantă. 🍿"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "popcorn",
+    "kuchyne",
+    "science",
+    "vzdelavani"
+  ],
+  "scenes": [
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Jak se z tvrdého zrnka stane *načechraný* popcorn?",
+        "en": "How does a hard kernel turn into *fluffy* popcorn?",
+        "ro": "Cum devine un bob tare un popcorn *pufos*?"
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "k",
+          "type": "ball",
+          "position": [
+            -0.3,
+            0.85,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": "#f2c230",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pc",
+          "type": "cloud",
+          "position": [
+            0.35,
+            1.2,
+            0
+          ],
+          "scale": 0.35,
+          "rotationY": 0,
+          "color": "#fff4d6",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "k",
+        "distance": 3,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "k",
+          "emoji": "🌽",
+          "text": {
+            "cs": "Kukuřičné zrnko",
+            "en": "Corn kernel",
+            "ro": "Bob de porumb"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Každé zrnko má tuhou slupku, která skoro *nepropouští* vodu.",
+        "en": "Each kernel has a tough shell that barely lets *water* through.",
+        "ro": "Fiecare bob are o coajă tare, aproape *impermeabilă*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "k",
+          "type": "ball",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#f2c230",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "k",
+        "distance": 2.8,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "k",
+          "emoji": "🛡️",
+          "text": {
+            "cs": "Tuhá slupka",
+            "en": "Tough shell",
+            "ro": "Coajă tare"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Uvnitř je *škrob* a trocha vody, asi čtrnáct procent.",
+        "en": "Inside is *starch* and a little water, about fourteen percent.",
+        "ro": "Înăuntru e *amidon* și puțină apă, cam paisprezece la sută."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "k",
+          "type": "ball",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#f2c230",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "h2o",
+          "type": "atom",
+          "position": [
+            0.55,
+            1.6,
+            0.2
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "k",
+        "distance": 3,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "h2o",
+          "emoji": "💧",
+          "text": {
+            "cs": "Voda",
+            "en": "Water",
+            "ro": "Apă"
+          }
+        }
+      ],
+      "counter": {
+        "from": 0,
+        "to": 14,
+        "decimals": 0,
+        "unit": {
+          "cs": " %",
+          "en": " %",
+          "ro": " %"
+        },
+        "label": {
+          "cs": "vody v zrnku",
+          "en": "water in a kernel",
+          "ro": "apă în bob"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Když zrnka zahřeješ v hrnci, voda uvnitř se *ohřívá*.",
+        "en": "Heat the kernels in a pot, and the water inside *warms up*.",
+        "ro": "Când încălzești boabele în oală, apa din ele se *încălzește*."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.95,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "stove",
+          "to": "pot",
+          "kind": "heat"
+        }
+      ],
+      "waves": [
+        {
+          "from": "pot",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "pot",
+        "distance": 4.5,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Nad sto stupňů se mění v *páru*, ale nemá kudy ven.",
+        "en": "Above 100 degrees it becomes *steam*, but it cannot escape.",
+        "ro": "Peste 100 de grade devine *abur*, dar nu are pe unde ieși."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "k",
+          "type": "ball",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#f2c230",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "steam",
+          "type": "cloud",
+          "position": [
+            0,
+            1.6,
+            0
+          ],
+          "scale": 0.25,
+          "rotationY": 0,
+          "color": "#ffffff",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "k",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "k",
+        "distance": 3,
+        "angle": "low",
+        "move": "rise"
+      },
+      "labels": [
+        {
+          "prop": "steam",
+          "emoji": "♨️",
+          "text": {
+            "cs": "Pára",
+            "en": "Steam",
+            "ro": "Abur"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Tlak uvnitř roste až na devět *atmosfér*.",
+        "en": "Pressure inside climbs to about nine *atmospheres*.",
+        "ro": "Presiunea dinăuntru urcă până la vreo nouă *atmosfere*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "k",
+          "type": "ball",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#f2c230",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "ar",
+          "type": "arrow",
+          "position": [
+            0.7,
+            1.15,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "al",
+          "type": "arrow",
+          "position": [
+            -0.7,
+            1.15,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 180,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "k",
+        "distance": 3.2,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": {
+        "from": 1,
+        "to": 9,
+        "decimals": 0,
+        "unit": {
+          "cs": " atm",
+          "en": " atm",
+          "ro": " atm"
+        },
+        "label": {
+          "cs": "tlak v zrnku",
+          "en": "pressure in kernel",
+          "ro": "presiunea în bob"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Horká pára mezitím mění škrob v měkký *gel*.",
+        "en": "Meanwhile, the hot steam turns the starch into a soft *gel*.",
+        "ro": "Între timp, aburul fierbinte transformă amidonul într-un *gel* moale."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "k",
+          "type": "ball",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#f2c230",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "st",
+          "type": "atom",
+          "position": [
+            0.55,
+            1.6,
+            0.2
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": "#fff1c4",
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "k",
+        "distance": 3,
+        "angle": "frontLeft",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "st",
+          "emoji": "🫠",
+          "text": {
+            "cs": "Škrobový gel",
+            "en": "Starch gel",
+            "ro": "Gel de amidon"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Kolem sto osmdesáti stupňů slupka tlak *nevydrží*.",
+        "en": "At around 180 degrees, the shell finally *gives way*.",
+        "ro": "Pe la 180 de grade, coaja *cedează*."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.95,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            0.9,
+            0,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "stove",
+          "to": "pot",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 5,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": {
+        "from": 20,
+        "to": 180,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "teplota zrnka",
+          "en": "kernel temperature",
+          "ro": "temperatura bobului"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Pára prudce *uniká* a škrob se nafoukne jako pěna.",
+        "en": "Steam *bursts* out and the starch puffs up like foam.",
+        "ro": "Aburul *țâșnește* afară, iar amidonul se umflă ca o spumă."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pc",
+          "type": "cloud",
+          "position": [
+            0,
+            1.25,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": "#fff4d6",
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "spark",
+          "type": "lightning",
+          "position": [
+            0.6,
+            1.7,
+            0.3
+          ],
+          "scale": 0.3,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "pc",
+        "distance": 3,
+        "angle": "front",
+        "move": "dollyOut"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Zrnko tak zvětší objem až *čtyřicetkrát*.",
+        "en": "The kernel grows up to *forty times* in volume.",
+        "ro": "Bobul își mărește volumul de până la *patruzeci de ori*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "k",
+          "type": "ball",
+          "position": [
+            -0.5,
+            0.85,
+            0
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": "#f2c230",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pc",
+          "type": "cloud",
+          "position": [
+            0.4,
+            1.35,
+            0
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": "#fff4d6",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "pc",
+        "distance": 3.5,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "labels": [],
+      "counter": {
+        "from": 1,
+        "to": 40,
+        "decimals": 0,
+        "unit": {
+          "cs": "×",
+          "en": "×",
+          "ro": "×"
+        },
+        "label": {
+          "cs": "větší objem",
+          "en": "bigger volume",
+          "ro": "volum mai mare"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Pěna rychle chladne a ztuhne do *křupava*.",
+        "en": "The foam cools fast and sets *crispy*.",
+        "ro": "Spuma se răcește repede și devine *crocantă*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bowl",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": "#d9534f",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pc",
+          "type": "cloud",
+          "position": [
+            0,
+            1.4,
+            0
+          ],
+          "scale": 0.35,
+          "rotationY": 0,
+          "color": "#fff4d6",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "snow",
+          "type": "snowflake",
+          "position": [
+            0.7,
+            1.8,
+            0
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bowl",
+        "distance": 3,
+        "angle": "top",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "pc",
+          "emoji": "🍿",
+          "text": {
+            "cs": "Křupavá pěna",
+            "en": "Crispy foam",
+            "ro": "Spumă crocantă"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "To *prásknutí* dělá unikající pára, podobně jako zátka šampaňského.",
+        "en": "The *pop* comes from escaping steam, like a champagne cork.",
+        "ro": "*Pocnetul* vine de la aburul care iese, ca dopul de șampanie."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.95,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pc",
+          "type": "cloud",
+          "position": [
+            0,
+            1.8,
+            0
+          ],
+          "scale": 0.3,
+          "rotationY": 0,
+          "color": "#fff4d6",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "pot",
+          "kind": "sound"
+        }
+      ],
+      "camera": {
+        "focus": "pot",
+        "distance": 4,
+        "angle": "low",
+        "move": "rise"
+      },
+      "labels": [
+        {
+          "prop": "pot",
+          "emoji": "💥",
+          "text": {
+            "cs": "Bum!",
+            "en": "Pop!",
+            "ro": "Poc!"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Vyboulený škrob se odrazí ode dna a zrnko *vyskočí*.",
+        "en": "Bulging starch kicks the pot, so the kernel *jumps*.",
+        "ro": "Amidonul umflat împinge în oală, iar bobul *sare*."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.95,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pc",
+          "type": "cloud",
+          "position": [
+            0,
+            1.3,
+            0
+          ],
+          "scale": 0.25,
+          "rotationY": 0,
+          "color": "#fff4d6",
+          "anim": "slide",
+          "slideTo": [
+            0.4,
+            2.3,
+            0
+          ],
+          "glow": false
+        },
+        {
+          "id": "up",
+          "type": "arrowUp",
+          "position": [
+            -0.45,
+            1.7,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 4,
+        "angle": "side",
+        "move": "orbitLeft"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Zrnka s prasklou slupkou páru pustí a *nevybuchnou*.",
+        "en": "Kernels with cracked shells leak steam and never *pop*.",
+        "ro": "Boabele cu coaja crăpată pierd aburul și nu mai *pocnesc*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "k",
+          "type": "ball",
+          "position": [
+            -0.3,
+            0.85,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": "#c9971c",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "steam",
+          "type": "cloud",
+          "position": [
+            0.5,
+            1.6,
+            0
+          ],
+          "scale": 0.25,
+          "rotationY": 0,
+          "color": "#ffffff",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "k",
+          "to": "steam",
+          "kind": "air"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "k",
+        "distance": 3,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "k",
+          "emoji": "💔",
+          "text": {
+            "cs": "Prasklá slupka",
+            "en": "Cracked shell",
+            "ro": "Coajă crăpată"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Sleduj nás, ať víš, co se děje v *kuchyni*!",
+        "en": "Follow for more *kitchen* physics you never noticed!",
+        "ro": "Urmărește-ne pentru mai multă fizică din *bucătărie*!"
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pc",
+          "type": "cloud",
+          "position": [
+            0,
+            2.5,
+            0
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": "#fff4d6",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "kid",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    }
+  ]
+}

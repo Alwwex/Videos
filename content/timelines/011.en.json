@@ -1,0 +1,258 @@
+{
+  "lang": "en",
+  "scenes": [
+    {
+      "audioSrc": "generated/011/en/s001.mp3",
+      "durationSec": 3.733,
+      "wordStarts": [
+        0,
+        0.36,
+        0.569,
+        0.685,
+        0.964,
+        1.358,
+        1.741,
+        2.09,
+        2.194,
+        2.322
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s002.mp3",
+      "durationSec": 2.665,
+      "wordStarts": [
+        0,
+        0.255,
+        0.824,
+        1.138,
+        1.289,
+        1.451
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s003.mp3",
+      "durationSec": 4.151,
+      "wordStarts": [
+        0,
+        0.453,
+        0.592,
+        0.731,
+        1.01,
+        1.788,
+        2.113,
+        2.403,
+        2.659
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s004.mp3",
+      "durationSec": 3.594,
+      "wordStarts": [
+        0,
+        0.43,
+        0.731,
+        1.08,
+        1.277,
+        1.591,
+        1.858
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s005.mp3",
+      "durationSec": 4.383,
+      "wordStarts": [
+        0,
+        0.232,
+        0.534,
+        0.824,
+        1.022,
+        1.567,
+        2.171,
+        2.624
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s006.mp3",
+      "durationSec": 4.615,
+      "wordStarts": [
+        0,
+        0.255,
+        0.94,
+        1.637,
+        1.985,
+        2.229,
+        2.368,
+        2.74,
+        3.46
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s007.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.302,
+        0.697,
+        0.964,
+        1.184,
+        1.486,
+        1.881,
+        2.067,
+        2.438
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s008.mp3",
+      "durationSec": 3.036,
+      "wordStarts": [
+        0,
+        0.29,
+        0.569,
+        0.72,
+        0.998,
+        1.358,
+        1.556,
+        1.916,
+        2.078
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s009.mp3",
+      "durationSec": 3.919,
+      "wordStarts": [
+        0,
+        0.221,
+        0.662,
+        0.975,
+        1.219,
+        1.393,
+        1.73,
+        2.136,
+        2.554
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s010.mp3",
+      "durationSec": 4.197,
+      "wordStarts": [
+        0,
+        0.197,
+        0.592,
+        1.057,
+        1.231,
+        1.37,
+        2.229,
+        2.624,
+        2.763,
+        3.03
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s011.mp3",
+      "durationSec": 3.269,
+      "wordStarts": [
+        0,
+        0.232,
+        0.569,
+        0.929,
+        1.521,
+        1.672,
+        1.869,
+        2.206,
+        2.31
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s012.mp3",
+      "durationSec": 3.733,
+      "wordStarts": [
+        0,
+        0.453,
+        0.697,
+        0.906,
+        1.196,
+        1.382,
+        1.521,
+        1.66,
+        1.892,
+        2.334
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s013.mp3",
+      "durationSec": 2.572,
+      "wordStarts": [
+        0,
+        0.418,
+        0.697,
+        1.103,
+        1.254,
+        1.37
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s014.mp3",
+      "durationSec": 4.105,
+      "wordStarts": [
+        0,
+        0.267,
+        0.592,
+        0.952,
+        1.463,
+        1.834,
+        1.974,
+        2.38,
+        2.682,
+        2.81
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s015.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.929,
+        1.173,
+        1.382,
+        1.625,
+        1.73,
+        1.846,
+        2.101,
+        2.183,
+        2.31
+      ]
+    },
+    {
+      "audioSrc": "generated/011/en/s016.mp3",
+      "durationSec": 2.433,
+      "wordStarts": [
+        0,
+        0.372,
+        0.522,
+        0.673,
+        0.882,
+        1.254,
+        1.416,
+        1.567
+      ]
+    }
+  ],
+  "texts": [
+    "Why does a full water bottle burst in the freezer?",
+    "Most substances shrink when they freeze.",
+    "Water is the odd one: ice needs more space.",
+    "Freezing water grows by about nine percent.",
+    "It comes down to hydrogen bonds between molecules.",
+    "In ice, molecules lock into an open hexagonal lattice.",
+    "That lattice holds more empty space than liquid water.",
+    "So ice is less dense and floats on water.",
+    "A freezer cools down to about minus eighteen degrees.",
+    "The bottle freezes from the outside, forming an ice shell.",
+    "The water inside expands but has nowhere to go.",
+    "Trapped ice can push with up to two thousand atmospheres.",
+    "Glass can't stretch, so it cracks.",
+    "The same force bursts pipes and splits rocks in winter.",
+    "Tip: leave some room at the top of the bottle.",
+    "Follow us for more physics from your kitchen!"
+  ]
+}

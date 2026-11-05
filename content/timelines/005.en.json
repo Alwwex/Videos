@@ -1,0 +1,245 @@
+{
+  "lang": "en",
+  "scenes": [
+    {
+      "audioSrc": "generated/005/en/s001.mp3",
+      "durationSec": 2.851,
+      "wordStarts": [
+        0,
+        0.232,
+        0.453,
+        0.708,
+        0.975,
+        1.149,
+        1.382,
+        1.8
+      ]
+    },
+    {
+      "audioSrc": "generated/005/en/s002.mp3",
+      "durationSec": 2.897,
+      "wordStarts": [
+        0,
+        0.325,
+        0.464,
+        0.72,
+        1.138,
+        1.579,
+        1.997
+      ]
+    },
+    {
+      "audioSrc": "generated/005/en/s003.mp3",
+      "durationSec": 4.569,
+      "wordStarts": [
+        0,
+        0.209,
+        0.511,
+        0.755,
+        0.894,
+        1.823,
+        2.043,
+        2.287,
+        2.659,
+        2.972,
+        3.1,
+        3.181
+      ]
+    },
+    {
+      "audioSrc": "generated/005/en/s004.mp3",
+      "durationSec": 4.197,
+      "wordStarts": [
+        0,
+        0.418,
+        0.743,
+        0.998,
+        1.091,
+        1.509,
+        1.8,
+        2.043,
+        2.798
+      ]
+    },
+    {
+      "audioSrc": "generated/005/en/s005.mp3",
+      "durationSec": 4.755,
+      "wordStarts": [
+        0,
+        0.43,
+        0.998,
+        1.3,
+        1.811,
+        2.078,
+        2.705
+      ]
+    },
+    {
+      "audioSrc": "generated/005/en/s006.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.232,
+        0.604,
+        0.987,
+        1.138,
+        1.393,
+        1.741,
+        1.869,
+        2.159
+      ]
+    },
+    {
+      "audioSrc": "generated/005/en/s007.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.279,
+        0.708,
+        0.882,
+        1.138,
+        1.416,
+        1.498,
+        2.218,
+        2.612,
+        2.856,
+        2.984
+      ]
+    },
+    {
+      "audioSrc": "generated/005/en/s008.mp3",
+      "durationSec": 3.594,
+      "wordStarts": [
+        0,
+        0.302,
+        0.511,
+        0.94,
+        1.265,
+        1.753,
+        1.939,
+        2.252,
+        2.531
+      ]
+    },
+    {
+      "audioSrc": "generated/005/en/s009.mp3",
+      "durationSec": 2.758,
+      "wordStarts": [
+        0,
+        0.255,
+        0.348,
+        0.615,
+        1.01,
+        1.231,
+        1.533,
+        1.637,
+        1.765
+      ]
+    },
+    {
+      "audioSrc": "generated/005/en/s010.mp3",
+      "durationSec": 3.733,
+      "wordStarts": [
+        0,
+        0.395,
+        0.813,
+        1.161,
+        1.637,
+        2.009,
+        2.206
+      ]
+    },
+    {
+      "audioSrc": "generated/005/en/s011.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.337,
+        0.708,
+        0.998,
+        1.103,
+        1.463,
+        1.823,
+        1.997,
+        2.276,
+        2.612,
+        2.786
+      ]
+    },
+    {
+      "audioSrc": "generated/005/en/s012.mp3",
+      "durationSec": 4.197,
+      "wordStarts": [
+        0,
+        0.255,
+        0.639,
+        0.975,
+        1.44,
+        1.556,
+        1.683,
+        2.252,
+        2.624
+      ]
+    },
+    {
+      "audioSrc": "generated/005/en/s013.mp3",
+      "durationSec": 3.176,
+      "wordStarts": [
+        0,
+        0.453,
+        0.615,
+        1.115,
+        1.265,
+        1.486,
+        1.846
+      ]
+    },
+    {
+      "audioSrc": "generated/005/en/s014.mp3",
+      "durationSec": 3.965,
+      "wordStarts": [
+        0,
+        0.255,
+        0.592,
+        0.94,
+        1.126,
+        1.254,
+        1.683,
+        1.95,
+        2.264,
+        2.763
+      ]
+    },
+    {
+      "audioSrc": "generated/005/en/s015.mp3",
+      "durationSec": 2.711,
+      "wordStarts": [
+        0,
+        0.395,
+        0.569,
+        0.789,
+        1.057,
+        1.44,
+        1.614,
+        1.788
+      ]
+    }
+  ],
+  "texts": [
+    "Why does ice float when most solids sink?",
+    "Ice is just frozen water, after all.",
+    "It comes down to density: how much mass fits in a space.",
+    "Ice weighs about a tenth less than equal-sized water.",
+    "Water molecules stick together with hydrogen bonds.",
+    "In liquid water they keep moving and pack tightly.",
+    "When freezing, they lock into a hexagonal grid full of gaps.",
+    "That's why freezing water expands by about 9 percent.",
+    "So a full bottle can burst in the freezer.",
+    "Water pushes every object upward with buoyancy.",
+    "Ice sinks until it pushes aside its own weight in water.",
+    "So about 90 percent of an iceberg hides underwater.",
+    "Water is densest at four degrees Celsius.",
+    "So lakes freeze from the top, and fish survive below.",
+    "Follow for more cool physics from your kitchen!"
+  ]
+}

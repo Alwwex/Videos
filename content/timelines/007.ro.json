@@ -1,0 +1,255 @@
+{
+  "lang": "ro",
+  "scenes": [
+    {
+      "audioSrc": "generated/007/ro/s001.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.255,
+        0.476,
+        0.604,
+        1.057,
+        1.393,
+        1.904,
+        2.09
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s002.mp3",
+      "durationSec": 2.944,
+      "wordStarts": [
+        0,
+        0.499,
+        0.824,
+        1.126,
+        1.231,
+        1.393,
+        1.811,
+        1.985
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s003.mp3",
+      "durationSec": 2.526,
+      "wordStarts": [
+        0,
+        0.186,
+        0.406,
+        0.917,
+        0.987,
+        1.347,
+        1.474,
+        1.741
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s004.mp3",
+      "durationSec": 4.29,
+      "wordStarts": [
+        0,
+        0.441,
+        1.289,
+        1.869,
+        2.403,
+        2.67,
+        3.158
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s005.mp3",
+      "durationSec": 4.151,
+      "wordStarts": [
+        0,
+        0.36,
+        1.161,
+        1.579,
+        2.009,
+        2.392,
+        2.554,
+        2.844,
+        3.297,
+        3.483
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s006.mp3",
+      "durationSec": 5.126,
+      "wordStarts": [
+        0,
+        0.186,
+        0.325,
+        0.685,
+        0.964,
+        1.741,
+        2.101,
+        2.508,
+        2.844,
+        3.251,
+        3.785
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s007.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.557,
+        0.755,
+        0.987,
+        1.649,
+        2.032,
+        2.171,
+        2.763
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s008.mp3",
+      "durationSec": 3.408,
+      "wordStarts": [
+        0,
+        0.511,
+        0.848,
+        1.08,
+        1.591,
+        2.078,
+        2.461
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s009.mp3",
+      "durationSec": 3.687,
+      "wordStarts": [
+        0,
+        0.302,
+        0.766,
+        0.882,
+        1.265,
+        1.463,
+        2.159,
+        2.438
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s010.mp3",
+      "durationSec": 3.965,
+      "wordStarts": [
+        0,
+        0.348,
+        0.882,
+        1.486,
+        1.846,
+        1.985,
+        2.357,
+        2.821,
+        3.03
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s011.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.186,
+        0.511,
+        0.94,
+        1.231,
+        1.939,
+        2.101,
+        2.194
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s012.mp3",
+      "durationSec": 3.269,
+      "wordStarts": [
+        0,
+        0.557,
+        1.335,
+        1.486,
+        1.881,
+        2.276,
+        2.403
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s013.mp3",
+      "durationSec": 3.594,
+      "wordStarts": [
+        0,
+        0.464,
+        0.778,
+        0.859,
+        1.335,
+        1.428,
+        1.741,
+        2.101,
+        2.264,
+        2.392,
+        2.694
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s014.mp3",
+      "durationSec": 3.733,
+      "wordStarts": [
+        0,
+        0.604,
+        0.778,
+        1.161,
+        1.416,
+        1.66,
+        2.009,
+        2.357,
+        2.601,
+        2.937
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s015.mp3",
+      "durationSec": 4.0120000000000005,
+      "wordStarts": [
+        0,
+        0.209,
+        0.534,
+        0.673,
+        1.451,
+        2.02,
+        2.183,
+        2.519,
+        2.891
+      ]
+    },
+    {
+      "audioSrc": "generated/007/ro/s016.mp3",
+      "durationSec": 3.408,
+      "wordStarts": [
+        0,
+        0.789,
+        0.94,
+        1.498,
+        1.962,
+        2.125,
+        2.694
+      ]
+    }
+  ],
+  "texts": [
+    "Cum ține un termos ceaiul fierbinte ore întregi?",
+    "Căldura trece mereu de la cald la rece.",
+    "O cană obișnuită o pierde pe trei căi.",
+    "Întâi, conducția: moleculele agitate dau căldura peretelui.",
+    "Apoi, convecția: aerul cald urcă și duce căldura cu el.",
+    "În al treilea rând, radiația: orice obiect cald emite lumină infraroșie.",
+    "Termosul are doi pereți, unul în interiorul celuilalt.",
+    "Între ei e vid, aproape deloc aer.",
+    "Fără molecule nu există nici conducție, nici convecție.",
+    "Dar radiația traversează vidul, ca lumina Soarelui prin spațiu.",
+    "De aceea pereții sunt argintați, ca o oglindă.",
+    "Radiația infraroșie se reflectă înapoi în ceai.",
+    "Punctul slab e dopul, pe acolo scapă cea mai multă căldură.",
+    "Așa, un termos bun ține ceaiul cald și șase ore.",
+    "Și merge și invers: limonada cu gheață rămâne rece.",
+    "Urmărește-ne și descoperă fizica din bucătăria ta!"
+  ]
+}

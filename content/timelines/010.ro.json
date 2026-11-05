@@ -1,0 +1,259 @@
+{
+  "lang": "ro",
+  "scenes": [
+    {
+      "audioSrc": "generated/010/ro/s001.mp3",
+      "durationSec": 3.826,
+      "wordStarts": [
+        0,
+        0.337,
+        0.488,
+        0.615,
+        1.022,
+        1.683,
+        1.997,
+        2.125,
+        2.45,
+        2.728
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s002.mp3",
+      "durationSec": 3.361,
+      "wordStarts": [
+        0,
+        0.267,
+        0.639,
+        0.894,
+        1.01,
+        1.405,
+        1.486,
+        2.101,
+        2.229
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s003.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.244,
+        0.372,
+        0.882,
+        1.126,
+        2.02,
+        2.624
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s004.mp3",
+      "durationSec": 3.129,
+      "wordStarts": [
+        0,
+        0.186,
+        0.569,
+        0.801,
+        1.126,
+        1.649,
+        1.8,
+        2.183
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s005.mp3",
+      "durationSec": 3.269,
+      "wordStarts": [
+        0,
+        0.453,
+        0.882,
+        1.416,
+        1.823,
+        2.334,
+        2.45
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s006.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.232,
+        0.766,
+        1.219,
+        1.649,
+        1.974,
+        2.496,
+        2.647
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s007.mp3",
+      "durationSec": 3.176,
+      "wordStarts": [
+        0,
+        0.685,
+        1.277,
+        1.672,
+        2.032,
+        2.148,
+        2.287
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s008.mp3",
+      "durationSec": 3.361,
+      "wordStarts": [
+        0,
+        0.313,
+        0.639,
+        0.72,
+        0.894,
+        1.265,
+        1.811,
+        2.09,
+        2.264
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s009.mp3",
+      "durationSec": 3.594,
+      "wordStarts": [
+        0,
+        0.337,
+        0.592,
+        1.091,
+        1.231,
+        1.521,
+        1.649,
+        2.043,
+        2.171
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s010.mp3",
+      "durationSec": 3.733,
+      "wordStarts": [
+        0,
+        0.488,
+        0.72,
+        0.929,
+        1.207,
+        1.324,
+        1.591,
+        1.823,
+        1.962,
+        2.508,
+        2.612,
+        2.821
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s011.mp3",
+      "durationSec": 4.522,
+      "wordStarts": [
+        0,
+        0.232,
+        0.534,
+        0.662,
+        1.057,
+        1.451,
+        1.718,
+        1.846,
+        2.531,
+        2.961,
+        3.611
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s012.mp3",
+      "durationSec": 4.337,
+      "wordStarts": [
+        0,
+        0.221,
+        0.534,
+        0.72,
+        1.057,
+        1.161,
+        1.649,
+        2.914,
+        3.042
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s013.mp3",
+      "durationSec": 2.851,
+      "wordStarts": [
+        0,
+        0.209,
+        0.499,
+        0.615,
+        1.057,
+        1.463,
+        1.672,
+        1.904
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s014.mp3",
+      "durationSec": 3.687,
+      "wordStarts": [
+        0,
+        0.337,
+        0.685,
+        1.254,
+        1.347,
+        1.695,
+        2.322,
+        2.589
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s015.mp3",
+      "durationSec": 3.919,
+      "wordStarts": [
+        0,
+        0.313,
+        0.511,
+        0.859,
+        0.998,
+        1.358,
+        1.858,
+        2.252,
+        2.403,
+        2.833,
+        3.03
+      ]
+    },
+    {
+      "audioSrc": "generated/010/ro/s016.mp3",
+      "durationSec": 3.222,
+      "wordStarts": [
+        0,
+        0.697,
+        0.998,
+        1.149,
+        1.486,
+        1.939,
+        2.125
+      ]
+    }
+  ],
+  "texts": [
+    "Cum dă în clocot fierbătorul apa în doar trei minute?",
+    "În fundul lui se ascunde o rezistență de metal.",
+    "Când îl pornești, prin rezistență năvălesc electronii.",
+    "Pe drum se tot ciocnesc de atomii metalului.",
+    "Fiecare ciocnire transformă energia electrică în căldură.",
+    "Un fierbător obișnuit consumă cam 2000 de wați.",
+    "Rezistența încălzește întâi apa de pe fund.",
+    "Apa caldă e mai puțin densă, așa că urcă.",
+    "Apa rece coboară și apare un circuit de convecție.",
+    "Vuietul vine din bule de abur care se prăbușesc în apa rece.",
+    "La 100 de grade, bulele urcă la suprafață și zgomotul scade.",
+    "Un litru are nevoie de circa 335 de kilojouli.",
+    "La 2000 de wați, durează cam trei minute.",
+    "Apoi aburul încălzește o lamelă bimetalică lângă întrerupător.",
+    "Cele două metale se dilată diferit, lamela se îndoaie și clic!",
+    "Urmărește-ne pentru mai multă fizică din bucătărie!"
+  ]
+}

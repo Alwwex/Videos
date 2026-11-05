@@ -1,0 +1,235 @@
+{
+  "lang": "ro",
+  "scenes": [
+    {
+      "audioSrc": "generated/006/ro/s001.mp3",
+      "durationSec": 3.872,
+      "wordStarts": [
+        0,
+        0.36,
+        0.615,
+        1.207,
+        1.405,
+        1.533,
+        1.962,
+        2.09,
+        2.426,
+        2.74
+      ]
+    },
+    {
+      "audioSrc": "generated/006/ro/s002.mp3",
+      "durationSec": 3.222,
+      "wordStarts": [
+        0,
+        0.267,
+        0.708,
+        1.231,
+        1.591,
+        1.904,
+        2.078
+      ]
+    },
+    {
+      "audioSrc": "generated/006/ro/s003.mp3",
+      "durationSec": 4.29,
+      "wordStarts": [
+        0,
+        0.279,
+        0.604,
+        1.045,
+        1.44,
+        1.533,
+        2.113,
+        2.659,
+        3.158
+      ]
+    },
+    {
+      "audioSrc": "generated/006/ro/s004.mp3",
+      "durationSec": 2.897,
+      "wordStarts": [
+        0,
+        0.406,
+        0.662,
+        0.813,
+        1.149,
+        1.939
+      ]
+    },
+    {
+      "audioSrc": "generated/006/ro/s005.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.221,
+        0.337,
+        0.94,
+        1.498,
+        1.904,
+        2.032,
+        2.485
+      ]
+    },
+    {
+      "audioSrc": "generated/006/ro/s006.mp3",
+      "durationSec": 4.105,
+      "wordStarts": [
+        0,
+        0.186,
+        0.395,
+        0.499,
+        1.01,
+        1.707,
+        1.892,
+        2.009,
+        2.485,
+        2.601,
+        2.752
+      ]
+    },
+    {
+      "audioSrc": "generated/006/ro/s007.mp3",
+      "durationSec": 4.43,
+      "wordStarts": [
+        0,
+        0.36,
+        0.998,
+        1.788,
+        2.229,
+        2.38,
+        2.798,
+        3.274
+      ]
+    },
+    {
+      "audioSrc": "generated/006/ro/s008.mp3",
+      "durationSec": 3.872,
+      "wordStarts": [
+        0,
+        0.418,
+        0.987,
+        1.091,
+        2.032,
+        2.264,
+        2.519,
+        2.81
+      ]
+    },
+    {
+      "audioSrc": "generated/006/ro/s009.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.418,
+        0.592,
+        0.964,
+        1.428,
+        1.881,
+        2.392,
+        2.601
+      ]
+    },
+    {
+      "audioSrc": "generated/006/ro/s010.mp3",
+      "durationSec": 2.526,
+      "wordStarts": [
+        0,
+        0.441,
+        0.557,
+        0.998,
+        1.184,
+        1.66
+      ]
+    },
+    {
+      "audioSrc": "generated/006/ro/s011.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.209,
+        0.441,
+        0.836,
+        0.94,
+        1.242,
+        1.881,
+        2.067,
+        2.496,
+        2.624,
+        3.053
+      ]
+    },
+    {
+      "audioSrc": "generated/006/ro/s012.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.418,
+        0.72,
+        1.196,
+        1.324,
+        1.695,
+        2.078,
+        2.264
+      ]
+    },
+    {
+      "audioSrc": "generated/006/ro/s013.mp3",
+      "durationSec": 2.804,
+      "wordStarts": [
+        0,
+        0.186,
+        0.534,
+        1.196,
+        1.358,
+        1.753,
+        1.869
+      ]
+    },
+    {
+      "audioSrc": "generated/006/ro/s014.mp3",
+      "durationSec": 4.0120000000000005,
+      "wordStarts": [
+        0,
+        0.197,
+        0.697,
+        1.312,
+        1.463,
+        1.916,
+        2.519,
+        2.682,
+        2.81
+      ]
+    },
+    {
+      "audioSrc": "generated/006/ro/s015.mp3",
+      "durationSec": 3.083,
+      "wordStarts": [
+        0,
+        0.685,
+        0.975,
+        1.149,
+        1.451,
+        1.869,
+        2.02
+      ]
+    }
+  ],
+  "texts": [
+    "Știai că frigiderul tău nu produce, de fapt, deloc frig?",
+    "În schimb, pompează căldura afară din interior.",
+    "Prin țevile ascunse circulă o substanță specială, agentul frigorific.",
+    "Fierbe deja la minus douăsprezece grade.",
+    "Când se evaporă, absoarbe căldura din mâncarea ta.",
+    "La fel te răcorește transpirația când se evaporă de pe piele.",
+    "Apoi compresorul ascuns jos, în spate, comprimă gazul.",
+    "Gazul comprimat se încălzește, mai tare decât bucătăria.",
+    "Grila din spate cedează căldura aerului din cameră.",
+    "Gazul se răcește și redevine lichid.",
+    "Un tub îngust îi scade presiunea, iar agentul se răcește iar.",
+    "Apoi tot ciclul se repetă iar și iar.",
+    "De aceea frigiderul e cald în spate.",
+    "Un frigider deschis nu răcește bucătăria, ci o încălzește.",
+    "Urmărește-ne pentru mai multă fizică din bucătărie!"
+  ]
+}

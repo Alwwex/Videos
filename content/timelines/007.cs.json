@@ -1,0 +1,241 @@
+{
+  "lang": "cs",
+  "scenes": [
+    {
+      "audioSrc": "generated/007/cs/s001.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.267,
+        0.395,
+        0.534,
+        1.01,
+        1.312,
+        1.556,
+        1.939,
+        2.229
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s002.mp3",
+      "durationSec": 3.269,
+      "wordStarts": [
+        0,
+        0.383,
+        0.778,
+        1.138,
+        1.231,
+        1.66,
+        1.776
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s003.mp3",
+      "durationSec": 3.176,
+      "wordStarts": [
+        0,
+        0.557,
+        0.964,
+        1.08,
+        1.567,
+        1.869
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s004.mp3",
+      "durationSec": 4.708,
+      "wordStarts": [
+        0,
+        0.488,
+        1.416,
+        2.09,
+        2.566,
+        3.135,
+        3.437
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s005.mp3",
+      "durationSec": 4.894,
+      "wordStarts": [
+        0,
+        0.499,
+        1.428,
+        1.974,
+        2.31,
+        3.042,
+        3.204,
+        3.518
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s006.mp3",
+      "durationSec": 5.126,
+      "wordStarts": [
+        0,
+        0.546,
+        1.556,
+        1.904,
+        2.264,
+        2.624,
+        3.17,
+        3.901
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s007.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.546,
+        0.731,
+        0.952,
+        1.579,
+        1.858,
+        2.276
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s008.mp3",
+      "durationSec": 3.083,
+      "wordStarts": [
+        0,
+        0.29,
+        0.534,
+        0.627,
+        1.207,
+        1.556,
+        1.95
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s009.mp3",
+      "durationSec": 3.408,
+      "wordStarts": [
+        0,
+        0.255,
+        0.662,
+        0.824,
+        1.3,
+        1.695,
+        1.904
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s010.mp3",
+      "durationSec": 4.197,
+      "wordStarts": [
+        0,
+        0.488,
+        0.662,
+        1.045,
+        1.776,
+        2.032,
+        2.508,
+        2.856
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s011.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.348,
+        0.639,
+        1.161,
+        1.625,
+        2.38,
+        2.635
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s012.mp3",
+      "durationSec": 3.501,
+      "wordStarts": [
+        0,
+        0.801,
+        1.277,
+        1.405,
+        1.765,
+        2.194,
+        2.334
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s013.mp3",
+      "durationSec": 4.476,
+      "wordStarts": [
+        0,
+        0.627,
+        0.987,
+        1.08,
+        2.055,
+        2.334,
+        2.705,
+        3.065
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s014.mp3",
+      "durationSec": 3.501,
+      "wordStarts": [
+        0,
+        0.383,
+        0.859,
+        1.068,
+        1.44,
+        1.649,
+        2.055,
+        2.148,
+        2.45
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s015.mp3",
+      "durationSec": 4.151,
+      "wordStarts": [
+        0,
+        0.151,
+        0.499,
+        0.639,
+        0.697,
+        1.486,
+        1.869,
+        2.392,
+        2.821
+      ]
+    },
+    {
+      "audioSrc": "generated/007/cs/s016.mp3",
+      "durationSec": 3.222,
+      "wordStarts": [
+        0,
+        0.441,
+        0.801,
+        0.975,
+        1.451,
+        1.892,
+        2.02,
+        2.241
+      ]
+    }
+  ],
+  "texts": [
+    "Jak to, že termoska drží čaj horký celé hodiny?",
+    "Teplo vždycky proudí z teplého do studeného.",
+    "Obyčejný hrnek ho ztrácí třemi cestami.",
+    "Zaprvé vedením: kmitající molekuly předávají teplo stěně.",
+    "Zadruhé prouděním: ohřátý vzduch stoupá a teplo odnáší.",
+    "Zatřetí zářením: každá teplá věc vyzařuje infračervené světlo.",
+    "Termoska má dvě stěny, jednu uvnitř druhé.",
+    "Mezi nimi je vakuum, skoro žádný vzduch.",
+    "Bez molekul tam nefunguje vedení ani proudění.",
+    "Záření ale vakuem projde, jako sluneční světlo vesmírem.",
+    "Proto jsou stěny uvnitř postříbřené jako zrcadlo.",
+    "Infračervené záření se odrazí zpátky do čaje.",
+    "Nejslabší místo je zátka, tudy uniká nejvíc tepla.",
+    "Dobrá termoska tak udrží čaj teplý i šest hodin.",
+    "A funguje to i naopak: ledová limonáda zůstane studená.",
+    "Sleduj nás a objevuj fyziku ve své kuchyni!"
+  ]
+}

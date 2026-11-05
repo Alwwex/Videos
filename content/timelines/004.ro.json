@@ -1,0 +1,280 @@
+{
+  "lang": "ro",
+  "scenes": [
+    {
+      "audioSrc": "generated/004/ro/s001.mp3",
+      "durationSec": 4.337,
+      "wordStarts": [
+        0,
+        0.302,
+        0.755,
+        1.115,
+        1.382,
+        1.881,
+        2.368,
+        2.485,
+        2.728,
+        2.879,
+        3.053
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s002.mp3",
+      "durationSec": 3.733,
+      "wordStarts": [
+        0,
+        0.441,
+        0.673,
+        1.463,
+        1.753,
+        2.125,
+        2.241,
+        2.612,
+        2.74
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s003.mp3",
+      "durationSec": 3.501,
+      "wordStarts": [
+        0,
+        0.418,
+        0.557,
+        0.824,
+        0.917,
+        1.091,
+        1.602,
+        1.892,
+        2.02,
+        2.148,
+        2.438,
+        2.589
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s004.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.557,
+        0.662,
+        0.929,
+        1.138,
+        1.741,
+        1.881,
+        2.171,
+        2.403,
+        2.531
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s005.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.313,
+        0.58,
+        0.987,
+        1.718,
+        2.264,
+        2.508,
+        3.111
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s006.mp3",
+      "durationSec": 4.708,
+      "wordStarts": [
+        0,
+        0.29,
+        0.58,
+        0.731,
+        1.277,
+        1.683,
+        1.8,
+        2.101,
+        2.531,
+        2.659,
+        3.1,
+        3.506
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s007.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.395,
+        0.546,
+        0.952,
+        1.149,
+        1.312,
+        1.834,
+        2.009,
+        2.543,
+        2.659
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s008.mp3",
+      "durationSec": 3.594,
+      "wordStarts": [
+        0,
+        0.476,
+        0.604,
+        0.871,
+        1.242,
+        1.463,
+        1.591,
+        2.067,
+        2.601
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s009.mp3",
+      "durationSec": 4.522,
+      "wordStarts": [
+        0,
+        0.163,
+        0.615,
+        1.149,
+        1.463,
+        2.113,
+        2.438,
+        2.635,
+        3.413,
+        3.541
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s010.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.395,
+        0.569,
+        1.057,
+        1.265,
+        1.707,
+        1.834,
+        2.206,
+        2.659,
+        2.961,
+        3.123
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s011.mp3",
+      "durationSec": 4.383,
+      "wordStarts": [
+        0,
+        0.441,
+        0.673,
+        1.057,
+        1.44,
+        1.939,
+        2.229,
+        2.577,
+        2.763,
+        3.239,
+        3.367
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s012.mp3",
+      "durationSec": 3.501,
+      "wordStarts": [
+        0,
+        0.186,
+        0.569,
+        0.766,
+        1.149,
+        1.265,
+        1.474,
+        1.602,
+        1.916,
+        2.183
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s013.mp3",
+      "durationSec": 3.919,
+      "wordStarts": [
+        0,
+        0.209,
+        0.29,
+        0.72,
+        0.929,
+        1.463,
+        1.753,
+        1.974,
+        2.554,
+        2.914,
+        3.042
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s014.mp3",
+      "durationSec": 5.08,
+      "wordStarts": [
+        0,
+        0.313,
+        0.987,
+        1.161,
+        1.962,
+        2.252,
+        2.635,
+        2.902,
+        3.1,
+        3.82,
+        3.936
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s015.mp3",
+      "durationSec": 3.872,
+      "wordStarts": [
+        0,
+        0.186,
+        0.534,
+        1.161,
+        1.486,
+        1.834,
+        2.02,
+        2.485,
+        2.624
+      ]
+    },
+    {
+      "audioSrc": "generated/004/ro/s016.mp3",
+      "durationSec": 3.222,
+      "wordStarts": [
+        0,
+        0.697,
+        0.859,
+        1.277,
+        1.451,
+        2.055,
+        2.218
+      ]
+    }
+  ],
+  "texts": [
+    "Cum gătește oala sub presiune fasolea de trei ori mai repede?",
+    "Într-o oală obișnuită, apa fierbe la 100 de grade.",
+    "Oricât de tare ai da focul, apa nu se face mai fierbinte.",
+    "Energia în plus doar transformă mai multă apă în abur.",
+    "Între timp, întreaga atmosferă apasă pe suprafața apei.",
+    "Ca apa să fiarbă, bulele de abur trebuie să învingă această presiune.",
+    "Oala sub presiune are un capac cu garnitură de cauciuc.",
+    "Aburul nu poate ieși, așa că presiunea dinăuntru crește.",
+    "La presiune dublă, apa fierbe abia la 120 de grade.",
+    "Apa mai fierbinte cu 20 de grade gătește mult mai repede.",
+    "Vita care fierbe două ore e gata în 40 de minute.",
+    "O supapă lasă aburul în plus să iasă, pentru siguranță.",
+    "Nu o deschide sub presiune, apa s-ar transforma brusc în abur.",
+    "Pe Everest e invers: apa fierbe deja la 70 de grade.",
+    "De aceea alpiniștii cară oale sub presiune pe munte.",
+    "Urmărește-ne și gătește mai inteligent cu fizica!"
+  ]
+}

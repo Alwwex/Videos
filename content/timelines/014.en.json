@@ -1,0 +1,252 @@
+{
+  "lang": "en",
+  "scenes": [
+    {
+      "audioSrc": "generated/014/en/s001.mp3",
+      "durationSec": 4.337,
+      "wordStarts": [
+        0,
+        0.418,
+        0.801,
+        1.498,
+        1.683,
+        1.927,
+        2.125,
+        2.392,
+        2.821,
+        3.17
+      ]
+    },
+    {
+      "audioSrc": "generated/014/en/s002.mp3",
+      "durationSec": 3.408,
+      "wordStarts": [
+        0,
+        0.302,
+        0.441,
+        0.801,
+        1.393,
+        1.904,
+        2.31
+      ]
+    },
+    {
+      "audioSrc": "generated/014/en/s003.mp3",
+      "durationSec": 4.29,
+      "wordStarts": [
+        0,
+        0.255,
+        0.383,
+        0.743,
+        1.057,
+        2.09,
+        2.461,
+        2.728,
+        3.03
+      ]
+    },
+    {
+      "audioSrc": "generated/014/en/s004.mp3",
+      "durationSec": 4.29,
+      "wordStarts": [
+        0,
+        0.313,
+        0.453,
+        1.068,
+        1.347,
+        1.892,
+        2.403,
+        2.543,
+        2.856
+      ]
+    },
+    {
+      "audioSrc": "generated/014/en/s005.mp3",
+      "durationSec": 3.965,
+      "wordStarts": [
+        0,
+        0.232,
+        0.36,
+        0.813,
+        1.033,
+        1.347,
+        1.451,
+        2.009,
+        2.508
+      ]
+    },
+    {
+      "audioSrc": "generated/014/en/s006.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.348,
+        0.906,
+        1.358,
+        1.753,
+        2.078,
+        2.206,
+        2.345,
+        2.635
+      ]
+    },
+    {
+      "audioSrc": "generated/014/en/s007.mp3",
+      "durationSec": 4.522,
+      "wordStarts": [
+        0,
+        0.279,
+        0.639,
+        1.312,
+        1.765,
+        2.055,
+        2.183,
+        2.635,
+        2.879,
+        3.286
+      ]
+    },
+    {
+      "audioSrc": "generated/014/en/s008.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.267,
+        0.569,
+        1.126,
+        1.312,
+        1.66,
+        2.02,
+        2.218
+      ]
+    },
+    {
+      "audioSrc": "generated/014/en/s009.mp3",
+      "durationSec": 4.43,
+      "wordStarts": [
+        0,
+        0.615,
+        0.778,
+        1.173,
+        1.567,
+        1.869,
+        2.125,
+        2.763,
+        3.1,
+        3.228
+      ]
+    },
+    {
+      "audioSrc": "generated/014/en/s010.mp3",
+      "durationSec": 4.29,
+      "wordStarts": [
+        0,
+        0.476,
+        0.894,
+        1.289,
+        1.463,
+        1.602,
+        1.823,
+        2.206,
+        2.531,
+        2.868
+      ]
+    },
+    {
+      "audioSrc": "generated/014/en/s011.mp3",
+      "durationSec": 4.29,
+      "wordStarts": [
+        0,
+        0.453,
+        0.778,
+        1.428,
+        1.637,
+        1.788,
+        2.206,
+        2.833,
+        3.053
+      ]
+    },
+    {
+      "audioSrc": "generated/014/en/s012.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.209,
+        0.639,
+        0.882,
+        1.022,
+        1.382,
+        1.614,
+        2.032,
+        2.31,
+        2.438
+      ]
+    },
+    {
+      "audioSrc": "generated/014/en/s013.mp3",
+      "durationSec": 3.687,
+      "wordStarts": [
+        0,
+        0.766,
+        1.068,
+        1.3,
+        1.44,
+        1.718,
+        1.904,
+        2.241,
+        2.357,
+        2.635,
+        2.763
+      ]
+    },
+    {
+      "audioSrc": "generated/014/en/s014.mp3",
+      "durationSec": 3.687,
+      "wordStarts": [
+        0,
+        0.267,
+        0.383,
+        0.778,
+        1.138,
+        1.416,
+        1.834,
+        2.101,
+        2.368,
+        2.508
+      ]
+    },
+    {
+      "audioSrc": "generated/014/en/s015.mp3",
+      "durationSec": 2.99,
+      "wordStarts": [
+        0,
+        0.372,
+        0.546,
+        0.859,
+        1.057,
+        1.416,
+        1.544,
+        1.823,
+        1.927
+      ]
+    }
+  ],
+  "texts": [
+    "Water boils calmly, so why does milk suddenly boil over?",
+    "Milk is about 87 percent plain water.",
+    "But it also holds proteins, fat and milk sugar.",
+    "As it heats, some proteins unfold and clump together.",
+    "On the surface they form a thin, stretchy skin.",
+    "Near boiling, steam bubbles form at the hot bottom.",
+    "In plain water, bubbles reach the top and simply pop.",
+    "In milk, though, the skin traps them underneath.",
+    "Proteins and fat also coat each bubble, making it sturdy.",
+    "So bubbles pile up on each other into thick foam.",
+    "Steam keeps coming, and the foam rises in seconds.",
+    "It climbs over the rim and spills onto the stove.",
+    "Tip: turn down the heat and stir to break the skin.",
+    "And a wider pot gives bubbles more room to burst.",
+    "Follow for more, your kitchen is full of physics!"
+  ]
+}

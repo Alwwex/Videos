@@ -1,0 +1,253 @@
+{
+  "lang": "ro",
+  "scenes": [
+    {
+      "audioSrc": "generated/002/ro/s001.mp3",
+      "durationSec": 4.755,
+      "wordStarts": [
+        0,
+        0.372,
+        0.499,
+        0.952,
+        1.37,
+        1.614,
+        1.8,
+        2.032,
+        2.438,
+        2.566,
+        3.437
+      ]
+    },
+    {
+      "audioSrc": "generated/002/ro/s002.mp3",
+      "durationSec": 2.572,
+      "wordStarts": [
+        0,
+        0.279,
+        0.662,
+        0.743,
+        1.231,
+        1.358,
+        1.73,
+        1.869
+      ]
+    },
+    {
+      "audioSrc": "generated/002/ro/s003.mp3",
+      "durationSec": 5.033,
+      "wordStarts": [
+        0,
+        0.29,
+        0.441,
+        1.022,
+        1.451,
+        2.148,
+        2.717,
+        3.158,
+        3.297,
+        3.622,
+        3.75,
+        3.901,
+        4.04
+      ]
+    },
+    {
+      "audioSrc": "generated/002/ro/s004.mp3",
+      "durationSec": 3.687,
+      "wordStarts": [
+        0,
+        0.511,
+        0.906,
+        1.057,
+        1.37,
+        1.927,
+        2.218,
+        2.345,
+        2.763
+      ]
+    },
+    {
+      "audioSrc": "generated/002/ro/s005.mp3",
+      "durationSec": 3.036,
+      "wordStarts": [
+        0,
+        0.418,
+        0.743,
+        0.964,
+        1.382,
+        1.602,
+        1.718,
+        2.148
+      ]
+    },
+    {
+      "audioSrc": "generated/002/ro/s006.mp3",
+      "durationSec": 3.176,
+      "wordStarts": [
+        0,
+        0.464,
+        0.975,
+        1.358,
+        1.707,
+        2.183,
+        2.287
+      ]
+    },
+    {
+      "audioSrc": "generated/002/ro/s007.mp3",
+      "durationSec": 4.197,
+      "wordStarts": [
+        0,
+        0.453,
+        0.917,
+        1.567,
+        1.707,
+        2.136,
+        2.276,
+        2.601,
+        2.856,
+        3.216
+      ]
+    },
+    {
+      "audioSrc": "generated/002/ro/s008.mp3",
+      "durationSec": 4.383,
+      "wordStarts": [
+        0,
+        0.534,
+        0.917,
+        1.509,
+        2.067,
+        2.183,
+        2.31,
+        2.868,
+        3.344,
+        3.46
+      ]
+    },
+    {
+      "audioSrc": "generated/002/ro/s009.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.325,
+        0.615,
+        1.01,
+        1.207,
+        2.009,
+        2.171
+      ]
+    },
+    {
+      "audioSrc": "generated/002/ro/s010.mp3",
+      "durationSec": 3.222,
+      "wordStarts": [
+        0,
+        0.464,
+        0.569,
+        1.161,
+        1.44,
+        1.544,
+        1.73,
+        2.032
+      ]
+    },
+    {
+      "audioSrc": "generated/002/ro/s011.mp3",
+      "durationSec": 4.0120000000000005,
+      "wordStarts": [
+        0,
+        0.383,
+        0.546,
+        0.685,
+        0.929,
+        1.184,
+        1.265,
+        1.602,
+        2.241,
+        2.798,
+        2.937,
+        3.065
+      ]
+    },
+    {
+      "audioSrc": "generated/002/ro/s012.mp3",
+      "durationSec": 4.848,
+      "wordStarts": [
+        0,
+        0.522,
+        0.615,
+        1.091,
+        1.3,
+        2.032,
+        2.299,
+        2.403,
+        2.972,
+        3.111,
+        3.738
+      ]
+    },
+    {
+      "audioSrc": "generated/002/ro/s013.mp3",
+      "durationSec": 5.033,
+      "wordStarts": [
+        0,
+        0.488,
+        1.033,
+        1.173,
+        1.474,
+        1.649,
+        2.194,
+        2.577,
+        2.67,
+        3.123,
+        3.32,
+        3.657,
+        3.924
+      ]
+    },
+    {
+      "audioSrc": "generated/002/ro/s014.mp3",
+      "durationSec": 2.851,
+      "wordStarts": [
+        0,
+        0.441,
+        0.766,
+        0.94,
+        1.219,
+        1.649,
+        2.078
+      ]
+    },
+    {
+      "audioSrc": "generated/002/ro/s015.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.789,
+        1.173,
+        1.382,
+        1.741,
+        2.229,
+        2.392
+      ]
+    }
+  ],
+  "texts": [
+    "Plita cu inducție fierbe apa, dar ea însăși nu încălzește. Cum?",
+    "Sub sticlă se ascunde o bobină de cupru.",
+    "Prin ea circulă curent alternativ, schimbând sensul de zeci de mii de ori.",
+    "Curentul creează un câmp magnetic care se schimbă continuu.",
+    "Câmpul trece prin sticlă până în fundul oalei.",
+    "Câmpul variabil induce curent electric în metal.",
+    "Acești curenți turbionari se rotesc în cerc prin fundul oalei.",
+    "Metalul opune rezistență curentului și îi transformă energia în căldură.",
+    "Deci oala însăși este încălzitorul, nu plita.",
+    "Sticla se încălzește doar de la oala fierbinte.",
+    "Merge cel mai bine cu o oală magnetică, testeaz-o cu un magnet.",
+    "Oalele de aluminiu sau sticlă nu se încălzesc pe majoritatea plitelor.",
+    "Aproape nouăzeci la sută din energie ajunge în mâncare, la gaz doar patruzeci.",
+    "Ridică oala și plita oprește imediat câmpul.",
+    "Urmărește-ne pentru mai multă fizică din bucătărie!"
+  ]
+}

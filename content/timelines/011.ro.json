@@ -1,0 +1,260 @@
+{
+  "lang": "ro",
+  "scenes": [
+    {
+      "audioSrc": "generated/011/ro/s001.mp3",
+      "durationSec": 3.176,
+      "wordStarts": [
+        0,
+        0.197,
+        0.36,
+        0.662,
+        0.743,
+        1.103,
+        1.416,
+        1.556,
+        1.741,
+        1.858
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s002.mp3",
+      "durationSec": 3.222,
+      "wordStarts": [
+        0,
+        0.639,
+        1.335,
+        1.474,
+        2.032,
+        2.276
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s003.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.36,
+        0.453,
+        0.557,
+        1.451,
+        1.858,
+        2.09,
+        2.461,
+        2.589,
+        2.752,
+        3.053
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s004.mp3",
+      "durationSec": 3.361,
+      "wordStarts": [
+        0,
+        0.279,
+        0.871,
+        1.196,
+        1.567,
+        1.695,
+        2.125,
+        2.345,
+        2.496
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s005.mp3",
+      "durationSec": 3.408,
+      "wordStarts": [
+        0,
+        0.221,
+        0.499,
+        0.743,
+        1.324,
+        1.44,
+        1.997,
+        2.368
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s006.mp3",
+      "durationSec": 4.94,
+      "wordStarts": [
+        0,
+        0.255,
+        0.697,
+        1.335,
+        1.486,
+        2.125,
+        2.496,
+        2.902,
+        3.762
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s007.mp3",
+      "durationSec": 4.105,
+      "wordStarts": [
+        0,
+        0.395,
+        0.801,
+        0.987,
+        1.173,
+        1.463,
+        1.916,
+        2.206,
+        2.612,
+        2.937
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s008.mp3",
+      "durationSec": 2.804,
+      "wordStarts": [
+        0,
+        0.163,
+        0.464,
+        0.778,
+        0.848,
+        0.987,
+        1.335,
+        1.707,
+        1.869
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s009.mp3",
+      "durationSec": 4.569,
+      "wordStarts": [
+        0,
+        0.813,
+        1.254,
+        1.486,
+        1.625,
+        1.985,
+        2.589,
+        3.518
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s010.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.383,
+        0.824,
+        0.987,
+        1.498,
+        1.66,
+        2.09,
+        2.206,
+        2.612,
+        2.763
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s011.mp3",
+      "durationSec": 3.501,
+      "wordStarts": [
+        0,
+        0.325,
+        0.871,
+        1.01,
+        1.544,
+        1.869,
+        2.055,
+        2.252,
+        2.496,
+        2.624
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s012.mp3",
+      "durationSec": 3.64,
+      "wordStarts": [
+        0,
+        0.372,
+        0.789,
+        1.033,
+        1.393,
+        1.533,
+        1.753,
+        1.904,
+        2.171,
+        2.357,
+        2.45
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s013.mp3",
+      "durationSec": 3.036,
+      "wordStarts": [
+        0,
+        0.546,
+        0.708,
+        0.836,
+        1.138,
+        1.649,
+        1.95,
+        2.136
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s014.mp3",
+      "durationSec": 3.965,
+      "wordStarts": [
+        0,
+        0.441,
+        0.755,
+        1.115,
+        1.463,
+        1.869,
+        2.032,
+        2.392
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s015.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.836,
+        1.138,
+        1.463,
+        1.66,
+        2.113,
+        2.252
+      ]
+    },
+    {
+      "audioSrc": "generated/011/ro/s016.mp3",
+      "durationSec": 3.129,
+      "wordStarts": [
+        0,
+        0.697,
+        0.987,
+        1.115,
+        1.428,
+        1.881,
+        2.043
+      ]
+    }
+  ],
+  "texts": [
+    "De ce crapă o sticlă plină cu apă în congelator?",
+    "Majoritatea substanțelor se micșorează când îngheață.",
+    "Apa e o excepție: gheața are nevoie de mai mult loc.",
+    "Când îngheață, apa crește cu aproape nouă la sută.",
+    "De vină sunt legăturile de hidrogen dintre molecule.",
+    "În gheață, moleculele se fixează într-o rețea hexagonală aerisită.",
+    "Rețeaua aceasta are mai mult spațiu gol decât apa lichidă.",
+    "De aceea gheața e mai puțin densă și plutește.",
+    "Congelatorul răcește până la vreo minus optsprezece grade.",
+    "Sticla îngheață din exterior și formează o crustă de gheață.",
+    "Apa dinăuntru se dilată, dar nu are unde să meargă.",
+    "Gheața prinsă poate apăsa cu până la două mii de atmosfere.",
+    "Sticla nu se poate întinde, așa că crapă.",
+    "Aceeași forță sparge iarna țevile și crapă stâncile.",
+    "Sfat: lasă puțin loc sus, în sticlă.",
+    "Urmărește-ne pentru mai multă fizică din bucătărie!"
+  ]
+}

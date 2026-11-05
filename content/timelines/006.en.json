@@ -1,0 +1,251 @@
+{
+  "lang": "en",
+  "scenes": [
+    {
+      "audioSrc": "generated/006/en/s001.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.267,
+        0.383,
+        0.569,
+        0.766,
+        1.161,
+        1.463,
+        1.834,
+        2.055,
+        2.264
+      ]
+    },
+    {
+      "audioSrc": "generated/006/en/s002.mp3",
+      "durationSec": 2.897,
+      "wordStarts": [
+        0,
+        0.685,
+        0.848,
+        1.161,
+        1.405,
+        1.556,
+        1.66,
+        1.823
+      ]
+    },
+    {
+      "audioSrc": "generated/006/en/s003.mp3",
+      "durationSec": 4.197,
+      "wordStarts": [
+        0,
+        0.267,
+        0.592,
+        0.998,
+        1.358,
+        1.44,
+        1.881,
+        2.473,
+        2.81
+      ]
+    },
+    {
+      "audioSrc": "generated/006/en/s004.mp3",
+      "durationSec": 2.618,
+      "wordStarts": [
+        0,
+        0.186,
+        0.557,
+        0.662,
+        0.882,
+        1.231,
+        1.567
+      ]
+    },
+    {
+      "audioSrc": "generated/006/en/s005.mp3",
+      "durationSec": 4.337,
+      "wordStarts": [
+        0,
+        0.267,
+        0.383,
+        1.277,
+        1.521,
+        1.927,
+        2.148,
+        2.461,
+        2.682,
+        2.891
+      ]
+    },
+    {
+      "audioSrc": "generated/006/en/s006.mp3",
+      "durationSec": 3.269,
+      "wordStarts": [
+        0,
+        0.267,
+        0.418,
+        0.743,
+        0.964,
+        1.289,
+        1.625,
+        1.776,
+        1.916,
+        2.032
+      ]
+    },
+    {
+      "audioSrc": "generated/006/en/s007.mp3",
+      "durationSec": 4.29,
+      "wordStarts": [
+        0,
+        0.279,
+        0.406,
+        1.01,
+        1.115,
+        1.254,
+        1.637,
+        1.974,
+        2.519,
+        2.659
+      ]
+    },
+    {
+      "audioSrc": "generated/006/en/s008.mp3",
+      "durationSec": 4.105,
+      "wordStarts": [
+        0,
+        0.499,
+        0.836,
+        1.103,
+        1.649,
+        1.974,
+        2.125,
+        2.287
+      ]
+    },
+    {
+      "audioSrc": "generated/006/en/s009.mp3",
+      "durationSec": 3.361,
+      "wordStarts": [
+        0,
+        0.232,
+        0.557,
+        0.673,
+        0.801,
+        1.103,
+        1.428,
+        1.637,
+        1.927,
+        2.067,
+        2.218
+      ]
+    },
+    {
+      "audioSrc": "generated/006/en/s010.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.232,
+        0.546,
+        0.906,
+        1.312,
+        1.463,
+        1.8,
+        2.09,
+        2.368
+      ]
+    },
+    {
+      "audioSrc": "generated/006/en/s011.mp3",
+      "durationSec": 4.801,
+      "wordStarts": [
+        0,
+        0.244,
+        0.639,
+        1.057,
+        1.405,
+        1.579,
+        2.276,
+        2.485,
+        2.577,
+        2.914,
+        3.262
+      ]
+    },
+    {
+      "audioSrc": "generated/006/en/s012.mp3",
+      "durationSec": 3.733,
+      "wordStarts": [
+        0,
+        0.232,
+        0.348,
+        0.604,
+        0.975,
+        1.405,
+        1.776,
+        1.916,
+        2.276
+      ]
+    },
+    {
+      "audioSrc": "generated/006/en/s013.mp3",
+      "durationSec": 3.501,
+      "wordStarts": [
+        0,
+        0.418,
+        0.639,
+        0.859,
+        1.219,
+        1.533,
+        1.916,
+        2.043,
+        2.183
+      ]
+    },
+    {
+      "audioSrc": "generated/006/en/s014.mp3",
+      "durationSec": 3.594,
+      "wordStarts": [
+        0,
+        0.244,
+        0.569,
+        0.871,
+        1.091,
+        1.335,
+        1.498,
+        2.125,
+        2.31,
+        2.705
+      ]
+    },
+    {
+      "audioSrc": "generated/006/en/s015.mp3",
+      "durationSec": 2.711,
+      "wordStarts": [
+        0,
+        0.406,
+        0.557,
+        0.755,
+        1.184,
+        1.509,
+        1.602,
+        1.765
+      ]
+    }
+  ],
+  "texts": [
+    "Did you know your fridge doesn't actually make any cold?",
+    "Instead, it pumps heat out of its inside.",
+    "Its hidden pipes carry a special substance called refrigerant.",
+    "It boils at just minus twelve degrees.",
+    "As it evaporates, it soaks up heat from your food.",
+    "It's the same way sweat cools you as it dries.",
+    "Then the compressor at the bottom back squeezes the gas.",
+    "Squeezed gas gets hot, hotter than your kitchen.",
+    "The grille on the back hands that heat to the room.",
+    "The gas cools down and turns back into liquid.",
+    "A narrow tube drops its pressure, and it turns cold again.",
+    "Then the whole cycle repeats over and over again.",
+    "That's why your fridge feels warm at the back.",
+    "An open fridge won't cool your kitchen, it warms it.",
+    "Follow for more physics hiding in your kitchen!"
+  ]
+}

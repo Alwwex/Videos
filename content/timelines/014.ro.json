@@ -1,0 +1,252 @@
+{
+  "lang": "ro",
+  "scenes": [
+    {
+      "audioSrc": "generated/014/ro/s001.mp3",
+      "durationSec": 3.872,
+      "wordStarts": [
+        0,
+        0.302,
+        0.662,
+        1.289,
+        1.533,
+        1.649,
+        1.823,
+        2.252,
+        2.38,
+        2.508,
+        2.763
+      ]
+    },
+    {
+      "audioSrc": "generated/014/ro/s002.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.453,
+        0.685,
+        0.789,
+        1.022,
+        1.161,
+        1.904,
+        2.055,
+        2.403
+      ]
+    },
+    {
+      "audioSrc": "generated/014/ro/s003.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.279,
+        0.685,
+        0.824,
+        1.358,
+        1.834,
+        2.02,
+        2.415,
+        2.612
+      ]
+    },
+    {
+      "audioSrc": "generated/014/ro/s004.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.186,
+        0.813,
+        1.103,
+        1.579,
+        1.718,
+        2.125,
+        2.276,
+        2.415
+      ]
+    },
+    {
+      "audioSrc": "generated/014/ro/s005.mp3",
+      "durationSec": 3.222,
+      "wordStarts": [
+        0,
+        0.186,
+        0.755,
+        1.149,
+        1.231,
+        1.672,
+        2.171,
+        2.299
+      ]
+    },
+    {
+      "audioSrc": "generated/014/ro/s006.mp3",
+      "durationSec": 3.872,
+      "wordStarts": [
+        0,
+        0.476,
+        0.604,
+        1.068,
+        1.207,
+        1.544,
+        2.055,
+        2.45,
+        2.798,
+        2.879
+      ]
+    },
+    {
+      "audioSrc": "generated/014/ro/s007.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.186,
+        0.43,
+        0.871,
+        1.289,
+        1.625,
+        1.788,
+        1.904,
+        2.252
+      ]
+    },
+    {
+      "audioSrc": "generated/014/ro/s008.mp3",
+      "durationSec": 3.036,
+      "wordStarts": [
+        0,
+        0.197,
+        0.522,
+        0.813,
+        1.254,
+        1.37,
+        1.741
+      ]
+    },
+    {
+      "audioSrc": "generated/014/ro/s009.mp3",
+      "durationSec": 4.105,
+      "wordStarts": [
+        0,
+        0.615,
+        0.755,
+        1.231,
+        1.683,
+        2.101,
+        2.426,
+        2.566,
+        2.659,
+        2.937
+      ]
+    },
+    {
+      "audioSrc": "generated/014/ro/s010.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.499,
+        0.906,
+        1.033,
+        1.358,
+        1.544,
+        1.834,
+        2.09,
+        2.38,
+        2.752
+      ]
+    },
+    {
+      "audioSrc": "generated/014/ro/s011.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.453,
+        0.685,
+        1.01,
+        1.254,
+        1.672,
+        2.032,
+        2.136,
+        2.496
+      ]
+    },
+    {
+      "audioSrc": "generated/014/ro/s012.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.36,
+        0.65,
+        1.115,
+        1.486,
+        1.649,
+        1.8,
+        2.148,
+        2.241
+      ]
+    },
+    {
+      "audioSrc": "generated/014/ro/s013.mp3",
+      "durationSec": 4.383,
+      "wordStarts": [
+        0,
+        0.952,
+        1.126,
+        1.474,
+        1.649,
+        1.916,
+        2.02,
+        2.566,
+        2.705,
+        2.821,
+        3.17
+      ]
+    },
+    {
+      "audioSrc": "generated/014/ro/s014.mp3",
+      "durationSec": 4.105,
+      "wordStarts": [
+        0,
+        0.244,
+        0.313,
+        0.627,
+        0.813,
+        1.312,
+        1.463,
+        1.614,
+        2.218,
+        2.519,
+        2.67,
+        2.81
+      ]
+    },
+    {
+      "audioSrc": "generated/014/ro/s015.mp3",
+      "durationSec": 3.036,
+      "wordStarts": [
+        0,
+        0.743,
+        1.347,
+        1.498,
+        1.602,
+        1.927,
+        2.067
+      ]
+    }
+  ],
+  "texts": [
+    "Apa fierbe liniștit, deci de ce laptele dă în foc brusc?",
+    "Laptele este în jur de 87 la sută apă.",
+    "Dar conține și proteine, grăsimi și zahăr din lapte.",
+    "La încălzire, unele proteine se desfac și se lipesc.",
+    "La suprafață formează o pieliță subțire și elastică.",
+    "Aproape de fierbere, pe fundul fierbinte apar bule de abur.",
+    "În apa simplă, bulele urcă și se sparg imediat.",
+    "În lapte însă, pielița le prinde dedesubt.",
+    "Proteinele și grăsimea învelesc fiecare bulă și o fac rezistentă.",
+    "Așa, bulele se adună una peste alta într-o spumă groasă.",
+    "Aburul tot vine, iar spuma crește în câteva secunde.",
+    "Trece peste marginea oalei și se varsă pe aragaz.",
+    "Sfat: dă focul mai mic și amestecă, ca să spargi pielița.",
+    "Iar o oală mai largă le dă bulelor loc să se spargă.",
+    "Urmărește-ne, bucătăria ta e plină de fizică!"
+  ]
+}

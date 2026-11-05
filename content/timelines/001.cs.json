@@ -1,0 +1,222 @@
+{
+  "lang": "cs",
+  "scenes": [
+    {
+      "audioSrc": "generated/001/cs/s001.mp3",
+      "durationSec": 4.383,
+      "wordStarts": [
+        0,
+        0.325,
+        0.882,
+        1.207,
+        1.927,
+        2.183,
+        2.67,
+        3.135
+      ]
+    },
+    {
+      "audioSrc": "generated/001/cs/s002.mp3",
+      "durationSec": 3.083,
+      "wordStarts": [
+        0,
+        0.522,
+        0.615,
+        1.265,
+        1.556,
+        2.078
+      ]
+    },
+    {
+      "audioSrc": "generated/001/cs/s003.mp3",
+      "durationSec": 3.826,
+      "wordStarts": [
+        0,
+        0.453,
+        1.115,
+        1.44,
+        1.881,
+        2.508,
+        2.635
+      ]
+    },
+    {
+      "audioSrc": "generated/001/cs/s004.mp3",
+      "durationSec": 2.34,
+      "wordStarts": [
+        0,
+        0.163,
+        0.244,
+        0.499,
+        0.604,
+        1.138
+      ]
+    },
+    {
+      "audioSrc": "generated/001/cs/s005.mp3",
+      "durationSec": 3.176,
+      "wordStarts": [
+        0,
+        0.534,
+        0.778,
+        0.917,
+        1.358,
+        1.602,
+        1.869
+      ]
+    },
+    {
+      "audioSrc": "generated/001/cs/s006.mp3",
+      "durationSec": 2.665,
+      "wordStarts": [
+        0,
+        0.592,
+        0.685,
+        1.231,
+        1.486,
+        1.602
+      ]
+    },
+    {
+      "audioSrc": "generated/001/cs/s007.mp3",
+      "durationSec": 2.665,
+      "wordStarts": [
+        0,
+        0.476,
+        0.592,
+        0.813,
+        1.324,
+        1.44,
+        1.741
+      ]
+    },
+    {
+      "audioSrc": "generated/001/cs/s008.mp3",
+      "durationSec": 3.687,
+      "wordStarts": [
+        0,
+        0.406,
+        0.813,
+        1.463,
+        1.718,
+        1.95,
+        2.078,
+        2.403
+      ]
+    },
+    {
+      "audioSrc": "generated/001/cs/s009.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.534,
+        1.022,
+        1.173,
+        1.451,
+        2.009,
+        2.136
+      ]
+    },
+    {
+      "audioSrc": "generated/001/cs/s010.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.29,
+        0.418,
+        0.731,
+        1.08,
+        1.858,
+        2.206,
+        2.485
+      ]
+    },
+    {
+      "audioSrc": "generated/001/cs/s011.mp3",
+      "durationSec": 4.29,
+      "wordStarts": [
+        0,
+        0.372,
+        0.662,
+        1.057,
+        1.324,
+        2.043,
+        2.171,
+        2.345,
+        2.786
+      ]
+    },
+    {
+      "audioSrc": "generated/001/cs/s012.mp3",
+      "durationSec": 4.0120000000000005,
+      "wordStarts": [
+        0,
+        0.313,
+        0.848,
+        1.707,
+        2.02,
+        2.101,
+        2.694
+      ]
+    },
+    {
+      "audioSrc": "generated/001/cs/s013.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.464,
+        0.673,
+        1.103,
+        1.591,
+        1.916,
+        2.183,
+        2.485
+      ]
+    },
+    {
+      "audioSrc": "generated/001/cs/s014.mp3",
+      "durationSec": 3.826,
+      "wordStarts": [
+        0,
+        0.453,
+        0.673,
+        1.01,
+        1.196,
+        1.939,
+        2.159,
+        2.531
+      ]
+    },
+    {
+      "audioSrc": "generated/001/cs/s015.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.383,
+        0.824,
+        0.952,
+        1.358,
+        1.521,
+        1.753,
+        2.09
+      ]
+    }
+  ],
+  "texts": [
+    "Proč mikrovlnka ohřeje jídlo, ale talíř zůstane studený?",
+    "Uvnitř je magnetron, malý vysílač vln.",
+    "Vysílá mikrovlny, které kmitají miliardkrát za sekundu.",
+    "A v jídle je spousta vody.",
+    "Molekuly vody se chovají jako malé magnety.",
+    "Mikrovlny je otáčejí sem a tam.",
+    "Molekuly do sebe narážejí a třou se.",
+    "Tření vyrábí teplo, jako když si mneš ruce.",
+    "Mikrovlny proniknou jen pár centimetrů do jídla.",
+    "Dál se teplo šíří vedením, proto jídlo mícháme.",
+    "Talíř skoro žádnou vodu nemá, a tak zůstane chladnější.",
+    "Kov mikrovlny odráží, proto v mikrovlnce jiskří.",
+    "Dvířka mají kovovou mřížku, která vlny drží uvnitř.",
+    "Díry jsou menší než vlna, ale světlo projde.",
+    "Sleduj nás a fyzika tě už nikdy nepřekvapí!"
+  ]
+}

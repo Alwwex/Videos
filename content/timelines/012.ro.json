@@ -1,0 +1,260 @@
+{
+  "lang": "ro",
+  "scenes": [
+    {
+      "audioSrc": "generated/012/ro/s001.mp3",
+      "durationSec": 3.64,
+      "wordStarts": [
+        0,
+        0.209,
+        0.348,
+        0.813,
+        1.115,
+        1.498,
+        1.776,
+        1.939,
+        2.159,
+        2.415
+      ]
+    },
+    {
+      "audioSrc": "generated/012/ro/s002.mp3",
+      "durationSec": 3.733,
+      "wordStarts": [
+        0,
+        0.383,
+        0.801,
+        1.289,
+        1.405,
+        1.672,
+        1.997,
+        2.31,
+        2.624
+      ]
+    },
+    {
+      "audioSrc": "generated/012/ro/s003.mp3",
+      "durationSec": 4.848,
+      "wordStarts": [
+        0,
+        0.29,
+        0.418,
+        1.254,
+        1.869,
+        2.02,
+        2.508,
+        3.228,
+        3.425,
+        3.878,
+        4.017
+      ]
+    },
+    {
+      "audioSrc": "generated/012/ro/s004.mp3",
+      "durationSec": 4.708,
+      "wordStarts": [
+        0,
+        0.267,
+        0.604,
+        1.033,
+        1.451,
+        1.614,
+        2.043,
+        2.229,
+        2.438,
+        2.554,
+        3.286
+      ]
+    },
+    {
+      "audioSrc": "generated/012/ro/s005.mp3",
+      "durationSec": 3.826,
+      "wordStarts": [
+        0,
+        0.476,
+        0.65,
+        1.103,
+        1.219,
+        1.718,
+        1.846,
+        2.287,
+        2.473,
+        2.647
+      ]
+    },
+    {
+      "audioSrc": "generated/012/ro/s006.mp3",
+      "durationSec": 4.058,
+      "wordStarts": [
+        0,
+        0.708,
+        0.975,
+        1.463,
+        2.067,
+        2.148,
+        2.392,
+        2.67,
+        2.914,
+        3.03
+      ]
+    },
+    {
+      "audioSrc": "generated/012/ro/s007.mp3",
+      "durationSec": 3.594,
+      "wordStarts": [
+        0,
+        0.708,
+        1.115,
+        1.231,
+        1.788,
+        1.985,
+        2.09,
+        2.461,
+        2.612
+      ]
+    },
+    {
+      "audioSrc": "generated/012/ro/s008.mp3",
+      "durationSec": 3.733,
+      "wordStarts": [
+        0,
+        0.325,
+        0.685,
+        0.964,
+        1.335,
+        1.765,
+        1.997,
+        2.09,
+        2.171,
+        2.728,
+        2.891
+      ]
+    },
+    {
+      "audioSrc": "generated/012/ro/s009.mp3",
+      "durationSec": 3.779,
+      "wordStarts": [
+        0,
+        0.244,
+        0.778,
+        0.998,
+        1.335,
+        1.463,
+        1.904,
+        2.032,
+        2.229,
+        2.276,
+        2.485,
+        2.705
+      ]
+    },
+    {
+      "audioSrc": "generated/012/ro/s010.mp3",
+      "durationSec": 4.708,
+      "wordStarts": [
+        0,
+        0.313,
+        0.731,
+        1.219,
+        1.823,
+        2.159,
+        2.519,
+        2.717,
+        3.042,
+        3.379,
+        3.692
+      ]
+    },
+    {
+      "audioSrc": "generated/012/ro/s011.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.372,
+        0.662,
+        1.01,
+        1.625,
+        1.927,
+        2.078,
+        2.334
+      ]
+    },
+    {
+      "audioSrc": "generated/012/ro/s012.mp3",
+      "durationSec": 3.919,
+      "wordStarts": [
+        0,
+        0.441,
+        0.592,
+        0.848,
+        1.231,
+        1.637,
+        2.043,
+        2.461,
+        2.647,
+        3.03
+      ]
+    },
+    {
+      "audioSrc": "generated/012/ro/s013.mp3",
+      "durationSec": 3.594,
+      "wordStarts": [
+        0,
+        0.313,
+        0.592,
+        0.987,
+        1.289,
+        1.416,
+        1.811,
+        2.426,
+        2.589,
+        2.752
+      ]
+    },
+    {
+      "audioSrc": "generated/012/ro/s014.mp3",
+      "durationSec": 4.476,
+      "wordStarts": [
+        0,
+        0.453,
+        1.022,
+        1.579,
+        2.241,
+        2.531,
+        2.949,
+        3.135
+      ]
+    },
+    {
+      "audioSrc": "generated/012/ro/s015.mp3",
+      "durationSec": 3.547,
+      "wordStarts": [
+        0,
+        0.731,
+        1.022,
+        1.149,
+        1.474,
+        2.02,
+        2.229,
+        2.821
+      ]
+    }
+  ],
+  "texts": [
+    "De ce topește sarea gheața, chiar și sub zero grade?",
+    "Gheața înseamnă molecule de apă prinse într-o rețea rigidă.",
+    "Dar la suprafață, moleculele se desprind mereu și îngheață la loc.",
+    "La zero grade, ambele au loc la fel de repede: echilibru.",
+    "Sarea se dizolvă în pelicula de apă de pe gheață.",
+    "Particulele ei încurcă moleculele de apă care vor să revină.",
+    "Moleculele pleacă în continuare, dar se întorc mai puține.",
+    "Așa că apa sărată îngheață abia la o temperatură mai mică.",
+    "Dar topirea are nevoie de căldură, pe care o ia din jur.",
+    "Așa că gheața sărată poate deveni mai rece decât cea simplă.",
+    "Așa poți face înghețată chiar și fără congelator.",
+    "Gheața cu sare dintr-un bol ajunge aproape la minus 20.",
+    "Sub minus 10, sarea pe drum aproape nu mai ajută.",
+    "Atunci drumarii împrăștie nisip sau săruri mai puternice.",
+    "Urmărește-ne pentru mai multă fizică din bucătăria ta!"
+  ]
+}

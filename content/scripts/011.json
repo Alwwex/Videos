@@ -1,0 +1,1090 @@
+{
+  "id": 11,
+  "title": {
+    "cs": "Proč láhev s vodou v mrazáku praskne",
+    "en": "Why a water bottle bursts in the freezer",
+    "ro": "De ce crapă sticla cu apă în congelator"
+  },
+  "description": {
+    "cs": "Voda je podivín: když zmrzne, zvětší se. Zjisti, proč led roztrhne sklo, trubky i skály. 🧊",
+    "en": "Water is a weirdo: it grows when it freezes. Find out why ice can crack glass, pipes and even rocks. 🧊",
+    "ro": "Apa e ciudată: crește când îngheață. Află de ce gheața poate crăpa sticla, țevile și chiar stâncile. 🧊"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "led",
+    "mrazak",
+    "science",
+    "vzdelavani",
+    "kuchyne"
+  ],
+  "scenes": [
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Proč ti plná láhev vody v mrazáku *praskne*?",
+        "en": "Why does a full water bottle *burst* in the freezer?",
+        "ro": "De ce *crapă* o sticlă plină cu apă în congelator?"
+      },
+      "props": [
+        {
+          "id": "fr",
+          "type": "fridge",
+          "position": [
+            -0.5,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bottle",
+          "type": "cup",
+          "position": [
+            0.7,
+            0,
+            0.5
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": "#8fd3f4",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "fr",
+        "distance": 6,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "bottle",
+          "emoji": "🥤",
+          "text": {
+            "cs": "Láhev vody",
+            "en": "Water bottle",
+            "ro": "Sticlă cu apă"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Většina látek při tuhnutí *zmenší* svůj objem.",
+        "en": "Most substances *shrink* when they freeze.",
+        "ro": "Majoritatea substanțelor se *micșorează* când îngheață."
+      },
+      "props": [
+        {
+          "id": "a1",
+          "type": "atom",
+          "position": [
+            -0.5,
+            1.5,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            -0.25,
+            1.5,
+            0
+          ],
+          "glow": false
+        },
+        {
+          "id": "a2",
+          "type": "atom",
+          "position": [
+            0.5,
+            1.5,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0.25,
+            1.5,
+            0
+          ],
+          "glow": false
+        },
+        {
+          "id": "a3",
+          "type": "atom",
+          "position": [
+            0,
+            2.3,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0,
+            1.95,
+            0
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "a1",
+        "distance": 4,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Voda je výjimka: led potřebuje *víc místa*.",
+        "en": "Water is the odd one: ice needs *more space*.",
+        "ro": "Apa e o excepție: gheața are nevoie de *mai mult loc*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ice",
+          "type": "iceCube",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 20,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "up",
+          "type": "arrowUp",
+          "position": [
+            0,
+            1.9,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ice",
+        "distance": 3,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "ice",
+          "emoji": "🧊",
+          "text": {
+            "cs": "Led",
+            "en": "Ice",
+            "ro": "Gheață"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Když voda zmrzne, zvětší se asi o *devět procent*.",
+        "en": "Freezing water grows by about *nine percent*.",
+        "ro": "Când îngheață, apa crește cu aproape *nouă la sută*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            -0.45,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#8fd3f4",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ice",
+          "type": "iceCube",
+          "position": [
+            0.45,
+            0.85,
+            0
+          ],
+          "scale": 1.35,
+          "rotationY": 15,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cup",
+        "distance": 3.5,
+        "angle": "frontLeft",
+        "move": "orbitLeft"
+      },
+      "labels": [],
+      "counter": {
+        "from": 0,
+        "to": 9,
+        "decimals": 0,
+        "unit": {
+          "cs": " %",
+          "en": " %",
+          "ro": " %"
+        },
+        "label": {
+          "cs": "nárůst objemu",
+          "en": "volume increase",
+          "ro": "creșterea volumului"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Za to můžou *vodíkové vazby* mezi molekulami.",
+        "en": "It comes down to *hydrogen bonds* between molecules.",
+        "ro": "De vină sunt *legăturile de hidrogen* dintre molecule."
+      },
+      "props": [
+        {
+          "id": "m1",
+          "type": "atom",
+          "position": [
+            -0.6,
+            1.6,
+            0
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "m2",
+          "type": "atom",
+          "position": [
+            0.6,
+            1.6,
+            0
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "m1",
+          "to": "m2",
+          "kind": "electrons"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "m1",
+        "distance": 4,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "m2",
+          "emoji": "💧",
+          "text": {
+            "cs": "Molekula vody",
+            "en": "Water molecule",
+            "ro": "Moleculă de apă"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "V ledu se molekuly zamknou do řídké *šestiúhelníkové* mřížky.",
+        "en": "In ice, molecules lock into an open *hexagonal* lattice.",
+        "ro": "În gheață, moleculele se fixează într-o rețea *hexagonală* aerisită."
+      },
+      "props": [
+        {
+          "id": "flake",
+          "type": "snowflake",
+          "position": [
+            0,
+            1.6,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "flake",
+        "distance": 3.5,
+        "angle": "low",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "flake",
+          "emoji": "❄️",
+          "text": {
+            "cs": "Šestiúhelník",
+            "en": "Hexagon",
+            "ro": "Hexagon"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Taková mřížka má víc *prázdného místa* než kapalná voda.",
+        "en": "That lattice holds more *empty space* than liquid water.",
+        "ro": "Rețeaua aceasta are mai mult *spațiu gol* decât apa lichidă."
+      },
+      "props": [
+        {
+          "id": "a1",
+          "type": "atom",
+          "position": [
+            -0.6,
+            1.2,
+            0
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a2",
+          "type": "atom",
+          "position": [
+            0.6,
+            1.2,
+            0
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a3",
+          "type": "atom",
+          "position": [
+            -0.6,
+            2.3,
+            0
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a4",
+          "type": "atom",
+          "position": [
+            0.6,
+            2.3,
+            0
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "a1",
+        "distance": 4.5,
+        "angle": "frontLeft",
+        "move": "rise"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Proto je led řidší a na vodě *plave*.",
+        "en": "So ice is less dense and *floats* on water.",
+        "ro": "De aceea gheața e mai puțin densă și *plutește*."
+      },
+      "props": [
+        {
+          "id": "pool",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ice",
+          "type": "iceCube",
+          "position": [
+            0,
+            0.15,
+            0.2
+          ],
+          "scale": 1.2,
+          "rotationY": 25,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ice",
+        "distance": 3.5,
+        "angle": "side",
+        "move": "orbitLeft"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Mrazák chladí zhruba na *minus osmnáct* stupňů.",
+        "en": "A freezer cools down to about *minus eighteen* degrees.",
+        "ro": "Congelatorul răcește până la vreo *minus optsprezece* grade."
+      },
+      "props": [
+        {
+          "id": "fr",
+          "type": "fridge",
+          "position": [
+            -0.5,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            0.7,
+            0,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "fr",
+        "distance": 5.5,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": {
+        "from": 20,
+        "to": -18,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "teplota v mrazáku",
+          "en": "freezer temperature",
+          "ro": "temperatura din congelator"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Láhev zamrzá zvenku a vytvoří *ledovou slupku*.",
+        "en": "The bottle freezes from the outside, forming an *ice shell*.",
+        "ro": "Sticla îngheață din exterior și formează o *crustă de gheață*."
+      },
+      "props": [
+        {
+          "id": "fr",
+          "type": "fridge",
+          "position": [
+            -0.6,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "bottle",
+          "type": "cup",
+          "position": [
+            0.6,
+            0,
+            0.4
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": "#bfe6f7",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "fr",
+          "to": "bottle",
+          "kind": "cold"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "bottle",
+        "distance": 5,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "bottle",
+          "emoji": "🧊",
+          "text": {
+            "cs": "Ledová slupka",
+            "en": "Ice shell",
+            "ro": "Crustă de gheață"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Voda uvnitř se roztahuje, ale nemá *kam* utéct.",
+        "en": "The water inside expands but has *nowhere* to go.",
+        "ro": "Apa dinăuntru se dilată, dar nu are *unde* să meargă."
+      },
+      "props": [
+        {
+          "id": "bottle",
+          "type": "cup",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": "#bfe6f7",
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ar",
+          "type": "arrow",
+          "position": [
+            0.75,
+            0.4,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "al",
+          "type": "arrow",
+          "position": [
+            -0.75,
+            0.4,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 180,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bottle",
+        "distance": 3.5,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Uvězněný led vyvine tlak až dva tisíce *atmosfér*.",
+        "en": "Trapped ice can push with up to two thousand *atmospheres*.",
+        "ro": "Gheața prinsă poate apăsa cu până la două mii de *atmosfere*."
+      },
+      "props": [
+        {
+          "id": "bottle",
+          "type": "cup",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": "#bfe6f7",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ar",
+          "type": "arrow",
+          "position": [
+            0.75,
+            0.4,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": "#ff6644",
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "al",
+          "type": "arrow",
+          "position": [
+            -0.75,
+            0.4,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 180,
+          "color": "#ff6644",
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bottle",
+        "distance": 3.5,
+        "angle": "low",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "bottle",
+          "emoji": "💥",
+          "text": {
+            "cs": "Obří tlak",
+            "en": "Huge pressure",
+            "ro": "Presiune uriașă"
+          }
+        }
+      ],
+      "counter": {
+        "from": 0,
+        "to": 2000,
+        "decimals": 0,
+        "unit": {
+          "cs": " atm",
+          "en": " atm",
+          "ro": " atm"
+        },
+        "label": {
+          "cs": "tlak ledu",
+          "en": "ice pressure",
+          "ro": "presiunea gheții"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Sklo se nedokáže *natáhnout*, a tak praskne.",
+        "en": "Glass can't *stretch*, so it cracks.",
+        "ro": "Sticla nu se poate *întinde*, așa că crapă."
+      },
+      "props": [
+        {
+          "id": "bottle",
+          "type": "cup",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": "#bfe6f7",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "crack",
+          "type": "lightning",
+          "position": [
+            0.4,
+            0.6,
+            0.4
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bottle",
+        "distance": 3,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "crack",
+          "emoji": "⚡",
+          "text": {
+            "cs": "Prask!",
+            "en": "Crack!",
+            "ro": "Crac!"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "outdoor",
+      "narration": {
+        "cs": "Stejná síla v zimě trhá *trubky* i skály.",
+        "en": "The same force bursts *pipes* and splits rocks in winter.",
+        "ro": "Aceeași forță sparge iarna *țevile* și crapă stâncile."
+      },
+      "props": [
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            -1,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 15,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mtn",
+          "type": "mountain",
+          "position": [
+            1.4,
+            0,
+            -2
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "flake",
+          "type": "snowflake",
+          "position": [
+            0.3,
+            3.2,
+            0.5
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "house",
+        "distance": 11,
+        "angle": "frontRight",
+        "move": "rise"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Tip: nech v láhvi nahoře trochu *místa*.",
+        "en": "Tip: leave some *room* at the top of the bottle.",
+        "ro": "Sfat: lasă puțin *loc* sus, în sticlă."
+      },
+      "props": [
+        {
+          "id": "fr",
+          "type": "fridge",
+          "position": [
+            -0.6,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bottle",
+          "type": "cup",
+          "position": [
+            0.6,
+            0,
+            0.4
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": "#8fd3f4",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "up",
+          "type": "arrowUp",
+          "position": [
+            0.6,
+            1.1,
+            0.4
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bottle",
+        "distance": 4.5,
+        "angle": "frontLeft",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "up",
+          "emoji": "✅",
+          "text": {
+            "cs": "Volné místo",
+            "en": "Free space",
+            "ro": "Spațiu liber"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Sleduj nás pro další *fyziku* z kuchyně!",
+        "en": "Follow us for more *physics* from your kitchen!",
+        "ro": "Urmărește-ne pentru mai multă *fizică* din bucătărie!"
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "idea",
+          "type": "bulb",
+          "position": [
+            0,
+            2.1,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "kid",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    }
+  ]
+}

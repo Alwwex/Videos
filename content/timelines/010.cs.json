@@ -1,0 +1,243 @@
+{
+  "lang": "cs",
+  "scenes": [
+    {
+      "audioSrc": "generated/010/cs/s001.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.325,
+        0.755,
+        1.138,
+        1.393,
+        1.544,
+        1.881,
+        2.078
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s002.mp3",
+      "durationSec": 3.176,
+      "wordStarts": [
+        0,
+        0.197,
+        0.383,
+        0.511,
+        1.057,
+        1.521,
+        1.904
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s003.mp3",
+      "durationSec": 3.687,
+      "wordStarts": [
+        0,
+        0.313,
+        0.418,
+        1.254,
+        1.753,
+        1.881,
+        2.299
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s004.mp3",
+      "durationSec": 3.129,
+      "wordStarts": [
+        0,
+        0.441,
+        0.987,
+        1.498,
+        1.637,
+        1.985
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s005.mp3",
+      "durationSec": 3.315,
+      "wordStarts": [
+        0,
+        0.406,
+        0.848,
+        1.103,
+        1.707,
+        2.067,
+        2.206
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s006.mp3",
+      "durationSec": 3.408,
+      "wordStarts": [
+        0,
+        0.476,
+        0.917,
+        1.057,
+        1.451,
+        1.718,
+        2.206
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s007.mp3",
+      "durationSec": 2.665,
+      "wordStarts": [
+        0,
+        0.476,
+        0.871,
+        1.196,
+        1.451,
+        1.556
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s008.mp3",
+      "durationSec": 3.454,
+      "wordStarts": [
+        0,
+        0.418,
+        0.662,
+        0.755,
+        1.567,
+        1.683,
+        1.858,
+        2.252
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s009.mp3",
+      "durationSec": 2.897,
+      "wordStarts": [
+        0,
+        0.488,
+        0.894,
+        1.242,
+        1.312,
+        1.718
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s010.mp3",
+      "durationSec": 4.522,
+      "wordStarts": [
+        0,
+        0.186,
+        0.569,
+        0.882,
+        1.358,
+        1.765,
+        2.055,
+        2.171,
+        2.844,
+        3.088
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s011.mp3",
+      "durationSec": 4.848,
+      "wordStarts": [
+        0,
+        0.221,
+        0.418,
+        0.836,
+        1.428,
+        1.95,
+        2.159,
+        2.821,
+        2.984,
+        3.402
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s012.mp3",
+      "durationSec": 4.0120000000000005,
+      "wordStarts": [
+        0,
+        0.348,
+        0.604,
+        0.72,
+        0.859,
+        1.393,
+        1.649,
+        2.635
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s013.mp3",
+      "durationSec": 3.64,
+      "wordStarts": [
+        0,
+        0.221,
+        0.778,
+        1.161,
+        1.277,
+        1.625,
+        1.974,
+        2.206
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s014.mp3",
+      "durationSec": 3.361,
+      "wordStarts": [
+        0,
+        0.267,
+        0.546,
+        0.894,
+        1.486,
+        1.904,
+        1.974
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s015.mp3",
+      "durationSec": 4.662,
+      "wordStarts": [
+        0,
+        0.29,
+        0.557,
+        0.685,
+        1.184,
+        1.927,
+        2.345,
+        2.485,
+        2.926,
+        3.088,
+        3.495
+      ]
+    },
+    {
+      "audioSrc": "generated/010/cs/s016.mp3",
+      "durationSec": 3.176,
+      "wordStarts": [
+        0,
+        0.406,
+        0.882,
+        0.987,
+        1.335,
+        1.451,
+        1.916,
+        2.194
+      ]
+    }
+  ],
+  "texts": [
+    "Jak konvice uvaří vodu za pouhé tři minuty?",
+    "Ve dně se skrývá kovové topné těleso.",
+    "Když ji zapneš, proženou se tělesem elektrony.",
+    "Cestou neustále narážejí do atomů kovu.",
+    "Každá srážka mění elektrickou energii na teplo.",
+    "Běžná konvice má příkon kolem 2000 wattů.",
+    "Těleso nejdřív ohřeje vodu u dna.",
+    "Teplá voda je řidší, a tak stoupá nahoru.",
+    "Studená klesá dolů a vzniká proudění.",
+    "To hučení dělají bublinky páry, které ve studenější vodě zanikají.",
+    "Při 100 stupních bubliny vyplavou až nahoru a konvice ztichne.",
+    "Jeden litr na to potřebuje asi 335 kilojoulů.",
+    "Při 2000 wattech to zabere zhruba tři minuty.",
+    "Pak pára ohřeje bimetalový pásek u vypínače.",
+    "Dva kovy se roztahují různě, pásek se ohne a cvak, vypnuto.",
+    "Sleduj nás, v kuchyni se skrývá víc fyziky!"
+  ]
+}

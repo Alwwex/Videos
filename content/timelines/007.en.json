@@ -1,0 +1,260 @@
+{
+  "lang": "en",
+  "scenes": [
+    {
+      "audioSrc": "generated/007/en/s001.mp3",
+      "durationSec": 2.804,
+      "wordStarts": [
+        0,
+        0.221,
+        0.406,
+        0.499,
+        0.929,
+        1.196,
+        1.428,
+        1.695,
+        1.881
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s002.mp3",
+      "durationSec": 2.154,
+      "wordStarts": [
+        0,
+        0.244,
+        0.499,
+        0.778,
+        0.964,
+        1.161,
+        1.289
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s003.mp3",
+      "durationSec": 2.479,
+      "wordStarts": [
+        0,
+        0.174,
+        0.546,
+        0.778,
+        1.115,
+        1.219,
+        1.324,
+        1.614
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s004.mp3",
+      "durationSec": 4.29,
+      "wordStarts": [
+        0,
+        0.546,
+        1.533,
+        1.95,
+        2.485,
+        2.786,
+        3.007,
+        3.216,
+        3.344
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s005.mp3",
+      "durationSec": 5.126,
+      "wordStarts": [
+        0,
+        0.685,
+        1.834,
+        2.218,
+        2.508,
+        2.961,
+        3.123,
+        3.564,
+        3.796
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s006.mp3",
+      "durationSec": 6.519,
+      "wordStarts": [
+        0,
+        0.743,
+        2.067,
+        2.473,
+        2.786,
+        3.17,
+        3.541,
+        3.796,
+        4.481
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s007.mp3",
+      "durationSec": 3.687,
+      "wordStarts": [
+        0,
+        0.209,
+        0.685,
+        0.906,
+        1.149,
+        1.765,
+        2.02,
+        2.392,
+        2.531
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s008.mp3",
+      "durationSec": 3.687,
+      "wordStarts": [
+        0,
+        0.464,
+        0.673,
+        0.824,
+        0.917,
+        1.579,
+        1.997,
+        2.241,
+        2.473,
+        2.601
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s009.mp3",
+      "durationSec": 3.501,
+      "wordStarts": [
+        0,
+        0.244,
+        0.836,
+        1.103,
+        1.277,
+        1.869,
+        2.043,
+        2.206
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s010.mp3",
+      "durationSec": 4.522,
+      "wordStarts": [
+        0,
+        0.244,
+        1.022,
+        1.498,
+        1.614,
+        2.38,
+        2.635,
+        3.111,
+        3.39
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s011.mp3",
+      "durationSec": 3.176,
+      "wordStarts": [
+        0,
+        0.372,
+        0.58,
+        0.72,
+        1.068,
+        1.231,
+        1.637,
+        1.834,
+        1.95
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s012.mp3",
+      "durationSec": 3.594,
+      "wordStarts": [
+        0,
+        0.221,
+        0.789,
+        1.312,
+        1.602,
+        1.904,
+        2.148,
+        2.276
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s013.mp3",
+      "durationSec": 4.0120000000000005,
+      "wordStarts": [
+        0,
+        0.209,
+        0.441,
+        0.859,
+        1.08,
+        1.219,
+        2.043,
+        2.322,
+        2.647,
+        2.856
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s014.mp3",
+      "durationSec": 3.594,
+      "wordStarts": [
+        0,
+        0.279,
+        0.372,
+        0.615,
+        1.057,
+        1.347,
+        1.579,
+        1.962,
+        2.148,
+        2.426
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s015.mp3",
+      "durationSec": 4.151,
+      "wordStarts": [
+        0,
+        0.209,
+        0.499,
+        1.022,
+        1.858,
+        2.183,
+        2.717,
+        3.03
+      ]
+    },
+    {
+      "audioSrc": "generated/007/en/s016.mp3",
+      "durationSec": 3.036,
+      "wordStarts": [
+        0,
+        0.464,
+        0.615,
+        0.743,
+        1.045,
+        1.3,
+        1.741,
+        1.881,
+        2.055
+      ]
+    }
+  ],
+  "texts": [
+    "How does a thermos keep tea hot for hours?",
+    "Heat always flows from hot to cold.",
+    "A normal mug loses it in three ways.",
+    "First, conduction: jiggling molecules pass heat into the wall.",
+    "Second, convection: warm air rises and carries heat away.",
+    "Third, radiation: every warm thing gives off infrared light.",
+    "A thermos has two walls, one inside the other.",
+    "Between them is a vacuum, almost no air at all.",
+    "No molecules means no conduction and no convection.",
+    "But radiation crosses a vacuum, like sunlight through space.",
+    "That's why the walls are silvered like a mirror.",
+    "The infrared bounces right back into the tea.",
+    "The weak spot is the stopper, where most heat escapes.",
+    "So a good thermos keeps tea warm for six hours.",
+    "It works backwards too: iced lemonade stays cold.",
+    "Follow us to find more physics in your kitchen!"
+  ]
+}

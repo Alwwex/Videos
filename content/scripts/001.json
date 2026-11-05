@@ -1,0 +1,1050 @@
+{
+  "id": 1,
+  "title": {
+    "cs": "Proč mikrovlnka ohřívá jídlo",
+    "en": "Why a microwave heats food",
+    "ro": "De ce încălzește cuptorul cu microunde"
+  },
+  "description": {
+    "cs": "Jak mikrovlny rozkmitají vodu v jídle a proč talíř zůstane chladnější. 🔬",
+    "en": "How microwaves shake the water in your food, and why the plate stays cooler. 🔬",
+    "ro": "Cum microundele agită apa din mâncare și de ce farfuria rămâne mai rece. 🔬"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "mikrovlnka",
+    "science",
+    "vzdelavani"
+  ],
+  "scenes": [
+    {
+      "environment": "indoor",
+      "flows": [],
+      "waves": [],
+      "labels": [
+        {
+          "prop": "mw",
+          "emoji": "📦",
+          "text": {
+            "cs": "Mikrovlnka",
+            "en": "Microwave",
+            "ro": "Cuptor cu microunde"
+          }
+        }
+      ],
+      "counter": null,
+      "narration": {
+        "cs": "Proč mikrovlnka ohřeje jídlo, ale talíř zůstane *studený*?",
+        "en": "Why does a microwave heat food but leave the plate *cold*?",
+        "ro": "De ce cuptorul cu microunde încălzește mâncarea, dar farfuria rămâne *rece*?"
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mw",
+          "type": "microwave",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0.75,
+            0.85,
+            0.25
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "camera": {
+        "focus": "mw",
+        "distance": 5,
+        "angle": "front",
+        "move": "dollyIn"
+      }
+    },
+    {
+      "environment": "indoor",
+      "flows": [],
+      "waves": [
+        {
+          "from": "mw",
+          "kind": "microwaves"
+        }
+      ],
+      "labels": [
+        {
+          "prop": "mw",
+          "emoji": "📡",
+          "text": {
+            "cs": "Magnetron",
+            "en": "Magnetron",
+            "ro": "Magnetron"
+          }
+        }
+      ],
+      "counter": null,
+      "narration": {
+        "cs": "Uvnitř je *magnetron*, malý vysílač vln.",
+        "en": "Inside sits a *magnetron*, a tiny wave transmitter.",
+        "ro": "Înăuntru se află un *magnetron*, un mic emițător de unde."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mw",
+          "type": "microwave",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "camera": {
+        "focus": "mw",
+        "distance": 4,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      }
+    },
+    {
+      "environment": "indoor",
+      "flows": [],
+      "waves": [
+        {
+          "from": "mw",
+          "kind": "microwaves"
+        }
+      ],
+      "labels": [],
+      "counter": {
+        "from": 0,
+        "to": 2.45,
+        "decimals": 2,
+        "unit": {
+          "cs": " GHz",
+          "en": " GHz",
+          "ro": " GHz"
+        },
+        "label": {
+          "cs": "frekvence mikrovln",
+          "en": "microwave frequency",
+          "ro": "frecvența microundelor"
+        }
+      },
+      "narration": {
+        "cs": "Vysílá *mikrovlny*, které kmitají miliardkrát za sekundu.",
+        "en": "It sends out *microwaves* that wiggle billions of times per second.",
+        "ro": "Emite *microunde* care vibrează de miliarde de ori pe secundă."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mw",
+          "type": "microwave",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "camera": {
+        "focus": "mw",
+        "distance": 4.5,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      }
+    },
+    {
+      "environment": "indoor",
+      "flows": [],
+      "waves": [],
+      "labels": [
+        {
+          "prop": "cup",
+          "emoji": "💧",
+          "text": {
+            "cs": "Voda",
+            "en": "Water",
+            "ro": "Apă"
+          }
+        }
+      ],
+      "counter": null,
+      "narration": {
+        "cs": "A v jídle je spousta *vody*.",
+        "en": "And food is full of *water*.",
+        "ro": "Iar mâncarea este plină de *apă*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "camera": {
+        "focus": "cup",
+        "distance": 3,
+        "angle": "top",
+        "move": "dollyIn"
+      }
+    },
+    {
+      "environment": "indoor",
+      "flows": [],
+      "waves": [],
+      "labels": [
+        {
+          "prop": "h2o",
+          "emoji": "💧",
+          "text": {
+            "cs": "Molekula vody",
+            "en": "Water molecule",
+            "ro": "Moleculă de apă"
+          }
+        },
+        {
+          "prop": "mag",
+          "emoji": "🧲",
+          "text": {
+            "cs": "Magnet",
+            "en": "Magnet",
+            "ro": "Magnet"
+          }
+        }
+      ],
+      "counter": null,
+      "narration": {
+        "cs": "Molekuly vody se chovají jako malé *magnety*.",
+        "en": "Water molecules behave like tiny *magnets*.",
+        "ro": "Moleculele de apă se comportă ca niște *magneți* mici."
+      },
+      "props": [
+        {
+          "id": "h2o",
+          "type": "atom",
+          "position": [
+            -0.9,
+            1.6,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mag",
+          "type": "magnet",
+          "position": [
+            1.1,
+            0.4,
+            0
+          ],
+          "scale": 1,
+          "rotationY": -20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "camera": {
+        "focus": "h2o",
+        "distance": 5,
+        "angle": "front",
+        "move": "orbitLeft"
+      }
+    },
+    {
+      "environment": "indoor",
+      "flows": [
+        {
+          "from": "mw",
+          "to": "h2o",
+          "kind": "microwaves"
+        }
+      ],
+      "waves": [],
+      "labels": [],
+      "counter": null,
+      "narration": {
+        "cs": "Mikrovlny je *otáčejí* sem a tam.",
+        "en": "Microwaves *flip* them back and forth.",
+        "ro": "Microundele le *rotesc* încoace și încolo."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mw",
+          "type": "microwave",
+          "position": [
+            -0.6,
+            0.85,
+            -0.2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "h2o",
+          "type": "atom",
+          "position": [
+            0.9,
+            1.9,
+            0.5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "camera": {
+        "focus": "h2o",
+        "distance": 4.5,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      }
+    },
+    {
+      "environment": "indoor",
+      "flows": [],
+      "waves": [],
+      "labels": [],
+      "counter": null,
+      "narration": {
+        "cs": "Molekuly do sebe *narážejí* a třou se.",
+        "en": "The molecules *bump* and rub against each other.",
+        "ro": "Moleculele se *ciocnesc* și se freacă între ele."
+      },
+      "props": [
+        {
+          "id": "a1",
+          "type": "atom",
+          "position": [
+            -0.7,
+            1.6,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a2",
+          "type": "atom",
+          "position": [
+            0.7,
+            1.5,
+            0.2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a3",
+          "type": "atom",
+          "position": [
+            0,
+            2.6,
+            -0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "camera": {
+        "focus": "a1",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "orbitRight"
+      }
+    },
+    {
+      "environment": "indoor",
+      "flows": [],
+      "waves": [
+        {
+          "from": "kid",
+          "kind": "heat"
+        }
+      ],
+      "labels": [
+        {
+          "prop": "kid",
+          "emoji": "🔥",
+          "text": {
+            "cs": "Teplo z tření",
+            "en": "Heat from friction",
+            "ro": "Căldură din frecare"
+          }
+        }
+      ],
+      "counter": null,
+      "narration": {
+        "cs": "Tření vyrábí *teplo*, jako když si mneš ruce.",
+        "en": "Friction makes *heat*, like rubbing your hands together.",
+        "ro": "Frecarea produce *căldură*, ca atunci când îți freci mâinile."
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "camera": {
+        "focus": "kid",
+        "distance": 4,
+        "angle": "front",
+        "move": "dollyIn"
+      }
+    },
+    {
+      "environment": "indoor",
+      "flows": [],
+      "waves": [
+        {
+          "from": "cup",
+          "kind": "heat"
+        }
+      ],
+      "labels": [],
+      "counter": {
+        "from": 0,
+        "to": 2,
+        "decimals": 0,
+        "unit": {
+          "cs": " cm",
+          "en": " cm",
+          "ro": " cm"
+        },
+        "label": {
+          "cs": "zhruba tak hluboko",
+          "en": "roughly this deep",
+          "ro": "cam atât de adânc"
+        }
+      },
+      "narration": {
+        "cs": "Mikrovlny proniknou jen pár *centimetrů* do jídla.",
+        "en": "Microwaves only reach a few *centimeters* into food.",
+        "ro": "Microundele pătrund doar câțiva *centimetri* în mâncare."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "camera": {
+        "focus": "cup",
+        "distance": 3.2,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      }
+    },
+    {
+      "environment": "indoor",
+      "flows": [
+        {
+          "from": "cup",
+          "to": "th",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "labels": [],
+      "counter": {
+        "from": 20,
+        "to": 75,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "teplota jídla",
+          "en": "food temperature",
+          "ro": "temperatura mâncării"
+        }
+      },
+      "narration": {
+        "cs": "Dál se teplo šíří *vedením*, proto jídlo mícháme.",
+        "en": "The rest spreads by *conduction*, so stir your food.",
+        "ro": "Restul se răspândește prin *conducție*, așa că amestecă mâncarea."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            -0.5,
+            0.85,
+            0
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            0.6,
+            0.85,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "camera": {
+        "focus": "cup",
+        "distance": 3.5,
+        "angle": "front",
+        "move": "orbitLeft"
+      }
+    },
+    {
+      "environment": "indoor",
+      "flows": [],
+      "waves": [],
+      "labels": [
+        {
+          "prop": "plate",
+          "emoji": "🍽️",
+          "text": {
+            "cs": "Keramika",
+            "en": "Ceramic",
+            "ro": "Ceramică"
+          }
+        }
+      ],
+      "counter": null,
+      "narration": {
+        "cs": "Talíř skoro žádnou vodu nemá, a tak zůstane *chladnější*.",
+        "en": "The plate has almost no water, so it stays *cooler*.",
+        "ro": "Farfuria nu are aproape deloc apă, așa că rămâne *mai rece*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "plate",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": "#dfe8ef",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "snow",
+          "type": "snowflake",
+          "position": [
+            0.9,
+            1.9,
+            0
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "camera": {
+        "focus": "plate",
+        "distance": 3.5,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      }
+    },
+    {
+      "environment": "indoor",
+      "flows": [],
+      "waves": [],
+      "labels": [
+        {
+          "prop": "spark",
+          "emoji": "⚡",
+          "text": {
+            "cs": "Jiskry",
+            "en": "Sparks",
+            "ro": "Scântei"
+          }
+        }
+      ],
+      "counter": null,
+      "narration": {
+        "cs": "*Kov* mikrovlny odráží, proto v mikrovlnce jiskří.",
+        "en": "*Metal* reflects microwaves, that is why it sparks.",
+        "ro": "*Metalul* reflectă microundele, de aceea scânteiază."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mw",
+          "type": "microwave",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "spark",
+          "type": "lightning",
+          "position": [
+            0.7,
+            1.7,
+            0.4
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "camera": {
+        "focus": "mw",
+        "distance": 4,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      }
+    },
+    {
+      "environment": "indoor",
+      "flows": [],
+      "waves": [
+        {
+          "from": "mw",
+          "kind": "microwaves"
+        }
+      ],
+      "labels": [
+        {
+          "prop": "mw",
+          "emoji": "🛡️",
+          "text": {
+            "cs": "Mřížka",
+            "en": "Mesh",
+            "ro": "Plasă"
+          }
+        }
+      ],
+      "counter": null,
+      "narration": {
+        "cs": "Dvířka mají *kovovou mřížku*, která vlny drží uvnitř.",
+        "en": "The door has a *metal mesh* that keeps the waves inside.",
+        "ro": "Ușa are o *plasă metalică* ce ține undele înăuntru."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mw",
+          "type": "microwave",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "camera": {
+        "focus": "mw",
+        "distance": 2.6,
+        "angle": "front",
+        "move": "dollyIn"
+      }
+    },
+    {
+      "environment": "indoor",
+      "flows": [
+        {
+          "from": "mw",
+          "to": "eye",
+          "kind": "light"
+        }
+      ],
+      "waves": [],
+      "labels": [],
+      "counter": {
+        "from": 0,
+        "to": 12,
+        "decimals": 0,
+        "unit": {
+          "cs": " cm",
+          "en": " cm",
+          "ro": " cm"
+        },
+        "label": {
+          "cs": "délka jedné mikrovlny",
+          "en": "length of one microwave",
+          "ro": "lungimea unei microunde"
+        }
+      },
+      "narration": {
+        "cs": "Díry jsou menší než *vlna*, ale světlo projde.",
+        "en": "Its holes are smaller than the *wave*, but light gets through.",
+        "ro": "Găurile sunt mai mici decât *unda*, dar lumina trece."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mw",
+          "type": "microwave",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "eye",
+          "type": "person",
+          "position": [
+            1.8,
+            0,
+            1.5
+          ],
+          "scale": 1,
+          "rotationY": -40,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "camera": {
+        "focus": "mw",
+        "distance": 5,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      }
+    },
+    {
+      "environment": "indoor",
+      "flows": [],
+      "waves": [],
+      "labels": [],
+      "counter": null,
+      "narration": {
+        "cs": "Sleduj nás a fyzika tě už nikdy *nepřekvapí*!",
+        "en": "Follow for more, and physics will never *surprise* you again!",
+        "ro": "Urmărește-ne și fizica nu te va mai *surprinde*!"
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "idea",
+          "type": "bulb",
+          "position": [
+            0,
+            2.1,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "camera": {
+        "focus": "kid",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "dollyIn"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1123 @@
+{
+  "id": 14,
+  "title": {
+    "cs": "Proč mléko při vaření překypí",
+    "en": "Why milk boils over",
+    "ro": "De ce laptele dă în foc"
+  },
+  "description": {
+    "cs": "Proč voda klidně vře, ale mléko vyleze z hrnce: škraloup, bílkoviny a pěna. 🥛🔥",
+    "en": "Why water boils calmly but milk climbs out of the pot: skin, proteins and foam. 🥛🔥",
+    "ro": "De ce apa fierbe liniștit, dar laptele iese din oală: pieliță, proteine și spumă. 🥛🔥"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "mleko",
+    "kuchyne",
+    "science",
+    "vzdelavani"
+  ],
+  "scenes": [
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Voda klidně vře, tak proč mléko najednou *překypí*?",
+        "en": "Water boils calmly, so why does milk suddenly *boil over*?",
+        "ro": "Apa fierbe liniștit, deci de ce laptele *dă în foc* brusc?"
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.9,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "pot",
+          "emoji": "🥛",
+          "text": {
+            "cs": "Mléko",
+            "en": "Milk",
+            "ro": "Lapte"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Mléko je zhruba z 87 procent obyčejná *voda*.",
+        "en": "Milk is about 87 percent plain *water*.",
+        "ro": "Laptele este în jur de 87 la sută *apă*."
+      },
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "milk",
+          "type": "cup",
+          "position": [
+            0,
+            0.85,
+            0
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": "#f4f1e8",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "milk",
+        "distance": 3,
+        "angle": "top",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": {
+        "from": 0,
+        "to": 87,
+        "decimals": 0,
+        "unit": {
+          "cs": " %",
+          "en": " %",
+          "ro": " %"
+        },
+        "label": {
+          "cs": "podíl vody v mléce",
+          "en": "water in milk",
+          "ro": "apă în lapte"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Ale obsahuje i *bílkoviny*, tuk a mléčný cukr.",
+        "en": "But it also holds *proteins*, fat and milk sugar.",
+        "ro": "Dar conține și *proteine*, grăsimi și zahăr din lapte."
+      },
+      "props": [
+        {
+          "id": "p1",
+          "type": "atom",
+          "position": [
+            -0.7,
+            1.6,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#f2c94c",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "p2",
+          "type": "atom",
+          "position": [
+            0.7,
+            1.4,
+            0.2
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#ffffff",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "p1",
+        "distance": 4.5,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "p1",
+          "emoji": "🧬",
+          "text": {
+            "cs": "Bílkovina",
+            "en": "Protein",
+            "ro": "Proteină"
+          }
+        },
+        {
+          "prop": "p2",
+          "emoji": "🧈",
+          "text": {
+            "cs": "Tuk",
+            "en": "Fat",
+            "ro": "Grăsime"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Při ohřevu se část bílkovin *rozvine* a slepí.",
+        "en": "As it heats, some proteins *unfold* and clump together.",
+        "ro": "La încălzire, unele proteine se *desfac* și se lipesc."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.9,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            0.8,
+            0.9,
+            0.2
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "stove",
+          "to": "pot",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 4,
+        "angle": "frontLeft",
+        "move": "orbitLeft"
+      },
+      "labels": [],
+      "counter": {
+        "from": 20,
+        "to": 70,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "bílkoviny se mění",
+          "en": "proteins change",
+          "ro": "proteinele se schimbă"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Na hladině z nich vznikne tenký pružný *škraloup*.",
+        "en": "On the surface they form a thin, stretchy *skin*.",
+        "ro": "La suprafață formează o *pieliță* subțire și elastică."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.9,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 3,
+        "angle": "top",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "pot",
+          "emoji": "🫧",
+          "text": {
+            "cs": "Škraloup",
+            "en": "Milk skin",
+            "ro": "Pieliță"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Kolem bodu varu vznikají u horkého dna bubliny *páry*.",
+        "en": "Near boiling, *steam bubbles* form at the hot bottom.",
+        "ro": "Aproape de fierbere, pe fundul fierbinte apar bule de *abur*."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.9,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "stove",
+          "to": "pot",
+          "kind": "heat"
+        }
+      ],
+      "waves": [
+        {
+          "from": "pot",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "pot",
+        "distance": 4,
+        "angle": "low",
+        "move": "rise"
+      },
+      "labels": [],
+      "counter": {
+        "from": 70,
+        "to": 100,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "label": {
+          "cs": "bod varu",
+          "en": "boiling point",
+          "ro": "punctul de fierbere"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "V čisté vodě bubliny vyplavou nahoru a hned *prasknou*.",
+        "en": "In plain water, bubbles reach the top and simply *pop*.",
+        "ro": "În apa simplă, bulele urcă și *se sparg* imediat."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "water",
+          "type": "pot",
+          "position": [
+            -0.4,
+            0.9,
+            0
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": "#7fb3d5",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "steam",
+          "type": "cloud",
+          "position": [
+            -0.4,
+            2,
+            0
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "water",
+          "to": "steam",
+          "kind": "air"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "water",
+        "distance": 4,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "water",
+          "emoji": "💧",
+          "text": {
+            "cs": "Voda",
+            "en": "Water",
+            "ro": "Apă"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "V mléce je ale škraloup *uvězní* pod sebou.",
+        "en": "In milk, though, the skin *traps* them underneath.",
+        "ro": "În lapte însă, pielița le *prinde* dedesubt."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.9,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "lid",
+          "type": "arrowDown",
+          "position": [
+            0,
+            1.7,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 3.5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [
+        {
+          "prop": "lid",
+          "emoji": "🔒",
+          "text": {
+            "cs": "Past na páru",
+            "en": "Steam trap",
+            "ro": "Capcană de abur"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Bílkoviny a tuk navíc obalí každou bublinu a *zpevní* ji.",
+        "en": "Proteins and fat also coat each bubble, making it *sturdy*.",
+        "ro": "Proteinele și grăsimea învelesc fiecare bulă și o fac *rezistentă*."
+      },
+      "props": [
+        {
+          "id": "b1",
+          "type": "atom",
+          "position": [
+            -0.6,
+            1.5,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#f4f1e8",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "b2",
+          "type": "atom",
+          "position": [
+            0.6,
+            1.8,
+            0.2
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": "#f4f1e8",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "b3",
+          "type": "atom",
+          "position": [
+            0,
+            2.5,
+            -0.3
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": "#f4f1e8",
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "b1",
+        "distance": 4.5,
+        "angle": "frontLeft",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "b2",
+          "emoji": "🛡️",
+          "text": {
+            "cs": "Obal z bílkovin",
+            "en": "Protein coat",
+            "ro": "Înveliș proteic"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Bubliny se tak hromadí jedna na druhou do husté *pěny*.",
+        "en": "So bubbles pile up on each other into thick *foam*.",
+        "ro": "Așa, bulele se adună una peste alta într-o *spumă* groasă."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.9,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "foam",
+          "type": "cloud",
+          "position": [
+            0,
+            1.45,
+            0
+          ],
+          "scale": 0.35,
+          "rotationY": 0,
+          "color": "#fffaf0",
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 3.5,
+        "angle": "frontRight",
+        "move": "orbitLeft"
+      },
+      "labels": [
+        {
+          "prop": "foam",
+          "emoji": "🫧",
+          "text": {
+            "cs": "Pěna",
+            "en": "Foam",
+            "ro": "Spumă"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Pára pořád přibývá a pěna vyroste během *pár vteřin*.",
+        "en": "Steam keeps coming, and the foam rises in *seconds*.",
+        "ro": "Aburul tot vine, iar spuma crește în *câteva secunde*."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.9,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "foam",
+          "type": "cloud",
+          "position": [
+            0,
+            1.4,
+            0
+          ],
+          "scale": 0.35,
+          "rotationY": 0,
+          "color": "#fffaf0",
+          "anim": "slide",
+          "slideTo": [
+            0,
+            1.9,
+            0
+          ],
+          "glow": false
+        },
+        {
+          "id": "up",
+          "type": "arrowUp",
+          "position": [
+            0.8,
+            1.6,
+            0.2
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "stove",
+          "to": "pot",
+          "kind": "heat"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "rise"
+      },
+      "labels": [],
+      "counter": {
+        "from": 0,
+        "to": 5,
+        "decimals": 0,
+        "unit": {
+          "cs": " s",
+          "en": " s",
+          "ro": " s"
+        },
+        "label": {
+          "cs": "a je to venku",
+          "en": "and it is out",
+          "ro": "și a ieșit"
+        }
+      }
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Přeleze okraj hrnce a vyteče rovnou na *sporák*.",
+        "en": "It climbs over the rim and spills onto the *stove*.",
+        "ro": "Trece peste marginea oalei și se varsă pe *aragaz*."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.9,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "spill",
+          "type": "waterPool",
+          "position": [
+            0.9,
+            0,
+            0.8
+          ],
+          "scale": 0.3,
+          "rotationY": 0,
+          "color": "#f4f1e8",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "pot",
+          "to": "spill",
+          "kind": "water"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "stove",
+        "distance": 5,
+        "angle": "frontLeft",
+        "move": "dollyOut"
+      },
+      "labels": [
+        {
+          "prop": "spill",
+          "emoji": "😱",
+          "text": {
+            "cs": "Překypělo!",
+            "en": "Boiled over!",
+            "ro": "A dat în foc!"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Tip: stáhni plamen a *míchej*, tím škraloup rozbiješ.",
+        "en": "Tip: turn down the heat and *stir* to break the skin.",
+        "ro": "Sfat: dă focul mai mic și *amestecă*, ca să spargi pielița."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.9,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cook",
+          "type": "person",
+          "position": [
+            1.2,
+            0,
+            0.8
+          ],
+          "scale": 1,
+          "rotationY": -40,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 5,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "labels": [
+        {
+          "prop": "pot",
+          "emoji": "🥄",
+          "text": {
+            "cs": "Míchej",
+            "en": "Stir",
+            "ro": "Amestecă"
+          }
+        }
+      ],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "A širší hrnec dá bublinám víc místa *prasknout*.",
+        "en": "And a wider pot gives bubbles more room to *burst*.",
+        "ro": "Iar o oală mai largă le dă bulelor loc să *se spargă*."
+      },
+      "props": [
+        {
+          "id": "stove",
+          "type": "stove",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0,
+            0.9,
+            0
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "steam",
+          "type": "cloud",
+          "position": [
+            0,
+            2.1,
+            0
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "pot",
+          "to": "steam",
+          "kind": "air"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "pot",
+        "distance": 4,
+        "angle": "top",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    },
+    {
+      "environment": "indoor",
+      "narration": {
+        "cs": "Sleduj nás, v kuchyni je *fyziky* ještě spousta!",
+        "en": "Follow for more, your kitchen is full of *physics*!",
+        "ro": "Urmărește-ne, bucătăria ta e plină de *fizică*!"
+      },
+      "props": [
+        {
+          "id": "kid",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "idea",
+          "type": "bulb",
+          "position": [
+            0,
+            2.1,
+            0
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "kid",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "labels": [],
+      "counter": null
+    }
+  ]
+}
