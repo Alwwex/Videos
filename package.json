@@ -1,17 +1,17 @@
 {
-  "name": "solarni-panely-video",
+  "name": "fyzika-studio",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "remotion studio",
-    "render": "remotion render SolarniPanely out/solarni-panely.mp4",
-    "still": "remotion still SolarniPanely",
+    "render": "remotion render Short-cs out/ukazka.mp4",
     "typecheck": "tsc --noEmit",
     "generate": "tsx scripts/generate.ts",
     "voice": "tsx scripts/voice.ts",
     "render:batch": "tsx scripts/render.ts",
-    "panel": "tsx scripts/panel.ts",
-    "stop": "node -e \"require('fs').mkdirSync('out',{recursive:true});require('fs').writeFileSync('out/STOP','1');console.log('⏹️  Render se zastaví po dokončení aktuálního snímku.')\""
+    "stop": "node -e \"require('fs').mkdirSync('out',{recursive:true});require('fs').writeFileSync('out/STOP','1');console.log('⏹️  Render se zastaví po dokončení aktuálního snímku.')\"",
+    "studio": "node --import tsx studio/server.ts",
+    "check": "tsx scripts/check.ts"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^1.4.0",
@@ -21,6 +21,10 @@
     "@remotion/google-fonts": "^4.0.540",
     "@remotion/renderer": "^4.0.540",
     "@remotion/three": "^4.0.540",
+    "https-proxy-agent": "^9.1.0",
+    "katex": "^0.19.1",
+    "msedge-tts": "^2.1.1",
+    "playwright-core": "^1.64.1",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "remotion": "^4.0.540",

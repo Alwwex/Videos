@@ -1,105 +1,615 @@
 {
   "serie": "Fyzika kolem tebe",
   "napady": [
-    {"id": 1, "kategorie": "kuchyně", "tema": "Proč mikrovlnka ohřívá jídlo"},
-    {"id": 2, "kategorie": "kuchyně", "tema": "Jak funguje indukční deska"},
-    {"id": 3, "kategorie": "kuchyně", "tema": "Proč voda na horách vaří dřív"},
-    {"id": 4, "kategorie": "kuchyně", "tema": "Jak funguje tlakový hrnec"},
-    {"id": 5, "kategorie": "kuchyně", "tema": "Proč led plave na vodě"},
-    {"id": 6, "kategorie": "kuchyně", "tema": "Jak lednička vyrábí chlad"},
-    {"id": 7, "kategorie": "kuchyně", "tema": "Proč termoska drží teplo"},
-    {"id": 8, "kategorie": "kuchyně", "tema": "Proč popcorn praská"},
-    {"id": 9, "kategorie": "kuchyně", "tema": "Proč kovová lžíce v čaji pálí"},
-    {"id": 10, "kategorie": "kuchyně", "tema": "Jak funguje rychlovarná konvice"},
-    {"id": 11, "kategorie": "kuchyně", "tema": "Proč láhev s vodou v mrazáku praskne"},
-    {"id": 12, "kategorie": "kuchyně", "tema": "Proč sůl rozpouští led na silnici"},
-    {"id": 13, "kategorie": "kuchyně", "tema": "Jak kávovar dělá espresso tlakem"},
-    {"id": 14, "kategorie": "kuchyně", "tema": "Proč mléko při vaření překypí"},
-    {"id": 15, "kategorie": "kuchyně", "tema": "Proč funguje brčko"},
-    {"id": 16, "kategorie": "domov", "tema": "Žárovka vs. LED: kam mizí energie"},
-    {"id": 17, "kategorie": "domov", "tema": "Proč tě kopne klika (statická elektřina)"},
-    {"id": 18, "kategorie": "domov", "tema": "Co se děje v zásuvce s 230 V"},
-    {"id": 19, "kategorie": "domov", "tema": "Jak tě jistič chrání před požárem"},
-    {"id": 20, "kategorie": "domov", "tema": "Proč zrcadlo prohazuje levou a pravou"},
-    {"id": 21, "kategorie": "domov", "tema": "Jak funguje klimatizace"},
-    {"id": 22, "kategorie": "domov", "tema": "Proč se zamlží zrcadlo v koupelně"},
-    {"id": 23, "kategorie": "domov", "tema": "Jak funguje splachování záchodu"},
-    {"id": 24, "kategorie": "domov", "tema": "Proč vysavač saje"},
-    {"id": 25, "kategorie": "domov", "tema": "Jak drží magnet na lednici"},
-    {"id": 26, "kategorie": "domov", "tema": "Proč WiFi špatně projde zdí"},
-    {"id": 27, "kategorie": "domov", "tema": "Jak funguje dálkový ovladač"},
-    {"id": 28, "kategorie": "domov", "tema": "Proč se nabitý balonek přilepí ke zdi"},
-    {"id": 29, "kategorie": "domov", "tema": "Jak pračka ždímá prádlo"},
-    {"id": 30, "kategorie": "domov", "tema": "Proč se v zimě orosí okna"},
-    {"id": 31, "kategorie": "technologie", "tema": "Jak funguje dotykový displej"},
-    {"id": 32, "kategorie": "technologie", "tema": "Jak funguje bezdrátové nabíjení"},
-    {"id": 33, "kategorie": "technologie", "tema": "Proč se baterie v mrazu rychle vybije"},
-    {"id": 34, "kategorie": "technologie", "tema": "Jak GPS ví, kde jsi"},
-    {"id": 35, "kategorie": "technologie", "tema": "Jak fotí foťák v mobilu"},
-    {"id": 36, "kategorie": "technologie", "tema": "Jak sluchátka potlačí hluk"},
-    {"id": 37, "kategorie": "technologie", "tema": "Jak internet letí optickým kabelem"},
-    {"id": 38, "kategorie": "technologie", "tema": "Jak funguje reproduktor"},
-    {"id": 39, "kategorie": "technologie", "tema": "Jak funguje mikrofon"},
-    {"id": 40, "kategorie": "technologie", "tema": "Jak funguje elektromobil"},
-    {"id": 41, "kategorie": "technologie", "tema": "Jak funguje větrná elektrárna"},
-    {"id": 42, "kategorie": "technologie", "tema": "Jak funguje jaderná elektrárna"},
-    {"id": 43, "kategorie": "technologie", "tema": "Jak funguje vodní elektrárna"},
-    {"id": 44, "kategorie": "technologie", "tema": "Jak funguje laser"},
-    {"id": 45, "kategorie": "technologie", "tema": "Jak rentgen vidí skrz tělo"},
-    {"id": 46, "kategorie": "doprava", "tema": "Proč letadlo létá"},
-    {"id": 47, "kategorie": "doprava", "tema": "Proč se ocelová loď nepotopí"},
-    {"id": 48, "kategorie": "doprava", "tema": "Proč tě v zatáčce tlačí ke dveřím"},
-    {"id": 49, "kategorie": "doprava", "tema": "Jak ti pás zachrání život"},
-    {"id": 50, "kategorie": "doprava", "tema": "Jak fungují brzdy"},
-    {"id": 51, "kategorie": "doprava", "tema": "Proč kolo za jízdy nespadne"},
-    {"id": 52, "kategorie": "doprava", "tema": "Jak se nafoukne airbag"},
-    {"id": 53, "kategorie": "doprava", "tema": "Jak raketa letí ve vesmíru bez vzduchu"},
-    {"id": 54, "kategorie": "doprava", "tema": "Proč siréna sanitky mění tón"},
-    {"id": 55, "kategorie": "doprava", "tema": "Jak se ponorka potopí a vynoří"},
-    {"id": 56, "kategorie": "doprava", "tema": "Proč horkovzdušný balon stoupá"},
-    {"id": 57, "kategorie": "doprava", "tema": "Jak levituje vlak maglev"},
-    {"id": 58, "kategorie": "doprava", "tema": "Proč mají pneumatiky vzorek"},
-    {"id": 59, "kategorie": "doprava", "tema": "Proč auto ve vysoké rychlosti víc žere"},
-    {"id": 60, "kategorie": "doprava", "tema": "Jak výtahu pomáhá protizávaží"},
-    {"id": 61, "kategorie": "příroda", "tema": "Proč je obloha modrá"},
-    {"id": 62, "kategorie": "příroda", "tema": "Proč je západ slunce červený"},
-    {"id": 63, "kategorie": "příroda", "tema": "Jak vzniká duha"},
-    {"id": 64, "kategorie": "příroda", "tema": "Jak vzniká blesk"},
-    {"id": 65, "kategorie": "příroda", "tema": "Proč hrom slyšíš až po blesku"},
-    {"id": 66, "kategorie": "příroda", "tema": "Jak Měsíc dělá příliv a odliv"},
-    {"id": 67, "kategorie": "příroda", "tema": "Proč máme roční období"},
-    {"id": 68, "kategorie": "příroda", "tema": "Proč Měsíc mění tvar"},
-    {"id": 69, "kategorie": "příroda", "tema": "Jak vzniká vítr"},
-    {"id": 70, "kategorie": "příroda", "tema": "Proč mraky nespadnou na zem"},
-    {"id": 71, "kategorie": "příroda", "tema": "Jak vzniká sněhová vločka"},
-    {"id": 72, "kategorie": "příroda", "tema": "Proč je na horách zima, i když jsou blíž Slunci"},
-    {"id": 73, "kategorie": "příroda", "tema": "Jak vzniká zemětřesení"},
-    {"id": 74, "kategorie": "příroda", "tema": "Proč sopka vybuchne"},
-    {"id": 75, "kategorie": "příroda", "tema": "Proč hvězdy blikají"},
-    {"id": 76, "kategorie": "příroda", "tema": "Proč na Měsíci skočíš šestkrát výš"},
-    {"id": 77, "kategorie": "příroda", "tema": "Jak vzniká polární záře"},
-    {"id": 78, "kategorie": "příroda", "tema": "Jak vznikají vlny na moři"},
-    {"id": 79, "kategorie": "příroda", "tema": "Jak vzniká ozvěna"},
-    {"id": 80, "kategorie": "příroda", "tema": "Proč vodoměrka chodí po vodě"},
-    {"id": 81, "kategorie": "tělo a sport", "tema": "Proč tě v letadle bolí uši"},
-    {"id": 82, "kategorie": "tělo a sport", "tema": "Jak oko vidí barvy"},
-    {"id": 83, "kategorie": "tělo a sport", "tema": "Proč tě pot ochladí"},
-    {"id": 84, "kategorie": "tělo a sport", "tema": "Jak ucho slyší zvuk"},
-    {"id": 85, "kategorie": "tělo a sport", "tema": "Proč se krasobruslařka zrychlí, když přitáhne ruce"},
-    {"id": 86, "kategorie": "tělo a sport", "tema": "Proč zakroucený míč zatáčí"},
-    {"id": 87, "kategorie": "tělo a sport", "tema": "Jak lezce drží tření"},
-    {"id": 88, "kategorie": "tělo a sport", "tema": "Proč na trampolíně vyskočíš tak vysoko"},
-    {"id": 89, "kategorie": "tělo a sport", "tema": "Proč má golfový míček důlky"},
-    {"id": 90, "kategorie": "tělo a sport", "tema": "Proč do kopce funíš víc"},
-    {"id": 91, "kategorie": "tělo a sport", "tema": "Jak se rozhoupat na houpačce"},
-    {"id": 92, "kategorie": "tělo a sport", "tema": "Proč parašutista nezrychluje donekonečna"},
-    {"id": 93, "kategorie": "tělo a sport", "tema": "Jak brýle zaostří obraz"},
-    {"id": 94, "kategorie": "tělo a sport", "tema": "Proč pod vodou vidíš rozmazaně"},
-    {"id": 95, "kategorie": "tělo a sport", "tema": "Proč tě kolotoč tlačí ven"},
-    {"id": 96, "kategorie": "tělo a sport", "tema": "Proč je led kluzký"},
-    {"id": 97, "kategorie": "tělo a sport", "tema": "Proč těžší věci nepadají rychleji"},
-    {"id": 98, "kategorie": "tělo a sport", "tema": "Jak polarizační brýle ruší odlesky"},
-    {"id": 99, "kategorie": "tělo a sport", "tema": "Jak k nám teplo Slunce doletí prázdným vesmírem"},
-    {"id": 100, "kategorie": "tělo a sport", "tema": "Proč horký vzduch stoupá"}
-  ]
+    {
+      "id": 1,
+      "kategorie": "kuchyně",
+      "tema": "Proč mikrovlnka ohřívá jídlo",
+      "hotovo": true
+    },
+    {
+      "id": 2,
+      "kategorie": "kuchyně",
+      "tema": "Jak funguje indukční deska",
+      "hotovo": true
+    },
+    {
+      "id": 3,
+      "kategorie": "kuchyně",
+      "tema": "Proč voda na horách vaří dřív",
+      "hotovo": true
+    },
+    {
+      "id": 4,
+      "kategorie": "kuchyně",
+      "tema": "Jak funguje tlakový hrnec",
+      "hotovo": true
+    },
+    {
+      "id": 5,
+      "kategorie": "kuchyně",
+      "tema": "Proč led plave na vodě",
+      "hotovo": true
+    },
+    {
+      "id": 6,
+      "kategorie": "kuchyně",
+      "tema": "Jak lednička vyrábí chlad",
+      "hotovo": true
+    },
+    {
+      "id": 7,
+      "kategorie": "kuchyně",
+      "tema": "Proč termoska drží teplo",
+      "hotovo": true
+    },
+    {
+      "id": 8,
+      "kategorie": "kuchyně",
+      "tema": "Proč popcorn praská",
+      "hotovo": true
+    },
+    {
+      "id": 9,
+      "kategorie": "kuchyně",
+      "tema": "Proč kovová lžíce v čaji pálí",
+      "hotovo": true
+    },
+    {
+      "id": 10,
+      "kategorie": "kuchyně",
+      "tema": "Jak funguje rychlovarná konvice",
+      "hotovo": true
+    },
+    {
+      "id": 11,
+      "kategorie": "kuchyně",
+      "tema": "Proč láhev s vodou v mrazáku praskne",
+      "hotovo": true
+    },
+    {
+      "id": 12,
+      "kategorie": "kuchyně",
+      "tema": "Proč sůl rozpouští led na silnici",
+      "hotovo": true
+    },
+    {
+      "id": 13,
+      "kategorie": "kuchyně",
+      "tema": "Jak kávovar dělá espresso tlakem",
+      "hotovo": true
+    },
+    {
+      "id": 14,
+      "kategorie": "kuchyně",
+      "tema": "Proč mléko při vaření překypí",
+      "hotovo": true
+    },
+    {
+      "id": 15,
+      "kategorie": "nové krátké",
+      "tema": "Proč je obloha modrá",
+      "hotovo": true
+    },
+    {
+      "id": 16,
+      "kategorie": "nové krátké",
+      "tema": "Proč hrom slyšíš až po blesku",
+      "hotovo": true
+    },
+    {
+      "id": 17,
+      "kategorie": "nové krátké",
+      "tema": "Padají těžší věci rychleji?",
+      "hotovo": true
+    },
+    {
+      "id": 18,
+      "kategorie": "nové krátké",
+      "tema": "Proč tě kopne klika",
+      "hotovo": true
+    },
+    {
+      "id": 19,
+      "kategorie": "nové krátké",
+      "tema": "Proč se ocelová loď nepotopí",
+      "hotovo": true
+    },
+    {
+      "id": 20,
+      "kategorie": "nové krátké",
+      "tema": "Proč Měsíc nespadne na Zem",
+      "hotovo": true
+    },
+    {
+      "id": 21,
+      "kategorie": "nové krátké",
+      "tema": "Jak sluchátka vymažou hluk",
+      "hotovo": true
+    },
+    {
+      "id": 22,
+      "kategorie": "nové krátké",
+      "tema": "Na Měsíci skočíš šestkrát výš",
+      "hotovo": true
+    },
+    {
+      "id": 23,
+      "kategorie": "nové krátké",
+      "tema": "Proč siréna mění tón",
+      "hotovo": true
+    },
+    {
+      "id": 24,
+      "kategorie": "nové krátké",
+      "tema": "Proč ptáky na drátech nezabije proud",
+      "hotovo": true
+    },
+    {
+      "id": 25,
+      "kategorie": "nové krátké",
+      "tema": "Proč hvězdy blikají",
+      "hotovo": true
+    },
+    {
+      "id": 26,
+      "kategorie": "nové krátké",
+      "tema": "Proč horký vzduch stoupá",
+      "hotovo": true
+    },
+    {
+      "id": 27,
+      "kategorie": "nové krátké",
+      "tema": "Proč parašutista nezrychluje donekonečna",
+      "hotovo": true
+    },
+    {
+      "id": 28,
+      "kategorie": "nové krátké",
+      "tema": "Jak vzniká duha",
+      "hotovo": true
+    },
+    {
+      "id": 29,
+      "kategorie": "nové krátké",
+      "tema": "Proč tě v letadle bolí uši",
+      "hotovo": true
+    },
+    {
+      "id": 30,
+      "kategorie": "nové krátké",
+      "tema": "Proč necítíš, že se Země točí",
+      "hotovo": true
+    },
+    {
+      "id": 31,
+      "kategorie": "nové krátké",
+      "tema": "Kolik váží jeden mrak",
+      "hotovo": true
+    },
+    {
+      "id": 32,
+      "kategorie": "nové krátké",
+      "tema": "Jak GPS ví, kde jsi",
+      "hotovo": true
+    },
+    {
+      "id": 33,
+      "kategorie": "nové krátké",
+      "tema": "Proč se krasobruslařka roztočí",
+      "hotovo": true
+    },
+    {
+      "id": 34,
+      "kategorie": "nové krátké",
+      "tema": "Proč WiFi neprojde zdí",
+      "hotovo": true
+    },
+    {
+      "id": 35,
+      "kategorie": "nové krátké",
+      "tema": "Proč máme roční období",
+      "hotovo": true
+    },
+    {
+      "id": 36,
+      "kategorie": "nové krátké",
+      "tema": "Jak Měsíc dělá příliv",
+      "hotovo": true
+    },
+    {
+      "id": 37,
+      "kategorie": "nové krátké",
+      "tema": "Jak doopravdy funguje brčko",
+      "hotovo": true
+    },
+    {
+      "id": 38,
+      "kategorie": "nové krátké",
+      "tema": "Balónek v autě letí dopředu",
+      "hotovo": true
+    },
+    {
+      "id": 39,
+      "kategorie": "nové krátké",
+      "tema": "Proč letadlo létá",
+      "hotovo": true
+    },
+    {
+      "id": 40,
+      "kategorie": "nové krátké",
+      "tema": "Jak funguje bezdrátové nabíjení",
+      "hotovo": true
+    },
+    {
+      "id": 41,
+      "kategorie": "nové krátké",
+      "tema": "Proč zakroucený míč zatáčí",
+      "hotovo": true
+    },
+    {
+      "id": 42,
+      "kategorie": "nové krátké",
+      "tema": "Proč je led kluzký",
+      "hotovo": true
+    },
+    {
+      "id": 43,
+      "kategorie": "nové krátké",
+      "tema": "Jak k nám doletí teplo Slunce",
+      "hotovo": true
+    },
+    {
+      "id": 44,
+      "kategorie": "nové krátké",
+      "tema": "Proč zrcadlo prohazuje levou a pravou",
+      "hotovo": true
+    },
+    {
+      "id": 45,
+      "kategorie": "domov",
+      "tema": "Žárovka vs. LED: kam mizí energie"
+    },
+    {
+      "id": 46,
+      "kategorie": "domov",
+      "tema": "Co se děje v zásuvce s 230 V"
+    },
+    {
+      "id": 47,
+      "kategorie": "domov",
+      "tema": "Jak tě jistič chrání před požárem"
+    },
+    {
+      "id": 48,
+      "kategorie": "domov",
+      "tema": "Jak funguje klimatizace"
+    },
+    {
+      "id": 49,
+      "kategorie": "domov",
+      "tema": "Proč se zamlží zrcadlo v koupelně"
+    },
+    {
+      "id": 50,
+      "kategorie": "domov",
+      "tema": "Jak funguje splachování záchodu"
+    },
+    {
+      "id": 51,
+      "kategorie": "domov",
+      "tema": "Proč vysavač saje"
+    },
+    {
+      "id": 52,
+      "kategorie": "domov",
+      "tema": "Jak drží magnet na lednici"
+    },
+    {
+      "id": 53,
+      "kategorie": "domov",
+      "tema": "Jak funguje dálkový ovladač"
+    },
+    {
+      "id": 54,
+      "kategorie": "domov",
+      "tema": "Proč se nabitý balonek přilepí ke zdi"
+    },
+    {
+      "id": 55,
+      "kategorie": "domov",
+      "tema": "Jak pračka ždímá prádlo"
+    },
+    {
+      "id": 56,
+      "kategorie": "domov",
+      "tema": "Proč se v zimě orosí okna"
+    },
+    {
+      "id": 57,
+      "kategorie": "technologie",
+      "tema": "Jak funguje dotykový displej"
+    },
+    {
+      "id": 58,
+      "kategorie": "technologie",
+      "tema": "Proč se baterie v mrazu rychle vybije"
+    },
+    {
+      "id": 59,
+      "kategorie": "technologie",
+      "tema": "Jak fotí foťák v mobilu"
+    },
+    {
+      "id": 60,
+      "kategorie": "technologie",
+      "tema": "Jak internet letí optickým kabelem"
+    },
+    {
+      "id": 61,
+      "kategorie": "technologie",
+      "tema": "Jak funguje reproduktor"
+    },
+    {
+      "id": 62,
+      "kategorie": "technologie",
+      "tema": "Jak funguje mikrofon"
+    },
+    {
+      "id": 63,
+      "kategorie": "technologie",
+      "tema": "Jak funguje elektromobil"
+    },
+    {
+      "id": 64,
+      "kategorie": "technologie",
+      "tema": "Jak funguje větrná elektrárna"
+    },
+    {
+      "id": 65,
+      "kategorie": "technologie",
+      "tema": "Jak funguje jaderná elektrárna"
+    },
+    {
+      "id": 66,
+      "kategorie": "technologie",
+      "tema": "Jak funguje vodní elektrárna"
+    },
+    {
+      "id": 67,
+      "kategorie": "technologie",
+      "tema": "Jak funguje laser"
+    },
+    {
+      "id": 68,
+      "kategorie": "technologie",
+      "tema": "Jak rentgen vidí skrz tělo"
+    },
+    {
+      "id": 69,
+      "kategorie": "doprava",
+      "tema": "Proč tě v zatáčce tlačí ke dveřím"
+    },
+    {
+      "id": 70,
+      "kategorie": "doprava",
+      "tema": "Jak ti pás zachrání život"
+    },
+    {
+      "id": 71,
+      "kategorie": "doprava",
+      "tema": "Jak fungují brzdy"
+    },
+    {
+      "id": 72,
+      "kategorie": "doprava",
+      "tema": "Proč kolo za jízdy nespadne"
+    },
+    {
+      "id": 73,
+      "kategorie": "doprava",
+      "tema": "Jak se nafoukne airbag"
+    },
+    {
+      "id": 74,
+      "kategorie": "doprava",
+      "tema": "Jak raketa letí ve vesmíru bez vzduchu"
+    },
+    {
+      "id": 75,
+      "kategorie": "doprava",
+      "tema": "Jak se ponorka potopí a vynoří"
+    },
+    {
+      "id": 76,
+      "kategorie": "doprava",
+      "tema": "Proč horkovzdušný balon stoupá"
+    },
+    {
+      "id": 77,
+      "kategorie": "doprava",
+      "tema": "Jak levituje vlak maglev"
+    },
+    {
+      "id": 78,
+      "kategorie": "doprava",
+      "tema": "Proč mají pneumatiky vzorek"
+    },
+    {
+      "id": 79,
+      "kategorie": "doprava",
+      "tema": "Proč auto ve vysoké rychlosti víc žere"
+    },
+    {
+      "id": 80,
+      "kategorie": "doprava",
+      "tema": "Jak výtahu pomáhá protizávaží"
+    },
+    {
+      "id": 81,
+      "kategorie": "příroda",
+      "tema": "Proč je západ slunce červený"
+    },
+    {
+      "id": 82,
+      "kategorie": "příroda",
+      "tema": "Jak vzniká blesk"
+    },
+    {
+      "id": 83,
+      "kategorie": "příroda",
+      "tema": "Proč Měsíc mění tvar"
+    },
+    {
+      "id": 84,
+      "kategorie": "příroda",
+      "tema": "Jak vzniká vítr"
+    },
+    {
+      "id": 85,
+      "kategorie": "příroda",
+      "tema": "Proč mraky nespadnou na zem"
+    },
+    {
+      "id": 86,
+      "kategorie": "příroda",
+      "tema": "Jak vzniká sněhová vločka"
+    },
+    {
+      "id": 87,
+      "kategorie": "příroda",
+      "tema": "Proč je na horách zima, i když jsou blíž Slunci"
+    },
+    {
+      "id": 88,
+      "kategorie": "příroda",
+      "tema": "Jak vzniká zemětřesení"
+    },
+    {
+      "id": 89,
+      "kategorie": "příroda",
+      "tema": "Proč sopka vybuchne"
+    },
+    {
+      "id": 90,
+      "kategorie": "příroda",
+      "tema": "Jak vzniká polární záře"
+    },
+    {
+      "id": 91,
+      "kategorie": "příroda",
+      "tema": "Jak vznikají vlny na moři"
+    },
+    {
+      "id": 92,
+      "kategorie": "příroda",
+      "tema": "Jak vzniká ozvěna"
+    },
+    {
+      "id": 93,
+      "kategorie": "příroda",
+      "tema": "Proč vodoměrka chodí po vodě"
+    },
+    {
+      "id": 94,
+      "kategorie": "tělo a sport",
+      "tema": "Jak oko vidí barvy"
+    },
+    {
+      "id": 95,
+      "kategorie": "tělo a sport",
+      "tema": "Proč tě pot ochladí"
+    },
+    {
+      "id": 96,
+      "kategorie": "tělo a sport",
+      "tema": "Jak ucho slyší zvuk"
+    },
+    {
+      "id": 97,
+      "kategorie": "tělo a sport",
+      "tema": "Jak lezce drží tření"
+    },
+    {
+      "id": 98,
+      "kategorie": "tělo a sport",
+      "tema": "Proč na trampolíně vyskočíš tak vysoko"
+    },
+    {
+      "id": 99,
+      "kategorie": "tělo a sport",
+      "tema": "Proč má golfový míček důlky"
+    },
+    {
+      "id": 100,
+      "kategorie": "tělo a sport",
+      "tema": "Proč do kopce funíš víc"
+    },
+    {
+      "id": 101,
+      "kategorie": "tělo a sport",
+      "tema": "Jak se rozhoupat na houpačce"
+    },
+    {
+      "id": 102,
+      "kategorie": "tělo a sport",
+      "tema": "Jak brýle zaostří obraz"
+    },
+    {
+      "id": 103,
+      "kategorie": "tělo a sport",
+      "tema": "Proč pod vodou vidíš rozmazaně"
+    },
+    {
+      "id": 104,
+      "kategorie": "tělo a sport",
+      "tema": "Proč tě kolotoč tlačí ven"
+    },
+    {
+      "id": 105,
+      "kategorie": "tělo a sport",
+      "tema": "Jak polarizační brýle ruší odlesky"
+    },
+    {
+      "id": 106,
+      "kategorie": "nápady AI",
+      "tema": "Proč se ti při rozjezdu výtahu zhoupne žaludek"
+    },
+    {
+      "id": 107,
+      "kategorie": "nápady AI",
+      "tema": "Proč nemůžeš přetrhnout telefonní seznam"
+    },
+    {
+      "id": 108,
+      "kategorie": "nápady AI",
+      "tema": "Jak daleko vidíš na obzor"
+    },
+    {
+      "id": 109,
+      "kategorie": "nápady AI",
+      "tema": "Proč se sklenice při zpěvu může rozbít"
+    },
+    {
+      "id": 110,
+      "kategorie": "nápady AI",
+      "tema": "Kolik energie má jeden blesk"
+    },
+    {
+      "id": 111,
+      "kategorie": "nápady AI",
+      "tema": "Proč je černé tričko na slunci teplejší"
+    },
+    {
+      "id": 112,
+      "kategorie": "nápady AI",
+      "tema": "Jak funguje mikrovlnný radar v autě"
+    },
+    {
+      "id": 113,
+      "kategorie": "nápady AI",
+      "tema": "Proč ti v bazénu nohy vypadají kratší"
+    }
+  ],
+  "poznamka": "Hotové (hotovo: true) mají scénář v content/scripts. Nové nápady přidávej na konec s dalším číslem."
 }

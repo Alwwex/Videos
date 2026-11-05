@@ -1,0 +1,304 @@
+{
+  "engine": "blueprint",
+  "id": 39,
+  "title": {
+    "cs": "Proč letadlo létá",
+    "en": "Why planes fly",
+    "ro": "De ce zboară avionul"
+  },
+  "description": {
+    "cs": "Letadlo váží stovky tun. Drží ho ve vzduchu jednoduchý trik: tlačí vzduch dolů. ✈️",
+    "en": "A plane weighs hundreds of tonnes. It stays up with a simple trick: pushing air down. ✈️",
+    "ro": "Un avion cântărește sute de tone. Rămâne sus cu un truc simplu: împinge aerul în jos. ✈️"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "letadlo",
+    "aerodynamika",
+    "aviation"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Letadlo váží až *500 tun*. Co ho drží nahoře?",
+        "en": "A plane can weigh *500 tonnes*. What holds it up?",
+        "ro": "Un avion poate cântări *500 de tone*. Ce îl ține sus?"
+      },
+      "headline": {
+        "cs": "500 TUN|VE VZDUCHU",
+        "en": "500 TONNES|IN THE AIR",
+        "ro": "500 DE TONE|ÎN AER"
+      },
+      "tag": "AIRBUS A380",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "plane",
+        "icon2": null,
+        "relation": "none",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Na letadlo působí *čtyři síly*.",
+        "en": "Four *forces* act on a plane.",
+        "ro": "Asupra avionului acționează *patru forțe*."
+      },
+      "headline": {
+        "cs": "ČTYŘI|SÍLY",
+        "en": "FOUR|FORCES",
+        "ro": "PATRU|FORȚE"
+      },
+      "tag": "FREE BODY DIAGRAM",
+      "accent": "teal",
+      "visual": {
+        "type": "forces",
+        "body": "plane",
+        "arrows": [
+          {
+            "dir": "up",
+            "size": 2,
+            "label": {
+              "cs": "vztlak",
+              "en": "lift",
+              "ro": "portanță"
+            },
+            "color": "teal"
+          },
+          {
+            "dir": "down",
+            "size": 2,
+            "label": {
+              "cs": "tíha",
+              "en": "weight",
+              "ro": "greutate"
+            },
+            "color": "red"
+          },
+          {
+            "dir": "right",
+            "size": 1.6,
+            "label": {
+              "cs": "tah",
+              "en": "thrust",
+              "ro": "tracțiune"
+            },
+            "color": "yellow"
+          },
+          {
+            "dir": "left",
+            "size": 1.2,
+            "label": {
+              "cs": "odpor",
+              "en": "drag",
+              "ro": "rezistență"
+            },
+            "color": "blue"
+          }
+        ],
+        "motion": "none"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Křídlo je mírně *nakloněné* a zakřivené.",
+        "en": "The wing is slightly *tilted* and curved.",
+        "ro": "Aripa e ușor *înclinată* și curbată."
+      },
+      "headline": {
+        "cs": "ÚHEL|NÁBĚHU",
+        "en": "ANGLE OF|ATTACK",
+        "ro": "UNGHI DE|ATAC"
+      },
+      "tag": "WING PROFILE",
+      "accent": "yellow",
+      "visual": {
+        "type": "gauge",
+        "from": 0,
+        "to": 5,
+        "max": 20,
+        "unit": {
+          "cs": "°",
+          "en": "°",
+          "ro": "°"
+        },
+        "caption": {
+          "cs": "pár stupňů stačí",
+          "en": "a few degrees are enough",
+          "ro": "câteva grade ajung"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Odklání proud vzduchu *dolů*, tuny vzduchu každou sekundu.",
+        "en": "It deflects air *downward*, tonnes of it every second.",
+        "ro": "Deviază aerul *în jos*, tone de aer pe secundă."
+      },
+      "headline": {
+        "cs": "VZDUCH|DOLŮ",
+        "en": "AIR GOES|DOWN",
+        "ro": "AERUL|ÎN JOS"
+      },
+      "tag": "DOWNWASH",
+      "accent": "blue",
+      "visual": {
+        "type": "forces",
+        "body": "wind",
+        "arrows": [
+          {
+            "dir": "downRight",
+            "size": 2.5,
+            "label": {
+              "cs": "proud vzduchu",
+              "en": "airflow",
+              "ro": "flux de aer"
+            },
+            "color": "blue"
+          }
+        ],
+        "motion": "none"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Podle Newtona pak vzduch tlačí křídlo *nahoru*.",
+        "en": "By Newton's third law, the air pushes the wing *up*.",
+        "ro": "După Newton, aerul împinge aripa *în sus*."
+      },
+      "headline": {
+        "cs": "AKCE A|REAKCE",
+        "en": "ACTION AND|REACTION",
+        "ro": "ACȚIUNE ȘI|REACȚIUNE"
+      },
+      "tag": "NEWTON III",
+      "accent": "teal",
+      "visual": {
+        "type": "formula",
+        "tex": "\\vec{F}_{12} = \\hl{-\\vec{F}_{21}}",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Nad křídlem je navíc *nižší tlak* než pod ním.",
+        "en": "Above the wing, the pressure is also *lower* than below.",
+        "ro": "Deasupra aripii presiunea e și *mai mică* decât dedesubt."
+      },
+      "headline": {
+        "cs": "NAHOŘE|PODTLAK",
+        "en": "LOW PRESSURE|ON TOP",
+        "ro": "PRESIUNE MICĂ|DEASUPRA"
+      },
+      "tag": "PRESSURE",
+      "accent": "red",
+      "visual": {
+        "type": "compare",
+        "left": {
+          "icon": "wind",
+          "label": {
+            "cs": "nad křídlem",
+            "en": "above",
+            "ro": "deasupra"
+          },
+          "value": {
+            "cs": "nízký tlak",
+            "en": "low pressure",
+            "ro": "presiune mică"
+          }
+        },
+        "right": {
+          "icon": "wind",
+          "label": {
+            "cs": "pod křídlem",
+            "en": "below",
+            "ro": "dedesubt"
+          },
+          "value": {
+            "cs": "vysoký tlak",
+            "en": "high pressure",
+            "ro": "presiune mare"
+          }
+        },
+        "winner": "none"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Mýtus o *stejném čase* obtékání je ale nesmysl.",
+        "en": "The *equal transit time* story is a myth, though.",
+        "ro": "Povestea cu *timpul egal* de parcurgere e un mit."
+      },
+      "headline": {
+        "cs": "POZOR|NA MÝTUS",
+        "en": "BEWARE|THE MYTH",
+        "ro": "ATENȚIE|LA MIT"
+      },
+      "tag": "MYTH BUSTED",
+      "accent": "red",
+      "visual": {
+        "type": "icon",
+        "icon": "question",
+        "icon2": null,
+        "relation": "none",
+        "effect": "shake",
+        "caption": {
+          "cs": "vzduch nahoře doběhne dřív, ne současně",
+          "en": "air on top arrives earlier, not together",
+          "ro": "aerul de sus ajunge mai devreme"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "K odletu stačí dopravnímu letadlu asi *270 km/h*.",
+        "en": "An airliner needs about *270 km/h* to take off.",
+        "ro": "Unui avion de linie îi ajung cam *270 km/h* la decolare."
+      },
+      "headline": {
+        "cs": "RYCHLOST|VZLETU",
+        "en": "TAKE-OFF|SPEED",
+        "ro": "VITEZA DE|DECOLARE"
+      },
+      "tag": "V_R",
+      "accent": "yellow",
+      "visual": {
+        "type": "gauge",
+        "from": 0,
+        "to": 270,
+        "max": 400,
+        "unit": {
+          "cs": " km/h",
+          "en": " km/h",
+          "ro": " km/h"
+        },
+        "caption": {
+          "cs": "čím rychleji, tím větší vztlak",
+          "en": "faster means more lift",
+          "ro": "mai repede = mai multă portanță"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Pošli to někomu, kdo to neví, a *sleduj* nás.",
+        "en": "Send this to someone who didn't know, and *follow*.",
+        "ro": "Trimite asta cuiva care nu știa și dă *follow*."
+      },
+      "headline": {
+        "cs": "DALŠÍ DÍL|UŽ BRZY",
+        "en": "NEXT EPISODE|SOON",
+        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

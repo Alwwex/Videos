@@ -1,0 +1,260 @@
+{
+  "engine": "blueprint",
+  "id": 20,
+  "title": {
+    "cs": "Proč Měsíc nespadne na Zem",
+    "en": "Why the Moon doesn't fall",
+    "ro": "De ce nu cade Luna pe Pământ"
+  },
+  "description": {
+    "cs": "Gravitace Měsíc táhne k nám. On ale padá… a pořád nás míjí. 🌙",
+    "en": "Gravity pulls the Moon toward us. It is falling… and keeps missing. 🌙",
+    "ro": "Gravitația trage Luna spre noi. Ea chiar cade… și ne ratează mereu. 🌙"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "mesic",
+    "gravitace",
+    "moon"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Gravitace Měsíc táhne k Zemi. Proč tedy *nespadne*?",
+        "en": "Gravity pulls the Moon toward Earth. So why doesn't it *fall*?",
+        "ro": "Gravitația trage Luna spre Pământ. De ce nu *cade*?"
+      },
+      "headline": {
+        "cs": "PROČ|NESPADNE?",
+        "en": "WHY DOESN'T|IT FALL?",
+        "ro": "DE CE|NU CADE?"
+      },
+      "tag": "EARTH–MOON",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "earth",
+        "icon2": "moon",
+        "relation": "arrow",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Ve skutečnosti Měsíc *padá pořád*.",
+        "en": "Actually, the Moon *is falling all the time*.",
+        "ro": "De fapt, Luna *cade tot timpul*."
+      },
+      "headline": {
+        "cs": "ON|PADÁ",
+        "en": "IT IS|FALLING",
+        "ro": "EA CHIAR|CADE"
+      },
+      "tag": "FREE FALL",
+      "accent": "red",
+      "visual": {
+        "type": "forces",
+        "body": "moon",
+        "arrows": [
+          {
+            "dir": "down",
+            "size": 2.5,
+            "label": {
+              "cs": "gravitace",
+              "en": "gravity",
+              "ro": "gravitație"
+            },
+            "color": "red"
+          }
+        ],
+        "motion": "down"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Jenže zároveň letí bokem rychlostí asi *kilometr za sekundu*.",
+        "en": "But it also flies sideways at about *one kilometer per second*.",
+        "ro": "Dar zboară și lateral cu aproape *un kilometru pe secundă*."
+      },
+      "headline": {
+        "cs": "LETÍ|BOKEM",
+        "en": "MOVING|SIDEWAYS",
+        "ro": "ZBOARĂ|LATERAL"
+      },
+      "tag": "ORBITAL SPEED",
+      "accent": "yellow",
+      "visual": {
+        "type": "gauge",
+        "from": 0,
+        "to": 3700,
+        "max": 5000,
+        "unit": {
+          "cs": " km/h",
+          "en": " km/h",
+          "ro": " km/h"
+        },
+        "caption": {
+          "cs": "1 km každou sekundu",
+          "en": "1 km every second",
+          "ro": "1 km în fiecare secundă"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Než stihne spadnout, Země pod ním *uhne* svým zakřivením.",
+        "en": "Before it can land, Earth's surface *curves away* beneath it.",
+        "ro": "Până să cadă, suprafața Pământului *se curbează* sub ea."
+      },
+      "headline": {
+        "cs": "ZEMĚ|UHÝBÁ",
+        "en": "EARTH|CURVES AWAY",
+        "ro": "PĂMÂNTUL|SE CURBEAZĂ"
+      },
+      "tag": "ORBIT",
+      "accent": "teal",
+      "visual": {
+        "type": "orbit",
+        "mode": "orbit",
+        "center": "earth",
+        "body": "moon",
+        "label": {
+          "cs": "rychlost bokem + gravitace = oběžná dráha",
+          "en": "sideways speed + gravity = orbit",
+          "ro": "viteză laterală + gravitație = orbită"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Newton to vysvětlil na *kanónu* na vysoké hoře.",
+        "en": "Newton explained it with a *cannon* on a tall mountain.",
+        "ro": "Newton a explicat asta cu un *tun* pe un munte înalt."
+      },
+      "headline": {
+        "cs": "NEWTONŮV|KANÓN",
+        "en": "NEWTON'S|CANNON",
+        "ro": "TUNUL|LUI NEWTON"
+      },
+      "tag": "THOUGHT EXPERIMENT",
+      "accent": "yellow",
+      "visual": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "pomalá koule spadne blízko",
+            "en": "slow ball lands close",
+            "ro": "bila lentă cade aproape"
+          },
+          {
+            "cs": "rychlejší doletí dál",
+            "en": "faster flies farther",
+            "ro": "cea rapidă zboară mai departe"
+          },
+          {
+            "cs": "dost rychlá obletí Zemi",
+            "en": "fast enough circles Earth",
+            "ro": "destul de rapidă ocolește Pământul"
+          }
+        ],
+        "active": 2
+      }
+    },
+    {
+      "narration": {
+        "cs": "Oběžná dráha je tedy *nekonečný pád*, který pořád míjí.",
+        "en": "So an orbit is *endless falling* that always misses.",
+        "ro": "Deci orbita e o *cădere fără sfârșit* care ratează mereu."
+      },
+      "headline": {
+        "cs": "NEKONEČNÝ|PÁD",
+        "en": "ENDLESS|FALLING",
+        "ro": "CĂDERE|FĂRĂ SFÂRȘIT"
+      },
+      "tag": "KEY IDEA",
+      "accent": "teal",
+      "visual": {
+        "type": "orbit",
+        "mode": "orbit",
+        "center": "earth",
+        "body": "moon",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Stejně padá i *vesmírná stanice* s astronauty.",
+        "en": "The *space station* with its astronauts falls the same way.",
+        "ro": "La fel cade și *stația spațială* cu astronauți."
+      },
+      "headline": {
+        "cs": "I STANICE|PADÁ",
+        "en": "THE ISS|FALLS TOO",
+        "ro": "ȘI STAȚIA|CADE"
+      },
+      "tag": "ISS · 28 000 km/h",
+      "accent": "blue",
+      "visual": {
+        "type": "orbit",
+        "mode": "orbit",
+        "center": "earth",
+        "body": "satellite",
+        "label": {
+          "cs": "proto se v ní vznášejí",
+          "en": "that's why they float inside",
+          "ro": "de aceea plutesc înăuntru"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "A Měsíc se od nás dokonce *vzdaluje*, asi 4 centimetry ročně.",
+        "en": "And the Moon is actually *drifting away*, about 4 centimeters a year.",
+        "ro": "Iar Luna chiar *se îndepărtează*, cam 4 centimetri pe an."
+      },
+      "headline": {
+        "cs": "MĚSÍC|UTÍKÁ",
+        "en": "THE MOON|IS LEAVING",
+        "ro": "LUNA|PLEACĂ"
+      },
+      "tag": "LUNAR RECESSION",
+      "accent": "red",
+      "visual": {
+        "type": "counter",
+        "from": 0,
+        "to": 3.8,
+        "decimals": 1,
+        "unit": {
+          "cs": " cm/rok",
+          "en": " cm/yr",
+          "ro": " cm/an"
+        },
+        "caption": {
+          "cs": "změřeno laserem odraženým od Měsíce",
+          "en": "measured with lasers bounced off the Moon",
+          "ro": "măsurat cu laser reflectat de pe Lună"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
+        "en": "Follow for more *physics around you*.",
+        "ro": "Urmărește pentru mai multă *fizică din jurul tău*."
+      },
+      "headline": {
+        "cs": "SLEDUJ|PRO VÍC",
+        "en": "FOLLOW|FOR MORE",
+        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

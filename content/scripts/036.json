@@ -1,0 +1,252 @@
+{
+  "engine": "blueprint",
+  "id": 36,
+  "title": {
+    "cs": "Jak Měsíc dělá příliv",
+    "en": "How the Moon makes tides",
+    "ro": "Cum face Luna mareele"
+  },
+  "description": {
+    "cs": "Měsíc zvedá celé oceány. A dělá to dokonce na dvou stranách Země najednou. 🌊🌙",
+    "en": "The Moon lifts entire oceans. And it does it on two sides of Earth at once. 🌊🌙",
+    "ro": "Luna ridică oceane întregi. Și o face pe două părți ale Pământului deodată. 🌊🌙"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "more",
+    "mesic",
+    "tides"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Dvakrát denně moře *stoupne* a zase ustoupí.",
+        "en": "Twice a day the sea *rises* and falls back again.",
+        "ro": "De două ori pe zi marea *crește* și scade din nou."
+      },
+      "headline": {
+        "cs": "PŘÍLIV|A ODLIV",
+        "en": "HIGH|AND LOW TIDE",
+        "ro": "FLUX|ȘI REFLUX"
+      },
+      "tag": "TIDES",
+      "accent": "blue",
+      "visual": {
+        "type": "icon",
+        "icon": "ship",
+        "icon2": "moon",
+        "relation": "none",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Za to může *gravitace Měsíce*.",
+        "en": "It's caused by the *Moon's gravity*.",
+        "ro": "Cauza e *gravitația Lunii*."
+      },
+      "headline": {
+        "cs": "MĚSÍC|TÁHNE",
+        "en": "THE MOON|PULLS",
+        "ro": "LUNA|TRAGE"
+      },
+      "tag": "LUNAR GRAVITY",
+      "accent": "yellow",
+      "visual": {
+        "type": "orbit",
+        "mode": "tides",
+        "center": "earth",
+        "body": "moon",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Na bližší stranu Země táhne *silněji* než na vzdálenější.",
+        "en": "It pulls *harder* on Earth's near side than on the far side.",
+        "ro": "Trage *mai tare* de partea apropiată decât de cea îndepărtată."
+      },
+      "headline": {
+        "cs": "BLÍŽ =|SILNĚJI",
+        "en": "CLOSER =|STRONGER",
+        "ro": "APROAPE =|MAI TARE"
+      },
+      "tag": "GRAVITY GRADIENT",
+      "accent": "red",
+      "visual": {
+        "type": "formula",
+        "tex": "F \\propto \\frac{1}{\\hl{r^2}}",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Voda se tím natáhne do dvou *boulí*, k Měsíci i od něj.",
+        "en": "This stretches the water into two *bulges*, toward and away.",
+        "ro": "Apa se întinde în două *umflături*, spre Lună și opus."
+      },
+      "headline": {
+        "cs": "DVĚ|BOULE",
+        "en": "TWO|BULGES",
+        "ro": "DOUĂ|UMFLĂTURI"
+      },
+      "tag": "TIDAL BULGE",
+      "accent": "teal",
+      "visual": {
+        "type": "orbit",
+        "mode": "tides",
+        "center": "earth",
+        "body": "moon",
+        "label": {
+          "cs": "na odvrácené straně voda „zaostává“",
+          "en": "on the far side the water lags behind",
+          "ro": "pe partea opusă apa rămâne în urmă"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Země se pod nimi otočí jednou za den, proto *dva přílivy*.",
+        "en": "Earth turns under them once a day, giving *two high tides*.",
+        "ro": "Pământul se rotește sub ele zilnic, deci *două fluxuri*."
+      },
+      "headline": {
+        "cs": "DVA PŘÍLIVY|DENNĚ",
+        "en": "TWO TIDES|A DAY",
+        "ro": "DOUĂ FLUXURI|PE ZI"
+      },
+      "tag": "≈ 12 h 25 min",
+      "accent": "yellow",
+      "visual": {
+        "type": "graph",
+        "curve": "sine",
+        "curve2": null,
+        "x": {
+          "cs": "hodiny",
+          "en": "hours",
+          "ro": "ore"
+        },
+        "y": {
+          "cs": "hladina",
+          "en": "sea level",
+          "ro": "nivel"
+        },
+        "markLabel": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Slunce pomáhá taky. Při úplňku je příliv *nejvyšší*.",
+        "en": "The Sun helps too. At full and new moon, tides are *highest*.",
+        "ro": "Ajută și Soarele. La lună plină, mareele sunt *cele mai mari*."
+      },
+      "headline": {
+        "cs": "SKOČNÝ|PŘÍLIV",
+        "en": "SPRING|TIDES",
+        "ro": "MAREE|MARI"
+      },
+      "tag": "SUN + MOON",
+      "accent": "red",
+      "visual": {
+        "type": "icon",
+        "icon": "sun",
+        "icon2": "moon",
+        "relation": "plus",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "V zálivu Fundy v Kanadě stoupne moře o *16 metrů*.",
+        "en": "In Canada's Bay of Fundy the sea rises *16 meters*.",
+        "ro": "În Golful Fundy din Canada, marea crește cu *16 metri*."
+      },
+      "headline": {
+        "cs": "REKORD|16 METRŮ",
+        "en": "RECORD|16 METERS",
+        "ro": "RECORD|16 METRI"
+      },
+      "tag": "BAY OF FUNDY",
+      "accent": "blue",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "běžné pobřeží",
+              "en": "typical coast",
+              "ro": "coastă obișnuită"
+            },
+            "value": 2,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "Fundy",
+              "en": "Fundy",
+              "ro": "Fundy"
+            },
+            "value": 16,
+            "highlight": true
+          }
+        ],
+        "unit": {
+          "cs": " m",
+          "en": " m",
+          "ro": " m"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "A tření přílivu pomalu *brzdí* rotaci Země.",
+        "en": "And tidal friction slowly *brakes* Earth's spin.",
+        "ro": "Iar frecarea mareelor *frânează* încet rotația Pământului."
+      },
+      "headline": {
+        "cs": "DEN SE|PRODLUŽUJE",
+        "en": "DAYS ARE|GETTING LONGER",
+        "ro": "ZIUA SE|LUNGEȘTE"
+      },
+      "tag": "TIDAL BRAKING",
+      "accent": "teal",
+      "visual": {
+        "type": "counter",
+        "from": 0,
+        "to": 1.8,
+        "decimals": 1,
+        "unit": {
+          "cs": " ms/století",
+          "en": " ms/century",
+          "ro": " ms/secol"
+        },
+        "caption": {
+          "cs": "o tolik se den prodlouží",
+          "en": "how much longer a day gets",
+          "ro": "cu atât se lungește ziua"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
+        "en": "Follow for more *physics around you*.",
+        "ro": "Urmărește pentru mai multă *fizică din jurul tău*."
+      },
+      "headline": {
+        "cs": "SLEDUJ|PRO VÍC",
+        "en": "FOLLOW|FOR MORE",
+        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

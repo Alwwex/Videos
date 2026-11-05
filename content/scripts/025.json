@@ -1,0 +1,231 @@
+{
+  "engine": "blueprint",
+  "id": 25,
+  "title": {
+    "cs": "Proč hvězdy blikají",
+    "en": "Why stars twinkle",
+    "ro": "De ce sclipesc stelele"
+  },
+  "description": {
+    "cs": "Hvězdy samy neblikají. Bliká to až v naší atmosféře. ✨",
+    "en": "Stars don't actually flicker. It happens in our atmosphere. ✨",
+    "ro": "Stelele nu pâlpâie de fapt. Se întâmplă în atmosfera noastră. ✨"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "hvezdy",
+    "vesmir",
+    "stars"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Hvězdy na nebi *blikají*. Ale samy to nedělají.",
+        "en": "Stars *twinkle* in the night sky. But they don't do it themselves.",
+        "ro": "Stelele *sclipesc* pe cer. Dar nu fac asta singure."
+      },
+      "headline": {
+        "cs": "PROČ|BLIKAJÍ?",
+        "en": "WHY DO THEY|TWINKLE?",
+        "ro": "DE CE|SCLIPESC?"
+      },
+      "tag": "NIGHT SKY",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "star",
+        "icon2": null,
+        "relation": "none",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Jejich světlo letí vesmírem *klidně a rovně*.",
+        "en": "Their light travels through space *calm and straight*.",
+        "ro": "Lumina lor călătorește prin spațiu *calm și drept*."
+      },
+      "headline": {
+        "cs": "VE VESMÍRU|KLID",
+        "en": "IN SPACE|ALL CALM",
+        "ro": "ÎN SPAȚIU|CALM"
+      },
+      "tag": "VACUUM",
+      "accent": "blue",
+      "visual": {
+        "type": "rays",
+        "mode": "refract",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Až na posledních pár kilometrů projde naší *atmosférou*.",
+        "en": "Only for the last few kilometers does it cross our *atmosphere*.",
+        "ro": "Doar ultimii kilometri trece prin *atmosfera* noastră."
+      },
+      "headline": {
+        "cs": "POSLEDNÍ|KILOMETRY",
+        "en": "THE LAST|KILOMETERS",
+        "ro": "ULTIMII|KILOMETRI"
+      },
+      "tag": "ATMOSPHERE",
+      "accent": "teal",
+      "visual": {
+        "type": "icon",
+        "icon": "star",
+        "icon2": "earth",
+        "relation": "arrow",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Vzduch v ní neustále *víří*, teplý a studený se míchá.",
+        "en": "That air is constantly *churning*, warm and cold mixing.",
+        "ro": "Aerul acolo *se agită* continuu, cald și rece amestecat."
+      },
+      "headline": {
+        "cs": "VZDUCH|VÍŘÍ",
+        "en": "AIR|CHURNS",
+        "ro": "AERUL|SE AGITĂ"
+      },
+      "tag": "TURBULENCE",
+      "accent": "red",
+      "visual": {
+        "type": "particles",
+        "mode": "rise",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Každá vrstva *ohne* světlo trochu jinak.",
+        "en": "Each pocket of air *bends* the light a little differently.",
+        "ro": "Fiecare strat *curbează* lumina puțin altfel."
+      },
+      "headline": {
+        "cs": "SVĚTLO SE|OHÝBÁ",
+        "en": "LIGHT|BENDS",
+        "ro": "LUMINA|SE CURBEAZĂ"
+      },
+      "tag": "REFRACTION",
+      "accent": "yellow",
+      "visual": {
+        "type": "rays",
+        "mode": "refract",
+        "label": {
+          "cs": "teplý a studený vzduch lámou světlo jinak",
+          "en": "warm and cold air bend light differently",
+          "ro": "aerul cald și rece refractă diferit"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Paprsek hvězdy tak k tvému oku *poskakuje* sem a tam.",
+        "en": "So the star's beam *jumps around* on its way to your eye.",
+        "ro": "Așa raza stelei *sare* încoace și încolo spre ochiul tău."
+      },
+      "headline": {
+        "cs": "PAPRSEK|POSKAKUJE",
+        "en": "THE BEAM|DANCES",
+        "ro": "RAZA|DANSEAZĂ"
+      },
+      "tag": "SCINTILLATION",
+      "accent": "blue",
+      "visual": {
+        "type": "rays",
+        "mode": "twinkle",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Planety blikají méně, protože nejsou jen *bod*.",
+        "en": "Planets twinkle less, because they're not just a *point*.",
+        "ro": "Planetele sclipesc mai puțin, fiindcă nu sunt doar un *punct*."
+      },
+      "headline": {
+        "cs": "PLANETY|NEBLIKAJÍ",
+        "en": "PLANETS|DON'T TWINKLE",
+        "ro": "PLANETELE|NU SCLIPESC"
+      },
+      "tag": "STAR VS PLANET",
+      "accent": "teal",
+      "visual": {
+        "type": "compare",
+        "left": {
+          "icon": "star",
+          "label": {
+            "cs": "hvězda",
+            "en": "star",
+            "ro": "stea"
+          },
+          "value": {
+            "cs": "bod",
+            "en": "a point",
+            "ro": "un punct"
+          }
+        },
+        "right": {
+          "icon": "earth",
+          "label": {
+            "cs": "planeta",
+            "en": "planet",
+            "ro": "planetă"
+          },
+          "value": {
+            "cs": "malý disk",
+            "en": "a tiny disk",
+            "ro": "un disc mic"
+          }
+        },
+        "winner": "right"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Astronauti ve vesmíru vidí hvězdy svítit *úplně klidně*.",
+        "en": "Astronauts in space see stars shine *perfectly still*.",
+        "ro": "Astronauții din spațiu văd stelele strălucind *complet nemișcat*."
+      },
+      "headline": {
+        "cs": "Z VESMÍRU|NEBLIKAJÍ",
+        "en": "FROM SPACE|NO TWINKLE",
+        "ro": "DIN SPAȚIU|NU SCLIPESC"
+      },
+      "tag": "ISS VIEW",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "satellite",
+        "icon2": "star",
+        "relation": "none",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Překvapilo tě to? Dej *sledovat* pro další díl.",
+        "en": "Surprised? Hit *follow* for the next one.",
+        "ro": "Te-a surprins? Dă *follow* pentru următorul."
+      },
+      "headline": {
+        "cs": "DALŠÍ DÍL|UŽ BRZY",
+        "en": "NEXT EPISODE|SOON",
+        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

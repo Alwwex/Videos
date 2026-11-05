@@ -1,0 +1,283 @@
+{
+  "engine": "blueprint",
+  "id": 29,
+  "title": {
+    "cs": "Proč tě v letadle bolí uši",
+    "en": "Why your ears hurt on planes",
+    "ro": "De ce te dor urechile în avion"
+  },
+  "description": {
+    "cs": "Za bolestí uší v letadle je tlak vzduchu. A taky jednoduchý trik, jak ji zastavit. ✈️",
+    "en": "Air pressure is behind plane ear pain. Here's a simple trick to stop it. ✈️",
+    "ro": "Presiunea aerului e de vină pentru durerea de urechi. Iată un truc simplu. ✈️"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "letadlo",
+    "tlak",
+    "airplane"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Přistáváš a uši tě najednou *bolí* a zalehnou.",
+        "en": "You're landing and suddenly your ears *hurt* and feel blocked.",
+        "ro": "Aterizezi și deodată te *dor* urechile și se înfundă."
+      },
+      "headline": {
+        "cs": "BOLÍ|TĚ UŠI?",
+        "en": "EARS|HURTING?",
+        "ro": "TE DOR|URECHILE?"
+      },
+      "tag": "DESCENT",
+      "accent": "red",
+      "visual": {
+        "type": "icon",
+        "icon": "plane",
+        "icon2": "ear",
+        "relation": "arrow",
+        "effect": "shake",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Za všechno může *tlak vzduchu*.",
+        "en": "It's all about *air pressure*.",
+        "ro": "Totul ține de *presiunea aerului*."
+      },
+      "headline": {
+        "cs": "VINÍK:|TLAK",
+        "en": "THE CULPRIT:|PRESSURE",
+        "ro": "VINOVATUL:|PRESIUNEA"
+      },
+      "tag": "BAROMETRIC PRESSURE",
+      "accent": "yellow",
+      "visual": {
+        "type": "particles",
+        "mode": "pressure",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "V kabině letadla je tlak jako na *vysoké hoře*.",
+        "en": "Cabin pressure is like being on a *high mountain*.",
+        "ro": "Presiunea în cabină e ca pe un *munte înalt*."
+      },
+      "headline": {
+        "cs": "KABINA =|HORA",
+        "en": "CABIN =|MOUNTAIN",
+        "ro": "CABINA =|MUNTE"
+      },
+      "tag": "≈ 2 000 m",
+      "accent": "blue",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "u moře",
+              "en": "sea level",
+              "ro": "nivelul mării"
+            },
+            "value": 101,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "kabina",
+              "en": "cabin",
+              "ro": "cabină"
+            },
+            "value": 78,
+            "highlight": true
+          }
+        ],
+        "unit": {
+          "cs": " kPa",
+          "en": " kPa",
+          "ro": " kPa"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Za bubínkem máš malou kapsu *uzavřeného vzduchu*.",
+        "en": "Behind your eardrum is a small pocket of *trapped air*.",
+        "ro": "În spatele timpanului e o pungă de *aer prins*."
+      },
+      "headline": {
+        "cs": "VZDUCH ZA|BUBÍNKEM",
+        "en": "AIR BEHIND|THE EARDRUM",
+        "ro": "AER ÎN SPATELE|TIMPANULUI"
+      },
+      "tag": "MIDDLE EAR",
+      "accent": "teal",
+      "visual": {
+        "type": "icon",
+        "icon": "ear",
+        "icon2": null,
+        "relation": "none",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Při klesání tlak venku *roste* a bubínek tlačí dovnitř.",
+        "en": "As you descend, outside pressure *rises* and pushes the eardrum in.",
+        "ro": "La coborâre, presiunea de afară *crește* și împinge timpanul."
+      },
+      "headline": {
+        "cs": "BUBÍNEK|SE PROHNE",
+        "en": "THE EARDRUM|BENDS",
+        "ro": "TIMPANUL|SE ÎNDOAIE"
+      },
+      "tag": "PRESSURE DIFFERENCE",
+      "accent": "red",
+      "visual": {
+        "type": "forces",
+        "body": "ear",
+        "arrows": [
+          {
+            "dir": "right",
+            "size": 2.2,
+            "label": {
+              "cs": "tlak venku",
+              "en": "outside",
+              "ro": "afară"
+            },
+            "color": "red"
+          },
+          {
+            "dir": "left",
+            "size": 0.8,
+            "label": {
+              "cs": "uvnitř",
+              "en": "inside",
+              "ro": "înăuntru"
+            },
+            "color": "blue"
+          }
+        ],
+        "motion": "shake"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Tlak vyrovná malá trubička do krku, *Eustachova trubice*.",
+        "en": "A tiny tube to your throat, the *Eustachian tube*, evens it out.",
+        "ro": "Un tub mic spre gât, *trompa lui Eustachio*, egalizează presiunea."
+      },
+      "headline": {
+        "cs": "EUSTACHOVA|TRUBICE",
+        "en": "EUSTACHIAN|TUBE",
+        "ro": "TROMPA LUI|EUSTACHIO"
+      },
+      "tag": "PRESSURE VALVE",
+      "accent": "teal",
+      "visual": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "tlak se změní",
+            "en": "pressure changes",
+            "ro": "presiunea se schimbă"
+          },
+          {
+            "cs": "trubice se otevře",
+            "en": "the tube opens",
+            "ro": "trompa se deschide"
+          },
+          {
+            "cs": "lupnutí a úleva",
+            "en": "pop and relief",
+            "ro": "pocnet și ușurare"
+          }
+        ],
+        "active": 1
+      }
+    },
+    {
+      "narration": {
+        "cs": "Otevře se, když *polykáš* nebo zíváš.",
+        "en": "It opens when you *swallow* or yawn.",
+        "ro": "Se deschide când *înghiți* sau caști."
+      },
+      "headline": {
+        "cs": "POLKNI|NEBO ZÍVNI",
+        "en": "SWALLOW|OR YAWN",
+        "ro": "ÎNGHITE|SAU CAȘCĂ"
+      },
+      "tag": "THE TRICK",
+      "accent": "yellow",
+      "visual": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "tlak se změní",
+            "en": "pressure changes",
+            "ro": "presiunea se schimbă"
+          },
+          {
+            "cs": "trubice se otevře",
+            "en": "the tube opens",
+            "ro": "trompa se deschide"
+          },
+          {
+            "cs": "lupnutí a úleva",
+            "en": "pop and relief",
+            "ro": "pocnet și ușurare"
+          }
+        ],
+        "active": 2
+      }
+    },
+    {
+      "narration": {
+        "cs": "Proto pomáhá *žvýkačka* nebo bonbón při přistání.",
+        "en": "That's why *chewing gum* or candy helps during landing.",
+        "ro": "De aceea ajută *guma de mestecat* la aterizare."
+      },
+      "headline": {
+        "cs": "ŽVÝKAČKA|POMÁHÁ",
+        "en": "GUM|HELPS",
+        "ro": "GUMA|AJUTĂ"
+      },
+      "tag": "PRO TIP",
+      "accent": "teal",
+      "visual": {
+        "type": "icon",
+        "icon": "plane",
+        "icon2": null,
+        "relation": "none",
+        "effect": "float",
+        "caption": {
+          "cs": "a miminkům pití z lahve",
+          "en": "and for babies, a bottle",
+          "ro": "iar bebelușilor, biberonul"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Překvapilo tě to? Dej *sledovat* pro další díl.",
+        "en": "Surprised? Hit *follow* for the next one.",
+        "ro": "Te-a surprins? Dă *follow* pentru următorul."
+      },
+      "headline": {
+        "cs": "DALŠÍ DÍL|UŽ BRZY",
+        "en": "NEXT EPISODE|SOON",
+        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

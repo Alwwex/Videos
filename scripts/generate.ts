@@ -1,50 +1,79 @@
 /**
- * AI generátor scénářů: nápad z napady/napady.json → content/scripts/NNN.json (CZ/EN/RO).
- *   npm run generate -- 1-10
- *   npm run generate -- all --concurrency 3
- *   npm run generate -- 5 --force      (přepíše existující)
+ * AI generátor scénářů (Claude): nápad z napady/napady.json → content/scripts/NNN.json (CZ/EN/RO).
+ *   npm run generate -- 45-50
+ *   npm run generate -- next 3        (3 další nápady, které ještě nemají scénář)
+ *   npm run generate -- 45 --force    (přepíše existující)
+ * Útrata se zapisuje do out/ai-usage.json, rozpočet hlídá AI_BUDGET_USD (výchozí 2.1).
  */
 import fs from 'node:fs';
+import path from 'node:path';
 import Anthropic from '@anthropic-ai/sdk';
 import {betaZodOutputFormat} from '@anthropic-ai/sdk/helpers/beta/zod';
-import {PROP_TYPES, VideoScriptSchema, checkScript, type VideoScript} from '../src/engine/schema';
-import {ANCHOR_Y} from '../src/engine/anim';
-import {loadIdeas, parseArgs, pool, scriptPath, writeJson, type Idea} from './lib';
+import {CURVES, ICONS, ShortScriptSchema, checkShortScript, type ShortScript} from '../src/v2/schema';
+import {ROOT, allScriptIds, loadIdeas, parseArgs, pool, scriptPath, writeJson, type Idea} from './lib';
 
 const MODEL = process.env.CLAUDE_MODEL || 'claude-opus-5-5';
 const EFFORT = (process.env.CLAUDE_EFFORT || 'medium') as 'low' | 'medium' | 'high';
+// ceny Claude Opus 5.5 v USD za milion tokenů (vstup, výstup, čtení z cache, zápis do cache 1 h)
+const PRICE = {in: 4, out: 20, cacheRead: 0.2, cacheWrite: 8};
+const BUDGET = Number(process.env.AI_BUDGET_USD || 2.1);
+const USAGE = path.join(ROOT, 'out', 'ai-usage.json');
 
-const example = fs.readFileSync(scriptPath(1), 'utf8');
+type UsageRow = {id: number; usd: number; at: string; model: string};
+export const aiSpent = (): number => {
+  try {
+    return (JSON.parse(fs.readFileSync(USAGE, 'utf8')) as UsageRow[]).reduce((n, r) => n + r.usd, 0);
+  } catch {
+    return 0;
+  }
+};
+const logUsage = (row: UsageRow) => {
+  let all: UsageRow[] = [];
+  try {
+    all = JSON.parse(fs.readFileSync(USAGE, 'utf8'));
+  } catch {
+    /* první záznam */
+  }
+  all.push(row);
+  fs.mkdirSync(path.dirname(USAGE), {recursive: true});
+  fs.writeFileSync(USAGE, JSON.stringify(all, null, 1));
+};
 
-const SYSTEM = `You write scripts for "Physics around you" (Czech: "Fyzika kolem tebe"), a series of ~60-second vertical (9:16) explainer videos for TikTok, Instagram Reels and YouTube Shorts. Each video explains one everyday physics phenomenon to curious teens and adults. Every video is published in Czech (cs), English (en) and Romanian (ro).
+const example = fs.readFileSync(scriptPath(17), 'utf8');
 
-Your output is a JSON script rendered automatically by a 3D engine (low-poly world, warm light, slow camera moves). You cannot invent 3D models; you compose each scene from a fixed library of props and effects.
+const SYSTEM = `You write scripts for "Physics around you" (Czech: "Fyzika kolem tebe"), a series of SHORT (25-30 second) vertical explainer videos for TikTok, Instagram Reels and YouTube Shorts. Each video explains one everyday physics phenomenon to curious teens and adults. Every video is published in Czech (cs), English (en) and Romanian (ro).
 
-## Story
-- 14-16 scenes. Each scene's narration is ONE short spoken sentence of 5-11 words (about 2.5-4.5 s of speech). Total per language: about 140-160 words, so the video lasts about 60 s.
-- Scene 1 is a hook: a surprising question or claim that makes people keep watching. The last scene is a short call to action to follow for more (vary the wording between videos).
-- Build a clear chain of cause and effect, one idea per scene. Use concrete numbers when they help, and show them with the counter.
-- The physics must be correct. Do not repeat popular myths (for example "microwaves heat from the inside"). Simplify, but never say something false.
-- Write each language natively and naturally (casual "ty" form in Czech, "tu" in Romanian), not as a word-for-word translation. Use correct diacritics (ř, ů, ș, ț, ă, î, â).
-- In every narration mark 1-2 key words with *asterisks* (they are shown in yellow). Do not put emoji, abbreviations or symbols such as "%" or "°C" in the narration; write them out as words. Digits are fine.
+The look is a clean technical "engineer's notebook": a big two-line headline at the top, one animated diagram in the middle, word-by-word subtitles at the bottom. You compose each scene from a fixed set of diagram widgets ("visual").
 
-## World and coordinates
-- Meters. Ground or floor is y=0. +x is right, +y is up, +z is toward the default camera.
-- environment: "outdoor" (grass island), "indoor" (wooden floor and a back wall at z=-6), "space" (stars, no ground; let props float).
-- The frame is tall and narrow. At camera distance d, the visible width is only about ±0.23·d around the focus, and the height about ±0.4·d. Keep every prop you want visible inside that box, and use 1-4 props per scene.
-- A "table" prop has its top at y=0.85; put objects that stand on it at y=0.85.
-- Prop sizes at scale 1 (approximate height; the camera and labels aim at the prop's center):
-${PROP_TYPES.map((t) => `  - ${t} (center at y+${ANCHOR_Y[t]})`).join('\n')}
-  Notes: sun, moon, earth, cloud, plane, satellite, atom, lens, snowflake, lightning and the arrows are centered on their position, so give them a y above the ground. Use "atom" for any atom or molecule. Arrows show forces and directions ("arrow" points to +x; rotate it with rotationY). "cup" can also stand in for a plate or a bowl with a color override. "waterPool" is a 4×3 m slab of water.
-- anim: none | spin | bob | pulse | shake | slide (slide moves the prop from position to slideTo during the scene; otherwise slideTo is null). glow makes the prop shine (bulbs light up, microwaves and stoves turn on, and so on).
-- flows: a stream of particles from one prop to another (photons, electrons, heat, cold, water, air, sound, light, microwaves).
-- waves: rings expanding from a prop (sound, radio, heat, light, microwaves).
-- camera: focus = a prop id. Distance: small objects 2.5-4, people and appliances 4-6, a house 8-12, big outdoor or space scenes 10-18. Vary angle and move from scene to scene. Every scene's camera moves slowly; there is no static option.
-- labels: at most 2 per scene. Each label is a short tag (max 18 characters) with one emoji, pointing at a prop. Don't add one to every scene.
-- counter: a big animated number (from → to) with a unit and a short caption. Use it in about 3-5 scenes, and only with real, meaningful values that match the narration. Otherwise null.
-- Props are defined separately in each scene, and ids only need to be unique within the scene. Keep the same objects at the same positions across consecutive scenes so the world feels continuous.
+## Story rules
+- Exactly 8 content scenes plus a final scene whose visual is {"type":"outro"} (9 scenes total).
+- Each narration is ONE short spoken sentence of 5-11 words (about 2-3.5 s). Total about 65-80 words per language.
+- Scene 1 is a strong hook: a surprising claim or a question (a "quiz" visual works great). Then a clear chain of cause and effect, one idea per scene, with concrete numbers where they help. The outro narration asks to follow (vary the wording).
+- The physics must be correct. Bust myths instead of repeating them. Simplify, but never say something false.
+- Write each language natively (casual "ty" in Czech, "tu" in Romanian) with correct diacritics. Mark 1-2 key words per narration with *asterisks*. No emoji in narration; no symbols like "%" or "°C" in narration (write them as words). Digits are fine.
+- headline: UPPERCASE, 2-5 words, two lines split by "|" (second line is colored). Keep each line under ~16 characters.
+- tag: short technical English label in UPPERCASE (e.g. "RAYLEIGH SCATTERING", "F = m·a"), or null.
+- accent: yellow | teal | red | blue — vary it between scenes.
 
-## Example of a complete, correct script (idea #1)
+## Visual widgets
+- icon: one big line-art pictogram (or two with relation arrow/vs/plus), effect pulse/shake/spin/float/none, optional caption.
+- formula: KaTeX formula; wrap the key term in \\hl{...}. Optional caption.
+- counter: big animated number from → to with unit and caption. gauge: speedometer dial (from, to, max).
+- graph: axes + animated curve (${CURVES.join(', ')}), optional dashed curve2, axis labels, markLabel.
+- bars: 2-4 horizontal bars with values (highlight the important one). compare: two cards with icon/label/value, optional winner.
+- steps: 2-4 numbered steps with the active one highlighted (reuse the same items in consecutive scenes with a growing "active").
+- forces: free-body diagram: body icon + 1-4 arrows (dir, size 1-3, label, color), motion.
+- wave: single | compare (long vs short wave) | cancel (noise + anti-noise = silence) | doppler (moving siren) | blocked (WiFi through a wall).
+- particles: solid | liquid | gas | hotcold (slow cold vs fast hot molecules) | rise (convection) | pressure (molecules hitting a wall) | evaporate.
+- orbit: orbit (body circling center with velocity + gravity arrows) | tilt (Earth's tilted axis around the Sun) | tides (water bulge toward the Moon) | spin (rotating Earth).
+- rays: scatter (blue sky) | sunset | prism (rainbow) | refract | mirror | twinkle.
+- field: magnet | coil (wireless charging) | charge (static spark to a door handle) | spark (lightning).
+- fall: two objects falling side by side, with or without air.
+- quiz: question + 2-4 options + answer index (the answer is revealed at the end of the scene).
+- outro: follow card (last scene only).
+Icons available: ${ICONS.join(', ')}.
+
+## Example of a complete, correct script
 ${example}`;
 
 const client = new Anthropic();
@@ -55,69 +84,90 @@ const generateOne = async (idea: Idea, force: boolean) => {
     console.log(`⏭️  #${idea.id} už existuje (použij --force)`);
     return;
   }
+  if (aiSpent() >= BUDGET) {
+    console.error(`💸 Rozpočet AI_BUDGET_USD=${BUDGET} $ je vyčerpaný (utraceno ${aiSpent().toFixed(2)} $). Navyš ho v nastavení.`);
+    return;
+  }
   let feedback = '';
   for (let attempt = 1; attempt <= 3; attempt++) {
     const t0 = Date.now();
     const stream = client.beta.messages.stream({
       model: MODEL,
-      max_tokens: 64000,
+      max_tokens: 32000,
       betas: ['server-side-fallback-2026-07-01'],
       fallbacks: 'default',
       thinking: {type: 'adaptive'},
-      output_config: {effort: EFFORT, format: betaZodOutputFormat(VideoScriptSchema)},
+      output_config: {effort: EFFORT, format: betaZodOutputFormat(ShortScriptSchema)},
       system: [{type: 'text', text: SYSTEM, cache_control: {type: 'ephemeral', ttl: '1h'}}],
       messages: [
         {
           role: 'user',
-          content: `Write the script for idea #${idea.id} (category: ${idea.kategorie}). Topic (in Czech): "${idea.tema}". Use id ${idea.id}.${feedback}`,
+          content: `Write the script for idea #${idea.id} (category: ${idea.kategorie}). Topic (in Czech): "${idea.tema}". Use id ${idea.id} and engine "blueprint".${feedback}`,
         },
       ],
     });
     const msg = await stream.finalMessage();
-    const secs = ((Date.now() - t0) / 1000).toFixed(0);
     const u = msg.usage;
-    const usage = `in ${u.input_tokens} (+cache ${u.cache_read_input_tokens ?? 0}), out ${u.output_tokens}`;
+    const usd =
+      ((u.input_tokens ?? 0) * PRICE.in + (u.output_tokens ?? 0) * PRICE.out + (u.cache_read_input_tokens ?? 0) * PRICE.cacheRead + (u.cache_creation_input_tokens ?? 0) * PRICE.cacheWrite) / 1e6;
+    logUsage({id: idea.id, usd, at: new Date().toISOString(), model: MODEL});
+    const secs = ((Date.now() - t0) / 1000).toFixed(0);
 
     if (msg.stop_reason === 'refusal') {
-      console.warn(`⚠️  #${idea.id} AI odmítla téma (${msg.stop_details?.category ?? '?'}), přeskakuji.`);
+      console.warn(`⚠️  #${idea.id} AI odmítla téma, přeskakuji.`);
       return;
     }
     if (msg.stop_reason === 'max_tokens') {
       feedback = '\n\nYour previous answer was too long and got cut off. Be more concise.';
       continue;
     }
-    const script = msg.parsed_output as VideoScript | null;
+    const script = msg.parsed_output as ShortScript | null;
     if (!script) {
       feedback = '\n\nYour previous answer was not valid JSON for the schema. Try again.';
       continue;
     }
     script.id = idea.id;
-    const errors = checkScript(script);
+    script.engine = 'blueprint';
+    const errors = checkShortScript(script);
     if (errors.length) {
       console.warn(`🔁 #${idea.id} pokus ${attempt}: ${errors.length} chyb – opravuji`);
       feedback = `\n\nA previous attempt had these problems; avoid them:\n- ${errors.join('\n- ')}`;
       continue;
     }
     writeJson(file, script);
-    console.log(`✅ #${idea.id} "${script.title.cs}" – ${script.scenes.length} scén, ${secs}s, ${usage}`);
+    console.log(`✅ #${idea.id} "${script.title.cs}" – ${script.scenes.length} scén, ${secs}s, ${usd.toFixed(3)} $ (celkem ${aiSpent().toFixed(2)} $ z ${BUDGET} $)`);
     return;
   }
   console.error(`❌ #${idea.id} se nepodařilo vygenerovat ani na 3 pokusy.`);
 };
 
 const main = async () => {
-  const {ids, force, concurrency} = parseArgs();
+  const argv = process.argv.slice(2);
+  let ideas: Idea[];
+  let force = false;
+  let concurrency = 2;
+  const done = new Set(allScriptIds());
+  if (argv[0] === 'next') {
+    const n = Number(argv[1] || 1);
+    ideas = loadIdeas().filter((i) => !done.has(i.id)).slice(0, n);
+    force = argv.includes('--force');
+  } else {
+    const a = parseArgs();
+    force = a.force;
+    concurrency = a.concurrency || 2;
+    ideas = loadIdeas().filter((i) => a.ids.includes(i.id));
+  }
   if (!process.env.ANTHROPIC_API_KEY && !process.env.ANTHROPIC_AUTH_TOKEN) {
-    console.error('❌ Chybí ANTHROPIC_API_KEY. Zkopíruj .env.example do .env a doplň klíč z https://console.anthropic.com');
+    console.error('❌ Chybí ANTHROPIC_API_KEY. Doplň ho ve Studiu → Nastavení (nebo v souboru .env).');
     process.exit(1);
   }
-  const ideas = loadIdeas().filter((i) => ids.includes(i.id));
-  await pool(ideas, concurrency || 3, async (idea) => {
+  if (!ideas.length) return console.log('Žádné nápady k vygenerování (doplň je do napady/napady.json).');
+  await pool(ideas, concurrency, async (idea) => {
     try {
       await generateOne(idea, force);
     } catch (e) {
       if (e instanceof Anthropic.AuthenticationError) {
-        console.error('❌ Chybí nebo neplatný ANTHROPIC_API_KEY (viz .env.example).');
+        console.error('❌ Neplatný ANTHROPIC_API_KEY.');
         process.exit(1);
       } else if (e instanceof Anthropic.RateLimitError) console.error(`⏳ #${idea.id} rate limit – zkus to znovu později.`);
       else if (e instanceof Anthropic.APIError) console.error(`❌ #${idea.id} API ${e.status}: ${e.message}`);

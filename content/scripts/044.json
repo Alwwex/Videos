@@ -1,0 +1,264 @@
+{
+  "engine": "blueprint",
+  "id": 44,
+  "title": {
+    "cs": "Proč zrcadlo prohazuje levou a pravou",
+    "en": "Does a mirror flip left and right?",
+    "ro": "Oglinda inversează stânga cu dreapta?"
+  },
+  "description": {
+    "cs": "Zrcadlo ve skutečnosti levou a pravou neprohazuje. Prohazuje něco jiného. 🪞",
+    "en": "A mirror doesn't actually swap left and right. It swaps something else. 🪞",
+    "ro": "Oglinda nu inversează de fapt stânga cu dreapta. Inversează altceva. 🪞"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "zrcadlo",
+    "optika",
+    "mirror"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Proč zrcadlo prohodí levou a pravou, ale *ne nahoru a dolů*?",
+        "en": "Why does a mirror swap left and right, but *not up and down*?",
+        "ro": "De ce oglinda inversează stânga cu dreapta, dar *nu sus cu jos*?"
+      },
+      "headline": {
+        "cs": "PROČ NE|NAHORU-DOLŮ?",
+        "en": "WHY NOT|UP AND DOWN?",
+        "ro": "DE CE NU|SUS-JOS?"
+      },
+      "tag": "PUZZLE",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "mirror",
+        "icon2": "person",
+        "relation": "none",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Odpověď: neprohazuje *ani jedno*.",
+        "en": "The answer: it swaps *neither*.",
+        "ro": "Răspunsul: nu inversează *niciuna*."
+      },
+      "headline": {
+        "cs": "NEPROHAZUJE|NIC",
+        "en": "IT SWAPS|NEITHER",
+        "ro": "NU INVERSEAZĂ|NIMIC"
+      },
+      "tag": "PLOT TWIST",
+      "accent": "red",
+      "visual": {
+        "type": "quiz",
+        "question": {
+          "cs": "Co zrcadlo opravdu prohodí?",
+          "en": "What does a mirror really flip?",
+          "ro": "Ce inversează oglinda cu adevărat?"
+        },
+        "options": [
+          {
+            "cs": "levou a pravou",
+            "en": "left and right",
+            "ro": "stânga și dreapta"
+          },
+          {
+            "cs": "nahoru a dolů",
+            "en": "up and down",
+            "ro": "sus și jos"
+          },
+          {
+            "cs": "předek a zadek",
+            "en": "front and back",
+            "ro": "față și spate"
+          }
+        ],
+        "answer": 2
+      }
+    },
+    {
+      "narration": {
+        "cs": "Zvedni pravou ruku. Odraz zvedne ruku *na stejné straně*.",
+        "en": "Raise your right hand. The image raises the hand *on the same side*.",
+        "ro": "Ridică mâna dreaptă. Imaginea ridică mâna *de aceeași parte*."
+      },
+      "headline": {
+        "cs": "STEJNÁ|STRANA",
+        "en": "SAME|SIDE",
+        "ro": "ACEEAȘI|PARTE"
+      },
+      "tag": "TEST",
+      "accent": "teal",
+      "visual": {
+        "type": "rays",
+        "mode": "mirror",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Zrcadlo převrací jen směr *k němu a od něj*.",
+        "en": "A mirror only flips the direction *toward and away* from it.",
+        "ro": "Oglinda inversează doar direcția *spre ea și dinspre ea*."
+      },
+      "headline": {
+        "cs": "PŘEDEK ↔|ZADEK",
+        "en": "FRONT ↔|BACK",
+        "ro": "FAȚĂ ↔|SPATE"
+      },
+      "tag": "DEPTH AXIS",
+      "accent": "yellow",
+      "visual": {
+        "type": "compare",
+        "left": {
+          "icon": "person",
+          "label": {
+            "cs": "ty",
+            "en": "you",
+            "ro": "tu"
+          },
+          "value": {
+            "cs": "koukáš na sever",
+            "en": "facing north",
+            "ro": "privești spre nord"
+          }
+        },
+        "right": {
+          "icon": "mirror",
+          "label": {
+            "cs": "odraz",
+            "en": "image",
+            "ro": "imaginea"
+          },
+          "value": {
+            "cs": "kouká na jih",
+            "en": "facing south",
+            "ro": "privește spre sud"
+          }
+        },
+        "winner": "none"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Odraz jsi ty, jen *převrácený* zepředu dozadu.",
+        "en": "Your image is like you turned *inside out* front to back.",
+        "ro": "Imaginea e ca tine întors *pe dos*, față-spate."
+      },
+      "headline": {
+        "cs": "OBRÁCENĚ|DO HLOUBKY",
+        "en": "INSIDE OUT|IN DEPTH",
+        "ro": "INVERSAT|ÎN ADÂNCIME"
+      },
+      "tag": "REFLECTION",
+      "accent": "blue",
+      "visual": {
+        "type": "rays",
+        "mode": "mirror",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Levá a pravá se nám jen *zdají* prohozené.",
+        "en": "Left and right only *seem* swapped to us.",
+        "ro": "Stânga și dreapta doar *par* inversate."
+      },
+      "headline": {
+        "cs": "JEN SE|TO ZDÁ",
+        "en": "IT ONLY|SEEMS SO",
+        "ro": "DOAR|PARE AȘA"
+      },
+      "tag": "PERCEPTION",
+      "accent": "teal",
+      "visual": {
+        "type": "icon",
+        "icon": "eye",
+        "icon2": "question",
+        "relation": "none",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Představíš si totiž, že ses *otočil* jako jiný člověk.",
+        "en": "Because you imagine *turning around* like another person.",
+        "ro": "Pentru că îți imaginezi că *te-ai întors* ca alt om."
+      },
+      "headline": {
+        "cs": "OTOČENÍ|V HLAVĚ",
+        "en": "TURNING|IN YOUR HEAD",
+        "ro": "ÎNTOARCERE|ÎN MINTE"
+      },
+      "tag": "MENTAL ROTATION",
+      "accent": "yellow",
+      "visual": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "vidíš odraz",
+            "en": "you see the image",
+            "ro": "vezi imaginea"
+          },
+          {
+            "cs": "v duchu se otočíš",
+            "en": "you mentally turn around",
+            "ro": "te întorci în minte"
+          },
+          {
+            "cs": "levá je najednou pravá",
+            "en": "left suddenly becomes right",
+            "ro": "stânga devine dreapta"
+          }
+        ],
+        "active": 1
+      }
+    },
+    {
+      "narration": {
+        "cs": "Proto je nápis *AMBULANCE* napsaný zrcadlově, aby ho řidič přečetl.",
+        "en": "That's why *AMBULANCE* is written mirrored, so drivers can read it.",
+        "ro": "De aceea *AMBULANȚĂ* e scris în oglindă, ca șoferii să citească."
+      },
+      "headline": {
+        "cs": "ZRCADLOVÝ|NÁPIS",
+        "en": "MIRRORED|TEXT",
+        "ro": "TEXT|ÎN OGLINDĂ"
+      },
+      "tag": "REAR-VIEW MIRROR",
+      "accent": "red",
+      "visual": {
+        "type": "icon",
+        "icon": "ambulance",
+        "icon2": "mirror",
+        "relation": "arrow",
+        "effect": "none",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
+        "en": "Follow for more *physics around you*.",
+        "ro": "Urmărește pentru mai multă *fizică din jurul tău*."
+      },
+      "headline": {
+        "cs": "SLEDUJ|PRO VÍC",
+        "en": "FOLLOW|FOR MORE",
+        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

@@ -1,0 +1,253 @@
+{
+  "engine": "blueprint",
+  "id": 43,
+  "title": {
+    "cs": "Jak k nám doletí teplo Slunce",
+    "en": "How the Sun's heat crosses space",
+    "ro": "Cum ajunge la noi căldura Soarelui"
+  },
+  "description": {
+    "cs": "Mezi Sluncem a Zemí je prázdno. Žádný vzduch, a přesto tě slunce pálí. ☀️",
+    "en": "Between the Sun and Earth there's empty space. No air, and yet the Sun warms you. ☀️",
+    "ro": "Între Soare și Pământ e vid. Fără aer, și totuși Soarele te încălzește. ☀️"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "slunce",
+    "vesmir",
+    "sun"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Mezi Sluncem a Zemí je *prázdný vesmír*. Jak k nám teplo doletí?",
+        "en": "Between the Sun and Earth is *empty space*. How does heat get here?",
+        "ro": "Între Soare și Pământ e *spațiu gol*. Cum ajunge căldura?"
+      },
+      "headline": {
+        "cs": "TEPLO|VAKUEM?",
+        "en": "HEAT|THROUGH VACUUM?",
+        "ro": "CĂLDURĂ|PRIN VID?"
+      },
+      "tag": "150 000 000 km",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "sun",
+        "icon2": "earth",
+        "relation": "arrow",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Teplo se přenáší *třemi způsoby*.",
+        "en": "Heat travels in *three ways*.",
+        "ro": "Căldura se transmite în *trei moduri*."
+      },
+      "headline": {
+        "cs": "TŘI|CESTY",
+        "en": "THREE|WAYS",
+        "ro": "TREI|CĂI"
+      },
+      "tag": "HEAT TRANSFER",
+      "accent": "teal",
+      "visual": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "vedení",
+            "en": "conduction",
+            "ro": "conducție"
+          },
+          {
+            "cs": "proudění",
+            "en": "convection",
+            "ro": "convecție"
+          },
+          {
+            "cs": "záření",
+            "en": "radiation",
+            "ro": "radiație"
+          }
+        ],
+        "active": 0
+      }
+    },
+    {
+      "narration": {
+        "cs": "Vedení a proudění potřebují *hmotu*, třeba vzduch.",
+        "en": "Conduction and convection need *matter*, like air.",
+        "ro": "Conducția și convecția au nevoie de *materie*, ca aerul."
+      },
+      "headline": {
+        "cs": "POTŘEBUJÍ|HMOTU",
+        "en": "THEY NEED|MATTER",
+        "ro": "AU NEVOIE|DE MATERIE"
+      },
+      "tag": "PARTICLES",
+      "accent": "red",
+      "visual": {
+        "type": "particles",
+        "mode": "hotcold",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Ve vesmíru ale žádná hmota skoro *není*.",
+        "en": "But space has almost *no matter* at all.",
+        "ro": "Dar în spațiu aproape *nu există* materie."
+      },
+      "headline": {
+        "cs": "VAKUUM",
+        "en": "VACUUM",
+        "ro": "VID"
+      },
+      "tag": "≈ 0 Pa",
+      "accent": "blue",
+      "visual": {
+        "type": "icon",
+        "icon": "star",
+        "icon2": "satellite",
+        "relation": "none",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Zbývá *záření*, elektromagnetické vlny jako světlo.",
+        "en": "That leaves *radiation*, electromagnetic waves like light.",
+        "ro": "Rămâne *radiația*, unde electromagnetice ca lumina."
+      },
+      "headline": {
+        "cs": "ZÁŘENÍ|VYHRÁVÁ",
+        "en": "RADIATION|WINS",
+        "ro": "RADIAȚIA|CÂȘTIGĂ"
+      },
+      "tag": "INFRARED + VISIBLE",
+      "accent": "yellow",
+      "visual": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "vedení",
+            "en": "conduction",
+            "ro": "conducție"
+          },
+          {
+            "cs": "proudění",
+            "en": "convection",
+            "ro": "convecție"
+          },
+          {
+            "cs": "záření",
+            "en": "radiation",
+            "ro": "radiație"
+          }
+        ],
+        "active": 2
+      }
+    },
+    {
+      "narration": {
+        "cs": "Vlny k letu žádný vzduch *nepotřebují*.",
+        "en": "These waves *don't need* any air to travel.",
+        "ro": "Aceste unde *nu au nevoie* de aer."
+      },
+      "headline": {
+        "cs": "ŽÁDNÝ|VZDUCH",
+        "en": "NO AIR|NEEDED",
+        "ro": "FĂRĂ|AER"
+      },
+      "tag": "EM WAVE",
+      "accent": "teal",
+      "visual": {
+        "type": "wave",
+        "mode": "single",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Ze Slunce k nám letí *8 minut a 20 sekund*.",
+        "en": "From the Sun they take *8 minutes and 20 seconds*.",
+        "ro": "De la Soare ajung în *8 minute și 20 de secunde*."
+      },
+      "headline": {
+        "cs": "8 MINUT|20 SEKUND",
+        "en": "8 MINUTES|20 SECONDS",
+        "ro": "8 MINUTE|20 SECUNDE"
+      },
+      "tag": "LIGHT TRAVEL TIME",
+      "accent": "yellow",
+      "visual": {
+        "type": "counter",
+        "from": 0,
+        "to": 500,
+        "decimals": 0,
+        "unit": {
+          "cs": " s",
+          "en": " s",
+          "ro": " s"
+        },
+        "caption": {
+          "cs": "vidíš Slunce takové, jaké bylo před 8 minutami",
+          "en": "you see the Sun as it was 8 minutes ago",
+          "ro": "vezi Soarele cum era acum 8 minute"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Na každý metr čtvereční dopadne asi *1361 wattů*.",
+        "en": "Each square meter receives about *1,361 watts*.",
+        "ro": "Pe fiecare metru pătrat ajung cam *1.361 de wați*."
+      },
+      "headline": {
+        "cs": "1361 W|NA M²",
+        "en": "1361 W|PER M²",
+        "ro": "1361 W|PE M²"
+      },
+      "tag": "SOLAR CONSTANT",
+      "accent": "red",
+      "visual": {
+        "type": "gauge",
+        "from": 0,
+        "to": 1361,
+        "max": 1600,
+        "unit": {
+          "cs": " W/m²",
+          "en": " W/m²",
+          "ro": " W/m²"
+        },
+        "caption": {
+          "cs": "nad atmosférou",
+          "en": "above the atmosphere",
+          "ro": "deasupra atmosferei"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Pošli to někomu, kdo to neví, a *sleduj* nás.",
+        "en": "Send this to someone who didn't know, and *follow*.",
+        "ro": "Trimite asta cuiva care nu știa și dă *follow*."
+      },
+      "headline": {
+        "cs": "DALŠÍ DÍL|UŽ BRZY",
+        "en": "NEXT EPISODE|SOON",
+        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

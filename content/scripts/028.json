@@ -1,0 +1,233 @@
+{
+  "engine": "blueprint",
+  "id": 28,
+  "title": {
+    "cs": "Jak vzniká duha",
+    "en": "How a rainbow forms",
+    "ro": "Cum se formează curcubeul"
+  },
+  "description": {
+    "cs": "Každá kapka deště je malinký hranol. Tohle se v ní děje. 🌈",
+    "en": "Every raindrop is a tiny prism. Here's what happens inside. 🌈",
+    "ro": "Fiecare picătură de ploaie e o prismă mică. Iată ce se întâmplă în ea. 🌈"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "duha",
+    "svetlo",
+    "rainbow"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Duha je jen *sluneční světlo* a kapky deště.",
+        "en": "A rainbow is just *sunlight* and raindrops.",
+        "ro": "Curcubeul e doar *lumină solară* și picături de ploaie."
+      },
+      "headline": {
+        "cs": "SLUNCE +|DÉŠŤ",
+        "en": "SUN +|RAIN",
+        "ro": "SOARE +|PLOAIE"
+      },
+      "tag": "INGREDIENTS",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "sun",
+        "icon2": "rain",
+        "relation": "plus",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Bílé světlo je *směs všech barev*.",
+        "en": "White light is a *mix of all colors*.",
+        "ro": "Lumina albă e un *amestec de culori*."
+      },
+      "headline": {
+        "cs": "BÍLÁ =|VŠECHNY BARVY",
+        "en": "WHITE =|ALL COLORS",
+        "ro": "ALB =|TOATE CULORILE"
+      },
+      "tag": "SPECTRUM",
+      "accent": "teal",
+      "visual": {
+        "type": "rays",
+        "mode": "prism",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Když vletí do kapky, *zlomí se* a zpomalí.",
+        "en": "Entering a raindrop, it *bends* and slows down.",
+        "ro": "Când intră în picătură, *se refractă* și încetinește."
+      },
+      "headline": {
+        "cs": "SVĚTLO SE|LÁME",
+        "en": "LIGHT|BENDS",
+        "ro": "LUMINA|SE REFRACTĂ"
+      },
+      "tag": "REFRACTION",
+      "accent": "blue",
+      "visual": {
+        "type": "rays",
+        "mode": "refract",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Každá barva se láme *jinak moc*, fialová nejvíc.",
+        "en": "Each color bends *by a different amount*, violet the most.",
+        "ro": "Fiecare culoare se refractă *diferit*, violetul cel mai mult."
+      },
+      "headline": {
+        "cs": "BARVY SE|ROZDĚLÍ",
+        "en": "COLORS|SPLIT",
+        "ro": "CULORILE|SE SEPARĂ"
+      },
+      "tag": "DISPERSION",
+      "accent": "yellow",
+      "visual": {
+        "type": "rays",
+        "mode": "prism",
+        "label": {
+          "cs": "kapka funguje jako malý hranol",
+          "en": "each drop acts like a tiny prism",
+          "ro": "picătura e ca o prismă mică"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Uvnitř se světlo *odrazí* od zadní stěny kapky.",
+        "en": "Inside, the light *reflects* off the back of the drop.",
+        "ro": "Înăuntru, lumina *se reflectă* de peretele din spate."
+      },
+      "headline": {
+        "cs": "ODRAZ|UVNITŘ",
+        "en": "REFLECTION|INSIDE",
+        "ro": "REFLEXIE|ÎNĂUNTRU"
+      },
+      "tag": "TOTAL PATH",
+      "accent": "teal",
+      "visual": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "lom dovnitř",
+            "en": "bend in",
+            "ro": "refracție la intrare"
+          },
+          {
+            "cs": "odraz vzadu",
+            "en": "reflect at back",
+            "ro": "reflexie în spate"
+          },
+          {
+            "cs": "lom ven",
+            "en": "bend out",
+            "ro": "refracție la ieșire"
+          }
+        ],
+        "active": 1
+      }
+    },
+    {
+      "narration": {
+        "cs": "Ven vyletí pod úhlem asi *42 stupňů*.",
+        "en": "It exits at an angle of about *42 degrees*.",
+        "ro": "Iese sub un unghi de aproximativ *42 de grade*."
+      },
+      "headline": {
+        "cs": "MAGICKÝCH|42°",
+        "en": "THE MAGIC|42°",
+        "ro": "MAGICUL|42°"
+      },
+      "tag": "RAINBOW ANGLE",
+      "accent": "red",
+      "visual": {
+        "type": "gauge",
+        "from": 0,
+        "to": 42,
+        "max": 90,
+        "unit": {
+          "cs": "°",
+          "en": "°",
+          "ro": "°"
+        },
+        "caption": {
+          "cs": "proto je duha vždycky oblouk",
+          "en": "that's why rainbows are always arcs",
+          "ro": "de aceea curcubeul e mereu un arc"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Duhu proto uvidíš, jen když máš *slunce za zády*.",
+        "en": "So you only see a rainbow with the *Sun behind you*.",
+        "ro": "Deci vezi curcubeul doar cu *Soarele în spate*."
+      },
+      "headline": {
+        "cs": "SLUNCE|ZA ZÁDY",
+        "en": "SUN|BEHIND YOU",
+        "ro": "SOARELE|ÎN SPATE"
+      },
+      "tag": "OBSERVER",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "sun",
+        "icon2": "eye",
+        "relation": "arrow",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Každý člověk vidí *svou vlastní* duhu, z jiných kapek.",
+        "en": "Everyone sees *their own* rainbow, from different drops.",
+        "ro": "Fiecare om vede *propriul* curcubeu, din alte picături."
+      },
+      "headline": {
+        "cs": "TVOJE|VLASTNÍ DUHA",
+        "en": "YOUR VERY|OWN RAINBOW",
+        "ro": "CURCUBEUL|TĂU"
+      },
+      "tag": "FUN FACT",
+      "accent": "teal",
+      "visual": {
+        "type": "icon",
+        "icon": "person",
+        "icon2": "rain",
+        "relation": "none",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
+        "en": "Follow for more *physics around you*.",
+        "ro": "Urmărește pentru mai multă *fizică din jurul tău*."
+      },
+      "headline": {
+        "cs": "SLEDUJ|PRO VÍC",
+        "en": "FOLLOW|FOR MORE",
+        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

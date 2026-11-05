@@ -1,0 +1,261 @@
+{
+  "engine": "blueprint",
+  "id": 18,
+  "title": {
+    "cs": "Proč tě kopne klika",
+    "en": "Why door handles shock you",
+    "ro": "De ce te electrocutează clanța"
+  },
+  "description": {
+    "cs": "Projdeš se po koberci, sáhneš na kliku a au! Tohle se při tom děje. ⚡",
+    "en": "Walk on carpet, touch a door handle, ouch! Here's what's happening. ⚡",
+    "ro": "Mergi pe covor, atingi clanța și au! Iată ce se întâmplă. ⚡"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "elektrina",
+    "staticka",
+    "static"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Sáhneš na kliku a *au*! Proč to kopne?",
+        "en": "You touch a door handle and *zap*! Why?",
+        "ro": "Atingi clanța și *au*! De ce?"
+      },
+      "headline": {
+        "cs": "PROČ TO|KOPE?",
+        "en": "WHY DOES IT|ZAP?",
+        "ro": "DE CE|ELECTROCUTEAZĂ?"
+      },
+      "tag": "EVERYDAY SHOCK",
+      "accent": "yellow",
+      "visual": {
+        "type": "field",
+        "mode": "charge",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Když chodíš po koberci, třením sbíráš *elektrony*.",
+        "en": "Walking on carpet, friction collects *electrons* on you.",
+        "ro": "Când mergi pe covor, prin frecare aduni *electroni*."
+      },
+      "headline": {
+        "cs": "TŘENÍ|NABÍJÍ",
+        "en": "FRICTION|CHARGES",
+        "ro": "FRECAREA|ÎNCARCĂ"
+      },
+      "tag": "TRIBOELECTRIC EFFECT",
+      "accent": "blue",
+      "visual": {
+        "type": "icon",
+        "icon": "person",
+        "icon2": "atom",
+        "relation": "plus",
+        "effect": "shake",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Tvoje tělo se nabije klidně na *tisíce voltů*.",
+        "en": "Your body can charge up to *thousands of volts*.",
+        "ro": "Corpul tău se poate încărca la *mii de volți*."
+      },
+      "headline": {
+        "cs": "TISÍCE|VOLTŮ",
+        "en": "THOUSANDS OF|VOLTS",
+        "ro": "MII DE|VOLȚI"
+      },
+      "tag": "BODY VOLTAGE",
+      "accent": "red",
+      "visual": {
+        "type": "gauge",
+        "from": 0,
+        "to": 10000,
+        "max": 15000,
+        "unit": {
+          "cs": " V",
+          "en": " V",
+          "ro": " V"
+        },
+        "caption": {
+          "cs": "zásuvka má jen 230 V",
+          "en": "a wall socket has just 230 V",
+          "ro": "priza are doar 230 V"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Kovová klika ale náboj *nemá*, je neutrální.",
+        "en": "But the metal handle has *no extra charge*.",
+        "ro": "Dar clanța de metal *nu are* sarcină în plus."
+      },
+      "headline": {
+        "cs": "KOV JE|NEUTRÁLNÍ",
+        "en": "METAL IS|NEUTRAL",
+        "ro": "METALUL E|NEUTRU"
+      },
+      "tag": "POTENTIAL DIFFERENCE",
+      "accent": "teal",
+      "visual": {
+        "type": "compare",
+        "left": {
+          "icon": "hand",
+          "label": {
+            "cs": "ty",
+            "en": "you",
+            "ro": "tu"
+          },
+          "value": {
+            "cs": "−10 000 V",
+            "en": "−10,000 V",
+            "ro": "−10.000 V"
+          }
+        },
+        "right": {
+          "icon": "door",
+          "label": {
+            "cs": "klika",
+            "en": "handle",
+            "ro": "clanța"
+          },
+          "value": {
+            "cs": "0 V",
+            "en": "0 V",
+            "ro": "0 V"
+          }
+        },
+        "winner": "left"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Těsně před dotykem elektrony *přeskočí* jiskrou.",
+        "en": "Right before you touch it, electrons *jump* as a spark.",
+        "ro": "Chiar înainte de atingere, electronii *sar* ca o scânteie."
+      },
+      "headline": {
+        "cs": "ELEKTRONY|PŘESKOČÍ",
+        "en": "ELECTRONS|JUMP",
+        "ro": "ELECTRONII|SAR"
+      },
+      "tag": "DISCHARGE",
+      "accent": "yellow",
+      "visual": {
+        "type": "field",
+        "mode": "charge",
+        "label": {
+          "cs": "jiskra dlouhá jen pár milimetrů",
+          "en": "a spark just a few millimeters long",
+          "ro": "o scânteie de doar câțiva milimetri"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Proud trvá jen *miliardtiny sekundy*, proto ti neublíží.",
+        "en": "The current lasts *billionths of a second*, so it's harmless.",
+        "ro": "Curentul durează *miliardimi de secundă*, deci e inofensiv."
+      },
+      "headline": {
+        "cs": "VYSOKÉ NAPĚTÍ|MALÝ NÁBOJ",
+        "en": "HIGH VOLTAGE|TINY CHARGE",
+        "ro": "TENSIUNE MARE|SARCINĂ MICĂ"
+      },
+      "tag": "WHY IT'S SAFE",
+      "accent": "teal",
+      "visual": {
+        "type": "graph",
+        "curve": "decay",
+        "curve2": null,
+        "x": {
+          "cs": "čas",
+          "en": "time",
+          "ro": "timp"
+        },
+        "y": {
+          "cs": "proud",
+          "en": "current",
+          "ro": "curent"
+        },
+        "markLabel": {
+          "cs": "hotovo za nanosekundy",
+          "en": "over in nanoseconds",
+          "ro": "gata în nanosecunde"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "V zimě je vzduch suchý, takže náboj *neodteče*.",
+        "en": "In winter the air is dry, so the charge *can't leak away*.",
+        "ro": "Iarna aerul e uscat, așa că sarcina *nu se scurge*."
+      },
+      "headline": {
+        "cs": "ZIMA =|VÍC RAN",
+        "en": "WINTER =|MORE ZAPS",
+        "ro": "IARNA =|MAI MULTE ȘOCURI"
+      },
+      "tag": "HUMIDITY",
+      "accent": "blue",
+      "visual": {
+        "type": "icon",
+        "icon": "snowflake",
+        "icon2": "drop",
+        "relation": "vs",
+        "effect": "spin",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Trik: dotkni se kliky nejdřív *klíčem*.",
+        "en": "Pro tip: touch the handle with a *key* first.",
+        "ro": "Truc: atinge clanța întâi cu o *cheie*."
+      },
+      "headline": {
+        "cs": "TRIK:|KLÍČ",
+        "en": "PRO TIP:|USE A KEY",
+        "ro": "TRUC:|O CHEIE"
+      },
+      "tag": "LIFE HACK",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "hand",
+        "icon2": "door",
+        "relation": "arrow",
+        "effect": "none",
+        "caption": {
+          "cs": "jiskra skočí do kovu, ne do prstu",
+          "en": "the spark hits the metal, not your finger",
+          "ro": "scânteia sare în metal, nu în deget"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Napiš do komentářů, co tě zajímá, a *sleduj*.",
+        "en": "Tell us what to explain next, and *follow*.",
+        "ro": "Scrie-ne ce să explicăm și dă *follow*."
+      },
+      "headline": {
+        "cs": "SLEDUJ|PRO VÍC",
+        "en": "FOLLOW|FOR MORE",
+        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

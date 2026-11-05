@@ -1,0 +1,273 @@
+{
+  "engine": "blueprint",
+  "id": 31,
+  "title": {
+    "cs": "Kolik váží jeden mrak",
+    "en": "How much does a cloud weigh",
+    "ro": "Cât cântărește un nor"
+  },
+  "description": {
+    "cs": "Obyčejný načechraný mrak váží jako sto slonů. A přesto se vznáší. ☁️",
+    "en": "An ordinary fluffy cloud weighs as much as a hundred elephants. Yet it floats. ☁️",
+    "ro": "Un nor pufos obișnuit cântărește cât o sută de elefanți. Și totuși plutește. ☁️"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "mraky",
+    "pocasi",
+    "clouds"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Kolik podle tebe váží *jeden mrak*?",
+        "en": "How much do you think *one cloud* weighs?",
+        "ro": "Cât crezi că cântărește *un nor*?"
+      },
+      "headline": {
+        "cs": "KOLIK|VÁŽÍ MRAK?",
+        "en": "HOW HEAVY|IS A CLOUD?",
+        "ro": "CÂT CÂNTĂREȘTE|UN NOR?"
+      },
+      "tag": "GUESS",
+      "accent": "yellow",
+      "visual": {
+        "type": "quiz",
+        "question": {
+          "cs": "Běžný kupovitý mrak váží…",
+          "en": "A typical puffy cloud weighs…",
+          "ro": "Un nor cumulus obișnuit cântărește…"
+        },
+        "options": [
+          {
+            "cs": "pár kilo",
+            "en": "a few kilos",
+            "ro": "câteva kilograme"
+          },
+          {
+            "cs": "jako auto",
+            "en": "like a car",
+            "ro": "cât o mașină"
+          },
+          {
+            "cs": "asi 500 tun",
+            "en": "about 500 tonnes",
+            "ro": "vreo 500 de tone"
+          }
+        ],
+        "answer": 2
+      }
+    },
+    {
+      "narration": {
+        "cs": "Běžný mrak má objem klidně *kilometr krychlový*.",
+        "en": "A typical cloud can fill about *one cubic kilometer*.",
+        "ro": "Un nor obișnuit poate avea *un kilometru cub*."
+      },
+      "headline": {
+        "cs": "1 KM³|VZDUCHU",
+        "en": "1 KM³|OF AIR",
+        "ro": "1 KM³|DE AER"
+      },
+      "tag": "CUMULUS VOLUME",
+      "accent": "blue",
+      "visual": {
+        "type": "icon",
+        "icon": "cloud",
+        "icon2": null,
+        "relation": "none",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "V každém metru krychlovém je asi *půl gramu* vody.",
+        "en": "Each cubic meter holds about *half a gram* of water.",
+        "ro": "Fiecare metru cub are cam *jumătate de gram* de apă."
+      },
+      "headline": {
+        "cs": "PŮL GRAMU|NA M³",
+        "en": "HALF A GRAM|PER M³",
+        "ro": "JUMĂTATE DE GRAM|PE M³"
+      },
+      "tag": "LIQUID WATER CONTENT",
+      "accent": "teal",
+      "visual": {
+        "type": "counter",
+        "from": 0,
+        "to": 0.5,
+        "decimals": 1,
+        "unit": {
+          "cs": " g/m³",
+          "en": " g/m³",
+          "ro": " g/m³"
+        },
+        "caption": {
+          "cs": "drobné kapičky, ne pára",
+          "en": "tiny droplets, not vapor",
+          "ro": "picături mici, nu vapori"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Krát miliarda metrů krychlových dává *500 tun*.",
+        "en": "Times a billion cubic meters gives *500 tonnes*.",
+        "ro": "Ori un miliard de metri cubi dă *500 de tone*."
+      },
+      "headline": {
+        "cs": "500|TUN",
+        "en": "500|TONNES",
+        "ro": "500 DE|TONE"
+      },
+      "tag": "TOTAL MASS",
+      "accent": "red",
+      "visual": {
+        "type": "formula",
+        "tex": "0{,}5\\,\\tfrac{g}{m^3} \\times 10^9\\,m^3 = \\hl{500\\ t}",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "To je stejně jako *sto slonů*.",
+        "en": "That's as heavy as *a hundred elephants*.",
+        "ro": "Asta e cât *o sută de elefanți*."
+      },
+      "headline": {
+        "cs": "STO|SLONŮ",
+        "en": "A HUNDRED|ELEPHANTS",
+        "ro": "O SUTĂ DE|ELEFANȚI"
+      },
+      "tag": "COMPARISON",
+      "accent": "yellow",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "slon",
+              "en": "elephant",
+              "ro": "elefant"
+            },
+            "value": 5,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "mrak",
+              "en": "cloud",
+              "ro": "nor"
+            },
+            "value": 500,
+            "highlight": true
+          }
+        ],
+        "unit": {
+          "cs": " t",
+          "en": " t",
+          "ro": " t"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Proč tedy nespadne? Kapičky jsou *strašně malé*.",
+        "en": "So why doesn't it fall? The droplets are *incredibly tiny*.",
+        "ro": "Atunci de ce nu cade? Picăturile sunt *foarte mici*."
+      },
+      "headline": {
+        "cs": "MIKRO|KAPIČKY",
+        "en": "MICRO|DROPLETS",
+        "ro": "MICRO|PICĂTURI"
+      },
+      "tag": "≈ 0,01 mm",
+      "accent": "teal",
+      "visual": {
+        "type": "particles",
+        "mode": "gas",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Padají jen asi *centimetr* za sekundu.",
+        "en": "They fall only about *a centimeter* per second.",
+        "ro": "Cad doar cu vreun *centimetru* pe secundă."
+      },
+      "headline": {
+        "cs": "PADAJÍ|POMALOUČKU",
+        "en": "FALLING|SUPER SLOWLY",
+        "ro": "CAD|FOARTE ÎNCET"
+      },
+      "tag": "TERMINAL VELOCITY",
+      "accent": "blue",
+      "visual": {
+        "type": "forces",
+        "body": "drop",
+        "arrows": [
+          {
+            "dir": "down",
+            "size": 1,
+            "label": {
+              "cs": "tíha",
+              "en": "weight",
+              "ro": "greutate"
+            },
+            "color": "red"
+          },
+          {
+            "dir": "up",
+            "size": 1,
+            "label": {
+              "cs": "odpor vzduchu",
+              "en": "air drag",
+              "ro": "rezistența aerului"
+            },
+            "color": "teal"
+          }
+        ],
+        "motion": "none"
+      }
+    },
+    {
+      "narration": {
+        "cs": "A stoupající teplý vzduch je *drží nahoře*.",
+        "en": "And rising warm air *keeps them up*.",
+        "ro": "Iar aerul cald care urcă *le ține sus*."
+      },
+      "headline": {
+        "cs": "VZDUCH|JE NESE",
+        "en": "AIR|CARRIES THEM",
+        "ro": "AERUL|LE POARTĂ"
+      },
+      "tag": "UPDRAFT",
+      "accent": "yellow",
+      "visual": {
+        "type": "particles",
+        "mode": "rise",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Pošli to někomu, kdo to neví, a *sleduj* nás.",
+        "en": "Send this to someone who didn't know, and *follow*.",
+        "ro": "Trimite asta cuiva care nu știa și dă *follow*."
+      },
+      "headline": {
+        "cs": "DALŠÍ DÍL|UŽ BRZY",
+        "en": "NEXT EPISODE|SOON",
+        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

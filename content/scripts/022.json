@@ -1,0 +1,297 @@
+{
+  "engine": "blueprint",
+  "id": 22,
+  "title": {
+    "cs": "Na Měsíci skočíš šestkrát výš",
+    "en": "On the Moon you jump 6× higher",
+    "ro": "Pe Lună sari de 6 ori mai sus"
+  },
+  "description": {
+    "cs": "Tvoje svaly jsou stejné. Měsíc tě ale drží mnohem slaběji. 🌕",
+    "en": "Your muscles are the same. The Moon just holds you much more weakly. 🌕",
+    "ro": "Mușchii tăi sunt aceiași. Luna doar te ține mult mai slab. 🌕"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "mesic",
+    "vesmir",
+    "moon"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Na Měsíci bys skočil *šestkrát výš* než na Zemi.",
+        "en": "On the Moon you'd jump *six times higher* than on Earth.",
+        "ro": "Pe Lună ai sări de *șase ori mai sus* decât pe Pământ."
+      },
+      "headline": {
+        "cs": "ŠESTKRÁT|VÝŠ",
+        "en": "SIX TIMES|HIGHER",
+        "ro": "DE ȘASE ORI|MAI SUS"
+      },
+      "tag": "LUNAR JUMP",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "person",
+        "icon2": "moon",
+        "relation": "none",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Tvoje svaly i hmotnost zůstanou *úplně stejné*.",
+        "en": "Your muscles and your mass stay *exactly the same*.",
+        "ro": "Mușchii și masa ta rămân *exact la fel*."
+      },
+      "headline": {
+        "cs": "STEJNÉ|SVALY",
+        "en": "SAME|MUSCLES",
+        "ro": "ACEIAȘI|MUȘCHI"
+      },
+      "tag": "MASS = CONST",
+      "accent": "teal",
+      "visual": {
+        "type": "compare",
+        "left": {
+          "icon": "earth",
+          "label": {
+            "cs": "Země",
+            "en": "Earth",
+            "ro": "Pământ"
+          },
+          "value": {
+            "cs": "70 kg",
+            "en": "70 kg",
+            "ro": "70 kg"
+          }
+        },
+        "right": {
+          "icon": "moon",
+          "label": {
+            "cs": "Měsíc",
+            "en": "Moon",
+            "ro": "Lună"
+          },
+          "value": {
+            "cs": "70 kg",
+            "en": "70 kg",
+            "ro": "70 kg"
+          }
+        },
+        "winner": "none"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Měsíc má ale gravitaci jen *jednu šestinu* té naší.",
+        "en": "But the Moon's gravity is only *one sixth* of ours.",
+        "ro": "Dar gravitația Lunii e doar *o șesime* din a noastră."
+      },
+      "headline": {
+        "cs": "GRAVITACE|1/6",
+        "en": "GRAVITY|1/6",
+        "ro": "GRAVITAȚIE|1/6"
+      },
+      "tag": "SURFACE GRAVITY m/s²",
+      "accent": "red",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "Země",
+              "en": "Earth",
+              "ro": "Pământ"
+            },
+            "value": 9.81,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "Měsíc",
+              "en": "Moon",
+              "ro": "Lună"
+            },
+            "value": 1.62,
+            "highlight": true
+          }
+        ],
+        "unit": {
+          "cs": "",
+          "en": "",
+          "ro": ""
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Je menší a lehčí, takže tě přitahuje *mnohem slaběji*.",
+        "en": "It's smaller and lighter, so it pulls you *much more weakly*.",
+        "ro": "E mai mică și mai ușoară, deci te trage *mult mai slab*."
+      },
+      "headline": {
+        "cs": "MENŠÍ|TAH",
+        "en": "WEAKER|PULL",
+        "ro": "TRAGE|MAI SLAB"
+      },
+      "tag": "WEIGHT",
+      "accent": "yellow",
+      "visual": {
+        "type": "forces",
+        "body": "person",
+        "arrows": [
+          {
+            "dir": "down",
+            "size": 0.8,
+            "label": {
+              "cs": "tíha 1/6",
+              "en": "weight 1/6",
+              "ro": "greutate 1/6"
+            },
+            "color": "red"
+          }
+        ],
+        "motion": "none"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Odrazíš se stejnou rychlostí, ale zpomaluje tě *šestkrát míň*.",
+        "en": "You push off at the same speed, but slow down *six times less*.",
+        "ro": "Te desprinzi la fel de repede, dar încetinești de *șase ori mai puțin*."
+      },
+      "headline": {
+        "cs": "STEJNÝ|ODRAZ",
+        "en": "SAME|TAKE-OFF",
+        "ro": "ACEEAȘI|DESPRINDERE"
+      },
+      "tag": "JUMP HEIGHT",
+      "accent": "teal",
+      "visual": {
+        "type": "formula",
+        "tex": "h = \\frac{v^2}{2\\hl{g}}",
+        "caption": {
+          "cs": "menší g = vyšší skok",
+          "en": "smaller g = higher jump",
+          "ro": "g mai mic = salt mai înalt"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Z půlmetrového skoku by byl skok přes *tři metry*.",
+        "en": "A half-meter jump would become over *three meters*.",
+        "ro": "Un salt de jumătate de metru ar deveni de peste *trei metri*."
+      },
+      "headline": {
+        "cs": "PŮL METRU|→ 3 METRY",
+        "en": "HALF A METER|→ 3 METERS",
+        "ro": "JUMĂTATE DE METRU|→ 3 METRI"
+      },
+      "tag": "SAME LEGS",
+      "accent": "yellow",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "Země",
+              "en": "Earth",
+              "ro": "Pământ"
+            },
+            "value": 0.5,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "Měsíc",
+              "en": "Moon",
+              "ro": "Lună"
+            },
+            "value": 3,
+            "highlight": true
+          }
+        ],
+        "unit": {
+          "cs": " m",
+          "en": " m",
+          "ro": " m"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "A ve vzduchu bys visel skoro *čtyři sekundy*.",
+        "en": "And you'd hang in the air for almost *four seconds*.",
+        "ro": "Și ai pluti în aer aproape *patru secunde*."
+      },
+      "headline": {
+        "cs": "ČTYŘI SEKUNDY|VE VZDUCHU",
+        "en": "FOUR SECONDS|OF AIRTIME",
+        "ro": "PATRU SECUNDE|ÎN AER"
+      },
+      "tag": "HANG TIME",
+      "accent": "blue",
+      "visual": {
+        "type": "counter",
+        "from": 0,
+        "to": 3.9,
+        "decimals": 1,
+        "unit": {
+          "cs": " s",
+          "en": " s",
+          "ro": " s"
+        },
+        "caption": {
+          "cs": "na Zemi jen asi 0,6 s",
+          "en": "on Earth only about 0.6 s",
+          "ro": "pe Pământ doar vreo 0,6 s"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Astronauty ale brzdil těžký *skafandr*, proto skákali opatrně.",
+        "en": "But astronauts wore heavy *suits*, so they hopped carefully.",
+        "ro": "Dar astronauții purtau *costume* grele, așa că săreau cu grijă."
+      },
+      "headline": {
+        "cs": "BRZDA:|SKAFANDR",
+        "en": "THE CATCH:|THE SUIT",
+        "ro": "PROBLEMA:|COSTUMUL"
+      },
+      "tag": "APOLLO",
+      "accent": "red",
+      "visual": {
+        "type": "icon",
+        "icon": "person",
+        "icon2": "rocket",
+        "relation": "plus",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Napiš do komentářů, co tě zajímá, a *sleduj*.",
+        "en": "Tell us what to explain next, and *follow*.",
+        "ro": "Scrie-ne ce să explicăm și dă *follow*."
+      },
+      "headline": {
+        "cs": "SLEDUJ|PRO VÍC",
+        "en": "FOLLOW|FOR MORE",
+        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

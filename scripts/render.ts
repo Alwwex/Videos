@@ -1,5 +1,5 @@
 /**
- * Dávkový render: scénář (+ hlas, pokud existuje) → out/videos/<lang>/NNN-nazev.mp4 + popisek .txt
+ * Dávkový render: scénář (+ hlas, pokud existuje) → out/videos/NNN-nazev/<CZ|EN|RO>/video.mp4 + popis.txt
  *   npm run render:batch -- 1-10
  *   npm run render:batch -- 1 --langs cs --concurrency 4
  *   npm run render:batch -- 1-10 --no-music
@@ -10,9 +10,16 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {bundle} from '@remotion/bundler';
 import {makeCancelSignal, renderMedia, selectComposition} from '@remotion/renderer';
-import type {FyzikaProps} from '../src/engine/FyzikaVideo';
-import type {Lang, VideoScript} from '../src/engine/schema';
-import {P, Progress, loadScript, loadTimeline, pad, parseArgs, slug} from './lib';
+import type {Lang, Timeline} from '../src/engine/schema';
+import {P, Progress, ROOT, captionText, isShort, loadScript, loadTimeline, parseArgs, videoFolderName, videoOutFile, type AnyScript} from './lib';
+
+/** Časová osa jen pokud existují všechny její MP3 (jinak by render spadl). */
+const usableTimeline = (id: number, lang: Lang): Timeline | null => {
+  const tl = loadTimeline(id, lang);
+  if (!tl) return null;
+  const ok = tl.scenes.every((s) => !s.audioSrc || fs.existsSync(path.join(ROOT, 'public', s.audioSrc)));
+  return ok ? tl : null;
+};
 
 const LOCK = path.join(process.cwd(), 'out', 'render.lock');
 const STOP = path.join(process.cwd(), 'out', 'STOP');
@@ -53,7 +60,7 @@ const main = async () => {
   acquireLock();
 
   // nejdřív seznam úloh, ať lišta zná celkový počet
-  const jobs: {id: number; lang: Lang; script: VideoScript; name: string; out: string}[] = [];
+  const jobs: {id: number; lang: Lang; script: AnyScript; name: string; out: string}[] = [];
   for (const id of ids) {
     const script = loadScript(id);
     if (!script) {
@@ -61,8 +68,8 @@ const main = async () => {
       continue;
     }
     for (const lang of langs) {
-      const name = `${pad(id)}-${slug(script.title.en)}`;
-      const out = path.join(P.videos, lang, `${name}.mp4`);
+      const name = videoFolderName(script);
+      const out = videoOutFile(script, lang);
       if (fs.existsSync(out) && !force) continue;
       jobs.push({id, lang, script, name, out});
     }
@@ -72,6 +79,7 @@ const main = async () => {
   console.log(`📦 Bundluji projekt… (${jobs.length} videí ve frontě)`);
   const serveUrl = await bundle({entryPoint: path.join(process.cwd(), 'src', 'index.ts')});
   const chromiumOptions = {gl: 'angle' as const};
+  const browserExecutable = process.env.CHROME_PATH || null;
   const musicDir = path.join(process.cwd(), 'public', 'music');
   // vlastní skladby v public/music se střídají podle čísla videa; jinak smyčka podle tématu
   const userTracks = fs.existsSync(musicDir)
@@ -102,21 +110,25 @@ const main = async () => {
       break;
     }
     const {cancelSignal, cancel} = makeCancelSignal();
-    const label = `${lang}/${name}`;
-    const timeline = loadTimeline(id, lang);
+    const label = `${name}/${lang}`;
+    const timeline = usableTimeline(id, lang);
     const music = noMusic ? null : userTracks.length ? `music/${userTracks[id % userTracks.length]}` : undefined;
-    const inputProps: FyzikaProps = {script, lang, timeline, music};
+    const next = loadScript(id + 1);
+    const inputProps: Record<string, unknown> = {script, lang, timeline, music, nextTitle: next ? next.title[lang] : null};
+    const compId = isShort(script) ? `Short-${lang}` : `Fyzika-${lang}`;
     const t = Date.now();
     const tmp = path.join(tmpDir, `${lang}-${name}.mp4`);
     try {
-      const composition = await selectComposition({serveUrl, id: `Fyzika-${lang}`, inputProps, chromiumOptions});
+      const composition = await selectComposition({serveUrl, id: compId, inputProps, chromiumOptions, browserExecutable});
       await renderMedia({
         composition,
         serveUrl,
         codec: 'h264',
+        crf: 21,
         outputLocation: tmp,
         inputProps,
         chromiumOptions,
+        browserExecutable,
         imageFormat: 'jpeg',
         jpegQuality: 90,
         concurrency: concurrency || null,
@@ -126,9 +138,8 @@ const main = async () => {
           if (fs.existsSync(STOP)) cancel();
         },
       });
-      const caption = [script.title[lang], '', script.description[lang], '', script.hashtags.map((h) => `#${h.replace(/^#/, '')}`).join(' ')].join('\n');
       fs.mkdirSync(path.dirname(out), {recursive: true});
-      fs.writeFileSync(out.replace(/\.mp4$/, '.txt'), caption);
+      fs.writeFileSync(path.join(path.dirname(out), 'popis.txt'), captionText(script, lang));
       const moved = tryMove(tmp, out);
       if (!moved) pending.push({tmp, out, label});
       bar.ok(

@@ -1,0 +1,277 @@
+{
+  "engine": "blueprint",
+  "id": 30,
+  "title": {
+    "cs": "Proč necítíš, že se Země točí",
+    "en": "Why you can't feel Earth spinning",
+    "ro": "De ce nu simți că Pământul se rotește"
+  },
+  "description": {
+    "cs": "Právě teď se řítíš rychlostí přes tisíc kilometrů za hodinu. A vůbec nic necítíš. 🌍",
+    "en": "Right now you're moving over a thousand kilometers per hour. And you feel nothing. 🌍",
+    "ro": "Chiar acum te miști cu peste o mie de kilometri pe oră. Și nu simți nimic. 🌍"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "zeme",
+    "rotace",
+    "earth"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Právě teď se řítíš rychlostí přes *tisíc km/h*.",
+        "en": "Right now you're racing at over *1,000 km/h*.",
+        "ro": "Chiar acum gonești cu peste *1.000 km/h*."
+      },
+      "headline": {
+        "cs": "TISÍC KM/H|PRÁVĚ TEĎ",
+        "en": "1,000 KM/H|RIGHT NOW",
+        "ro": "1.000 KM/H|CHIAR ACUM"
+      },
+      "tag": "EARTH ROTATION",
+      "accent": "yellow",
+      "visual": {
+        "type": "orbit",
+        "mode": "spin",
+        "center": "earth",
+        "body": "person",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Na rovníku se Země točí rychlostí *1670 km/h*.",
+        "en": "At the equator, Earth spins at *1,670 km/h*.",
+        "ro": "La ecuator, Pământul se rotește cu *1.670 km/h*."
+      },
+      "headline": {
+        "cs": "RYCHLEJI|NEŽ LETADLO",
+        "en": "FASTER THAN|A JET",
+        "ro": "MAI REPEDE|CA UN AVION"
+      },
+      "tag": "EQUATOR",
+      "accent": "red",
+      "visual": {
+        "type": "gauge",
+        "from": 0,
+        "to": 1670,
+        "max": 2000,
+        "unit": {
+          "cs": " km/h",
+          "en": " km/h",
+          "ro": " km/h"
+        },
+        "caption": {
+          "cs": "v Česku asi 1070 km/h",
+          "en": "in Central Europe about 1,070 km/h",
+          "ro": "în România cam 1.180 km/h"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Necítíš to, protože rychlost se *nemění*.",
+        "en": "You can't feel it because the speed *never changes*.",
+        "ro": "Nu simți asta, pentru că viteza *nu se schimbă*."
+      },
+      "headline": {
+        "cs": "STÁLÁ|RYCHLOST",
+        "en": "CONSTANT|SPEED",
+        "ro": "VITEZĂ|CONSTANTĂ"
+      },
+      "tag": "INERTIA",
+      "accent": "teal",
+      "visual": {
+        "type": "graph",
+        "curve": "flat",
+        "curve2": null,
+        "x": {
+          "cs": "čas",
+          "en": "time",
+          "ro": "timp"
+        },
+        "y": {
+          "cs": "rychlost",
+          "en": "speed",
+          "ro": "viteză"
+        },
+        "markLabel": {
+          "cs": "pořád stejně",
+          "en": "always the same",
+          "ro": "mereu la fel"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Tělo necítí rychlost, cítí jen *zrychlení*.",
+        "en": "Your body doesn't feel speed, only *acceleration*.",
+        "ro": "Corpul nu simte viteza, simte doar *accelerația*."
+      },
+      "headline": {
+        "cs": "CÍTÍŠ JEN|ZMĚNU",
+        "en": "YOU ONLY FEEL|CHANGE",
+        "ro": "SIMȚI DOAR|SCHIMBAREA"
+      },
+      "tag": "NEWTON I",
+      "accent": "yellow",
+      "visual": {
+        "type": "compare",
+        "left": {
+          "icon": "car",
+          "label": {
+            "cs": "rozjezd",
+            "en": "speeding up",
+            "ro": "accelerare"
+          },
+          "value": {
+            "cs": "cítíš",
+            "en": "you feel it",
+            "ro": "simți"
+          }
+        },
+        "right": {
+          "icon": "plane",
+          "label": {
+            "cs": "let rovně",
+            "en": "cruising",
+            "ro": "zbor drept"
+          },
+          "value": {
+            "cs": "nic",
+            "en": "nothing",
+            "ro": "nimic"
+          }
+        },
+        "winner": "left"
+      }
+    },
+    {
+      "narration": {
+        "cs": "Je to jako v letadle, kde ti *nevyšplouchne* ani kafe.",
+        "en": "It's like a plane, where your coffee *doesn't even spill*.",
+        "ro": "E ca în avion, unde nici cafeaua *nu se varsă*."
+      },
+      "headline": {
+        "cs": "JAKO|V LETADLE",
+        "en": "LIKE IN|A PLANE",
+        "ro": "CA ÎN|AVION"
+      },
+      "tag": "900 km/h",
+      "accent": "blue",
+      "visual": {
+        "type": "icon",
+        "icon": "plane",
+        "icon2": null,
+        "relation": "none",
+        "effect": "float",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Vzduch, domy i ty se točíte *všichni spolu*.",
+        "en": "The air, the buildings and you all spin *together*.",
+        "ro": "Aerul, casele și tu vă rotiți *toți împreună*."
+      },
+      "headline": {
+        "cs": "VŠECHNO|SPOLU",
+        "en": "EVERYTHING|TOGETHER",
+        "ro": "TOTUL|ÎMPREUNĂ"
+      },
+      "tag": "SAME FRAME",
+      "accent": "teal",
+      "visual": {
+        "type": "orbit",
+        "mode": "spin",
+        "center": "earth",
+        "body": "house",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Odstředivý efekt je jen *tři promile* gravitace.",
+        "en": "The spin's outward effect is only *0.3 percent* of gravity.",
+        "ro": "Efectul centrifug e doar *0,3 la sută* din gravitație."
+      },
+      "headline": {
+        "cs": "SKORO|NIC",
+        "en": "ALMOST|NOTHING",
+        "ro": "APROAPE|NIMIC"
+      },
+      "tag": "CENTRIPETAL",
+      "accent": "red",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "gravitace",
+              "en": "gravity",
+              "ro": "gravitație"
+            },
+            "value": 9.81,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "rotace",
+              "en": "rotation",
+              "ro": "rotație"
+            },
+            "value": 0.03,
+            "highlight": true
+          }
+        ],
+        "unit": {
+          "cs": " m/s²",
+          "en": " m/s²",
+          "ro": " m/s²"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Rotaci ale vidíš každý den: *východ a západ Slunce*.",
+        "en": "But you see the spin every day: *sunrise and sunset*.",
+        "ro": "Dar vezi rotația zilnic: *răsăritul și apusul*."
+      },
+      "headline": {
+        "cs": "VIDÍŠ JI|KAŽDÝ DEN",
+        "en": "YOU SEE IT|DAILY",
+        "ro": "O VEZI|ZILNIC"
+      },
+      "tag": "DAY AND NIGHT",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "sun",
+        "icon2": "earth",
+        "relation": "none",
+        "effect": "spin",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Napiš do komentářů, co tě zajímá, a *sleduj*.",
+        "en": "Tell us what to explain next, and *follow*.",
+        "ro": "Scrie-ne ce să explicăm și dă *follow*."
+      },
+      "headline": {
+        "cs": "SLEDUJ|PRO VÍC",
+        "en": "FOLLOW|FOR MORE",
+        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}

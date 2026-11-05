@@ -1,0 +1,254 @@
+{
+  "engine": "blueprint",
+  "id": 21,
+  "title": {
+    "cs": "Jak sluchátka vymažou hluk",
+    "en": "How headphones erase noise",
+    "ro": "Cum șterg căștile zgomotul"
+  },
+  "description": {
+    "cs": "Sluchátka s ANC přidají zvuk, aby bylo ticho. Zní to šíleně, ale funguje to. 🎧",
+    "en": "ANC headphones add sound to make silence. Sounds crazy, but it works. 🎧",
+    "ro": "Căștile ANC adaugă sunet ca să facă liniște. Pare nebunesc, dar merge. 🎧"
+  },
+  "hashtags": [
+    "fyzika",
+    "physics",
+    "science",
+    "sluchatka",
+    "zvuk",
+    "headphones"
+  ],
+  "scenes": [
+    {
+      "narration": {
+        "cs": "Tyhle sluchátka *přidají zvuk*, aby bylo ticho.",
+        "en": "These headphones *add sound* to create silence.",
+        "ro": "Căștile astea *adaugă sunet* ca să fie liniște."
+      },
+      "headline": {
+        "cs": "ZVUK, KTERÝ|MAŽE ZVUK",
+        "en": "SOUND THAT|ERASES SOUND",
+        "ro": "SUNET CARE|ȘTERGE SUNET"
+      },
+      "tag": "ACTIVE NOISE CANCELLING",
+      "accent": "teal",
+      "visual": {
+        "type": "icon",
+        "icon": "headphones",
+        "icon2": null,
+        "relation": "none",
+        "effect": "pulse",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Zvuk je *vlna*, tlak vzduchu kmitá nahoru a dolů.",
+        "en": "Sound is a *wave*, air pressure going up and down.",
+        "ro": "Sunetul e o *undă*, presiunea aerului urcă și coboară."
+      },
+      "headline": {
+        "cs": "ZVUK|JE VLNA",
+        "en": "SOUND|IS A WAVE",
+        "ro": "SUNETUL|E O UNDĂ"
+      },
+      "tag": "PRESSURE WAVE",
+      "accent": "yellow",
+      "visual": {
+        "type": "wave",
+        "mode": "single",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Mikrofon na sluchátkách hluk okolí *neustále poslouchá*.",
+        "en": "A microphone on the headphones *constantly listens* to the noise.",
+        "ro": "Un microfon pe căști *ascultă continuu* zgomotul."
+      },
+      "headline": {
+        "cs": "MIKROFON|POSLOUCHÁ",
+        "en": "THE MIC|LISTENS",
+        "ro": "MICROFONUL|ASCULTĂ"
+      },
+      "tag": "STEP 1",
+      "accent": "blue",
+      "visual": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "mikrofon zachytí hluk",
+            "en": "mic picks up noise",
+            "ro": "microfonul prinde zgomotul"
+          },
+          {
+            "cs": "čip spočítá protivlnu",
+            "en": "chip computes anti-wave",
+            "ro": "cipul calculează antiunda"
+          },
+          {
+            "cs": "reproduktor ji pustí",
+            "en": "speaker plays it",
+            "ro": "difuzorul o redă"
+          }
+        ],
+        "active": 0
+      }
+    },
+    {
+      "narration": {
+        "cs": "Čip vyrobí *zrcadlovou vlnu*, přesně obrácenou.",
+        "en": "A chip creates a *mirror wave*, perfectly flipped.",
+        "ro": "Un cip creează o *undă oglindă*, perfect inversată."
+      },
+      "headline": {
+        "cs": "OBRÁCENÁ|VLNA",
+        "en": "FLIPPED|WAVE",
+        "ro": "UNDĂ|INVERSATĂ"
+      },
+      "tag": "ANTI-PHASE",
+      "accent": "red",
+      "visual": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "mikrofon zachytí hluk",
+            "en": "mic picks up noise",
+            "ro": "microfonul prinde zgomotul"
+          },
+          {
+            "cs": "čip spočítá protivlnu",
+            "en": "chip computes anti-wave",
+            "ro": "cipul calculează antiunda"
+          },
+          {
+            "cs": "reproduktor ji pustí",
+            "en": "speaker plays it",
+            "ro": "difuzorul o redă"
+          }
+        ],
+        "active": 1
+      }
+    },
+    {
+      "narration": {
+        "cs": "Kde má hluk kopec, má protivlna *údolí*.",
+        "en": "Where the noise has a peak, the anti-wave has a *dip*.",
+        "ro": "Unde zgomotul are un vârf, antiunda are o *vale*."
+      },
+      "headline": {
+        "cs": "KOPEC +|ÚDOLÍ",
+        "en": "PEAK +|DIP",
+        "ro": "VÂRF +|VALE"
+      },
+      "tag": "DESTRUCTIVE INTERFERENCE",
+      "accent": "teal",
+      "visual": {
+        "type": "wave",
+        "mode": "cancel",
+        "label": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Sečtou se na *nulu* a ty slyšíš ticho.",
+        "en": "They add up to *zero*, and you hear silence.",
+        "ro": "Se adună la *zero* și auzi liniște."
+      },
+      "headline": {
+        "cs": "SOUČET|= TICHO",
+        "en": "SUM|= SILENCE",
+        "ro": "SUMA|= LINIȘTE"
+      },
+      "tag": "SUPERPOSITION",
+      "accent": "teal",
+      "visual": {
+        "type": "formula",
+        "tex": "\\sin x + \\sin(x+\\pi) = \\hl{0}",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Nejlíp to funguje na *hučení* motoru letadla nebo vlaku.",
+        "en": "It works best on the *hum* of plane or train engines.",
+        "ro": "Merge cel mai bine pe *zumzetul* motoarelor de avion."
+      },
+      "headline": {
+        "cs": "NEJLÍP NA|HUČENÍ",
+        "en": "BEST ON|LOW HUM",
+        "ro": "CEL MAI BINE|PE ZUMZET"
+      },
+      "tag": "LOW FREQUENCIES",
+      "accent": "yellow",
+      "visual": {
+        "type": "icon",
+        "icon": "plane",
+        "icon2": "headphones",
+        "relation": "arrow",
+        "effect": "shake",
+        "caption": null
+      }
+    },
+    {
+      "narration": {
+        "cs": "Vysoké tóny jako hlas tlumí hlavně *polstrování*.",
+        "en": "High sounds like voices are mostly blocked by the *cushions*.",
+        "ro": "Sunetele înalte, ca vocile, le opresc mai ales *pernițele*."
+      },
+      "headline": {
+        "cs": "HLASY TLUMÍ|POLŠTÁŘKY",
+        "en": "CUSHIONS STOP|VOICES",
+        "ro": "PERNIȚELE|OPRESC VOCILE"
+      },
+      "tag": "PASSIVE ISOLATION",
+      "accent": "blue",
+      "visual": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "hučení motoru",
+              "en": "engine hum",
+              "ro": "zumzet motor"
+            },
+            "value": 95,
+            "highlight": true
+          },
+          {
+            "label": {
+              "cs": "lidské hlasy",
+              "en": "voices",
+              "ro": "voci"
+            },
+            "value": 40,
+            "highlight": false
+          }
+        ],
+        "unit": {
+          "cs": " % ANC",
+          "en": "% ANC",
+          "ro": " % ANC"
+        }
+      }
+    },
+    {
+      "narration": {
+        "cs": "Překvapilo tě to? Dej *sledovat* pro další díl.",
+        "en": "Surprised? Hit *follow* for the next one.",
+        "ro": "Te-a surprins? Dă *follow* pentru următorul."
+      },
+      "headline": {
+        "cs": "DALŠÍ DÍL|UŽ BRZY",
+        "en": "NEXT EPISODE|SOON",
+        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      },
+      "tag": null,
+      "accent": "yellow",
+      "visual": {
+        "type": "outro"
+      }
+    }
+  ]
+}
