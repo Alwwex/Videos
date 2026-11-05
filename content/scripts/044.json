@@ -1,264 +1,549 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 44,
   "title": {
-    "cs": "Proč zrcadlo prohazuje levou a pravou",
-    "en": "Does a mirror flip left and right?",
-    "ro": "Oglinda inversează stânga cu dreapta?"
+    "cs": "Proč ptáky na drátech nezabije proud",
+    "en": "Why birds on power lines don't get fried",
+    "ro": "De ce păsările de pe fire nu se electrocutează"
   },
   "description": {
-    "cs": "Zrcadlo ve skutečnosti levou a pravou neprohazuje. Prohazuje něco jiného. 🪞",
-    "en": "A mirror doesn't actually swap left and right. It swaps something else. 🪞",
-    "ro": "Oglinda nu inversează de fapt stânga cu dreapta. Inversează altceva. 🪞"
+    "cs": "Dvacet dva tisíc voltů pod nohama a vrabec v pohodě. Celé je to o rozdílu. 🐦⚡",
+    "en": "Twenty-two thousand volts underfoot and the sparrow is fine. It's all about the difference. 🐦⚡",
+    "ro": "Douăzeci și două de mii de volți sub picioare și vrabia e bine. Totul ține de diferență. 🐦⚡"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "zrcadlo",
-    "optika",
-    "mirror"
+    "elektrina",
+    "ptaci",
+    "electricity"
   ],
+  "hook": {
+    "cs": "22 000 VOLTŮ A PTÁK V POHODĚ",
+    "en": "22,000 VOLTS AND THE BIRD IS FINE",
+    "ro": "22.000 DE VOLȚI ȘI PASĂREA E BINE"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Proč zrcadlo prohodí levou a pravou, ale *ne nahoru a dolů*?",
-        "en": "Why does a mirror swap left and right, but *not up and down*?",
-        "ro": "De ce oglinda inversează stânga cu dreapta, dar *nu sus cu jos*?"
+        "cs": "V drátu je *dvacet dva tisíc voltů*. A vrabec si na něm sedí.",
+        "en": "That wire carries *twenty-two thousand volts*. And a sparrow just sits on it.",
+        "ro": "Firul are *douăzeci și două de mii de volți*. Iar o vrabie stă liniștită pe el."
       },
-      "headline": {
-        "cs": "PROČ NE|NAHORU-DOLŮ?",
-        "en": "WHY NOT|UP AND DOWN?",
-        "ro": "DE CE NU|SUS-JOS?"
-      },
-      "tag": "PUZZLE",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "mirror",
-        "icon2": "person",
-        "relation": "none",
-        "effect": "pulse",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Odpověď: neprohazuje *ani jedno*.",
-        "en": "The answer: it swaps *neither*.",
-        "ro": "Răspunsul: nu inversează *niciuna*."
-      },
-      "headline": {
-        "cs": "NEPROHAZUJE|NIC",
-        "en": "IT SWAPS|NEITHER",
-        "ro": "NU INVERSEAZĂ|NIMIC"
-      },
-      "tag": "PLOT TWIST",
-      "accent": "red",
-      "visual": {
-        "type": "quiz",
-        "question": {
-          "cs": "Co zrcadlo opravdu prohodí?",
-          "en": "What does a mirror really flip?",
-          "ro": "Ce inversează oglinda cu adevărat?"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "line",
+          "type": "powerLine",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "options": [
-          {
-            "cs": "levou a pravou",
-            "en": "left and right",
-            "ro": "stânga și dreapta"
-          },
-          {
-            "cs": "nahoru a dolů",
-            "en": "up and down",
-            "ro": "sus și jos"
-          },
-          {
-            "cs": "předek a zadek",
-            "en": "front and back",
-            "ro": "față și spate"
-          }
-        ],
-        "answer": 2
-      }
+        {
+          "id": "b1",
+          "type": "bird",
+          "position": [
+            -0.9,
+            3.94,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": -10,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "b2",
+          "type": "bird",
+          "position": [
+            0.9,
+            3.94,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 15,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "b1",
+        "distance": 3.6,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Zvedni pravou ruku. Odraz zvedne ruku *na stejné straně*.",
-        "en": "Raise your right hand. The image raises the hand *on the same side*.",
-        "ro": "Ridică mâna dreaptă. Imaginea ridică mâna *de aceeași parte*."
+        "cs": "Proud ale neteče kvůli napětí. Teče kvůli *rozdílu*.",
+        "en": "But current doesn't flow because of voltage. It flows because of a *difference*.",
+        "ro": "Dar curentul nu curge din cauza tensiunii. Curge din cauza unei *diferențe*."
       },
-      "headline": {
-        "cs": "STEJNÁ|STRANA",
-        "en": "SAME|SIDE",
-        "ro": "ACEEAȘI|PARTE"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "line",
+          "type": "powerLine",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "b1",
+          "type": "bird",
+          "position": [
+            -0.9,
+            3.94,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": -10,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "b2",
+          "type": "bird",
+          "position": [
+            0.9,
+            3.94,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 15,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "b2",
+        "distance": 4.4,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "tag": "TEST",
-      "accent": "teal",
-      "visual": {
-        "type": "rays",
-        "mode": "mirror",
+      "notes": [],
+      "card": {
+        "type": "formula",
+        "tex": "I = \\frac{\\hl{\\Delta U}}{R}",
+        "caption": {
+          "cs": "bez rozdílu napětí žádný proud",
+          "en": "no voltage difference, no current",
+          "ro": "fără diferență de tensiune, fără curent"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Obě nohy ptáka jsou na *stejném drátě*.",
+        "en": "Both of the bird's feet are on the *same wire*.",
+        "ro": "Ambele picioare ale păsării sunt pe *același fir*."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "line",
+          "type": "powerLine",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "b1",
+          "type": "bird",
+          "position": [
+            -0.9,
+            3.94,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": -10,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "b1",
+        "distance": 1.8,
+        "angle": "low",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "b1",
+          "text": {
+            "cs": "stejný drát",
+            "en": "same wire",
+            "ro": "același fir"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Rozdíl mezi nimi je skoro *nula*. Proud zůstane v drátu.",
+        "en": "The difference between them is almost *zero*. The current stays in the wire.",
+        "ro": "Diferența dintre ele e aproape *zero*. Curentul rămâne în fir."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "line",
+          "type": "powerLine",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "b1",
+          "type": "bird",
+          "position": [
+            -0.9,
+            3.94,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": -10,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "b2",
+          "type": "bird",
+          "position": [
+            0.9,
+            3.94,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 15,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "b1",
+          "to": "b2",
+          "kind": "electrons"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "b1",
+        "distance": 4,
+        "angle": "frontLeft",
+        "move": "orbitRight"
+      },
+      "notes": [
+        {
+          "prop": "b2",
+          "text": {
+            "cs": "0 V",
+            "en": "0 V",
+            "ro": "0 V"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Stačí ale křídlem *ťuknout* do druhého drátu…",
+        "en": "But one wing *tapping* a second wire…",
+        "ro": "Dar e de ajuns ca o aripă să *atingă* al doilea fir…"
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "line",
+          "type": "powerLine",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "b1",
+          "type": "bird",
+          "position": [
+            -0.9,
+            3.94,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": -10,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "b2",
+          "type": "bird",
+          "position": [
+            0.9,
+            3.94,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 15,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0.9,
+            3.94,
+            0.45
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "b2",
+        "distance": 2.6,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "b2",
+          "text": {
+            "cs": "pozor",
+            "en": "careful",
+            "ro": "atenție"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "…a proud má najednou cestu *přes ptáka*.",
+        "en": "…and suddenly the current has a path *through the bird*.",
+        "ro": "…și deodată curentul are o cale *prin pasăre*."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "line",
+          "type": "powerLine",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "b1",
+          "type": "bird",
+          "position": [
+            -0.9,
+            3.94,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": -10,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "b2",
+          "type": "bird",
+          "position": [
+            0.9,
+            3.94,
+            0.45
+          ],
+          "scale": 1.5,
+          "rotationY": 15,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "zap",
+          "type": "lightning",
+          "position": [
+            0.9,
+            4.3,
+            0.3
+          ],
+          "scale": 0.35,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "b2",
+        "distance": 3,
+        "angle": "low",
+        "move": "orbitLeft"
+      },
+      "notes": [],
+      "card": {
+        "type": "field",
+        "mode": "spark",
         "label": null
-      }
+      },
+      "shake": true
     },
     {
       "narration": {
-        "cs": "Zrcadlo převrací jen směr *k němu a od něj*.",
-        "en": "A mirror only flips the direction *toward and away* from it.",
-        "ro": "Oglinda inversează doar direcția *spre ea și dinspre ea*."
+        "cs": "Proto jsou dráty na sloupech tak *daleko od sebe*.",
+        "en": "That's why power lines are spaced so *far apart*.",
+        "ro": "De aceea firele de pe stâlpi sunt atât de *depărtate*."
       },
-      "headline": {
-        "cs": "PŘEDEK ↔|ZADEK",
-        "en": "FRONT ↔|BACK",
-        "ro": "FAȚĂ ↔|SPATE"
-      },
-      "tag": "DEPTH AXIS",
-      "accent": "yellow",
-      "visual": {
-        "type": "compare",
-        "left": {
-          "icon": "person",
-          "label": {
-            "cs": "ty",
-            "en": "you",
-            "ro": "tu"
-          },
-          "value": {
-            "cs": "koukáš na sever",
-            "en": "facing north",
-            "ro": "privești spre nord"
-          }
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "line",
+          "type": "powerLine",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "right": {
-          "icon": "mirror",
-          "label": {
-            "cs": "odraz",
-            "en": "image",
-            "ro": "imaginea"
-          },
-          "value": {
-            "cs": "kouká na jih",
-            "en": "facing south",
-            "ro": "privește spre sud"
-          }
+        {
+          "id": "b1",
+          "type": "bird",
+          "position": [
+            -0.9,
+            3.94,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": -10,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "winner": "none"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Odraz jsi ty, jen *převrácený* zepředu dozadu.",
-        "en": "Your image is like you turned *inside out* front to back.",
-        "ro": "Imaginea e ca tine întors *pe dos*, față-spate."
+        {
+          "id": "b2",
+          "type": "bird",
+          "position": [
+            -2,
+            3.94,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 15,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "line",
+        "distance": 8,
+        "angle": "frontRight",
+        "move": "dollyOut"
       },
-      "headline": {
-        "cs": "OBRÁCENĚ|DO HLOUBKY",
-        "en": "INSIDE OUT|IN DEPTH",
-        "ro": "INVERSAT|ÎN ADÂNCIME"
-      },
-      "tag": "REFLECTION",
-      "accent": "blue",
-      "visual": {
-        "type": "rays",
-        "mode": "mirror",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Levá a pravá se nám jen *zdají* prohozené.",
-        "en": "Left and right only *seem* swapped to us.",
-        "ro": "Stânga și dreapta doar *par* inversate."
-      },
-      "headline": {
-        "cs": "JEN SE|TO ZDÁ",
-        "en": "IT ONLY|SEEMS SO",
-        "ro": "DOAR|PARE AȘA"
-      },
-      "tag": "PERCEPTION",
-      "accent": "teal",
-      "visual": {
-        "type": "icon",
-        "icon": "eye",
-        "icon2": "question",
-        "relation": "none",
-        "effect": "pulse",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Představíš si totiž, že ses *otočil* jako jiný člověk.",
-        "en": "Because you imagine *turning around* like another person.",
-        "ro": "Pentru că îți imaginezi că *te-ai întors* ca alt om."
-      },
-      "headline": {
-        "cs": "OTOČENÍ|V HLAVĚ",
-        "en": "TURNING|IN YOUR HEAD",
-        "ro": "ÎNTOARCERE|ÎN MINTE"
-      },
-      "tag": "MENTAL ROTATION",
-      "accent": "yellow",
-      "visual": {
-        "type": "steps",
-        "items": [
-          {
-            "cs": "vidíš odraz",
-            "en": "you see the image",
-            "ro": "vezi imaginea"
-          },
-          {
-            "cs": "v duchu se otočíš",
-            "en": "you mentally turn around",
-            "ro": "te întorci în minte"
-          },
-          {
-            "cs": "levá je najednou pravá",
-            "en": "left suddenly becomes right",
-            "ro": "stânga devine dreapta"
+      "notes": [
+        {
+          "prop": "line",
+          "text": {
+            "cs": "daleko od sebe",
+            "en": "far apart",
+            "ro": "depărtate"
           }
-        ],
-        "active": 1
-      }
-    },
-    {
-      "narration": {
-        "cs": "Proto je nápis *AMBULANCE* napsaný zrcadlově, aby ho řidič přečetl.",
-        "en": "That's why *AMBULANCE* is written mirrored, so drivers can read it.",
-        "ro": "De aceea *AMBULANȚĂ* e scris în oglindă, ca șoferii să citească."
-      },
-      "headline": {
-        "cs": "ZRCADLOVÝ|NÁPIS",
-        "en": "MIRRORED|TEXT",
-        "ro": "TEXT|ÎN OGLINDĂ"
-      },
-      "tag": "REAR-VIEW MIRROR",
-      "accent": "red",
-      "visual": {
-        "type": "icon",
-        "icon": "ambulance",
-        "icon2": "mirror",
-        "relation": "arrow",
-        "effect": "none",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
-        "en": "Follow for more *physics around you*.",
-        "ro": "Urmărește pentru mai multă *fizică din jurul tău*."
-      },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
-      },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

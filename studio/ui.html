@@ -146,11 +146,8 @@
       <div class="card">
         <h3>Hlas</h3>
         <label class="f"><span>ElevenLabs API klíč</span><input id="ELEVENLABS_API_KEY" placeholder="sk_…"></label>
-        <div class="row">
-          <label class="f" style="flex:1"><span>Hlas ID – CZ</span><input id="ELEVENLABS_VOICE_CS"></label>
-          <label class="f" style="flex:1"><span>EN</span><input id="ELEVENLABS_VOICE_EN"></label>
-          <label class="f" style="flex:1"><span>RO</span><input id="ELEVENLABS_VOICE_RO"></label>
-        </div>
+        <div id="voicePick"></div>
+        <input type="hidden" id="ELEVENLABS_VOICE_CS"><input type="hidden" id="ELEVENLABS_VOICE_EN"><input type="hidden" id="ELEVENLABS_VOICE_RO">
         <div class="row">
           <label class="f" style="flex:1"><span>Kdo mluví – CZ</span><select id="VOICE_PROVIDER_CS"></select></label>
           <label class="f" style="flex:1"><span>EN</span><select id="VOICE_PROVIDER_EN"></select></label>
@@ -158,7 +155,7 @@
         </div>
         <div class="row">
           <label class="f" style="flex:1"><span>Microsoft hlas CZ</span><select id="EDGE_VOICE_CS"><option value="">Antonín (muž)</option><option value="cs-CZ-VlastaNeural">Vlasta (žena)</option></select></label>
-          <label class="f" style="flex:1"><span>EN</span><select id="EDGE_VOICE_EN"><option value="">Andrew (muž)</option><option value="en-US-AvaNeural">Ava (žena)</option><option value="en-US-BrianNeural">Brian (muž)</option><option value="en-GB-RyanNeural">Ryan (UK)</option></select></label>
+          <label class="f" style="flex:1"><span>EN</span><select id="EDGE_VOICE_EN"><option value="">Andrew Multilingual (muž)</option><option value="en-US-BrianMultilingualNeural">Brian Multilingual (muž)</option><option value="en-US-AvaMultilingualNeural">Ava Multilingual (žena)</option><option value="en-US-BrianNeural">Brian (muž)</option><option value="en-GB-RyanNeural">Ryan (UK)</option></select></label>
           <label class="f" style="flex:1"><span>RO</span><select id="EDGE_VOICE_RO"><option value="">Emil (muž)</option><option value="ro-RO-AlinaNeural">Alina (žena)</option></select></label>
         </div>
         <div class="hint" id="voiceHint"></div>
@@ -263,7 +260,7 @@ function renderVideos() {
     const posted = S.channels.map((c) => x.posted.includes(c.id) ? `<span class="chip ok" title="${esc(c.name)}">✓ ${esc(c.name)}</span>` : '').join('');
     return `<tr>
       <td class="muted">${x.id}</td>
-      <td><b>${esc(x.title)}</b><div class="muted small">${x.short ? 'krátké 2D' : 'původní 3D'} · ${x.scenes} scén</div></td>
+      <td><b>${esc(x.title)}</b><div class="muted small">${x.engine === 'hybrid' ? '3D + grafika' : x.engine === 'blueprint' ? '2D' : 'původní 3D'} · ${x.scenes} scén</div></td>
       ${chips(x)}
       <td><label class="toggle small"><input type="checkbox" data-skip="${x.id}" ${x.skip ? '' : 'checked'}> ${x.skip ? 'ne' : 'ano'}</label><div>${posted}</div></td>
       <td><button class="btn sm" data-make="${x.id}">Vyrobit</button></td>
@@ -356,9 +353,39 @@ $('#dlgFolder').onclick = () => api('/api/open', cur);
 /* ---------- nastavení ---------- */
 const PROV = '<option value="">automaticky (ElevenLabs → pak zdarma)</option><option value="elevenlabs">vždy ElevenLabs</option><option value="edge">vždy zdarma (Microsoft)</option>';
 ['VOICE_PROVIDER_CS', 'VOICE_PROVIDER_EN', 'VOICE_PROVIDER_RO'].forEach((k) => $('#' + k).innerHTML = PROV);
+let VOICES = null;
+async function drawVoicePicker(current) {
+  if (!VOICES) VOICES = await api('/api/voices');
+  $('#voicePick').innerHTML = LANGS.map((l) => {
+    const cur = current[`ELEVENLABS_VOICE_${l.toUpperCase()}`] || VOICES.defaults[l];
+    const known = VOICES.catalog[l].some((v) => v.id === cur);
+    const opts = VOICES.catalog[l].map((v, i) => `<option value="${v.id}" ${v.id === cur ? 'selected' : ''}>${esc(v.name.split(' - ')[0])} – ${esc(v.note)}${i === 0 ? ' ★' : ''}</option>`).join('')
+      + `<option value="__custom" ${known ? '' : 'selected'}>vlastní ID hlasu…</option>`;
+    return `<div class="row" style="margin-bottom:10px"><span style="width:34px;font-weight:800">${LBL[l]}</span>
+      <select data-vsel="${l}" style="flex:1">${opts}</select>
+      <input data-vcustom="${l}" placeholder="ID hlasu z ElevenLabs" value="${known ? '' : esc(cur)}" style="flex:1;${known ? 'display:none' : ''}">
+      <button class="btn sm" data-vplay="${l}">▶ ukázka</button></div>`;
+  }).join('') + '<p class="muted small">★ = vybráno pro tebe: rodilí mluvčí, nejpoužívanější hlasy v knihovně ElevenLabs. Do tvého účtu se přidají samy při prvním použití.</p>';
+  const sync = (l) => {
+    const sel = document.querySelector(`[data-vsel="${l}"]`); const inp = document.querySelector(`[data-vcustom="${l}"]`);
+    inp.style.display = sel.value === '__custom' ? '' : 'none';
+    document.getElementById(`ELEVENLABS_VOICE_${l.toUpperCase()}`).value = sel.value === '__custom' ? inp.value.trim() : (sel.value === VOICES.defaults[l] ? '' : sel.value);
+  };
+  LANGS.forEach((l) => {
+    document.querySelector(`[data-vsel="${l}"]`).onchange = () => sync(l);
+    document.querySelector(`[data-vcustom="${l}"]`).oninput = () => sync(l);
+    document.querySelector(`[data-vplay="${l}"]`).onclick = () => {
+      const sel = document.querySelector(`[data-vsel="${l}"]`);
+      if (sel.value === '__custom') return alert('Ukázku vlastního hlasu si pusť na elevenlabs.io.');
+      new Audio(`/api/voice-preview?id=${sel.value}`).play().catch(() => alert('Ukázku se nepodařilo přehrát.'));
+    };
+    sync(l);
+  });
+}
 async function loadSettings() {
   const s = await api('/api/settings');
   for (const [k, v] of Object.entries(s)) { const el = document.getElementById(k); if (el) el.value = v; }
+  await drawVoicePicker(s);
   const el = S && S.eleven.value;
   $('#voiceHint').innerHTML = el == null ? 'Bez ElevenLabs klíče mluví zdarma hlas Microsoft Edge (Antonín / Andrew / Emil).' :
     `Zbývá <b>${el.toLocaleString('cs-CZ')}</b> znaků ≈ ${Math.floor(el / 430)} namluvených videí v jednom jazyce. Tip: nastav ElevenLabs jen pro CZ („vždy ElevenLabs“) a EN/RO dej „vždy zdarma“ – kredity pak vystačí na ~${Math.floor(el / 430)} českých videí.`;

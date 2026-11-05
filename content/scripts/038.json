@@ -1,311 +1,520 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 38,
   "title": {
-    "cs": "Balónek v autě letí dopředu",
-    "en": "A balloon in a car flies forward",
-    "ro": "Balonul din mașină zboară înainte"
+    "cs": "Tenhle mrak váží 500 tun",
+    "en": "This cloud weighs 500 tonnes",
+    "ro": "Norul ăsta cântărește 500 de tone"
   },
   "description": {
-    "cs": "Auto se rozjede, ty letíš do sedadla. Ale héliový balónek letí dopředu. Proč? 🎈🚗",
-    "en": "The car speeds up, you're pushed back. But a helium balloon moves forward. Why? 🎈🚗",
-    "ro": "Mașina accelerează, tu ești împins înapoi. Dar balonul cu heliu merge înainte. De ce? 🎈🚗"
+    "cs": "Tři sta aut ve vzduchu. Proč nespadne? ☁️",
+    "en": "Three hundred cars in the air. Why doesn't it fall? ☁️",
+    "ro": "Trei sute de mașini în aer. De ce nu cade? ☁️"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "auto",
-    "setrvacnost",
-    "inertia"
+    "mraky",
+    "pocasi",
+    "clouds"
   ],
+  "hook": {
+    "cs": "TENHLE MRAK VÁŽÍ 500 TUN",
+    "en": "THIS CLOUD WEIGHS 500 TONNES",
+    "ro": "NORUL ĂSTA CÂNTĂREȘTE 500 DE TONE"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Auto se rozjede a tebe to *zatlačí do sedadla*.",
-        "en": "The car speeds up and you get *pushed into your seat*.",
-        "ro": "Mașina accelerează și ești *împins în scaun*."
+        "cs": "Obyčejný mrak nad tebou váží *pět set tun*.",
+        "en": "An ordinary cloud above you weighs *five hundred tonnes*.",
+        "ro": "Un nor obișnuit de deasupra ta cântărește *cinci sute de tone*."
       },
-      "headline": {
-        "cs": "TEBE TO|TLAČÍ DOZADU",
-        "en": "YOU GET|PUSHED BACK",
-        "ro": "EȘTI|ÎMPINS ÎNAPOI"
-      },
-      "tag": "ACCELERATION",
-      "accent": "yellow",
-      "visual": {
-        "type": "forces",
-        "body": "person",
-        "arrows": [
-          {
-            "dir": "left",
-            "size": 2,
-            "label": {
-              "cs": "setrvačnost",
-              "en": "inertia",
-              "ro": "inerție"
-            },
-            "color": "red"
-          },
-          {
-            "dir": "right",
-            "size": 2,
-            "label": {
-              "cs": "auto zrychluje",
-              "en": "car speeds up",
-              "ro": "mașina accelerează"
-            },
-            "color": "teal"
-          }
-        ],
-        "motion": "none"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Ale balónek s héliem se pohne *dopředu*.",
-        "en": "But a helium balloon moves *forward*.",
-        "ro": "Dar un balon cu heliu se mișcă *înainte*."
-      },
-      "headline": {
-        "cs": "BALÓNEK|LETÍ DOPŘEDU",
-        "en": "THE BALLOON|GOES FORWARD",
-        "ro": "BALONUL|MERGE ÎNAINTE"
-      },
-      "tag": "SURPRISE",
-      "accent": "red",
-      "visual": {
-        "type": "quiz",
-        "question": {
-          "cs": "Kam se pohne héliový balónek při rozjezdu?",
-          "en": "Where does a helium balloon go when the car speeds up?",
-          "ro": "Încotro merge balonul cu heliu la accelerare?"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            5.5,
+            -1
+          ],
+          "scale": 2.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "options": [
-          {
-            "cs": "dozadu",
-            "en": "backward",
-            "ro": "înapoi"
-          },
-          {
-            "cs": "dopředu",
-            "en": "forward",
-            "ro": "înainte"
-          },
-          {
-            "cs": "nikam",
-            "en": "nowhere",
-            "ro": "nicăieri"
-          }
-        ],
-        "answer": 1
-      }
-    },
-    {
-      "narration": {
-        "cs": "Setrvačnost totiž tlačí dozadu i *vzduch* v autě.",
-        "en": "Inertia pushes the *air* in the car backward too.",
-        "ro": "Inerția împinge înapoi și *aerul* din mașină."
-      },
-      "headline": {
-        "cs": "I VZDUCH|JDE DOZADU",
-        "en": "THE AIR|SHIFTS BACK",
-        "ro": "ȘI AERUL|MERGE ÎNAPOI"
-      },
-      "tag": "AIR HAS MASS",
-      "accent": "blue",
-      "visual": {
-        "type": "particles",
-        "mode": "pressure",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Vzadu se nahromadí *hustší* vzduch, vpředu řidší.",
-        "en": "*Denser* air piles up at the back, thinner air at the front.",
-        "ro": "În spate se strânge aer *mai dens*, în față mai rar."
-      },
-      "headline": {
-        "cs": "VZADU|HUSTŠÍ",
-        "en": "DENSER|AT THE BACK",
-        "ro": "MAI DENS|ÎN SPATE"
-      },
-      "tag": "PRESSURE GRADIENT",
-      "accent": "teal",
-      "visual": {
-        "type": "compare",
-        "left": {
-          "icon": "wind",
-          "label": {
-            "cs": "vpředu",
-            "en": "front",
-            "ro": "față"
-          },
-          "value": {
-            "cs": "nižší tlak",
-            "en": "lower pressure",
-            "ro": "presiune mică"
-          }
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            -3,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "right": {
-          "icon": "wind",
-          "label": {
-            "cs": "vzadu",
-            "en": "back",
-            "ro": "spate"
-          },
-          "value": {
-            "cs": "vyšší tlak",
-            "en": "higher pressure",
-            "ro": "presiune mare"
-          }
-        },
-        "winner": "none"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Ten tlak *vystrčí* lehký balónek dopředu.",
-        "en": "That pressure *pushes* the light balloon forward.",
-        "ro": "Presiunea asta *împinge* balonul ușor înainte."
-      },
-      "headline": {
-        "cs": "TLAK|HO VYSTRČÍ",
-        "en": "PRESSURE|PUSHES IT",
-        "ro": "PRESIUNEA|ÎL ÎMPINGE"
-      },
-      "tag": "BUOYANCY",
-      "accent": "yellow",
-      "visual": {
-        "type": "forces",
-        "body": "balloon",
-        "arrows": [
-          {
-            "dir": "right",
-            "size": 2.5,
-            "label": {
-              "cs": "vztlak",
-              "en": "buoyancy",
-              "ro": "flotabilitate"
-            },
-            "color": "yellow"
-          }
-        ],
-        "motion": "right"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Je to stejný důvod, proč balónek *stoupá* vzhůru.",
-        "en": "It's the same reason a balloon *rises* upward.",
-        "ro": "E același motiv pentru care balonul *urcă*."
-      },
-      "headline": {
-        "cs": "JAKO|VZTLAK",
-        "en": "SAME AS|FLOATING",
-        "ro": "CA LA|PLUTIRE"
-      },
-      "tag": "EQUIVALENCE",
-      "accent": "teal",
-      "visual": {
-        "type": "forces",
-        "body": "balloon",
-        "arrows": [
-          {
-            "dir": "up",
-            "size": 2.5,
-            "label": {
-              "cs": "vztlak",
-              "en": "buoyancy",
-              "ro": "flotabilitate"
-            },
-            "color": "teal"
-          },
-          {
-            "dir": "down",
-            "size": 1,
-            "label": {
-              "cs": "tíha",
-              "en": "weight",
-              "ro": "greutate"
-            },
-            "color": "red"
-          }
-        ],
-        "motion": "up"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Zrychlení se pro vzduch chová *jako gravitace*.",
-        "en": "To the air, acceleration acts *just like gravity*.",
-        "ro": "Pentru aer, accelerația se comportă *exact ca gravitația*."
-      },
-      "headline": {
-        "cs": "ZRYCHLENÍ|= GRAVITACE",
-        "en": "ACCELERATION|= GRAVITY",
-        "ro": "ACCELERAȚIA|= GRAVITAȚIA"
-      },
-      "tag": "EINSTEIN",
-      "accent": "red",
-      "visual": {
-        "type": "formula",
-        "tex": "\\vec{a} \\equiv \\hl{\\vec{g}}",
-        "caption": {
-          "cs": "princip ekvivalence",
-          "en": "the equivalence principle",
-          "ro": "principiul echivalenței"
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            3.2,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cloud",
+        "distance": 9,
+        "angle": "low",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Při brzdění to funguje obráceně, balónek jde *dozadu*.",
-        "en": "When braking, it flips, and the balloon goes *backward*.",
-        "ro": "La frânare e invers, balonul merge *înapoi*."
+        "cs": "Je to kilometr krychlový *drobných kapiček* vody.",
+        "en": "It's a cubic kilometer of *tiny water droplets*.",
+        "ro": "E un kilometru cub de *picături mici* de apă."
       },
-      "headline": {
-        "cs": "BRZDA =|DOZADU",
-        "en": "BRAKES =|BACKWARD",
-        "ro": "FRÂNĂ =|ÎNAPOI"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            5.5,
+            -1
+          ],
+          "scale": 2.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cloud",
+        "distance": 6,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "tag": "TRY IT",
-      "accent": "yellow",
-      "visual": {
-        "type": "forces",
-        "body": "balloon",
-        "arrows": [
+      "notes": [],
+      "card": {
+        "type": "particles",
+        "mode": "gas",
+        "label": {
+          "cs": "kapičky, ne pára",
+          "en": "droplets, not steam",
+          "ro": "picături, nu abur"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Na každý kubík připadá zhruba *půl gramu*.",
+        "en": "Each cubic meter holds about *half a gram*.",
+        "ro": "Fiecare metru cub are cam *jumătate de gram*."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            5.5,
+            -1
+          ],
+          "scale": 2.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            -3,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cloud",
+        "distance": 8,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 0.5,
+        "decimals": 1,
+        "unit": {
+          "cs": " g",
+          "en": " g",
+          "ro": " g"
+        },
+        "caption": {
+          "cs": "vody v jednom metru krychlovém",
+          "en": "of water per cubic meter",
+          "ro": "de apă pe metru cub"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Celkem tolik jako *tři sta aut*.",
+        "en": "In total, as much as *three hundred cars*.",
+        "ro": "În total, cât *trei sute de mașini*."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "c0",
+          "type": "car",
+          "position": [
+            -1.8,
+            0,
+            1.4
+          ],
+          "scale": 1,
+          "rotationY": 90,
+          "color": "#e2483d",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "c1",
+          "type": "car",
+          "position": [
+            -0.5,
+            0,
+            1.4
+          ],
+          "scale": 1,
+          "rotationY": 90,
+          "color": "#3f7be0",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "c2",
+          "type": "car",
+          "position": [
+            0.8,
+            0,
+            1.4
+          ],
+          "scale": 1,
+          "rotationY": 90,
+          "color": "#ffb020",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "c3",
+          "type": "car",
+          "position": [
+            2.1000000000000005,
+            0,
+            1.4
+          ],
+          "scale": 1,
+          "rotationY": 90,
+          "color": "#3dd68c",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            5.5,
+            -1
+          ],
+          "scale": 2.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "c1",
+        "distance": 6.5,
+        "angle": "front",
+        "move": "orbitRight"
+      },
+      "notes": [],
+      "card": {
+        "type": "bars",
+        "items": [
           {
-            "dir": "left",
-            "size": 2.5,
             "label": {
-              "cs": "brzdění",
-              "en": "braking",
-              "ro": "frânare"
+              "cs": "auto",
+              "en": "car",
+              "ro": "mașină"
             },
-            "color": "yellow"
+            "value": 1.5,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "mrak",
+              "en": "cloud",
+              "ro": "nor"
+            },
+            "value": 500,
+            "highlight": true
           }
         ],
-        "motion": "left"
-      }
+        "unit": {
+          "cs": " t",
+          "en": " t",
+          "ro": " t"
+        }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Napiš do komentářů, co tě zajímá, a *sleduj*.",
-        "en": "Tell us what to explain next, and *follow*.",
-        "ro": "Scrie-ne ce să explicăm și dă *follow*."
+        "cs": "Tak proč nespadne? Kapičky jsou *stokrát* tenčí než milimetr.",
+        "en": "So why doesn't it fall? The droplets are *a hundred times* thinner than a millimeter.",
+        "ro": "Atunci de ce nu cade? Picăturile sunt de *o sută de ori* mai subțiri decât un milimetru."
       },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            5.5,
+            -1
+          ],
+          "scale": 2.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cloud",
+        "distance": 4.5,
+        "angle": "low",
+        "move": "dollyIn"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [
+        {
+          "prop": "cloud",
+          "text": {
+            "cs": "0,01 mm",
+            "en": "0.01 mm",
+            "ro": "0,01 mm"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Padají jen asi *centimetr za sekundu*.",
+        "en": "They fall only about *a centimeter a second*.",
+        "ro": "Cad doar cu vreun *centimetru pe secundă*."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            5.5,
+            -1
+          ],
+          "scale": 2.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            -3,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cloud",
+        "distance": 7,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 1,
+        "decimals": 0,
+        "unit": {
+          "cs": " cm/s",
+          "en": " cm/s",
+          "ro": " cm/s"
+        },
+        "caption": {
+          "cs": "rychlost pádu kapičky",
+          "en": "a droplet's falling speed",
+          "ro": "viteza de cădere a unei picături"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "A teplý vzduch zespodu je nese nahoru *rychleji*, než padají.",
+        "en": "And warm air rising from below lifts them *faster* than they fall.",
+        "ro": "Iar aerul cald de dedesubt le ridică *mai repede* decât cad."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            5.5,
+            -1
+          ],
+          "scale": 2.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            -3,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            3.2,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "house",
+          "to": "cloud",
+          "kind": "air"
+        },
+        {
+          "from": "tree",
+          "to": "cloud",
+          "kind": "air"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "cloud",
+        "distance": 10,
+        "angle": "frontRight",
+        "move": "rise"
+      },
+      "notes": [],
+      "card": {
+        "type": "particles",
+        "mode": "rise",
+        "label": null
+      },
+      "shake": false
     }
   ]
 }

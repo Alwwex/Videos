@@ -1,257 +1,482 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 17,
   "title": {
-    "cs": "Padají těžší věci rychleji?",
-    "en": "Do heavier things fall faster?",
-    "ro": "Cad mai repede lucrurile grele?"
+    "cs": "Skoč do díry skrz Zemi",
+    "en": "Jump into a hole through Earth",
+    "ro": "Sari într-o gaură prin Pământ"
   },
   "description": {
-    "cs": "Kladivo, nebo pírko? Odpověď tě možná překvapí. 🪶🔨",
-    "en": "Hammer or feather? The answer might surprise you. 🪶🔨",
-    "ro": "Ciocan sau pană? Răspunsul te-ar putea surprinde. 🪶🔨"
+    "cs": "42 minut z jedné strany planety na druhou. A pak zase zpátky. 🌍",
+    "en": "42 minutes from one side of the planet to the other. Then back again. 🌍",
+    "ro": "42 de minute dintr-o parte a planetei în cealaltă. Și apoi înapoi. 🌍"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
+    "zeme",
     "gravitace",
-    "galileo",
-    "gravity"
+    "earth"
   ],
+  "hook": {
+    "cs": "SKOČ DO DÍRY SKRZ ZEMI",
+    "en": "JUMP INTO A HOLE THROUGH EARTH",
+    "ro": "SARI ÎNTR-O GAURĂ PRIN PĂMÂNT"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Pustíš kladivo a pírko. Co dopadne *první*?",
-        "en": "Drop a hammer and a feather. Which lands *first*?",
-        "ro": "Scapi un ciocan și o pană. Care cade *primul*?"
+        "cs": "Vykopeš díru skrz celou Zemi a *skočíš*.",
+        "en": "You dig a hole through the whole Earth and *jump*.",
+        "ro": "Sapi o gaură prin tot Pământul și *sari*."
       },
-      "headline": {
-        "cs": "CO DOPADNE|PRVNÍ?",
-        "en": "WHICH LANDS|FIRST?",
-        "ro": "CARE CADE|PRIMUL?"
-      },
-      "tag": "THOUGHT EXPERIMENT",
-      "accent": "yellow",
-      "visual": {
-        "type": "quiz",
-        "question": {
-          "cs": "Ve vzduchoprázdnu dopadne dřív…",
-          "en": "In a vacuum, the first to land is…",
-          "ro": "În vid, primul care cade e…"
+      "environment": "space",
+      "props": [
+        {
+          "id": "ec",
+          "type": "earthCut",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "options": [
-          {
-            "cs": "kladivo",
-            "en": "the hammer",
-            "ro": "ciocanul"
-          },
-          {
-            "cs": "pírko",
-            "en": "the feather",
-            "ro": "pana"
-          },
-          {
-            "cs": "dopadnou spolu",
-            "en": "they land together",
-            "ro": "cad împreună"
-          }
-        ],
-        "answer": 2
-      }
-    },
-    {
-      "narration": {
-        "cs": "Ve vzduchoprázdnu dopadnou *úplně současně*.",
-        "en": "In a vacuum they land at *exactly the same time*.",
-        "ro": "În vid cad *exact în același timp*."
-      },
-      "headline": {
-        "cs": "DOPADNOU|SPOLU",
-        "en": "THEY LAND|TOGETHER",
-        "ro": "CAD|ÎMPREUNĂ"
-      },
-      "tag": "VACUUM",
-      "accent": "teal",
-      "visual": {
-        "type": "fall",
-        "left": "hammer",
-        "right": "feather",
-        "air": false,
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Na těžší věc sice gravitace táhne *silněji*…",
-        "en": "Gravity does pull *harder* on the heavier object…",
-        "ro": "Gravitația trage, ce-i drept, *mai tare* de obiectul greu…"
-      },
-      "headline": {
-        "cs": "VĚTŠÍ|SÍLA",
-        "en": "BIGGER|FORCE",
-        "ro": "FORȚĂ|MAI MARE"
-      },
-      "tag": "F = m·g",
-      "accent": "red",
-      "visual": {
-        "type": "forces",
-        "body": "hammer",
-        "arrows": [
-          {
-            "dir": "down",
-            "size": 3,
-            "label": {
-              "cs": "tíha",
-              "en": "weight",
-              "ro": "greutate"
-            },
-            "color": "red"
-          }
-        ],
-        "motion": "none"
-      }
-    },
-    {
-      "narration": {
-        "cs": "…ale těžší věc se taky hůř *rozpohybuje*.",
-        "en": "…but a heavier object is also harder to *get moving*.",
-        "ro": "…dar un obiect greu se și *pune în mișcare* mai greu."
-      },
-      "headline": {
-        "cs": "VĚTŠÍ|SETRVAČNOST",
-        "en": "MORE|INERTIA",
-        "ro": "MAI MULTĂ|INERȚIE"
-      },
-      "tag": "NEWTON II",
-      "accent": "yellow",
-      "visual": {
-        "type": "formula",
-        "tex": "a = \\frac{F}{\\hl{m}}",
-        "caption": {
-          "cs": "dvakrát větší síla, dvakrát větší hmotnost",
-          "en": "twice the force, twice the mass",
-          "ro": "forță dublă, masă dublă"
+        {
+          "id": "you",
+          "type": "person",
+          "position": [
+            0,
+            2.15,
+            0
+          ],
+          "scale": 0.32,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ec",
+        "distance": 9,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Obojí se přesně vyruší a zrychlení je *pro všechno stejné*.",
-        "en": "The two cancel out, so acceleration is *the same for everything*.",
-        "ro": "Cele două se anulează, deci accelerația e *aceeași pentru toate*."
+        "cs": "Gravitace tě táhne ke středu a ty *zrychluješ*.",
+        "en": "Gravity pulls you to the center and you *speed up*.",
+        "ro": "Gravitația te trage spre centru și *accelerezi*."
       },
-      "headline": {
-        "cs": "STEJNÉ|ZRYCHLENÍ",
-        "en": "SAME|ACCELERATION",
-        "ro": "ACEEAȘI|ACCELERAȚIE"
-      },
-      "tag": "g ≈ 9,81 m/s²",
-      "accent": "teal",
-      "visual": {
-        "type": "formula",
-        "tex": "a = \\frac{m g}{m} = \\hl{g}",
-        "caption": {
-          "cs": "hmotnost se vykrátí",
-          "en": "the mass cancels out",
-          "ro": "masa se simplifică"
+      "environment": "space",
+      "props": [
+        {
+          "id": "ec",
+          "type": "earthCut",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "you",
+          "type": "person",
+          "position": [
+            0,
+            2.15,
+            0
+          ],
+          "scale": 0.32,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0,
+            0.7,
+            0
+          ],
+          "glow": false
         }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Pírko na Zemi brzdí jen *odpor vzduchu*.",
-        "en": "On Earth, only *air resistance* slows the feather.",
-        "ro": "Pe Pământ, doar *rezistența aerului* frânează pana."
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ec",
+        "distance": 7.5,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "headline": {
-        "cs": "VINÍK:|VZDUCH",
-        "en": "THE CULPRIT:|AIR",
-        "ro": "VINOVATUL:|AERUL"
-      },
-      "tag": "AIR DRAG",
-      "accent": "red",
-      "visual": {
-        "type": "fall",
-        "left": "hammer",
-        "right": "feather",
-        "air": true,
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Astronauti to v roce *1971* vyzkoušeli přímo na Měsíci.",
-        "en": "Astronauts tested it on the Moon in *1971*.",
-        "ro": "Astronauții au testat asta pe Lună în *1971*."
-      },
-      "headline": {
-        "cs": "TEST NA|MĚSÍCI",
-        "en": "TESTED ON|THE MOON",
-        "ro": "TESTAT PE|LUNĂ"
-      },
-      "tag": "APOLLO 15",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "moon",
-        "icon2": "feather",
-        "relation": "plus",
-        "effect": "float",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Kladivo i pírko dopadly do prachu *ve stejnou chvíli*.",
-        "en": "The hammer and the feather hit the dust *at the same moment*.",
-        "ro": "Ciocanul și pana au atins praful *în același moment*."
-      },
-      "headline": {
-        "cs": "GALILEO|MĚL PRAVDU",
-        "en": "GALILEO|WAS RIGHT",
-        "ro": "GALILEO|AVEA DREPTATE"
-      },
-      "tag": "RESULT",
-      "accent": "teal",
-      "visual": {
-        "type": "steps",
-        "items": [
-          {
-            "cs": "stejná gravitace",
-            "en": "same gravity",
-            "ro": "aceeași gravitație"
-          },
-          {
-            "cs": "žádný vzduch",
-            "en": "no air",
-            "ro": "fără aer"
-          },
-          {
-            "cs": "stejný dopad",
-            "en": "same landing",
-            "ro": "aceeași aterizare"
+      "notes": [
+        {
+          "prop": "you",
+          "text": {
+            "cs": "zrychluješ",
+            "en": "faster",
+            "ro": "tot mai repede"
           }
-        ],
-        "active": 2
-      }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Překvapilo tě to? Dej *sledovat* pro další díl.",
-        "en": "Surprised? Hit *follow* for the next one.",
-        "ro": "Te-a surprins? Dă *follow* pentru următorul."
+        "cs": "Středem proletíš rychlostí přes *sedm kilometrů za sekundu*.",
+        "en": "You blast through the center at over *seven kilometers a second*.",
+        "ro": "Treci prin centru cu peste *șapte kilometri pe secundă*."
       },
-      "headline": {
-        "cs": "DALŠÍ DÍL|UŽ BRZY",
-        "en": "NEXT EPISODE|SOON",
-        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      "environment": "space",
+      "props": [
+        {
+          "id": "ec",
+          "type": "earthCut",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "you",
+          "type": "person",
+          "position": [
+            0,
+            0.6,
+            0
+          ],
+          "scale": 0.32,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0,
+            -0.6,
+            0
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ec",
+        "distance": 6,
+        "angle": "frontLeft",
+        "move": "orbitRight"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [],
+      "card": {
+        "type": "gauge",
+        "from": 0,
+        "to": 28000,
+        "max": 30000,
+        "unit": {
+          "cs": " km/h",
+          "en": " km/h",
+          "ro": " km/h"
+        },
+        "caption": {
+          "cs": "ve středu Země",
+          "en": "at Earth's center",
+          "ro": "în centrul Pământului"
+        }
+      },
+      "shake": true
+    },
+    {
+      "narration": {
+        "cs": "Pak tě gravitace zase *brzdí* až na druhou stranu.",
+        "en": "Then gravity *brakes* you all the way to the other side.",
+        "ro": "Apoi gravitația te *frânează* până în partea cealaltă."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "ec",
+          "type": "earthCut",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "you",
+          "type": "person",
+          "position": [
+            0,
+            -0.6,
+            0
+          ],
+          "scale": 0.32,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0,
+            -2.15,
+            0
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ec",
+        "distance": 7.5,
+        "angle": "low",
+        "move": "dollyOut"
+      },
+      "notes": [
+        {
+          "prop": "you",
+          "text": {
+            "cs": "brzdíš",
+            "en": "slowing",
+            "ro": "frânezi"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Celá cesta trvá zhruba *42 minut*. Z jakéhokoli místa na jakékoli.",
+        "en": "The whole trip takes about *42 minutes*. From anywhere to anywhere.",
+        "ro": "Toată călătoria durează cam *42 de minute*. De oriunde, oriunde."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "ec",
+          "type": "earthCut",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "you",
+          "type": "person",
+          "position": [
+            0,
+            -2.15,
+            0
+          ],
+          "scale": 0.32,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ec",
+        "distance": 9,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 42,
+        "decimals": 0,
+        "unit": {
+          "cs": " min",
+          "en": " min",
+          "ro": " min"
+        },
+        "caption": {
+          "cs": "pro každý rovný tunel Zemí",
+          "en": "for any straight tunnel through Earth",
+          "ro": "pentru orice tunel drept prin Pământ"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Z Česka bys vylezl uprostřed *Tichého oceánu*.",
+        "en": "From London you'd pop out in the *Pacific*, near New Zealand.",
+        "ro": "Din România ai ieși în mijlocul *Pacificului*."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "sea",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "swim",
+          "type": "person",
+          "position": [
+            0,
+            -1.2,
+            0.5
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0,
+            -0.6,
+            0.5
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "swim",
+        "distance": 4.5,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "swim",
+          "text": {
+            "cs": "ahoj, oceáne",
+            "en": "hello, ocean",
+            "ro": "salut, ocean"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "A když se ničeho nechytíš, *spadneš zpátky*. Navždy.",
+        "en": "And if you don't grab the edge, you *fall back*. Forever.",
+        "ro": "Și dacă nu te prinzi de margine, *cazi înapoi*. Pentru totdeauna."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "ec",
+          "type": "earthCut",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "you",
+          "type": "person",
+          "position": [
+            0,
+            -2.15,
+            0
+          ],
+          "scale": 0.32,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0,
+            2.15,
+            0
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ec",
+        "distance": 8,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
+        "type": "graph",
+        "curve": "sine",
+        "curve2": null,
+        "x": {
+          "cs": "čas",
+          "en": "time",
+          "ro": "timp"
+        },
+        "y": {
+          "cs": "poloha",
+          "en": "position",
+          "ro": "poziție"
+        },
+        "markLabel": {
+          "cs": "tam a zpátky",
+          "en": "there and back",
+          "ro": "dus-întors"
+        }
+      },
+      "shake": false
     }
   ]
 }

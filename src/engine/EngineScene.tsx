@@ -18,7 +18,7 @@ import type {HookStyle, Theme} from './themes';
 
 type CamState = ReturnType<typeof cameraAt>;
 
-const CameraRig: React.FC<{state: CamState}> = ({state}) => {
+export const CameraRig: React.FC<{state: CamState}> = ({state}) => {
   const {width, height} = useVideoConfig();
   const camera = useThree((s) => s.camera) as PerspectiveCamera;
   useLayoutEffect(() => applyCamera(camera, state, width / height));
@@ -28,14 +28,14 @@ const CameraRig: React.FC<{state: CamState}> = ({state}) => {
 
 /* Pozadí podle tématu videa; barva se navíc střídá po scénách. */
 const SPACE_SKY = 'radial-gradient(ellipse at 50% 40%, #2b2f6b 0%, #0d0f26 60%, #05060f 100%)';
-const skyFor = (env: SceneSpec['environment'], theme: Theme, i: number) =>
+export const skyFor = (env: SceneSpec['environment'], theme: Theme, i: number) =>
   env === 'space'
     ? SPACE_SKY
     : env === 'outdoor'
       ? theme.skies[i % theme.skies.length]
       : theme.walls[i % theme.walls.length];
 
-const Environment: React.FC<{env: SceneSpec['environment']; variant: number; theme: Theme}> = ({env, variant, theme}) => {
+export const Environment: React.FC<{env: SceneSpec['environment']; variant: number; theme: Theme}> = ({env, variant, theme}) => {
   if (env === 'space') {
     return (
       <>

@@ -1,231 +1,577 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 25,
   "title": {
-    "cs": "Proč hvězdy blikají",
-    "en": "Why stars twinkle",
-    "ro": "De ce sclipesc stelele"
+    "cs": "Mravenec přežije pád z letadla",
+    "en": "An ant survives a fall from a plane",
+    "ro": "O furnică supraviețuiește unei căderi din avion"
   },
   "description": {
-    "cs": "Hvězdy samy neblikají. Bliká to až v naší atmosféře. ✨",
-    "en": "Stars don't actually flicker. It happens in our atmosphere. ✨",
-    "ro": "Stelele nu pâlpâie de fapt. Se întâmplă în atmosfera noastră. ✨"
+    "cs": "Z jakékoli výšky. A ty ne. Proč na velikosti tak záleží? 🐜",
+    "en": "From any height. You wouldn't. Why does size matter so much? 🐜",
+    "ro": "De la orice înălțime. Tu nu. De ce contează atât mărimea? 🐜"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "hvezdy",
-    "vesmir",
-    "stars"
+    "mravenec",
+    "gravitace",
+    "ant"
   ],
+  "hook": {
+    "cs": "MRAVENEC PŘEŽIJE PÁD Z LETADLA",
+    "en": "AN ANT SURVIVES A FALL FROM A PLANE",
+    "ro": "FURNICA SUPRAVIEȚUIEȘTE CĂDERII DIN AVION"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Hvězdy na nebi *blikají*. Ale samy to nedělají.",
-        "en": "Stars *twinkle* in the night sky. But they don't do it themselves.",
-        "ro": "Stelele *sclipesc* pe cer. Dar nu fac asta singure."
+        "cs": "Mravenec přežije pád z *jakékoli výšky*. Ty ne.",
+        "en": "An ant survives a fall from *any height*. You don't.",
+        "ro": "O furnică supraviețuiește unei căderi de la *orice înălțime*. Tu nu."
       },
-      "headline": {
-        "cs": "PROČ|BLIKAJÍ?",
-        "en": "WHY DO THEY|TWINKLE?",
-        "ro": "DE CE|SCLIPESC?"
-      },
-      "tag": "NIGHT SKY",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "star",
-        "icon2": null,
-        "relation": "none",
-        "effect": "pulse",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Jejich světlo letí vesmírem *klidně a rovně*.",
-        "en": "Their light travels through space *calm and straight*.",
-        "ro": "Lumina lor călătorește prin spațiu *calm și drept*."
-      },
-      "headline": {
-        "cs": "VE VESMÍRU|KLID",
-        "en": "IN SPACE|ALL CALM",
-        "ro": "ÎN SPAȚIU|CALM"
-      },
-      "tag": "VACUUM",
-      "accent": "blue",
-      "visual": {
-        "type": "rays",
-        "mode": "refract",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Až na posledních pár kilometrů projde naší *atmosférou*.",
-        "en": "Only for the last few kilometers does it cross our *atmosphere*.",
-        "ro": "Doar ultimii kilometri trece prin *atmosfera* noastră."
-      },
-      "headline": {
-        "cs": "POSLEDNÍ|KILOMETRY",
-        "en": "THE LAST|KILOMETERS",
-        "ro": "ULTIMII|KILOMETRI"
-      },
-      "tag": "ATMOSPHERE",
-      "accent": "teal",
-      "visual": {
-        "type": "icon",
-        "icon": "star",
-        "icon2": "earth",
-        "relation": "arrow",
-        "effect": "float",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Vzduch v ní neustále *víří*, teplý a studený se míchá.",
-        "en": "That air is constantly *churning*, warm and cold mixing.",
-        "ro": "Aerul acolo *se agită* continuu, cald și rece amestecat."
-      },
-      "headline": {
-        "cs": "VZDUCH|VÍŘÍ",
-        "en": "AIR|CHURNS",
-        "ro": "AERUL|SE AGITĂ"
-      },
-      "tag": "TURBULENCE",
-      "accent": "red",
-      "visual": {
-        "type": "particles",
-        "mode": "rise",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Každá vrstva *ohne* světlo trochu jinak.",
-        "en": "Each pocket of air *bends* the light a little differently.",
-        "ro": "Fiecare strat *curbează* lumina puțin altfel."
-      },
-      "headline": {
-        "cs": "SVĚTLO SE|OHÝBÁ",
-        "en": "LIGHT|BENDS",
-        "ro": "LUMINA|SE CURBEAZĂ"
-      },
-      "tag": "REFRACTION",
-      "accent": "yellow",
-      "visual": {
-        "type": "rays",
-        "mode": "refract",
-        "label": {
-          "cs": "teplý a studený vzduch lámou světlo jinak",
-          "en": "warm and cold air bend light differently",
-          "ro": "aerul cald și rece refractă diferit"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "ant",
+          "type": "ant",
+          "position": [
+            0,
+            0,
+            0.6
+          ],
+          "scale": 3,
+          "rotationY": -20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "plane",
+          "type": "plane",
+          "position": [
+            0,
+            7.5,
+            -4
+          ],
+          "scale": 1.3,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            -3.5,
+            0,
+            -3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ant",
+        "distance": 2.4,
+        "angle": "low",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Paprsek hvězdy tak k tvému oku *poskakuje* sem a tam.",
-        "en": "So the star's beam *jumps around* on its way to your eye.",
-        "ro": "Așa raza stelei *sare* încoace și încolo spre ochiul tău."
+        "cs": "Když padáš, brzdí tě *vzduch*.",
+        "en": "When you fall, the *air* slows you down.",
+        "ro": "Când cazi, te frânează *aerul*."
       },
-      "headline": {
-        "cs": "PAPRSEK|POSKAKUJE",
-        "en": "THE BEAM|DANCES",
-        "ro": "RAZA|DANSEAZĂ"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -1.8,
+            6,
+            -0.4
+          ],
+          "scale": 1,
+          "rotationY": 20,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            -1.8,
+            2.5,
+            -0.4
+          ],
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            2.5,
+            0,
+            -3
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            -3.5,
+            0,
+            -3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "up",
+          "type": "arrowUp",
+          "position": [
+            -1.8,
+            5.2,
+            0.2
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 6,
+        "angle": "frontRight",
+        "move": "dollyIn"
       },
-      "tag": "SCINTILLATION",
-      "accent": "blue",
-      "visual": {
-        "type": "rays",
-        "mode": "twinkle",
-        "label": null
-      }
+      "notes": [
+        {
+          "prop": "up",
+          "text": {
+            "cs": "odpor vzduchu",
+            "en": "air drag",
+            "ro": "rezistența aerului"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Planety blikají méně, protože nejsou jen *bod*.",
-        "en": "Planets twinkle less, because they're not just a *point*.",
-        "ro": "Planetele sclipesc mai puțin, fiindcă nu sunt doar un *punct*."
+        "cs": "Čím jsi menší, tím víc máš plochy na *každý gram*.",
+        "en": "The smaller you are, the more surface you have per *gram*.",
+        "ro": "Cu cât ești mai mic, cu atât ai mai multă suprafață pe *gram*."
       },
-      "headline": {
-        "cs": "PLANETY|NEBLIKAJÍ",
-        "en": "PLANETS|DON'T TWINKLE",
-        "ro": "PLANETELE|NU SCLIPESC"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "ant",
+          "type": "ant",
+          "position": [
+            0,
+            0,
+            0.6
+          ],
+          "scale": 3,
+          "rotationY": -20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -1.8,
+            0,
+            -0.4
+          ],
+          "scale": 1,
+          "rotationY": 20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            -3.5,
+            0,
+            -3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ant",
+        "distance": 4.2,
+        "angle": "frontLeft",
+        "move": "orbitRight"
       },
-      "tag": "STAR VS PLANET",
-      "accent": "teal",
-      "visual": {
+      "notes": [],
+      "card": {
         "type": "compare",
         "left": {
-          "icon": "star",
+          "icon": "feather",
           "label": {
-            "cs": "hvězda",
-            "en": "star",
-            "ro": "stea"
+            "cs": "mravenec",
+            "en": "ant",
+            "ro": "furnică"
           },
           "value": {
-            "cs": "bod",
-            "en": "a point",
-            "ro": "un punct"
+            "cs": "hodně plochy",
+            "en": "lots of surface",
+            "ro": "multă suprafață"
           }
         },
         "right": {
-          "icon": "earth",
+          "icon": "person",
           "label": {
-            "cs": "planeta",
-            "en": "planet",
-            "ro": "planetă"
+            "cs": "člověk",
+            "en": "human",
+            "ro": "om"
           },
           "value": {
-            "cs": "malý disk",
-            "en": "a tiny disk",
-            "ro": "un disc mic"
+            "cs": "málo plochy",
+            "en": "little surface",
+            "ro": "puțină suprafață"
           }
         },
-        "winner": "right"
-      }
+        "winner": "left"
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Astronauti ve vesmíru vidí hvězdy svítit *úplně klidně*.",
-        "en": "Astronauts in space see stars shine *perfectly still*.",
-        "ro": "Astronauții din spațiu văd stelele strălucind *complet nemișcat*."
+        "cs": "Mravence vzduch zastaví na *pár kilometrech* za hodinu.",
+        "en": "Air caps an ant at *a few kilometers an hour*.",
+        "ro": "Aerul oprește furnica la *câțiva kilometri* pe oră."
       },
-      "headline": {
-        "cs": "Z VESMÍRU|NEBLIKAJÍ",
-        "en": "FROM SPACE|NO TWINKLE",
-        "ro": "DIN SPAȚIU|NU SCLIPESC"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "ant",
+          "type": "ant",
+          "position": [
+            0,
+            3,
+            0.6
+          ],
+          "scale": 3,
+          "rotationY": -20,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0,
+            0,
+            0.6
+          ],
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            -3.5,
+            0,
+            -3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ant",
+        "distance": 3.6,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": "ISS VIEW",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "satellite",
-        "icon2": "star",
-        "relation": "none",
-        "effect": "float",
-        "caption": null
-      }
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 6,
+        "decimals": 0,
+        "unit": {
+          "cs": " km/h",
+          "en": " km/h",
+          "ro": " km/h"
+        },
+        "caption": {
+          "cs": "nejvyšší rychlost pádu mravence",
+          "en": "an ant's top falling speed",
+          "ro": "viteza maximă de cădere a furnicii"
+        }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Překvapilo tě to? Dej *sledovat* pro další díl.",
-        "en": "Surprised? Hit *follow* for the next one.",
-        "ro": "Te-a surprins? Dă *follow* pentru următorul."
+        "cs": "Člověka až na *dvou stech*.",
+        "en": "A human only at about *two hundred*.",
+        "ro": "Un om abia la vreo *două sute*."
       },
-      "headline": {
-        "cs": "DALŠÍ DÍL|UŽ BRZY",
-        "en": "NEXT EPISODE|SOON",
-        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -1.8,
+            7,
+            -0.4
+          ],
+          "scale": 1,
+          "rotationY": 20,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            -1.8,
+            3,
+            -0.4
+          ],
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            2.5,
+            0,
+            -3
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            -3.5,
+            0,
+            -3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 7,
+        "angle": "low",
+        "move": "dollyOut"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [],
+      "card": {
+        "type": "gauge",
+        "from": 0,
+        "to": 200,
+        "max": 250,
+        "unit": {
+          "cs": " km/h",
+          "en": " km/h",
+          "ro": " km/h"
+        },
+        "caption": {
+          "cs": "člověk ve volném pádu",
+          "en": "a human in free fall",
+          "ro": "un om în cădere liberă"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Zdvojnásob velikost: váha vzroste *osmkrát*, plocha jen čtyřikrát.",
+        "en": "Double the size: weight goes up *eight times*, surface only four.",
+        "ro": "Dublezi mărimea: greutatea crește de *opt ori*, suprafața doar de patru."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "small",
+          "type": "iceCube",
+          "position": [
+            -0.7,
+            0,
+            0.6
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#ffd23f",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "big",
+          "type": "iceCube",
+          "position": [
+            0.7,
+            0,
+            0.6
+          ],
+          "scale": 2,
+          "rotationY": 0,
+          "color": "#ff7a35",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "big",
+        "distance": 4,
+        "angle": "frontRight",
+        "move": "orbitLeft"
+      },
+      "notes": [],
+      "card": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "plocha",
+              "en": "surface",
+              "ro": "suprafață"
+            },
+            "value": 4,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "váha",
+              "en": "weight",
+              "ro": "greutate"
+            },
+            "value": 8,
+            "highlight": true
+          }
+        ],
+        "unit": {
+          "cs": "×",
+          "en": "×",
+          "ro": "×"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Proto se mravenec po pádu *oklepe* a jde dál.",
+        "en": "That's why an ant just *shakes it off* and walks away.",
+        "ro": "De aceea furnica *se scutură* și merge mai departe."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "ant",
+          "type": "ant",
+          "position": [
+            0,
+            0,
+            0.6
+          ],
+          "scale": 3,
+          "rotationY": -20,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            -3.5,
+            0,
+            -3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ant",
+        "distance": 2.2,
+        "angle": "low",
+        "move": "orbitRight"
+      },
+      "notes": [
+        {
+          "prop": "ant",
+          "text": {
+            "cs": "v pohodě",
+            "en": "all good",
+            "ro": "e ok"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

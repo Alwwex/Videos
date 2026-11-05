@@ -1,226 +1,440 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 23,
   "title": {
-    "cs": "Proč siréna mění tón",
-    "en": "Why sirens change pitch",
-    "ro": "De ce sirena își schimbă tonul"
+    "cs": "Kdyby zmizelo Slunce",
+    "en": "If the Sun vanished",
+    "ro": "Dacă Soarele ar dispărea"
   },
   "description": {
-    "cs": "Sanitka jede kolem a siréna najednou zní hlouběji. Ona se ale nemění. 🚑",
-    "en": "An ambulance passes and the siren suddenly sounds deeper. But it never changed. 🚑",
-    "ro": "Ambulanța trece și sirena pare brusc mai gravă. Dar ea nu s-a schimbat. 🚑"
+    "cs": "Osm minut by se nedělo vůbec nic. A pak by to začalo. ☀️",
+    "en": "For eight minutes, absolutely nothing. Then it would begin. ☀️",
+    "ro": "Opt minute, absolut nimic. Apoi ar începe. ☀️"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "doppler",
-    "zvuk",
-    "sound"
+    "slunce",
+    "vesmir",
+    "sun"
   ],
+  "hook": {
+    "cs": "SLUNCE ZMIZÍ. CO TEĎ?",
+    "en": "THE SUN VANISHES. NOW WHAT?",
+    "ro": "SOARELE DISPARE. ȘI ACUM?"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Sanitka projede a siréna najednou zní *hlouběji*.",
-        "en": "An ambulance passes, and the siren suddenly sounds *deeper*.",
-        "ro": "Ambulanța trece și sirena sună brusc *mai grav*."
+        "cs": "Kdyby Slunce *zmizelo*, osm minut bys nic nepoznal.",
+        "en": "If the Sun *vanished*, you wouldn't notice for eight minutes.",
+        "ro": "Dacă Soarele ar *dispărea*, opt minute n-ai observa nimic."
       },
-      "headline": {
-        "cs": "IÍÍÍ…|ÚÚÚÚ",
-        "en": "NEEE…|OWWW",
-        "ro": "IIII…|UUUU"
-      },
-      "tag": "OBSERVATION",
-      "accent": "red",
-      "visual": {
-        "type": "icon",
-        "icon": "ambulance",
-        "icon2": "ear",
-        "relation": "arrow",
-        "effect": "shake",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Ve skutečnosti siréna hraje *pořád stejně*.",
-        "en": "In reality, the siren plays *exactly the same* the whole time.",
-        "ro": "În realitate, sirena cântă *la fel* tot timpul."
-      },
-      "headline": {
-        "cs": "SIRÉNA SE|NEMĚNÍ",
-        "en": "THE SIREN|DOESN'T CHANGE",
-        "ro": "SIRENA|NU SE SCHIMBĂ"
-      },
-      "tag": "SOURCE",
-      "accent": "yellow",
-      "visual": {
-        "type": "wave",
-        "mode": "single",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Zvuk se šíří ve *vlnách* jako kruhy na vodě.",
-        "en": "Sound spreads in *waves*, like ripples on water.",
-        "ro": "Sunetul se propagă în *unde*, ca cercurile pe apă."
-      },
-      "headline": {
-        "cs": "VLNY|ZVUKU",
-        "en": "SOUND|WAVES",
-        "ro": "UNDE|SONORE"
-      },
-      "tag": "WAVEFRONTS",
-      "accent": "blue",
-      "visual": {
-        "type": "wave",
-        "mode": "doppler",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Když auto jede k tobě, vlny se před ním *stlačí*.",
-        "en": "When it drives toward you, the waves get *squeezed* in front.",
-        "ro": "Când vine spre tine, undele se *înghesuie* în față."
-      },
-      "headline": {
-        "cs": "VLNY SE|STLAČÍ",
-        "en": "WAVES GET|SQUEEZED",
-        "ro": "UNDELE SE|ÎNGHESUIE"
-      },
-      "tag": "APPROACHING",
-      "accent": "red",
-      "visual": {
-        "type": "wave",
-        "mode": "doppler",
-        "label": {
-          "cs": "kratší vlna = vyšší tón",
-          "en": "shorter wave = higher pitch",
-          "ro": "undă scurtă = ton înalt"
+      "environment": "space",
+      "props": [
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -6,
+            0,
+            0
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            5,
+            0,
+            0
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "sun",
+        "distance": 12,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Když odjíždí, vlny se za ním *roztáhnou*.",
-        "en": "As it drives away, the waves *stretch out* behind it.",
-        "ro": "Când pleacă, undele *se întind* în urma ei."
+        "cs": "Jeho světlo k nám letí *osm minut a dvacet sekund*.",
+        "en": "Its light takes *eight minutes and twenty seconds* to reach us.",
+        "ro": "Lumina lui ajunge la noi în *opt minute și douăzeci de secunde*."
       },
-      "headline": {
-        "cs": "VLNY SE|ROZTÁHNOU",
-        "en": "WAVES|STRETCH",
-        "ro": "UNDELE|SE ÎNTIND"
-      },
-      "tag": "RECEDING",
-      "accent": "blue",
-      "visual": {
-        "type": "wave",
-        "mode": "compare",
-        "label": {
-          "cs": "delší vlna = hlubší tón",
-          "en": "longer wave = deeper pitch",
-          "ro": "undă lungă = ton grav"
+      "environment": "space",
+      "props": [
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -6,
+            0,
+            0
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            5,
+            0,
+            0
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Tomu se říká *Dopplerův jev*.",
-        "en": "This is called the *Doppler effect*.",
-        "ro": "Asta se numește *efectul Doppler*."
-      },
-      "headline": {
-        "cs": "DOPPLERŮV|JEV",
-        "en": "DOPPLER|EFFECT",
-        "ro": "EFECTUL|DOPPLER"
-      },
-      "tag": "1842",
-      "accent": "yellow",
-      "visual": {
-        "type": "formula",
-        "tex": "f' = f\\,\\frac{c}{c \\hl{\\mp} v}",
-        "caption": {
-          "cs": "c = rychlost zvuku, v = rychlost auta",
-          "en": "c = speed of sound, v = car speed",
-          "ro": "c = viteza sunetului, v = viteza mașinii"
+      ],
+      "flows": [
+        {
+          "from": "sun",
+          "to": "earth",
+          "kind": "light"
         }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Policejní radar tak měří, *jak rychle jedeš*.",
-        "en": "Police radar uses it to measure *how fast you drive*.",
-        "ro": "Radarul poliției îl folosește ca să vadă *cât de repede mergi*."
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "earth",
+        "distance": 10,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "headline": {
-        "cs": "RADAR|TĚ VIDÍ",
-        "en": "RADAR|SEES YOU",
-        "ro": "RADARUL|TE VEDE"
-      },
-      "tag": "RADAR GUN",
-      "accent": "red",
-      "visual": {
-        "type": "gauge",
+      "notes": [],
+      "card": {
+        "type": "counter",
         "from": 0,
-        "to": 87,
-        "max": 160,
+        "to": 8.3,
+        "decimals": 1,
         "unit": {
-          "cs": " km/h",
-          "en": " km/h",
-          "ro": " km/h"
+          "cs": " min",
+          "en": " min",
+          "ro": " min"
         },
         "caption": {
-          "cs": "odražená vlna má jinou frekvenci",
-          "en": "the echo comes back at a new frequency",
-          "ro": "ecoul revine cu altă frecvență"
+          "cs": "cesta světla ze Slunce",
+          "en": "light's trip from the Sun",
+          "ro": "drumul luminii de la Soare"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "A díky němu víme, že se vesmír *rozpíná*.",
-        "en": "And it's how we know the universe is *expanding*.",
-        "ro": "Și așa știm că universul *se extinde*."
+        "cs": "Celou tu dobu bys pořád viděl Slunce, které *už není*.",
+        "en": "All that time you'd still see a Sun that's *already gone*.",
+        "ro": "În tot timpul ăsta ai vedea un Soare care *nu mai există*."
       },
-      "headline": {
-        "cs": "VESMÍR SE|ROZPÍNÁ",
-        "en": "THE UNIVERSE|EXPANDS",
-        "ro": "UNIVERSUL|SE EXTINDE"
+      "environment": "space",
+      "props": [
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -6,
+            0,
+            0
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "vanish",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            5,
+            0,
+            0
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "sun",
+          "to": "earth",
+          "kind": "light"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "earth",
+        "distance": 11,
+        "angle": "frontLeft",
+        "move": "dollyOut"
       },
-      "tag": "REDSHIFT",
-      "accent": "teal",
-      "visual": {
-        "type": "icon",
-        "icon": "star",
-        "icon2": "eye",
-        "relation": "arrow",
-        "effect": "pulse",
+      "notes": [
+        {
+          "prop": "earth",
+          "text": {
+            "cs": "pořád svítí",
+            "en": "still shining",
+            "ro": "încă luminează"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "A Země by ho dál *obíhala*.",
+        "en": "And Earth would keep *orbiting* it.",
+        "ro": "Iar Pământul ar continua să-l *orbiteze*."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            5,
+            0,
+            0
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            4,
+            0,
+            -3
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "earth",
+        "distance": 8,
+        "angle": "top",
+        "move": "orbitRight"
+      },
+      "notes": [
+        {
+          "prop": "earth",
+          "text": {
+            "cs": "obíhá dál",
+            "en": "still orbiting",
+            "ro": "orbitează în continuare"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Gravitace totiž letí *stejně rychle* jako světlo.",
+        "en": "Because gravity travels at the *same speed* as light.",
+        "ro": "Pentru că gravitația se propagă la fel de *repede* ca lumina."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -6,
+            0,
+            0
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            5,
+            0,
+            0
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "sun",
+          "kind": "light"
+        }
+      ],
+      "camera": {
+        "focus": "sun",
+        "distance": 12,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
+        "type": "formula",
+        "tex": "v_{\\text{gravitace}} = \\hl{c}",
         "caption": {
-          "cs": "světlo vzdálených galaxií je natažené do červena",
-          "en": "light from distant galaxies is stretched to red",
-          "ro": "lumina galaxiilor e întinsă spre roșu"
+          "cs": "potvrzeno gravitačními vlnami v roce 2017",
+          "en": "confirmed by gravitational waves in 2017",
+          "ro": "confirmat de undele gravitaționale în 2017"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Pošli to někomu, kdo to neví, a *sleduj* nás.",
-        "en": "Send this to someone who didn't know, and *follow*.",
-        "ro": "Trimite asta cuiva care nu știa și dă *follow*."
+        "cs": "Až po osmi minutách by Země vyletěla *rovně* do tmy.",
+        "en": "Only after eight minutes would Earth fly off *straight* into the dark.",
+        "ro": "Abia după opt minute Pământul ar zbura *drept* în întuneric."
       },
-      "headline": {
-        "cs": "DALŠÍ DÍL|UŽ BRZY",
-        "en": "NEXT EPISODE|SOON",
-        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      "environment": "space",
+      "props": [
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            4,
+            0,
+            -3
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            12,
+            0,
+            -5
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "earth",
+        "distance": 9,
+        "angle": "frontRight",
+        "move": "dollyOut"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [
+        {
+          "prop": "earth",
+          "text": {
+            "cs": "sbohem",
+            "en": "bye",
+            "ro": "adio"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Takže Slunce, které vidíš, je vždycky *osm minut staré*.",
+        "en": "So the Sun you see is always *eight minutes old*.",
+        "ro": "Deci Soarele pe care-l vezi are mereu *opt minute*."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -6,
+            0,
+            0
+          ],
+          "scale": 1.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            5,
+            0,
+            0
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "sun",
+        "distance": 9,
+        "angle": "low",
+        "move": "orbitLeft"
+      },
+      "notes": [
+        {
+          "prop": "sun",
+          "text": {
+            "cs": "8 min staré",
+            "en": "8 min old",
+            "ro": "vechi de 8 min"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

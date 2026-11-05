@@ -1,259 +1,602 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 15,
   "title": {
-    "cs": "Proč je obloha modrá",
-    "en": "Why the sky is blue",
-    "ro": "De ce cerul e albastru"
+    "cs": "Celé lidstvo v kostce cukru",
+    "en": "All of humanity in a sugar cube",
+    "ro": "Toată omenirea într-un cub de zahăr"
   },
   "description": {
-    "cs": "Slunce svítí bíle, tak proč je nebe modré a ne fialové? Za všechno může rozptyl světla. 🌤️",
-    "en": "Sunlight is white, so why is the sky blue and not violet? It's all about scattering. 🌤️",
-    "ro": "Lumina Soarelui e albă, deci de ce cerul e albastru și nu violet? Totul ține de împrăștiere. 🌤️"
+    "cs": "Jsi z 99,9999999 % prázdnota. Fakt. 🧊",
+    "en": "You're 99.9999999% empty space. Really. 🧊",
+    "ro": "Ești 99,9999999% spațiu gol. Pe bune. 🧊"
   },
   "hashtags": [
     "fyzika",
     "physics",
-    "obloha",
     "science",
-    "vedanakazdyden",
-    "learnontiktok"
+    "atom",
+    "vesmir",
+    "atoms"
   ],
+  "hook": {
+    "cs": "CELÉ LIDSTVO V KOSTCE CUKRU",
+    "en": "ALL OF HUMANITY IN A SUGAR CUBE",
+    "ro": "TOATĂ OMENIREA ÎNTR-UN CUB DE ZAHĂR"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Slunce svítí *bíle*. Tak proč je nebe *modré*?",
-        "en": "The Sun shines *white*. So why is the sky *blue*?",
-        "ro": "Soarele luminează *alb*. Atunci de ce e cerul *albastru*?"
+        "cs": "Celé lidstvo by se vešlo do *kostky cukru*.",
+        "en": "All of humanity would fit in a *sugar cube*.",
+        "ro": "Toată omenirea ar încăpea într-un *cub de zahăr*."
       },
-      "headline": {
-        "cs": "BÍLÉ SLUNCE|MODRÉ NEBE?",
-        "en": "WHITE SUN|BLUE SKY?",
-        "ro": "SOARE ALB|CER ALBASTRU?"
-      },
-      "tag": "OBSERVATION",
-      "accent": "blue",
-      "visual": {
-        "type": "icon",
-        "icon": "sun",
-        "icon2": "cloud",
-        "relation": "arrow",
-        "effect": "float",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Bílé světlo je ve skutečnosti *směs všech barev*.",
-        "en": "White light is really a *mix of every color*.",
-        "ro": "Lumina albă e de fapt un *amestec de culori*."
-      },
-      "headline": {
-        "cs": "BÍLÁ =|VŠECHNY BARVY",
-        "en": "WHITE =|ALL COLORS",
-        "ro": "ALB =|TOATE CULORILE"
-      },
-      "tag": "DISPERSION",
-      "accent": "yellow",
-      "visual": {
-        "type": "rays",
-        "mode": "prism",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Každá barva má jinou *vlnovou délku*.",
-        "en": "Each color has a different *wavelength*.",
-        "ro": "Fiecare culoare are altă *lungime de undă*."
-      },
-      "headline": {
-        "cs": "ČERVENÁ VS|MODRÁ",
-        "en": "RED VS|BLUE",
-        "ro": "ROȘU VS|ALBASTRU"
-      },
-      "tag": "WAVELENGTH λ",
-      "accent": "red",
-      "visual": {
-        "type": "wave",
-        "mode": "compare",
-        "label": {
-          "cs": "červená 700 nm · modrá 450 nm",
-          "en": "red 700 nm · blue 450 nm",
-          "ro": "roșu 700 nm · albastru 450 nm"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sugar",
+          "type": "iceCube",
+          "position": [
+            0.1,
+            0.85,
+            0.1
+          ],
+          "scale": 0.55,
+          "rotationY": 0,
+          "color": "#ffffff",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0.75,
+            0.85,
+            -0.2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Molekuly vzduchu krátké *modré vlny* rozhazují všude kolem.",
-        "en": "Air molecules *scatter* short blue waves in every direction.",
-        "ro": "Moleculele de aer *împrăștie* undele albastre în toate direcțiile."
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "sugar",
+        "distance": 2.4,
+        "angle": "frontRight",
+        "move": "dollyIn"
       },
-      "headline": {
-        "cs": "VZDUCH|ROZPTYLUJE",
-        "en": "AIR|SCATTERS",
-        "ro": "AERUL|ÎMPRĂȘTIE"
-      },
-      "tag": "RAYLEIGH SCATTERING",
-      "accent": "blue",
-      "visual": {
-        "type": "rays",
-        "mode": "scatter",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Rozptyl roste se *čtvrtou mocninou* frekvence.",
-        "en": "Scattering grows with the *fourth power* of frequency.",
-        "ro": "Împrăștierea crește cu *puterea a patra* a frecvenței."
-      },
-      "headline": {
-        "cs": "ČTVRTÁ|MOCNINA",
-        "en": "FOURTH|POWER",
-        "ro": "PUTEREA|A PATRA"
-      },
-      "tag": "RAYLEIGH LAW",
-      "accent": "yellow",
-      "visual": {
-        "type": "formula",
-        "tex": "I \\propto \\frac{1}{\\hl{\\lambda^4}}",
-        "caption": {
-          "cs": "kratší vlna = mnohem víc rozptylu",
-          "en": "shorter wave = far more scattering",
-          "ro": "undă mai scurtă = mult mai multă împrăștiere"
-        }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Modrá se rozptýlí zhruba *pětkrát víc* než červená.",
-        "en": "Blue scatters about *five times more* than red.",
-        "ro": "Albastrul se împrăștie de vreo *cinci ori mai mult*."
-      },
-      "headline": {
-        "cs": "5× VÍC|MODRÉ",
-        "en": "5× MORE|BLUE",
-        "ro": "DE 5× MAI|MULT ALBASTRU"
-      },
-      "tag": "RELATIVE SCATTERING",
-      "accent": "blue",
-      "visual": {
-        "type": "bars",
-        "items": [
-          {
-            "label": {
-              "cs": "červená",
-              "en": "red",
-              "ro": "roșu"
-            },
-            "value": 1,
-            "highlight": false
-          },
-          {
-            "label": {
-              "cs": "zelená",
-              "en": "green",
-              "ro": "verde"
-            },
-            "value": 2.4,
-            "highlight": false
-          },
-          {
-            "label": {
-              "cs": "modrá",
-              "en": "blue",
-              "ro": "albastru"
-            },
-            "value": 5.5,
-            "highlight": true
+      "notes": [
+        {
+          "prop": "sugar",
+          "text": {
+            "cs": "tohle",
+            "en": "this",
+            "ro": "asta"
           }
-        ],
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Atom je totiž skoro *úplně prázdný*.",
+        "en": "Because an atom is almost *completely empty*.",
+        "ro": "Pentru că atomul e aproape *complet gol*."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "atom",
+          "type": "atom",
+          "position": [
+            0,
+            1.7,
+            0
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "atom",
+        "distance": 3.2,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "notes": [
+        {
+          "prop": "atom",
+          "text": {
+            "cs": "skoro nic",
+            "en": "mostly nothing",
+            "ro": "aproape nimic"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Kdyby jádro bylo velké jako *zrnko písku*…",
+        "en": "If the nucleus were a *grain of sand*…",
+        "ro": "Dacă nucleul ar fi cât un *bob de nisip*…"
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "nuc",
+          "type": "ball",
+          "position": [
+            0,
+            0.05,
+            0
+          ],
+          "scale": 0.18,
+          "rotationY": 0,
+          "color": "#ff5a3c",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            -5,
+            0,
+            -9
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            6,
+            0,
+            -10
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "nuc",
+        "distance": 1.6,
+        "angle": "low",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "nuc",
+          "text": {
+            "cs": "jádro",
+            "en": "nucleus",
+            "ro": "nucleul"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "…elektrony by kroužily *desítky metrů* od něj.",
+        "en": "…the electrons would whiz around *tens of meters* away.",
+        "ro": "…electronii s-ar roti la *zeci de metri* de el."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "nuc",
+          "type": "ball",
+          "position": [
+            0,
+            0.05,
+            0
+          ],
+          "scale": 0.18,
+          "rotationY": 0,
+          "color": "#ff5a3c",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            -5,
+            0,
+            -9
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            6,
+            0,
+            -10
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "nuc",
+        "distance": 6,
+        "angle": "top",
+        "move": "dollyOut"
+      },
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 60,
+        "decimals": 0,
         "unit": {
-          "cs": "×",
-          "en": "×",
-          "ro": "×"
-        }
-      }
-    },
-    {
-      "narration": {
-        "cs": "A proč ne fialová? Té je ve slunci méně a oči na ni nejsou citlivé.",
-        "en": "Why not violet? Sunlight has less of it, and our eyes barely see it.",
-        "ro": "De ce nu violet? Soarele are mai puțin, iar ochii o văd slab."
-      },
-      "headline": {
-        "cs": "PROČ NE|FIALOVÁ?",
-        "en": "WHY NOT|VIOLET?",
-        "ro": "DE CE NU|VIOLET?"
-      },
-      "tag": "HUMAN EYE",
-      "accent": "teal",
-      "visual": {
-        "type": "icon",
-        "icon": "eye",
-        "icon2": null,
-        "relation": "none",
-        "effect": "pulse",
+          "cs": " m",
+          "en": " m",
+          "ro": " m"
+        },
         "caption": {
-          "cs": "oko je nejcitlivější na modrou a zelenou",
-          "en": "eyes love blue and green, not violet",
-          "ro": "ochiul e sensibil la albastru și verde"
+          "cs": "tak daleko by byly elektrony",
+          "en": "that's how far the electrons would be",
+          "ro": "atât de departe ar fi electronii"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Takže nebe je vlastně *rozptýlené sluneční světlo*.",
-        "en": "So the sky is really *scattered sunlight*.",
-        "ro": "Deci cerul e de fapt *lumină solară împrăștiată*."
+        "cs": "Mezi tím je jen *prázdno*. A z toho jsi i ty.",
+        "en": "In between, just *nothing*. And that's what you're made of.",
+        "ro": "Între ele, doar *gol*. Și din asta ești făcut și tu."
       },
-      "headline": {
-        "cs": "NEBE =|ROZPTÝLENÉ SVĚTLO",
-        "en": "SKY =|SCATTERED LIGHT",
-        "ro": "CERUL =|LUMINĂ ÎMPRĂȘTIATĂ"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            -5,
+            0,
+            -9
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            6,
+            0,
+            -10
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 4.2,
+        "angle": "frontLeft",
+        "move": "dollyIn"
       },
-      "tag": "CONCLUSION",
-      "accent": "blue",
-      "visual": {
-        "type": "steps",
-        "items": [
-          {
-            "cs": "bílé světlo",
-            "en": "white light",
-            "ro": "lumină albă"
-          },
-          {
-            "cs": "vzduch rozptýlí modrou",
-            "en": "air scatters blue",
-            "ro": "aerul împrăștie albastrul"
-          },
-          {
-            "cs": "modrá k nám letí odevšad",
-            "en": "blue reaches us from everywhere",
-            "ro": "albastrul vine din toate părțile"
+      "notes": [
+        {
+          "prop": "me",
+          "text": {
+            "cs": "99,9999999 % nic",
+            "en": "99.9999999% nothing",
+            "ro": "99,9999999% nimic"
           }
-        ],
-        "active": 2
-      }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
-        "en": "Follow so you don't miss more *physics around you*.",
-        "ro": "Urmărește ca să nu ratezi mai multă *fizică din jurul tău*."
+        "cs": "Smáčkni všech osm miliard lidí *bez prázdna*…",
+        "en": "Squeeze all eight billion people with *no empty space*…",
+        "ro": "Strânge toți cei opt miliarde de oameni *fără gol*…"
       },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "p0",
+          "type": "person",
+          "position": [
+            -1.6,
+            0,
+            0.6
+          ],
+          "scale": 1,
+          "rotationY": 20,
+          "color": "#ff6b6b",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "p1",
+          "type": "person",
+          "position": [
+            -0.8,
+            0,
+            -0.4
+          ],
+          "scale": 1,
+          "rotationY": 10,
+          "color": "#4fd8ff",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "p2",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0.5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": "#ffb020",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "p3",
+          "type": "person",
+          "position": [
+            0.8,
+            0,
+            -0.5
+          ],
+          "scale": 1,
+          "rotationY": -10,
+          "color": "#7c6bff",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "p4",
+          "type": "person",
+          "position": [
+            1.6,
+            0,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": -20,
+          "color": "#3dd68c",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            -5,
+            0,
+            -9
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            6,
+            0,
+            -10
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "p2",
+        "distance": 6.5,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [],
+      "card": null,
+      "shake": true
+    },
+    {
+      "narration": {
+        "cs": "…a vejdou se do *kostky cukru*. Vážila by půl miliardy tun.",
+        "en": "…and they fit in a *sugar cube*. Weighing half a billion tonnes.",
+        "ro": "…și încap într-un *cub de zahăr*. Care ar cântări o jumătate de miliard de tone."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sugar",
+          "type": "iceCube",
+          "position": [
+            0.1,
+            0.85,
+            0.1
+          ],
+          "scale": 0.55,
+          "rotationY": 0,
+          "color": "#ffffff",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0.75,
+            0.85,
+            -0.2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "sugar",
+        "distance": 2.6,
+        "angle": "front",
+        "move": "orbitRight"
+      },
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 500000000,
+        "decimals": 0,
+        "unit": {
+          "cs": " t",
+          "en": " t",
+          "ro": " t"
+        },
+        "caption": {
+          "cs": "váha té kostky cukru",
+          "en": "weight of that sugar cube",
+          "ro": "greutatea cubului"
+        }
+      },
+      "shake": false
     }
   ]
 }

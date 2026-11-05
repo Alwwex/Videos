@@ -1,7 +1,11 @@
 # Fyzika kolem tebe – Studio
 
-Krátká (~25–30 s) vysvětlující videa o fyzice na výšku (1080×1920) ve **třech jazycích** (CZ, EN, RO)
+Krátká (~20–25 s) videa o fyzice na výšku (1080×1920) ve **třech jazycích** (CZ, EN, RO)
 a aplikace, která je **vyrobí i sama publikuje** na TikTok, Instagram a YouTube – ve výchozím plánu **2× denně**.
+
+Styl videí 15+: barevný 3D svět s pohybující se kamerou, ručně kreslené šipky s popisky, karta „přilepená páskou“
+(číslo, tachometr, vzorec, graf, srovnání, kvíz…), velké titulky uprostřed a **háček hned v první vteřině**.
+Hlas mluví plynule celé video najednou – žádné pauzy mezi scénami.
 
 ## Spuštění (Windows)
 1. Nainstaluj [Node.js LTS](https://nodejs.org) (stačí jednou).
@@ -28,10 +32,14 @@ out/videos/015-proc-je-obloha-modra/
 Stará videa 1–14 vyrenderovaná ještě do `out/videos/cs|en|ro/` přesuneš do nové struktury v **Nastavení → Uspořádat stará videa**.
 
 ### Hlas
-- **ElevenLabs**, dokud máš kredity (≈ 430 znaků na jedno video v jednom jazyce → 10 000 kreditů ≈ 23 videí v jednom jazyce).
-- Pak (nebo bez klíče) automaticky **zdarma hlas Microsoft Edge** (Antonín / Andrew / Emil), včetně časování titulků.
+- **ElevenLabs** s vybranými hlasy rodilých mluvčích (nejpoužívanější v knihovně ElevenLabs):
+  CZ **Adam – Velvety and Conversational**, EN **Mark – Casual, Relaxed and Light**, RO **Jora Slobod**.
+  Do tvého účtu se přidají samy při prvním použití. V Nastavení si je můžeš poslechnout (▶ ukázka) a vybrat jiný.
+- Kredity dostane přednostně čeština (nejdřív se namluví všechna CZ videa, pak EN, pak RO).
+  Jedno video ≈ 350 znaků → 10 000 kreditů ≈ 28 českých videí.
+- Když kredity dojdou (nebo bez klíče), mluví automaticky **zdarma hlas Microsoft Edge** (Antonín / Andrew Multilingual / Emil).
+  Rozdělané video se namluví celé znovu jedním hlasem, takže se hlasy v jednom videu nemíchají.
 - V Nastavení můžeš pro každý jazyk zvolit „automaticky / vždy ElevenLabs / vždy zdarma“.
-  Tip: ElevenLabs jen pro CZ, EN a RO zdarma.
 
 ### Publikování
 1. V záložce **Publikování** zkontroluj účty (výchozí: TikTok, Instagram, YouTube – vše CZ; jazyk a počet účtů jde změnit, např. 3 účty × 3 platformy).
@@ -59,8 +67,10 @@ npm run dev                            # Remotion Studio – náhled (kompozice 
 ```
 
 ## Jak je to postavené
-- `content/scripts/NNN.json` – scénáře. Videa 1–14 = původní 3D engine (`src/engine`), 15+ = nový 2D „blueprint“ engine (`src/v2`):
-  velký dvouřádkový nadpis, technický diagram (grafy, rovnice, tachometr, silové diagramy, vlny, částice, oběžné dráhy, optika, pole, kvíz) a titulky po slovech.
-- Diagramy (`src/v2/visuals`) a piktogramy (`src/v2/Icons.tsx`) – nový typ přidáš do `src/v2/schema.ts` a `visuals/index.tsx`.
+- `content/scripts/NNN.json` – scénáře. Videa 1–14 = původní 3D engine (`src/engine`), 15+ = hybridní engine (`src/v3`):
+  3D svět z `src/engine/Props.tsx` (60 low-poly dílů – banán, kočka, výtah, svíčka, Země v řezu…), ručně kreslené popisky,
+  info karty z 2D knihovny (`src/v2/visuals` – grafy, rovnice, tachometr, kvíz…) a velké titulky.
+- Nový 3D díl přidáš do `src/engine/Props.tsx` + `PROP_TYPES` v `src/engine/schema.ts` + `ANCHOR_Y`/`RADIUS` v `src/engine/anim.ts`.
+- Náhled bez renderu celého videa: `npx tsx scripts/preview.ts <složka> cs content/scripts/019.json` (na PC bez grafiky `REMOTION_GL=swangle`).
 - `scripts/voice.ts` hlas, `scripts/render.ts` render, `scripts/generate.ts` AI scénáře.
 - `studio/` – aplikace (server `server.ts`, rozhraní `ui.html`, publikování `publish.ts`, data v `data/studio.json`).

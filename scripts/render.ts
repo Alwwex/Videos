@@ -11,14 +11,15 @@ import path from 'node:path';
 import {bundle} from '@remotion/bundler';
 import {makeCancelSignal, renderMedia, selectComposition} from '@remotion/renderer';
 import type {Lang, Timeline} from '../src/engine/schema';
-import {P, Progress, ROOT, captionText, isShort, loadScript, loadTimeline, parseArgs, videoFolderName, videoOutFile, type AnyScript} from './lib';
+import {P, Progress, ROOT, captionText, isHybrid, isShort, loadScript, loadTimeline, parseArgs, videoFolderName, videoOutFile, type AnyScript} from './lib';
 
 /** Časová osa jen pokud existují všechny její MP3 (jinak by render spadl). */
 const usableTimeline = (id: number, lang: Lang, sceneCount: number): Timeline | null => {
-  const tl = loadTimeline(id, lang) as (Timeline & {partial?: boolean}) | null;
+  const tl = loadTimeline(id, lang) as (Timeline & {partial?: boolean; continuous?: boolean; audioSrc?: string | null}) | null;
   if (!tl || tl.partial || tl.scenes.length !== sceneCount) return null;
-  const ok = tl.scenes.every((s) => !s.audioSrc || fs.existsSync(path.join(ROOT, 'public', s.audioSrc)));
-  return ok ? tl : null;
+  const has = (rel: string | null | undefined) => !rel || fs.existsSync(path.join(ROOT, 'public', rel));
+  if (tl.continuous) return tl.audioSrc && has(tl.audioSrc) ? tl : null;
+  return tl.scenes.every((s) => has(s.audioSrc)) ? tl : null;
 };
 // bez hlasu se video nerenderuje (němé video by se mohlo omylem publikovat); --allow-silent to povolí
 const allowSilent = process.argv.includes('--allow-silent');
@@ -84,7 +85,8 @@ const main = async () => {
 
   console.log(`📦 Bundluji projekt… (${jobs.length} videí ve frontě)`);
   const serveUrl = await bundle({entryPoint: path.join(process.cwd(), 'src', 'index.ts')});
-  const chromiumOptions = {gl: 'angle' as const};
+  // REMOTION_GL=swangle pro počítače bez grafické karty
+  const chromiumOptions = {gl: (process.env.REMOTION_GL || 'angle') as 'angle'};
   const browserExecutable = process.env.CHROME_PATH || null;
   const musicDir = path.join(process.cwd(), 'public', 'music');
   // vlastní skladby v public/music se střídají podle čísla videa; jinak smyčka podle tématu
@@ -121,7 +123,7 @@ const main = async () => {
     const music = noMusic ? null : userTracks.length ? `music/${userTracks[id % userTracks.length]}` : undefined;
     const next = loadScript(id + 1);
     const inputProps: Record<string, unknown> = {script, lang, timeline, music, nextTitle: next ? next.title[lang] : null};
-    const compId = isShort(script) ? `Short-${lang}` : `Fyzika-${lang}`;
+    const compId = isHybrid(script) ? `Hybrid-${lang}` : isShort(script) ? `Short-${lang}` : `Fyzika-${lang}`;
     const t = Date.now();
     const tmp = path.join(tmpDir, `${lang}-${name}.mp4`);
     try {

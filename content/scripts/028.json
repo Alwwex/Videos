@@ -1,233 +1,488 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 28,
   "title": {
-    "cs": "Jak vzniká duha",
-    "en": "How a rainbow forms",
-    "ro": "Cum se formează curcubeul"
+    "cs": "Přelož papír 42× a jsi na Měsíci",
+    "en": "Fold paper 42 times and reach the Moon",
+    "ro": "Îndoaie hârtia de 42 de ori și ajungi pe Lună"
   },
   "description": {
-    "cs": "Každá kapka deště je malinký hranol. Tohle se v ní děje. 🌈",
-    "en": "Every raindrop is a tiny prism. Here's what happens inside. 🌈",
-    "ro": "Fiecare picătură de ploaie e o prismă mică. Iată ce se întâmplă în ea. 🌈"
+    "cs": "Desetina milimetru. Pořád dokola zdvojnásobit. A najednou 440 000 km. 📄",
+    "en": "A tenth of a millimeter. Double it again and again. Suddenly 440,000 km. 📄",
+    "ro": "O zecime de milimetru. Dublezi iar și iar. Deodată 440.000 km. 📄"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "duha",
-    "svetlo",
-    "rainbow"
+    "papir",
+    "matematika",
+    "exponential"
   ],
+  "hook": {
+    "cs": "42× PŘELOŽ PAPÍR = MĚSÍC",
+    "en": "FOLD PAPER 42× = MOON",
+    "ro": "ÎNDOAIE HÂRTIA DE 42× = LUNA"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Duha je jen *sluneční světlo* a kapky deště.",
-        "en": "A rainbow is just *sunlight* and raindrops.",
-        "ro": "Curcubeul e doar *lumină solară* și picături de ploaie."
+        "cs": "Přelož papír *42krát* a dosáhne až na Měsíc.",
+        "en": "Fold a sheet of paper *42 times* and it reaches the Moon.",
+        "ro": "Îndoaie o foaie de *42 de ori* și ajunge pe Lună."
       },
-      "headline": {
-        "cs": "SLUNCE +|DÉŠŤ",
-        "en": "SUN +|RAIN",
-        "ro": "SOARE +|PLOAIE"
-      },
-      "tag": "INGREDIENTS",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "sun",
-        "icon2": "rain",
-        "relation": "plus",
-        "effect": "float",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Bílé světlo je *směs všech barev*.",
-        "en": "White light is a *mix of all colors*.",
-        "ro": "Lumina albă e un *amestec de culori*."
-      },
-      "headline": {
-        "cs": "BÍLÁ =|VŠECHNY BARVY",
-        "en": "WHITE =|ALL COLORS",
-        "ro": "ALB =|TOATE CULORILE"
-      },
-      "tag": "SPECTRUM",
-      "accent": "teal",
-      "visual": {
-        "type": "rays",
-        "mode": "prism",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Když vletí do kapky, *zlomí se* a zpomalí.",
-        "en": "Entering a raindrop, it *bends* and slows down.",
-        "ro": "Când intră în picătură, *se refractă* și încetinește."
-      },
-      "headline": {
-        "cs": "SVĚTLO SE|LÁME",
-        "en": "LIGHT|BENDS",
-        "ro": "LUMINA|SE REFRACTĂ"
-      },
-      "tag": "REFRACTION",
-      "accent": "blue",
-      "visual": {
-        "type": "rays",
-        "mode": "refract",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Každá barva se láme *jinak moc*, fialová nejvíc.",
-        "en": "Each color bends *by a different amount*, violet the most.",
-        "ro": "Fiecare culoare se refractă *diferit*, violetul cel mai mult."
-      },
-      "headline": {
-        "cs": "BARVY SE|ROZDĚLÍ",
-        "en": "COLORS|SPLIT",
-        "ro": "CULORILE|SE SEPARĂ"
-      },
-      "tag": "DISPERSION",
-      "accent": "yellow",
-      "visual": {
-        "type": "rays",
-        "mode": "prism",
-        "label": {
-          "cs": "kapka funguje jako malý hranol",
-          "en": "each drop acts like a tiny prism",
-          "ro": "picătura e ca o prismă mică"
-        }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Uvnitř se světlo *odrazí* od zadní stěny kapky.",
-        "en": "Inside, the light *reflects* off the back of the drop.",
-        "ro": "Înăuntru, lumina *se reflectă* de peretele din spate."
-      },
-      "headline": {
-        "cs": "ODRAZ|UVNITŘ",
-        "en": "REFLECTION|INSIDE",
-        "ro": "REFLEXIE|ÎNĂUNTRU"
-      },
-      "tag": "TOTAL PATH",
-      "accent": "teal",
-      "visual": {
-        "type": "steps",
-        "items": [
-          {
-            "cs": "lom dovnitř",
-            "en": "bend in",
-            "ro": "refracție la intrare"
-          },
-          {
-            "cs": "odraz vzadu",
-            "en": "reflect at back",
-            "ro": "reflexie în spate"
-          },
-          {
-            "cs": "lom ven",
-            "en": "bend out",
-            "ro": "refracție la ieșire"
-          }
-        ],
-        "active": 1
-      }
-    },
-    {
-      "narration": {
-        "cs": "Ven vyletí pod úhlem asi *42 stupňů*.",
-        "en": "It exits at an angle of about *42 degrees*.",
-        "ro": "Iese sub un unghi de aproximativ *42 de grade*."
-      },
-      "headline": {
-        "cs": "MAGICKÝCH|42°",
-        "en": "THE MAGIC|42°",
-        "ro": "MAGICUL|42°"
-      },
-      "tag": "RAINBOW ANGLE",
-      "accent": "red",
-      "visual": {
-        "type": "gauge",
-        "from": 0,
-        "to": 42,
-        "max": 90,
-        "unit": {
-          "cs": "°",
-          "en": "°",
-          "ro": "°"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "caption": {
-          "cs": "proto je duha vždycky oblouk",
-          "en": "that's why rainbows are always arcs",
-          "ro": "de aceea curcubeul e mereu un arc"
+        {
+          "id": "paper",
+          "type": "paper",
+          "position": [
+            0,
+            0.85,
+            0.1
+          ],
+          "scale": 1.3,
+          "rotationY": -15,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "paper",
+        "distance": 2.4,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Duhu proto uvidíš, jen když máš *slunce za zády*.",
-        "en": "So you only see a rainbow with the *Sun behind you*.",
-        "ro": "Deci vezi curcubeul doar cu *Soarele în spate*."
+        "cs": "Papír má desetinu milimetru. Každé přeložení ho *zdvojnásobí*.",
+        "en": "Paper is a tenth of a millimeter thick. Each fold *doubles* it.",
+        "ro": "Hârtia are o zecime de milimetru. Fiecare îndoire o *dublează*."
       },
-      "headline": {
-        "cs": "SLUNCE|ZA ZÁDY",
-        "en": "SUN|BEHIND YOU",
-        "ro": "SOARELE|ÎN SPATE"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "paper",
+          "type": "paper",
+          "position": [
+            0,
+            0.85,
+            0.1
+          ],
+          "scale": 1.3,
+          "rotationY": -15,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "paper",
+        "distance": 2.2,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "tag": "OBSERVER",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "sun",
-        "icon2": "eye",
-        "relation": "arrow",
-        "effect": "pulse",
-        "caption": null
-      }
+      "notes": [],
+      "card": {
+        "type": "formula",
+        "tex": "d = 0{,}1\\ \\text{mm} \\cdot \\hl{2^n}",
+        "caption": {
+          "cs": "n = počet přeložení",
+          "en": "n = number of folds",
+          "ro": "n = numărul de îndoiri"
+        }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Každý člověk vidí *svou vlastní* duhu, z jiných kapek.",
-        "en": "Everyone sees *their own* rainbow, from different drops.",
-        "ro": "Fiecare om vede *propriul* curcubeu, din alte picături."
+        "cs": "Po deseti přeloženích je silný jako *kniha*.",
+        "en": "After ten folds, it's as thick as a *book*.",
+        "ro": "După zece îndoiri, e groasă cât o *carte*."
       },
-      "headline": {
-        "cs": "TVOJE|VLASTNÍ DUHA",
-        "en": "YOUR VERY|OWN RAINBOW",
-        "ro": "CURCUBEUL|TĂU"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "paper",
+          "type": "paper",
+          "position": [
+            0,
+            0.85,
+            0.1
+          ],
+          "scale": 1.6,
+          "rotationY": -15,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -1.6,
+            0,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 25,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "paper",
+        "distance": 2.8,
+        "angle": "frontLeft",
+        "move": "dollyIn"
       },
-      "tag": "FUN FACT",
-      "accent": "teal",
-      "visual": {
-        "type": "icon",
-        "icon": "person",
-        "icon2": "rain",
-        "relation": "none",
-        "effect": "float",
-        "caption": null
-      }
+      "notes": [
+        {
+          "prop": "paper",
+          "text": {
+            "cs": "10 cm",
+            "en": "10 cm",
+            "ro": "10 cm"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
-        "en": "Follow for more *physics around you*.",
-        "ro": "Urmărește pentru mai multă *fizică din jurul tău*."
+        "cs": "Po dvaceti je vysoký jako *mrakodrap*.",
+        "en": "After twenty, it's as tall as a *skyscraper*.",
+        "ro": "După douăzeci, e înaltă cât un *zgârie-nori*."
       },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "tower",
+          "type": "house",
+          "position": [
+            0,
+            0,
+            -1
+          ],
+          "scale": 3.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            2.6,
+            0,
+            1.6
+          ],
+          "scale": 1,
+          "rotationY": -30,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "tower",
+        "distance": 11,
+        "angle": "low",
+        "move": "rise"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [
+        {
+          "prop": "tower",
+          "text": {
+            "cs": "105 m",
+            "en": "105 m",
+            "ro": "105 m"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Po třiceti se dostane *nad atmosféru*.",
+        "en": "After thirty, it's *above the atmosphere*.",
+        "ro": "După treizeci, trece *de atmosferă*."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "iss",
+          "type": "satellite",
+          "position": [
+            2.6,
+            1.2,
+            0.5
+          ],
+          "scale": 0.45,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "earth",
+        "distance": 8,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "notes": [
+        {
+          "prop": "iss",
+          "text": {
+            "cs": "107 km",
+            "en": "107 km",
+            "ro": "107 km"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "A po čtyřiceti dvou má přes *400 000 kilometrů*.",
+        "en": "And after forty-two, it's over *400,000 kilometers*.",
+        "ro": "Iar după patruzeci și două, are peste *400.000 de kilometri*."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            -4,
+            0,
+            0
+          ],
+          "scale": 2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "moon",
+          "type": "moon",
+          "position": [
+            9,
+            1.5,
+            -3
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "moon",
+        "distance": 15,
+        "angle": "front",
+        "move": "dollyOut"
+      },
+      "notes": [
+        {
+          "prop": "moon",
+          "text": {
+            "cs": "tady!",
+            "en": "here!",
+            "ro": "aici!"
+          }
+        }
+      ],
+      "card": {
+        "type": "graph",
+        "curve": "exp",
+        "curve2": null,
+        "x": {
+          "cs": "přeložení",
+          "en": "folds",
+          "ro": "îndoiri"
+        },
+        "y": {
+          "cs": "tloušťka",
+          "en": "thickness",
+          "ro": "grosime"
+        },
+        "markLabel": {
+          "cs": "Měsíc",
+          "en": "the Moon",
+          "ro": "Luna"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Jenže už sedmé přeložení je *skoro nemožné*. Zkus to.",
+        "en": "Problem is, even the seventh fold is *nearly impossible*. Try it.",
+        "ro": "Doar că deja a șaptea îndoire e *aproape imposibilă*. Încearcă."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "paper",
+          "type": "paper",
+          "position": [
+            0,
+            0.85,
+            0.1
+          ],
+          "scale": 1.3,
+          "rotationY": -15,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -1.6,
+            0,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 25,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 4.2,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "paper",
+          "text": {
+            "cs": "zkus to",
+            "en": "try it",
+            "ro": "încearcă"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

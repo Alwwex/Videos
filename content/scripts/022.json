@@ -1,297 +1,551 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 22,
   "title": {
-    "cs": "Na Měsíci skočíš šestkrát výš",
-    "en": "On the Moon you jump 6× higher",
-    "ro": "Pe Lună sari de 6 ori mai sus"
+    "cs": "Svítíš jako stowattová žárovka",
+    "en": "You glow like a 100-watt bulb",
+    "ro": "Strălucești ca un bec de 100 de wați"
   },
   "description": {
-    "cs": "Tvoje svaly jsou stejné. Měsíc tě ale drží mnohem slaběji. 🌕",
-    "en": "Your muscles are the same. The Moon just holds you much more weakly. 🌕",
-    "ro": "Mușchii tăi sunt aceiași. Luna doar te ține mult mai slab. 🌕"
+    "cs": "Jen to nevidíš. Termokamera ano. 🔥",
+    "en": "You just can't see it. A thermal camera can. 🔥",
+    "ro": "Doar că nu vezi. O cameră termică da. 🔥"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "mesic",
-    "vesmir",
-    "moon"
+    "teplo",
+    "telo",
+    "infrared"
   ],
+  "hook": {
+    "cs": "TY SVÍTÍŠ. FAKT.",
+    "en": "YOU GLOW. LITERALLY.",
+    "ro": "TU STRĂLUCEȘTI. LA PROPRIU."
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Na Měsíci bys skočil *šestkrát výš* než na Zemi.",
-        "en": "On the Moon you'd jump *six times higher* than on Earth.",
-        "ro": "Pe Lună ai sări de *șase ori mai sus* decât pe Pământ."
+        "cs": "Právě teď *svítíš* jako stowattová žárovka.",
+        "en": "Right now you're *glowing* like a 100-watt bulb.",
+        "ro": "Chiar acum *strălucești* ca un bec de 100 de wați."
       },
-      "headline": {
-        "cs": "ŠESTKRÁT|VÝŠ",
-        "en": "SIX TIMES|HIGHER",
-        "ro": "DE ȘASE ORI|MAI SUS"
-      },
-      "tag": "LUNAR JUMP",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "person",
-        "icon2": "moon",
-        "relation": "none",
-        "effect": "float",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Tvoje svaly i hmotnost zůstanou *úplně stejné*.",
-        "en": "Your muscles and your mass stay *exactly the same*.",
-        "ro": "Mușchii și masa ta rămân *exact la fel*."
-      },
-      "headline": {
-        "cs": "STEJNÉ|SVALY",
-        "en": "SAME|MUSCLES",
-        "ro": "ACEIAȘI|MUȘCHI"
-      },
-      "tag": "MASS = CONST",
-      "accent": "teal",
-      "visual": {
-        "type": "compare",
-        "left": {
-          "icon": "earth",
-          "label": {
-            "cs": "Země",
-            "en": "Earth",
-            "ro": "Pământ"
-          },
-          "value": {
-            "cs": "70 kg",
-            "en": "70 kg",
-            "ro": "70 kg"
-          }
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "right": {
-          "icon": "moon",
-          "label": {
-            "cs": "Měsíc",
-            "en": "Moon",
-            "ro": "Lună"
-          },
-          "value": {
-            "cs": "70 kg",
-            "en": "70 kg",
-            "ro": "70 kg"
-          }
+        {
+          "id": "bulb",
+          "type": "bulb",
+          "position": [
+            0.8,
+            0.85,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
         },
-        "winner": "none"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Měsíc má ale gravitaci jen *jednu šestinu* té naší.",
-        "en": "But the Moon's gravity is only *one sixth* of ours.",
-        "ro": "Dar gravitația Lunii e doar *o șesime* din a noastră."
-      },
-      "headline": {
-        "cs": "GRAVITACE|1/6",
-        "en": "GRAVITY|1/6",
-        "ro": "GRAVITAȚIE|1/6"
-      },
-      "tag": "SURFACE GRAVITY m/s²",
-      "accent": "red",
-      "visual": {
-        "type": "bars",
-        "items": [
-          {
-            "label": {
-              "cs": "Země",
-              "en": "Earth",
-              "ro": "Pământ"
-            },
-            "value": 9.81,
-            "highlight": false
-          },
-          {
-            "label": {
-              "cs": "Měsíc",
-              "en": "Moon",
-              "ro": "Lună"
-            },
-            "value": 1.62,
-            "highlight": true
-          }
-        ],
-        "unit": {
-          "cs": "",
-          "en": "",
-          "ro": ""
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -0.6,
+            0,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 15,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bulb",
+        "distance": 4.2,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Je menší a lehčí, takže tě přitahuje *mnohem slaběji*.",
-        "en": "It's smaller and lighter, so it pulls you *much more weakly*.",
-        "ro": "E mai mică și mai ușoară, deci te trage *mult mai slab*."
+        "cs": "Jen ne ve světle, které vidíš. V *infračerveném*.",
+        "en": "Just not in light you can see. In *infrared*.",
+        "ro": "Doar că nu în lumină vizibilă. În *infraroșu*."
       },
-      "headline": {
-        "cs": "MENŠÍ|TAH",
-        "en": "WEAKER|PULL",
-        "ro": "TRAGE|MAI SLAB"
-      },
-      "tag": "WEIGHT",
-      "accent": "yellow",
-      "visual": {
-        "type": "forces",
-        "body": "person",
-        "arrows": [
-          {
-            "dir": "down",
-            "size": 0.8,
-            "label": {
-              "cs": "tíha 1/6",
-              "en": "weight 1/6",
-              "ro": "greutate 1/6"
-            },
-            "color": "red"
-          }
-        ],
-        "motion": "none"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Odrazíš se stejnou rychlostí, ale zpomaluje tě *šestkrát míň*.",
-        "en": "You push off at the same speed, but slow down *six times less*.",
-        "ro": "Te desprinzi la fel de repede, dar încetinești de *șase ori mai puțin*."
-      },
-      "headline": {
-        "cs": "STEJNÝ|ODRAZ",
-        "en": "SAME|TAKE-OFF",
-        "ro": "ACEEAȘI|DESPRINDERE"
-      },
-      "tag": "JUMP HEIGHT",
-      "accent": "teal",
-      "visual": {
-        "type": "formula",
-        "tex": "h = \\frac{v^2}{2\\hl{g}}",
-        "caption": {
-          "cs": "menší g = vyšší skok",
-          "en": "smaller g = higher jump",
-          "ro": "g mai mic = salt mai înalt"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "hot",
+          "type": "person",
+          "position": [
+            -0.6,
+            0,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 15,
+          "color": "#ff5a1c",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
         }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Z půlmetrového skoku by byl skok přes *tři metry*.",
-        "en": "A half-meter jump would become over *three meters*.",
-        "ro": "Un salt de jumătate de metru ar deveni de peste *trei metri*."
-      },
-      "headline": {
-        "cs": "PŮL METRU|→ 3 METRY",
-        "en": "HALF A METER|→ 3 METERS",
-        "ro": "JUMĂTATE DE METRU|→ 3 METRI"
-      },
-      "tag": "SAME LEGS",
-      "accent": "yellow",
-      "visual": {
-        "type": "bars",
-        "items": [
-          {
-            "label": {
-              "cs": "Země",
-              "en": "Earth",
-              "ro": "Pământ"
-            },
-            "value": 0.5,
-            "highlight": false
-          },
-          {
-            "label": {
-              "cs": "Měsíc",
-              "en": "Moon",
-              "ro": "Lună"
-            },
-            "value": 3,
-            "highlight": true
-          }
-        ],
-        "unit": {
-          "cs": " m",
-          "en": " m",
-          "ro": " m"
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "hot",
+          "kind": "heat"
         }
-      }
+      ],
+      "camera": {
+        "focus": "hot",
+        "distance": 4,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "notes": [
+        {
+          "prop": "hot",
+          "text": {
+            "cs": "infračervené",
+            "en": "infrared",
+            "ro": "infraroșu"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "A ve vzduchu bys visel skoro *čtyři sekundy*.",
-        "en": "And you'd hang in the air for almost *four seconds*.",
-        "ro": "Și ai pluti în aer aproape *patru secunde*."
+        "cs": "Každé teplé těleso vyzařuje své teplo *jako světlo*.",
+        "en": "Every warm object gives off its heat *as light*.",
+        "ro": "Orice corp cald își emite căldura *ca lumină*."
       },
-      "headline": {
-        "cs": "ČTYŘI SEKUNDY|VE VZDUCHU",
-        "en": "FOUR SECONDS|OF AIRTIME",
-        "ro": "PATRU SECUNDE|ÎN AER"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "pot",
+          "type": "pot",
+          "position": [
+            0.4,
+            0.85,
+            0
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "mug",
+          "type": "cup",
+          "position": [
+            -0.4,
+            0.85,
+            0.1
+          ],
+          "scale": 1.3,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "pot",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "pot",
+        "distance": 2.8,
+        "angle": "frontLeft",
+        "move": "dollyIn"
       },
-      "tag": "HANG TIME",
-      "accent": "blue",
-      "visual": {
+      "notes": [
+        {
+          "prop": "mug",
+          "text": {
+            "cs": "taky svítí",
+            "en": "glows too",
+            "ro": "și ea strălucește"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Tvoje tělo vydává asi *sto wattů* tepla.",
+        "en": "Your body gives off about *a hundred watts* of heat.",
+        "ro": "Corpul tău emite cam *o sută de wați* de căldură."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "hot",
+          "type": "person",
+          "position": [
+            -0.6,
+            0,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 15,
+          "color": "#ff5a1c",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "hot",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "hot",
+        "distance": 4.4,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
         "type": "counter",
         "from": 0,
-        "to": 3.9,
-        "decimals": 1,
+        "to": 100,
+        "decimals": 0,
         "unit": {
-          "cs": " s",
-          "en": " s",
-          "ro": " s"
+          "cs": " W",
+          "en": " W",
+          "ro": " W"
         },
         "caption": {
-          "cs": "na Zemi jen asi 0,6 s",
-          "en": "on Earth only about 0.6 s",
-          "ro": "pe Pământ doar vreo 0,6 s"
+          "cs": "jako stará žárovka",
+          "en": "like an old light bulb",
+          "ro": "ca un bec vechi"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Astronauty ale brzdil těžký *skafandr*, proto skákali opatrně.",
-        "en": "But astronauts wore heavy *suits*, so they hopped carefully.",
-        "ro": "Dar astronauții purtau *costume* grele, așa că săreau cu grijă."
+        "cs": "Termokamera tě proto vidí i v *úplné tmě*.",
+        "en": "That's why a thermal camera sees you in *total darkness*.",
+        "ro": "De aceea o cameră termică te vede și în *întuneric total*."
       },
-      "headline": {
-        "cs": "BRZDA:|SKAFANDR",
-        "en": "THE CATCH:|THE SUIT",
-        "ro": "PROBLEMA:|COSTUMUL"
+      "environment": "space",
+      "props": [
+        {
+          "id": "hot",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 15,
+          "color": "#ff5a1c",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "hot",
+        "distance": 4,
+        "angle": "front",
+        "move": "orbitRight"
       },
-      "tag": "APOLLO",
-      "accent": "red",
-      "visual": {
-        "type": "icon",
-        "icon": "person",
-        "icon2": "rocket",
-        "relation": "plus",
-        "effect": "float",
-        "caption": null
-      }
+      "notes": [
+        {
+          "prop": "hot",
+          "text": {
+            "cs": "tady jsi",
+            "en": "there you are",
+            "ro": "aici ești"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Napiš do komentářů, co tě zajímá, a *sleduj*.",
-        "en": "Tell us what to explain next, and *follow*.",
-        "ro": "Scrie-ne ce să explicăm și dă *follow*."
+        "cs": "Plná místnost lidí topí jako *kamna*.",
+        "en": "A room full of people heats like a *space heater*.",
+        "ro": "O cameră plină de oameni încălzește ca o *sobă*."
       },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "f0",
+          "type": "person",
+          "position": [
+            -1.8,
+            0,
+            0.5
+          ],
+          "scale": 1,
+          "rotationY": 30,
+          "color": "#ff5a1c",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "f1",
+          "type": "person",
+          "position": [
+            -0.6,
+            0,
+            -0.6
+          ],
+          "scale": 1,
+          "rotationY": 10,
+          "color": "#ff7a2e",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "f2",
+          "type": "person",
+          "position": [
+            0.6,
+            0,
+            0.6
+          ],
+          "scale": 1,
+          "rotationY": -15,
+          "color": "#ff5a1c",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "f3",
+          "type": "person",
+          "position": [
+            1.8,
+            0,
+            -0.3
+          ],
+          "scale": 1,
+          "rotationY": -30,
+          "color": "#ff8a3e",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "f1",
+          "kind": "heat"
+        },
+        {
+          "from": "f2",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "f1",
+        "distance": 6.5,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 2000,
+        "decimals": 0,
+        "unit": {
+          "cs": " W",
+          "en": " W",
+          "ro": " W"
+        },
+        "caption": {
+          "cs": "dvacet lidí v pokoji",
+          "en": "twenty people in a room",
+          "ro": "douăzeci de oameni într-o cameră"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Takže až ti bude zima, *pozvi kamarády*.",
+        "en": "So next time you're cold, *invite friends*.",
+        "ro": "Deci data viitoare când ți-e frig, *cheamă prietenii*."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "f0",
+          "type": "person",
+          "position": [
+            -1.8,
+            0,
+            0.5
+          ],
+          "scale": 1,
+          "rotationY": 30,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "f1",
+          "type": "person",
+          "position": [
+            -0.6,
+            0,
+            -0.6
+          ],
+          "scale": 1,
+          "rotationY": 10,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "f2",
+          "type": "person",
+          "position": [
+            0.6,
+            0,
+            0.6
+          ],
+          "scale": 1,
+          "rotationY": -15,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "f3",
+          "type": "person",
+          "position": [
+            1.8,
+            0,
+            -0.3
+          ],
+          "scale": 1,
+          "rotationY": -30,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "f2",
+        "distance": 6,
+        "angle": "frontRight",
+        "move": "orbitLeft"
+      },
+      "notes": [
+        {
+          "prop": "f2",
+          "text": {
+            "cs": "+ kamarádi",
+            "en": "+ friends",
+            "ro": "+ prieteni"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

@@ -1,5 +1,6 @@
 /**
- * AI generátor scénářů (Claude): nápad z napady/napady.json → content/scripts/NNN.json (CZ/EN/RO).
+ * AI generátor scénářů (Claude): nápad z napady/napady.json → content/scripts/NNN.json (CZ/EN/RO),
+ * ve stejném hybridním stylu jako videa 15–44 (3D svět + karty + ručně kreslené popisky).
  *   npm run generate -- 45-50
  *   npm run generate -- next 3        (3 další nápady, které ještě nemají scénář)
  *   npm run generate -- 45 --force    (přepíše existující)
@@ -8,7 +9,9 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import Anthropic from '@anthropic-ai/sdk';
-import {CURVES, ICONS, ShortScriptSchema, checkShortScript, type ShortScript} from '../src/v2/schema';
+import {CURVES, ICONS} from '../src/v2/schema';
+import {PROP_TYPES} from '../src/engine/schema';
+import {HybridScriptSchema, checkHybrid, type HybridScript} from '../src/v3/schema';
 import {ROOT, allScriptIds, loadIdeas, parseArgs, pool, scriptPath, writeJson, type Idea} from './lib';
 
 const MODEL = process.env.CLAUDE_MODEL || 'claude-opus-5-5';
@@ -38,69 +41,64 @@ const logUsage = (row: UsageRow) => {
   fs.writeFileSync(USAGE, JSON.stringify(all, null, 1));
 };
 
-const example = fs.readFileSync(scriptPath(17), 'utf8');
+const example = fs.readFileSync(scriptPath(19), 'utf8');
 
-const SYSTEM = `You write scripts for "Physics around you" (Czech: "Fyzika kolem tebe"), a series of SHORT (25-30 second) vertical explainer videos for TikTok, Instagram Reels and YouTube Shorts. Each video explains one everyday physics phenomenon to curious teens and adults. Every video is published in Czech (cs), English (en) and Romanian (ro).
+const SYSTEM = `You write scripts for "Physics around you" (Czech: "Fyzika kolem tebe"), a series of SHORT (about 20-25 second) vertical videos for TikTok, Instagram Reels and YouTube Shorts. Each video explains one surprising everyday physics fact. Every video is published in Czech (cs), English (en) and Romanian (ro).
 
-The look is a clean technical "engineer's notebook": a big two-line headline at the top, one animated diagram in the middle, word-by-word subtitles at the bottom. You compose each scene from a fixed set of diagram widgets ("visual").
+The look: a colorful low-poly 3D world (built from a fixed library of props) with a moving camera, hand-drawn marker arrows with handwritten labels ("notes"), an optional info card taped at the top (a number, gauge, formula, graph, bars, comparison, steps or quiz), and big centered subtitles. Scene 1 also shows a huge "hook" text.
 
-## Story rules
-- Exactly 8 content scenes plus a final scene whose visual is {"type":"outro"} (9 scenes total).
-- Each narration is ONE short spoken sentence of 5-11 words (about 2-3.5 s). Total about 65-80 words per language.
-- Scene 1 is a strong hook: a surprising claim or a question (a "quiz" visual works great). Then a clear chain of cause and effect, one idea per scene, with concrete numbers where they help. The outro narration asks to follow (vary the wording).
-- The physics must be correct. Bust myths instead of repeating them. Simplify, but never say something false.
-- Write each language natively (casual "ty" in Czech, "tu" in Romanian) with correct diacritics. Mark 1-2 key words per narration with *asterisks*. No emoji in narration; no symbols like "%" or "°C" in narration (write them as words). Digits are fine.
-- headline: UPPERCASE, 2-5 words, two lines split by "|" (second line is colored). Keep each line under ~16 characters.
-- tag: short technical English label in UPPERCASE (e.g. "RAYLEIGH SCATTERING", "F = m·a"), or null.
-- accent: yellow | teal | red | blue — vary it between scenes.
+## What makes these videos work (follow this closely)
+- The first 2 seconds decide everything. Scene 1 states the most surprising claim of the whole video, as a fact or a direct question to the viewer ("Your head is older than your feet."). Never start with "Did you know", "In this video", "Have you ever wondered".
+- Pick an angle that makes people stop: a myth bust, an absurd but true number, a "what if", something about their body, phone or home. Avoid textbook phrasing.
+- Then one fast chain of cause and effect, one idea per scene, with one concrete, correct number where it helps. End with a punchline, a twist or a practical takeaway – not "follow for more".
+- Sound like a real person talking to a friend: short, casual, a bit of humor, no filler, no marketing words, no "fascinating", "incredible", "let's dive in". Czech uses "ty", Romanian uses "tu". Write each language natively, not as a translation, with correct diacritics.
+- The physics must be correct. Simplify, but never say something false.
 
-## Visual widgets
-- icon: one big line-art pictogram (or two with relation arrow/vs/plus), effect pulse/shake/spin/float/none, optional caption.
-- formula: KaTeX formula; wrap the key term in \\hl{...}. Optional caption.
-- counter: big animated number from → to with unit and caption. gauge: speedometer dial (from, to, max).
-- graph: axes + animated curve (${CURVES.join(', ')}), optional dashed curve2, axis labels, markLabel.
-- bars: 2-4 horizontal bars with values (highlight the important one). compare: two cards with icon/label/value, optional winner.
-- steps: 2-4 numbered steps with the active one highlighted (reuse the same items in consecutive scenes with a growing "active").
-- forces: free-body diagram: body icon + 1-4 arrows (dir, size 1-3, label, color), motion.
-- wave: single | compare (long vs short wave) | cancel (noise + anti-noise = silence) | doppler (moving siren) | blocked (WiFi through a wall).
-- particles: solid | liquid | gas | hotcold (slow cold vs fast hot molecules) | rise (convection) | pressure (molecules hitting a wall) | evaporate.
-- orbit: orbit (body circling center with velocity + gravity arrows) | tilt (Earth's tilted axis around the Sun) | tides (water bulge toward the Moon) | spin (rotating Earth).
-- rays: scatter (blue sky) | sunset | prism (rainbow) | refract | mirror | twinkle.
-- field: magnet | coil (wireless charging) | charge (static spark to a door handle) | spark (lightning).
-- fall: two objects falling side by side, with or without air.
-- quiz: question + 2-4 options + answer index (the answer is revealed at the end of the scene).
-- outro: follow card (last scene only).
-Icons available: ${ICONS.join(', ')}.
+## Format rules
+- 7 scenes. Each narration is ONE sentence of 5-12 words (two very short sentences are fine). Total about 50-65 words per language. Mark 1-2 key words per narration with *asterisks* (they get highlighted). No emoji, no "%" or "°C" symbols in narration (write them as words); digits are fine.
+- hook: on-screen text for scene 1, UPPERCASE, max 7 words, the same claim as the first narration. Symbols like °C are fine here.
+- notes: 0-2 per scene, 1-3 casual handwritten words pointing at a prop ("you!", "K-40", "still falling"). Use them in most scenes.
+- card: in 2-4 scenes, never in scene 1. Numbers in cards must match the narration.
+- shake: true only for impacts or explosions.
 
-## Exact JSON format (TypeScript notation; T = {cs: string, en: string, ro: string})
-type Script = {engine: "blueprint", id: number, title: T, description: T, hashtags: string[], scenes: Scene[]}
-type Scene = {narration: T, headline: T, tag: string | null, accent: "yellow"|"teal"|"red"|"blue", visual: Visual}
-type Icon = one of the icons listed above
-type Visual =
- | {type:"icon", icon: Icon, icon2: Icon|null, relation: "arrow"|"vs"|"plus"|"none", effect: "pulse"|"shake"|"spin"|"float"|"none", caption: T|null}
- | {type:"formula", tex: string, caption: T|null}
- | {type:"counter", from: number, to: number, decimals: number, unit: T, caption: T}
- | {type:"gauge", from: number, to: number, max: number, unit: T, caption: T}
- | {type:"graph", curve: Curve, curve2: Curve|null, x: T, y: T, markLabel: T|null}   // Curve = ${CURVES.map((c) => `"${c}"`).join('|')}
- | {type:"bars", items: {label: T, value: number, highlight: boolean}[], unit: T}
- | {type:"compare", left: {icon: Icon, label: T, value: T|null}, right: {icon: Icon, label: T, value: T|null}, winner: "left"|"right"|"none"}
- | {type:"steps", items: T[], active: number}
- | {type:"forces", body: Icon, arrows: {dir: "up"|"down"|"left"|"right"|"upLeft"|"upRight"|"downLeft"|"downRight", size: number, label: T, color: "yellow"|"teal"|"red"|"blue"}[], motion: "none"|"up"|"down"|"left"|"right"|"shake"}
+## 3D world
+- Meters. Ground or floor is y=0, +x right, +y up, +z toward the camera. environment: "outdoor" (grass island), "indoor" (floor + back wall), "space" (stars, no ground – props float).
+- A "table" has its top at y=0.85; objects standing on it use y=0.85.
+- Props (approximate height at scale 1, center at y+ANCHOR): ${PROP_TYPES.join(', ')}.
+  Notes: person ~1.9 m; cat ~0.6 m (anim "slide" = falls and rights itself, "bob" = upside down, "shake" = twisting); elevator = cabin 1.7 m with long rails (put a person inside, scale ~0.82); earthCut = transparent Earth with core and a tunnel (radius 2); planet = plain colored planet (use color for Venus/Jupiter); powerLine = two poles 6 m apart with 3 wires at y≈3.92 (birds sit at y≈3.94); carGlass = car with see-through cabin; balloon = helium balloon on a string; waterPool = 4×3 m slab (also usable as ice rink or Moon ground with a color); iceCube with color #ffffff = sugar cube; weighScale = bathroom scale; arrow/arrowUp/arrowDown show directions.
+- anim: none | spin | bob | pulse | shake | slide (moves from position to slideTo; otherwise slideTo is null) | vanish (disappears mid-scene). glow makes things shine (bulbs, hot things, alarms).
+- flows: particles from one prop to another (photons, electrons, heat, cold, water, air, sound, light, microwaves). waves: rings from a prop (sound, radio, heat, light, microwaves).
+- camera: focus = prop id; distance: small objects 2-3, people 3.5-5, houses 8-11, space 6-14; angle front | frontLeft | frontRight | side | top | low; move dollyIn | dollyOut | orbitLeft | orbitRight | rise. Vary them. The camera frames all props automatically.
+- 1-5 props per scene; keep the same objects at the same positions in consecutive scenes; ids only need to be unique within a scene.
+
+## Card widgets (field "card", same as these JSON shapes)
+ | {type:"counter", from, to, decimals, unit: T, caption: T}
+ | {type:"gauge", from, to, max, unit: T, caption: T}
+ | {type:"formula", tex: string (KaTeX, wrap the key term in \\\\hl{...}), caption: T|null}
+ | {type:"graph", curve: ${CURVES.map((c) => `"${c}"`).join('|')}, curve2: null, x: T, y: T, markLabel: T|null}
+ | {type:"bars", items: {label: T, value: number, highlight: boolean}[] (2-4), unit: T}
+ | {type:"compare", left: {icon, label: T, value: T|null}, right: {...}, winner: "left"|"right"|"none"}
+ | {type:"steps", items: T[] (2-4), active: number}
+ | {type:"quiz", question: T, options: T[] (2-4), answer: number}
  | {type:"wave", mode: "single"|"compare"|"cancel"|"doppler"|"blocked", label: T|null}
  | {type:"particles", mode: "solid"|"liquid"|"gas"|"hotcold"|"rise"|"pressure"|"evaporate", label: T|null}
  | {type:"orbit", mode: "orbit"|"tilt"|"tides"|"spin", center: Icon, body: Icon, label: T|null}
  | {type:"rays", mode: "scatter"|"prism"|"refract"|"mirror"|"twinkle"|"sunset", label: T|null}
  | {type:"field", mode: "magnet"|"coil"|"charge"|"spark", label: T|null}
- | {type:"fall", left: Icon, right: Icon, air: boolean, label: T|null}
- | {type:"quiz", question: T, options: T[], answer: number}
- | {type:"outro"}
-Every field is required (use null where allowed). Reply with ONLY the JSON object: no prose, no markdown code fences.
+ | {type:"forces", body: Icon, arrows: {dir, size, label: T, color}[], motion}
+Card icons: ${ICONS.join(', ')}.
+
+## Exact JSON format (TypeScript notation; T = {cs: string, en: string, ro: string})
+type Script = {engine: "hybrid", id: number, title: T, description: T, hashtags: string[] (5-7, no #), hook: T, scenes: Scene[]}
+type Scene = {narration: T, environment, props: Prop[], flows: {from, to, kind}[], waves: {from, kind}[], camera: {focus, distance, angle, move}, notes: {prop, text: T}[], card: Card | null, shake: boolean}
+type Prop = {id, type, position: [x,y,z], scale, rotationY (degrees), color: string|null, anim, slideTo: [x,y,z]|null, glow: boolean}
+Every field is required (use null or [] where allowed). Reply with ONLY the JSON object: no prose, no markdown code fences.
 
 ## Example of a complete, correct script
 ${example}`;
 
 /** Vytáhne JSON z odpovědi a zkontroluje ho schématem; vrátí skript nebo seznam chyb. */
-const parseReply = (text: string): {script: ShortScript | null; errors: string[]} => {
+const parseReply = (text: string): {script: HybridScript | null; errors: string[]} => {
   const a = text.indexOf('{');
   const b = text.lastIndexOf('}');
   if (a < 0 || b <= a) return {script: null, errors: ['The answer did not contain a JSON object.']};
@@ -110,7 +108,7 @@ const parseReply = (text: string): {script: ShortScript | null; errors: string[]
   } catch (e) {
     return {script: null, errors: [`Invalid JSON: ${(e as Error).message}`]};
   }
-  const r = ShortScriptSchema.safeParse(raw);
+  const r = HybridScriptSchema.safeParse(raw);
   if (!r.success) return {script: null, errors: r.error.issues.slice(0, 12).map((i) => `${i.path.join('.')}: ${i.message}`)};
   return {script: r.data, errors: []};
 };
@@ -141,7 +139,7 @@ const generateOne = async (idea: Idea, force: boolean) => {
       messages: [
         {
           role: 'user',
-          content: `Write the script for idea #${idea.id} (category: ${idea.kategorie}). Topic (in Czech): "${idea.tema}". Use id ${idea.id} and engine "blueprint".${feedback}`,
+          content: `Write the script for idea #${idea.id} (category: ${idea.kategorie}). Topic (in Czech): "${idea.tema}". Use id ${idea.id} and engine "hybrid".${feedback}`,
         },
       ],
     });
@@ -169,8 +167,8 @@ const generateOne = async (idea: Idea, force: boolean) => {
       continue;
     }
     script.id = idea.id;
-    script.engine = 'blueprint';
-    const errors = checkShortScript(script);
+    script.engine = 'hybrid';
+    const errors = checkHybrid(script);
     if (errors.length) {
       console.warn(`🔁 #${idea.id} pokus ${attempt}: ${errors.length} chyb – opravuji`);
       feedback = `\n\nA previous attempt had these problems; avoid them:\n- ${errors.join('\n- ')}`;

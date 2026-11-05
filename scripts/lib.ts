@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import {LANGS, VideoScriptSchema, type Lang, type Timeline, type VideoScript} from '../src/engine/schema';
 import {ShortScriptSchema, type ShortScript} from '../src/v2/schema';
+import {HybridScriptSchema, type HybridScript} from '../src/v3/schema';
 
 export const ROOT = process.cwd();
 export const P = {
@@ -22,13 +23,15 @@ export const scriptPath = (id: number) => path.join(P.scripts, `${pad(id)}.json`
 export const timelinePath = (id: number, lang: Lang) => path.join(P.timelines, `${pad(id)}.${lang}.json`);
 
 /** Scénář v1 (3D, videa 1–14) nebo v2 (2D blueprint, krátká videa). */
-export type AnyScript = VideoScript | ShortScript;
+export type AnyScript = VideoScript | ShortScript | HybridScript;
 export const isShort = (s: AnyScript): s is ShortScript => (s as ShortScript).engine === 'blueprint';
+export const isHybrid = (s: AnyScript): s is HybridScript => (s as HybridScript).engine === 'hybrid';
 
 export const loadScript = (id: number): AnyScript | null => {
   const f = scriptPath(id);
   if (!fs.existsSync(f)) return null;
   const raw = JSON.parse(fs.readFileSync(f, 'utf8'));
+  if (raw.engine === 'hybrid') return HybridScriptSchema.parse(raw);
   return raw.engine === 'blueprint' ? ShortScriptSchema.parse(raw) : VideoScriptSchema.parse(raw);
 };
 

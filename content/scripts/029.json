@@ -1,283 +1,433 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 29,
   "title": {
-    "cs": "Proč tě v letadle bolí uši",
-    "en": "Why your ears hurt on planes",
-    "ro": "De ce te dor urechile în avion"
+    "cs": "Svíčka ve vesmíru hoří kuličkou",
+    "en": "In space a candle burns as a ball",
+    "ro": "În spațiu lumânarea arde ca o bilă"
   },
   "description": {
-    "cs": "Za bolestí uší v letadle je tlak vzduchu. A taky jednoduchý trik, jak ji zastavit. ✈️",
-    "en": "Air pressure is behind plane ear pain. Here's a simple trick to stop it. ✈️",
-    "ro": "Presiunea aerului e de vină pentru durerea de urechi. Iată un truc simplu. ✈️"
+    "cs": "Žádné nahoře, žádný stoupající vzduch, žádný klasický plamen. 🕯️",
+    "en": "No up, no rising air, no normal flame. 🕯️",
+    "ro": "Fără sus, fără aer care urcă, fără flacără obișnuită. 🕯️"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "letadlo",
-    "tlak",
-    "airplane"
+    "svicka",
+    "vesmir",
+    "candle"
   ],
+  "hook": {
+    "cs": "VE VESMÍRU HOŘÍ SVÍČKA KULIČKOU",
+    "en": "IN SPACE A CANDLE BURNS AS A BALL",
+    "ro": "ÎN SPAȚIU LUMÂNAREA ARDE CA O BILĂ"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Přistáváš a uši tě najednou *bolí* a zalehnou.",
-        "en": "You're landing and suddenly your ears *hurt* and feel blocked.",
-        "ro": "Aterizezi și deodată te *dor* urechile și se înfundă."
+        "cs": "Ve vesmíru nehoří svíčka plamenem. Hoří *modrou kuličkou*.",
+        "en": "In space, a candle doesn't make a flame. It makes a *blue ball*.",
+        "ro": "În spațiu, lumânarea nu face flacără. Face o *bilă albastră*."
       },
-      "headline": {
-        "cs": "BOLÍ|TĚ UŠI?",
-        "en": "EARS|HURTING?",
-        "ro": "TE DOR|URECHILE?"
+      "environment": "space",
+      "props": [
+        {
+          "id": "cs",
+          "type": "candleSpace",
+          "position": [
+            0,
+            -0.5,
+            0
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "iss",
+          "type": "satellite",
+          "position": [
+            3,
+            1.8,
+            -2
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cs",
+        "distance": 3,
+        "angle": "frontRight",
+        "move": "dollyIn"
       },
-      "tag": "DESCENT",
-      "accent": "red",
-      "visual": {
-        "type": "icon",
-        "icon": "plane",
-        "icon2": "ear",
-        "relation": "arrow",
-        "effect": "shake",
-        "caption": null
-      }
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Za všechno může *tlak vzduchu*.",
-        "en": "It's all about *air pressure*.",
-        "ro": "Totul ține de *presiunea aerului*."
+        "cs": "Na Zemi horký vzduch *stoupá* a táhne plamen nahoru.",
+        "en": "On Earth, hot air *rises* and stretches the flame upward.",
+        "ro": "Pe Pământ, aerul cald *urcă* și trage flacăra în sus."
       },
-      "headline": {
-        "cs": "VINÍK:|TLAK",
-        "en": "THE CULPRIT:|PRESSURE",
-        "ro": "VINOVATUL:|PRESIUNEA"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "candle",
+          "type": "candle",
+          "position": [
+            0,
+            0.85,
+            0.1
+          ],
+          "scale": 1.3,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "candle",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "candle",
+        "distance": 2.4,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": "BAROMETRIC PRESSURE",
-      "accent": "yellow",
-      "visual": {
+      "notes": [
+        {
+          "prop": "candle",
+          "text": {
+            "cs": "nahoru",
+            "en": "up",
+            "ro": "în sus"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Zespodu přitom nasává čerstvý *kyslík*.",
+        "en": "And it pulls fresh *oxygen* in from below.",
+        "ro": "Și trage *oxigen* proaspăt de dedesubt."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "candle",
+          "type": "candle",
+          "position": [
+            0,
+            0.85,
+            0.1
+          ],
+          "scale": 1.3,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "candle",
+        "distance": 2.2,
+        "angle": "low",
+        "move": "orbitLeft"
+      },
+      "notes": [],
+      "card": {
         "type": "particles",
-        "mode": "pressure",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "V kabině letadla je tlak jako na *vysoké hoře*.",
-        "en": "Cabin pressure is like being on a *high mountain*.",
-        "ro": "Presiunea în cabină e ca pe un *munte înalt*."
-      },
-      "headline": {
-        "cs": "KABINA =|HORA",
-        "en": "CABIN =|MOUNTAIN",
-        "ro": "CABINA =|MUNTE"
-      },
-      "tag": "≈ 2 000 m",
-      "accent": "blue",
-      "visual": {
-        "type": "bars",
-        "items": [
-          {
-            "label": {
-              "cs": "u moře",
-              "en": "sea level",
-              "ro": "nivelul mării"
-            },
-            "value": 101,
-            "highlight": false
-          },
-          {
-            "label": {
-              "cs": "kabina",
-              "en": "cabin",
-              "ro": "cabină"
-            },
-            "value": 78,
-            "highlight": true
-          }
-        ],
-        "unit": {
-          "cs": " kPa",
-          "en": " kPa",
-          "ro": " kPa"
+        "mode": "rise",
+        "label": {
+          "cs": "teplý nahoru, studený dolů",
+          "en": "warm goes up, cool comes in",
+          "ro": "caldul urcă, recele vine dedesubt"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Za bubínkem máš malou kapsu *uzavřeného vzduchu*.",
-        "en": "Behind your eardrum is a small pocket of *trapped air*.",
-        "ro": "În spatele timpanului e o pungă de *aer prins*."
+        "cs": "V beztíži nic *nestoupá*. Žádné nahoře neexistuje.",
+        "en": "In zero gravity nothing *rises*. There is no up.",
+        "ro": "În imponderabilitate nimic nu *urcă*. Nu există sus."
       },
-      "headline": {
-        "cs": "VZDUCH ZA|BUBÍNKEM",
-        "en": "AIR BEHIND|THE EARDRUM",
-        "ro": "AER ÎN SPATELE|TIMPANULUI"
-      },
-      "tag": "MIDDLE EAR",
-      "accent": "teal",
-      "visual": {
-        "type": "icon",
-        "icon": "ear",
-        "icon2": null,
-        "relation": "none",
-        "effect": "pulse",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Při klesání tlak venku *roste* a bubínek tlačí dovnitř.",
-        "en": "As you descend, outside pressure *rises* and pushes the eardrum in.",
-        "ro": "La coborâre, presiunea de afară *crește* și împinge timpanul."
-      },
-      "headline": {
-        "cs": "BUBÍNEK|SE PROHNE",
-        "en": "THE EARDRUM|BENDS",
-        "ro": "TIMPANUL|SE ÎNDOAIE"
-      },
-      "tag": "PRESSURE DIFFERENCE",
-      "accent": "red",
-      "visual": {
-        "type": "forces",
-        "body": "ear",
-        "arrows": [
-          {
-            "dir": "right",
-            "size": 2.2,
-            "label": {
-              "cs": "tlak venku",
-              "en": "outside",
-              "ro": "afară"
-            },
-            "color": "red"
-          },
-          {
-            "dir": "left",
-            "size": 0.8,
-            "label": {
-              "cs": "uvnitř",
-              "en": "inside",
-              "ro": "înăuntru"
-            },
-            "color": "blue"
-          }
-        ],
-        "motion": "shake"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Tlak vyrovná malá trubička do krku, *Eustachova trubice*.",
-        "en": "A tiny tube to your throat, the *Eustachian tube*, evens it out.",
-        "ro": "Un tub mic spre gât, *trompa lui Eustachio*, egalizează presiunea."
-      },
-      "headline": {
-        "cs": "EUSTACHOVA|TRUBICE",
-        "en": "EUSTACHIAN|TUBE",
-        "ro": "TROMPA LUI|EUSTACHIO"
-      },
-      "tag": "PRESSURE VALVE",
-      "accent": "teal",
-      "visual": {
-        "type": "steps",
-        "items": [
-          {
-            "cs": "tlak se změní",
-            "en": "pressure changes",
-            "ro": "presiunea se schimbă"
-          },
-          {
-            "cs": "trubice se otevře",
-            "en": "the tube opens",
-            "ro": "trompa se deschide"
-          },
-          {
-            "cs": "lupnutí a úleva",
-            "en": "pop and relief",
-            "ro": "pocnet și ușurare"
-          }
-        ],
-        "active": 1
-      }
-    },
-    {
-      "narration": {
-        "cs": "Otevře se, když *polykáš* nebo zíváš.",
-        "en": "It opens when you *swallow* or yawn.",
-        "ro": "Se deschide când *înghiți* sau caști."
-      },
-      "headline": {
-        "cs": "POLKNI|NEBO ZÍVNI",
-        "en": "SWALLOW|OR YAWN",
-        "ro": "ÎNGHITE|SAU CAȘCĂ"
-      },
-      "tag": "THE TRICK",
-      "accent": "yellow",
-      "visual": {
-        "type": "steps",
-        "items": [
-          {
-            "cs": "tlak se změní",
-            "en": "pressure changes",
-            "ro": "presiunea se schimbă"
-          },
-          {
-            "cs": "trubice se otevře",
-            "en": "the tube opens",
-            "ro": "trompa se deschide"
-          },
-          {
-            "cs": "lupnutí a úleva",
-            "en": "pop and relief",
-            "ro": "pocnet și ușurare"
-          }
-        ],
-        "active": 2
-      }
-    },
-    {
-      "narration": {
-        "cs": "Proto pomáhá *žvýkačka* nebo bonbón při přistání.",
-        "en": "That's why *chewing gum* or candy helps during landing.",
-        "ro": "De aceea ajută *guma de mestecat* la aterizare."
-      },
-      "headline": {
-        "cs": "ŽVÝKAČKA|POMÁHÁ",
-        "en": "GUM|HELPS",
-        "ro": "GUMA|AJUTĂ"
-      },
-      "tag": "PRO TIP",
-      "accent": "teal",
-      "visual": {
-        "type": "icon",
-        "icon": "plane",
-        "icon2": null,
-        "relation": "none",
-        "effect": "float",
-        "caption": {
-          "cs": "a miminkům pití z lahve",
-          "en": "and for babies, a bottle",
-          "ro": "iar bebelușilor, biberonul"
+      "environment": "space",
+      "props": [
+        {
+          "id": "cs",
+          "type": "candleSpace",
+          "position": [
+            0,
+            -0.5,
+            0
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "iss",
+          "type": "satellite",
+          "position": [
+            3,
+            1.8,
+            -2
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "iss",
+        "distance": 6,
+        "angle": "front",
+        "move": "orbitRight"
+      },
+      "notes": [
+        {
+          "prop": "iss",
+          "text": {
+            "cs": "žádné nahoře",
+            "en": "no up",
+            "ro": "fără sus"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Překvapilo tě to? Dej *sledovat* pro další díl.",
-        "en": "Surprised? Hit *follow* for the next one.",
-        "ro": "Te-a surprins? Dă *follow* pentru următorul."
+        "cs": "Kyslík k plameni jen pomalu *prosakuje* ze všech stran.",
+        "en": "Oxygen just slowly *drifts in* from every side.",
+        "ro": "Oxigenul doar *se strecoară* încet din toate părțile."
       },
-      "headline": {
-        "cs": "DALŠÍ DÍL|UŽ BRZY",
-        "en": "NEXT EPISODE|SOON",
-        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      "environment": "space",
+      "props": [
+        {
+          "id": "cs",
+          "type": "candleSpace",
+          "position": [
+            0,
+            -0.5,
+            0
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cs",
+        "distance": 2.6,
+        "angle": "frontLeft",
+        "move": "dollyIn"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [],
+      "card": {
+        "type": "particles",
+        "mode": "gas",
+        "label": {
+          "cs": "pomalé míchání – žádné proudění",
+          "en": "slow mixing – no convection",
+          "ro": "amestec lent – fără convecție"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Plamen je proto kulatý, slabý a *modrý*.",
+        "en": "So the flame is round, weak and *blue*.",
+        "ro": "Așa că flacăra e rotundă, slabă și *albastră*."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "cs",
+          "type": "candleSpace",
+          "position": [
+            0,
+            -0.5,
+            0
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cs",
+        "distance": 2.2,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "notes": [],
+      "card": {
+        "type": "compare",
+        "left": {
+          "icon": "flame",
+          "label": {
+            "cs": "Země",
+            "en": "Earth",
+            "ro": "Pământ"
+          },
+          "value": {
+            "cs": "dlouhý a žlutý",
+            "en": "tall and yellow",
+            "ro": "înaltă și galbenă"
+          }
+        },
+        "right": {
+          "icon": "ball",
+          "label": {
+            "cs": "ISS",
+            "en": "ISS",
+            "ro": "ISS"
+          },
+          "value": {
+            "cs": "kulatý a modrý",
+            "en": "round and blue",
+            "ro": "rotundă și albastră"
+          }
+        },
+        "winner": "none"
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Na ISS s ohněm dělají pokusy *schválně*.",
+        "en": "On the ISS they run fire experiments like this *on purpose*.",
+        "ro": "Pe ISS se fac astfel de experimente *intenționat*."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "iss",
+          "type": "satellite",
+          "position": [
+            3,
+            1.8,
+            -2
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cs",
+          "type": "candleSpace",
+          "position": [
+            -1.2,
+            0.3,
+            0
+          ],
+          "scale": 1.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "iss",
+        "distance": 7,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "iss",
+          "text": {
+            "cs": "schválně",
+            "en": "on purpose",
+            "ro": "intenționat"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

@@ -1,261 +1,466 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 42,
   "title": {
-    "cs": "Proč je led kluzký",
-    "en": "Why ice is slippery",
-    "ro": "De ce gheața e alunecoasă"
+    "cs": "Zrcadlo neprohazuje levou a pravou",
+    "en": "Mirrors don't swap left and right",
+    "ro": "Oglinda nu inversează stânga cu dreapta"
   },
   "description": {
-    "cs": "Učili tě, že brusle taví led tlakem? To je mýtus. Tady je skutečnost. 🧊⛸️",
-    "en": "Were you taught skates melt ice with pressure? That's a myth. Here's the real story. 🧊⛸️",
-    "ro": "Ai învățat că patinele topesc gheața prin presiune? E un mit. Iată adevărul. 🧊⛸️"
+    "cs": "Prohazuje něco úplně jiného. A levou a pravou si přehazuješ v hlavě ty. 🪞",
+    "en": "It flips something else entirely. The left-right swap happens in your head. 🪞",
+    "ro": "Inversează cu totul altceva. Stânga și dreapta le inversezi tu, în minte. 🪞"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "led",
-    "brusleni",
-    "ice"
+    "zrcadlo",
+    "optika",
+    "mirror"
   ],
+  "hook": {
+    "cs": "ZRCADLO NEPROHAZUJE LEVOU A PRAVOU",
+    "en": "MIRRORS DON'T SWAP LEFT AND RIGHT",
+    "ro": "OGLINDA NU INVERSEAZĂ STÂNGA CU DREAPTA"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Proč je led kluzký? Školní vysvětlení je *špatně*.",
-        "en": "Why is ice slippery? The school answer is *wrong*.",
-        "ro": "De ce e gheața alunecoasă? Răspunsul de la școală e *greșit*."
+        "cs": "Zrcadlo neprohazuje levou a pravou. Prohazuje *něco jiného*.",
+        "en": "A mirror doesn't swap left and right. It swaps *something else*.",
+        "ro": "Oglinda nu inversează stânga cu dreapta. Inversează *altceva*."
       },
-      "headline": {
-        "cs": "ŠKOLA SE|MÝLILA",
-        "en": "SCHOOL|GOT IT WRONG",
-        "ro": "ȘCOALA|A GREȘIT"
-      },
-      "tag": "MYTH ALERT",
-      "accent": "red",
-      "visual": {
-        "type": "icon",
-        "icon": "ice",
-        "icon2": null,
-        "relation": "none",
-        "effect": "shake",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Říká se, že brusle led roztaví *tlakem*.",
-        "en": "They say skates melt the ice with *pressure*.",
-        "ro": "Se spune că patinele topesc gheața prin *presiune*."
-      },
-      "headline": {
-        "cs": "MÝTUS:|TLAK",
-        "en": "MYTH:|PRESSURE",
-        "ro": "MIT:|PRESIUNEA"
-      },
-      "tag": "PRESSURE MELTING",
-      "accent": "red",
-      "visual": {
-        "type": "forces",
-        "body": "skate",
-        "arrows": [
-          {
-            "dir": "down",
-            "size": 2.5,
-            "label": {
-              "cs": "tlak",
-              "en": "pressure",
-              "ro": "presiune"
-            },
-            "color": "red"
-          }
-        ],
-        "motion": "none"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Jenže tlak sníží bod tání jen o *zlomek stupně*.",
-        "en": "But pressure lowers the melting point by just *a fraction of a degree*.",
-        "ro": "Dar presiunea scade punctul de topire doar cu *o fracțiune de grad*."
-      },
-      "headline": {
-        "cs": "JEN ZLOMEK|STUPNĚ",
-        "en": "JUST A|FRACTION",
-        "ro": "DOAR O|FRACȚIUNE"
-      },
-      "tag": "CLAUSIUS–CLAPEYRON",
-      "accent": "yellow",
-      "visual": {
-        "type": "bars",
-        "items": [
-          {
-            "label": {
-              "cs": "potřeba",
-              "en": "needed",
-              "ro": "necesar"
-            },
-            "value": 10,
-            "highlight": true
-          },
-          {
-            "label": {
-              "cs": "tlak brusle",
-              "en": "skate pressure",
-              "ro": "presiunea patinei"
-            },
-            "value": 0.3,
-            "highlight": false
-          }
-        ],
-        "unit": {
-          "cs": " °C",
-          "en": " °C",
-          "ro": " °C"
-        }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Led je kluzký i při *mínus třiceti*, kde to nevysvětlí.",
-        "en": "Ice is slippery even at *minus thirty*, which that can't explain.",
-        "ro": "Gheața alunecă și la *minus treizeci*, ceea ce asta nu explică."
-      },
-      "headline": {
-        "cs": "KLUŽE I|PŘI −30 °C",
-        "en": "SLIPPERY|AT −30 °C",
-        "ro": "ALUNECĂ|LA −30 °C"
-      },
-      "tag": "COUNTER-EXAMPLE",
-      "accent": "blue",
-      "visual": {
-        "type": "counter",
-        "from": 0,
-        "to": -30,
-        "decimals": 0,
-        "unit": {
-          "cs": " °C",
-          "en": " °C",
-          "ro": " °C"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "mir",
+          "type": "mirror",
+          "position": [
+            0,
+            0,
+            -0.4
+          ],
+          "scale": 1.25,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "caption": {
-          "cs": "a pořád to klouže",
-          "en": "and it's still slippery",
-          "ro": "și tot alunecă"
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            1.4
+          ],
+          "scale": 1,
+          "rotationY": 180,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "mir",
+        "distance": 4.4,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Na povrchu ledu jsou molekuly vázané jen *napůl*.",
-        "en": "At the surface, ice molecules are only *half-bonded*.",
-        "ro": "La suprafață, moleculele de gheață sunt legate doar *pe jumătate*."
+        "cs": "Zvedni *pravou* ruku. Odraz zvedne ruku na stejné straně.",
+        "en": "Raise your *right* hand. The reflection raises the hand on the same side.",
+        "ro": "Ridică mâna *dreaptă*. Reflexia ridică mâna din aceeași parte."
       },
-      "headline": {
-        "cs": "VOLNÉ|MOLEKULY",
-        "en": "LOOSE|MOLECULES",
-        "ro": "MOLECULE|LIBERE"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "mir",
+          "type": "mirror",
+          "position": [
+            0,
+            0,
+            -0.4
+          ],
+          "scale": 1.25,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            1.4
+          ],
+          "scale": 1,
+          "rotationY": 180,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "mir",
+        "distance": 3.8,
+        "angle": "frontLeft",
+        "move": "orbitRight"
       },
-      "tag": "SURFACE LAYER",
-      "accent": "teal",
-      "visual": {
-        "type": "particles",
-        "mode": "solid",
+      "notes": [],
+      "card": {
+        "type": "rays",
+        "mode": "mirror",
         "label": null
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Tvoří tenkou vrstvičku, která se chová skoro *jako voda*.",
-        "en": "They form a thin layer that behaves almost *like water*.",
-        "ro": "Formează un strat subțire care se comportă aproape *ca apa*."
+        "cs": "Nahoře je pořád nahoře. Vpravo je *pořád vpravo*.",
+        "en": "Up stays up. Right stays *right*.",
+        "ro": "Sus rămâne sus. Dreapta rămâne *dreapta*."
       },
-      "headline": {
-        "cs": "SKORO|VODA",
-        "en": "ALMOST|WATER",
-        "ro": "APROAPE|APĂ"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "mir",
+          "type": "mirror",
+          "position": [
+            0,
+            0,
+            -0.4
+          ],
+          "scale": 1.25,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            1.4
+          ],
+          "scale": 1,
+          "rotationY": 180,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "mir",
+        "distance": 3.4,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": "QUASI-LIQUID LAYER",
-      "accent": "blue",
-      "visual": {
-        "type": "particles",
-        "mode": "liquid",
-        "label": null
-      }
+      "notes": [
+        {
+          "prop": "mir",
+          "text": {
+            "cs": "pořád vpravo",
+            "en": "still right",
+            "ro": "tot dreapta"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "A tření při klouzání přidá ještě trochu *tepla*.",
-        "en": "And friction while sliding adds a little *heat* on top.",
-        "ro": "Iar frecarea la alunecare adaugă puțină *căldură*."
+        "cs": "Prohodí se jen *předek a zadek*. Odraz kouká opačně.",
+        "en": "Only *front and back* flip. Your reflection faces the other way.",
+        "ro": "Se inversează doar *fața și spatele*. Reflexia privește în sens opus."
       },
-      "headline": {
-        "cs": "TŘENÍ|OHŘÍVÁ",
-        "en": "FRICTION|HEATS",
-        "ro": "FRECAREA|ÎNCĂLZEȘTE"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "mir",
+          "type": "mirror",
+          "position": [
+            0,
+            0,
+            -0.4
+          ],
+          "scale": 1.25,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            1.4
+          ],
+          "scale": 1,
+          "rotationY": 180,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 4,
+        "angle": "side",
+        "move": "orbitLeft"
       },
-      "tag": "FRICTIONAL HEATING",
-      "accent": "red",
-      "visual": {
+      "notes": [],
+      "card": {
+        "type": "compare",
+        "left": {
+          "icon": "person",
+          "label": {
+            "cs": "ty",
+            "en": "you",
+            "ro": "tu"
+          },
+          "value": {
+            "cs": "koukáš na sever",
+            "en": "facing north",
+            "ro": "privești spre nord"
+          }
+        },
+        "right": {
+          "icon": "mirror",
+          "label": {
+            "cs": "odraz",
+            "en": "reflection",
+            "ro": "reflexia"
+          },
+          "value": {
+            "cs": "kouká na jih",
+            "en": "facing south",
+            "ro": "privește spre sud"
+          }
+        },
+        "winner": "none"
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Levou a pravou si prohodíš *ty v hlavě*.",
+        "en": "The left-right swap happens *in your head*.",
+        "ro": "Stânga și dreapta le inversezi *tu, în minte*."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "mir",
+          "type": "mirror",
+          "position": [
+            0,
+            0,
+            -0.4
+          ],
+          "scale": 1.25,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            1.4
+          ],
+          "scale": 1,
+          "rotationY": 180,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 2.8,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "me",
+          "text": {
+            "cs": "tady",
+            "en": "right here",
+            "ro": "aici"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Představíš si totiž, že se odraz k tobě *otočil*.",
+        "en": "Because you imagine the reflection *turned around* to face you.",
+        "ro": "Pentru că îți imaginezi că reflexia *s-a întors* spre tine."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "mir",
+          "type": "mirror",
+          "position": [
+            0,
+            0,
+            -0.4
+          ],
+          "scale": 1.25,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            1.4
+          ],
+          "scale": 1,
+          "rotationY": 180,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 4,
+        "angle": "front",
+        "move": "orbitRight"
+      },
+      "notes": [],
+      "card": {
         "type": "steps",
         "items": [
           {
-            "cs": "volná povrchová vrstva",
-            "en": "loose surface layer",
-            "ro": "strat liber la suprafață"
+            "cs": "vidíš odraz",
+            "en": "you see the reflection",
+            "ro": "vezi reflexia"
           },
           {
-            "cs": "teplo z tření",
-            "en": "heat from friction",
-            "ro": "căldură din frecare"
+            "cs": "v duchu se otočíš",
+            "en": "you mentally turn around",
+            "ro": "te întorci în minte"
           },
           {
-            "cs": "tenký film vody",
-            "en": "a thin water film",
-            "ro": "o peliculă de apă"
+            "cs": "levá je najednou pravá",
+            "en": "left suddenly becomes right",
+            "ro": "stânga devine dreapta"
           }
         ],
         "active": 1
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Vědci se o detailech *přou dodnes*.",
-        "en": "Scientists are *still arguing* about the details today.",
-        "ro": "Oamenii de știință *încă se ceartă* pe detalii."
+        "cs": "Lehni si před zrcadlo na bok a celá iluze se *rozpadne*.",
+        "en": "Lie on your side in front of a mirror and the illusion *falls apart*.",
+        "ro": "Întinde-te pe o parte în fața oglinzii și iluzia *se destramă*."
       },
-      "headline": {
-        "cs": "STÁLE|ZÁHADA",
-        "en": "STILL A|MYSTERY",
-        "ro": "ÎNCĂ UN|MISTER"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "mir",
+          "type": "mirror",
+          "position": [
+            0,
+            0,
+            -0.4
+          ],
+          "scale": 1.25,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            1.4
+          ],
+          "scale": 1,
+          "rotationY": 180,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "mir",
+        "distance": 4.6,
+        "angle": "low",
+        "move": "dollyOut"
       },
-      "tag": "OPEN QUESTION",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "question",
-        "icon2": "ice",
-        "relation": "none",
-        "effect": "pulse",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Napiš do komentářů, co tě zajímá, a *sleduj*.",
-        "en": "Tell us what to explain next, and *follow*.",
-        "ro": "Scrie-ne ce să explicăm și dă *follow*."
-      },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
-      },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [
+        {
+          "prop": "mir",
+          "text": {
+            "cs": "zkus to",
+            "en": "try it",
+            "ro": "încearcă"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }
