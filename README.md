@@ -40,6 +40,9 @@ Stará videa 1–14 vyrenderovaná ještě do `out/videos/cs|en|ro/` přesuneš 
 - Videa 1–14 jsou ve výchozím stavu z automatického publikování vyřazená (už je používáš) – v záložce Videa je můžeš zapnout.
 - Studio ovládá tvůj normální prohlížeč jako člověk. Když TikTok/Instagram/YouTube změní web a nějaký krok se nepovede, okno zůstane otevřené – dokonči ho ručně a v historii klikni „Označit jako publikované“. Snímek obrazovky chyby je v `data/logs/`.
 
+### Vzhled účtů
+Profilovka, YouTube bannery (CZ/EN/RO) a hotové texty bia pro všechny platformy jsou ve složce **`branding/`** – návod v [`branding/PROFILY.md`](branding/PROFILY.md).
+
 ### Nová videa pomocí AI (Claude)
 V Nastavení vlož Anthropic API klíč a klikni **✨ Vymyslet nová videa**. Témata se berou z `napady/napady.json`
 (další v pořadí bez scénáře). Jeden scénář stojí zhruba 0,15–0,25 $; Studio hlídá rozpočet (`AI_BUDGET_USD`, výchozí 2,1 $) a nepřekročí ho.
