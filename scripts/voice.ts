@@ -211,37 +211,61 @@ const main = async () => {
         mode === 'edge' ? 'edge' : mode === 'elevenlabs' ? 'elevenlabs' : !elevenDead && (remaining === null || remaining - chars >= reserve) ? 'elevenlabs' : 'edge';
       if (use === 'elevenlabs' && !KEY) use = 'edge';
 
-      const scenes: SceneTimeline[] = [];
-      try {
-        for (let i = 0; i < texts.length; i++) {
-          const rel = `generated/${pad(id)}/${lang}/s${pad(i + 1)}.mp3`;
-          const abs = path.join(P.audio, '..', rel);
-          if (!force && old?.texts?.[i] === texts[i] && old.scenes[i]?.audioSrc === rel && fs.existsSync(abs)) {
-            scenes.push(old.scenes[i]);
-            continue;
-          }
-          let r: Voiced;
-          try {
-            r = use === 'elevenlabs' ? await elevenTts(texts[i], lang, texts[i - 1] ?? '', texts[i + 1] ?? '', script.scenes[i].narration[lang]) : await edgeTts(texts[i], lang, script.scenes[i].narration[lang]);
-          } catch (e) {
-            if (use === 'elevenlabs' && mode === 'auto') {
-              // došly kredity / chyba → zbytek namluví Edge
-              console.warn(`⚠️  ElevenLabs selhal (${(e as Error).message.slice(0, 120)}) → přepínám na Edge`);
-              elevenDead = true;
-              use = 'edge';
-              r = await edgeTts(texts[i], lang, script.scenes[i].narration[lang]);
-            } else throw e;
-          }
-          fs.mkdirSync(path.dirname(abs), {recursive: true});
-          fs.writeFileSync(abs, r.audio);
-          scenes.push({audioSrc: rel, durationSec: r.end + 0.25, wordStarts: r.wordStarts});
+      if (use === 'elevenlabs' && elevenDead) {
+        console.warn(`⏸️  #${id} ${lang}: ElevenLabs teď nejde (došly kredity?) – přeskakuji, rozdělaná práce zůstává uložená.`);
+        continue;
+      }
+
+      // jaký hlas má každá už hotová scéna (starší časové osy mají jen jeden společný)
+      const oldProv = (i: number): string => (old as {providers?: string[]} | null)?.providers?.[i] ?? old?.provider ?? 'elevenlabs';
+      let scenes: SceneTimeline[] = [];
+      let providers: string[] = [];
+      /** průběžné uložení – když se proces přeruší nebo dojdou kredity, hotové scény se příště nebudou platit znovu */
+      const saveProgress = () =>
+        writeJson(timelinePath(id, lang), {lang, scenes, texts, provider: use, providers, partial: scenes.length < texts.length});
+      let failed = false;
+      for (let i = 0; i < texts.length; i++) {
+        const rel = `generated/${pad(id)}/${lang}/s${pad(i + 1)}.mp3`;
+        const abs = path.join(P.audio, '..', rel);
+        // znovu použij hotovou scénu, jen když má stejný text i stejný hlas (ať se ve videu hlasy nemíchají)
+        if (!force && old?.texts?.[i] === texts[i] && old.scenes[i]?.audioSrc === rel && fs.existsSync(abs) && oldProv(i) === use) {
+          scenes.push(old.scenes[i]);
+          providers.push(use);
+          continue;
         }
-      } catch (e) {
-        console.error(`❌ #${id} ${lang}: ${(e as Error).message}`);
+        let r: Voiced;
+        try {
+          r = use === 'elevenlabs' ? await elevenTts(texts[i], lang, texts[i - 1] ?? '', texts[i + 1] ?? '', script.scenes[i].narration[lang]) : await edgeTts(texts[i], lang, script.scenes[i].narration[lang]);
+        } catch (e) {
+          const msg = (e as Error).message.slice(0, 160);
+          if (use === 'elevenlabs') {
+            elevenDead = true;
+            if (mode === 'auto') {
+              // celé video namluví znovu Edge – jinak by mělo půlku scén jiným hlasem
+              console.warn(`⚠️  ElevenLabs selhal (${msg}) → #${id} ${lang} namluvím celé zdarma hlasem Edge`);
+              use = 'edge';
+              scenes = [];
+              providers = [];
+              i = -1;
+              continue;
+            }
+            console.error(`⏸️  ElevenLabs selhal (${msg}). ${scenes.length ? `Hotových ${scenes.length} scén #${id} ${lang} je uložených` : 'Nic se neztratilo'} – po doplnění kreditů pusť hlas znovu a naváže se.`);
+          } else console.error(`❌ #${id} ${lang}: ${msg}`);
+          failed = true;
+          break;
+        }
+        fs.mkdirSync(path.dirname(abs), {recursive: true});
+        fs.writeFileSync(abs, r.audio);
+        scenes.push({audioSrc: rel, durationSec: r.end + 0.25, wordStarts: r.wordStarts});
+        providers.push(use);
+        saveProgress();
+      }
+      if (failed) {
+        if (scenes.length) saveProgress();
         continue;
       }
       if (use === 'elevenlabs' && remaining !== null) remaining -= chars;
-      writeJson(timelinePath(id, lang), {lang, scenes, texts, provider: use});
+      saveProgress();
       logUsage({id, lang, provider: use, chars});
       const total = scenes.reduce((n, s) => n + s.durationSec, 0);
       console.log(`🎙️  #${id} ${lang}: ${scenes.length} scén, ${total.toFixed(1)} s (${use === 'edge' ? 'Edge – zdarma' : 'ElevenLabs'})`);
