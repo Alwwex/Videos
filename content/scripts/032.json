@@ -1,250 +1,457 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 32,
   "title": {
-    "cs": "Jak GPS ví, kde jsi",
-    "en": "How GPS knows where you are",
-    "ro": "Cum știe GPS-ul unde ești"
+    "cs": "Měsíc právě teď padá na Zemi",
+    "en": "The Moon is falling right now",
+    "ro": "Luna cade spre Pământ chiar acum"
   },
   "description": {
-    "cs": "Bez Einsteinovy teorie relativity by se tvoje GPS každý den spletlo o kilometry. 🛰️",
-    "en": "Without Einstein's relativity, your GPS would be off by kilometers every day. 🛰️",
-    "ro": "Fără relativitatea lui Einstein, GPS-ul ar greși cu kilometri în fiecare zi. 🛰️"
+    "cs": "A pořád nás mine. Tohle je celé tajemství oběžné dráhy. 🌙",
+    "en": "And it keeps missing. That's the whole secret of an orbit. 🌙",
+    "ro": "Și ne ratează mereu. Acesta e tot secretul orbitei. 🌙"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "gps",
-    "einstein",
-    "relativity"
+    "mesic",
+    "gravitace",
+    "moon"
   ],
+  "hook": {
+    "cs": "MĚSÍC PRÁVĚ TEĎ PADÁ",
+    "en": "THE MOON IS FALLING RIGHT NOW",
+    "ro": "LUNA CADE CHIAR ACUM"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Tvoje GPS by bez *Einsteina* nefungovalo.",
-        "en": "Your GPS wouldn't work without *Einstein*.",
-        "ro": "GPS-ul tău n-ar merge fără *Einstein*."
+        "cs": "Měsíc právě teď *padá* na Zemi. A pořád nás mine.",
+        "en": "The Moon is *falling* toward Earth right now. And keeps missing.",
+        "ro": "Luna *cade* spre Pământ chiar acum. Și ne ratează mereu."
       },
-      "headline": {
-        "cs": "GPS POTŘEBUJE|EINSTEINA",
-        "en": "GPS NEEDS|EINSTEIN",
-        "ro": "GPS-UL ARE NEVOIE|DE EINSTEIN"
+      "environment": "space",
+      "props": [
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "moon",
+          "type": "moon",
+          "position": [
+            6,
+            1,
+            -2
+          ],
+          "scale": 1.3,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            4.5,
+            0.6,
+            -3
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "earth",
+        "distance": 13,
+        "angle": "frontRight",
+        "move": "dollyIn"
       },
-      "tag": "NAVIGATION",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "phone",
-        "icon2": "satellite",
-        "relation": "arrow",
-        "effect": "float",
-        "caption": null
-      }
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Nad Zemí krouží přes *30 satelitů* s atomovými hodinami.",
-        "en": "Over *30 satellites* with atomic clocks circle the Earth.",
-        "ro": "Peste *30 de sateliți* cu ceasuri atomice orbitează Pământul."
+        "cs": "Hoď míč a spadne *kus od tebe*.",
+        "en": "Throw a ball and it lands *a little way off*.",
+        "ro": "Aruncă o minge și cade *puțin mai încolo*."
       },
-      "headline": {
-        "cs": "ATOMOVÉ|HODINY",
-        "en": "ATOMIC|CLOCKS",
-        "ro": "CEASURI|ATOMICE"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -1.2,
+            0,
+            1
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "position": [
+            -0.9,
+            1.4,
+            1
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            1.5,
+            0.2,
+            1
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 5,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": "20 200 km",
-      "accent": "blue",
-      "visual": {
+      "notes": [
+        {
+          "prop": "ball",
+          "text": {
+            "cs": "kousek",
+            "en": "a bit",
+            "ro": "puțin"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Hoď ho *rychleji* a doletí dál.",
+        "en": "Throw it *faster* and it flies farther.",
+        "ro": "Arunc-o *mai repede* și zboară mai departe."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -1.2,
+            0,
+            1
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "position": [
+            -0.9,
+            1.4,
+            1
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            6,
+            0.2,
+            1
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 7,
+        "angle": "frontLeft",
+        "move": "dollyOut"
+      },
+      "notes": [
+        {
+          "prop": "ball",
+          "text": {
+            "cs": "dál",
+            "en": "farther",
+            "ro": "mai departe"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Při *osmi kilometrech za sekundu* padá stejně rychle, jak se Země zakřivuje.",
+        "en": "At *eight kilometers a second*, it falls exactly as fast as Earth curves away.",
+        "ro": "La *opt kilometri pe secundă*, cade exact cât se curbează Pământul."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sat",
+          "type": "satellite",
+          "position": [
+            2.8,
+            0.6,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "earth",
+        "distance": 8,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "notes": [],
+      "card": {
         "type": "orbit",
         "mode": "orbit",
         "center": "earth",
-        "body": "satellite",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Každý pořád vysílá *přesný čas*, kdy signál odeslal.",
-        "en": "Each one keeps broadcasting the *exact time* it sent the signal.",
-        "ro": "Fiecare transmite continuu *ora exactă* a semnalului."
-      },
-      "headline": {
-        "cs": "SIGNÁL|S ČASEM",
-        "en": "A TIME|STAMP",
-        "ro": "SEMNAL|CU ORĂ"
-      },
-      "tag": "TIME SIGNAL",
-      "accent": "teal",
-      "visual": {
-        "type": "icon",
-        "icon": "satellite",
-        "icon2": "clock",
-        "relation": "plus",
-        "effect": "pulse",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Mobil změří, jak dlouho signál *letěl*.",
-        "en": "Your phone measures how long each signal *traveled*.",
-        "ro": "Telefonul măsoară cât a *călătorit* semnalul."
-      },
-      "headline": {
-        "cs": "ČAS LETU|= VZDÁLENOST",
-        "en": "TRAVEL TIME|= DISTANCE",
-        "ro": "TIMPUL|= DISTANȚA"
-      },
-      "tag": "d = c · t",
-      "accent": "yellow",
-      "visual": {
-        "type": "formula",
-        "tex": "d = c \\cdot \\hl{\\Delta t}",
-        "caption": {
-          "cs": "světlo urazí 30 cm za nanosekundu",
-          "en": "light covers 30 cm per nanosecond",
-          "ro": "lumina parcurge 30 cm pe nanosecundă"
+        "body": "ball",
+        "label": {
+          "cs": "rychlost bokem + pád = oběh",
+          "en": "sideways speed + falling = orbit",
+          "ro": "viteză laterală + cădere = orbită"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Ze *čtyř satelitů* spočítá tvou přesnou polohu.",
-        "en": "With *four satellites*, it calculates exactly where you are.",
-        "ro": "Din *patru sateliți* calculează exact unde ești."
+        "cs": "Padá dál, ale *nikdy nedopadne*. Tomu se říká oběžná dráha.",
+        "en": "It keeps falling but *never lands*. That's an orbit.",
+        "ro": "Cade mereu, dar *nu aterizează niciodată*. Asta e o orbită."
       },
-      "headline": {
-        "cs": "ČTYŘI|SATELITY",
-        "en": "FOUR|SATELLITES",
-        "ro": "PATRU|SATELIȚI"
+      "environment": "space",
+      "props": [
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sat",
+          "type": "satellite",
+          "position": [
+            2.8,
+            0.6,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0.5,
+            0.8,
+            2.8
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "earth",
+        "distance": 8,
+        "angle": "top",
+        "move": "orbitRight"
       },
-      "tag": "TRILATERATION",
-      "accent": "teal",
-      "visual": {
-        "type": "steps",
-        "items": [
-          {
-            "cs": "3 satelity = poloha",
-            "en": "3 satellites = position",
-            "ro": "3 sateliți = poziție"
-          },
-          {
-            "cs": "4. satelit = přesný čas",
-            "en": "4th satellite = exact time",
-            "ro": "al 4-lea = ora exactă"
-          },
-          {
-            "cs": "výsledek na metr",
-            "en": "accurate to meters",
-            "ro": "precizie de metri"
+      "notes": [
+        {
+          "prop": "sat",
+          "text": {
+            "cs": "pořád padá",
+            "en": "still falling",
+            "ro": "cade mereu"
           }
-        ],
-        "active": 1
-      }
-    },
-    {
-      "narration": {
-        "cs": "Hodiny na satelitech ale jdou o *38 mikrosekund* denně rychleji.",
-        "en": "But satellite clocks run *38 microseconds* fast every day.",
-        "ro": "Dar ceasurile sateliților o iau înainte cu *38 de microsecunde* pe zi."
-      },
-      "headline": {
-        "cs": "ČAS BĚŽÍ|JINAK",
-        "en": "TIME RUNS|DIFFERENTLY",
-        "ro": "TIMPUL|CURGE ALTFEL"
-      },
-      "tag": "RELATIVITY",
-      "accent": "red",
-      "visual": {
-        "type": "counter",
-        "from": 0,
-        "to": 38,
-        "decimals": 0,
-        "unit": {
-          "cs": " µs/den",
-          "en": " µs/day",
-          "ro": " µs/zi"
-        },
-        "caption": {
-          "cs": "slabší gravitace zrychlí čas víc, než ho zpomalí rychlost",
-          "en": "weaker gravity speeds time up more than speed slows it",
-          "ro": "gravitația slabă accelerează timpul mai mult decât îl încetinește viteza"
         }
-      }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Bez opravy by se poloha spletla o *10 kilometrů* denně.",
-        "en": "Without correction, your position would drift *10 kilometers* a day.",
-        "ro": "Fără corecție, poziția ar greși cu *10 kilometri* pe zi."
+        "cs": "Měsíc dělá přesně tohle, jen *mnohem dál* a pomaleji.",
+        "en": "The Moon does exactly that, just *much farther* out and slower.",
+        "ro": "Luna face exact asta, doar *mult mai departe* și mai încet."
       },
-      "headline": {
-        "cs": "CHYBA|10 KM DENNĚ",
-        "en": "ERROR|10 KM A DAY",
-        "ro": "EROARE|10 KM PE ZI"
-      },
-      "tag": "UNCORRECTED DRIFT",
-      "accent": "red",
-      "visual": {
-        "type": "graph",
-        "curve": "linear",
-        "curve2": null,
-        "x": {
-          "cs": "dny",
-          "en": "days",
-          "ro": "zile"
+      "environment": "space",
+      "props": [
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "y": {
-          "cs": "chyba",
-          "en": "error",
-          "ro": "eroare"
-        },
-        "markLabel": {
-          "cs": "+10 km každý den",
-          "en": "+10 km every day",
-          "ro": "+10 km în fiecare zi"
+        {
+          "id": "moon",
+          "type": "moon",
+          "position": [
+            6,
+            1,
+            -2
+          ],
+          "scale": 1.3,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "moon",
+        "distance": 11,
+        "angle": "frontLeft",
+        "move": "dollyOut"
+      },
+      "notes": [
+        {
+          "prop": "moon",
+          "text": {
+            "cs": "384 000 km",
+            "en": "384,000 km",
+            "ro": "384.000 km"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Takže teorii relativity nosíš *v kapse* každý den.",
-        "en": "So you carry relativity *in your pocket* every day.",
-        "ro": "Deci porți relativitatea *în buzunar* în fiecare zi."
+        "cs": "A astronauti na ISS nelevitují. *Padají* spolu se stanicí.",
+        "en": "And ISS astronauts aren't floating. They're *falling* with the station.",
+        "ro": "Iar astronauții de pe ISS nu levitează. *Cad* odată cu stația."
       },
-      "headline": {
-        "cs": "RELATIVITA|V KAPSE",
-        "en": "RELATIVITY|IN YOUR POCKET",
-        "ro": "RELATIVITATEA|ÎN BUZUNAR"
+      "environment": "space",
+      "props": [
+        {
+          "id": "astro",
+          "type": "astronaut",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sat",
+          "type": "satellite",
+          "position": [
+            1.8,
+            1,
+            -1.5
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "astro",
+        "distance": 4.2,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": "E = mc²",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "phone",
-        "icon2": null,
-        "relation": "none",
-        "effect": "pulse",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
-        "en": "Follow for more *physics around you*.",
-        "ro": "Urmărește pentru mai multă *fizică din jurul tău*."
-      },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
-      },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [
+        {
+          "prop": "astro",
+          "text": {
+            "cs": "padám",
+            "en": "falling",
+            "ro": "cad"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

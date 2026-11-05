@@ -1,281 +1,560 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 27,
   "title": {
-    "cs": "Proč parašutista nezrychluje donekonečna",
-    "en": "Why skydivers stop speeding up",
-    "ro": "De ce parașutistul nu accelerează la infinit"
+    "cs": "Nabitý mobil je těžší",
+    "en": "A charged phone is heavier",
+    "ro": "Un telefon încărcat e mai greu"
   },
   "description": {
-    "cs": "Po pár sekundách volného pádu přestaneš zrychlovat. Díky vzduchu. 🪂",
-    "en": "After a few seconds of free fall, you stop accelerating. Thanks to air. 🪂",
-    "ro": "După câteva secunde de cădere liberă, nu mai accelerezi. Datorită aerului. 🪂"
+    "cs": "O kolik? O méně než jednu lidskou buňku. Ale je. 📱",
+    "en": "By how much? Less than a single human cell. But it is. 📱",
+    "ro": "Cu cât? Cu mai puțin decât o celulă umană. Dar este. 📱"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "parasutismus",
-    "gravitace",
-    "skydiving"
+    "mobil",
+    "einstein",
+    "emc2"
   ],
+  "hook": {
+    "cs": "NABITÝ MOBIL JE TĚŽŠÍ",
+    "en": "A CHARGED PHONE IS HEAVIER",
+    "ro": "TELEFONUL ÎNCĂRCAT E MAI GREU"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Vyskočíš z letadla. Jak rychle *můžeš padat*?",
-        "en": "You jump out of a plane. How fast *can you fall*?",
-        "ro": "Sari din avion. Cât de repede *poți cădea*?"
+        "cs": "Nabitý mobil váží víc než *vybitý*. Doopravdy.",
+        "en": "A charged phone weighs more than a *dead* one. Really.",
+        "ro": "Un telefon încărcat cântărește mai mult decât unul *descărcat*. Pe bune."
       },
-      "headline": {
-        "cs": "JAK RYCHLE|PADÁŠ?",
-        "en": "HOW FAST|DO YOU FALL?",
-        "ro": "CÂT DE REPEDE|CAZI?"
-      },
-      "tag": "FREE FALL",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "plane",
-        "icon2": "person",
-        "relation": "arrow",
-        "effect": "float",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Gravitace tě zrychluje o *35 km/h* každou sekundu.",
-        "en": "Gravity speeds you up by *35 km/h* every second.",
-        "ro": "Gravitația te accelerează cu *35 km/h* în fiecare secundă."
-      },
-      "headline": {
-        "cs": "+35 KM/H|ZA SEKUNDU",
-        "en": "+35 KM/H|EVERY SECOND",
-        "ro": "+35 KM/H|PE SECUNDĂ"
-      },
-      "tag": "g = 9,81 m/s²",
-      "accent": "red",
-      "visual": {
-        "type": "forces",
-        "body": "person",
-        "arrows": [
-          {
-            "dir": "down",
-            "size": 2.5,
-            "label": {
-              "cs": "gravitace",
-              "en": "gravity",
-              "ro": "gravitație"
-            },
-            "color": "red"
-          }
-        ],
-        "motion": "down"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Jenže čím rychleji padáš, tím víc tě *brzdí vzduch*.",
-        "en": "But the faster you fall, the harder *air pushes back*.",
-        "ro": "Dar cu cât cazi mai repede, cu atât *aerul frânează* mai tare."
-      },
-      "headline": {
-        "cs": "VZDUCH|BRZDÍ",
-        "en": "AIR|PUSHES BACK",
-        "ro": "AERUL|FRÂNEAZĂ"
-      },
-      "tag": "DRAG",
-      "accent": "teal",
-      "visual": {
-        "type": "forces",
-        "body": "person",
-        "arrows": [
-          {
-            "dir": "down",
-            "size": 2.5,
-            "label": {
-              "cs": "tíha",
-              "en": "weight",
-              "ro": "greutate"
-            },
-            "color": "red"
-          },
-          {
-            "dir": "up",
-            "size": 1.5,
-            "label": {
-              "cs": "odpor",
-              "en": "drag",
-              "ro": "rezistență"
-            },
-            "color": "teal"
-          }
-        ],
-        "motion": "down"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Odpor roste s *druhou mocninou* rychlosti.",
-        "en": "Drag grows with the *square* of your speed.",
-        "ro": "Rezistența crește cu *pătratul* vitezei."
-      },
-      "headline": {
-        "cs": "ODPOR|∝ V²",
-        "en": "DRAG|∝ V²",
-        "ro": "REZISTENȚA|∝ V²"
-      },
-      "tag": "DRAG EQUATION",
-      "accent": "yellow",
-      "visual": {
-        "type": "formula",
-        "tex": "F_o = \\tfrac{1}{2}\\,\\rho\\, C\\, S\\, \\hl{v^2}",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Když se odpor vyrovná tíze, *přestaneš zrychlovat*.",
-        "en": "When drag equals your weight, you *stop speeding up*.",
-        "ro": "Când rezistența egalează greutatea, *nu mai accelerezi*."
-      },
-      "headline": {
-        "cs": "SÍLY SE|VYROVNAJÍ",
-        "en": "FORCES|BALANCE",
-        "ro": "FORȚELE|SE ECHILIBREAZĂ"
-      },
-      "tag": "TERMINAL VELOCITY",
-      "accent": "teal",
-      "visual": {
-        "type": "forces",
-        "body": "person",
-        "arrows": [
-          {
-            "dir": "down",
-            "size": 2,
-            "label": {
-              "cs": "tíha",
-              "en": "weight",
-              "ro": "greutate"
-            },
-            "color": "red"
-          },
-          {
-            "dir": "up",
-            "size": 2,
-            "label": {
-              "cs": "odpor",
-              "en": "drag",
-              "ro": "rezistență"
-            },
-            "color": "teal"
-          }
-        ],
-        "motion": "none"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Rychlost se ustálí kolem *200 kilometrů* za hodinu.",
-        "en": "Your speed levels off around *200 kilometers* per hour.",
-        "ro": "Viteza se stabilizează pe la *200 de kilometri* pe oră."
-      },
-      "headline": {
-        "cs": "MEZNÍ|RYCHLOST",
-        "en": "TERMINAL|SPEED",
-        "ro": "VITEZA|LIMITĂ"
-      },
-      "tag": "BELLY-TO-EARTH",
-      "accent": "red",
-      "visual": {
-        "type": "graph",
-        "curve": "saturate",
-        "curve2": null,
-        "x": {
-          "cs": "čas",
-          "en": "time",
-          "ro": "timp"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "y": {
-          "cs": "rychlost",
-          "en": "speed",
-          "ro": "viteză"
+        {
+          "id": "scale",
+          "type": "weighScale",
+          "position": [
+            0,
+            0.85,
+            0.05
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "markLabel": {
-          "cs": "≈ 200 km/h",
-          "en": "≈ 200 km/h",
-          "ro": "≈ 200 km/h"
+        {
+          "id": "phone",
+          "type": "phone",
+          "position": [
+            0,
+            0.95,
+            0.05
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "phone",
+        "distance": 2.4,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "phone",
+          "text": {
+            "cs": "100 %",
+            "en": "100%",
+            "ro": "100%"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Padák má obří plochu, takže brzdí mnohem dřív.",
-        "en": "A parachute has a huge area, so drag wins much earlier.",
-        "ro": "Parașuta are o suprafață uriașă, deci frânează mult mai devreme."
+        "cs": "Za to může nejslavnější rovnice světa.",
+        "en": "Blame the world's most famous equation.",
+        "ro": "De vină e cea mai celebră ecuație din lume."
       },
-      "headline": {
-        "cs": "PADÁK =|VELKÁ PLOCHA",
-        "en": "PARACHUTE =|BIG AREA",
-        "ro": "PARAȘUTA =|SUPRAFAȚĂ MARE"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "scale",
+          "type": "weighScale",
+          "position": [
+            0,
+            0.85,
+            0.05
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "phone",
+          "type": "phone",
+          "position": [
+            0,
+            0.95,
+            0.05
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "phone",
+        "distance": 2.8,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "tag": "DRAG AREA",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "parachute",
-        "icon2": null,
-        "relation": "none",
-        "effect": "float",
-        "caption": null
-      }
+      "notes": [],
+      "card": {
+        "type": "formula",
+        "tex": "E = m \\cdot \\hl{c^2}",
+        "caption": {
+          "cs": "energie a hmotnost jsou totéž",
+          "en": "energy and mass are the same thing",
+          "ro": "energia și masa sunt același lucru"
+        }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Dopadneš rychlostí jen asi *20 km/h*, jako při seskoku ze zídky.",
-        "en": "You land at only about *20 km/h*, like jumping off a low wall.",
-        "ro": "Aterizezi cu doar *20 km/h*, ca un salt de pe un zid mic."
+        "cs": "Energie má *hmotnost*. Jakákoli energie.",
+        "en": "Energy has *mass*. Any energy.",
+        "ro": "Energia are *masă*. Orice energie."
       },
-      "headline": {
-        "cs": "200 →|20 KM/H",
-        "en": "200 →|20 KM/H",
-        "ro": "200 →|20 KM/H"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bat",
+          "type": "battery",
+          "position": [
+            0.75,
+            0.85,
+            -0.1
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "atom",
+          "type": "atom",
+          "position": [
+            -0.7,
+            1.6,
+            0
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bat",
+        "distance": 2.6,
+        "angle": "frontLeft",
+        "move": "dollyIn"
       },
-      "tag": "LANDING",
-      "accent": "teal",
-      "visual": {
-        "type": "gauge",
-        "from": 200,
-        "to": 20,
-        "max": 220,
+      "notes": [
+        {
+          "prop": "bat",
+          "text": {
+            "cs": "energie = hmotnost",
+            "en": "energy = mass",
+            "ro": "energie = masă"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Baterie mobilu pojme asi *padesát tisíc joulů*.",
+        "en": "A phone battery holds about *fifty thousand joules*.",
+        "ro": "Bateria telefonului ține cam *cincizeci de mii de jouli*."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bat",
+          "type": "battery",
+          "position": [
+            0.75,
+            0.85,
+            -0.1
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "phone",
+          "type": "phone",
+          "position": [
+            0,
+            0.95,
+            0.05
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bat",
+        "distance": 2.8,
+        "angle": "front",
+        "move": "orbitRight"
+      },
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 54000,
+        "decimals": 0,
         "unit": {
-          "cs": " km/h",
-          "en": " km/h",
-          "ro": " km/h"
+          "cs": " J",
+          "en": " J",
+          "ro": " J"
         },
         "caption": {
-          "cs": "bezpečné přistání",
-          "en": "a safe landing",
-          "ro": "o aterizare sigură"
+          "cs": "plně nabitá baterie",
+          "en": "a fully charged battery",
+          "ro": "o baterie încărcată complet"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Pošli to někomu, kdo to neví, a *sleduj* nás.",
-        "en": "Send this to someone who didn't know, and *follow*.",
-        "ro": "Trimite asta cuiva care nu știa și dă *follow*."
+        "cs": "Vyděl to *rychlostí světla* na druhou…",
+        "en": "Divide that by the *speed of light* squared…",
+        "ro": "Împarte asta la *viteza luminii* la pătrat…"
       },
-      "headline": {
-        "cs": "DALŠÍ DÍL|UŽ BRZY",
-        "en": "NEXT EPISODE|SOON",
-        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "scale",
+          "type": "weighScale",
+          "position": [
+            0,
+            0.85,
+            0.05
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "phone",
+          "type": "phone",
+          "position": [
+            0,
+            0.95,
+            0.05
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "phone",
+        "distance": 3,
+        "angle": "low",
+        "move": "dollyIn"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [],
+      "card": {
+        "type": "formula",
+        "tex": "m = \\frac{E}{c^2} = \\frac{54\\,000}{\\hl{(3 \\cdot 10^8)^2}}",
+        "caption": null
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "…a vyjde *půl nanogramu*. Méně než jedna lidská buňka.",
+        "en": "…and you get *half a nanogram*. Less than a single human cell.",
+        "ro": "…și obții *jumătate de nanogram*. Mai puțin decât o celulă umană."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "scale",
+          "type": "weighScale",
+          "position": [
+            0,
+            0.85,
+            0.05
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "phone",
+          "type": "phone",
+          "position": [
+            0,
+            0.95,
+            0.05
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "scale",
+        "distance": 2.6,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 0.6,
+        "decimals": 1,
+        "unit": {
+          "cs": " ng",
+          "en": " ng",
+          "ro": " ng"
+        },
+        "caption": {
+          "cs": "o tolik je nabitý mobil těžší",
+          "en": "how much heavier a charged phone is",
+          "ro": "cu atât e mai greu telefonul încărcat"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Žádná váha to nezměří. Ale *rozdíl tam je*.",
+        "en": "No scale can measure it. But the *difference is real*.",
+        "ro": "Niciun cântar nu o poate măsura. Dar *diferența există*."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "scale",
+          "type": "weighScale",
+          "position": [
+            0,
+            0.85,
+            0.05
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "phone",
+          "type": "phone",
+          "position": [
+            0,
+            0.95,
+            0.05
+          ],
+          "scale": 0.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "scale",
+        "distance": 2.4,
+        "angle": "front",
+        "move": "orbitLeft"
+      },
+      "notes": [
+        {
+          "prop": "scale",
+          "text": {
+            "cs": "+0,6 ng",
+            "en": "+0.6 ng",
+            "ro": "+0,6 ng"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

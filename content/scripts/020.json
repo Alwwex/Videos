@@ -1,260 +1,606 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 20,
   "title": {
-    "cs": "Proč Měsíc nespadne na Zem",
-    "en": "Why the Moon doesn't fall",
-    "ro": "De ce nu cade Luna pe Pământ"
+    "cs": "Blesk je žhavější než Slunce",
+    "en": "Lightning is hotter than the Sun",
+    "ro": "Fulgerul e mai fierbinte decât Soarele"
   },
   "description": {
-    "cs": "Gravitace Měsíc táhne k nám. On ale padá… a pořád nás míjí. 🌙",
-    "en": "Gravity pulls the Moon toward us. It is falling… and keeps missing. 🌙",
-    "ro": "Gravitația trage Luna spre noi. Ea chiar cade… și ne ratează mereu. 🌙"
+    "cs": "Třicet tisíc stupňů na zlomek sekundy. A pak to bouchne. ⚡",
+    "en": "Thirty thousand degrees for a split second. Then it explodes. ⚡",
+    "ro": "Treizeci de mii de grade pentru o fracțiune de secundă. Apoi explodează. ⚡"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "mesic",
-    "gravitace",
-    "moon"
+    "blesk",
+    "bourka",
+    "lightning"
   ],
+  "hook": {
+    "cs": "BLESK JE ŽHAVĚJŠÍ NEŽ SLUNCE",
+    "en": "LIGHTNING IS HOTTER THAN THE SUN",
+    "ro": "FULGERUL E MAI FIERBINTE DECÂT SOARELE"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Gravitace Měsíc táhne k Zemi. Proč tedy *nespadne*?",
-        "en": "Gravity pulls the Moon toward Earth. So why doesn't it *fall*?",
-        "ro": "Gravitația trage Luna spre Pământ. De ce nu *cade*?"
+        "cs": "Blesk je *pětkrát* žhavější než povrch Slunce.",
+        "en": "Lightning is *five times* hotter than the surface of the Sun.",
+        "ro": "Fulgerul e de *cinci ori* mai fierbinte decât suprafața Soarelui."
       },
-      "headline": {
-        "cs": "PROČ|NESPADNE?",
-        "en": "WHY DOESN'T|IT FALL?",
-        "ro": "DE CE|NU CADE?"
-      },
-      "tag": "EARTH–MOON",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "earth",
-        "icon2": "moon",
-        "relation": "arrow",
-        "effect": "float",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Ve skutečnosti Měsíc *padá pořád*.",
-        "en": "Actually, the Moon *is falling all the time*.",
-        "ro": "De fapt, Luna *cade tot timpul*."
-      },
-      "headline": {
-        "cs": "ON|PADÁ",
-        "en": "IT IS|FALLING",
-        "ro": "EA CHIAR|CADE"
-      },
-      "tag": "FREE FALL",
-      "accent": "red",
-      "visual": {
-        "type": "forces",
-        "body": "moon",
-        "arrows": [
-          {
-            "dir": "down",
-            "size": 2.5,
-            "label": {
-              "cs": "gravitace",
-              "en": "gravity",
-              "ro": "gravitație"
-            },
-            "color": "red"
-          }
-        ],
-        "motion": "down"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Jenže zároveň letí bokem rychlostí asi *kilometr za sekundu*.",
-        "en": "But it also flies sideways at about *one kilometer per second*.",
-        "ro": "Dar zboară și lateral cu aproape *un kilometru pe secundă*."
-      },
-      "headline": {
-        "cs": "LETÍ|BOKEM",
-        "en": "MOVING|SIDEWAYS",
-        "ro": "ZBOARĂ|LATERAL"
-      },
-      "tag": "ORBITAL SPEED",
-      "accent": "yellow",
-      "visual": {
-        "type": "gauge",
-        "from": 0,
-        "to": 3700,
-        "max": 5000,
-        "unit": {
-          "cs": " km/h",
-          "en": " km/h",
-          "ro": " km/h"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            6.2,
+            -1
+          ],
+          "scale": 2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "caption": {
-          "cs": "1 km každou sekundu",
-          "en": "1 km every second",
-          "ro": "1 km în fiecare secundă"
+        {
+          "id": "bolt",
+          "type": "lightning",
+          "position": [
+            0,
+            3.3,
+            -1
+          ],
+          "scale": 2.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            3,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            -3.2,
+            0,
+            -1.5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bolt",
+        "distance": 10,
+        "angle": "low",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": true
     },
     {
       "narration": {
-        "cs": "Než stihne spadnout, Země pod ním *uhne* svým zakřivením.",
-        "en": "Before it can land, Earth's surface *curves away* beneath it.",
-        "ro": "Până să cadă, suprafața Pământului *se curbează* sub ea."
+        "cs": "Povrch Slunce má asi *pět a půl tisíce* stupňů.",
+        "en": "The Sun's surface is about *five and a half thousand* degrees.",
+        "ro": "Suprafața Soarelui are vreo *cinci mii cinci sute* de grade."
       },
-      "headline": {
-        "cs": "ZEMĚ|UHÝBÁ",
-        "en": "EARTH|CURVES AWAY",
-        "ro": "PĂMÂNTUL|SE CURBEAZĂ"
-      },
-      "tag": "ORBIT",
-      "accent": "teal",
-      "visual": {
-        "type": "orbit",
-        "mode": "orbit",
-        "center": "earth",
-        "body": "moon",
-        "label": {
-          "cs": "rychlost bokem + gravitace = oběžná dráha",
-          "en": "sideways speed + gravity = orbit",
-          "ro": "viteză laterală + gravitație = orbită"
+      "environment": "space",
+      "props": [
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Newton to vysvětlil na *kanónu* na vysoké hoře.",
-        "en": "Newton explained it with a *cannon* on a tall mountain.",
-        "ro": "Newton a explicat asta cu un *tun* pe un munte înalt."
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "sun",
+        "distance": 8,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "headline": {
-        "cs": "NEWTONŮV|KANÓN",
-        "en": "NEWTON'S|CANNON",
-        "ro": "TUNUL|LUI NEWTON"
-      },
-      "tag": "THOUGHT EXPERIMENT",
-      "accent": "yellow",
-      "visual": {
-        "type": "steps",
-        "items": [
-          {
-            "cs": "pomalá koule spadne blízko",
-            "en": "slow ball lands close",
-            "ro": "bila lentă cade aproape"
-          },
-          {
-            "cs": "rychlejší doletí dál",
-            "en": "faster flies farther",
-            "ro": "cea rapidă zboară mai departe"
-          },
-          {
-            "cs": "dost rychlá obletí Zemi",
-            "en": "fast enough circles Earth",
-            "ro": "destul de rapidă ocolește Pământul"
-          }
-        ],
-        "active": 2
-      }
-    },
-    {
-      "narration": {
-        "cs": "Oběžná dráha je tedy *nekonečný pád*, který pořád míjí.",
-        "en": "So an orbit is *endless falling* that always misses.",
-        "ro": "Deci orbita e o *cădere fără sfârșit* care ratează mereu."
-      },
-      "headline": {
-        "cs": "NEKONEČNÝ|PÁD",
-        "en": "ENDLESS|FALLING",
-        "ro": "CĂDERE|FĂRĂ SFÂRȘIT"
-      },
-      "tag": "KEY IDEA",
-      "accent": "teal",
-      "visual": {
-        "type": "orbit",
-        "mode": "orbit",
-        "center": "earth",
-        "body": "moon",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Stejně padá i *vesmírná stanice* s astronauty.",
-        "en": "The *space station* with its astronauts falls the same way.",
-        "ro": "La fel cade și *stația spațială* cu astronauți."
-      },
-      "headline": {
-        "cs": "I STANICE|PADÁ",
-        "en": "THE ISS|FALLS TOO",
-        "ro": "ȘI STAȚIA|CADE"
-      },
-      "tag": "ISS · 28 000 km/h",
-      "accent": "blue",
-      "visual": {
-        "type": "orbit",
-        "mode": "orbit",
-        "center": "earth",
-        "body": "satellite",
-        "label": {
-          "cs": "proto se v ní vznášejí",
-          "en": "that's why they float inside",
-          "ro": "de aceea plutesc înăuntru"
-        }
-      }
-    },
-    {
-      "narration": {
-        "cs": "A Měsíc se od nás dokonce *vzdaluje*, asi 4 centimetry ročně.",
-        "en": "And the Moon is actually *drifting away*, about 4 centimeters a year.",
-        "ro": "Iar Luna chiar *se îndepărtează*, cam 4 centimetri pe an."
-      },
-      "headline": {
-        "cs": "MĚSÍC|UTÍKÁ",
-        "en": "THE MOON|IS LEAVING",
-        "ro": "LUNA|PLEACĂ"
-      },
-      "tag": "LUNAR RECESSION",
-      "accent": "red",
-      "visual": {
+      "notes": [],
+      "card": {
         "type": "counter",
         "from": 0,
-        "to": 3.8,
-        "decimals": 1,
+        "to": 5500,
+        "decimals": 0,
         "unit": {
-          "cs": " cm/rok",
-          "en": " cm/yr",
-          "ro": " cm/an"
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
         },
         "caption": {
-          "cs": "změřeno laserem odraženým od Měsíce",
-          "en": "measured with lasers bounced off the Moon",
-          "ro": "măsurat cu laser reflectat de pe Lună"
+          "cs": "povrch Slunce",
+          "en": "surface of the Sun",
+          "ro": "suprafața Soarelui"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
-        "en": "Follow for more *physics around you*.",
-        "ro": "Urmărește pentru mai multă *fizică din jurul tău*."
+        "cs": "Vzduch v blesku se rozpálí až na *třicet tisíc*.",
+        "en": "The air in a bolt hits *thirty thousand*.",
+        "ro": "Aerul din fulger ajunge la *treizeci de mii*."
       },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            6.2,
+            -1
+          ],
+          "scale": 2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bolt",
+          "type": "lightning",
+          "position": [
+            0,
+            3.3,
+            -1
+          ],
+          "scale": 2.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            3,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bolt",
+        "distance": 7,
+        "angle": "frontRight",
+        "move": "orbitLeft"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 30000,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "caption": {
+          "cs": "kanál blesku",
+          "en": "inside a lightning bolt",
+          "ro": "canalul fulgerului"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Jenže jen na *zlomek sekundy*.",
+        "en": "But only for a *split second*.",
+        "ro": "Dar doar pentru o *fracțiune de secundă*."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            6.2,
+            -1
+          ],
+          "scale": 2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bolt",
+          "type": "lightning",
+          "position": [
+            0,
+            3.3,
+            -1
+          ],
+          "scale": 2.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bolt",
+        "distance": 5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "bolt",
+          "text": {
+            "cs": "zlomek sekundy",
+            "en": "split second",
+            "ro": "o clipă"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Vzduch se tak prudce roztáhne, že to *bouchne*.",
+        "en": "The air expands so violently it *explodes*.",
+        "ro": "Aerul se dilată atât de brusc încât *explodează*."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            6.2,
+            -1
+          ],
+          "scale": 2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bolt",
+          "type": "lightning",
+          "position": [
+            0,
+            3.3,
+            -1
+          ],
+          "scale": 2.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            3,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            -3.2,
+            0,
+            -1.5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "bolt",
+          "kind": "sound"
+        }
+      ],
+      "camera": {
+        "focus": "bolt",
+        "distance": 8,
+        "angle": "low",
+        "move": "dollyOut"
+      },
+      "notes": [],
+      "card": null,
+      "shake": true
+    },
+    {
+      "narration": {
+        "cs": "A tohle bouchnutí slyšíš jako *hrom*.",
+        "en": "And that explosion is what you hear as *thunder*.",
+        "ro": "Iar explozia asta o auzi ca *tunet*."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            6.2,
+            -1
+          ],
+          "scale": 2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bolt",
+          "type": "lightning",
+          "position": [
+            0,
+            3.3,
+            -1
+          ],
+          "scale": 2.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            3,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            1.2,
+            0,
+            2.2
+          ],
+          "scale": 1,
+          "rotationY": -30,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "bolt",
+          "kind": "sound"
+        }
+      ],
+      "camera": {
+        "focus": "me",
+        "distance": 6,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "me",
+          "text": {
+            "cs": "BUM!",
+            "en": "BOOM!",
+            "ro": "BUM!"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Hrom je tedy *nadzvuková rána* rozžhaveného vzduchu.",
+        "en": "So thunder is the *sonic boom* of superheated air.",
+        "ro": "Deci tunetul e *bubuitura supersonică* a aerului supraîncălzit."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            6.2,
+            -1
+          ],
+          "scale": 2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bolt",
+          "type": "lightning",
+          "position": [
+            0,
+            3.3,
+            -1
+          ],
+          "scale": 2.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            3,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            -3.2,
+            0,
+            -1.5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            1.2,
+            0,
+            2.2
+          ],
+          "scale": 1,
+          "rotationY": -30,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bolt",
+        "distance": 11,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "notes": [],
+      "card": {
+        "type": "bars",
+        "items": [
+          {
+            "label": {
+              "cs": "povrch Slunce",
+              "en": "Sun's surface",
+              "ro": "suprafața Soarelui"
+            },
+            "value": 5500,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "blesk",
+              "en": "lightning",
+              "ro": "fulger"
+            },
+            "value": 30000,
+            "highlight": true
+          }
+        ],
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        }
+      },
+      "shake": false
     }
   ]
 }

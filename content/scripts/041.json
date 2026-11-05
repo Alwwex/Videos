@@ -1,15 +1,15 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 41,
   "title": {
-    "cs": "Proč zakroucený míč zatáčí",
-    "en": "Why a spinning ball curves",
-    "ro": "De ce mingea cu efect se curbează"
+    "cs": "Jak kopnout míč za roh",
+    "en": "How to kick a ball around a corner",
+    "ro": "Cum să șutezi mingea după colț"
   },
   "description": {
-    "cs": "Banánová střela není kouzlo. Je to Magnusův jev. ⚽",
-    "en": "A banana kick isn't magic. It's the Magnus effect. ⚽",
-    "ro": "Șutul cu efect nu e magie. E efectul Magnus. ⚽"
+    "cs": "Banánová střela není kouzlo. Je to vzduch a rotace. ⚽",
+    "en": "A banana kick isn't magic. It's air and spin. ⚽",
+    "ro": "Șutul cu efect nu e magie. E aer și rotație. ⚽"
   },
   "hashtags": [
     "fyzika",
@@ -19,86 +19,161 @@
     "magnus",
     "football"
   ],
+  "hook": {
+    "cs": "JAK KOPNOUT MÍČ ZA ROH",
+    "en": "HOW TO KICK A BALL AROUND A CORNER",
+    "ro": "CUM ȘUTEZI MINGEA DUPĂ COLȚ"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Míč letí rovně a pak *zatočí* do brány.",
-        "en": "The ball flies straight, then *curves* into the goal.",
-        "ro": "Mingea zboară drept, apoi *se curbează* spre poartă."
+        "cs": "Tenhle míč letí rovně a pak *zatočí* do brány.",
+        "en": "This ball flies straight and then *curves* into the goal.",
+        "ro": "Mingea zboară drept și apoi *cotește* în poartă."
       },
-      "headline": {
-        "cs": "BANÁNOVÁ|STŘELA",
-        "en": "THE BANANA|KICK",
-        "ro": "ȘUT|CU EFECT"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "goal",
+          "type": "goal",
+          "position": [
+            0,
+            0,
+            -5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "position": [
+            2.2,
+            0,
+            2
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            -1,
+            0.4,
+            -4.6
+          ],
+          "glow": false
+        },
+        {
+          "id": "kick",
+          "type": "person",
+          "position": [
+            3.2,
+            0,
+            2.6
+          ],
+          "scale": 1,
+          "rotationY": -40,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "goal",
+        "distance": 8,
+        "angle": "frontRight",
+        "move": "dollyIn"
       },
-      "tag": "FREE KICK",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "ball",
-        "icon2": null,
-        "relation": "none",
-        "effect": "spin",
-        "caption": null
-      }
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Tajemství je v tom, že se míč *točí*.",
-        "en": "The secret is that the ball is *spinning*.",
-        "ro": "Secretul e că mingea *se rotește*."
+        "cs": "Celý trik je v tom, že se *točí*.",
+        "en": "The whole trick is that it's *spinning*.",
+        "ro": "Tot trucul e că *se rotește*."
       },
-      "headline": {
-        "cs": "TAJEMSTVÍ:|ROTACE",
-        "en": "THE SECRET:|SPIN",
-        "ro": "SECRETUL:|ROTAȚIA"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "ball",
+          "type": "ball",
+          "position": [
+            2.2,
+            0.4,
+            2
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ball",
+        "distance": 2.2,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "tag": "SPIN",
-      "accent": "teal",
-      "visual": {
-        "type": "icon",
-        "icon": "ball",
-        "icon2": "wind",
-        "relation": "plus",
-        "effect": "spin",
-        "caption": null
-      }
+      "notes": [
+        {
+          "prop": "ball",
+          "text": {
+            "cs": "rotace",
+            "en": "spin",
+            "ro": "rotație"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Točící se povrch strhává *vzduch* kolem sebe.",
-        "en": "The spinning surface drags the *air* around with it.",
-        "ro": "Suprafața care se rotește trage *aerul* după ea."
+        "cs": "Točící se míč strhává *vzduch* kolem sebe.",
+        "en": "A spinning ball drags the *air* around with it.",
+        "ro": "O minge care se rotește trage *aerul* după ea."
       },
-      "headline": {
-        "cs": "STRHÁVÁ|VZDUCH",
-        "en": "DRAGS|THE AIR",
-        "ro": "TRAGE|AERUL"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "ball",
+          "type": "ball",
+          "position": [
+            2.2,
+            0.4,
+            2
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ball",
+        "distance": 2.4,
+        "angle": "low",
+        "move": "dollyIn"
       },
-      "tag": "BOUNDARY LAYER",
-      "accent": "blue",
-      "visual": {
-        "type": "orbit",
-        "mode": "orbit",
-        "center": "ball",
-        "body": "wind",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Proud vzduchu se tak *odkloní* na jednu stranu.",
-        "en": "So the airflow gets *deflected* to one side.",
-        "ro": "Așa fluxul de aer e *deviat* într-o parte."
-      },
-      "headline": {
-        "cs": "VZDUCH|DO STRANY",
-        "en": "AIR|GOES SIDEWAYS",
-        "ro": "AERUL|ÎNTR-O PARTE"
-      },
-      "tag": "WAKE DEFLECTION",
-      "accent": "teal",
-      "visual": {
+      "notes": [],
+      "card": {
         "type": "forces",
         "body": "ball",
         "arrows": [
@@ -106,36 +181,113 @@
             "dir": "left",
             "size": 2,
             "label": {
-              "cs": "proud vzduchu",
-              "en": "airflow",
-              "ro": "flux de aer"
+              "cs": "strhávaný vzduch",
+              "en": "dragged air",
+              "ro": "aer antrenat"
             },
             "color": "blue"
           }
         ],
         "motion": "shake"
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "A míč dostane šťouchnutí na *opačnou stranu*.",
-        "en": "And the ball gets pushed the *opposite way*.",
-        "ro": "Iar mingea e împinsă în *partea opusă*."
+        "cs": "Proud vzduchu za ním se *odkloní* na jednu stranu.",
+        "en": "The airflow behind it gets *deflected* to one side.",
+        "ro": "Fluxul de aer din spate e *deviat* într-o parte."
       },
-      "headline": {
-        "cs": "MAGNUSŮV|JEV",
-        "en": "MAGNUS|EFFECT",
-        "ro": "EFECTUL|MAGNUS"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "ball",
+          "type": "ball",
+          "position": [
+            2.2,
+            0.4,
+            2
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ball",
+        "distance": 2.6,
+        "angle": "top",
+        "move": "orbitRight"
       },
-      "tag": "MAGNUS FORCE",
-      "accent": "red",
-      "visual": {
+      "notes": [],
+      "card": {
         "type": "forces",
         "body": "ball",
         "arrows": [
           {
-            "dir": "right",
-            "size": 2.5,
+            "dir": "downLeft",
+            "size": 2.2,
+            "label": {
+              "cs": "vzduch do strany",
+              "en": "air to one side",
+              "ro": "aer într-o parte"
+            },
+            "color": "blue"
+          }
+        ],
+        "motion": "none"
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "A míč tím dostane šťouch na *opačnou stranu*.",
+        "en": "And that shoves the ball the *other way*.",
+        "ro": "Iar asta împinge mingea în *partea opusă*."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "ball",
+          "type": "ball",
+          "position": [
+            2.2,
+            0.4,
+            2
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            3.4,
+            0.4,
+            2
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ball",
+        "distance": 3.4,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
+        "type": "forces",
+        "body": "ball",
+        "arrows": [
+          {
+            "dir": "upRight",
+            "size": 2.4,
             "label": {
               "cs": "Magnusova síla",
               "en": "Magnus force",
@@ -144,7 +296,7 @@
             "color": "red"
           },
           {
-            "dir": "left",
+            "dir": "downLeft",
             "size": 1.4,
             "label": {
               "cs": "vzduch",
@@ -155,100 +307,161 @@
           }
         ],
         "motion": "right"
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Síla roste s *rotací* i s rychlostí míče.",
-        "en": "The force grows with both *spin* and ball speed.",
-        "ro": "Forța crește cu *rotația* și cu viteza mingii."
+        "cs": "Jmenuje se to *Magnusův jev*.",
+        "en": "It's called the *Magnus effect*.",
+        "ro": "Se numește *efectul Magnus*."
       },
-      "headline": {
-        "cs": "VÍC ROTACE|VÍC ZATÁČÍ",
-        "en": "MORE SPIN|MORE CURVE",
-        "ro": "MAI MULTĂ ROTAȚIE|MAI MULTĂ CURBĂ"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "goal",
+          "type": "goal",
+          "position": [
+            0,
+            0,
+            -5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "position": [
+            2.2,
+            0,
+            2
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "kick",
+          "type": "person",
+          "position": [
+            3.2,
+            0,
+            2.6
+          ],
+          "scale": 1,
+          "rotationY": -40,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ball",
+        "distance": 5,
+        "angle": "frontLeft",
+        "move": "orbitLeft"
       },
-      "tag": "F ∝ ω · v",
-      "accent": "yellow",
-      "visual": {
+      "notes": [],
+      "card": {
         "type": "formula",
         "tex": "F \\propto \\hl{\\omega} \\cdot v",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Tenisté s ním hrají *topspin*, míč pak padá dolů.",
-        "en": "Tennis players use it for *topspin*, making the ball dip.",
-        "ro": "Tenismenii îl folosesc la *topspin*, mingea coboară brusc."
-      },
-      "headline": {
-        "cs": "TENISOVÝ|TOPSPIN",
-        "en": "TENNIS|TOPSPIN",
-        "ro": "TOPSPIN|LA TENIS"
-      },
-      "tag": "SAME PHYSICS",
-      "accent": "teal",
-      "visual": {
-        "type": "forces",
-        "body": "ball",
-        "arrows": [
-          {
-            "dir": "down",
-            "size": 2,
-            "label": {
-              "cs": "Magnus",
-              "en": "Magnus",
-              "ro": "Magnus"
-            },
-            "color": "red"
-          }
-        ],
-        "motion": "down"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Takže příště kopni míč *z boku* a uvidíš.",
-        "en": "So next time, kick the ball *off-center* and watch.",
-        "ro": "Data viitoare, lovește mingea *din lateral* și vezi."
-      },
-      "headline": {
-        "cs": "ZKUS|TO",
-        "en": "TRY|IT",
-        "ro": "ÎNCEARCĂ|ȘI TU"
-      },
-      "tag": "EXPERIMENT",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "ball",
-        "icon2": null,
-        "relation": "none",
-        "effect": "float",
         "caption": {
-          "cs": "kop z boku = rotace = zatáčka",
-          "en": "side kick = spin = curve",
-          "ro": "lovitură laterală = rotație = curbă"
+          "cs": "víc rotace a rychlosti = větší zatáčka",
+          "en": "more spin and speed = bigger curve",
+          "ro": "mai multă rotație și viteză = curbă mai mare"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Překvapilo tě to? Dej *sledovat* pro další díl.",
-        "en": "Surprised? Hit *follow* for the next one.",
-        "ro": "Te-a surprins? Dă *follow* pentru următorul."
+        "cs": "Kopni míč z boku a vyzkoušej si to. Brankář bude *zírat*.",
+        "en": "Kick the ball off-center and try it. The keeper will be *stunned*.",
+        "ro": "Lovește mingea din lateral și încearcă. Portarul va rămâne *mut*."
       },
-      "headline": {
-        "cs": "DALŠÍ DÍL|UŽ BRZY",
-        "en": "NEXT EPISODE|SOON",
-        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "goal",
+          "type": "goal",
+          "position": [
+            0,
+            0,
+            -5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ball",
+          "type": "ball",
+          "position": [
+            2.2,
+            0,
+            2
+          ],
+          "scale": 0.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0.6,
+            0.4,
+            -4.6
+          ],
+          "glow": false
+        },
+        {
+          "id": "kick",
+          "type": "person",
+          "position": [
+            3.2,
+            0,
+            2.6
+          ],
+          "scale": 1,
+          "rotationY": -40,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "goal",
+        "distance": 7,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [
+        {
+          "prop": "goal",
+          "text": {
+            "cs": "gól",
+            "en": "goal!",
+            "ro": "gol!"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

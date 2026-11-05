@@ -1,272 +1,474 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 26,
   "title": {
-    "cs": "Proč horký vzduch stoupá",
-    "en": "Why hot air rises",
-    "ro": "De ce urcă aerul cald"
+    "cs": "Na Venuši je den delší než rok",
+    "en": "On Venus a day is longer than a year",
+    "ro": "Pe Venus o zi e mai lungă decât un an"
   },
   "description": {
-    "cs": "Horký vzduch nemá žádnou sílu, která by ho táhla nahoru. Vytlačí ho tam studený. 🎈",
-    "en": "Nothing pulls hot air up. Cold air pushes it there. 🎈",
-    "ro": "Nimic nu trage aerul cald în sus. Aerul rece îl împinge acolo. 🎈"
+    "cs": "Jeden den trvá 243 dní, rok jen 225. A Slunce tam vychází na západě. 🪐",
+    "en": "One day lasts 243 days, a year only 225. And the Sun rises in the west. 🪐",
+    "ro": "O zi durează 243 de zile, un an doar 225. Iar Soarele răsare la vest. 🪐"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "teplo",
-    "vzduch",
-    "heat"
+    "venuse",
+    "vesmir",
+    "venus"
   ],
+  "hook": {
+    "cs": "DEN DELŠÍ NEŽ CELÝ ROK",
+    "en": "A DAY LONGER THAN A YEAR",
+    "ro": "O ZI MAI LUNGĂ DECÂT UN AN"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Horký vzduch stoupá. Ale *nic ho netáhne* nahoru.",
-        "en": "Hot air rises. But *nothing pulls it* upward.",
-        "ro": "Aerul cald urcă. Dar *nimic nu-l trage* în sus."
+        "cs": "Na Venuši trvá jeden den *déle než celý rok*.",
+        "en": "On Venus, a single day lasts *longer than a year*.",
+        "ro": "Pe Venus, o zi durează *mai mult decât un an*."
       },
-      "headline": {
-        "cs": "CO HO|TÁHNE?",
-        "en": "WHAT PULLS|IT UP?",
-        "ro": "CE ÎL|TRAGE?"
-      },
-      "tag": "CONVECTION",
-      "accent": "red",
-      "visual": {
-        "type": "icon",
-        "icon": "balloon",
-        "icon2": "flame",
-        "relation": "none",
-        "effect": "float",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Když vzduch ohřeješ, molekuly se *rozběhnou rychleji*.",
-        "en": "Heat the air, and its molecules *move faster*.",
-        "ro": "Încălzești aerul și moleculele *se mișcă mai repede*."
-      },
-      "headline": {
-        "cs": "TEPLO =|RYCHLOST",
-        "en": "HEAT =|SPEED",
-        "ro": "CĂLDURA =|VITEZĂ"
-      },
-      "tag": "KINETIC ENERGY",
-      "accent": "yellow",
-      "visual": {
-        "type": "particles",
-        "mode": "hotcold",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Víc se roztlačí, takže je horký vzduch *řidší*.",
-        "en": "They push apart, so hot air becomes *less dense*.",
-        "ro": "Se împing între ele, așa că aerul cald e *mai rar*."
-      },
-      "headline": {
-        "cs": "HORKÝ =|ŘIDŠÍ",
-        "en": "HOT =|LESS DENSE",
-        "ro": "CALD =|MAI RAR"
-      },
-      "tag": "DENSITY",
-      "accent": "red",
-      "visual": {
-        "type": "compare",
-        "left": {
-          "icon": "snowflake",
-          "label": {
-            "cs": "studený",
-            "en": "cold",
-            "ro": "rece"
-          },
-          "value": {
-            "cs": "hustý",
-            "en": "dense",
-            "ro": "dens"
-          }
+      "environment": "space",
+      "props": [
+        {
+          "id": "venus",
+          "type": "planet",
+          "position": [
+            3,
+            0,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": "#f0c27a",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "right": {
-          "icon": "flame",
-          "label": {
-            "cs": "horký",
-            "en": "hot",
-            "ro": "cald"
-          },
-          "value": {
-            "cs": "řídký",
-            "en": "thin",
-            "ro": "rar"
-          }
-        },
-        "winner": "none"
-      }
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -6,
+            0,
+            -1
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "venus",
+        "distance": 6,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Stejný objem horkého vzduchu je až o *pětinu lehčí*.",
-        "en": "The same volume of hot air can be about *a fifth lighter*.",
-        "ro": "Același volum de aer cald e cu aproape *o cincime mai ușor*."
+        "cs": "Kolem Slunce oběhne za *225 dní*.",
+        "en": "It orbits the Sun in *225 days*.",
+        "ro": "Înconjoară Soarele în *225 de zile*."
       },
-      "headline": {
-        "cs": "O PĚTINU|LEHČÍ",
-        "en": "A FIFTH|LIGHTER",
-        "ro": "CU O CINCIME|MAI UȘOR"
+      "environment": "space",
+      "props": [
+        {
+          "id": "venus",
+          "type": "planet",
+          "position": [
+            3,
+            0,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": "#f0c27a",
+          "anim": "slide",
+          "slideTo": [
+            2,
+            0,
+            -3
+          ],
+          "glow": false
+        },
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -6,
+            0,
+            -1
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "sun",
+        "distance": 13,
+        "angle": "top",
+        "move": "orbitLeft"
       },
-      "tag": "1 m³ OF AIR",
-      "accent": "teal",
-      "visual": {
+      "notes": [
+        {
+          "prop": "venus",
+          "text": {
+            "cs": "1 rok",
+            "en": "1 year",
+            "ro": "1 an"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Ale kolem své osy se otočí za *243 dní*.",
+        "en": "But it spins once on its axis in *243 days*.",
+        "ro": "Dar se rotește o dată în jurul axei în *243 de zile*."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "venus",
+          "type": "planet",
+          "position": [
+            3,
+            0,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": "#f0c27a",
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -6,
+            0,
+            -1
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "venus",
+        "distance": 5.5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
         "type": "bars",
         "items": [
           {
             "label": {
-              "cs": "20 °C",
-              "en": "20 °C",
-              "ro": "20 °C"
+              "cs": "rok (oběh)",
+              "en": "year (orbit)",
+              "ro": "an (orbită)"
             },
-            "value": 1.2,
+            "value": 225,
             "highlight": false
           },
           {
             "label": {
-              "cs": "100 °C",
-              "en": "100 °C",
-              "ro": "100 °C"
+              "cs": "den (otočka)",
+              "en": "day (spin)",
+              "ro": "zi (rotație)"
             },
-            "value": 0.95,
+            "value": 243,
             "highlight": true
           }
         ],
         "unit": {
-          "cs": " kg",
-          "en": " kg",
-          "ro": " kg"
+          "cs": " dní",
+          "en": " days",
+          "ro": " zile"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Těžší studený vzduch klesá dolů a horký *vytlačí nahoru*.",
-        "en": "Heavier cold air sinks and *pushes* the hot air up.",
-        "ro": "Aerul rece, mai greu, coboară și îl *împinge* pe cel cald în sus."
+        "cs": "A točí se *pozpátku*. Slunce tam vychází na západě.",
+        "en": "And it spins *backwards*. The Sun rises in the west.",
+        "ro": "Și se rotește *invers*. Soarele răsare la vest."
       },
-      "headline": {
-        "cs": "STUDENÝ|TLAČÍ",
-        "en": "COLD AIR|PUSHES",
-        "ro": "AERUL RECE|ÎMPINGE"
+      "environment": "space",
+      "props": [
+        {
+          "id": "venus",
+          "type": "planet",
+          "position": [
+            3,
+            0,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": "#f0c27a",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -6,
+            0,
+            -1
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "venus",
+        "distance": 5,
+        "angle": "low",
+        "move": "orbitRight"
       },
-      "tag": "BUOYANCY",
-      "accent": "blue",
-      "visual": {
-        "type": "particles",
-        "mode": "rise",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Je to stejné, jako když *bublina* vyletí ve vodě.",
-        "en": "It's just like a *bubble* rising through water.",
-        "ro": "E exact ca o *bulă* care urcă prin apă."
-      },
-      "headline": {
-        "cs": "JAKO|BUBLINA",
-        "en": "LIKE A|BUBBLE",
-        "ro": "CA O|BULĂ"
-      },
-      "tag": "SAME PHYSICS",
-      "accent": "teal",
-      "visual": {
-        "type": "forces",
-        "body": "balloon",
-        "arrows": [
-          {
-            "dir": "up",
-            "size": 2.5,
-            "label": {
-              "cs": "vztlak",
-              "en": "buoyancy",
-              "ro": "flotabilitate"
-            },
-            "color": "teal"
-          },
-          {
-            "dir": "down",
-            "size": 1.2,
-            "label": {
-              "cs": "tíha",
-              "en": "weight",
-              "ro": "greutate"
-            },
-            "color": "red"
+      "notes": [
+        {
+          "prop": "venus",
+          "text": {
+            "cs": "pozpátku!",
+            "en": "backwards!",
+            "ro": "invers!"
           }
-        ],
-        "motion": "up"
-      }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Na tom létá *horkovzdušný balón*.",
-        "en": "That's how a *hot air balloon* flies.",
-        "ro": "Așa zboară *balonul cu aer cald*."
+        "cs": "Od východu do západu Slunce uběhnou skoro *dva měsíce*.",
+        "en": "From sunrise to sunset takes almost *two months*.",
+        "ro": "De la răsărit la apus trec aproape *două luni*."
       },
-      "headline": {
-        "cs": "HORKOVZDUŠNÝ|BALÓN",
-        "en": "HOT AIR|BALLOON",
-        "ro": "BALON CU|AER CALD"
+      "environment": "space",
+      "props": [
+        {
+          "id": "astro",
+          "type": "astronaut",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ground",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2,
+          "rotationY": 0,
+          "color": "#d8a25e",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -5,
+            3,
+            -6
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "astro",
+        "distance": 5,
+        "angle": "frontRight",
+        "move": "dollyIn"
       },
-      "tag": "APPLICATION",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "balloon",
-        "icon2": "flame",
-        "relation": "plus",
-        "effect": "float",
-        "caption": null
-      }
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 58,
+        "decimals": 0,
+        "unit": {
+          "cs": " dní",
+          "en": " days",
+          "ro": " zile"
+        },
+        "caption": {
+          "cs": "jedno venušské odpoledne",
+          "en": "one Venus afternoon",
+          "ro": "o după-amiază pe Venus"
+        }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "A proto je u stropu teplo, zatímco u podlahy *táhne*.",
-        "en": "And that's why the ceiling is warm while the floor feels *drafty*.",
-        "ro": "De aceea la tavan e cald, iar la podea *trage*."
+        "cs": "Na povrchu je přitom *460 stupňů*. Taví se tam olovo.",
+        "en": "Meanwhile the surface is *460 degrees*. Hot enough to melt lead.",
+        "ro": "Iar la suprafață sunt *460 de grade*. Destul cât să topească plumbul."
       },
-      "headline": {
-        "cs": "NAHOŘE|TEPLO",
-        "en": "WARM AT|THE TOP",
-        "ro": "CALD|SUS"
+      "environment": "space",
+      "props": [
+        {
+          "id": "venus",
+          "type": "planet",
+          "position": [
+            3,
+            0,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": "#ff9a4a",
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "venus",
+        "distance": 5,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": "ROOM CONVECTION",
-      "accent": "red",
-      "visual": {
-        "type": "icon",
-        "icon": "house",
-        "icon2": "thermometer",
-        "relation": "none",
-        "effect": "pulse",
-        "caption": null
-      }
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 460,
+        "decimals": 0,
+        "unit": {
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
+        },
+        "caption": {
+          "cs": "olovo taje už při 327 °C",
+          "en": "lead melts at 327 °C",
+          "ro": "plumbul se topește la 327 °C"
+        }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Napiš do komentářů, co tě zajímá, a *sleduj*.",
-        "en": "Tell us what to explain next, and *follow*.",
-        "ro": "Scrie-ne ce să explicăm și dă *follow*."
+        "cs": "Jeden pracovní týden by tam trval *přes rok a půl*.",
+        "en": "A single work week there would last *over a year and a half*.",
+        "ro": "O săptămână de lucru ar dura acolo *peste un an și jumătate*."
       },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      "environment": "space",
+      "props": [
+        {
+          "id": "venus",
+          "type": "planet",
+          "position": [
+            3,
+            0,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": "#f0c27a",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -6,
+            0,
+            -1
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "venus",
+        "distance": 7,
+        "angle": "frontLeft",
+        "move": "orbitLeft"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [
+        {
+          "prop": "venus",
+          "text": {
+            "cs": "pondělí…",
+            "en": "Monday…",
+            "ro": "luni…"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

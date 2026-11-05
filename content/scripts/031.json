@@ -1,273 +1,533 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 31,
   "title": {
-    "cs": "Kolik váží jeden mrak",
-    "en": "How much does a cloud weigh",
-    "ro": "Cât cântărește un nor"
+    "cs": "Kdyby se Země zastavila",
+    "en": "What if Earth stopped spinning",
+    "ro": "Dacă Pământul s-ar opri"
   },
   "description": {
-    "cs": "Obyčejný načechraný mrak váží jako sto slonů. A přesto se vznáší. ☁️",
-    "en": "An ordinary fluffy cloud weighs as much as a hundred elephants. Yet it floats. ☁️",
-    "ro": "Un nor pufos obișnuit cântărește cât o sută de elefanți. Și totuși plutește. ☁️"
+    "cs": "Všechno, co není přivázané, by letělo na východ rychlostí přes 1 000 km/h. 🌍",
+    "en": "Everything not bolted down would fly east at over 1,000 km/h. 🌍",
+    "ro": "Tot ce nu e prins ar zbura spre est cu peste 1.000 km/h. 🌍"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "mraky",
-    "pocasi",
-    "clouds"
+    "zeme",
+    "rotace",
+    "earth"
   ],
+  "hook": {
+    "cs": "CO KDYBY SE ZEMĚ ZASTAVILA?",
+    "en": "WHAT IF EARTH STOPPED SPINNING?",
+    "ro": "CE-AR FI DACĂ PĂMÂNTUL S-AR OPRI?"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Kolik podle tebe váží *jeden mrak*?",
-        "en": "How much do you think *one cloud* weighs?",
-        "ro": "Cât crezi că cântărește *un nor*?"
+        "cs": "Kdyby se Země najednou *zastavila*, ty bys letěl dál.",
+        "en": "If Earth suddenly *stopped*, you'd keep going.",
+        "ro": "Dacă Pământul s-ar *opri* brusc, tu ai merge mai departe."
       },
-      "headline": {
-        "cs": "KOLIK|VÁŽÍ MRAK?",
-        "en": "HOW HEAVY|IS A CLOUD?",
-        "ro": "CÂT CÂNTĂREȘTE|UN NOR?"
+      "environment": "space",
+      "props": [
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "earth",
+        "distance": 7,
+        "angle": "frontRight",
+        "move": "dollyIn"
       },
-      "tag": "GUESS",
-      "accent": "yellow",
-      "visual": {
-        "type": "quiz",
-        "question": {
-          "cs": "Běžný kupovitý mrak váží…",
-          "en": "A typical puffy cloud weighs…",
-          "ro": "Un nor cumulus obișnuit cântărește…"
-        },
-        "options": [
-          {
-            "cs": "pár kilo",
-            "en": "a few kilos",
-            "ro": "câteva kilograme"
-          },
-          {
-            "cs": "jako auto",
-            "en": "like a car",
-            "ro": "cât o mașină"
-          },
-          {
-            "cs": "asi 500 tun",
-            "en": "about 500 tonnes",
-            "ro": "vreo 500 de tone"
-          }
-        ],
-        "answer": 2
-      }
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Běžný mrak má objem klidně *kilometr krychlový*.",
-        "en": "A typical cloud can fill about *one cubic kilometer*.",
-        "ro": "Un nor obișnuit poate avea *un kilometru cub*."
+        "cs": "U rovníku se točíme rychlostí *1 670 km/h*.",
+        "en": "At the equator we're spinning at *1,670 km/h*.",
+        "ro": "La ecuator ne rotim cu *1.670 km/h*."
       },
-      "headline": {
-        "cs": "1 KM³|VZDUCHU",
-        "en": "1 KM³|OF AIR",
-        "ro": "1 KM³|DE AER"
+      "environment": "space",
+      "props": [
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "earth",
+        "distance": 6,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "tag": "CUMULUS VOLUME",
-      "accent": "blue",
-      "visual": {
-        "type": "icon",
-        "icon": "cloud",
-        "icon2": null,
-        "relation": "none",
-        "effect": "float",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "V každém metru krychlovém je asi *půl gramu* vody.",
-        "en": "Each cubic meter holds about *half a gram* of water.",
-        "ro": "Fiecare metru cub are cam *jumătate de gram* de apă."
-      },
-      "headline": {
-        "cs": "PŮL GRAMU|NA M³",
-        "en": "HALF A GRAM|PER M³",
-        "ro": "JUMĂTATE DE GRAM|PE M³"
-      },
-      "tag": "LIQUID WATER CONTENT",
-      "accent": "teal",
-      "visual": {
-        "type": "counter",
+      "notes": [],
+      "card": {
+        "type": "gauge",
         "from": 0,
-        "to": 0.5,
-        "decimals": 1,
+        "to": 1670,
+        "max": 2000,
         "unit": {
-          "cs": " g/m³",
-          "en": " g/m³",
-          "ro": " g/m³"
+          "cs": " km/h",
+          "en": " km/h",
+          "ro": " km/h"
         },
         "caption": {
-          "cs": "drobné kapičky, ne pára",
-          "en": "tiny droplets, not vapor",
-          "ro": "picături mici, nu vapori"
+          "cs": "rychlost na rovníku",
+          "en": "speed at the equator",
+          "ro": "viteza la ecuator"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Krát miliarda metrů krychlových dává *500 tun*.",
-        "en": "Times a billion cubic meters gives *500 tonnes*.",
-        "ro": "Ori un miliard de metri cubi dă *500 de tone*."
+        "cs": "A v Česku pořád přes *tisíc*.",
+        "en": "And even in Europe, over *a thousand*.",
+        "ro": "Și chiar și în România, peste *o mie*."
       },
-      "headline": {
-        "cs": "500|TUN",
-        "en": "500|TONNES",
-        "ro": "500 DE|TONE"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            -1.5,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            2.6,
+            0,
+            -2.5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -0.6,
+            0,
+            1.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 5,
+        "angle": "frontLeft",
+        "move": "dollyIn"
       },
-      "tag": "TOTAL MASS",
-      "accent": "red",
-      "visual": {
-        "type": "formula",
-        "tex": "0{,}5\\,\\tfrac{g}{m^3} \\times 10^9\\,m^3 = \\hl{500\\ t}",
-        "caption": null
-      }
+      "notes": [
+        {
+          "prop": "me",
+          "text": {
+            "cs": "1 000+ km/h",
+            "en": "1,000+ km/h",
+            "ro": "1.000+ km/h"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "To je stejně jako *sto slonů*.",
-        "en": "That's as heavy as *a hundred elephants*.",
-        "ro": "Asta e cât *o sută de elefanți*."
+        "cs": "Ty, domy, oceány i vzduch se točíme *spolu*.",
+        "en": "You, buildings, oceans and air all spin *together*.",
+        "ro": "Tu, casele, oceanele și aerul ne rotim *împreună*."
       },
-      "headline": {
-        "cs": "STO|SLONŮ",
-        "en": "A HUNDRED|ELEPHANTS",
-        "ro": "O SUTĂ DE|ELEFANȚI"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            -1.5,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            2.6,
+            0,
+            -2.5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "car",
+          "type": "car",
+          "position": [
+            1,
+            0,
+            0.8
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -0.6,
+            0,
+            1.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            5,
+            -3
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "house",
+        "distance": 9,
+        "angle": "front",
+        "move": "orbitRight"
       },
-      "tag": "COMPARISON",
-      "accent": "yellow",
-      "visual": {
+      "notes": [
+        {
+          "prop": "house",
+          "text": {
+            "cs": "všechno spolu",
+            "en": "all together",
+            "ro": "totul împreună"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Když se zastaví jen Země, všechno *pokračuje* na východ.",
+        "en": "Stop only the ground, and everything *keeps flying* east.",
+        "ro": "Dacă se oprește doar solul, totul *continuă* spre est."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            -1.5,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            2.6,
+            0,
+            -2.5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "car",
+          "type": "car",
+          "position": [
+            1,
+            0,
+            0.8
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            9,
+            0.6,
+            0.8
+          ],
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -0.6,
+            0,
+            1.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            8,
+            1.5,
+            1.4
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "house",
+        "distance": 9,
+        "angle": "front",
+        "move": "dollyOut"
+      },
+      "notes": [],
+      "card": null,
+      "shake": true
+    },
+    {
+      "narration": {
+        "cs": "Vítr rychlejší než *každé tornádo* by smetl všechno.",
+        "en": "Winds faster than *any tornado* would sweep everything away.",
+        "ro": "Vânturi mai rapide decât *orice tornadă* ar mătura totul."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            -1.5,
+            0,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            2.6,
+            0,
+            -2.5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            0,
+            5,
+            -3
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            10,
+            5,
+            -3
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "house",
+        "distance": 8,
+        "angle": "low",
+        "move": "orbitLeft"
+      },
+      "notes": [],
+      "card": {
         "type": "bars",
         "items": [
           {
             "label": {
-              "cs": "slon",
-              "en": "elephant",
-              "ro": "elefant"
+              "cs": "nejsilnější tornádo",
+              "en": "strongest tornado",
+              "ro": "cea mai puternică tornadă"
             },
-            "value": 5,
+            "value": 480,
             "highlight": false
           },
           {
             "label": {
-              "cs": "mrak",
-              "en": "cloud",
-              "ro": "nor"
+              "cs": "tenhle vítr",
+              "en": "this wind",
+              "ro": "vântul ăsta"
             },
-            "value": 500,
+            "value": 1670,
             "highlight": true
           }
         ],
         "unit": {
-          "cs": " t",
-          "en": " t",
-          "ro": " t"
+          "cs": " km/h",
+          "en": " km/h",
+          "ro": " km/h"
         }
-      }
+      },
+      "shake": true
     },
     {
       "narration": {
-        "cs": "Proč tedy nespadne? Kapičky jsou *strašně malé*.",
-        "en": "So why doesn't it fall? The droplets are *incredibly tiny*.",
-        "ro": "Atunci de ce nu cade? Picăturile sunt *foarte mici*."
+        "cs": "Naštěstí to *nejde*. Země brzdí jen o milisekundy za století.",
+        "en": "Luckily, it *can't happen*. Earth only slows by milliseconds per century.",
+        "ro": "Din fericire, *nu se poate*. Pământul încetinește doar cu milisecunde pe secol."
       },
-      "headline": {
-        "cs": "MIKRO|KAPIČKY",
-        "en": "MICRO|DROPLETS",
-        "ro": "MICRO|PICĂTURI"
+      "environment": "space",
+      "props": [
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "earth",
+        "distance": 6.5,
+        "angle": "frontLeft",
+        "move": "orbitRight"
       },
-      "tag": "≈ 0,01 mm",
-      "accent": "teal",
-      "visual": {
-        "type": "particles",
-        "mode": "gas",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Padají jen asi *centimetr* za sekundu.",
-        "en": "They fall only about *a centimeter* per second.",
-        "ro": "Cad doar cu vreun *centimetru* pe secundă."
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 1.8,
+        "decimals": 1,
+        "unit": {
+          "cs": " ms",
+          "en": " ms",
+          "ro": " ms"
+        },
+        "caption": {
+          "cs": "o tolik se den prodlouží za 100 let",
+          "en": "how much longer a day gets per century",
+          "ro": "cu atât se lungește ziua într-un secol"
+        }
       },
-      "headline": {
-        "cs": "PADAJÍ|POMALOUČKU",
-        "en": "FALLING|SUPER SLOWLY",
-        "ro": "CAD|FOARTE ÎNCET"
-      },
-      "tag": "TERMINAL VELOCITY",
-      "accent": "blue",
-      "visual": {
-        "type": "forces",
-        "body": "drop",
-        "arrows": [
-          {
-            "dir": "down",
-            "size": 1,
-            "label": {
-              "cs": "tíha",
-              "en": "weight",
-              "ro": "greutate"
-            },
-            "color": "red"
-          },
-          {
-            "dir": "up",
-            "size": 1,
-            "label": {
-              "cs": "odpor vzduchu",
-              "en": "air drag",
-              "ro": "rezistența aerului"
-            },
-            "color": "teal"
-          }
-        ],
-        "motion": "none"
-      }
-    },
-    {
-      "narration": {
-        "cs": "A stoupající teplý vzduch je *drží nahoře*.",
-        "en": "And rising warm air *keeps them up*.",
-        "ro": "Iar aerul cald care urcă *le ține sus*."
-      },
-      "headline": {
-        "cs": "VZDUCH|JE NESE",
-        "en": "AIR|CARRIES THEM",
-        "ro": "AERUL|LE POARTĂ"
-      },
-      "tag": "UPDRAFT",
-      "accent": "yellow",
-      "visual": {
-        "type": "particles",
-        "mode": "rise",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Pošli to někomu, kdo to neví, a *sleduj* nás.",
-        "en": "Send this to someone who didn't know, and *follow*.",
-        "ro": "Trimite asta cuiva care nu știa și dă *follow*."
-      },
-      "headline": {
-        "cs": "DALŠÍ DÍL|UŽ BRZY",
-        "en": "NEXT EPISODE|SOON",
-        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
-      },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "shake": false
     }
   ]
 }

@@ -1,278 +1,580 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 34,
   "title": {
-    "cs": "Proč WiFi neprojde zdí",
-    "en": "Why WiFi struggles through walls",
-    "ro": "De ce WiFi trece greu prin pereți"
+    "cs": "Auto zrychlí, balónek letí dopředu",
+    "en": "Car speeds up, balloon goes forward",
+    "ro": "Mașina accelerează, balonul merge înainte"
   },
   "description": {
-    "cs": "WiFi je světlo, které nevidíš. A zdi mu dávají zabrat. 📶",
-    "en": "WiFi is light you can't see. And walls give it a hard time. 📶",
-    "ro": "WiFi e lumină pe care n-o vezi. Iar pereții îi dau bătăi de cap. 📶"
+    "cs": "Tebe to zmáčkne do sedadla. Héliový balónek se pohne opačně. Proč? 🎈",
+    "en": "You get pushed into your seat. A helium balloon goes the other way. Why? 🎈",
+    "ro": "Pe tine te împinge în scaun. Balonul cu heliu merge invers. De ce? 🎈"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "wifi",
-    "internet",
-    "technology"
+    "auto",
+    "setrvacnost",
+    "inertia"
   ],
+  "hook": {
+    "cs": "AUTO ZRYCHLÍ. BALÓNEK LETÍ DOPŘEDU.",
+    "en": "CAR SPEEDS UP. BALLOON GOES FORWARD.",
+    "ro": "MAȘINA ACCELEREAZĂ. BALONUL MERGE ÎNAINTE."
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "O jednu zeď dál a WiFi *skoro nejde*. Proč?",
-        "en": "One wall away and the WiFi *barely works*. Why?",
-        "ro": "Un perete mai încolo și WiFi-ul *abia merge*. De ce?"
+        "cs": "Auto se rozjede a héliový balónek letí *dopředu*. Proč?",
+        "en": "The car speeds up and the helium balloon moves *forward*. Why?",
+        "ro": "Mașina pornește și balonul cu heliu merge *înainte*. De ce?"
       },
-      "headline": {
-        "cs": "O ZEĎ DÁL|A NIC",
-        "en": "ONE WALL|AND IT'S GONE",
-        "ro": "UN PERETE|ȘI GATA"
-      },
-      "tag": "SIGNAL LOSS",
-      "accent": "red",
-      "visual": {
-        "type": "icon",
-        "icon": "router",
-        "icon2": "wall",
-        "relation": "vs",
-        "effect": "pulse",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "WiFi jsou *rádiové vlny*, příbuzné světla.",
-        "en": "WiFi is made of *radio waves*, cousins of light.",
-        "ro": "WiFi înseamnă *unde radio*, rude cu lumina."
-      },
-      "headline": {
-        "cs": "NEVIDITELNÉ|SVĚTLO",
-        "en": "INVISIBLE|LIGHT",
-        "ro": "LUMINĂ|INVIZIBILĂ"
-      },
-      "tag": "2,4 / 5 GHz",
-      "accent": "blue",
-      "visual": {
-        "type": "wave",
-        "mode": "single",
-        "label": {
-          "cs": "vlna dlouhá 6 až 12 centimetrů",
-          "en": "a wave 6 to 12 centimeters long",
-          "ro": "o undă de 6 până la 12 centimetri"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "car",
+          "type": "carGlass",
+          "position": [
+            -2,
+            0,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            2,
+            0,
+            0
+          ],
+          "glow": false
+        },
+        {
+          "id": "bal",
+          "type": "balloon",
+          "position": [
+            -2.25,
+            0.83,
+            0
+          ],
+          "scale": 0.45,
+          "rotationY": 0,
+          "color": "#ff4d6d",
+          "anim": "slide",
+          "slideTo": [
+            2.35,
+            0.83,
+            0
+          ],
+          "glow": false
+        },
+        {
+          "id": "drv",
+          "type": "person",
+          "position": [
+            -1.82,
+            0.45,
+            0
+          ],
+          "scale": 0.45,
+          "rotationY": 90,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            2.18,
+            0.45,
+            0
+          ],
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "car",
+        "distance": 6,
+        "angle": "frontRight",
+        "move": "orbitLeft"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Zeď část vln *pohltí* a část odrazí.",
-        "en": "A wall *absorbs* some waves and reflects others.",
-        "ro": "Peretele *absoarbe* o parte și reflectă alta."
+        "cs": "Tebe to přitom zmáčkne *do sedadla*.",
+        "en": "Meanwhile you get pushed *into your seat*.",
+        "ro": "Iar pe tine te împinge *în scaun*."
       },
-      "headline": {
-        "cs": "ZEĎ|POLYKÁ",
-        "en": "THE WALL|ABSORBS",
-        "ro": "PERETELE|ABSOARBE"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "car",
+          "type": "carGlass",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bal",
+          "type": "balloon",
+          "position": [
+            -0.25,
+            0.83,
+            0
+          ],
+          "scale": 0.45,
+          "rotationY": 0,
+          "color": "#ff4d6d",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "drv",
+          "type": "person",
+          "position": [
+            0.18,
+            0.45,
+            0
+          ],
+          "scale": 0.45,
+          "rotationY": 90,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "drv",
+        "distance": 3,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": "ATTENUATION",
-      "accent": "red",
-      "visual": {
-        "type": "wave",
-        "mode": "blocked",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Nejvíc vadí *voda* v betonu a kovové pruty.",
-        "en": "The worst culprits are *water* in concrete and steel rods.",
-        "ro": "Cel mai rău sunt *apa* din beton și armătura de metal."
-      },
-      "headline": {
-        "cs": "VODA|A KOV",
-        "en": "WATER|AND METAL",
-        "ro": "APĂ|ȘI METAL"
-      },
-      "tag": "WORST MATERIALS",
-      "accent": "yellow",
-      "visual": {
-        "type": "bars",
-        "items": [
-          {
-            "label": {
-              "cs": "dřevo",
-              "en": "wood",
-              "ro": "lemn"
-            },
-            "value": 3,
-            "highlight": false
-          },
-          {
-            "label": {
-              "cs": "cihla",
-              "en": "brick",
-              "ro": "cărămidă"
-            },
-            "value": 8,
-            "highlight": false
-          },
-          {
-            "label": {
-              "cs": "beton",
-              "en": "concrete",
-              "ro": "beton"
-            },
-            "value": 15,
-            "highlight": true
+      "notes": [
+        {
+          "prop": "drv",
+          "text": {
+            "cs": "do sedadla",
+            "en": "into the seat",
+            "ro": "în scaun"
           }
-        ],
-        "unit": {
-          "cs": " dB",
-          "en": " dB",
-          "ro": " dB"
         }
-      }
+      ],
+      "card": null,
+      "shake": true
     },
     {
       "narration": {
-        "cs": "Jedna betonová zeď sníží signál klidně *desetkrát*.",
-        "en": "One concrete wall can cut the signal *tenfold*.",
-        "ro": "Un perete de beton poate reduce semnalul de *zece ori*."
+        "cs": "Stejně se dozadu nahrne i *vzduch* v autě.",
+        "en": "The *air* in the car sloshes backward too.",
+        "ro": "La fel se îngrămădește în spate și *aerul* din mașină."
       },
-      "headline": {
-        "cs": "DESETKRÁT|SLABŠÍ",
-        "en": "TEN TIMES|WEAKER",
-        "ro": "DE ZECE ORI|MAI SLAB"
-      },
-      "tag": "−10 dB",
-      "accent": "red",
-      "visual": {
-        "type": "graph",
-        "curve": "decay",
-        "curve2": null,
-        "x": {
-          "cs": "zdi",
-          "en": "walls",
-          "ro": "pereți"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "car",
+          "type": "carGlass",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "y": {
-          "cs": "signál",
-          "en": "signal",
-          "ro": "semnal"
+        {
+          "id": "bal",
+          "type": "balloon",
+          "position": [
+            -0.25,
+            0.83,
+            0
+          ],
+          "scale": 0.45,
+          "rotationY": 0,
+          "color": "#ff4d6d",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "markLabel": {
-          "cs": "každá zeď ubere",
-          "en": "every wall takes a cut",
-          "ro": "fiecare perete taie din el"
+        {
+          "id": "drv",
+          "type": "person",
+          "position": [
+            0.18,
+            0.45,
+            0
+          ],
+          "scale": 0.45,
+          "rotationY": 90,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "car",
+        "distance": 4.5,
+        "angle": "side",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
+        "type": "particles",
+        "mode": "pressure",
+        "label": {
+          "cs": "vzduch se nahrne dozadu",
+          "en": "air piles up at the back",
+          "ro": "aerul se adună în spate"
+        }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Pásmo *5 GHz* je rychlejší, ale zdmi prochází hůř.",
-        "en": "The *5 GHz* band is faster, but worse through walls.",
-        "ro": "Banda de *5 GHz* e mai rapidă, dar trece mai greu prin pereți."
+        "cs": "Vzadu je ho najednou *víc* a tlačí víc.",
+        "en": "Suddenly there's *more* of it at the back, pushing harder.",
+        "ro": "Deodată e *mai mult* în spate și împinge mai tare."
       },
-      "headline": {
-        "cs": "2,4 VS|5 GHZ",
-        "en": "2.4 VS|5 GHZ",
-        "ro": "2,4 VS|5 GHZ"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "car",
+          "type": "carGlass",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bal",
+          "type": "balloon",
+          "position": [
+            -0.25,
+            0.83,
+            0
+          ],
+          "scale": 0.45,
+          "rotationY": 0,
+          "color": "#ff4d6d",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "drv",
+          "type": "person",
+          "position": [
+            0.18,
+            0.45,
+            0
+          ],
+          "scale": 0.45,
+          "rotationY": 90,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "car",
+        "distance": 5,
+        "angle": "frontLeft",
+        "move": "orbitRight"
       },
-      "tag": "FREQUENCY BANDS",
-      "accent": "teal",
-      "visual": {
+      "notes": [],
+      "card": {
         "type": "compare",
         "left": {
-          "icon": "router",
+          "icon": "wind",
           "label": {
-            "cs": "2,4 GHz",
-            "en": "2.4 GHz",
-            "ro": "2,4 GHz"
+            "cs": "vpředu",
+            "en": "front",
+            "ro": "față"
           },
           "value": {
-            "cs": "dosah",
-            "en": "range",
-            "ro": "acoperire"
+            "cs": "nižší tlak",
+            "en": "lower pressure",
+            "ro": "presiune mică"
           }
         },
         "right": {
-          "icon": "router",
+          "icon": "wind",
           "label": {
-            "cs": "5 GHz",
-            "en": "5 GHz",
-            "ro": "5 GHz"
+            "cs": "vzadu",
+            "en": "back",
+            "ro": "spate"
           },
           "value": {
-            "cs": "rychlost",
-            "en": "speed",
-            "ro": "viteză"
+            "cs": "vyšší tlak",
+            "en": "higher pressure",
+            "ro": "presiune mare"
           }
         },
-        "winner": "none"
-      }
+        "winner": "right"
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Router proto dej *vysoko a doprostřed* bytu.",
-        "en": "So put your router *high up and central*.",
-        "ro": "Așa că pune routerul *sus și în centru*."
+        "cs": "Ten tlak *vystrčí* lehký balónek dopředu.",
+        "en": "That pressure *shoves* the light balloon forward.",
+        "ro": "Presiunea asta *împinge* balonul ușor înainte."
       },
-      "headline": {
-        "cs": "VYSOKO A|DOPROSTŘED",
-        "en": "HIGH AND|CENTRAL",
-        "ro": "SUS ȘI|ÎN CENTRU"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "car",
+          "type": "carGlass",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "bal",
+          "type": "balloon",
+          "position": [
+            -0.25,
+            0.83,
+            0
+          ],
+          "scale": 0.45,
+          "rotationY": 0,
+          "color": "#ff4d6d",
+          "anim": "slide",
+          "slideTo": [
+            0.35,
+            0.83,
+            0
+          ],
+          "glow": false
+        },
+        {
+          "id": "drv",
+          "type": "person",
+          "position": [
+            0.18,
+            0.45,
+            0
+          ],
+          "scale": 0.45,
+          "rotationY": 90,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bal",
+        "distance": 2.6,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": "PRO TIP",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "router",
-        "icon2": "house",
-        "relation": "none",
-        "effect": "float",
-        "caption": null
-      }
+      "notes": [
+        {
+          "prop": "bal",
+          "text": {
+            "cs": "dopředu!",
+            "en": "forward!",
+            "ro": "înainte!"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "A nikdy ne za *akvárium*, voda je pro WiFi zeď.",
-        "en": "And never behind a *fish tank*, water blocks WiFi.",
-        "ro": "Și niciodată după un *acvariu*, apa blochează WiFi-ul."
+        "cs": "Je to stejný důvod, proč balónek *stoupá* vzhůru.",
+        "en": "Same reason the balloon *floats up* in the first place.",
+        "ro": "E același motiv pentru care balonul *urcă* în sus."
       },
-      "headline": {
-        "cs": "POZOR NA|AKVÁRIUM",
-        "en": "WATCH THE|FISH TANK",
-        "ro": "ATENȚIE LA|ACVARIU"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "bal2",
+          "type": "balloon",
+          "position": [
+            0,
+            0,
+            0.5
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": "#ff4d6d",
+          "anim": "slide",
+          "slideTo": [
+            0,
+            2.5,
+            0.5
+          ],
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -1,
+            0,
+            0.5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "bal2",
+        "distance": 5,
+        "angle": "low",
+        "move": "rise"
       },
-      "tag": "WATER = WALL",
-      "accent": "blue",
-      "visual": {
-        "type": "icon",
-        "icon": "drop",
-        "icon2": "router",
-        "relation": "vs",
-        "effect": "shake",
-        "caption": null
-      }
+      "notes": [
+        {
+          "prop": "bal2",
+          "text": {
+            "cs": "nahoru",
+            "en": "up",
+            "ro": "în sus"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Napiš do komentářů, co tě zajímá, a *sleduj*.",
-        "en": "Tell us what to explain next, and *follow*.",
-        "ro": "Scrie-ne ce să explicăm și dă *follow*."
+        "cs": "Zrychlení se pro vzduch chová *jako gravitace*. Einstein to miloval.",
+        "en": "To the air, acceleration acts *just like gravity*. Einstein loved this.",
+        "ro": "Pentru aer, accelerația se comportă *ca gravitația*. Einstein adora asta."
       },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "car",
+          "type": "carGlass",
+          "position": [
+            -1,
+            0,
+            0
+          ],
+          "scale": 1.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            3,
+            0,
+            0
+          ],
+          "glow": false
+        },
+        {
+          "id": "bal",
+          "type": "balloon",
+          "position": [
+            -1.25,
+            0.83,
+            0
+          ],
+          "scale": 0.45,
+          "rotationY": 0,
+          "color": "#ff4d6d",
+          "anim": "slide",
+          "slideTo": [
+            3.35,
+            0.83,
+            0
+          ],
+          "glow": false
+        },
+        {
+          "id": "drv",
+          "type": "person",
+          "position": [
+            -0.8200000000000001,
+            0.45,
+            0
+          ],
+          "scale": 0.45,
+          "rotationY": 90,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            3.18,
+            0.45,
+            0
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "car",
+        "distance": 6,
+        "angle": "frontRight",
+        "move": "orbitRight"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [],
+      "card": {
+        "type": "formula",
+        "tex": "\\vec{a} \\equiv \\hl{\\vec{g}}",
+        "caption": {
+          "cs": "princip ekvivalence",
+          "en": "the equivalence principle",
+          "ro": "principiul echivalenței"
+        }
+      },
+      "shake": false
     }
   ]
 }

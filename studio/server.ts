@@ -11,7 +11,8 @@ import http from 'node:http';
 import os from 'node:os';
 import path from 'node:path';
 import {LANGS, type Lang} from '../src/engine/schema';
-import {LANG_DIR, P, ROOT, allScriptIds, captionText, isShort, loadIdeas, loadScript, loadTimeline, pad, videoOutFile, type AnyScript} from '../scripts/lib';
+import {LANG_DIR, P, ROOT, allScriptIds, captionText, isHybrid, isShort, loadIdeas, loadScript, loadTimeline, pad, videoOutFile, type AnyScript} from '../scripts/lib';
+import {DEFAULT_VOICE, VOICE_CATALOG, findVoice} from '../scripts/voices';
 import {findBrowser, openLogin, publish} from './publish';
 import {DATA, load, save, update, type Channel, type Platform} from './store';
 
@@ -93,9 +94,10 @@ const idsArg = (ids: number[]) => ids.join(',');
 
 /* ============ stav videí ============ */
 const audioOk = (id: number, lang: Lang) => {
-  const tl = loadTimeline(id, lang) as (ReturnType<typeof loadTimeline> & {provider?: string}) | null;
-  if (!tl) return {voiced: false, provider: null as string | null};
-  const ok = tl.scenes.every((s) => !s.audioSrc || fs.existsSync(path.join(ROOT, 'public', s.audioSrc)));
+  const tl = loadTimeline(id, lang) as (ReturnType<typeof loadTimeline> & {provider?: string; continuous?: boolean; audioSrc?: string | null; partial?: boolean}) | null;
+  if (!tl || tl.partial) return {voiced: false, provider: null as string | null};
+  const has = (rel: string | null | undefined) => !rel || fs.existsSync(path.join(ROOT, 'public', rel));
+  const ok = tl.continuous ? !!tl.audioSrc && has(tl.audioSrc) : tl.scenes.every((s) => has(s.audioSrc));
   return {voiced: ok, provider: ok ? (tl.provider ?? 'elevenlabs') : null};
 };
 
@@ -137,7 +139,7 @@ const videoList = () => {
     );
     const posts = st.posts.filter((p) => p.videoId === id && p.status !== 'error').map((p) => p.channelId);
     const errors = st.posts.filter((p) => p.videoId === id && p.status === 'error').map((p) => ({channelId: p.channelId, message: p.message}));
-    return [{id, title: s.title.cs, titles: s.title, short: isShort(s), scenes: s.scenes.length, langs, skip: !!st.skip[String(id)], posted: [...new Set(posts)], errors}];
+    return [{id, title: s.title.cs, titles: s.title, engine: isHybrid(s) ? 'hybrid' : isShort(s) ? 'blueprint' : 'classic', scenes: s.scenes.length, langs, skip: !!st.skip[String(id)], posted: [...new Set(posts)], errors}];
   });
 };
 
@@ -439,6 +441,31 @@ const routes: Record<string, (req: http.IncomingMessage, res: http.ServerRespons
     });
   },
   'GET /api/log': (_req, res) => json(res, LOG.slice(-200)),
+  'GET /api/voices': (_req, res) => json(res, {catalog: VOICE_CATALOG, defaults: DEFAULT_VOICE}),
+  'GET /api/voice-preview': async (_req, res, q) => {
+    // ukázka hlasu z knihovny ElevenLabs (odkaz se může měnit, proto ho případně dohledáme)
+    const id = q.get('id') || '';
+    const v = findVoice(id);
+    let url = v?.preview || '';
+    if (!url && v) {
+      try {
+        // s klíčem jde hledat podle jména, bez něj jen přes veřejný žebříček (max 3 výsledky)
+        const key = process.env.ELEVENLABS_API_KEY;
+        const qs = key ? `page_size=10&search=${encodeURIComponent(v.name)}` : `page_size=3&${v.find ?? ''}`;
+        const r = await fetch(`https://api.elevenlabs.io/v1/shared-voices?${qs}`, {headers: key ? {'xi-api-key': key} : {}});
+        const j = (await r.json()) as {voices?: {voice_id: string; preview_url: string}[]};
+        url = j.voices?.find((x) => x.voice_id === id)?.preview_url || '';
+      } catch {
+        /* bez ukázky */
+      }
+    }
+    if (!url) {
+      res.writeHead(404);
+      return res.end('Ukázka není k dispozici');
+    }
+    res.writeHead(302, {Location: url});
+    res.end();
+  },
   'POST /api/make': async (req, res) => {
     const b = await body(req);
     const ids = (b.ids as number[]) ?? [];

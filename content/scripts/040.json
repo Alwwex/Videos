@@ -1,241 +1,526 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 40,
   "title": {
-    "cs": "Jak funguje bezdrátové nabíjení",
-    "en": "How wireless charging works",
-    "ro": "Cum funcționează încărcarea wireless"
+    "cs": "Proč na fotkách z Měsíce nejsou hvězdy",
+    "en": "Why there are no stars in Moon photos",
+    "ro": "De ce nu sunt stele în pozele de pe Lună"
   },
   "description": {
-    "cs": "Žádný kabel, a mobil se nabíjí. Pomáhá mu magnetické pole a 200 let starý objev. 🔋",
-    "en": "No cable, yet the phone charges. Thanks to a magnetic field and a 200-year-old discovery. 🔋",
-    "ro": "Fără cablu, și totuși telefonul se încarcă. Datorită unui câmp magnetic. 🔋"
+    "cs": "Konspirace? Ne. Stačí vyfotit lampu v noci. 📷🌕",
+    "en": "A conspiracy? Nope. Just photograph a streetlight at night. 📷🌕",
+    "ro": "Conspirație? Nu. Fotografiază un felinar noaptea. 📷🌕"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "nabijeni",
-    "magnet",
-    "technology"
+    "mesic",
+    "apollo",
+    "moon"
   ],
+  "hook": {
+    "cs": "KDE JSOU NA FOTKÁCH HVĚZDY?",
+    "en": "WHERE ARE THE STARS?",
+    "ro": "UNDE SUNT STELELE?"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Položíš mobil na podložku a nabíjí se *bez kabelu*.",
-        "en": "Put your phone on a pad and it charges *with no cable*.",
-        "ro": "Pui telefonul pe un suport și se încarcă *fără cablu*."
+        "cs": "Na fotkách z Měsíce nejsou *hvězdy*. Spiknutí?",
+        "en": "There are no *stars* in the Moon landing photos. A conspiracy?",
+        "ro": "În pozele de pe Lună nu sunt *stele*. Conspirație?"
       },
-      "headline": {
-        "cs": "NABÍJENÍ|BEZ KABELU",
-        "en": "CHARGING|WITHOUT CABLES",
-        "ro": "ÎNCĂRCARE|FĂRĂ CABLU"
-      },
-      "tag": "WIRELESS CHARGING",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "phone",
-        "icon2": "battery",
-        "relation": "plus",
-        "effect": "pulse",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "V podložce i v mobilu je *cívka* z drátu.",
-        "en": "There's a *coil* of wire in both the pad and the phone.",
-        "ro": "Și în suport, și în telefon e o *bobină* de sârmă."
-      },
-      "headline": {
-        "cs": "DVĚ|CÍVKY",
-        "en": "TWO|COILS",
-        "ro": "DOUĂ|BOBINE"
-      },
-      "tag": "Qi STANDARD",
-      "accent": "teal",
-      "visual": {
-        "type": "icon",
-        "icon": "coil",
-        "icon2": "coil",
-        "relation": "arrow",
-        "effect": "none",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Střídavý proud v podložce vytvoří *magnetické pole*.",
-        "en": "Alternating current in the pad makes a *magnetic field*.",
-        "ro": "Curentul alternativ din suport creează un *câmp magnetic*."
-      },
-      "headline": {
-        "cs": "MAGNETICKÉ|POLE",
-        "en": "MAGNETIC|FIELD",
-        "ro": "CÂMP|MAGNETIC"
-      },
-      "tag": "ELECTROMAGNETISM",
-      "accent": "blue",
-      "visual": {
-        "type": "field",
-        "mode": "magnet",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "To pole se *otáčí* sem a tam, statisíckrát za sekundu.",
-        "en": "That field *flips* back and forth over 100,000 times a second.",
-        "ro": "Câmpul *se inversează* de peste 100.000 de ori pe secundă."
-      },
-      "headline": {
-        "cs": "MĚNÍ SE|POŘÁD",
-        "en": "ALWAYS|CHANGING",
-        "ro": "MEREU|SCHIMBĂTOR"
-      },
-      "tag": "≈ 100–200 kHz",
-      "accent": "yellow",
-      "visual": {
-        "type": "wave",
-        "mode": "single",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Měnící se pole *rozhýbe elektrony* v cívce mobilu.",
-        "en": "The changing field *pushes electrons* in the phone's coil.",
-        "ro": "Câmpul variabil *mișcă electronii* din bobina telefonului."
-      },
-      "headline": {
-        "cs": "INDUKCE|PROUDU",
-        "en": "INDUCED|CURRENT",
-        "ro": "CURENT|INDUS"
-      },
-      "tag": "FARADAY 1831",
-      "accent": "teal",
-      "visual": {
-        "type": "field",
-        "mode": "coil",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Objevil to *Michael Faraday* už v roce 1831.",
-        "en": "*Michael Faraday* discovered this back in 1831.",
-        "ro": "*Michael Faraday* a descoperit asta în 1831."
-      },
-      "headline": {
-        "cs": "FARADAYŮV|ZÁKON",
-        "en": "FARADAY'S|LAW",
-        "ro": "LEGEA LUI|FARADAY"
-      },
-      "tag": "INDUCTION",
-      "accent": "yellow",
-      "visual": {
-        "type": "formula",
-        "tex": "U = -N\\,\\frac{\\hl{d\\Phi}}{dt}",
-        "caption": {
-          "cs": "rychlejší změna pole = víc napětí",
-          "en": "faster field change = more voltage",
-          "ro": "schimbare rapidă = tensiune mai mare"
-        }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Cívky musí být blízko, jinak se pole *rozplyne*.",
-        "en": "The coils must be close, or the field *fades away*.",
-        "ro": "Bobinele trebuie să fie aproape, altfel câmpul *se pierde*."
-      },
-      "headline": {
-        "cs": "JEN PÁR|MILIMETRŮ",
-        "en": "ONLY A FEW|MILLIMETERS",
-        "ro": "DOAR CÂȚIVA|MILIMETRI"
-      },
-      "tag": "COUPLING",
-      "accent": "red",
-      "visual": {
-        "type": "graph",
-        "curve": "inverse",
-        "curve2": null,
-        "x": {
-          "cs": "vzdálenost",
-          "en": "distance",
-          "ro": "distanță"
+      "environment": "space",
+      "props": [
+        {
+          "id": "ground",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.4,
+          "rotationY": 0,
+          "color": "#9a9a9a",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "y": {
-          "cs": "účinnost",
-          "en": "efficiency",
-          "ro": "eficiență"
+        {
+          "id": "astro",
+          "type": "astronaut",
+          "position": [
+            0,
+            0.2,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "markLabel": {
-          "cs": "dál = mnohem slabší",
-          "en": "farther = much weaker",
-          "ro": "departe = mult mai slab"
+        {
+          "id": "rock",
+          "type": "mountain",
+          "position": [
+            -2.5,
+            0.2,
+            -2.5
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": "#8d8d8d",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "astro",
+        "distance": 4.6,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Část energie se ztratí jako *teplo*, proto mobil hřeje.",
-        "en": "Some energy is lost as *heat*, that's why the phone gets warm.",
-        "ro": "O parte din energie se pierde ca *căldură*, de aceea telefonul se încălzește."
+        "cs": "Ne. Dělá to i tvůj *mobil* v noci.",
+        "en": "Nope. Your *phone* does the same at night.",
+        "ro": "Nu. Și *telefonul* tău face la fel noaptea."
       },
-      "headline": {
-        "cs": "PROČ|HŘEJE",
-        "en": "WHY IT|GETS WARM",
-        "ro": "DE CE|SE ÎNCĂLZEȘTE"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "phone",
+          "type": "phone",
+          "position": [
+            0,
+            0.85,
+            0.1
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "phone",
+        "distance": 2.2,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "tag": "EFFICIENCY",
-      "accent": "red",
-      "visual": {
-        "type": "bars",
-        "items": [
-          {
-            "label": {
-              "cs": "kabel",
-              "en": "cable",
-              "ro": "cablu"
-            },
-            "value": 90,
-            "highlight": false
-          },
-          {
-            "label": {
-              "cs": "bezdrátově",
-              "en": "wireless",
-              "ro": "wireless"
-            },
-            "value": 70,
-            "highlight": true
+      "notes": [
+        {
+          "prop": "phone",
+          "text": {
+            "cs": "zkus to",
+            "en": "try it",
+            "ro": "încearcă"
           }
-        ],
-        "unit": {
-          "cs": " %",
-          "en": "%",
-          "ro": " %"
         }
-      }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
-        "en": "Follow for more *physics around you*.",
-        "ro": "Urmărește pentru mai multă *fizică din jurul tău*."
+        "cs": "Fotili ve dne, na *ostře nasvíceném* povrchu.",
+        "en": "They shot in daylight, on a *blazing bright* surface.",
+        "ro": "Au fotografiat ziua, pe o suprafață *puternic luminată*."
       },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      "environment": "space",
+      "props": [
+        {
+          "id": "ground",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.4,
+          "rotationY": 0,
+          "color": "#9a9a9a",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "astro",
+          "type": "astronaut",
+          "position": [
+            0,
+            0.2,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "rock",
+          "type": "mountain",
+          "position": [
+            -2.5,
+            0.2,
+            -2.5
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": "#8d8d8d",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            5,
+            6,
+            -8
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "sun",
+          "to": "astro",
+          "kind": "light"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "astro",
+        "distance": 6,
+        "angle": "low",
+        "move": "orbitRight"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Foťák proto cvakl jen *zlomek sekundy*.",
+        "en": "So the camera only opened for a *split second*.",
+        "ro": "Așa că aparatul s-a deschis doar o *fracțiune de secundă*."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "ground",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.4,
+          "rotationY": 0,
+          "color": "#9a9a9a",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "astro",
+          "type": "astronaut",
+          "position": [
+            0,
+            0.2,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "astro",
+        "distance": 3.2,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
+        "type": "formula",
+        "tex": "t = \\hl{\\tfrac{1}{250}}\\ \\text{s}",
+        "caption": {
+          "cs": "typická expozice na Měsíci",
+          "en": "typical exposure on the Moon",
+          "ro": "expunere tipică pe Lună"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Slabé hvězdy se do té chvilky prostě *nevešly*.",
+        "en": "Faint stars just *didn't register* in that instant.",
+        "ro": "Stelele slabe pur și simplu *n-au apucat să apară*."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "ground",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.4,
+          "rotationY": 0,
+          "color": "#9a9a9a",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "astro",
+          "type": "astronaut",
+          "position": [
+            0,
+            0.2,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "rock",
+          "type": "mountain",
+          "position": [
+            -2.5,
+            0.2,
+            -2.5
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": "#8d8d8d",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "rock",
+        "distance": 6,
+        "angle": "frontLeft",
+        "move": "orbitLeft"
+      },
+      "notes": [
+        {
+          "prop": "rock",
+          "text": {
+            "cs": "moc slabé",
+            "en": "too faint",
+            "ro": "prea slabe"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Vyfoť si večer lampu na ulici. Hvězdy *taky zmizí*.",
+        "en": "Shoot a streetlight at night. The stars *vanish too*.",
+        "ro": "Fotografiază un felinar noaptea. Și stelele *dispar*."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "lamp",
+          "type": "bulb",
+          "position": [
+            1.5,
+            0,
+            -0.5
+          ],
+          "scale": 2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -0.6,
+            0,
+            0.6
+          ],
+          "scale": 1,
+          "rotationY": 20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "house",
+          "type": "house",
+          "position": [
+            3,
+            0,
+            -3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "lamp",
+        "distance": 5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "lamp",
+          "text": {
+            "cs": "jen lampa",
+            "en": "just the lamp",
+            "ro": "doar felinarul"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Na Měsíci je přitom nebe *černé* i ve dne.",
+        "en": "And yet the Moon's sky is *black* even at noon.",
+        "ro": "Și totuși cerul Lunii e *negru* chiar și ziua."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "ground",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.4,
+          "rotationY": 0,
+          "color": "#9a9a9a",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "astro",
+          "type": "astronaut",
+          "position": [
+            0,
+            0.2,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "rock",
+          "type": "mountain",
+          "position": [
+            -2.5,
+            0.2,
+            -2.5
+          ],
+          "scale": 0.6,
+          "rotationY": 0,
+          "color": "#8d8d8d",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "astro",
+        "distance": 5,
+        "angle": "low",
+        "move": "rise"
+      },
+      "notes": [
+        {
+          "prop": "astro",
+          "text": {
+            "cs": "černé nebe",
+            "en": "black sky",
+            "ro": "cer negru"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

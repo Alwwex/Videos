@@ -1,251 +1,543 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 16,
   "title": {
-    "cs": "Proč hrom slyšíš až po blesku",
-    "en": "Why thunder comes after lightning",
-    "ro": "De ce auzi tunetul după fulger"
+    "cs": "Tvoje hlava je starší než nohy",
+    "en": "Your head is older than your feet",
+    "ro": "Capul tău e mai bătrân decât picioarele"
   },
   "description": {
-    "cs": "Blesk a hrom vzniknou ve stejnou chvíli. Proč je tedy neslyšíš současně? ⚡",
-    "en": "Lightning and thunder happen at the same moment. So why don't they arrive together? ⚡",
-    "ro": "Fulgerul și tunetul apar în același moment. Atunci de ce nu ajung odată? ⚡"
+    "cs": "Einstein měl pravdu i u tebe doma. Hlava stárne rychleji. ⏱️",
+    "en": "Einstein was right even in your living room. Your head ages faster. ⏱️",
+    "ro": "Einstein avea dreptate chiar și în sufrageria ta. Capul îmbătrânește mai repede. ⏱️"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "blesk",
-    "bourka",
-    "lightning"
+    "einstein",
+    "cas",
+    "relativity"
   ],
+  "hook": {
+    "cs": "TVOJE HLAVA JE STARŠÍ NEŽ NOHY",
+    "en": "YOUR HEAD IS OLDER THAN YOUR FEET",
+    "ro": "CAPUL TĂU E MAI BĂTRÂN DECÂT PICIOARELE"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Blesk a hrom vzniknou *přesně ve stejnou chvíli*.",
-        "en": "Lightning and thunder happen at the *exact same moment*.",
-        "ro": "Fulgerul și tunetul apar în *exact același moment*."
+        "cs": "Tvoje hlava stárne *rychleji* než tvoje nohy.",
+        "en": "Your head is aging *faster* than your feet.",
+        "ro": "Capul tău îmbătrânește *mai repede* decât picioarele."
       },
-      "headline": {
-        "cs": "STEJNÝ OKAMŽIK|JINÝ PŘÍCHOD",
-        "en": "SAME MOMENT|DIFFERENT ARRIVAL",
-        "ro": "ACELAȘI MOMENT|ALTĂ SOSIRE"
-      },
-      "tag": "STORM OBSERVATION",
-      "accent": "yellow",
-      "visual": {
-        "type": "field",
-        "mode": "spark",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Tak proč nejdřív vidíš záblesk a pak teprve hřmí?",
-        "en": "So why do you see the flash first, and hear it later?",
-        "ro": "Atunci de ce vezi întâi lumina și abia apoi auzi?"
-      },
-      "headline": {
-        "cs": "NEJDŘÍV|ZÁBLESK",
-        "en": "FLASH|FIRST",
-        "ro": "ÎNTÂI|LUMINA"
-      },
-      "tag": "QUESTION",
-      "accent": "red",
-      "visual": {
-        "type": "icon",
-        "icon": "eye",
-        "icon2": "ear",
-        "relation": "vs",
-        "effect": "pulse",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Světlo letí rychlostí *300 000 kilometrů* za sekundu.",
-        "en": "Light travels *300,000 kilometers* every second.",
-        "ro": "Lumina parcurge *300.000 de kilometri* pe secundă."
-      },
-      "headline": {
-        "cs": "RYCHLOST|SVĚTLA",
-        "en": "SPEED OF|LIGHT",
-        "ro": "VITEZA|LUMINII"
-      },
-      "tag": "c = 3·10⁸ m/s",
-      "accent": "yellow",
-      "visual": {
-        "type": "counter",
-        "from": 0,
-        "to": 300000,
-        "decimals": 0,
-        "unit": {
-          "cs": " km/s",
-          "en": " km/s",
-          "ro": " km/s"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "caption": {
-          "cs": "k tobě dorazí prakticky okamžitě",
-          "en": "it reaches you almost instantly",
-          "ro": "ajunge la tine aproape instant"
-        }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Zvuk je strašně pomalý, jen asi *343 metrů* za sekundu.",
-        "en": "Sound is painfully slow, only about *343 meters* per second.",
-        "ro": "Sunetul e foarte lent, doar vreo *343 de metri* pe secundă."
-      },
-      "headline": {
-        "cs": "RYCHLOST|ZVUKU",
-        "en": "SPEED OF|SOUND",
-        "ro": "VITEZA|SUNETULUI"
-      },
-      "tag": "AIR · 20 °C",
-      "accent": "red",
-      "visual": {
-        "type": "counter",
-        "from": 0,
-        "to": 343,
-        "decimals": 0,
-        "unit": {
-          "cs": " m/s",
-          "en": " m/s",
-          "ro": " m/s"
+        {
+          "id": "ctop",
+          "type": "clock",
+          "position": [
+            0.7,
+            1.55,
+            0.2
+          ],
+          "scale": 0.42,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "caption": {
-          "cs": "téměř milionkrát pomalejší než světlo",
-          "en": "almost a million times slower than light",
-          "ro": "de aproape un milion de ori mai lent"
+        {
+          "id": "cbot",
+          "type": "clock",
+          "position": [
+            0.7,
+            0,
+            0.2
+          ],
+          "scale": 0.42,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 4.4,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Na jeden kilometr potřebuje zvuk zhruba *tři sekundy*.",
-        "en": "Sound needs about *three seconds* for one kilometer.",
-        "ro": "Sunetului îi trebuie vreo *trei secunde* pe kilometru."
+        "cs": "Není to metafora. Je to *Einstein*.",
+        "en": "Not a metaphor. That's *Einstein*.",
+        "ro": "Nu e o metaforă. E *Einstein*."
       },
-      "headline": {
-        "cs": "1 KM =|3 SEKUNDY",
-        "en": "1 KM =|3 SECONDS",
-        "ro": "1 KM =|3 SECUNDE"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ctop",
+          "type": "clock",
+          "position": [
+            0.7,
+            1.55,
+            0.2
+          ],
+          "scale": 0.42,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cbot",
+          "type": "clock",
+          "position": [
+            0.7,
+            0,
+            0.2
+          ],
+          "scale": 0.42,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ctop",
+        "distance": 2.4,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "tag": "DELAY PER KILOMETER",
-      "accent": "teal",
-      "visual": {
-        "type": "bars",
-        "items": [
-          {
-            "label": {
-              "cs": "světlo",
-              "en": "light",
-              "ro": "lumina"
-            },
-            "value": 3.3e-06,
-            "highlight": false
-          },
-          {
-            "label": {
-              "cs": "zvuk",
-              "en": "sound",
-              "ro": "sunetul"
-            },
-            "value": 2.9,
-            "highlight": true
+      "notes": [
+        {
+          "prop": "ctop",
+          "text": {
+            "cs": "rychlejší",
+            "en": "faster",
+            "ro": "mai rapid"
           }
-        ],
-        "unit": {
-          "cs": " s",
-          "en": " s",
-          "ro": " s"
         }
-      }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Takže počítej sekundy mezi zábleskem a hromem.",
-        "en": "So count the seconds between the flash and the boom.",
-        "ro": "Deci numără secundele dintre fulger și tunet."
+        "cs": "Čím *silnější gravitace*, tím pomaleji běží čas.",
+        "en": "The *stronger the gravity*, the slower time runs.",
+        "ro": "Cu cât *gravitația e mai puternică*, cu atât timpul curge mai încet."
       },
-      "headline": {
-        "cs": "POČÍTEJ|SEKUNDY",
-        "en": "COUNT THE|SECONDS",
-        "ro": "NUMĂRĂ|SECUNDELE"
+      "environment": "space",
+      "props": [
+        {
+          "id": "earth",
+          "type": "earth",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cnear",
+          "type": "clock",
+          "position": [
+            2.5,
+            -0.6,
+            0.6
+          ],
+          "scale": 1.0,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cfar",
+          "type": "clock",
+          "position": [
+            5.4,
+            1.2,
+            0
+          ],
+          "scale": 1.0,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "earth",
+        "distance": 11,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": "FIELD METHOD",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "clock",
-        "icon2": null,
-        "relation": "none",
-        "effect": "pulse",
-        "caption": null
-      }
+      "notes": [
+        {
+          "prop": "cnear",
+          "text": {
+            "cs": "pomaleji",
+            "en": "slower",
+            "ro": "mai încet"
+          }
+        },
+        {
+          "prop": "cfar",
+          "text": {
+            "cs": "rychleji",
+            "en": "faster",
+            "ro": "mai repede"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Vyděl je *třemi* a máš vzdálenost bouřky v kilometrech.",
-        "en": "Divide by *three* and you get the distance in kilometers.",
-        "ro": "Împarte la *trei* și afli distanța în kilometri."
+        "cs": "Nohy jsou blíž Zemi, takže jejich čas *zpomaluje*.",
+        "en": "Your feet are closer to Earth, so their time *slows down*.",
+        "ro": "Picioarele sunt mai aproape de Pământ, deci timpul lor *încetinește*."
       },
-      "headline": {
-        "cs": "DĚLENO|TŘEMI",
-        "en": "DIVIDE BY|THREE",
-        "ro": "ÎMPARTE|LA TREI"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ctop",
+          "type": "clock",
+          "position": [
+            0.7,
+            1.55,
+            0.2
+          ],
+          "scale": 0.42,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cbot",
+          "type": "clock",
+          "position": [
+            0.7,
+            0,
+            0.2
+          ],
+          "scale": 0.42,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cbot",
+        "distance": 3.6,
+        "angle": "low",
+        "move": "rise"
       },
-      "tag": "DISTANCE",
-      "accent": "yellow",
-      "visual": {
+      "notes": [],
+      "card": {
         "type": "formula",
-        "tex": "d \\approx \\frac{t}{\\hl{3}}\\ \\text{km}",
+        "tex": "\\frac{\\Delta t}{t} = \\frac{g\\,h}{\\hl{c^2}}",
         "caption": {
-          "cs": "9 sekund = bouřka asi 3 km daleko",
-          "en": "9 seconds = storm about 3 km away",
-          "ro": "9 secunde = furtuna e la vreo 3 km"
+          "cs": "h = výškový rozdíl, c = rychlost světla",
+          "en": "h = height difference, c = speed of light",
+          "ro": "h = diferența de înălțime, c = viteza luminii"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Když hřmí hned se zábleskem, bouřka je *přímo nad tebou*.",
-        "en": "If the boom comes with the flash, the storm is *right above you*.",
-        "ro": "Dacă tună odată cu fulgerul, furtuna e *chiar deasupra ta*."
+        "cs": "Atomové hodiny to změřily už na rozdílu *třiceti centimetrů*.",
+        "en": "Atomic clocks measured it over just *thirty centimeters*.",
+        "ro": "Ceasurile atomice au măsurat asta pe doar *treizeci de centimetri*."
       },
-      "headline": {
-        "cs": "ŽÁDNÁ PAUZA =|NEBEZPEČÍ",
-        "en": "NO PAUSE =|DANGER",
-        "ro": "FĂRĂ PAUZĂ =|PERICOL"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ct1",
+          "type": "clock",
+          "position": [
+            -0.5,
+            0.85,
+            0.1
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ct2",
+          "type": "clock",
+          "position": [
+            1.5,
+            0,
+            0.4
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ct1",
+        "distance": 3.6,
+        "angle": "frontLeft",
+        "move": "dollyIn"
       },
-      "tag": "SAFETY",
-      "accent": "red",
-      "visual": {
-        "type": "icon",
-        "icon": "lightning",
-        "icon2": "house",
-        "relation": "arrow",
-        "effect": "shake",
-        "caption": null
-      }
+      "notes": [
+        {
+          "prop": "ct1",
+          "text": {
+            "cs": "+33 cm",
+            "en": "+33 cm",
+            "ro": "+33 cm"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
-        "en": "Follow for more *physics around you*.",
-        "ro": "Urmărește pentru mai multă *fizică din jurul tău*."
+        "cs": "Za celý život je hlava starší asi o *půl mikrosekundy*.",
+        "en": "Over a lifetime your head ends up *half a microsecond* older.",
+        "ro": "Într-o viață, capul ajunge mai bătrân cu *jumătate de microsecundă*."
       },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ctop",
+          "type": "clock",
+          "position": [
+            0.7,
+            1.55,
+            0.2
+          ],
+          "scale": 0.42,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cbot",
+          "type": "clock",
+          "position": [
+            0.7,
+            0,
+            0.2
+          ],
+          "scale": 0.42,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 4.8,
+        "angle": "frontLeft",
+        "move": "orbitRight"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 0.5,
+        "decimals": 1,
+        "unit": {
+          "cs": " µs",
+          "en": " µs",
+          "ro": " µs"
+        },
+        "caption": {
+          "cs": "rozdíl mezi hlavou a nohama za 80 let",
+          "en": "head vs. feet after 80 years",
+          "ro": "cap vs. picioare după 80 de ani"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Takže kdo leží na gauči, stárne aspoň *rovnoměrně*.",
+        "en": "So lying on the couch is technically the *fair option*.",
+        "ro": "Deci cine stă întins pe canapea îmbătrânește măcar *uniform*."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 4.2,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "me",
+          "text": {
+            "cs": "fér",
+            "en": "fair",
+            "ro": "corect"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

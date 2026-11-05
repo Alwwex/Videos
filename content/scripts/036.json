@@ -1,252 +1,597 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 36,
   "title": {
-    "cs": "Jak Měsíc dělá příliv",
-    "en": "How the Moon makes tides",
-    "ro": "Cum face Luna mareele"
+    "cs": "Akvárium ti zabíjí WiFi",
+    "en": "Your fish tank is killing your WiFi",
+    "ro": "Acvariul îți omoară WiFi-ul"
   },
   "description": {
-    "cs": "Měsíc zvedá celé oceány. A dělá to dokonce na dvou stranách Země najednou. 🌊🌙",
-    "en": "The Moon lifts entire oceans. And it does it on two sides of Earth at once. 🌊🌙",
-    "ro": "Luna ridică oceane întregi. Și o face pe două părți ale Pământului deodată. 🌊🌙"
+    "cs": "WiFi jsou mikrovlny. A voda mikrovlny polyká. 🐠📶",
+    "en": "WiFi is microwaves. And water swallows microwaves. 🐠📶",
+    "ro": "WiFi înseamnă microunde. Iar apa înghite microundele. 🐠📶"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "more",
-    "mesic",
-    "tides"
+    "wifi",
+    "internet",
+    "technology"
   ],
+  "hook": {
+    "cs": "AKVÁRIUM TI ZABÍJÍ WIFI",
+    "en": "YOUR FISH TANK KILLS YOUR WIFI",
+    "ro": "ACVARIUL ÎȚI OMOARĂ WIFI-UL"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Dvakrát denně moře *stoupne* a zase ustoupí.",
-        "en": "Twice a day the sea *rises* and falls back again.",
-        "ro": "De două ori pe zi marea *crește* și scade din nou."
+        "cs": "Máš slabou WiFi? Možná za to může *akvárium*.",
+        "en": "Bad WiFi? Your *fish tank* might be the problem.",
+        "ro": "WiFi slab? S-ar putea să fie de vină *acvariul*."
       },
-      "headline": {
-        "cs": "PŘÍLIV|A ODLIV",
-        "en": "HIGH|AND LOW TIDE",
-        "ro": "FLUX|ȘI REFLUX"
-      },
-      "tag": "TIDES",
-      "accent": "blue",
-      "visual": {
-        "type": "icon",
-        "icon": "ship",
-        "icon2": "moon",
-        "relation": "none",
-        "effect": "float",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Za to může *gravitace Měsíce*.",
-        "en": "It's caused by the *Moon's gravity*.",
-        "ro": "Cauza e *gravitația Lunii*."
-      },
-      "headline": {
-        "cs": "MĚSÍC|TÁHNE",
-        "en": "THE MOON|PULLS",
-        "ro": "LUNA|TRAGE"
-      },
-      "tag": "LUNAR GRAVITY",
-      "accent": "yellow",
-      "visual": {
-        "type": "orbit",
-        "mode": "tides",
-        "center": "earth",
-        "body": "moon",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Na bližší stranu Země táhne *silněji* než na vzdálenější.",
-        "en": "It pulls *harder* on Earth's near side than on the far side.",
-        "ro": "Trage *mai tare* de partea apropiată decât de cea îndepărtată."
-      },
-      "headline": {
-        "cs": "BLÍŽ =|SILNĚJI",
-        "en": "CLOSER =|STRONGER",
-        "ro": "APROAPE =|MAI TARE"
-      },
-      "tag": "GRAVITY GRADIENT",
-      "accent": "red",
-      "visual": {
-        "type": "formula",
-        "tex": "F \\propto \\frac{1}{\\hl{r^2}}",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Voda se tím natáhne do dvou *boulí*, k Měsíci i od něj.",
-        "en": "This stretches the water into two *bulges*, toward and away.",
-        "ro": "Apa se întinde în două *umflături*, spre Lună și opus."
-      },
-      "headline": {
-        "cs": "DVĚ|BOULE",
-        "en": "TWO|BULGES",
-        "ro": "DOUĂ|UMFLĂTURI"
-      },
-      "tag": "TIDAL BULGE",
-      "accent": "teal",
-      "visual": {
-        "type": "orbit",
-        "mode": "tides",
-        "center": "earth",
-        "body": "moon",
-        "label": {
-          "cs": "na odvrácené straně voda „zaostává“",
-          "en": "on the far side the water lags behind",
-          "ro": "pe partea opusă apa rămâne în urmă"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "router",
+          "type": "router",
+          "position": [
+            -0.6,
+            0.85,
+            0.1
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "t2",
+          "type": "table",
+          "position": [
+            2.6,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "aqua",
+          "type": "aquarium",
+          "position": [
+            2.6,
+            0.85,
+            -0.1
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "router",
+          "kind": "radio"
+        }
+      ],
+      "camera": {
+        "focus": "aqua",
+        "distance": 5,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Země se pod nimi otočí jednou za den, proto *dva přílivy*.",
-        "en": "Earth turns under them once a day, giving *two high tides*.",
-        "ro": "Pământul se rotește sub ele zilnic, deci *două fluxuri*."
+        "cs": "WiFi jsou mikrovlny. Stejné jako v *mikrovlnce*.",
+        "en": "WiFi is microwaves. Same kind as in your *microwave oven*.",
+        "ro": "WiFi înseamnă microunde. Ca în *cuptorul cu microunde*."
       },
-      "headline": {
-        "cs": "DVA PŘÍLIVY|DENNĚ",
-        "en": "TWO TIDES|A DAY",
-        "ro": "DOUĂ FLUXURI|PE ZI"
-      },
-      "tag": "≈ 12 h 25 min",
-      "accent": "yellow",
-      "visual": {
-        "type": "graph",
-        "curve": "sine",
-        "curve2": null,
-        "x": {
-          "cs": "hodiny",
-          "en": "hours",
-          "ro": "ore"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "y": {
-          "cs": "hladina",
-          "en": "sea level",
-          "ro": "nivel"
-        },
-        "markLabel": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Slunce pomáhá taky. Při úplňku je příliv *nejvyšší*.",
-        "en": "The Sun helps too. At full and new moon, tides are *highest*.",
-        "ro": "Ajută și Soarele. La lună plină, mareele sunt *cele mai mari*."
+        {
+          "id": "mw",
+          "type": "microwave",
+          "position": [
+            0.1,
+            0.85,
+            0
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "mw",
+          "kind": "microwaves"
+        }
+      ],
+      "camera": {
+        "focus": "mw",
+        "distance": 2.6,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "headline": {
-        "cs": "SKOČNÝ|PŘÍLIV",
-        "en": "SPRING|TIDES",
-        "ro": "MAREE|MARI"
-      },
-      "tag": "SUN + MOON",
-      "accent": "red",
-      "visual": {
-        "type": "icon",
-        "icon": "sun",
-        "icon2": "moon",
-        "relation": "plus",
-        "effect": "pulse",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "V zálivu Fundy v Kanadě stoupne moře o *16 metrů*.",
-        "en": "In Canada's Bay of Fundy the sea rises *16 meters*.",
-        "ro": "În Golful Fundy din Canada, marea crește cu *16 metri*."
-      },
-      "headline": {
-        "cs": "REKORD|16 METRŮ",
-        "en": "RECORD|16 METERS",
-        "ro": "RECORD|16 METRI"
-      },
-      "tag": "BAY OF FUNDY",
-      "accent": "blue",
-      "visual": {
-        "type": "bars",
-        "items": [
-          {
-            "label": {
-              "cs": "běžné pobřeží",
-              "en": "typical coast",
-              "ro": "coastă obișnuită"
-            },
-            "value": 2,
-            "highlight": false
+      "notes": [],
+      "card": {
+        "type": "compare",
+        "left": {
+          "icon": "router",
+          "label": {
+            "cs": "WiFi",
+            "en": "WiFi",
+            "ro": "WiFi"
           },
-          {
-            "label": {
-              "cs": "Fundy",
-              "en": "Fundy",
-              "ro": "Fundy"
-            },
-            "value": 16,
-            "highlight": true
+          "value": {
+            "cs": "2,4 GHz",
+            "en": "2.4 GHz",
+            "ro": "2,4 GHz"
           }
-        ],
-        "unit": {
-          "cs": " m",
-          "en": " m",
-          "ro": " m"
-        }
-      }
-    },
-    {
-      "narration": {
-        "cs": "A tření přílivu pomalu *brzdí* rotaci Země.",
-        "en": "And tidal friction slowly *brakes* Earth's spin.",
-        "ro": "Iar frecarea mareelor *frânează* încet rotația Pământului."
-      },
-      "headline": {
-        "cs": "DEN SE|PRODLUŽUJE",
-        "en": "DAYS ARE|GETTING LONGER",
-        "ro": "ZIUA SE|LUNGEȘTE"
-      },
-      "tag": "TIDAL BRAKING",
-      "accent": "teal",
-      "visual": {
-        "type": "counter",
-        "from": 0,
-        "to": 1.8,
-        "decimals": 1,
-        "unit": {
-          "cs": " ms/století",
-          "en": " ms/century",
-          "ro": " ms/secol"
         },
-        "caption": {
-          "cs": "o tolik se den prodlouží",
-          "en": "how much longer a day gets",
-          "ro": "cu atât se lungește ziua"
-        }
-      }
+        "right": {
+          "icon": "box",
+          "label": {
+            "cs": "mikrovlnka",
+            "en": "microwave",
+            "ro": "cuptor"
+          },
+          "value": {
+            "cs": "2,45 GHz",
+            "en": "2.45 GHz",
+            "ro": "2,45 GHz"
+          }
+        },
+        "winner": "none"
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Sleduj, ať ti neuteče další *fyzika kolem tebe*.",
-        "en": "Follow for more *physics around you*.",
-        "ro": "Urmărește pentru mai multă *fizică din jurul tău*."
+        "cs": "A *voda* tyhle vlny skvěle polyká.",
+        "en": "And *water* soaks up those waves really well.",
+        "ro": "Iar *apa* absoarbe foarte bine aceste unde."
       },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "t2",
+          "type": "table",
+          "position": [
+            2.6,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "aqua",
+          "type": "aquarium",
+          "position": [
+            2.6,
+            0.85,
+            -0.1
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "aqua",
+        "distance": 2.8,
+        "angle": "frontLeft",
+        "move": "dollyIn"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [],
+      "card": {
+        "type": "wave",
+        "mode": "blocked",
+        "label": {
+          "cs": "za akváriem zbude slabý signál",
+          "en": "only a weak signal gets through",
+          "ro": "trece doar un semnal slab"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Proto mikrovlnka ohřívá jídlo. A akvárium *dusí signál*.",
+        "en": "That's how microwaves heat food. And why a tank *chokes the signal*.",
+        "ro": "Așa încălzește cuptorul mâncarea. Și de aceea acvariul *sufocă semnalul*."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "router",
+          "type": "router",
+          "position": [
+            -0.6,
+            0.85,
+            0.1
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "t2",
+          "type": "table",
+          "position": [
+            2.6,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "aqua",
+          "type": "aquarium",
+          "position": [
+            2.6,
+            0.85,
+            -0.1
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "t3",
+          "type": "table",
+          "position": [
+            4.6,
+            0,
+            0.1
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "phone",
+          "type": "phone",
+          "position": [
+            4.6,
+            0.85,
+            0.2
+          ],
+          "scale": 0.45,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "router",
+          "kind": "radio"
+        }
+      ],
+      "camera": {
+        "focus": "aqua",
+        "distance": 6,
+        "angle": "front",
+        "move": "orbitRight"
+      },
+      "notes": [
+        {
+          "prop": "phone",
+          "text": {
+            "cs": "1 čárka",
+            "en": "1 bar",
+            "ro": "1 liniuță"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Plné akvárium je pro WiFi horší než *cihlová zeď*.",
+        "en": "A full tank can be worse for WiFi than a *brick wall*.",
+        "ro": "Un acvariu plin poate fi mai rău decât un *perete de cărămidă*."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "t2",
+          "type": "table",
+          "position": [
+            2.6,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "aqua",
+          "type": "aquarium",
+          "position": [
+            2.6,
+            0.85,
+            -0.1
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "aqua",
+        "distance": 3,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
+        "type": "compare",
+        "left": {
+          "icon": "wall",
+          "label": {
+            "cs": "cihlová zeď",
+            "en": "brick wall",
+            "ro": "perete de cărămidă"
+          },
+          "value": {
+            "cs": "ztlumí",
+            "en": "dims it",
+            "ro": "atenuează"
+          }
+        },
+        "right": {
+          "icon": "drop",
+          "label": {
+            "cs": "akvárium",
+            "en": "fish tank",
+            "ro": "acvariu"
+          },
+          "value": {
+            "cs": "skoro zastaví",
+            "en": "nearly stops it",
+            "ro": "aproape oprește"
+          }
+        },
+        "winner": "right"
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Stejně tak velká *zrcadla* a kovové skříně.",
+        "en": "Same goes for big *mirrors* and metal cabinets.",
+        "ro": "La fel și *oglinzile* mari și dulapurile de metal."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "mirror",
+          "type": "mirror",
+          "position": [
+            -1.8,
+            0,
+            -0.6
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "fridge",
+          "type": "fridge",
+          "position": [
+            1.4,
+            0,
+            -0.8
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "mirror",
+        "distance": 5,
+        "angle": "frontRight",
+        "move": "orbitLeft"
+      },
+      "notes": [
+        {
+          "prop": "mirror",
+          "text": {
+            "cs": "kov za sklem",
+            "en": "metal backing",
+            "ro": "metal în spate"
+          }
+        },
+        {
+          "prop": "fridge",
+          "text": {
+            "cs": "kov",
+            "en": "metal",
+            "ro": "metal"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Dej router *vysoko* a mimo vodu.",
+        "en": "Put the router *up high*, with no water in the way.",
+        "ro": "Pune routerul *sus*, fără apă în cale."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "fridge",
+          "type": "fridge",
+          "position": [
+            1.4,
+            0,
+            -0.8
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "router",
+          "type": "router",
+          "position": [
+            1.4,
+            2.0,
+            -0.8
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "router",
+          "kind": "radio"
+        }
+      ],
+      "camera": {
+        "focus": "router",
+        "distance": 3.4,
+        "angle": "low",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "router",
+          "text": {
+            "cs": "sem!",
+            "en": "here!",
+            "ro": "aici!"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

@@ -15,6 +15,10 @@ export const PROP_TYPES = [
   'fridge', 'microwave', 'cup', 'iceCube', 'waterPool', 'person', 'arrow', 'arrowUp',
   'arrowDown', 'windTurbine', 'snowflake', 'thermometer', 'speaker', 'satellite',
   'lightning', 'solarPanel', 'atom', 'lens', 'prism', 'table',
+  // v3 (hybridní krátká videa)
+  'banana', 'clock', 'cat', 'candle', 'candleSpace', 'elevator', 'ant', 'mirror', 'router', 'bird',
+  'powerLine', 'balloon', 'paper', 'aquarium', 'headphones', 'weighScale', 'earthCut', 'planet',
+  'carGlass', 'astronaut', 'goal',
 ] as const;
 export type PropType = (typeof PROP_TYPES)[number];
 
@@ -27,7 +31,7 @@ export const PropSchema = z.object({
   scale: z.number(),
   rotationY: z.number().describe('Rotation around the vertical axis in degrees'),
   color: z.string().nullable().describe('Optional hex color override like "#ff8844", or null'),
-  anim: z.enum(['none', 'spin', 'bob', 'pulse', 'shake', 'slide']),
+  anim: z.enum(['none', 'spin', 'bob', 'pulse', 'shake', 'slide', 'vanish']),
   slideTo: z.array(z.number()).nullable().describe('[x, y, z] target when anim is "slide", else null'),
   glow: z.boolean(),
 });

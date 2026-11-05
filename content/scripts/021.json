@@ -1,254 +1,480 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 21,
   "title": {
-    "cs": "Jak sluchátka vymažou hluk",
-    "en": "How headphones erase noise",
-    "ro": "Cum șterg căștile zgomotul"
+    "cs": "Padá výtah. Pomůže skočit?",
+    "en": "The elevator falls. Should you jump?",
+    "ro": "Cade liftul. Te ajută să sari?"
   },
   "description": {
-    "cs": "Sluchátka s ANC přidají zvuk, aby bylo ticho. Zní to šíleně, ale funguje to. 🎧",
-    "en": "ANC headphones add sound to make silence. Sounds crazy, but it works. 🎧",
-    "ro": "Căștile ANC adaugă sunet ca să facă liniște. Pare nebunesc, dar merge. 🎧"
+    "cs": "Skok těsně před dopadem tě nezachrání. Zachránilo tě něco z roku 1854. 🛗",
+    "en": "Jumping at the last second won't save you. Something from 1854 will. 🛗",
+    "ro": "Săritura în ultima clipă nu te salvează. Te salvează ceva din 1854. 🛗"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "sluchatka",
-    "zvuk",
-    "headphones"
+    "vytah",
+    "gravitace",
+    "elevator"
   ],
+  "hook": {
+    "cs": "PADÁ VÝTAH. SKOČÍŠ?",
+    "en": "THE ELEVATOR FALLS. DO YOU JUMP?",
+    "ro": "CADE LIFTUL. SARI?"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Tyhle sluchátka *přidají zvuk*, aby bylo ticho.",
-        "en": "These headphones *add sound* to create silence.",
-        "ro": "Căștile astea *adaugă sunet* ca să fie liniște."
+        "cs": "Výtah padá. Pomůže *skočit* těsně před dopadem?",
+        "en": "The elevator is falling. Does *jumping* at the last second help?",
+        "ro": "Liftul cade. Te ajută să *sari* în ultima secundă?"
       },
-      "headline": {
-        "cs": "ZVUK, KTERÝ|MAŽE ZVUK",
-        "en": "SOUND THAT|ERASES SOUND",
-        "ro": "SUNET CARE|ȘTERGE SUNET"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "lift",
+          "type": "elevator",
+          "position": [
+            0,
+            7,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0,
+            3,
+            0
+          ],
+          "glow": false
+        },
+        {
+          "id": "rider",
+          "type": "person",
+          "position": [
+            0,
+            7.05,
+            0.05
+          ],
+          "scale": 0.82,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0,
+            3.05,
+            0.05
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "lift",
+        "distance": 5.5,
+        "angle": "frontRight",
+        "move": "dollyIn"
       },
-      "tag": "ACTIVE NOISE CANCELLING",
-      "accent": "teal",
-      "visual": {
-        "type": "icon",
-        "icon": "headphones",
-        "icon2": null,
-        "relation": "none",
-        "effect": "pulse",
-        "caption": null
-      }
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Zvuk je *vlna*, tlak vzduchu kmitá nahoru a dolů.",
-        "en": "Sound is a *wave*, air pressure going up and down.",
-        "ro": "Sunetul e o *undă*, presiunea aerului urcă și coboară."
+        "cs": "Ze dvacátého patra padáš přes *sto kilometrů* za hodinu.",
+        "en": "From the twentieth floor you're doing over *a hundred kilometers an hour*.",
+        "ro": "De la etajul douăzeci ajungi la peste *o sută de kilometri* pe oră."
       },
-      "headline": {
-        "cs": "ZVUK|JE VLNA",
-        "en": "SOUND|IS A WAVE",
-        "ro": "SUNETUL|E O UNDĂ"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "lift",
+          "type": "elevator",
+          "position": [
+            0,
+            5,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0,
+            1.5,
+            0
+          ],
+          "glow": false
+        },
+        {
+          "id": "rider",
+          "type": "person",
+          "position": [
+            0,
+            5.05,
+            0.05
+          ],
+          "scale": 0.82,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            0,
+            1.55,
+            0.05
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "lift",
+        "distance": 5,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": "PRESSURE WAVE",
-      "accent": "yellow",
-      "visual": {
-        "type": "wave",
-        "mode": "single",
-        "label": null
-      }
+      "notes": [],
+      "card": {
+        "type": "gauge",
+        "from": 0,
+        "to": 123,
+        "max": 160,
+        "unit": {
+          "cs": " km/h",
+          "en": " km/h",
+          "ro": " km/h"
+        },
+        "caption": {
+          "cs": "pád z 60 metrů",
+          "en": "falling 60 meters",
+          "ro": "cădere de la 60 de metri"
+        }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Mikrofon na sluchátkách hluk okolí *neustále poslouchá*.",
-        "en": "A microphone on the headphones *constantly listens* to the noise.",
-        "ro": "Un microfon pe căști *ascultă continuu* zgomotul."
+        "cs": "Tvůj nejlepší skok dá asi *deset* nahoru.",
+        "en": "Your best jump gives you maybe *ten* back up.",
+        "ro": "Cel mai bun salt îți dă vreo *zece* în sus."
       },
-      "headline": {
-        "cs": "MIKROFON|POSLOUCHÁ",
-        "en": "THE MIC|LISTENS",
-        "ro": "MICROFONUL|ASCULTĂ"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "lift",
+          "type": "elevator",
+          "position": [
+            0,
+            1.2,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "rider",
+          "type": "person",
+          "position": [
+            0,
+            1.25,
+            0.05
+          ],
+          "scale": 0.82,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "rider",
+        "distance": 3.2,
+        "angle": "frontLeft",
+        "move": "orbitRight"
       },
-      "tag": "STEP 1",
-      "accent": "blue",
-      "visual": {
-        "type": "steps",
-        "items": [
-          {
-            "cs": "mikrofon zachytí hluk",
-            "en": "mic picks up noise",
-            "ro": "microfonul prinde zgomotul"
-          },
-          {
-            "cs": "čip spočítá protivlnu",
-            "en": "chip computes anti-wave",
-            "ro": "cipul calculează antiunda"
-          },
-          {
-            "cs": "reproduktor ji pustí",
-            "en": "speaker plays it",
-            "ro": "difuzorul o redă"
+      "notes": [
+        {
+          "prop": "rider",
+          "text": {
+            "cs": "skok: 10 km/h",
+            "en": "jump: 10 km/h",
+            "ro": "salt: 10 km/h"
           }
-        ],
-        "active": 0
-      }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Čip vyrobí *zrcadlovou vlnu*, přesně obrácenou.",
-        "en": "A chip creates a *mirror wave*, perfectly flipped.",
-        "ro": "Un cip creează o *undă oglindă*, perfect inversată."
+        "cs": "Dopadneš pořád *přes sto*. Skok nepomůže.",
+        "en": "You still hit at *over a hundred*. Jumping won't help.",
+        "ro": "Tot lovești solul cu *peste o sută*. Săritura nu ajută."
       },
-      "headline": {
-        "cs": "OBRÁCENÁ|VLNA",
-        "en": "FLIPPED|WAVE",
-        "ro": "UNDĂ|INVERSATĂ"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "lift",
+          "type": "elevator",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "rider",
+          "type": "person",
+          "position": [
+            0,
+            0.05,
+            0.05
+          ],
+          "scale": 0.82,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "lift",
+        "distance": 4.6,
+        "angle": "low",
+        "move": "dollyIn"
       },
-      "tag": "ANTI-PHASE",
-      "accent": "red",
-      "visual": {
-        "type": "steps",
-        "items": [
-          {
-            "cs": "mikrofon zachytí hluk",
-            "en": "mic picks up noise",
-            "ro": "microfonul prinde zgomotul"
-          },
-          {
-            "cs": "čip spočítá protivlnu",
-            "en": "chip computes anti-wave",
-            "ro": "cipul calculează antiunda"
-          },
-          {
-            "cs": "reproduktor ji pustí",
-            "en": "speaker plays it",
-            "ro": "difuzorul o redă"
-          }
-        ],
-        "active": 1
-      }
-    },
-    {
-      "narration": {
-        "cs": "Kde má hluk kopec, má protivlna *údolí*.",
-        "en": "Where the noise has a peak, the anti-wave has a *dip*.",
-        "ro": "Unde zgomotul are un vârf, antiunda are o *vale*."
-      },
-      "headline": {
-        "cs": "KOPEC +|ÚDOLÍ",
-        "en": "PEAK +|DIP",
-        "ro": "VÂRF +|VALE"
-      },
-      "tag": "DESTRUCTIVE INTERFERENCE",
-      "accent": "teal",
-      "visual": {
-        "type": "wave",
-        "mode": "cancel",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Sečtou se na *nulu* a ty slyšíš ticho.",
-        "en": "They add up to *zero*, and you hear silence.",
-        "ro": "Se adună la *zero* și auzi liniște."
-      },
-      "headline": {
-        "cs": "SOUČET|= TICHO",
-        "en": "SUM|= SILENCE",
-        "ro": "SUMA|= LINIȘTE"
-      },
-      "tag": "SUPERPOSITION",
-      "accent": "teal",
-      "visual": {
-        "type": "formula",
-        "tex": "\\sin x + \\sin(x+\\pi) = \\hl{0}",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Nejlíp to funguje na *hučení* motoru letadla nebo vlaku.",
-        "en": "It works best on the *hum* of plane or train engines.",
-        "ro": "Merge cel mai bine pe *zumzetul* motoarelor de avion."
-      },
-      "headline": {
-        "cs": "NEJLÍP NA|HUČENÍ",
-        "en": "BEST ON|LOW HUM",
-        "ro": "CEL MAI BINE|PE ZUMZET"
-      },
-      "tag": "LOW FREQUENCIES",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "plane",
-        "icon2": "headphones",
-        "relation": "arrow",
-        "effect": "shake",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Vysoké tóny jako hlas tlumí hlavně *polstrování*.",
-        "en": "High sounds like voices are mostly blocked by the *cushions*.",
-        "ro": "Sunetele înalte, ca vocile, le opresc mai ales *pernițele*."
-      },
-      "headline": {
-        "cs": "HLASY TLUMÍ|POLŠTÁŘKY",
-        "en": "CUSHIONS STOP|VOICES",
-        "ro": "PERNIȚELE|OPRESC VOCILE"
-      },
-      "tag": "PASSIVE ISOLATION",
-      "accent": "blue",
-      "visual": {
+      "notes": [],
+      "card": {
         "type": "bars",
         "items": [
           {
             "label": {
-              "cs": "hučení motoru",
-              "en": "engine hum",
-              "ro": "zumzet motor"
+              "cs": "bez skoku",
+              "en": "no jump",
+              "ro": "fără salt"
             },
-            "value": 95,
-            "highlight": true
+            "value": 123,
+            "highlight": false
           },
           {
             "label": {
-              "cs": "lidské hlasy",
-              "en": "voices",
-              "ro": "voci"
+              "cs": "se skokem",
+              "en": "with jump",
+              "ro": "cu salt"
             },
-            "value": 40,
-            "highlight": false
+            "value": 113,
+            "highlight": true
           }
         ],
         "unit": {
-          "cs": " % ANC",
-          "en": "% ANC",
-          "ro": " % ANC"
+          "cs": " km/h",
+          "en": " km/h",
+          "ro": " km/h"
         }
-      }
+      },
+      "shake": true
     },
     {
       "narration": {
-        "cs": "Překvapilo tě to? Dej *sledovat* pro další díl.",
-        "en": "Surprised? Hit *follow* for the next one.",
-        "ro": "Te-a surprins? Dă *follow* pentru următorul."
+        "cs": "Jenže výtahy prakticky *nepadají*.",
+        "en": "But elevators basically *don't fall*.",
+        "ro": "Dar lifturile practic *nu cad*."
       },
-      "headline": {
-        "cs": "DALŠÍ DÍL|UŽ BRZY",
-        "en": "NEXT EPISODE|SOON",
-        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "lift",
+          "type": "elevator",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "rider",
+          "type": "person",
+          "position": [
+            0,
+            0.05,
+            0.05
+          ],
+          "scale": 0.82,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "lift",
+        "distance": 5,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [
+        {
+          "prop": "lift",
+          "text": {
+            "cs": "skoro nikdy",
+            "en": "almost never",
+            "ro": "aproape niciodată"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Mají *bezpečnostní brzdy*, které se při pádu zakousnou do kolejnic.",
+        "en": "They have *safety brakes* that bite into the rails if they drop.",
+        "ro": "Au *frâne de siguranță* care se înfig în ghidaje dacă liftul cade."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "lift",
+          "type": "elevator",
+          "position": [
+            0,
+            2,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "rider",
+          "type": "person",
+          "position": [
+            0,
+            2.05,
+            0.05
+          ],
+          "scale": 0.82,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "lift",
+        "distance": 3.8,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "lift",
+          "text": {
+            "cs": "brzdy",
+            "en": "brakes",
+            "ro": "frâne"
+          }
+        }
+      ],
+      "card": null,
+      "shake": true
+    },
+    {
+      "narration": {
+        "cs": "V roce 1854 to Elisha *Otis* předvedl: nechal si přeseknout lano.",
+        "en": "In 1854 Elisha *Otis* proved it: he had his own rope cut.",
+        "ro": "În 1854, Elisha *Otis* a demonstrat: și-a lăsat cablul tăiat."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "lift",
+          "type": "elevator",
+          "position": [
+            0,
+            3,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "rider",
+          "type": "person",
+          "position": [
+            0,
+            3.05,
+            0.05
+          ],
+          "scale": 0.82,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "rider",
+        "distance": 4.2,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "rider",
+          "text": {
+            "cs": "1854",
+            "en": "1854",
+            "ro": "1854"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

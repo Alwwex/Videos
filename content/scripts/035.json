@@ -1,290 +1,474 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 35,
   "title": {
-    "cs": "Proč máme roční období",
-    "en": "Why we have seasons",
-    "ro": "De ce avem anotimpuri"
+    "cs": "Sluchátka dělají hluk, aby bylo ticho",
+    "en": "Headphones make noise to make silence",
+    "ro": "Căștile fac zgomot ca să fie liniște"
   },
   "description": {
-    "cs": "Léto není proto, že jsme blíž Slunci. V lednu jsme mu totiž nejblíž. 🌍☀️",
-    "en": "Summer isn't because we're closer to the Sun. We're actually closest in January. 🌍☀️",
-    "ro": "Vara nu e pentru că suntem mai aproape de Soare. Suntem cel mai aproape în ianuarie. 🌍☀️"
+    "cs": "Protihluk. Vlna, která smaže jinou vlnu. 🎧",
+    "en": "Anti-noise. A wave that erases another wave. 🎧",
+    "ro": "Anti-zgomot. O undă care șterge altă undă. 🎧"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "leto",
-    "zima",
-    "seasons"
+    "sluchatka",
+    "zvuk",
+    "headphones"
   ],
+  "hook": {
+    "cs": "HLUK, KTERÝ DĚLÁ TICHO",
+    "en": "NOISE THAT MAKES SILENCE",
+    "ro": "ZGOMOT CARE FACE LINIȘTE"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Léto není proto, že jsme blíž *Slunci*.",
-        "en": "Summer is not because we're closer to the *Sun*.",
-        "ro": "Vara nu e pentru că suntem mai aproape de *Soare*."
+        "cs": "Tvoje sluchátka vyrábí *hluk*, aby bylo ticho.",
+        "en": "Your headphones make *noise* to make silence.",
+        "ro": "Căștile tale fac *zgomot* ca să fie liniște."
       },
-      "headline": {
-        "cs": "MÝTUS:|VZDÁLENOST",
-        "en": "MYTH:|DISTANCE",
-        "ro": "MIT:|DISTANȚA"
-      },
-      "tag": "COMMON MYTH",
-      "accent": "red",
-      "visual": {
-        "type": "icon",
-        "icon": "sun",
-        "icon2": "earth",
-        "relation": "arrow",
-        "effect": "pulse",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Nejblíž Slunci jsme ve skutečnosti *v lednu*.",
-        "en": "We're actually closest to the Sun *in January*.",
-        "ro": "De fapt, suntem cel mai aproape de Soare *în ianuarie*."
-      },
-      "headline": {
-        "cs": "NEJBLÍŽ|V LEDNU",
-        "en": "CLOSEST IN|JANUARY",
-        "ro": "CEL MAI APROAPE|ÎN IANUARIE"
-      },
-      "tag": "PERIHELION",
-      "accent": "blue",
-      "visual": {
-        "type": "bars",
-        "items": [
-          {
-            "label": {
-              "cs": "leden",
-              "en": "January",
-              "ro": "ianuarie"
-            },
-            "value": 147,
-            "highlight": true
-          },
-          {
-            "label": {
-              "cs": "červenec",
-              "en": "July",
-              "ro": "iulie"
-            },
-            "value": 152,
-            "highlight": false
-          }
-        ],
-        "unit": {
-          "cs": " mil. km",
-          "en": "M km",
-          "ro": " mil. km"
-        }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Za všechno může *naklonění* zemské osy.",
-        "en": "It's all because Earth's axis is *tilted*.",
-        "ro": "Totul vine de la *înclinarea* axei Pământului."
-      },
-      "headline": {
-        "cs": "NAKLONĚNÁ|OSA",
-        "en": "TILTED|AXIS",
-        "ro": "AXA|ÎNCLINATĂ"
-      },
-      "tag": "AXIAL TILT",
-      "accent": "yellow",
-      "visual": {
-        "type": "gauge",
-        "from": 0,
-        "to": 23.4,
-        "max": 90,
-        "unit": {
-          "cs": "°",
-          "en": "°",
-          "ro": "°"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "caption": {
-          "cs": "osa míří pořád stejným směrem",
-          "en": "the axis always points the same way",
-          "ro": "axa arată mereu în aceeași direcție"
+        {
+          "id": "hp",
+          "type": "headphones",
+          "position": [
+            0,
+            1.56,
+            0.3
+          ],
+          "scale": 1.25,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "hp",
+        "distance": 2.4,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Když je k Slunci nakloněná naše polokoule, máme *léto*.",
-        "en": "When our hemisphere tilts toward the Sun, it's *summer*.",
-        "ro": "Când emisfera noastră e înclinată spre Soare, e *vară*."
+        "cs": "Zvuk jsou jen *vlny* tlaku vzduchu.",
+        "en": "Sound is just *waves* of air pressure.",
+        "ro": "Sunetul e doar *unde* de presiune a aerului."
       },
-      "headline": {
-        "cs": "NAKLONĚNÍ|= LÉTO",
-        "en": "TILTED TOWARD|= SUMMER",
-        "ro": "ÎNCLINARE|= VARĂ"
-      },
-      "tag": "ORBIT",
-      "accent": "teal",
-      "visual": {
-        "type": "orbit",
-        "mode": "tilt",
-        "center": "sun",
-        "body": "earth",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Slunce je výš a paprsky dopadají *kolměji*.",
-        "en": "The Sun is higher and its rays hit more *directly*.",
-        "ro": "Soarele e mai sus și razele cad mai *direct*."
-      },
-      "headline": {
-        "cs": "STRMĚJŠÍ|PAPRSKY",
-        "en": "STEEPER|RAYS",
-        "ro": "RAZE|MAI DIRECTE"
-      },
-      "tag": "SOLAR ANGLE",
-      "accent": "yellow",
-      "visual": {
-        "type": "compare",
-        "left": {
-          "icon": "sun",
-          "label": {
-            "cs": "léto",
-            "en": "summer",
-            "ro": "vară"
-          },
-          "value": {
-            "cs": "vysoko",
-            "en": "high",
-            "ro": "sus"
-          }
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "spk",
+          "type": "speaker",
+          "position": [
+            1.8,
+            0,
+            -0.6
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "right": {
-          "icon": "sun",
-          "label": {
-            "cs": "zima",
-            "en": "winter",
-            "ro": "iarnă"
-          },
-          "value": {
-            "cs": "nízko",
-            "en": "low",
-            "ro": "jos"
-          }
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "winner": "left"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Stejná energie se soustředí na *menší plochu*.",
-        "en": "The same energy lands on a *smaller area*.",
-        "ro": "Aceeași energie cade pe o *suprafață mai mică*."
-      },
-      "headline": {
-        "cs": "VÍC ENERGIE|NA M²",
-        "en": "MORE ENERGY|PER M²",
-        "ro": "MAI MULTĂ ENERGIE|PE M²"
-      },
-      "tag": "INTENSITY",
-      "accent": "red",
-      "visual": {
-        "type": "formula",
-        "tex": "I = I_0 \\cdot \\hl{\\sin \\alpha}",
-        "caption": {
-          "cs": "α = výška Slunce nad obzorem",
-          "en": "α = Sun's height above the horizon",
-          "ro": "α = înălțimea Soarelui"
+        {
+          "id": "hp",
+          "type": "headphones",
+          "position": [
+            0,
+            1.56,
+            0.3
+          ],
+          "scale": 1.25,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
-    },
-    {
-      "narration": {
-        "cs": "A dny jsou delší, takže Slunce hřeje *víc hodin*.",
-        "en": "And days are longer, so the Sun heats for *more hours*.",
-        "ro": "Iar zilele sunt mai lungi, deci Soarele încălzește *mai multe ore*."
-      },
-      "headline": {
-        "cs": "DELŠÍ|DNY",
-        "en": "LONGER|DAYS",
-        "ro": "ZILE|MAI LUNGI"
-      },
-      "tag": "DAYLIGHT",
-      "accent": "yellow",
-      "visual": {
-        "type": "bars",
-        "items": [
-          {
-            "label": {
-              "cs": "červen",
-              "en": "June",
-              "ro": "iunie"
-            },
-            "value": 16,
-            "highlight": true
-          },
-          {
-            "label": {
-              "cs": "prosinec",
-              "en": "December",
-              "ro": "decembrie"
-            },
-            "value": 8,
-            "highlight": false
-          }
-        ],
-        "unit": {
-          "cs": " h",
-          "en": " h",
-          "ro": " h"
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "spk",
+          "kind": "sound"
         }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Proto má Austrálie Vánoce *v létě*.",
-        "en": "That's why Australia has Christmas *in summer*.",
-        "ro": "De aceea Australia are Crăciunul *vara*."
+      ],
+      "camera": {
+        "focus": "spk",
+        "distance": 4,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "headline": {
-        "cs": "VÁNOCE|V LÉTĚ",
-        "en": "CHRISTMAS|IN SUMMER",
-        "ro": "CRĂCIUN|VARA"
-      },
-      "tag": "SOUTHERN HEMISPHERE",
-      "accent": "teal",
-      "visual": {
-        "type": "orbit",
-        "mode": "tilt",
-        "center": "sun",
-        "body": "earth",
+      "notes": [],
+      "card": {
+        "type": "wave",
+        "mode": "single",
         "label": {
-          "cs": "jižní polokoule má roční období obráceně",
-          "en": "the south has opposite seasons",
-          "ro": "emisfera sudică are anotimpuri inverse"
+          "cs": "zhuštění a zředění vzduchu",
+          "en": "air squeezed and stretched",
+          "ro": "aer comprimat și rarefiat"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Pošli to někomu, kdo to neví, a *sleduj* nás.",
-        "en": "Send this to someone who didn't know, and *follow*.",
-        "ro": "Trimite asta cuiva care nu știa și dă *follow*."
+        "cs": "Mikrofony na sluchátkách hluk okolo *poslouchají*.",
+        "en": "Tiny mics on the headphones *listen* to the noise around you.",
+        "ro": "Microfoane mici de pe căști *ascultă* zgomotul din jur."
       },
-      "headline": {
-        "cs": "DALŠÍ DÍL|UŽ BRZY",
-        "en": "NEXT EPISODE|SOON",
-        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "hp",
+          "type": "headphones",
+          "position": [
+            0,
+            1.56,
+            0.3
+          ],
+          "scale": 1.25,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "spk",
+          "type": "speaker",
+          "position": [
+            1.8,
+            0,
+            -0.6
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "spk",
+          "kind": "sound"
+        }
+      ],
+      "camera": {
+        "focus": "hp",
+        "distance": 2.2,
+        "angle": "frontLeft",
+        "move": "dollyIn"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [
+        {
+          "prop": "hp",
+          "text": {
+            "cs": "mikrofon",
+            "en": "mic",
+            "ro": "microfon"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Čip vyrobí *přesně obrácenou* vlnu.",
+        "en": "A chip makes the *exact opposite* wave.",
+        "ro": "Un cip creează unda *exact opusă*."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "hp",
+          "type": "headphones",
+          "position": [
+            0,
+            1.56,
+            0.3
+          ],
+          "scale": 1.25,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "hp",
+        "distance": 2.6,
+        "angle": "front",
+        "move": "orbitRight"
+      },
+      "notes": [],
+      "card": {
+        "type": "wave",
+        "mode": "cancel",
+        "label": null
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Kopec plus údolí dá *nulu*. Ticho.",
+        "en": "A peak plus a dip equals *zero*. Silence.",
+        "ro": "Vârf plus vale egal *zero*. Liniște."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "hp",
+          "type": "headphones",
+          "position": [
+            0,
+            1.56,
+            0.3
+          ],
+          "scale": 1.25,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 3.6,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
+        "type": "formula",
+        "tex": "\\sin x + \\sin(x + \\pi) = \\hl{0}",
+        "caption": null
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "A spočítá to *rychleji*, než zvuk doletí k uchu.",
+        "en": "And it does the math *faster* than the sound reaches your ear.",
+        "ro": "Și face calculul *mai repede* decât ajunge sunetul la ureche."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0,
+            0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "hp",
+          "type": "headphones",
+          "position": [
+            0,
+            1.56,
+            0.3
+          ],
+          "scale": 1.25,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "hp",
+        "distance": 2.2,
+        "angle": "low",
+        "move": "orbitLeft"
+      },
+      "notes": [
+        {
+          "prop": "hp",
+          "text": {
+            "cs": "mikrosekundy",
+            "en": "microseconds",
+            "ro": "microsecunde"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Nejlíp to umí s *hučením* motorů. Na hlas kamaráda moc ne.",
+        "en": "It's best with engine *hum*. Not so much with your friend talking.",
+        "ro": "Merge cel mai bine pe *zumzetul* motoarelor. Pe vocea prietenului, nu prea."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "plane",
+          "type": "plane",
+          "position": [
+            0,
+            3,
+            0
+          ],
+          "scale": 1.2,
+          "rotationY": -20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cl",
+          "type": "cloud",
+          "position": [
+            -2.5,
+            2,
+            -2
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "plane",
+          "kind": "sound"
+        }
+      ],
+      "camera": {
+        "focus": "plane",
+        "distance": 7,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "notes": [
+        {
+          "prop": "plane",
+          "text": {
+            "cs": "brrrum",
+            "en": "vrrrum",
+            "ro": "vrrrum"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

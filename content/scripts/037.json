@@ -1,251 +1,499 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 37,
   "title": {
-    "cs": "Jak doopravdy funguje brčko",
-    "en": "How a straw really works",
-    "ro": "Cum funcționează de fapt paiul"
+    "cs": "Ve škole ti o ledu lhali",
+    "en": "School lied to you about ice",
+    "ro": "La școală te-au mințit despre gheață"
   },
   "description": {
-    "cs": "Brčkem pití nenasáváš. Tlačí ho nahoru celá atmosféra. 🥤",
-    "en": "You don't suck the drink up a straw. The whole atmosphere pushes it. 🥤",
-    "ro": "Nu sorbi băutura cu paiul. O împinge în sus atmosfera. 🥤"
+    "cs": "Brusle netaví led tlakem. Skutečný důvod je mnohem zajímavější. ⛸️",
+    "en": "Skates don't melt ice with pressure. The real reason is way cooler. ⛸️",
+    "ro": "Patinele nu topesc gheața prin presiune. Motivul real e mult mai tare. ⛸️"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "brcko",
-    "tlak",
-    "pressure"
+    "led",
+    "brusleni",
+    "ice"
   ],
+  "hook": {
+    "cs": "VE ŠKOLE TI O LEDU LHALI",
+    "en": "SCHOOL LIED TO YOU ABOUT ICE",
+    "ro": "LA ȘCOALĂ TE-AU MINȚIT DESPRE GHEAȚĂ"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Když piješ brčkem, pití vlastně *nenasáváš*.",
-        "en": "When you drink through a straw, you don't actually *suck* it up.",
-        "ro": "Când bei cu paiul, de fapt *nu sorbi* băutura."
+        "cs": "Ve škole ti říkali, že brusle *taví led tlakem*. Není to pravda.",
+        "en": "School told you skates *melt ice with pressure*. That's not true.",
+        "ro": "La școală ți-au spus că patinele *topesc gheața prin presiune*. Nu e adevărat."
       },
-      "headline": {
-        "cs": "NENASÁVÁŠ|TO",
-        "en": "YOU DON'T|SUCK IT",
-        "ro": "NU|O SORBI"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "rink",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.4,
+          "rotationY": 0,
+          "color": "#dff3ff",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sk",
+          "type": "person",
+          "position": [
+            -2.5,
+            0.2,
+            0.6
+          ],
+          "scale": 1,
+          "rotationY": 70,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            2.5,
+            0.2,
+            0.6
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "sk",
+        "distance": 5,
+        "angle": "frontRight",
+        "move": "orbitLeft"
       },
-      "tag": "MYTH",
-      "accent": "red",
-      "visual": {
-        "type": "icon",
-        "icon": "straw",
-        "icon2": null,
-        "relation": "none",
-        "effect": "pulse",
-        "caption": null
-      }
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Na hladinu pořád tlačí *vzduch* nad námi.",
-        "en": "The *air* above us is always pressing on the surface.",
-        "ro": "*Aerul* de deasupra apasă mereu pe suprafață."
+        "cs": "Tlak brusle sníží bod tání jen o *zlomek stupně*.",
+        "en": "A skate's pressure lowers the melting point by a *fraction of a degree*.",
+        "ro": "Presiunea patinei scade punctul de topire doar cu *o fracțiune de grad*."
       },
-      "headline": {
-        "cs": "VZDUCH|TLAČÍ",
-        "en": "AIR|PUSHES",
-        "ro": "AERUL|APASĂ"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "rink",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.4,
+          "rotationY": 0,
+          "color": "#dff3ff",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sk",
+          "type": "person",
+          "position": [
+            0,
+            0.2,
+            0.6
+          ],
+          "scale": 1,
+          "rotationY": 70,
+          "color": null,
+          "anim": "none",
+          "slideTo": [
+            2.5,
+            0.2,
+            0.6
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "sk",
+        "distance": 3.4,
+        "angle": "low",
+        "move": "dollyIn"
       },
-      "tag": "ATMOSPHERIC PRESSURE",
-      "accent": "blue",
-      "visual": {
-        "type": "particles",
-        "mode": "pressure",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Na každý metr čtvereční tlačí jako *deset tun*.",
-        "en": "On every square meter, it pushes like *ten tonnes*.",
-        "ro": "Pe fiecare metru pătrat apasă cât *zece tone*."
-      },
-      "headline": {
-        "cs": "DESET TUN|NA M²",
-        "en": "TEN TONNES|PER M²",
-        "ro": "ZECE TONE|PE M²"
-      },
-      "tag": "≈ 101 kPa",
-      "accent": "yellow",
-      "visual": {
+      "notes": [],
+      "card": {
         "type": "counter",
         "from": 0,
-        "to": 101325,
-        "decimals": 0,
+        "to": -0.3,
+        "decimals": 1,
         "unit": {
-          "cs": " Pa",
-          "en": " Pa",
-          "ro": " Pa"
+          "cs": " °C",
+          "en": " °C",
+          "ro": " °C"
         },
         "caption": {
-          "cs": "necítíš to, tlačí na tebe ze všech stran",
-          "en": "you don't feel it, it pushes from all sides",
-          "ro": "nu simți, apasă din toate părțile"
+          "cs": "o tolik tlak sníží bod tání",
+          "en": "that's all pressure lowers the melting point",
+          "ro": "atât scade presiunea punctul de topire"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Když v brčku *snížíš tlak*, vzduch venku přetlačí pití nahoru.",
-        "en": "When you *lower the pressure* in the straw, outside air pushes the drink up.",
-        "ro": "Când *scazi presiunea* în pai, aerul de afară împinge băutura în sus."
+        "cs": "A led klouže i při *mínus třiceti*.",
+        "en": "Yet ice is slippery even at *minus thirty*.",
+        "ro": "Totuși gheața alunecă și la *minus treizeci*."
       },
-      "headline": {
-        "cs": "ROZDÍL|TLAKŮ",
-        "en": "PRESSURE|DIFFERENCE",
-        "ro": "DIFERENȚĂ|DE PRESIUNE"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "rink",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.4,
+          "rotationY": 0,
+          "color": "#dff3ff",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            2.8,
+            0.2,
+            -1.2
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#4f8dff",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sk",
+          "type": "person",
+          "position": [
+            0.5,
+            0.2,
+            0.6
+          ],
+          "scale": 1,
+          "rotationY": 70,
+          "color": null,
+          "anim": "none",
+          "slideTo": [
+            2.5,
+            0.2,
+            0.6
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "th",
+        "distance": 3.6,
+        "angle": "front",
+        "move": "orbitRight"
       },
-      "tag": "Δp",
-      "accent": "teal",
-      "visual": {
-        "type": "forces",
-        "body": "straw",
-        "arrows": [
-          {
-            "dir": "down",
-            "size": 2.5,
-            "label": {
-              "cs": "atmosféra",
-              "en": "atmosphere",
-              "ro": "atmosfera"
-            },
-            "color": "blue"
-          },
-          {
-            "dir": "up",
-            "size": 1.6,
-            "label": {
-              "cs": "pití stoupá",
-              "en": "drink rises",
-              "ro": "băutura urcă"
-            },
-            "color": "yellow"
+      "notes": [
+        {
+          "prop": "th",
+          "text": {
+            "cs": "−30 °C",
+            "en": "−30 °C",
+            "ro": "−30 °C"
           }
-        ],
-        "motion": "none"
-      }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Ty jen uděláš místo, *atmosféra* odvede práci.",
-        "en": "You just make room, the *atmosphere* does the work.",
-        "ro": "Tu doar faci loc, *atmosfera* face treaba."
+        "cs": "Tajemství je na *povrchu*. Molekuly tam nemají sousedy nahoře.",
+        "en": "The secret is the *surface*. Molecules there have no neighbors above.",
+        "ro": "Secretul e la *suprafață*. Moleculele de acolo nu au vecini deasupra."
       },
-      "headline": {
-        "cs": "PRÁCI DĚLÁ|ATMOSFÉRA",
-        "en": "THE ATMOSPHERE|DOES THE WORK",
-        "ro": "ATMOSFERA|FACE TREABA"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "rink",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.4,
+          "rotationY": 0,
+          "color": "#dff3ff",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mol",
+          "type": "atom",
+          "position": [
+            0,
+            0.9,
+            0.8
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "mol",
+        "distance": 2.4,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": "HOW IT WORKS",
-      "accent": "yellow",
-      "visual": {
-        "type": "steps",
-        "items": [
-          {
-            "cs": "vysaješ vzduch",
-            "en": "remove air",
-            "ro": "scoți aerul"
-          },
-          {
-            "cs": "tlak v brčku klesne",
-            "en": "pressure drops",
-            "ro": "presiunea scade"
-          },
-          {
-            "cs": "vzduch tlačí pití",
-            "en": "air pushes drink",
-            "ro": "aerul împinge băutura"
+      "notes": [],
+      "card": {
+        "type": "particles",
+        "mode": "solid",
+        "label": {
+          "cs": "uvnitř ledu pevná mřížka",
+          "en": "inside the ice: a rigid lattice",
+          "ro": "în interior: o rețea rigidă"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Drží jen *napůl* a chovají se skoro jako voda.",
+        "en": "They're only *half-bonded* and act almost like water.",
+        "ro": "Sunt legate doar *pe jumătate* și se comportă aproape ca apa."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "rink",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.4,
+          "rotationY": 0,
+          "color": "#dff3ff",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "mol",
+          "type": "atom",
+          "position": [
+            0,
+            0.9,
+            0.8
+          ],
+          "scale": 0.5,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "mol",
+        "distance": 2.2,
+        "angle": "low",
+        "move": "orbitLeft"
+      },
+      "notes": [],
+      "card": {
+        "type": "particles",
+        "mode": "liquid",
+        "label": {
+          "cs": "povrch: skoro kapalina",
+          "en": "surface: almost liquid",
+          "ro": "suprafața: aproape lichidă"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Tření při jízdě přidá trochu *tepla* navíc.",
+        "en": "Friction from sliding adds a bit of *heat* on top.",
+        "ro": "Frecarea adaugă puțină *căldură* în plus."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "rink",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.4,
+          "rotationY": 0,
+          "color": "#dff3ff",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sk",
+          "type": "person",
+          "position": [
+            -2.5,
+            0.2,
+            0.6
+          ],
+          "scale": 1,
+          "rotationY": 70,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            2.5,
+            0.2,
+            0.6
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "sk",
+          "kind": "heat"
+        }
+      ],
+      "camera": {
+        "focus": "sk",
+        "distance": 4.6,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "sk",
+          "text": {
+            "cs": "teplo z tření",
+            "en": "friction heat",
+            "ro": "căldură din frecare"
           }
-        ],
-        "active": 2
-      }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "I s dokonalým vakuem vytáhneš vodu nanejvýš *10 metrů*.",
-        "en": "Even with a perfect vacuum, water rises *10 meters* at most.",
-        "ro": "Chiar și cu vid perfect, apa urcă cel mult *10 metri*."
+        "cs": "A vědci se o přesný mechanismus *hádají dodnes*.",
+        "en": "And scientists are still *arguing* about the details.",
+        "ro": "Iar oamenii de știință încă *se ceartă* pe detalii."
       },
-      "headline": {
-        "cs": "LIMIT|10 METRŮ",
-        "en": "LIMIT|10 METERS",
-        "ro": "LIMITĂ|10 METRI"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "rink",
+          "type": "waterPool",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.4,
+          "rotationY": 0,
+          "color": "#dff3ff",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sk",
+          "type": "person",
+          "position": [
+            0,
+            0.2,
+            0.6
+          ],
+          "scale": 1,
+          "rotationY": 70,
+          "color": null,
+          "anim": "none",
+          "slideTo": [
+            2.5,
+            0.2,
+            0.6
+          ],
+          "glow": false
+        },
+        {
+          "id": "th",
+          "type": "thermometer",
+          "position": [
+            2.8,
+            0.2,
+            -1.2
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#4f8dff",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "sk",
+        "distance": 5,
+        "angle": "front",
+        "move": "orbitRight"
       },
-      "tag": "MAX HEIGHT",
-      "accent": "red",
-      "visual": {
-        "type": "formula",
-        "tex": "h = \\frac{p}{\\rho g} \\approx \\hl{10\\ m}",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Na *Měsíci* bys brčkem nenapil vůbec, chybí tam vzduch.",
-        "en": "On the *Moon*, a straw wouldn't work at all, there's no air.",
-        "ro": "Pe *Lună*, paiul n-ar funcționa deloc, nu e aer."
-      },
-      "headline": {
-        "cs": "NA MĚSÍCI|NIC",
-        "en": "ON THE MOON|NOTHING",
-        "ro": "PE LUNĂ|NIMIC"
-      },
-      "tag": "NO ATMOSPHERE",
-      "accent": "blue",
-      "visual": {
-        "type": "icon",
-        "icon": "moon",
-        "icon2": "straw",
-        "relation": "vs",
-        "effect": "float",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Stejný tlak drží i *přísavku* na kachličkách.",
-        "en": "The same pressure holds a *suction cup* to the tiles.",
-        "ro": "Aceeași presiune ține și *ventuza* pe faianță."
-      },
-      "headline": {
-        "cs": "STEJNĚ JAKO|PŘÍSAVKA",
-        "en": "JUST LIKE A|SUCTION CUP",
-        "ro": "LA FEL CA|VENTUZA"
-      },
-      "tag": "SAME PHYSICS",
-      "accent": "teal",
-      "visual": {
-        "type": "icon",
-        "icon": "hand",
-        "icon2": "wall",
-        "relation": "arrow",
-        "effect": "none",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Překvapilo tě to? Dej *sledovat* pro další díl.",
-        "en": "Surprised? Hit *follow* for the next one.",
-        "ro": "Te-a surprins? Dă *follow* pentru următorul."
-      },
-      "headline": {
-        "cs": "DALŠÍ DÍL|UŽ BRZY",
-        "en": "NEXT EPISODE|SOON",
-        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
-      },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [
+        {
+          "prop": "sk",
+          "text": {
+            "cs": "?!",
+            "en": "?!",
+            "ro": "?!"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

@@ -1,253 +1,469 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 43,
   "title": {
-    "cs": "Jak k nám doletí teplo Slunce",
-    "en": "How the Sun's heat crosses space",
-    "ro": "Cum ajunge la noi căldura Soarelui"
+    "cs": "Na Slunci bys vážil dvě tuny",
+    "en": "On the Sun you'd weigh two tonnes",
+    "ro": "Pe Soare ai cântări două tone"
   },
   "description": {
-    "cs": "Mezi Sluncem a Zemí je prázdno. Žádný vzduch, a přesto tě slunce pálí. ☀️",
-    "en": "Between the Sun and Earth there's empty space. No air, and yet the Sun warms you. ☀️",
-    "ro": "Între Soare și Pământ e vid. Fără aer, și totuși Soarele te încălzește. ☀️"
+    "cs": "Tvoje hmotnost je všude stejná. To, co ukáže váha, ne. ⚖️",
+    "en": "Your mass is the same everywhere. What the scale shows isn't. ⚖️",
+    "ro": "Masa ta e aceeași peste tot. Ce arată cântarul, nu. ⚖️"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "slunce",
-    "vesmir",
-    "sun"
+    "gravitace",
+    "planety",
+    "gravity"
   ],
+  "hook": {
+    "cs": "NA SLUNCI BYS VÁŽIL DVĚ TUNY",
+    "en": "ON THE SUN YOU'D WEIGH TWO TONNES",
+    "ro": "PE SOARE AI CÂNTĂRI DOUĂ TONE"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Mezi Sluncem a Zemí je *prázdný vesmír*. Jak k nám teplo doletí?",
-        "en": "Between the Sun and Earth is *empty space*. How does heat get here?",
-        "ro": "Între Soare și Pământ e *spațiu gol*. Cum ajunge căldura?"
+        "cs": "Na Slunci bys vážil skoro *dvě tuny*.",
+        "en": "On the Sun you'd weigh almost *two tonnes*.",
+        "ro": "Pe Soare ai cântări aproape *două tone*."
       },
-      "headline": {
-        "cs": "TEPLO|VAKUEM?",
-        "en": "HEAT|THROUGH VACUUM?",
-        "ro": "CĂLDURĂ|PRIN VID?"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "sc",
+          "type": "weighScale",
+          "position": [
+            0,
+            0,
+            0.4
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0.08,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "sc",
+        "distance": 3.6,
+        "angle": "frontRight",
+        "move": "dollyIn"
       },
-      "tag": "150 000 000 km",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "sun",
-        "icon2": "earth",
-        "relation": "arrow",
-        "effect": "pulse",
-        "caption": null
-      }
+      "notes": [
+        {
+          "prop": "sc",
+          "text": {
+            "cs": "1 960 kg",
+            "en": "1,960 kg",
+            "ro": "1.960 kg"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Teplo se přenáší *třemi způsoby*.",
-        "en": "Heat travels in *three ways*.",
-        "ro": "Căldura se transmite în *trei moduri*."
+        "cs": "Tvoje hmotnost je všude stejná. Mění se *tíha*.",
+        "en": "Your mass is the same everywhere. Your *weight* changes.",
+        "ro": "Masa ta e aceeași peste tot. Se schimbă *greutatea*."
       },
-      "headline": {
-        "cs": "TŘI|CESTY",
-        "en": "THREE|WAYS",
-        "ro": "TREI|CĂI"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "sc",
+          "type": "weighScale",
+          "position": [
+            0,
+            0,
+            0.4
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0.08,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 4,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "tag": "HEAT TRANSFER",
-      "accent": "teal",
-      "visual": {
-        "type": "steps",
+      "notes": [],
+      "card": {
+        "type": "formula",
+        "tex": "F = m \\cdot \\hl{g}",
+        "caption": {
+          "cs": "g = jak silně planeta táhne",
+          "en": "g = how hard the planet pulls",
+          "ro": "g = cât de tare trage planeta"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Váha totiž měří, jak silně tě planeta *táhne*.",
+        "en": "A scale measures how hard the planet *pulls* on you.",
+        "ro": "Cântarul măsoară cât de tare te *trage* planeta."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "sc",
+          "type": "weighScale",
+          "position": [
+            0,
+            0,
+            0.4
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0.08,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "down",
+          "type": "arrowDown",
+          "position": [
+            0.9,
+            1,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "sc",
+        "distance": 3.4,
+        "angle": "low",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "down",
+          "text": {
+            "cs": "tah",
+            "en": "pull",
+            "ro": "atracție"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Na Měsíci by ukázala asi *dvanáct kilo*.",
+        "en": "On the Moon it would read about *twelve kilos*.",
+        "ro": "Pe Lună ar arăta vreo *douăsprezece kilograme*."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "moon",
+          "type": "moon",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.4,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "moon",
+        "distance": 5,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "moon",
+          "text": {
+            "cs": "12 kg",
+            "en": "12 kg",
+            "ro": "12 kg"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Na Jupiteru přes *sto sedmdesát*.",
+        "en": "On Jupiter, over *a hundred and seventy*.",
+        "ro": "Pe Jupiter, peste *o sută șaptezeci*."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "jup",
+          "type": "planet",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.2,
+          "rotationY": 0,
+          "color": "#d9a066",
+          "anim": "spin",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "jup",
+        "distance": 5,
+        "angle": "frontLeft",
+        "move": "orbitRight"
+      },
+      "notes": [
+        {
+          "prop": "jup",
+          "text": {
+            "cs": "177 kg",
+            "en": "177 kg",
+            "ro": "177 kg"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "A na Slunci by ti ukázala *1 960 kilo*.",
+        "en": "And on the Sun the scale would say *1,960 kilos*.",
+        "ro": "Iar pe Soare cântarul ar arăta *1.960 de kilograme*."
+      },
+      "environment": "space",
+      "props": [
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 2.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "sun",
+        "distance": 7,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
+        "type": "bars",
         "items": [
           {
-            "cs": "vedení",
-            "en": "conduction",
-            "ro": "conducție"
+            "label": {
+              "cs": "Měsíc",
+              "en": "Moon",
+              "ro": "Luna"
+            },
+            "value": 12,
+            "highlight": false
           },
           {
-            "cs": "proudění",
-            "en": "convection",
-            "ro": "convecție"
+            "label": {
+              "cs": "Země",
+              "en": "Earth",
+              "ro": "Pământ"
+            },
+            "value": 70,
+            "highlight": false
           },
           {
-            "cs": "záření",
-            "en": "radiation",
-            "ro": "radiație"
+            "label": {
+              "cs": "Jupiter",
+              "en": "Jupiter",
+              "ro": "Jupiter"
+            },
+            "value": 177,
+            "highlight": false
+          },
+          {
+            "label": {
+              "cs": "Slunce",
+              "en": "Sun",
+              "ro": "Soare"
+            },
+            "value": 1960,
+            "highlight": true
           }
         ],
-        "active": 0
-      }
+        "unit": {
+          "cs": " kg",
+          "en": " kg",
+          "ro": " kg"
+        }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Vedení a proudění potřebují *hmotu*, třeba vzduch.",
-        "en": "Conduction and convection need *matter*, like air.",
-        "ro": "Conducția și convecția au nevoie de *materie*, ca aerul."
+        "cs": "Nemohl by ses ani *nadechnout*. Takže radši zůstaň tady.",
+        "en": "You couldn't even *breathe*. So maybe stay here.",
+        "ro": "Nici n-ai putea *respira*. Așa că mai bine rămâi aici."
       },
-      "headline": {
-        "cs": "POTŘEBUJÍ|HMOTU",
-        "en": "THEY NEED|MATTER",
-        "ro": "AU NEVOIE|DE MATERIE"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "sc",
+          "type": "weighScale",
+          "position": [
+            0,
+            0,
+            0.4
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0.08,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "tree",
+          "type": "tree",
+          "position": [
+            -2,
+            0,
+            -1.5
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 4.4,
+        "angle": "frontRight",
+        "move": "orbitLeft"
       },
-      "tag": "PARTICLES",
-      "accent": "red",
-      "visual": {
-        "type": "particles",
-        "mode": "hotcold",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Ve vesmíru ale žádná hmota skoro *není*.",
-        "en": "But space has almost *no matter* at all.",
-        "ro": "Dar în spațiu aproape *nu există* materie."
-      },
-      "headline": {
-        "cs": "VAKUUM",
-        "en": "VACUUM",
-        "ro": "VID"
-      },
-      "tag": "≈ 0 Pa",
-      "accent": "blue",
-      "visual": {
-        "type": "icon",
-        "icon": "star",
-        "icon2": "satellite",
-        "relation": "none",
-        "effect": "float",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Zbývá *záření*, elektromagnetické vlny jako světlo.",
-        "en": "That leaves *radiation*, electromagnetic waves like light.",
-        "ro": "Rămâne *radiația*, unde electromagnetice ca lumina."
-      },
-      "headline": {
-        "cs": "ZÁŘENÍ|VYHRÁVÁ",
-        "en": "RADIATION|WINS",
-        "ro": "RADIAȚIA|CÂȘTIGĂ"
-      },
-      "tag": "INFRARED + VISIBLE",
-      "accent": "yellow",
-      "visual": {
-        "type": "steps",
-        "items": [
-          {
-            "cs": "vedení",
-            "en": "conduction",
-            "ro": "conducție"
-          },
-          {
-            "cs": "proudění",
-            "en": "convection",
-            "ro": "convecție"
-          },
-          {
-            "cs": "záření",
-            "en": "radiation",
-            "ro": "radiație"
+      "notes": [
+        {
+          "prop": "me",
+          "text": {
+            "cs": "tady je fajn",
+            "en": "nice here",
+            "ro": "e bine aici"
           }
-        ],
-        "active": 2
-      }
-    },
-    {
-      "narration": {
-        "cs": "Vlny k letu žádný vzduch *nepotřebují*.",
-        "en": "These waves *don't need* any air to travel.",
-        "ro": "Aceste unde *nu au nevoie* de aer."
-      },
-      "headline": {
-        "cs": "ŽÁDNÝ|VZDUCH",
-        "en": "NO AIR|NEEDED",
-        "ro": "FĂRĂ|AER"
-      },
-      "tag": "EM WAVE",
-      "accent": "teal",
-      "visual": {
-        "type": "wave",
-        "mode": "single",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Ze Slunce k nám letí *8 minut a 20 sekund*.",
-        "en": "From the Sun they take *8 minutes and 20 seconds*.",
-        "ro": "De la Soare ajung în *8 minute și 20 de secunde*."
-      },
-      "headline": {
-        "cs": "8 MINUT|20 SEKUND",
-        "en": "8 MINUTES|20 SECONDS",
-        "ro": "8 MINUTE|20 SECUNDE"
-      },
-      "tag": "LIGHT TRAVEL TIME",
-      "accent": "yellow",
-      "visual": {
-        "type": "counter",
-        "from": 0,
-        "to": 500,
-        "decimals": 0,
-        "unit": {
-          "cs": " s",
-          "en": " s",
-          "ro": " s"
-        },
-        "caption": {
-          "cs": "vidíš Slunce takové, jaké bylo před 8 minutami",
-          "en": "you see the Sun as it was 8 minutes ago",
-          "ro": "vezi Soarele cum era acum 8 minute"
         }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Na každý metr čtvereční dopadne asi *1361 wattů*.",
-        "en": "Each square meter receives about *1,361 watts*.",
-        "ro": "Pe fiecare metru pătrat ajung cam *1.361 de wați*."
-      },
-      "headline": {
-        "cs": "1361 W|NA M²",
-        "en": "1361 W|PER M²",
-        "ro": "1361 W|PE M²"
-      },
-      "tag": "SOLAR CONSTANT",
-      "accent": "red",
-      "visual": {
-        "type": "gauge",
-        "from": 0,
-        "to": 1361,
-        "max": 1600,
-        "unit": {
-          "cs": " W/m²",
-          "en": " W/m²",
-          "ro": " W/m²"
-        },
-        "caption": {
-          "cs": "nad atmosférou",
-          "en": "above the atmosphere",
-          "ro": "deasupra atmosferei"
-        }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Pošli to někomu, kdo to neví, a *sleduj* nás.",
-        "en": "Send this to someone who didn't know, and *follow*.",
-        "ro": "Trimite asta cuiva care nu știa și dă *follow*."
-      },
-      "headline": {
-        "cs": "DALŠÍ DÍL|UŽ BRZY",
-        "en": "NEXT EPISODE|SOON",
-        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
-      },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

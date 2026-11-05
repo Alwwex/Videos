@@ -1,262 +1,465 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 33,
   "title": {
-    "cs": "Proč se krasobruslařka roztočí",
-    "en": "Why figure skaters spin faster",
-    "ro": "De ce patinatoarea se rotește mai repede"
+    "cs": "Obloha by měla být fialová",
+    "en": "The sky should be purple",
+    "ro": "Cerul ar trebui să fie violet"
   },
   "description": {
-    "cs": "Stačí přitáhnout ruce a otáčky vystřelí nahoru. Žádná síla navíc, jen fyzika. ⛸️",
-    "en": "Pull the arms in and the spin shoots up. No extra force, just physics. ⛸️",
-    "ro": "Își strânge brațele și rotația explodează. Fără forță în plus, doar fizică. ⛸️"
+    "cs": "Fyzika říká fialová. Tvoje oči a mozek říkají modrá. 💜",
+    "en": "Physics says purple. Your eyes and brain say blue. 💜",
+    "ro": "Fizica spune violet. Ochii și creierul tău spun albastru. 💜"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "krasobrusleni",
-    "rotace",
-    "skating"
+    "obloha",
+    "svetlo",
+    "sky"
   ],
+  "hook": {
+    "cs": "NEBE BY MĚLO BÝT FIALOVÉ",
+    "en": "THE SKY SHOULD BE PURPLE",
+    "ro": "CERUL AR TREBUI SĂ FIE VIOLET"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Krasobruslařka přitáhne ruce a *roztočí se* jako vrtule.",
-        "en": "A skater pulls in her arms and *spins up* like a propeller.",
-        "ro": "Patinatoarea își strânge brațele și *se rotește* ca o elice."
+        "cs": "Podle fyziky by obloha měla být *fialová*.",
+        "en": "According to physics, the sky should be *purple*.",
+        "ro": "Conform fizicii, cerul ar trebui să fie *violet*."
       },
-      "headline": {
-        "cs": "RUCE K TĚLU|= TURBO",
-        "en": "ARMS IN|= TURBO",
-        "ro": "BRAȚELE STRÂNSE|= TURBO"
-      },
-      "tag": "SPIN",
-      "accent": "teal",
-      "visual": {
-        "type": "icon",
-        "icon": "skater",
-        "icon2": null,
-        "relation": "none",
-        "effect": "spin",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Nikdo ji přitom *neroztlačuje*. Kde se bere rychlost?",
-        "en": "Nobody is *pushing* her. So where does the speed come from?",
-        "ro": "Nimeni n-o *împinge*. De unde vine viteza?"
-      },
-      "headline": {
-        "cs": "ODKUD|RYCHLOST?",
-        "en": "WHERE DOES|SPEED COME FROM?",
-        "ro": "DE UNDE|VITEZA?"
-      },
-      "tag": "QUESTION",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "question",
-        "icon2": "skater",
-        "relation": "none",
-        "effect": "pulse",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Rotace má veličinu, která se *zachovává*: moment hybnosti.",
-        "en": "Spinning has a quantity that's *conserved*: angular momentum.",
-        "ro": "Rotația are o mărime care *se conservă*: momentul cinetic."
-      },
-      "headline": {
-        "cs": "MOMENT|HYBNOSTI",
-        "en": "ANGULAR|MOMENTUM",
-        "ro": "MOMENTUL|CINETIC"
-      },
-      "tag": "CONSERVATION",
-      "accent": "blue",
-      "visual": {
-        "type": "formula",
-        "tex": "L = \\hl{I} \\cdot \\omega = \\text{konst.}",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Závisí na tom, jak daleko od osy je *hmotnost*.",
-        "en": "It depends on how far the *mass* is from the axis.",
-        "ro": "Depinde cât de departe de axă e *masa*."
-      },
-      "headline": {
-        "cs": "DALEKO|OD OSY",
-        "en": "FAR FROM|THE AXIS",
-        "ro": "DEPARTE|DE AXĂ"
-      },
-      "tag": "MOMENT OF INERTIA",
-      "accent": "yellow",
-      "visual": {
-        "type": "compare",
-        "left": {
-          "icon": "skater",
-          "label": {
-            "cs": "ruce od těla",
-            "en": "arms out",
-            "ro": "brațe întinse"
-          },
-          "value": {
-            "cs": "velké I",
-            "en": "big I",
-            "ro": "I mare"
-          }
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0.5,
+            0,
+            1
+          ],
+          "scale": 1,
+          "rotationY": -20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "right": {
-          "icon": "person",
-          "label": {
-            "cs": "ruce u těla",
-            "en": "arms in",
-            "ro": "brațe strânse"
-          },
-          "value": {
-            "cs": "malé I",
-            "en": "small I",
-            "ro": "I mic"
-          }
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -3,
+            6,
+            -6
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "winner": "none"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Když hmotnost přitáhne blíž, musí se točit *rychleji*.",
-        "en": "Bring the mass closer, and it has to spin *faster*.",
-        "ro": "Când aduce masa mai aproape, trebuie să se rotească *mai repede*."
-      },
-      "headline": {
-        "cs": "MENŠÍ I =|VĚTŠÍ ω",
-        "en": "SMALLER I =|BIGGER ω",
-        "ro": "I MAI MIC =|ω MAI MARE"
-      },
-      "tag": "TRADE-OFF",
-      "accent": "red",
-      "visual": {
-        "type": "formula",
-        "tex": "\\downarrow I \\;\\Rightarrow\\; \\hl{\\uparrow \\omega}",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Otáčky klidně *ztrojnásobí*, až na pět za sekundu.",
-        "en": "Spin rate can *triple*, up to five turns per second.",
-        "ro": "Rotația se poate *tripla*, până la cinci ture pe secundă."
-      },
-      "headline": {
-        "cs": "AŽ 5 OTÁČEK|ZA SEKUNDU",
-        "en": "UP TO 5 SPINS|PER SECOND",
-        "ro": "PÂNĂ LA 5 TURE|PE SECUNDĂ"
-      },
-      "tag": "RPS",
-      "accent": "teal",
-      "visual": {
-        "type": "gauge",
-        "from": 1.5,
-        "to": 5,
-        "max": 6,
-        "unit": {
-          "cs": " ot/s",
-          "en": " rev/s",
-          "ro": " rot/s"
-        },
-        "caption": {
-          "cs": "rychlejší než pračka při praní",
-          "en": "faster than a washing machine wash cycle",
-          "ro": "mai rapid decât o mașină de spălat"
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            2.5,
+            4.5,
+            -4
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 6,
+        "angle": "low",
+        "move": "rise"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Stejně funguje točící se židle s *činkami* v rukou.",
-        "en": "Try it on a spinning chair holding *weights*.",
-        "ro": "Încearcă pe un scaun rotativ ținând *greutăți*."
+        "cs": "Sluneční světlo je směs *všech barev*.",
+        "en": "Sunlight is a mix of *every color*.",
+        "ro": "Lumina soarelui e un amestec de *toate culorile*."
       },
-      "headline": {
-        "cs": "ZKUS TO|DOMA",
-        "en": "TRY IT|AT HOME",
-        "ro": "ÎNCEARCĂ|ACASĂ"
-      },
-      "tag": "EXPERIMENT",
-      "accent": "yellow",
-      "visual": {
-        "type": "steps",
-        "items": [
-          {
-            "cs": "roztoč se s rukama od těla",
-            "en": "spin with arms out",
-            "ro": "rotește-te cu brațele întinse"
-          },
-          {
-            "cs": "přitáhni ruce",
-            "en": "pull arms in",
-            "ro": "strânge brațele"
-          },
-          {
-            "cs": "drž se!",
-            "en": "hold on!",
-            "ro": "ține-te bine!"
-          }
-        ],
-        "active": 1
-      }
-    },
-    {
-      "narration": {
-        "cs": "A stejný zákon roztáčí i *neutronové hvězdy*.",
-        "en": "The same law spins up *neutron stars*.",
-        "ro": "Aceeași lege învârte și *stelele neutronice*."
-      },
-      "headline": {
-        "cs": "I HVĚZDY|SE TOČÍ",
-        "en": "STARS|SPIN TOO",
-        "ro": "ȘI STELELE|SE ROTESC"
-      },
-      "tag": "PULSARS",
-      "accent": "red",
-      "visual": {
-        "type": "counter",
-        "from": 0,
-        "to": 716,
-        "decimals": 0,
-        "unit": {
-          "cs": " ot/s",
-          "en": " rev/s",
-          "ro": " rot/s"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "caption": {
-          "cs": "rekordní pulsar",
-          "en": "the record-holding pulsar",
-          "ro": "pulsarul record"
+        {
+          "id": "prism",
+          "type": "prism",
+          "position": [
+            0,
+            0.85,
+            0.1
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "prism",
+        "distance": 2.6,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
+        "type": "rays",
+        "mode": "prism",
+        "label": null
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Překvapilo tě to? Dej *sledovat* pro další díl.",
-        "en": "Surprised? Hit *follow* for the next one.",
-        "ro": "Te-a surprins? Dă *follow* pentru următorul."
+        "cs": "Vzduch nejvíc rozhazuje ty *nejkratší vlny*.",
+        "en": "Air scatters the *shortest waves* the most.",
+        "ro": "Aerul împrăștie cel mai mult *undele cele mai scurte*."
       },
-      "headline": {
-        "cs": "DALŠÍ DÍL|UŽ BRZY",
-        "en": "NEXT EPISODE|SOON",
-        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -3,
+            6,
+            -6
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "air",
+          "type": "atom",
+          "position": [
+            0,
+            3.2,
+            -1
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0.5,
+            0,
+            1
+          ],
+          "scale": 1,
+          "rotationY": -20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "sun",
+          "to": "air",
+          "kind": "light"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "air",
+        "distance": 6,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [],
+      "card": {
+        "type": "rays",
+        "mode": "scatter",
+        "label": null
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "A nejkratší vlny nemá modrá, ale *fialová*.",
+        "en": "And the shortest waves aren't blue. They're *violet*.",
+        "ro": "Iar cele mai scurte unde nu sunt albastre, ci *violete*."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -3,
+            6,
+            -6
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "air",
+          "type": "atom",
+          "position": [
+            0,
+            3.2,
+            -1
+          ],
+          "scale": 0.7,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "air",
+        "distance": 4,
+        "angle": "frontLeft",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
+        "type": "wave",
+        "mode": "compare",
+        "label": {
+          "cs": "delší vlna = červená, kratší = fialová",
+          "en": "long wave = red, short = violet",
+          "ro": "undă lungă = roșu, scurtă = violet"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Jenže Slunce fialové svítí *méně*.",
+        "en": "But the Sun gives off *less* violet.",
+        "ro": "Dar Soarele emite *mai puțin* violet."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -3,
+            6,
+            -6
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            2.5,
+            4.5,
+            -4
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "sun",
+        "distance": 6,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "sun",
+          "text": {
+            "cs": "méně fialové",
+            "en": "less violet",
+            "ro": "mai puțin violet"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "A tvoje oči jsou na fialovou skoro *slepé*.",
+        "en": "And your eyes are almost *blind* to violet.",
+        "ro": "Iar ochii tăi sunt aproape *orbi* la violet."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0.5,
+            0,
+            1
+          ],
+          "scale": 1,
+          "rotationY": -20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 2.6,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "me",
+          "text": {
+            "cs": "skoro nevidí",
+            "en": "barely sees it",
+            "ro": "abia îl văd"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Mozek ten mix přečte jako *modrou*. Modré nebe je tak trochu tvůj výmysl.",
+        "en": "Your brain reads the mix as *blue*. So the blue sky is partly your invention.",
+        "ro": "Creierul citește amestecul ca *albastru*. Cerul albastru e parțial invenția ta."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0.5,
+            0,
+            1
+          ],
+          "scale": 1,
+          "rotationY": -20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "sun",
+          "type": "sun",
+          "position": [
+            -3,
+            6,
+            -6
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cloud",
+          "type": "cloud",
+          "position": [
+            2.5,
+            4.5,
+            -4
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 7,
+        "angle": "low",
+        "move": "orbitRight"
+      },
+      "notes": [
+        {
+          "prop": "me",
+          "text": {
+            "cs": "tvůj mozek",
+            "en": "your brain",
+            "ro": "creierul tău"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

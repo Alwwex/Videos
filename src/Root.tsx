@@ -6,14 +6,31 @@ import {FyzikaVideo, calculateFyzikaMetadata, FPS, type FyzikaProps} from './eng
 import {LANGS, type VideoScript} from './engine/schema';
 import {ShortVideo, calculateShortMetadata, type ShortProps} from './v2/ShortVideo';
 import type {ShortScript} from './v2/schema';
+import {HybridVideo, calculateHybridMetadata, type HybridProps} from './v3/HybridVideo';
+import type {HybridScript} from './v3/schema';
+import sampleHybrid from '../content/scripts/019.json';
 import sample from '../content/scripts/001.json';
-import sampleShort from '../content/scripts/015.json';
+import sampleShort from '../src/v2/sample.json';
 
 const total = SCENES.reduce((sum, s) => sum + s.durationInFrames, 0);
 
 export const RemotionRoot: React.FC = () => (
   <>
-    {/* v2: krátká 2D "blueprint" videa (~30 s) – videa 15+ */}
+    {/* v3: hybridní krátká videa – 3D svět + karta + ručně kreslené popisky (videa 15+) */}
+    {LANGS.map((lang) => (
+      <Composition
+        key={`h-${lang}`}
+        id={`Hybrid-${lang}`}
+        component={HybridVideo}
+        width={1080}
+        height={1920}
+        fps={30}
+        durationInFrames={30 * 25}
+        defaultProps={{script: sampleHybrid as HybridScript, lang, timeline: null} satisfies HybridProps}
+        calculateMetadata={calculateHybridMetadata}
+      />
+    ))}
+    {/* v2: 2D "blueprint" engine (zůstává k dispozici) */}
     {LANGS.map((lang) => (
       <Composition
         key={`s-${lang}`}

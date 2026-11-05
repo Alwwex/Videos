@@ -1,315 +1,556 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 19,
   "title": {
-    "cs": "Proč se ocelová loď nepotopí",
-    "en": "Why steel ships don't sink",
-    "ro": "De ce nu se scufundă vapoarele de oțel"
+    "cs": "Banán je radioaktivní",
+    "en": "Bananas are radioactive",
+    "ro": "Bananele sunt radioactive"
   },
   "description": {
-    "cs": "Ocel je osmkrát těžší než voda. Jak to, že obří loď plave? 🚢",
-    "en": "Steel is eight times denser than water. So how does a giant ship float? 🚢",
-    "ro": "Oțelul e de opt ori mai dens decât apa. Cum plutește atunci un vapor uriaș? 🚢"
+    "cs": "Tvoje svačina tě ozařuje. Trochu. Kolik banánů je moc? 🍌",
+    "en": "Your snack is irradiating you. A little. How many bananas is too many? 🍌",
+    "ro": "Gustarea ta te iradiază. Puțin. Câte banane sunt prea multe? 🍌"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "lod",
-    "archimedes",
-    "ship"
+    "banan",
+    "radiace",
+    "banana"
   ],
+  "hook": {
+    "cs": "TVŮJ BANÁN JE RADIOAKTIVNÍ",
+    "en": "YOUR BANANA IS RADIOACTIVE",
+    "ro": "BANANA TA E RADIOACTIVĂ"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Ocelový hřebík se potopí. Ale ocelová loď *plave*.",
-        "en": "A steel nail sinks. But a steel ship *floats*.",
-        "ro": "Un cui de oțel se scufundă. Dar un vapor de oțel *plutește*."
+        "cs": "Banán, co máš ke svačině, je *radioaktivní*.",
+        "en": "The banana in your lunchbox is *radioactive*.",
+        "ro": "Banana de la gustare e *radioactivă*."
       },
-      "headline": {
-        "cs": "HŘEBÍK TONE|LOĎ PLAVE",
-        "en": "NAIL SINKS|SHIP FLOATS",
-        "ro": "CUIUL CADE|VAPORUL PLUTEȘTE"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ban",
+          "type": "banana",
+          "position": [
+            0,
+            0.85,
+            0.1
+          ],
+          "scale": 1.6,
+          "rotationY": 20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cup",
+          "type": "cup",
+          "position": [
+            0.75,
+            0.85,
+            -0.15
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ban",
+        "distance": 2.6,
+        "angle": "frontRight",
+        "move": "dollyIn"
       },
-      "tag": "PARADOX",
-      "accent": "blue",
-      "visual": {
-        "type": "icon",
-        "icon": "hammer",
-        "icon2": "ship",
-        "relation": "vs",
-        "effect": "float",
-        "caption": null
-      }
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Ocel je zhruba *osmkrát hustší* než voda.",
-        "en": "Steel is about *eight times denser* than water.",
-        "ro": "Oțelul e de vreo *opt ori mai dens* decât apa."
+        "cs": "Je v něm draslík a kousek z něj je *draslík čtyřicet*.",
+        "en": "It's full of potassium, and a tiny bit is *potassium-40*.",
+        "ro": "E plină de potasiu, iar o mică parte e *potasiu-40*."
       },
-      "headline": {
-        "cs": "OCEL VS|VODA",
-        "en": "STEEL VS|WATER",
-        "ro": "OȚEL VS|APĂ"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ban",
+          "type": "banana",
+          "position": [
+            0,
+            0.85,
+            0.1
+          ],
+          "scale": 1.6,
+          "rotationY": 20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "atom",
+          "type": "atom",
+          "position": [
+            0.2,
+            1.75,
+            0.2
+          ],
+          "scale": 0.45,
+          "rotationY": 0,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [
+        {
+          "from": "ban",
+          "to": "atom",
+          "kind": "photons"
+        }
+      ],
+      "waves": [],
+      "camera": {
+        "focus": "ban",
+        "distance": 2.8,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "tag": "DENSITY kg/m³",
-      "accent": "red",
-      "visual": {
+      "notes": [
+        {
+          "prop": "atom",
+          "text": {
+            "cs": "K-40",
+            "en": "K-40",
+            "ro": "K-40"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Ten se pomalu *rozpadá* a vystřeluje záření.",
+        "en": "That slowly *decays* and shoots out radiation.",
+        "ro": "Acesta se *dezintegrează* încet și emite radiații."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ban",
+          "type": "banana",
+          "position": [
+            0,
+            0.85,
+            0.1
+          ],
+          "scale": 1.6,
+          "rotationY": 20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "atom",
+          "type": "atom",
+          "position": [
+            0.2,
+            1.75,
+            0.2
+          ],
+          "scale": 0.45,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": true
+        }
+      ],
+      "flows": [],
+      "waves": [
+        {
+          "from": "atom",
+          "kind": "light"
+        }
+      ],
+      "camera": {
+        "focus": "atom",
+        "distance": 2.4,
+        "angle": "low",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": true
+    },
+    {
+      "narration": {
+        "cs": "Jeden banán je asi *desetina mikrosievertu*.",
+        "en": "One banana is about *a tenth of a microsievert*.",
+        "ro": "O banană înseamnă cam *o zecime de microsievert*."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ban",
+          "type": "banana",
+          "position": [
+            0,
+            0.85,
+            0.1
+          ],
+          "scale": 1.6,
+          "rotationY": 20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "ban",
+        "distance": 3.2,
+        "angle": "frontLeft",
+        "move": "dollyOut"
+      },
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 0.1,
+        "decimals": 1,
+        "unit": {
+          "cs": " µSv",
+          "en": " µSv",
+          "ro": " µSv"
+        },
+        "caption": {
+          "cs": "dávka z jednoho banánu",
+          "en": "dose from one banana",
+          "ro": "doza dintr-o banană"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Let přes oceán? To je jako *čtyři sta banánů*.",
+        "en": "A flight across the ocean? About *four hundred bananas*.",
+        "ro": "Un zbor peste ocean? Cam *patru sute de banane*."
+      },
+      "environment": "outdoor",
+      "props": [
+        {
+          "id": "plane",
+          "type": "plane",
+          "position": [
+            0,
+            3,
+            0
+          ],
+          "scale": 1.1,
+          "rotationY": -15,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cl",
+          "type": "cloud",
+          "position": [
+            -2.2,
+            2.2,
+            -2
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cl2",
+          "type": "cloud",
+          "position": [
+            2.4,
+            3.6,
+            -3
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "plane",
+        "distance": 7,
+        "angle": "frontRight",
+        "move": "orbitRight"
+      },
+      "notes": [],
+      "card": {
         "type": "bars",
         "items": [
           {
             "label": {
-              "cs": "voda",
-              "en": "water",
-              "ro": "apă"
+              "cs": "banán",
+              "en": "banana",
+              "ro": "banană"
             },
-            "value": 1000,
+            "value": 1,
             "highlight": false
           },
           {
             "label": {
-              "cs": "ocel",
-              "en": "steel",
-              "ro": "oțel"
+              "cs": "let přes oceán",
+              "en": "transatlantic flight",
+              "ro": "zbor transatlantic"
             },
-            "value": 7850,
+            "value": 400,
             "highlight": true
           }
         ],
         "unit": {
-          "cs": "",
-          "en": "",
-          "ro": ""
+          "cs": "×",
+          "en": "×",
+          "ro": "×"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Tajemství objevil už *Archimédes*.",
-        "en": "The secret was found by *Archimedes*.",
-        "ro": "Secretul l-a descoperit *Arhimede*."
+        "cs": "Aby ti bylo zle, musel bys jich sníst *deset milionů* naráz.",
+        "en": "To get sick, you'd have to eat *ten million* at once.",
+        "ro": "Ca să te îmbolnăvești, ar trebui să mănânci *zece milioane* deodată."
       },
-      "headline": {
-        "cs": "ARCHIMÉDŮV|ZÁKON",
-        "en": "ARCHIMEDES'|PRINCIPLE",
-        "ro": "LEGEA LUI|ARHIMEDE"
-      },
-      "tag": "BUOYANCY",
-      "accent": "yellow",
-      "visual": {
-        "type": "formula",
-        "tex": "F_{vz} = \\hl{\\rho V g}",
-        "caption": {
-          "cs": "vztlak = tíha vytlačené vody",
-          "en": "buoyancy = weight of displaced water",
-          "ro": "forța = greutatea apei dislocate"
-        }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Voda tlačí nahoru silou jako *tíha vody*, kterou předmět odsune.",
-        "en": "Water pushes up as hard as *the weight of water* pushed aside.",
-        "ro": "Apa împinge în sus cât *greutatea apei* dislocate."
-      },
-      "headline": {
-        "cs": "VODA|TLAČÍ NAHORU",
-        "en": "WATER|PUSHES UP",
-        "ro": "APA|ÎMPINGE ÎN SUS"
-      },
-      "tag": "FORCE BALANCE",
-      "accent": "teal",
-      "visual": {
-        "type": "forces",
-        "body": "ship",
-        "arrows": [
-          {
-            "dir": "up",
-            "size": 2.5,
-            "label": {
-              "cs": "vztlak",
-              "en": "buoyancy",
-              "ro": "flotabilitate"
-            },
-            "color": "teal"
-          },
-          {
-            "dir": "down",
-            "size": 2.5,
-            "label": {
-              "cs": "tíha",
-              "en": "weight",
-              "ro": "greutate"
-            },
-            "color": "red"
-          }
-        ],
-        "motion": "none"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Trup lodi je dutý a plný *vzduchu*.",
-        "en": "A ship's hull is hollow and full of *air*.",
-        "ro": "Corpul vaporului e gol și plin de *aer*."
-      },
-      "headline": {
-        "cs": "DUTÝ|TRUP",
-        "en": "HOLLOW|HULL",
-        "ro": "CORP|GOL"
-      },
-      "tag": "HULL SHAPE",
-      "accent": "blue",
-      "visual": {
-        "type": "icon",
-        "icon": "ship",
-        "icon2": null,
-        "relation": "none",
-        "effect": "float",
-        "caption": {
-          "cs": "vytlačí obrovský objem vody",
-          "en": "it pushes aside a huge volume of water",
-          "ro": "dislocă un volum uriaș de apă"
-        }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Ocel a vzduch dohromady jsou *lehčí* než stejný objem vody.",
-        "en": "Steel plus air together are *lighter* than the same volume of water.",
-        "ro": "Oțelul plus aerul sunt *mai ușoare* decât același volum de apă."
-      },
-      "headline": {
-        "cs": "PRŮMĚRNÁ|HUSTOTA",
-        "en": "AVERAGE|DENSITY",
-        "ro": "DENSITATEA|MEDIE"
-      },
-      "tag": "STEEL + AIR",
-      "accent": "teal",
-      "visual": {
-        "type": "compare",
-        "left": {
-          "icon": "box",
-          "label": {
-            "cs": "kostka oceli",
-            "en": "steel block",
-            "ro": "bloc de oțel"
-          },
-          "value": {
-            "cs": "7 850 kg/m³",
-            "en": "7,850 kg/m³",
-            "ro": "7.850 kg/m³"
-          }
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "right": {
-          "icon": "ship",
-          "label": {
-            "cs": "celá loď",
-            "en": "whole ship",
-            "ro": "tot vaporul"
-          },
-          "value": {
-            "cs": "~ 300 kg/m³",
-            "en": "~300 kg/m³",
-            "ro": "~300 kg/m³"
-          }
+        {
+          "id": "ban",
+          "type": "banana",
+          "position": [
+            0,
+            0.85,
+            0.1
+          ],
+          "scale": 1.6,
+          "rotationY": 20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "winner": "right"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Když loď nabere vodu, vzduch zmizí a *potopí se*.",
-        "en": "If the hull fills with water, the air is gone and it *sinks*.",
-        "ro": "Dacă ia apă, aerul dispare și vaporul *se scufundă*."
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -1.6,
+            0,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 25,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "headline": {
-        "cs": "BEZ VZDUCHU|KE DNU",
-        "en": "NO AIR|IT SINKS",
-        "ro": "FĂRĂ AER|LA FUND"
-      },
-      "tag": "TITANIC",
-      "accent": "red",
-      "visual": {
-        "type": "forces",
-        "body": "ship",
-        "arrows": [
-          {
-            "dir": "down",
-            "size": 3,
-            "label": {
-              "cs": "tíha",
-              "en": "weight",
-              "ro": "greutate"
-            },
-            "color": "red"
-          },
-          {
-            "dir": "up",
-            "size": 1,
-            "label": {
-              "cs": "vztlak",
-              "en": "buoyancy",
-              "ro": "flotabilitate"
-            },
-            "color": "teal"
+      "notes": [
+        {
+          "prop": "me",
+          "text": {
+            "cs": "to nedáš",
+            "en": "no way",
+            "ro": "imposibil"
           }
-        ],
-        "motion": "down"
-      }
+        }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Nejde o materiál, ale o *tvar a objem*.",
-        "en": "It's not the material, it's the *shape and volume*.",
-        "ro": "Nu contează materialul, ci *forma și volumul*."
+        "cs": "A víš, co je taky radioaktivní? *Ty*.",
+        "en": "And guess what else is radioactive? *You*.",
+        "ro": "Și știi ce mai e radioactiv? *Tu*."
       },
-      "headline": {
-        "cs": "TVAR|VYHRÁVÁ",
-        "en": "SHAPE|WINS",
-        "ro": "FORMA|CÂȘTIGĂ"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            -1.6,
+            0,
+            0.4
+          ],
+          "scale": 1,
+          "rotationY": 25,
+          "color": null,
+          "anim": "pulse",
+          "slideTo": null,
+          "glow": true
+        },
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "ban",
+          "type": "banana",
+          "position": [
+            0,
+            0.85,
+            0.1
+          ],
+          "scale": 1.6,
+          "rotationY": 20,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 3.2,
+        "angle": "frontLeft",
+        "move": "dollyIn"
       },
-      "tag": "CONCLUSION",
-      "accent": "yellow",
-      "visual": {
-        "type": "steps",
-        "items": [
-          {
-            "cs": "ocel je těžká",
-            "en": "steel is heavy",
-            "ro": "oțelul e greu"
-          },
-          {
-            "cs": "trup je dutý",
-            "en": "the hull is hollow",
-            "ro": "corpul e gol"
-          },
-          {
-            "cs": "vytlačí hodně vody",
-            "en": "it displaces lots of water",
-            "ro": "dislocă multă apă"
+      "notes": [
+        {
+          "prop": "me",
+          "text": {
+            "cs": "ty!",
+            "en": "you!",
+            "ro": "tu!"
           }
-        ],
-        "active": 2
-      }
-    },
-    {
-      "narration": {
-        "cs": "Pošli to někomu, kdo to neví, a *sleduj* nás.",
-        "en": "Send this to someone who didn't know, and *follow*.",
-        "ro": "Trimite asta cuiva care nu știa și dă *follow*."
-      },
-      "headline": {
-        "cs": "DALŠÍ DÍL|UŽ BRZY",
-        "en": "NEXT EPISODE|SOON",
-        "ro": "EPISODUL URMĂTOR|ÎN CURÂND"
-      },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

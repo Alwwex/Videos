@@ -1,261 +1,409 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 18,
   "title": {
-    "cs": "Proč tě kopne klika",
-    "en": "Why door handles shock you",
-    "ro": "De ce te electrocutează clanța"
+    "cs": "Kočka, která obelstí fyziku",
+    "en": "The cat that cheats physics",
+    "ro": "Pisica ce păcălește fizica"
   },
   "description": {
-    "cs": "Projdeš se po koberci, sáhneš na kliku a au! Tohle se při tom děje. ⚡",
-    "en": "Walk on carpet, touch a door handle, ouch! Here's what's happening. ⚡",
-    "ro": "Mergi pe covor, atingi clanța și au! Iată ce se întâmplă. ⚡"
+    "cs": "Padá zády dolů, nemá se od čeho odrazit, a stejně dopadne na nohy. Jak? 🐈",
+    "en": "Falls upside down, nothing to push off, still lands on its feet. How? 🐈",
+    "ro": "Cade pe spate, n-are de ce să se împingă, și tot aterizează pe lăbuțe. Cum? 🐈"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "elektrina",
-    "staticka",
-    "static"
+    "kocka",
+    "rotace",
+    "cat"
   ],
+  "hook": {
+    "cs": "KOČKA PORUŠUJE FYZIKU?",
+    "en": "DO CATS BREAK PHYSICS?",
+    "ro": "PISICA ÎNCALCĂ FIZICA?"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Sáhneš na kliku a *au*! Proč to kopne?",
-        "en": "You touch a door handle and *zap*! Why?",
-        "ro": "Atingi clanța și *au*! De ce?"
+        "cs": "Kočka padá zády dolů a stejně *dopadne na nohy*.",
+        "en": "A cat falls upside down and still *lands on its feet*.",
+        "ro": "O pisică cade pe spate și tot *aterizează pe lăbuțe*."
       },
-      "headline": {
-        "cs": "PROČ TO|KOPE?",
-        "en": "WHY DOES IT|ZAP?",
-        "ro": "DE CE|ELECTROCUTEAZĂ?"
-      },
-      "tag": "EVERYDAY SHOCK",
-      "accent": "yellow",
-      "visual": {
-        "type": "field",
-        "mode": "charge",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Když chodíš po koberci, třením sbíráš *elektrony*.",
-        "en": "Walking on carpet, friction collects *electrons* on you.",
-        "ro": "Când mergi pe covor, prin frecare aduni *electroni*."
-      },
-      "headline": {
-        "cs": "TŘENÍ|NABÍJÍ",
-        "en": "FRICTION|CHARGES",
-        "ro": "FRECAREA|ÎNCARCĂ"
-      },
-      "tag": "TRIBOELECTRIC EFFECT",
-      "accent": "blue",
-      "visual": {
-        "type": "icon",
-        "icon": "person",
-        "icon2": "atom",
-        "relation": "plus",
-        "effect": "shake",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Tvoje tělo se nabije klidně na *tisíce voltů*.",
-        "en": "Your body can charge up to *thousands of volts*.",
-        "ro": "Corpul tău se poate încărca la *mii de volți*."
-      },
-      "headline": {
-        "cs": "TISÍCE|VOLTŮ",
-        "en": "THOUSANDS OF|VOLTS",
-        "ro": "MII DE|VOLȚI"
-      },
-      "tag": "BODY VOLTAGE",
-      "accent": "red",
-      "visual": {
-        "type": "gauge",
-        "from": 0,
-        "to": 10000,
-        "max": 15000,
-        "unit": {
-          "cs": " V",
-          "en": " V",
-          "ro": " V"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "caption": {
-          "cs": "zásuvka má jen 230 V",
-          "en": "a wall socket has just 230 V",
-          "ro": "priza are doar 230 V"
+        {
+          "id": "cat",
+          "type": "cat",
+          "position": [
+            1.6,
+            1.6,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            1.6,
+            0,
+            0
+          ],
+          "glow": false
         }
-      }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cat",
+        "distance": 3.6,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Kovová klika ale náboj *nemá*, je neutrální.",
-        "en": "But the metal handle has *no extra charge*.",
-        "ro": "Dar clanța de metal *nu are* sarcină în plus."
+        "cs": "Jenže ve vzduchu se nemá od čeho *odrazit*.",
+        "en": "But in mid-air there's nothing to *push off* from.",
+        "ro": "Dar în aer nu are de ce să se *împingă*."
       },
-      "headline": {
-        "cs": "KOV JE|NEUTRÁLNÍ",
-        "en": "METAL IS|NEUTRAL",
-        "ro": "METALUL E|NEUTRU"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "cat",
+          "type": "cat",
+          "position": [
+            0,
+            1.6,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cat",
+        "distance": 2.6,
+        "angle": "frontRight",
+        "move": "orbitLeft"
       },
-      "tag": "POTENTIAL DIFFERENCE",
-      "accent": "teal",
-      "visual": {
-        "type": "compare",
-        "left": {
-          "icon": "hand",
-          "label": {
-            "cs": "ty",
-            "en": "you",
-            "ro": "tu"
-          },
-          "value": {
-            "cs": "−10 000 V",
-            "en": "−10,000 V",
-            "ro": "−10.000 V"
+      "notes": [
+        {
+          "prop": "cat",
+          "text": {
+            "cs": "nic pod tlapkami",
+            "en": "nothing below",
+            "ro": "nimic dedesubt"
           }
-        },
-        "right": {
-          "icon": "door",
-          "label": {
-            "cs": "klika",
-            "en": "handle",
-            "ro": "clanța"
-          },
-          "value": {
-            "cs": "0 V",
-            "en": "0 V",
-            "ro": "0 V"
-          }
-        },
-        "winner": "left"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Těsně před dotykem elektrony *přeskočí* jiskrou.",
-        "en": "Right before you touch it, electrons *jump* as a spark.",
-        "ro": "Chiar înainte de atingere, electronii *sar* ca o scânteie."
-      },
-      "headline": {
-        "cs": "ELEKTRONY|PŘESKOČÍ",
-        "en": "ELECTRONS|JUMP",
-        "ro": "ELECTRONII|SAR"
-      },
-      "tag": "DISCHARGE",
-      "accent": "yellow",
-      "visual": {
-        "type": "field",
-        "mode": "charge",
-        "label": {
-          "cs": "jiskra dlouhá jen pár milimetrů",
-          "en": "a spark just a few millimeters long",
-          "ro": "o scânteie de doar câțiva milimetri"
         }
-      }
+      ],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Proud trvá jen *miliardtiny sekundy*, proto ti neublíží.",
-        "en": "The current lasts *billionths of a second*, so it's harmless.",
-        "ro": "Curentul durează *miliardimi de secundă*, deci e inofensiv."
+        "cs": "Fyzika říká: bez odrazu se *neotočíš*.",
+        "en": "Physics says: no push, *no turning*.",
+        "ro": "Fizica spune: fără împingere, *nu te întorci*."
       },
-      "headline": {
-        "cs": "VYSOKÉ NAPĚTÍ|MALÝ NÁBOJ",
-        "en": "HIGH VOLTAGE|TINY CHARGE",
-        "ro": "TENSIUNE MARE|SARCINĂ MICĂ"
-      },
-      "tag": "WHY IT'S SAFE",
-      "accent": "teal",
-      "visual": {
-        "type": "graph",
-        "curve": "decay",
-        "curve2": null,
-        "x": {
-          "cs": "čas",
-          "en": "time",
-          "ro": "timp"
-        },
-        "y": {
-          "cs": "proud",
-          "en": "current",
-          "ro": "curent"
-        },
-        "markLabel": {
-          "cs": "hotovo za nanosekundy",
-          "en": "over in nanoseconds",
-          "ro": "gata în nanosecunde"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "cat",
+          "type": "cat",
+          "position": [
+            0,
+            1.6,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "bob",
+          "slideTo": null,
+          "glow": false
         }
-      }
-    },
-    {
-      "narration": {
-        "cs": "V zimě je vzduch suchý, takže náboj *neodteče*.",
-        "en": "In winter the air is dry, so the charge *can't leak away*.",
-        "ro": "Iarna aerul e uscat, așa că sarcina *nu se scurge*."
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cat",
+        "distance": 2.8,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "headline": {
-        "cs": "ZIMA =|VÍC RAN",
-        "en": "WINTER =|MORE ZAPS",
-        "ro": "IARNA =|MAI MULTE ȘOCURI"
-      },
-      "tag": "HUMIDITY",
-      "accent": "blue",
-      "visual": {
-        "type": "icon",
-        "icon": "snowflake",
-        "icon2": "drop",
-        "relation": "vs",
-        "effect": "spin",
-        "caption": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Trik: dotkni se kliky nejdřív *klíčem*.",
-        "en": "Pro tip: touch the handle with a *key* first.",
-        "ro": "Truc: atinge clanța întâi cu o *cheie*."
-      },
-      "headline": {
-        "cs": "TRIK:|KLÍČ",
-        "en": "PRO TIP:|USE A KEY",
-        "ro": "TRUC:|O CHEIE"
-      },
-      "tag": "LIFE HACK",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "hand",
-        "icon2": "door",
-        "relation": "arrow",
-        "effect": "none",
+      "notes": [],
+      "card": {
+        "type": "formula",
+        "tex": "L = I \\cdot \\omega = \\hl{0}",
         "caption": {
-          "cs": "jiskra skočí do kovu, ne do prstu",
-          "en": "the spark hits the metal, not your finger",
-          "ro": "scânteia sare în metal, nu în deget"
+          "cs": "celková rotace se nesmí změnit",
+          "en": "total spin can't change",
+          "ro": "rotația totală nu se poate schimba"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Napiš do komentářů, co tě zajímá, a *sleduj*.",
-        "en": "Tell us what to explain next, and *follow*.",
-        "ro": "Scrie-ne ce să explicăm și dă *follow*."
+        "cs": "Kočka to obejde. Zkroutí se *napůl*.",
+        "en": "The cat cheats. It *twists in half*.",
+        "ro": "Pisica trișează. Se *răsucește în două*."
       },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "cat",
+          "type": "cat",
+          "position": [
+            0,
+            1.6,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cat",
+        "distance": 2.4,
+        "angle": "frontLeft",
+        "move": "orbitRight"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [
+        {
+          "prop": "cat",
+          "text": {
+            "cs": "kroutí se",
+            "en": "twist!",
+            "ro": "răsucire"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Přední tlapky přitáhne, zadní natáhne a otočí *předek*.",
+        "en": "Front legs in, back legs out, and it turns the *front half*.",
+        "ro": "Strânge lăbuțele din față, le întinde pe cele din spate și își rotește *partea din față*."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "cat",
+          "type": "cat",
+          "position": [
+            0,
+            1.6,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cat",
+        "distance": 2.6,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "přední tlapky k tělu",
+            "en": "front legs in",
+            "ro": "lăbuțele din față strânse"
+          },
+          {
+            "cs": "otočí předek",
+            "en": "turn the front",
+            "ro": "rotește partea din față"
+          },
+          {
+            "cs": "pak dotočí zadek",
+            "en": "then the back",
+            "ro": "apoi partea din spate"
+          }
+        ],
+        "active": 1
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Pak to prohodí a dotočí *zadek*.",
+        "en": "Then it swaps and turns the *back half*.",
+        "ro": "Apoi inversează și își rotește *partea din spate*."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cat",
+          "type": "cat",
+          "position": [
+            1.6,
+            1.6,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "slide",
+          "slideTo": [
+            1.6,
+            0,
+            0
+          ],
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cat",
+        "distance": 3.4,
+        "angle": "frontRight",
+        "move": "dollyIn"
+      },
+      "notes": [],
+      "card": {
+        "type": "steps",
+        "items": [
+          {
+            "cs": "přední tlapky k tělu",
+            "en": "front legs in",
+            "ro": "lăbuțele din față strânse"
+          },
+          {
+            "cs": "otočí předek",
+            "en": "turn the front",
+            "ro": "rotește partea din față"
+          },
+          {
+            "cs": "pak dotočí zadek",
+            "en": "then the back",
+            "ro": "apoi partea din spate"
+          }
+        ],
+        "active": 2
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Celková rotace je pořád *nula*. A kočka stojí.",
+        "en": "Total spin stays at *zero*. And the cat is standing.",
+        "ro": "Rotația totală rămâne *zero*. Iar pisica stă în picioare."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "cat",
+          "type": "cat",
+          "position": [
+            1.6,
+            0,
+            0
+          ],
+          "scale": 1.8,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cat",
+        "distance": 3,
+        "angle": "low",
+        "move": "orbitLeft"
+      },
+      "notes": [
+        {
+          "prop": "cat",
+          "text": {
+            "cs": "ta-dá",
+            "en": "ta-da",
+            "ro": "ta-da"
+          }
+        }
+      ],
+      "card": null,
+      "shake": false
     }
   ]
 }

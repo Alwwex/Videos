@@ -1,277 +1,515 @@
 {
-  "engine": "blueprint",
+  "engine": "hybrid",
   "id": 30,
   "title": {
-    "cs": "Proč necítíš, že se Země točí",
-    "en": "Why you can't feel Earth spinning",
-    "ro": "De ce nu simți că Pământul se rotește"
+    "cs": "Vzduch v pokoji váží jako ty",
+    "en": "The air in your room weighs as much as you",
+    "ro": "Aerul din cameră cântărește cât tine"
   },
   "description": {
-    "cs": "Právě teď se řítíš rychlostí přes tisíc kilometrů za hodinu. A vůbec nic necítíš. 🌍",
-    "en": "Right now you're moving over a thousand kilometers per hour. And you feel nothing. 🌍",
-    "ro": "Chiar acum te miști cu peste o mie de kilometri pe oră. Și nu simți nimic. 🌍"
+    "cs": "Padesát kilo, které nevidíš. A deset tun nad každým metrem čtverečním. 🌬️",
+    "en": "Fifty kilos you can't see. And ten tonnes over every square meter. 🌬️",
+    "ro": "Cincizeci de kilograme pe care nu le vezi. Și zece tone pe fiecare metru pătrat. 🌬️"
   },
   "hashtags": [
     "fyzika",
     "physics",
     "science",
-    "zeme",
-    "rotace",
-    "earth"
+    "vzduch",
+    "tlak",
+    "air"
   ],
+  "hook": {
+    "cs": "V POKOJI MÁŠ 50 KILO, KTERÁ NEVIDÍŠ",
+    "en": "50 KILOS IN YOUR ROOM YOU CAN'T SEE",
+    "ro": "50 DE KILOGRAME INVIZIBILE ÎN CAMERĂ"
+  },
   "scenes": [
     {
       "narration": {
-        "cs": "Právě teď se řítíš rychlostí přes *tisíc km/h*.",
-        "en": "Right now you're racing at over *1,000 km/h*.",
-        "ro": "Chiar acum gonești cu peste *1.000 km/h*."
+        "cs": "Vzduch v tvém pokoji váží asi jako *dospělý člověk*.",
+        "en": "The air in your bedroom weighs about as much as *an adult*.",
+        "ro": "Aerul din camera ta cântărește cam cât *un om adult*."
       },
-      "headline": {
-        "cs": "TISÍC KM/H|PRÁVĚ TEĎ",
-        "en": "1,000 KM/H|RIGHT NOW",
-        "ro": "1.000 KM/H|CHIAR ACUM"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0.07,
+            0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "scale",
+          "type": "weighScale",
+          "position": [
+            0,
+            0,
+            0.3
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 4.2,
+        "angle": "frontRight",
+        "move": "dollyIn"
       },
-      "tag": "EARTH ROTATION",
-      "accent": "yellow",
-      "visual": {
-        "type": "orbit",
-        "mode": "spin",
-        "center": "earth",
-        "body": "person",
-        "label": null
-      }
+      "notes": [],
+      "card": null,
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Na rovníku se Země točí rychlostí *1670 km/h*.",
-        "en": "At the equator, Earth spins at *1,670 km/h*.",
-        "ro": "La ecuator, Pământul se rotește cu *1.670 km/h*."
+        "cs": "Jeden metr krychlový vzduchu má *víc než kilo*.",
+        "en": "One cubic meter of air weighs *over a kilo*.",
+        "ro": "Un metru cub de aer are *peste un kilogram*."
       },
-      "headline": {
-        "cs": "RYCHLEJI|NEŽ LETADLO",
-        "en": "FASTER THAN|A JET",
-        "ro": "MAI REPEDE|CA UN AVION"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "cube",
+          "type": "iceCube",
+          "position": [
+            1.4,
+            0,
+            -0.4
+          ],
+          "scale": 2,
+          "rotationY": 0,
+          "color": "#dff4ff",
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0.07,
+            0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "cube",
+        "distance": 4.5,
+        "angle": "front",
+        "move": "orbitLeft"
       },
-      "tag": "EQUATOR",
-      "accent": "red",
-      "visual": {
-        "type": "gauge",
+      "notes": [
+        {
+          "prop": "cube",
+          "text": {
+            "cs": "1 m³",
+            "en": "1 m³",
+            "ro": "1 m³"
+          }
+        }
+      ],
+      "card": {
+        "type": "counter",
         "from": 0,
-        "to": 1670,
-        "max": 2000,
+        "to": 1.2,
+        "decimals": 1,
         "unit": {
-          "cs": " km/h",
-          "en": " km/h",
-          "ro": " km/h"
+          "cs": " kg",
+          "en": " kg",
+          "ro": " kg"
         },
         "caption": {
-          "cs": "v Česku asi 1070 km/h",
-          "en": "in Central Europe about 1,070 km/h",
-          "ro": "în România cam 1.180 km/h"
+          "cs": "jeden metr krychlový vzduchu",
+          "en": "one cubic meter of air",
+          "ro": "un metru cub de aer"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Necítíš to, protože rychlost se *nemění*.",
-        "en": "You can't feel it because the speed *never changes*.",
-        "ro": "Nu simți asta, pentru că viteza *nu se schimbă*."
+        "cs": "Pokoj čtyři krát čtyři metry je asi *čtyřicet kubíků*.",
+        "en": "A four-by-four meter room is about *forty cubic meters*.",
+        "ro": "O cameră de patru pe patru metri are cam *patruzeci de metri cubi*."
       },
-      "headline": {
-        "cs": "STÁLÁ|RYCHLOST",
-        "en": "CONSTANT|SPEED",
-        "ro": "VITEZĂ|CONSTANTĂ"
-      },
-      "tag": "INERTIA",
-      "accent": "teal",
-      "visual": {
-        "type": "graph",
-        "curve": "flat",
-        "curve2": null,
-        "x": {
-          "cs": "čas",
-          "en": "time",
-          "ro": "timp"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0.07,
+            0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         },
-        "y": {
-          "cs": "rychlost",
-          "en": "speed",
-          "ro": "viteză"
-        },
-        "markLabel": {
-          "cs": "pořád stejně",
-          "en": "always the same",
-          "ro": "mereu la fel"
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
         }
-      }
-    },
-    {
-      "narration": {
-        "cs": "Tělo necítí rychlost, cítí jen *zrychlení*.",
-        "en": "Your body doesn't feel speed, only *acceleration*.",
-        "ro": "Corpul nu simte viteza, simte doar *accelerația*."
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 5.5,
+        "angle": "top",
+        "move": "dollyOut"
       },
-      "headline": {
-        "cs": "CÍTÍŠ JEN|ZMĚNU",
-        "en": "YOU ONLY FEEL|CHANGE",
-        "ro": "SIMȚI DOAR|SCHIMBAREA"
-      },
-      "tag": "NEWTON I",
-      "accent": "yellow",
-      "visual": {
-        "type": "compare",
-        "left": {
-          "icon": "car",
-          "label": {
-            "cs": "rozjezd",
-            "en": "speeding up",
-            "ro": "accelerare"
-          },
-          "value": {
-            "cs": "cítíš",
-            "en": "you feel it",
-            "ro": "simți"
-          }
-        },
-        "right": {
-          "icon": "plane",
-          "label": {
-            "cs": "let rovně",
-            "en": "cruising",
-            "ro": "zbor drept"
-          },
-          "value": {
-            "cs": "nic",
-            "en": "nothing",
-            "ro": "nimic"
-          }
-        },
-        "winner": "left"
-      }
-    },
-    {
-      "narration": {
-        "cs": "Je to jako v letadle, kde ti *nevyšplouchne* ani kafe.",
-        "en": "It's like a plane, where your coffee *doesn't even spill*.",
-        "ro": "E ca în avion, unde nici cafeaua *nu se varsă*."
-      },
-      "headline": {
-        "cs": "JAKO|V LETADLE",
-        "en": "LIKE IN|A PLANE",
-        "ro": "CA ÎN|AVION"
-      },
-      "tag": "900 km/h",
-      "accent": "blue",
-      "visual": {
-        "type": "icon",
-        "icon": "plane",
-        "icon2": null,
-        "relation": "none",
-        "effect": "float",
+      "notes": [],
+      "card": {
+        "type": "formula",
+        "tex": "4 \\times 4 \\times 2{,}5 = \\hl{40\\ \\text{m}^3}",
         "caption": null
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Vzduch, domy i ty se točíte *všichni spolu*.",
-        "en": "The air, the buildings and you all spin *together*.",
-        "ro": "Aerul, casele și tu vă rotiți *toți împreună*."
+        "cs": "To je skoro *padesát kilo* vzduchu kolem tebe.",
+        "en": "That's almost *fifty kilos* of air around you.",
+        "ro": "Asta înseamnă aproape *cincizeci de kilograme* de aer."
       },
-      "headline": {
-        "cs": "VŠECHNO|SPOLU",
-        "en": "EVERYTHING|TOGETHER",
-        "ro": "TOTUL|ÎMPREUNĂ"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0.07,
+            0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "scale",
+          "type": "weighScale",
+          "position": [
+            0,
+            0,
+            0.3
+          ],
+          "scale": 1.1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "scale",
+        "distance": 3.2,
+        "angle": "low",
+        "move": "dollyIn"
       },
-      "tag": "SAME FRAME",
-      "accent": "teal",
-      "visual": {
-        "type": "orbit",
-        "mode": "spin",
-        "center": "earth",
-        "body": "house",
-        "label": null
-      }
-    },
-    {
-      "narration": {
-        "cs": "Odstředivý efekt je jen *tři promile* gravitace.",
-        "en": "The spin's outward effect is only *0.3 percent* of gravity.",
-        "ro": "Efectul centrifug e doar *0,3 la sută* din gravitație."
-      },
-      "headline": {
-        "cs": "SKORO|NIC",
-        "en": "ALMOST|NOTHING",
-        "ro": "APROAPE|NIMIC"
-      },
-      "tag": "CENTRIPETAL",
-      "accent": "red",
-      "visual": {
-        "type": "bars",
-        "items": [
-          {
-            "label": {
-              "cs": "gravitace",
-              "en": "gravity",
-              "ro": "gravitație"
-            },
-            "value": 9.81,
-            "highlight": false
-          },
-          {
-            "label": {
-              "cs": "rotace",
-              "en": "rotation",
-              "ro": "rotație"
-            },
-            "value": 0.03,
-            "highlight": true
-          }
-        ],
+      "notes": [],
+      "card": {
+        "type": "counter",
+        "from": 0,
+        "to": 48,
+        "decimals": 0,
         "unit": {
-          "cs": " m/s²",
-          "en": " m/s²",
-          "ro": " m/s²"
+          "cs": " kg",
+          "en": " kg",
+          "ro": " kg"
+        },
+        "caption": {
+          "cs": "vzduch v běžném pokoji",
+          "en": "air in a normal room",
+          "ro": "aerul dintr-o cameră obișnuită"
         }
-      }
+      },
+      "shake": false
     },
     {
       "narration": {
-        "cs": "Rotaci ale vidíš každý den: *východ a západ Slunce*.",
-        "en": "But you see the spin every day: *sunrise and sunset*.",
-        "ro": "Dar vezi rotația zilnic: *răsăritul și apusul*."
+        "cs": "Na každý metr čtvereční tě shora tlačí *deset tun*.",
+        "en": "On every square meter, *ten tonnes* of air press down from above.",
+        "ro": "Pe fiecare metru pătrat apasă *zece tone* de aer de deasupra."
       },
-      "headline": {
-        "cs": "VIDÍŠ JI|KAŽDÝ DEN",
-        "en": "YOU SEE IT|DAILY",
-        "ro": "O VEZI|ZILNIC"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0.07,
+            0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a0",
+          "type": "arrowDown",
+          "position": [
+            -0.5,
+            2.6,
+            0.3
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a1",
+          "type": "arrowDown",
+          "position": [
+            0.5,
+            2.6,
+            0.3
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 4.2,
+        "angle": "front",
+        "move": "dollyIn"
       },
-      "tag": "DAY AND NIGHT",
-      "accent": "yellow",
-      "visual": {
-        "type": "icon",
-        "icon": "sun",
-        "icon2": "earth",
-        "relation": "none",
-        "effect": "spin",
-        "caption": null
-      }
+      "notes": [
+        {
+          "prop": "a0",
+          "text": {
+            "cs": "10 tun",
+            "en": "10 tonnes",
+            "ro": "10 tone"
+          }
+        }
+      ],
+      "card": null,
+      "shake": true
     },
     {
       "narration": {
-        "cs": "Napiš do komentářů, co tě zajímá, a *sleduj*.",
-        "en": "Tell us what to explain next, and *follow*.",
-        "ro": "Scrie-ne ce să explicăm și dă *follow*."
+        "cs": "Necítíš to, protože tlačí *ze všech stran* stejně.",
+        "en": "You don't feel it because it pushes *from all sides* equally.",
+        "ro": "Nu simți asta pentru că apasă *din toate părțile* la fel."
       },
-      "headline": {
-        "cs": "SLEDUJ|PRO VÍC",
-        "en": "FOLLOW|FOR MORE",
-        "ro": "URMĂREȘTE|PENTRU MAI MULT"
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "me",
+          "type": "person",
+          "position": [
+            0,
+            0.07,
+            0.3
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a0",
+          "type": "arrowDown",
+          "position": [
+            -0.5,
+            2.6,
+            0.3
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "a1",
+          "type": "arrowDown",
+          "position": [
+            0.5,
+            2.6,
+            0.3
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "l",
+          "type": "arrow",
+          "position": [
+            -1.3,
+            1.1,
+            0.3
+          ],
+          "scale": 0.9,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "r",
+          "type": "arrow",
+          "position": [
+            1.3,
+            1.1,
+            0.3
+          ],
+          "scale": 0.9,
+          "rotationY": 180,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "me",
+        "distance": 4.8,
+        "angle": "frontLeft",
+        "move": "orbitRight"
       },
-      "tag": null,
-      "accent": "yellow",
-      "visual": {
-        "type": "outro"
-      }
+      "notes": [],
+      "card": {
+        "type": "particles",
+        "mode": "pressure",
+        "label": {
+          "cs": "tlak zevnitř = tlak zvenku",
+          "en": "inside push = outside push",
+          "ro": "presiunea din interior = din exterior"
+        }
+      },
+      "shake": false
+    },
+    {
+      "narration": {
+        "cs": "Vysaj ho z plechovky a ona se *zmačká*.",
+        "en": "Pump it out of a can and the can *crumples*.",
+        "ro": "Scoate-l dintr-o doză și doza *se strivește*."
+      },
+      "environment": "indoor",
+      "props": [
+        {
+          "id": "table",
+          "type": "table",
+          "position": [
+            0,
+            0,
+            0
+          ],
+          "scale": 1,
+          "rotationY": 0,
+          "color": null,
+          "anim": "none",
+          "slideTo": null,
+          "glow": false
+        },
+        {
+          "id": "can",
+          "type": "cup",
+          "position": [
+            0.2,
+            0.85,
+            0.1
+          ],
+          "scale": 1.2,
+          "rotationY": 0,
+          "color": "#c9ccd2",
+          "anim": "shake",
+          "slideTo": null,
+          "glow": false
+        }
+      ],
+      "flows": [],
+      "waves": [],
+      "camera": {
+        "focus": "can",
+        "distance": 2.2,
+        "angle": "front",
+        "move": "dollyIn"
+      },
+      "notes": [
+        {
+          "prop": "can",
+          "text": {
+            "cs": "křup",
+            "en": "crunch",
+            "ro": "crac"
+          }
+        }
+      ],
+      "card": null,
+      "shake": true
     }
   ]
 }

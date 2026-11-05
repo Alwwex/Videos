@@ -10,6 +10,9 @@ export const ANCHOR_Y: Record<PropType, number> = {
   waterPool: 0.1, person: 1.1, arrow: 0, arrowUp: 0, arrowDown: 0, windTurbine: 3, snowflake: 0,
   thermometer: 0.8, speaker: 0.5, satellite: 0, lightning: 0, solarPanel: 0.7, atom: 0, lens: 0,
   prism: 0.5, table: 0.85,
+  banana: 0.15, clock: 0.6, cat: 0.32, candle: 0.55, candleSpace: 0.55, elevator: 0.9, ant: 0.12, mirror: 1.0,
+  router: 0.14, bird: 0.16, powerLine: 3.4, balloon: 1.15, paper: 0.05, aquarium: 0.42, headphones: 0.2,
+  weighScale: 0.05, earthCut: 0, planet: 0, carGlass: 0.6, astronaut: 1.1, goal: 0.9,
 };
 
 const v3 = (a: number[] | null | undefined): Vec3 => [a?.[0] ?? 0, a?.[1] ?? 0, a?.[2] ?? 0];
@@ -68,9 +71,12 @@ const RADIUS: Record<PropType, number> = {
   pot: 0.72, stove: 0.8, fridge: 1.05, microwave: 0.58, cup: 0.36, iceCube: 0.36, waterPool: 2, person: 1.0,
   arrow: 0.7, arrowUp: 0.7, arrowDown: 0.7, windTurbine: 3, snowflake: 0.75, thermometer: 0.9, speaker: 0.6,
   satellite: 1.8, lightning: 1.4, solarPanel: 0.9, atom: 1.0, lens: 0.65, prism: 0.6, table: 1.2,
+  banana: 0.5, clock: 0.55, cat: 0.55, candle: 0.5, candleSpace: 0.5, elevator: 1.1, ant: 0.3, mirror: 1.0,
+  router: 0.35, bird: 0.25, powerLine: 3.2, balloon: 0.6, paper: 0.45, aquarium: 0.75, headphones: 0.3,
+  weighScale: 0.4, earthCut: 2.1, planet: 1.05, carGlass: 1.05, astronaut: 1.0, goal: 1.6,
 };
 /** Kulisy – nemusí být v záběru celé. */
-const BACKDROP = new Set<PropType>(['table', 'waterPool', 'mountain', 'house', 'tree', 'cloud']);
+const BACKDROP = new Set<PropType>(['table', 'waterPool', 'mountain', 'house', 'tree', 'cloud', 'powerLine', 'goal']);
 
 export type FitItem = {p: Vec3; r: number};
 

@@ -270,15 +270,15 @@ export const BarsV: React.FC<VProps<'bars'>> = ({v, f, dur, th, lang, ac}) => {
     <Abs>
       {v.items.map((it, i) => {
         const t = prog(f, 6 + i * 8, Math.max(18, dur * 0.45), Easing.out(Easing.cubic));
-        const wpx = Math.max(8, (Math.abs(it.value) / max) * 760 * t);
+        const wpx = Math.max(8, (Math.abs(it.value) / max) * 600 * t);
         const color = it.highlight ? ac : th.muted;
         const decimals = Number.isInteger(it.value) ? 0 : it.value < 10 ? 1 : 0;
         return (
           <div key={i} style={{position: 'absolute', left: 50, top: top + i * rowH, width: 800, height: rowH}}>
-            <div style={{fontFamily: BODY_FONT, fontWeight: 800, fontSize: 36, color: th.ink, opacity: out(f, i * 6, 10)}}>{it.label[lang]}</div>
+            <div style={{fontFamily: BODY_FONT, fontWeight: 800, fontSize: 46, color: th.ink, opacity: out(f, i * 6, 10)}}>{it.label[lang]}</div>
             <div style={{display: 'flex', alignItems: 'center', gap: 18, marginTop: 10}}>
-              <div style={{width: wpx, height: 46, borderRadius: 10, background: color, boxShadow: it.highlight ? `0 0 30px ${ac}66` : 'none', opacity: it.highlight ? 1 : 0.55}} />
-              <div style={{fontFamily: MONO_FONT, fontWeight: 600, fontSize: 34, color, whiteSpace: 'nowrap', opacity: t}}>
+              <div style={{width: wpx, height: 58, borderRadius: 12, background: color, boxShadow: it.highlight ? `0 0 30px ${ac}66` : 'none', opacity: it.highlight ? 1 : 0.55}} />
+              <div style={{fontFamily: MONO_FONT, fontWeight: 600, fontSize: 44, color, whiteSpace: 'nowrap', opacity: t}}>
                 {fmt(it.value * t, decimals, lang)}
                 {v.unit[lang]}
               </div>
