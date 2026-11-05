@@ -14,12 +14,14 @@ import type {Lang, Timeline} from '../src/engine/schema';
 import {P, Progress, ROOT, captionText, isShort, loadScript, loadTimeline, parseArgs, videoFolderName, videoOutFile, type AnyScript} from './lib';
 
 /** Časová osa jen pokud existují všechny její MP3 (jinak by render spadl). */
-const usableTimeline = (id: number, lang: Lang): Timeline | null => {
-  const tl = loadTimeline(id, lang);
-  if (!tl) return null;
+const usableTimeline = (id: number, lang: Lang, sceneCount: number): Timeline | null => {
+  const tl = loadTimeline(id, lang) as (Timeline & {partial?: boolean}) | null;
+  if (!tl || tl.partial || tl.scenes.length !== sceneCount) return null;
   const ok = tl.scenes.every((s) => !s.audioSrc || fs.existsSync(path.join(ROOT, 'public', s.audioSrc)));
   return ok ? tl : null;
 };
+// bez hlasu se video nerenderuje (němé video by se mohlo omylem publikovat); --allow-silent to povolí
+const allowSilent = process.argv.includes('--allow-silent');
 
 const LOCK = path.join(process.cwd(), 'out', 'render.lock');
 const STOP = path.join(process.cwd(), 'out', 'STOP');
@@ -71,10 +73,14 @@ const main = async () => {
       const name = videoFolderName(script);
       const out = videoOutFile(script, lang);
       if (fs.existsSync(out) && !force) continue;
+      if (!allowSilent && !usableTimeline(id, lang, script.scenes.length)) {
+        console.warn(`⏭️  ${videoFolderName(script)}/${lang}: chybí hlas – nejdřív ho namluv (render přeskočen)`);
+        continue;
+      }
       jobs.push({id, lang, script, name, out});
     }
   }
-  if (!jobs.length) return console.log('Vše už je vyrenderované (pro přepsání použij --force).');
+  if (!jobs.length) return console.log('Nic k renderování (hotová videa se přeskakují, pro přepsání použij --force).');
 
   console.log(`📦 Bundluji projekt… (${jobs.length} videí ve frontě)`);
   const serveUrl = await bundle({entryPoint: path.join(process.cwd(), 'src', 'index.ts')});
@@ -111,7 +117,7 @@ const main = async () => {
     }
     const {cancelSignal, cancel} = makeCancelSignal();
     const label = `${name}/${lang}`;
-    const timeline = usableTimeline(id, lang);
+    const timeline = usableTimeline(id, lang, script.scenes.length);
     const music = noMusic ? null : userTracks.length ? `music/${userTracks[id % userTracks.length]}` : undefined;
     const next = loadScript(id + 1);
     const inputProps: Record<string, unknown> = {script, lang, timeline, music, nextTitle: next ? next.title[lang] : null};

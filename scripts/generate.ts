@@ -170,7 +170,11 @@ const main = async () => {
         console.error('❌ Neplatný ANTHROPIC_API_KEY.');
         process.exit(1);
       } else if (e instanceof Anthropic.RateLimitError) console.error(`⏳ #${idea.id} rate limit – zkus to znovu později.`);
-      else if (e instanceof Anthropic.APIError) console.error(`❌ #${idea.id} API ${e.status}: ${e.message}`);
+      else if (e instanceof Anthropic.APIError && /credit balance|billing/i.test(e.message)) {
+        // došel kredit na účtu Anthropic – hotové scénáře už jsou uložené, zbytek nemá cenu zkoušet
+        console.error('💸 Na Anthropic účtu došel kredit. Hotové scénáře jsou uložené; po dobití pusť generování znovu.');
+        process.exit(1);
+      } else if (e instanceof Anthropic.APIError) console.error(`❌ #${idea.id} API ${e.status}: ${e.message}`);
       else if (e instanceof Anthropic.AnthropicError) console.error(`❌ #${idea.id} ${e.message}`);
       else throw e;
     }
