@@ -24,6 +24,11 @@
     "en": "JUMP INTO A HOLE THROUGH EARTH",
     "ro": "SARI ÎNTR-O GAURĂ PRIN PĂMÂNT"
   },
+  "outro": {
+    "cs": "Chceš víc takových? Dej *sledovat*.",
+    "en": "Want more like this? Hit *follow*.",
+    "ro": "Vrei mai multe? *Urmărește-ne*."
+  },
   "scenes": [
     {
       "narration": {

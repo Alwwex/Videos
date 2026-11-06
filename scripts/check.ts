@@ -22,6 +22,7 @@ for (const f of fs.readdirSync(P.scripts).filter((x) => x.endsWith('.json')).sor
   const errs = kind === 'v3' ? checkHybrid(r.data as never) : kind === 'v2' ? checkShortScript(r.data as never) : checkScript(r.data as never);
   const words = (raw.scenes as {narration: {cs: string}}[]).reduce((n, s) => n + s.narration.cs.split(/\s+/).length, 0);
   if (errs.length) bad++;
-  console.log(`${errs.length ? '⚠️ ' : '✅'} ${f} ${kind} ${raw.scenes.length} scén, ${words} slov (cs) ~${Math.round(words / 2.7)} s ${errs.join(' ')}`);
+  const outro = kind === 'v3' && raw.outro ? ` + závěr „${String(raw.outro.cs).replace(/\*/g, '')}“` : kind === 'v3' ? ' ⚠️ bez závěru' : '';
+  console.log(`${errs.length ? '⚠️ ' : '✅'} ${f} ${kind} ${raw.scenes.length} scén, ${words} slov (cs) ~${Math.round(words / 2.7)} s${outro} ${errs.join(' ')}`);
 }
 process.exit(bad ? 1 : 0);

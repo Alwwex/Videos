@@ -24,6 +24,11 @@
     "en": "YOUR FISH TANK KILLS YOUR WIFI",
     "ro": "ACVARIUL ÎȚI OMOARĂ WIFI-UL"
   },
+  "outro": {
+    "cs": "Přesuň akvárium a dej *sledovat*.",
+    "en": "Move the fish tank and hit *follow*.",
+    "ro": "Mută acvariul și *urmărește-ne*."
+  },
   "scenes": [
     {
       "narration": {

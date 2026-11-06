@@ -24,6 +24,11 @@
     "en": "22,000 VOLTS AND THE BIRD IS FINE",
     "ro": "22.000 DE VOLȚI ȘI PASĂREA E BINE"
   },
+  "outro": {
+    "cs": "Dej *sledovat*. Příště to bude ještě víc nabité.",
+    "en": "*Follow*. The next one is even more charged.",
+    "ro": "*Urmărește-ne*. Următorul e și mai încărcat."
+  },
   "scenes": [
     {
       "narration": {

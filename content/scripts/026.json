@@ -24,6 +24,11 @@
     "en": "A DAY LONGER THAN A YEAR",
     "ro": "O ZI MAI LUNGĂ DECÂT UN AN"
   },
+  "outro": {
+    "cs": "*Sleduj* nás, zítra letíme zase jinam.",
+    "en": "*Follow*, tomorrow we go somewhere else.",
+    "ro": "*Urmărește-ne*, mâine mergem în altă parte."
+  },
   "scenes": [
     {
       "narration": {

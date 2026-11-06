@@ -24,6 +24,11 @@
     "en": "THE ELEVATOR FALLS. DO YOU JUMP?",
     "ro": "CADE LIFTUL. SARI?"
   },
+  "outro": {
+    "cs": "Dej *sledovat*. Příští díl tě taky překvapí.",
+    "en": "*Follow*. The next one will surprise you too.",
+    "ro": "*Urmărește-ne*. Și următorul te va surprinde."
+  },
   "scenes": [
     {
       "narration": {
@@ -252,7 +257,7 @@
           "scale": 0.82,
           "rotationY": 0,
           "color": null,
-          "anim": "none",
+          "anim": "shock",
           "slideTo": null,
           "glow": false
         }

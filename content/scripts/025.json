@@ -24,6 +24,11 @@
     "en": "AN ANT SURVIVES A FALL FROM A PLANE",
     "ro": "FURNICA SUPRAVIEȚUIEȘTE CĂDERII DIN AVION"
   },
+  "outro": {
+    "cs": "Dej *sledovat*. Fyzika je divnější, než si myslíš.",
+    "en": "*Follow*. Physics is weirder than you think.",
+    "ro": "*Urmărește-ne*. Fizica e mai ciudată decât crezi."
+  },
   "scenes": [
     {
       "narration": {

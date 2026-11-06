@@ -24,6 +24,11 @@
     "en": "16 SUNRISES A DAY",
     "ro": "16 RĂSĂRITURI PE ZI"
   },
+  "outro": {
+    "cs": "Dej *sledovat*, zítra zase do vesmíru.",
+    "en": "*Follow*, tomorrow we're back in space.",
+    "ro": "*Urmărește-ne*, mâine ne întoarcem în spațiu."
+  },
   "scenes": [
     {
       "narration": {

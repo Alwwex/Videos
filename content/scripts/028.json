@@ -24,6 +24,11 @@
     "en": "FOLD PAPER 42× = MOON",
     "ro": "ÎNDOAIE HÂRTIA DE 42× = LUNA"
   },
+  "outro": {
+    "cs": "Zkus to přeložit a dej *sledovat*.",
+    "en": "Try folding one, then hit *follow*.",
+    "ro": "Încearcă și tu, apoi *urmărește-ne*."
+  },
   "scenes": [
     {
       "narration": {

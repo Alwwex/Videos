@@ -24,6 +24,11 @@
     "en": "50 KILOS IN YOUR ROOM YOU CAN'T SEE",
     "ro": "50 DE KILOGRAME INVIZIBILE ÎN CAMERĂ"
   },
+  "outro": {
+    "cs": "Dej *sledovat*. Další díl je ještě lepší.",
+    "en": "*Follow*. The next one is even better.",
+    "ro": "*Urmărește-ne*. Următorul e și mai tare."
+  },
   "scenes": [
     {
       "narration": {
@@ -291,7 +296,7 @@
           "scale": 1,
           "rotationY": 0,
           "color": null,
-          "anim": "none",
+          "anim": "shock",
           "slideTo": null,
           "glow": false
         },

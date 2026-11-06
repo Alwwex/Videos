@@ -24,6 +24,11 @@
     "en": "YOUR BANANA IS RADIOACTIVE",
     "ro": "BANANA TA E RADIOACTIVĂ"
   },
+  "outro": {
+    "cs": "*Sleduj* nás. Tohle byl teprve začátek.",
+    "en": "*Follow* us. This was just the start.",
+    "ro": "*Urmărește-ne*. Asta a fost doar începutul."
+  },
   "scenes": [
     {
       "narration": {
@@ -496,7 +501,7 @@
           "scale": 1,
           "rotationY": 25,
           "color": null,
-          "anim": "pulse",
+          "anim": "shock",
           "slideTo": null,
           "glow": true
         },

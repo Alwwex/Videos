@@ -238,7 +238,7 @@ function renderHome() {
   }
   $('#jobs').innerHTML = S.jobs.length ? S.jobs.map((j) => `<div>${{queued: '⏳', running: '▶️', done: '✅', failed: '❌', stopped: '⏹️'}[j.status]} ${esc(j.label)}</div>`).join('') : '<span class="muted">Zatím nic.</span>';
   $('#nextPosts').innerHTML = S.channels.map((c) => {
-    const next = v.find((x) => !x.skip && x.langs[c.lang].rendered && !x.posted.includes(c.id));
+    const next = v.find((x) => !x.skip && x.langs[c.lang].rendered && !x.langs[c.lang].stale && !x.posted.includes(c.id));
     return `<div>${c.enabled ? '🟢' : '⚪'} <b>${esc(c.name)}</b> <span class="muted">(${PLAT[c.platform]}, ${LBL[c.lang]})</span> → ${next ? `#${next.id} ${esc(next.title)}` : '<span class="muted">nic připraveného</span>'}</div>`;
   }).join('') + (S.pubBusy ? `<div style="margin-top:8px">📤 Právě: ${esc(S.pubBusy)}</div>` : '');
   $('#hdrStatus').innerHTML = `${busy ? '▶️ ' + esc(S.running) : 'Připraveno'}<br>${S.schedule.enabled ? '🗓️ plán zapnut' : '🗓️ plán vypnut'}`;
@@ -247,15 +247,16 @@ function renderHome() {
 function chips(x) {
   return LANGS.map((l) => {
     const s = x.langs[l];
-    const voice = s.voiced ? `<span class="chip voice" title="${s.provider === 'edge' ? 'Microsoft (zdarma)' : 'ElevenLabs'}">🎙 ${s.provider === 'edge' ? 'M' : 'E'}</span>` : '<span class="chip">🎙 –</span>';
-    const vid = s.rendered ? `<span class="chip ok click" data-play="${x.id}" data-lang="${l}">🎬 ▶</span>` : s.old ? '<span class="chip warn" title="Ve staré složce – Nastavení → Uspořádat">🎬 stará</span>' : '<span class="chip">🎬 –</span>';
+    const noOutro = x.engine === 'hybrid' && s.voiced && !s.outro;
+    const voice = s.voiced ? `<span class="chip voice" title="${s.provider === 'edge' ? 'Microsoft (zdarma)' : 'ElevenLabs'}${noOutro ? ' – závěr „sleduj“ ještě není namluvený' : ''}">🎙 ${s.provider === 'edge' ? 'M' : 'E'}${noOutro ? '…' : ''}</span>` : '<span class="chip">🎙 –</span>';
+    const vid = s.rendered && s.stale ? `<span class="chip warn click" data-play="${x.id}" data-lang="${l}" title="Starší verze (${esc(s.stale)}) – při Vyrobit se přerenderuje a do té doby se nepublikuje">🎬 ♻️</span>` : s.rendered ? `<span class="chip ok click" data-play="${x.id}" data-lang="${l}">🎬 ▶</span>` : s.old ? '<span class="chip warn" title="Ve staré složce – Nastavení → Uspořádat">🎬 stará</span>' : '<span class="chip">🎬 –</span>';
     return `<td>${voice}${vid}</td>`;
   }).join('');
 }
 
 function renderVideos() {
   const f = $('#vFilter').value;
-  const list = S.videos.filter((x) => f === 'all' || (f === 'new' && x.id >= 15) || (f === 'old' && x.id < 15) || (f === 'todo' && LANGS.some((l) => !x.langs[l].rendered)));
+  const list = S.videos.filter((x) => f === 'all' || (f === 'new' && x.id >= 15) || (f === 'old' && x.id < 15) || (f === 'todo' && LANGS.some((l) => !x.langs[l].rendered || x.langs[l].stale)));
   $('#vRows').innerHTML = list.map((x) => {
     const posted = S.channels.map((c) => x.posted.includes(c.id) ? `<span class="chip ok" title="${esc(c.name)}">✓ ${esc(c.name)}</span>` : '').join('');
     return `<tr>
@@ -307,7 +308,7 @@ async function refresh() {
 /* ---------- akce ---------- */
 $('#makeAll').onclick = async () => {
   const langs = $('#makeLangs').value.split(',');
-  const ids = S.videos.filter((x) => x.id >= 15 && langs.some((l) => !x.langs[l].rendered)).map((x) => x.id);
+  const ids = S.videos.filter((x) => x.id >= 15 && langs.some((l) => !x.langs[l].rendered || x.langs[l].stale)).map((x) => x.id);
   if (!ids.length) return alert('Všechna nová videa jsou hotová 🎉');
   await api('/api/make', {ids, langs, what: 'make'}); refresh();
 };

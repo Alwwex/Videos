@@ -24,6 +24,11 @@
     "en": "MIRRORS DON'T SWAP LEFT AND RIGHT",
     "ro": "OGLINDA NU INVERSEAZĂ STÂNGA CU DREAPTA"
   },
+  "outro": {
+    "cs": "Na zrcadlo se už podíváš jinak. Dej *sledovat*.",
+    "en": "You'll never see a mirror the same. *Follow*.",
+    "ro": "Nu vei mai vedea oglinda la fel. *Urmărește-ne*."
+  },
   "scenes": [
     {
       "narration": {

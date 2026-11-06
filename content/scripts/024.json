@@ -24,6 +24,11 @@
     "en": "90 °C WON'T BURN YOU. 60 °C WILL.",
     "ro": "90 °C NU TE ARDE. 60 °C DA."
   },
+  "outro": {
+    "cs": "Ukaž to kámošovi a dej *sledovat*.",
+    "en": "Show this to a friend and hit *follow*.",
+    "ro": "Arată-i asta unui prieten și *urmărește-ne*."
+  },
   "scenes": [
     {
       "narration": {
@@ -423,7 +428,7 @@
           "scale": 1,
           "rotationY": 10,
           "color": null,
-          "anim": "shake",
+          "anim": "shock",
           "slideTo": null,
           "glow": false
         }

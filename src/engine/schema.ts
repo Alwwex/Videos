@@ -31,7 +31,7 @@ export const PropSchema = z.object({
   scale: z.number(),
   rotationY: z.number().describe('Rotation around the vertical axis in degrees'),
   color: z.string().nullable().describe('Optional hex color override like "#ff8844", or null'),
-  anim: z.enum(['none', 'spin', 'bob', 'pulse', 'shake', 'slide', 'vanish']),
+  anim: z.enum(['none', 'spin', 'bob', 'pulse', 'shake', 'slide', 'vanish', 'shock']),
   slideTo: z.array(z.number()).nullable().describe('[x, y, z] target when anim is "slide", else null'),
   glow: z.boolean(),
 });

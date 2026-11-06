@@ -24,6 +24,11 @@
     "en": "WHERE ARE THE STARS?",
     "ro": "UNDE SUNT STELELE?"
   },
+  "outro": {
+    "cs": "Napiš, co mám vyvrátit příště, a dej *sledovat*.",
+    "en": "Tell me what to debunk next, and *follow*.",
+    "ro": "Spune-mi ce să demontez data viitoare și *urmărește-ne*."
+  },
   "scenes": [
     {
       "narration": {

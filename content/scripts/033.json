@@ -24,6 +24,11 @@
     "en": "THE SKY SHOULD BE PURPLE",
     "ro": "CERUL AR TREBUI SĂ FIE VIOLET"
   },
+  "outro": {
+    "cs": "Pošli to někomu, kdo má rád modrou, a dej *sledovat*.",
+    "en": "Send this to someone who loves blue, and *follow*.",
+    "ro": "Trimite asta cuiva care iubește albastrul și *urmărește-ne*."
+  },
   "scenes": [
     {
       "narration": {
@@ -44,7 +49,7 @@
           "scale": 1,
           "rotationY": -20,
           "color": null,
-          "anim": "none",
+          "anim": "shock",
           "slideTo": null,
           "glow": false
         },

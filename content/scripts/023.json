@@ -24,6 +24,11 @@
     "en": "THE SUN VANISHES. NOW WHAT?",
     "ro": "SOARELE DISPARE. ȘI ACUM?"
   },
+  "outro": {
+    "cs": "Dej *sledovat*, další díl už je na cestě.",
+    "en": "*Follow*, the next one is on its way.",
+    "ro": "*Urmărește-ne*, următorul e deja pe drum."
+  },
   "scenes": [
     {
       "narration": {
