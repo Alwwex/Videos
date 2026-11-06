@@ -24,6 +24,11 @@
     "en": "HOW TO KICK A BALL AROUND A CORNER",
     "ro": "CUM ȘUTEZI MINGEA DUPĂ COLȚ"
   },
+  "outro": {
+    "cs": "Zkus ten kop a dej *sledovat*.",
+    "en": "Go try that kick, and hit *follow*.",
+    "ro": "Încearcă șutul și *urmărește-ne*."
+  },
   "scenes": [
     {
       "narration": {

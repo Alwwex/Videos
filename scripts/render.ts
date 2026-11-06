@@ -11,7 +11,8 @@ import path from 'node:path';
 import {bundle} from '@remotion/bundler';
 import {makeCancelSignal, renderMedia, selectComposition} from '@remotion/renderer';
 import type {Lang, Timeline} from '../src/engine/schema';
-import {P, Progress, ROOT, captionText, isHybrid, isShort, loadScript, loadTimeline, parseArgs, videoFolderName, videoOutFile, type AnyScript} from './lib';
+import {load as loadStudio} from '../studio/store';
+import {P, Progress, ROOT, captionText, isHybrid, isShort, loadScript, loadTimeline, normalizeLoudness, parseArgs, renderStale, videoFolderName, videoOutFile, writeRenderStamp, type AnyScript} from './lib';
 
 /** Časová osa jen pokud existují všechny její MP3 (jinak by render spadl). */
 const usableTimeline = (id: number, lang: Lang, sceneCount: number): Timeline | null => {
@@ -58,9 +59,21 @@ const acquireLock = () => {
   process.on('exit', release);
 };
 
+/** Videa už publikovaná v daném jazyce – ta se kvůli novému vzhledu znovu nerenderují. */
+const postedSet = () => {
+  try {
+    const st = loadStudio();
+    const lang = new Map(st.channels.map((c) => [c.id, c.lang]));
+    return new Set(st.posts.filter((p) => p.status !== 'error').map((p) => `${p.videoId}:${lang.get(p.channelId)}`));
+  } catch {
+    return new Set<string>();
+  }
+};
+
 const main = async () => {
   const {ids, langs, force, concurrency, noMusic} = parseArgs();
   acquireLock();
+  const posted = postedSet();
 
   // nejdřív seznam úloh, ať lišta zná celkový počet
   const jobs: {id: number; lang: Lang; script: AnyScript; name: string; out: string}[] = [];
@@ -73,7 +86,11 @@ const main = async () => {
     for (const lang of langs) {
       const name = videoFolderName(script);
       const out = videoOutFile(script, lang);
-      if (fs.existsSync(out) && !force) continue;
+      if (fs.existsSync(out) && !force) {
+        const why = posted.has(`${id}:${lang}`) ? null : renderStale(script, lang);
+        if (!why) continue;
+        console.log(`♻️  ${name}/${lang}: přerenderuji (${why})`);
+      }
       if (!allowSilent && !usableTimeline(id, lang, script.scenes.length)) {
         console.warn(`⏭️  ${videoFolderName(script)}/${lang}: chybí hlas – nejdřív ho namluv (render přeskočen)`);
         continue;
@@ -91,14 +108,14 @@ const main = async () => {
   const musicDir = path.join(process.cwd(), 'public', 'music');
   // vlastní skladby v public/music se střídají podle čísla videa; jinak smyčka podle tématu
   const userTracks = fs.existsSync(musicDir)
-    ? fs.readdirSync(musicDir).filter((f) => /\.(mp3|wav|m4a)$/i.test(f) && !/^(default-loop|loop-[a-d])\.wav$/.test(f))
+    ? fs.readdirSync(musicDir).filter((f) => /\.(mp3|wav|m4a)$/i.test(f) && !/^(default-loop\.wav|loop-[a-d]\.wav|cine-[a-d]\.mp3)$/.test(f))
     : [];
 
   // render jde nejdřív do dočasné složky; hotové video se pak přesune na místo
   // (na Windows nejde přepsat soubor, který má otevřený přehrávač)
   const tmpDir = path.join(P.videos, '.tmp');
   fs.mkdirSync(tmpDir, {recursive: true});
-  const pending: {tmp: string; out: string; label: string}[] = [];
+  const pending: {tmp: string; out: string; label: string; script: AnyScript; lang: Lang}[] = [];
   const tryMove = (tmp: string, out: string) => {
     try {
       fs.mkdirSync(path.dirname(out), {recursive: true});
@@ -146,10 +163,19 @@ const main = async () => {
           if (fs.existsSync(STOP)) cancel();
         },
       });
+      // nová videa: hlasitost jako ostatní videa na sítích (jinak by v mobilu zněla slaběji)
+      if (isHybrid(script)) {
+        try {
+          normalizeLoudness(tmp);
+        } catch (e) {
+          console.warn(`\n⚠️  ${label}: hlasitost se nepodařilo vyrovnat (${(e as Error).message.slice(0, 120)}) – video je i tak v pořádku`);
+        }
+      }
       fs.mkdirSync(path.dirname(out), {recursive: true});
       fs.writeFileSync(path.join(path.dirname(out), 'popis.txt'), captionText(script, lang));
       const moved = tryMove(tmp, out);
-      if (!moved) pending.push({tmp, out, label});
+      if (moved) writeRenderStamp(script, lang);
+      else pending.push({tmp, out, label, script, lang});
       bar.ok(
         `${label}.mp4 (${(composition.durationInFrames / composition.fps).toFixed(0)} s, ${((Date.now() - t) / 60000).toFixed(1)} min)${timeline ? '' : ' 🔇 bez hlasu'}${moved ? '' : ' ⏳ čeká, až zavřeš přehrávač'}`,
       );
@@ -170,7 +196,11 @@ const main = async () => {
 
   // videa, která nešla přesunout (otevřený soubor): zkoušíme ještě 2 minuty
   for (let attempt = 0; pending.length && attempt < 40; attempt++) {
-    for (const p of [...pending]) if (tryMove(p.tmp, p.out)) pending.splice(pending.indexOf(p), 1);
+    for (const p of [...pending])
+      if (tryMove(p.tmp, p.out)) {
+        writeRenderStamp(p.script, p.lang);
+        pending.splice(pending.indexOf(p), 1);
+      }
     if (pending.length) await new Promise((r) => setTimeout(r, 3000));
   }
   for (const p of pending) console.log(`\n⚠️  ${p.label}: hotové video leží v ${path.relative(process.cwd(), p.tmp)} – zavři přehrávač a přesuň ho ručně, nebo pusť render znovu.`);

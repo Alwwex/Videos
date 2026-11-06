@@ -24,6 +24,11 @@
     "en": "SCHOOL LIED TO YOU ABOUT ICE",
     "ro": "LA ȘCOALĂ TE-AU MINȚIT DESPRE GHEAȚĂ"
   },
+  "outro": {
+    "cs": "Tohle ti ve škole neřeknou. Dej *sledovat*.",
+    "en": "School won't tell you this. Hit *follow*.",
+    "ro": "Asta nu te învață la școală. *Urmărește-ne*."
+  },
   "scenes": [
     {
       "narration": {

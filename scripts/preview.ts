@@ -39,6 +39,13 @@ const main = async () => {
           cur += d;
         }
       });
+      // závěr „sleduj“
+      if (script.outro) {
+        const last = ranges[ranges.length - 1];
+        const o = timeline?.outro;
+        const from = timeline?.continuous && o?.startSec !== undefined ? Math.round(o.startSec * 30) : last[0] + last[1];
+        ranges.push([from, comp.durationInFrames - from]);
+      }
     }
     const list = frames.length
       ? frames

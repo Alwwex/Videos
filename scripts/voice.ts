@@ -35,7 +35,7 @@ const EDGE_VOICE: Record<Lang, string> = {
   en: process.env.EDGE_VOICE_EN || EDGE_DEFAULT.en,
   ro: process.env.EDGE_VOICE_RO || EDGE_DEFAULT.ro,
 };
-const EDGE_RATE = process.env.EDGE_RATE || '+10%';
+const EDGE_RATE = process.env.EDGE_RATE || '+14%';
 
 type Provider = 'elevenlabs' | 'edge';
 type Mode = Provider | 'auto';
@@ -83,8 +83,8 @@ const addLibraryVoice = async (voiceId: string) => {
   return false;
 };
 
-const elevenTts = async (text: string, lang: Lang, previous = '', next = ''): Promise<TtsResponse> => {
-  const url = `https://api.elevenlabs.io/v1/text-to-speech/${VOICE[lang]}/with-timestamps?output_format=mp3_44100_128`;
+const elevenTts = async (text: string, voice: string, previous = '', next = ''): Promise<TtsResponse> => {
+  const url = `https://api.elevenlabs.io/v1/text-to-speech/${voice}/with-timestamps?output_format=mp3_44100_128`;
   for (let attempt = 1; ; attempt++) {
     const res = await fetch(url, {
       method: 'POST',
@@ -95,18 +95,19 @@ const elevenTts = async (text: string, lang: Lang, previous = '', next = ''): Pr
         previous_text: previous || undefined,
         next_text: next || undefined,
         voice_settings: {
-          stability: Number(process.env.VOICE_STABILITY || 0.42),
+          // živější přednes: nižší stabilita = víc emocí, vyšší styl, o kousek rychleji
+          stability: Number(process.env.VOICE_STABILITY || 0.36),
           similarity_boost: 0.8,
-          style: Number(process.env.VOICE_STYLE || 0.3),
+          style: Number(process.env.VOICE_STYLE || 0.42),
           use_speaker_boost: true,
-          speed: Number(process.env.VOICE_SPEED || 1.06),
+          speed: Number(process.env.VOICE_SPEED || 1.1),
         },
       }),
     });
     if (res.ok) return (await res.json()) as TtsResponse;
     const body = (await res.text()).slice(0, 400);
     // hlas z knihovny ještě není v účtu → přidat a zkusit znovu
-    if ((res.status === 400 || res.status === 404) && /voice/i.test(body) && (await addLibraryVoice(VOICE[lang]))) continue;
+    if ((res.status === 400 || res.status === 404) && /voice/i.test(body) && (await addLibraryVoice(voice))) continue;
     if ((res.status === 429 || res.status >= 500) && attempt < 4) {
       await new Promise((r) => setTimeout(r, 2000 * attempt));
       continue;
@@ -161,12 +162,12 @@ const edgeAgent = async () => {
   return proxyAgent;
 };
 
-const edgeTts = async (text: string, lang: Lang, words: string[]): Promise<Voiced> => {
+const edgeTts = async (text: string, voice: string, words: string[]): Promise<Voiced> => {
   for (let attempt = 1; ; attempt++) {
     const dir = fs.mkdtempSync(path.join(os.tmpdir(), 'edge-tts-'));
     try {
       const tts = new MsEdgeTTS({agent: (await edgeAgent()) as never});
-      await tts.setMetadata(EDGE_VOICE[lang], OUTPUT_FORMAT.AUDIO_24KHZ_96KBITRATE_MONO_MP3, {wordBoundaryEnabled: true});
+      await tts.setMetadata(voice, OUTPUT_FORMAT.AUDIO_24KHZ_96KBITRATE_MONO_MP3, {wordBoundaryEnabled: true});
       const r = await tts.toFile(dir, text, {rate: EDGE_RATE});
       tts.close();
       const meta = r.metadataFilePath && fs.existsSync(r.metadataFilePath) ? JSON.parse(fs.readFileSync(r.metadataFilePath, 'utf8')) : {Metadata: []};
@@ -184,10 +185,11 @@ const edgeTts = async (text: string, lang: Lang, words: string[]): Promise<Voice
   }
 };
 
-/** Syntéza jednoho textu daným poskytovatelem → zvuk + časy slov. */
-const synth = async (use: Provider, text: string, lang: Lang, words: string[], prev = '', next = ''): Promise<Voiced> => {
-  if (use === 'edge') return edgeTts(text, lang, words);
-  const r = await elevenTts(text, lang, prev, next);
+/** Syntéza jednoho textu daným poskytovatelem → zvuk + časy slov. `voice` = konkrétní hlas (jinak podle nastavení). */
+const voiceFor = (use: Provider, lang: Lang) => (use === 'edge' ? EDGE_VOICE[lang] : VOICE[lang]);
+const synth = async (use: Provider, text: string, lang: Lang, words: string[], prev = '', next = '', voice = voiceFor(use, lang)): Promise<Voiced> => {
+  if (use === 'edge') return edgeTts(text, voice, words);
+  const r = await elevenTts(text, voice, prev, next);
   const wordStarts = wordsFromChars(words, r.alignment.character_start_times_seconds);
   const end = r.alignment.character_end_times_seconds.at(-1) ?? wordStarts.at(-1) ?? 1;
   return {audio: Buffer.from(r.audio_base64, 'base64'), wordStarts, end};
@@ -212,7 +214,8 @@ const logUsage = (entry: Record<string, unknown>) => {
   fs.writeFileSync(USAGE, JSON.stringify(all.slice(-2000), null, 1));
 };
 
-type TL = Timeline & {texts?: string[]; provider?: string; providers?: string[]; partial?: boolean; continuous?: boolean; audioSrc?: string | null};
+type Outro = {text: string; startSec?: number; audioSrc?: string | null; durationSec: number; wordStarts: number[]; provider: string};
+type TL = Timeline & {texts?: string[]; provider?: string; providers?: string[]; partial?: boolean; continuous?: boolean; audioSrc?: string | null; voice?: string; outro?: Outro | null};
 const audioExists = (rel: string | null | undefined) => !!rel && fs.existsSync(path.join(ROOT, 'public', rel));
 
 const main = async () => {
@@ -222,6 +225,7 @@ const main = async () => {
   if (KEY) console.log(`🎙️  ElevenLabs: ${remaining === null ? 'nepodařilo se zjistit kredity' : `zbývá ${remaining} znaků`}`);
   else console.log('🎙️  ElevenLabs klíč není nastaven → mluví zdarma hlas Microsoft Edge.');
   let elevenDead = !KEY;
+  const elevenFits = (chars: number) => !elevenDead && (remaining === null || remaining - chars >= reserve);
 
   // jazyky ve vnější smyčce: nejdřív celá čeština, pak angličtina, pak rumunština
   for (const lang of langs) {
@@ -234,19 +238,50 @@ const main = async () => {
       const texts = script.scenes.map((s) => spokenText(s.narration[lang]));
       const old = loadTimeline(id, lang) as TL | null;
       const continuous = isHybrid(script);
+      // závěrečná výzva „sleduj…“ (jen nová videa)
+      const outroSrc = continuous ? ((script as {outro?: Record<Lang, string> | null}).outro?.[lang] ?? '') : '';
+      const outroText = outroSrc ? spokenText(outroSrc) : '';
+      const outroWords = outroSrc ? tokenize(outroSrc).map((w) => w.text) : [];
 
-      const done = continuous
+      const mainDone = continuous
         ? !force && !!old?.continuous && old.texts?.length === texts.length && texts.every((t, i) => old.texts![i] === t) && audioExists(old.audioSrc)
         : !force && old?.texts?.length === texts.length && !old.partial && texts.every((t, i) => old.texts![i] === t && audioExists(old.scenes[i]?.audioSrc));
-      if (done) {
+      const outroDone = !outroText || (old?.outro?.text === outroText && (old.outro.startSec !== undefined || audioExists(old.outro.audioSrc)));
+      if (mainDone && outroDone) {
         console.log(`⏭️  #${id} ${lang}: hlas už existuje`);
         continue;
       }
 
-      const chars = texts.join(' ').length;
+      /* ---- hlavní hlas hotový, chybí jen závěr: namluvit ho zvlášť, STEJNÝM hlasem ---- */
+      if (mainDone && old) {
+        const prov: Provider = old.provider === 'edge' ? 'edge' : 'elevenlabs';
+        const mode = modeFor(lang, provider);
+        if (prov === 'elevenlabs' && (!KEY || mode === 'edge' || !elevenFits(outroText.length))) {
+          console.warn(`⏸️  #${id} ${lang}: závěr „sleduj“ počká na kredity ElevenLabs (ať mluví stejný hlas) – video zatím skončí bez něj.`);
+          continue;
+        }
+        try {
+          const prevText = texts.slice(-2).join(' ');
+          const r = await synth(prov, outroText, lang, outroWords, prevText, '', old.voice ?? voiceFor(prov, lang));
+          const rel = `generated/${pad(id)}/${lang}/outro.mp3`;
+          const abs = path.join(P.audio, '..', rel);
+          fs.mkdirSync(path.dirname(abs), {recursive: true});
+          fs.writeFileSync(abs, r.audio);
+          const outro: Outro = {text: outroText, audioSrc: rel, durationSec: r.end + 0.3, wordStarts: r.wordStarts, provider: prov};
+          writeJson(timelinePath(id, lang), {...old, outro});
+          if (prov === 'elevenlabs' && remaining !== null) remaining -= outroText.length;
+          logUsage({id, lang, provider: prov, chars: outroText.length, part: 'outro'});
+          console.log(`🎙️  #${id} ${lang}: závěr „${outroText}“ (${r.end.toFixed(1)} s)`);
+        } catch (e) {
+          if (prov === 'elevenlabs') elevenDead = true;
+          console.warn(`⏸️  #${id} ${lang}: závěr se nepodařilo namluvit (${(e as Error).message.slice(0, 160)}) – zkusí se příště.`);
+        }
+        continue;
+      }
+
+      const chars = texts.join(' ').length + (outroText ? outroText.length + 1 : 0);
       const mode = modeFor(lang, provider);
-      let use: Provider =
-        mode === 'edge' ? 'edge' : mode === 'elevenlabs' ? 'elevenlabs' : !elevenDead && (remaining === null || remaining - chars >= reserve) ? 'elevenlabs' : 'edge';
+      let use: Provider = mode === 'edge' ? 'edge' : mode === 'elevenlabs' ? 'elevenlabs' : elevenFits(chars) ? 'elevenlabs' : 'edge';
       if (use === 'elevenlabs' && !KEY) use = 'edge';
       if (use === 'elevenlabs' && elevenDead) {
         console.warn(`⏸️  #${id} ${lang}: ElevenLabs teď nejde (došly kredity?) – přeskakuji, nic se neztratilo.`);
@@ -255,10 +290,11 @@ const main = async () => {
 
       try {
         if (continuous) {
-          /* ---- celé video najednou ---- */
+          /* ---- celé video najednou (včetně závěru) ---- */
           const sceneWords = script.scenes.map((s) => tokenize(s.narration[lang]).map((w) => w.text));
-          const allWords = sceneWords.flat();
-          const full = texts.join(' ');
+          const segWords = outroText ? [...sceneWords, outroWords] : sceneWords;
+          const allWords = segWords.flat();
+          const full = [...texts, ...(outroText ? [outroText] : [])].join(' ');
           let r: Voiced;
           try {
             r = await synth(use, full, lang, allWords);
@@ -274,26 +310,28 @@ const main = async () => {
           const abs = path.join(P.audio, '..', rel);
           fs.mkdirSync(path.dirname(abs), {recursive: true});
           fs.writeFileSync(abs, r.audio);
-          // hranice scén = chvilku před prvním slovem každé scény
+          // hranice úseků = chvilku před prvním slovem každé scény (a závěru)
           const starts: number[] = [];
+          const offs: number[] = [];
           let k = 0;
-          sceneWords.forEach((ws, i) => {
+          segWords.forEach((ws, i) => {
             const first = r.wordStarts[k] ?? 0;
             const prevLast = k > 0 ? (r.wordStarts[k - 1] ?? 0) : 0;
             starts.push(i === 0 ? 0 : Math.max(prevLast + 0.25, first - 0.08));
+            offs.push(k);
             k += ws.length;
           });
-          const scenes: (SceneTimeline & {startSec: number})[] = [];
-          k = 0;
-          sceneWords.forEach((ws, i) => {
-            const st = starts[i];
+          const rel0 = (i: number, ws: string[]) => ws.map((_, j) => Math.max(0, (r.wordStarts[offs[i] + j] ?? starts[i]) - starts[i]));
+          const scenes: (SceneTimeline & {startSec: number})[] = sceneWords.map((ws, i) => {
             const end = i + 1 < starts.length ? starts[i + 1] : r.end + 0.5;
-            scenes.push({audioSrc: null, startSec: st, durationSec: Math.max(0.4, end - st), wordStarts: ws.map((_, j) => Math.max(0, (r.wordStarts[k + j] ?? st) - st))});
-            k += ws.length;
+            return {audioSrc: null, startSec: starts[i], durationSec: Math.max(0.4, end - starts[i]), wordStarts: rel0(i, ws)};
           });
-          writeJson(timelinePath(id, lang), {lang, continuous: true, audioSrc: rel, scenes, texts, provider: use});
-          const total = scenes.reduce((n, s) => n + s.durationSec, 0);
-          console.log(`🎙️  #${id} ${lang}: ${total.toFixed(1)} s souvislé řeči (${use === 'edge' ? 'Edge – zdarma' : 'ElevenLabs'})`);
+          const oi = sceneWords.length;
+          const outro: Outro | null = outroText
+            ? {text: outroText, startSec: starts[oi], durationSec: Math.max(0.6, r.end + 0.4 - starts[oi]), wordStarts: rel0(oi, outroWords), provider: use}
+            : null;
+          writeJson(timelinePath(id, lang), {lang, continuous: true, audioSrc: rel, scenes, texts, provider: use, voice: voiceFor(use, lang), outro});
+          console.log(`🎙️  #${id} ${lang}: ${r.end.toFixed(1)} s souvislé řeči${outro ? ' včetně závěru' : ''} (${use === 'edge' ? 'Edge – zdarma' : 'ElevenLabs'})`);
         } else {
           /* ---- starší videa: MP3 pro každou scénu ---- */
           const oldProv = (i: number): string => old?.providers?.[i] ?? old?.provider ?? 'elevenlabs';

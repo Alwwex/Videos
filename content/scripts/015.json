@@ -24,6 +24,11 @@
     "en": "ALL OF HUMANITY IN A SUGAR CUBE",
     "ro": "TOATĂ OMENIREA ÎNTR-UN CUB DE ZAHĂR"
   },
+  "outro": {
+    "cs": "Dej *sledovat*, ať ti neuteče další díl.",
+    "en": "*Follow* so you don't miss the next one.",
+    "ro": "*Urmărește-ne* ca să nu ratezi următorul."
+  },
   "scenes": [
     {
       "narration": {
@@ -335,7 +340,7 @@
           "scale": 1,
           "rotationY": 0,
           "color": null,
-          "anim": "none",
+          "anim": "shock",
           "slideTo": null,
           "glow": false
         },

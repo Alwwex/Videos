@@ -24,6 +24,11 @@
     "en": "WHAT IF EARTH STOPPED SPINNING?",
     "ro": "CE-AR FI DACĂ PĂMÂNTUL S-AR OPRI?"
   },
+  "outro": {
+    "cs": "*Sleduj* nás, ať ti nic neuteče.",
+    "en": "*Follow* so you don't miss a thing.",
+    "ro": "*Urmărește-ne* ca să nu ratezi nimic."
+  },
   "scenes": [
     {
       "narration": {

@@ -24,6 +24,11 @@
     "en": "THIS CLOUD WEIGHS 500 TONNES",
     "ro": "NORUL ĂSTA CÂNTĂREȘTE 500 DE TONE"
   },
+  "outro": {
+    "cs": "Až uvidíš mrak, vzpomeň si. A dej *sledovat*.",
+    "en": "Next time you see a cloud, remember. And *follow*.",
+    "ro": "Când vezi un nor, amintește-ți. Și *urmărește-ne*."
+  },
   "scenes": [
     {
       "narration": {

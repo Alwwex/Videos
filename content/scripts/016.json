@@ -24,6 +24,11 @@
     "en": "YOUR HEAD IS OLDER THAN YOUR FEET",
     "ro": "CAPUL TĂU E MAI BĂTRÂN DECÂT PICIOARELE"
   },
+  "outro": {
+    "cs": "*Sleduj* nás. Zítra je tu další šílenost.",
+    "en": "*Follow* for more. Tomorrow gets weirder.",
+    "ro": "*Urmărește-ne*. Mâine vine altă nebunie."
+  },
   "scenes": [
     {
       "narration": {
@@ -44,7 +49,7 @@
           "scale": 1,
           "rotationY": 0,
           "color": null,
-          "anim": "none",
+          "anim": "shock",
           "slideTo": null,
           "glow": false
         },

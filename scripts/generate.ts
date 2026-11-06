@@ -50,7 +50,8 @@ The look: a colorful low-poly 3D world (built from a fixed library of props) wit
 ## What makes these videos work (follow this closely)
 - The first 2 seconds decide everything. Scene 1 states the most surprising claim of the whole video, as a fact or a direct question to the viewer ("Your head is older than your feet."). Never start with "Did you know", "In this video", "Have you ever wondered".
 - Pick an angle that makes people stop: a myth bust, an absurd but true number, a "what if", something about their body, phone or home. Avoid textbook phrasing.
-- Then one fast chain of cause and effect, one idea per scene, with one concrete, correct number where it helps. End with a punchline, a twist or a practical takeaway – not "follow for more".
+- Then one fast chain of cause and effect, one idea per scene, with one concrete, correct number where it helps. The last scene ends with a punchline, a twist or a practical takeaway (no "follow" there).
+- outro: one separate short line said after the last scene that asks people to follow (5-10 words). Casual, different in every video, ideally tied to the topic ("Try folding one, then hit *follow*.", "Send this to someone who loves blue, and *follow*."). Czech: "Dej *sledovat*…" / "*Sleduj* nás…", Romanian: "*Urmărește-ne*…". Mark the follow word with *asterisks*.
 - Sound like a real person talking to a friend: short, casual, a bit of humor, no filler, no marketing words, no "fascinating", "incredible", "let's dive in". Czech uses "ty", Romanian uses "tu". Write each language natively, not as a translation, with correct diacritics.
 - The physics must be correct. Simplify, but never say something false.
 
@@ -66,7 +67,7 @@ The look: a colorful low-poly 3D world (built from a fixed library of props) wit
 - A "table" has its top at y=0.85; objects standing on it use y=0.85.
 - Props (approximate height at scale 1, center at y+ANCHOR): ${PROP_TYPES.join(', ')}.
   Notes: person ~1.9 m; cat ~0.6 m (anim "slide" = falls and rights itself, "bob" = upside down, "shake" = twisting); elevator = cabin 1.7 m with long rails (put a person inside, scale ~0.82); earthCut = transparent Earth with core and a tunnel (radius 2); planet = plain colored planet (use color for Venus/Jupiter); powerLine = two poles 6 m apart with 3 wires at y≈3.92 (birds sit at y≈3.94); carGlass = car with see-through cabin; balloon = helium balloon on a string; waterPool = 4×3 m slab (also usable as ice rink or Moon ground with a color); iceCube with color #ffffff = sugar cube; weighScale = bathroom scale; arrow/arrowUp/arrowDown show directions.
-- anim: none | spin | bob | pulse | shake | slide (moves from position to slideTo; otherwise slideTo is null) | vanish (disappears mid-scene). glow makes things shine (bulbs, hot things, alarms).
+- anim: none | spin | bob | pulse | shake | slide (moves from position to slideTo; otherwise slideTo is null) | vanish (disappears mid-scene) | shock (person only: arms up, open mouth – use it in 1-2 surprise moments per video, e.g. scene 1). glow makes things shine (bulbs, hot things, alarms).
 - flows: particles from one prop to another (photons, electrons, heat, cold, water, air, sound, light, microwaves). waves: rings from a prop (sound, radio, heat, light, microwaves).
 - camera: focus = prop id; distance: small objects 2-3, people 3.5-5, houses 8-11, space 6-14; angle front | frontLeft | frontRight | side | top | low; move dollyIn | dollyOut | orbitLeft | orbitRight | rise. Vary them. The camera frames all props automatically.
 - 1-5 props per scene; keep the same objects at the same positions in consecutive scenes; ids only need to be unique within a scene.
@@ -89,7 +90,7 @@ The look: a colorful low-poly 3D world (built from a fixed library of props) wit
 Card icons: ${ICONS.join(', ')}.
 
 ## Exact JSON format (TypeScript notation; T = {cs: string, en: string, ro: string})
-type Script = {engine: "hybrid", id: number, title: T, description: T, hashtags: string[] (5-7, no #), hook: T, scenes: Scene[]}
+type Script = {engine: "hybrid", id: number, title: T, description: T, hashtags: string[] (5-7, no #), hook: T, outro: T, scenes: Scene[]}
 type Scene = {narration: T, environment, props: Prop[], flows: {from, to, kind}[], waves: {from, kind}[], camera: {focus, distance, angle, move}, notes: {prop, text: T}[], card: Card | null, shake: boolean}
 type Prop = {id, type, position: [x,y,z], scale, rotationY (degrees), color: string|null, anim, slideTo: [x,y,z]|null, glow: boolean}
 Every field is required (use null or [] where allowed). Reply with ONLY the JSON object: no prose, no markdown code fences.

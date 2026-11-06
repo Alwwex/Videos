@@ -24,6 +24,11 @@
     "en": "LIGHTNING IS HOTTER THAN THE SUN",
     "ro": "FULGERUL E MAI FIERBINTE DECÂT SOARELE"
   },
+  "outro": {
+    "cs": "Dej *sledovat* a napiš, co mám vysvětlit příště.",
+    "en": "*Follow* and tell me what to explain next.",
+    "ro": "*Urmărește-ne* și scrie-mi ce să explic data viitoare."
+  },
   "scenes": [
     {
       "narration": {

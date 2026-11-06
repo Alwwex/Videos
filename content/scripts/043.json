@@ -24,6 +24,11 @@
     "en": "ON THE SUN YOU'D WEIGH TWO TONNES",
     "ro": "PE SOARE AI CÂNTĂRI DOUĂ TONE"
   },
+  "outro": {
+    "cs": "*Sleduj* nás, příště tě vezmeme na další planetu.",
+    "en": "*Follow*, next time we visit another planet.",
+    "ro": "*Urmărește-ne*, data viitoare mergem pe altă planetă."
+  },
   "scenes": [
     {
       "narration": {
@@ -59,7 +64,7 @@
           "scale": 1,
           "rotationY": 0,
           "color": null,
-          "anim": "none",
+          "anim": "shock",
           "slideTo": null,
           "glow": false
         }

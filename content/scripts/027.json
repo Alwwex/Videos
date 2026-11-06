@@ -24,6 +24,11 @@
     "en": "A CHARGED PHONE IS HEAVIER",
     "ro": "TELEFONUL ÎNCĂRCAT E MAI GREU"
   },
+  "outro": {
+    "cs": "Překvapilo tě to? Napiš a dej *sledovat*.",
+    "en": "Surprised? Comment and hit *follow*.",
+    "ro": "Te-a surprins? Scrie-mi și *urmărește-ne*."
+  },
   "scenes": [
     {
       "narration": {

@@ -1,3 +1,4 @@
+import {spawnSync} from 'node:child_process';
 import fs from 'node:fs';
 import path from 'node:path';
 import {LANGS, VideoScriptSchema, type Lang, type Timeline, type VideoScript} from '../src/engine/schema';
@@ -52,6 +53,50 @@ export const videoFolderName = (s: AnyScript) => `${pad(s.id)}-${slug(s.title.cs
 export const LANG_DIR: Record<Lang, string> = {cs: 'CZ', en: 'EN', ro: 'RO'};
 export const videoOutDir = (s: AnyScript, lang: Lang) => path.join(P.videos, videoFolderName(s), LANG_DIR[lang]);
 export const videoOutFile = (s: AnyScript, lang: Lang) => path.join(videoOutDir(s, lang), 'video.mp4');
+
+/** ffmpeg přibalený k Remotionu (bez instalace, i na Windows; cesty s mezerami nevadí). */
+export const ffmpeg = (args: string[]) => {
+  const r = spawnSync(process.execPath, [path.join(ROOT, 'node_modules', '@remotion', 'cli', 'remotion-cli.js'), 'ffmpeg', ...args], {encoding: 'utf8', maxBuffer: 64 * 1024 * 1024});
+  if (r.status !== 0) throw new Error(`ffmpeg: ${(r.stderr || r.error?.message || '').slice(-300)}`);
+  return `${r.stderr ?? ''}${r.stdout ?? ''}`;
+};
+
+/** Hlasitost jako u ostatních videí na sítích (−15 LUFS, špičky do −1,5 dB). Dva průchody = stálé zesílení bez „pumpování“. */
+export const normalizeLoudness = (file: string) => {
+  const LN = 'loudnorm=I=-15:TP=-1.5:LRA=11';
+  const m = ffmpeg(['-hide_banner', '-nostats', '-i', file, '-vn', '-af', `${LN}:print_format=json`, '-f', 'null', '-']).match(/\{[^{}]*"input_i"[^{}]*\}/);
+  if (!m) throw new Error('loudnorm: chybí měření');
+  const j = JSON.parse(m[0]) as Record<string, string>;
+  const out = file.replace(/\.mp4$/i, '.norm.mp4');
+  const af = `${LN}:measured_I=${j.input_i}:measured_TP=${j.input_tp}:measured_LRA=${j.input_lra}:measured_thresh=${j.input_thresh}:offset=${j.target_offset}:linear=true`;
+  ffmpeg(['-hide_banner', '-loglevel', 'error', '-y', '-i', file, '-c:v', 'copy', '-af', af, '-ar', '48000', '-c:a', 'aac', '-b:a', '192k', '-movflags', '+faststart', out]);
+  fs.renameSync(out, file);
+  return Number(j.input_i);
+};
+
+/* ---- zastaralé rendery (jen nová videa) ---- */
+/** Verze vzhledu nových videí. Když se zvýší, starší hotová videa se při renderu sama přerenderují. */
+export const HYBRID_LOOK = 2;
+const stampFile = (s: AnyScript, lang: Lang) => path.join(videoOutDir(s, lang), 'render.json');
+export const writeRenderStamp = (s: AnyScript, lang: Lang) => writeJson(stampFile(s, lang), {look: isHybrid(s) ? HYBRID_LOOK : 0, at: new Date().toISOString()});
+/** Proč je hotové video zastaralé (null = je aktuální). Starší videa 1–14 se nikdy samy nepřerenderují. */
+export const renderStale = (s: AnyScript, lang: Lang): string | null => {
+  if (!isHybrid(s)) return null;
+  const out = videoOutFile(s, lang);
+  if (!fs.existsSync(out)) return null;
+  let look = 0;
+  try {
+    look = JSON.parse(fs.readFileSync(stampFile(s, lang), 'utf8')).look ?? 0;
+  } catch {
+    /* bez razítka = starý vzhled */
+  }
+  if (look < HYBRID_LOOK) return 'nový vzhled';
+  const vt = fs.statSync(out).mtimeMs;
+  const newer = (f: string) => fs.existsSync(f) && fs.statSync(f).mtimeMs > vt + 2000;
+  if (newer(timelinePath(s.id, lang))) return 'nový hlas';
+  if (newer(scriptPath(s.id))) return 'upravený scénář';
+  return null;
+};
 
 /** Popisek pro sociální sítě (titulek, popis, hashtagy). */
 export const captionText = (s: AnyScript, lang: Lang) =>

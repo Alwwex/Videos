@@ -65,6 +65,34 @@ const Arm: React.FC<{x: number; rz: number; rx?: number}> = ({x, rz, rx = 0}) =>
   </group>
 );
 
+/** Postavička v šoku: ruce nahoru, otevřená pusa, vykulené oči, lehce se klepe. */
+const ShockedPerson: React.FC<{c: string | null; frame: number}> = ({c, frame}) => {
+  const j = Math.sin(frame * 1.7) * 0.012;
+  const arm = 2.75 + Math.sin(frame * 0.5) * 0.12;
+  return (
+    <group position={[j, 0, 0]}>
+      <Box s={[0.16, 0.08, 0.26]} p={[-0.12, 0.04, 0.04]}><Std c="#2a2a2a" /></Box>
+      <Box s={[0.16, 0.08, 0.26]} p={[0.12, 0.04, 0.04]}><Std c="#2a2a2a" /></Box>
+      <Cyl a={[0.08, 0.08, 0.66, 6]} p={[-0.12, 0.41, 0]}><Std c="#2f3b59" /></Cyl>
+      <Cyl a={[0.08, 0.08, 0.66, 6]} p={[0.12, 0.41, 0]}><Std c="#2f3b59" /></Cyl>
+      <Cyl a={[0.22, 0.27, 0.72, 10]} p={[0, 1.06, 0]}><Std c={c ?? '#ffb020'} /></Cyl>
+      <Ico rad={0.22} d={1} p={[0, 1.4, 0]} s={[1, 0.45, 0.95]}><Std c={c ?? '#ffb020'} /></Ico>
+      <Arm x={-0.26} rz={-arm} />
+      <Arm x={0.26} rz={arm} />
+      <Ico rad={0.23} d={1} p={[0, 1.68, 0]}><Std c={SKIN} /></Ico>
+      <Ico rad={0.24} d={1} p={[0, 1.78, -0.04]} s={[1, 0.62, 1]}><Std c="#4a3020" /></Ico>
+      {[-0.08, 0.08].map((x) => (
+        <group key={x}>
+          <Ico rad={0.055} d={1} p={[x, 1.72, 0.2]}><Std c="#ffffff" r={0.3} /></Ico>
+          <Ico rad={0.028} d={1} p={[x, 1.72, 0.25]}><Std c="#1a1010" r={0.3} /></Ico>
+          <Box s={[0.09, 0.02, 0.02]} p={[x, 1.83, 0.2]} r={[0, 0, x > 0 ? -0.35 : 0.35]}><Std c="#3a2416" /></Box>
+        </group>
+      ))}
+      <Ico rad={0.05} d={1} p={[0, 1.58, 0.21]} s={[0.9, 1.2, 0.5]}><Std c="#5a1e16" /></Ico>
+    </group>
+  );
+};
+
 const LIB: Record<PropType, React.FC<PP>> = {
   sun: ({frame}) => (
     <group rotation={[0, frame * 0.01, 0]}>
@@ -333,6 +361,7 @@ const LIB: Record<PropType, React.FC<PP>> = {
   ),
   person: ({c, frame, anim}) => {
     const rubbing = anim === 'shake';
+    if (anim === 'shock') return <ShockedPerson c={c} frame={frame} />;
     return (
       <group>
         {/* boty a nohy */}

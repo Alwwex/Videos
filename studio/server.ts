@@ -11,7 +11,7 @@ import http from 'node:http';
 import os from 'node:os';
 import path from 'node:path';
 import {LANGS, type Lang} from '../src/engine/schema';
-import {LANG_DIR, P, ROOT, allScriptIds, captionText, isHybrid, isShort, loadIdeas, loadScript, loadTimeline, pad, videoOutFile, type AnyScript} from '../scripts/lib';
+import {LANG_DIR, P, ROOT, allScriptIds, captionText, isHybrid, isShort, loadIdeas, loadScript, loadTimeline, pad, renderStale, videoOutFile, type AnyScript} from '../scripts/lib';
 import {DEFAULT_VOICE, VOICE_CATALOG, findVoice} from '../scripts/voices';
 import {findBrowser, openLogin, publish} from './publish';
 import {DATA, load, save, update, type Channel, type Platform} from './store';
@@ -98,7 +98,8 @@ const audioOk = (id: number, lang: Lang) => {
   if (!tl || tl.partial) return {voiced: false, provider: null as string | null};
   const has = (rel: string | null | undefined) => !rel || fs.existsSync(path.join(ROOT, 'public', rel));
   const ok = tl.continuous ? !!tl.audioSrc && has(tl.audioSrc) : tl.scenes.every((s) => has(s.audioSrc));
-  return {voiced: ok, provider: ok ? (tl.provider ?? 'elevenlabs') : null};
+  const outro = (tl as {outro?: {startSec?: number; audioSrc?: string | null} | null}).outro;
+  return {voiced: ok, provider: ok ? (tl.provider ?? 'elevenlabs') : null, outro: !!outro && (outro.startSec !== undefined || has(outro.audioSrc))};
 };
 
 /** Video vyrenderované ještě do staré struktury out/videos/<lang>/NNN-….mp4 */
@@ -130,11 +131,13 @@ const videoList = () => {
   return allScriptIds().flatMap((id) => {
     const s = getScript(id);
     if (!s) return [];
+    // v jazyce, kde už video vyšlo, zůstává stejná verze i pro další sítě (render ho taky nepřepíše)
+    const postedLangs = new Set(st.posts.filter((p) => p.videoId === id && p.status !== 'error').map((p) => st.channels.find((c) => c.id === p.channelId)?.lang));
     const langs = Object.fromEntries(
       LANGS.map((lang) => {
         const file = videoOutFile(s, lang);
         const rendered = fs.existsSync(file);
-        return [lang, {...audioOk(id, lang), rendered, old: !rendered && !!oldRender(id, lang), size: rendered ? fs.statSync(file).size : 0}];
+        return [lang, {...audioOk(id, lang), rendered, stale: rendered && !postedLangs.has(lang) ? renderStale(s, lang) : null, old: !rendered && !!oldRender(id, lang), size: rendered ? fs.statSync(file).size : 0}];
       }),
     );
     const posts = st.posts.filter((p) => p.videoId === id && p.status !== 'error').map((p) => p.channelId);
@@ -225,7 +228,8 @@ const pickVideo = (ch: Channel): number | null => {
   const st = load();
   for (const v of videoList()) {
     if (st.skip[String(v.id)]) continue;
-    if (!v.langs[ch.lang]?.rendered) continue;
+    // zastaralou verzi (starý vzhled / chybí závěr) nepublikovat – počká na přerenderování
+    if (!v.langs[ch.lang]?.rendered || v.langs[ch.lang]?.stale) continue;
     if (st.posts.some((p) => p.channelId === ch.id && p.videoId === v.id && p.status !== 'error')) continue;
     return v.id;
   }

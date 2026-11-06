@@ -24,6 +24,11 @@
     "en": "YOU GLOW. LITERALLY.",
     "ro": "TU STRĂLUCEȘTI. LA PROPRIU."
   },
+  "outro": {
+    "cs": "*Sleduj* nás a budeš vědět víc než ostatní.",
+    "en": "*Follow* and know more than everyone else.",
+    "ro": "*Urmărește-ne* și vei ști mai mult decât alții."
+  },
   "scenes": [
     {
       "narration": {
@@ -74,7 +79,7 @@
           "scale": 1,
           "rotationY": 15,
           "color": null,
-          "anim": "none",
+          "anim": "shock",
           "slideTo": null,
           "glow": false
         }

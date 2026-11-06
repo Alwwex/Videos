@@ -24,6 +24,11 @@
     "en": "THE MOON IS FALLING RIGHT NOW",
     "ro": "LUNA CADE CHIAR ACUM"
   },
+  "outro": {
+    "cs": "Chceš další díl? Dej *sledovat*.",
+    "en": "Want the next one? Hit *follow*.",
+    "ro": "Vrei următorul? *Urmărește-ne*."
+  },
   "scenes": [
     {
       "narration": {

@@ -31,6 +31,18 @@ out/videos/015-proc-je-obloha-modra/
 ```
 Stará videa 1–14 vyrenderovaná ještě do `out/videos/cs|en|ro/` přesuneš do nové struktury v **Nastavení → Uspořádat stará videa**.
 
+### Jak vypadají nová videa (15+)
+- **Háček hned v první sekundě**: velký text + šokovaná postavička + rána.
+- **Každá scéna má dva záběry**: celek a u klíčového slova střih na detail z jiného úhlu (se švihem a „zoom blur“).
+- **Zvýrazněná slova v titulcích** naskočí větší, v barvě a s ránou; ručně kreslené šipky s popisky.
+- **Hudba s „dropem“**: před pointou se zvuk vytáhne nahoru, na chvilku ztichne a s pointou naskočí ta nejsilnější část skladby.
+- **Na konci „Sleduj“**: namluvená výzva (v každém videu jiná, napsaná podle tématu) + karta s profilovkou,
+  tlačítkem Sledovat, které se „klikne“, a názvem dalšího dílu.
+- Hudba (`public/music/cine-*.mp3`) i efekty jsou vlastní syntéza (`npx tsx scripts/make-audio.ts`) – žádné licence.
+  Vlastní skladby (mp3) stačí dát do `public/music/`, budou se střídat.
+- Starší verze nových videí (bez závěru, starý vzhled) se při **Vyrobit** samy přerenderují a do té doby se nepublikují (v seznamu mají ♻️).
+  Videa, která už vyšla, se nepřepisují. Videa 1–14 zůstávají, jak jsou.
+
 ### Hlas
 - **ElevenLabs** s vybranými hlasy rodilých mluvčích (nejpoužívanější v knihovně ElevenLabs):
   CZ **Adam – Velvety and Conversational**, EN **Mark – Casual, Relaxed and Light**, RO **Jora Slobod**.
@@ -40,6 +52,8 @@ Stará videa 1–14 vyrenderovaná ještě do `out/videos/cs|en|ro/` přesuneš 
 - Když kredity dojdou (nebo bez klíče), mluví automaticky **zdarma hlas Microsoft Edge** (Antonín / Andrew Multilingual / Emil).
   Rozdělané video se namluví celé znovu jedním hlasem, takže se hlasy v jednom videu nemíchají.
 - V Nastavení můžeš pro každý jazyk zvolit „automaticky / vždy ElevenLabs / vždy zdarma“.
+- Závěrečná výzva „sleduj“ se u už namluvených videí dořekne zvlášť **stejným hlasem** (pár desítek znaků).
+  Když na ni nejsou kredity ElevenLabs, video zatím skončí jen kartou „Sledovat“ bez hlasu a výzva se doplní, až kredity přibudou.
 
 ### Publikování
 1. V záložce **Publikování** zkontroluj účty (výchozí: TikTok, Instagram, YouTube – vše CZ; jazyk a počet účtů jde změnit, např. 3 účty × 3 platformy).

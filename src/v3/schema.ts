@@ -36,6 +36,7 @@ export const HybridScriptSchema = z.object({
   hashtags: z.array(z.string()),
   hook: T.describe('Huge on-screen hook text for the first seconds, UPPERCASE, max 7 words'),
   scenes: z.array(HybridSceneSchema),
+  outro: T.nullable().optional().describe('Short spoken call to follow at the very end (5-10 words), casual and different in every video'),
 });
 export type HybridScript = z.infer<typeof HybridScriptSchema>;
 
@@ -44,6 +45,9 @@ export const checkHybrid = (s: HybridScript): string[] => {
   if (s.scenes.length < 5 || s.scenes.length > 10) e.push(`Need 6-9 scenes, got ${s.scenes.length}.`);
   for (const l of ['cs', 'en', 'ro'] as const) {
     if (s.hook[l].split(/\s+/).length > 9) e.push(`Hook ${l} is too long.`);
+  }
+  for (const l of ['cs', 'en', 'ro'] as const) {
+    if (s.outro && s.outro[l].split(/\s+/).length > 14) e.push(`Outro ${l} is too long.`);
   }
   s.scenes.forEach((sc, i) => {
     const ids = new Set(sc.props.map((p) => p.id));

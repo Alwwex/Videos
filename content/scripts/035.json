@@ -24,6 +24,11 @@
     "en": "NOISE THAT MAKES SILENCE",
     "ro": "ZGOMOT CARE FACE LINIȘTE"
   },
+  "outro": {
+    "cs": "Dej *sledovat* a příště ti vysvětlím další kouzlo.",
+    "en": "*Follow* and next time I'll explain another trick.",
+    "ro": "*Urmărește-ne* și data viitoare îți explic alt truc."
+  },
   "scenes": [
     {
       "narration": {

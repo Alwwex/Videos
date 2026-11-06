@@ -24,6 +24,11 @@
     "en": "CAR SPEEDS UP. BALLOON GOES FORWARD.",
     "ro": "MAȘINA ACCELEREAZĂ. BALONUL MERGE ÎNAINTE."
   },
+  "outro": {
+    "cs": "Zkus to v autě a dej *sledovat*.",
+    "en": "Try it in a car, then hit *follow*.",
+    "ro": "Încearcă în mașină, apoi *urmărește-ne*."
+  },
   "scenes": [
     {
       "narration": {

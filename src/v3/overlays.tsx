@@ -1,5 +1,5 @@
 import React from 'react';
-import {Easing, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
+import {Easing, Img, interpolate, spring, useCurrentFrame, useVideoConfig} from 'remotion';
 import {loadFont as shantell} from '@remotion/google-fonts/ShantellSans';
 import type {Lang} from '../engine/schema';
 import type {Visual} from '../v2/schema';
@@ -54,7 +54,8 @@ export const Captions: React.FC<{groups: CapGroup[]; accent: string; top?: numbe
   if (gi < 0) return null;
   const g = groups[gi];
   const len = g.words.reduce((n, w) => n + w.text.length + 1, 0);
-  const size = len > 15 ? 76 : len > 11 ? 86 : 96;
+  const hasHl = g.words.some((w) => w.hl);
+  const size = (len > 15 ? 74 : len > 11 ? 84 : 94) * (hasHl && len > 12 ? 0.9 : 1);
   const pop = spring({frame: f - g.start + 1, fps, config: {damping: 12, stiffness: 320, mass: 0.5}});
   let wi = 0;
   g.words.forEach((w, i) => {
@@ -64,7 +65,12 @@ export const Captions: React.FC<{groups: CapGroup[]; accent: string; top?: numbe
     <div style={{position: 'absolute', left: 30, right: 30, top, display: 'flex', justifyContent: 'center', flexWrap: 'wrap', columnGap: size * 0.62, rowGap: 0, transform: `scale(${0.82 + 0.18 * pop})`}}>
       {g.words.map((w, i) => {
         const active = i === wi;
-        const wp = spring({frame: f - w.start + 1, fps, config: {damping: 10, stiffness: 400, mass: 0.4}});
+        const said = f >= w.start - 1;
+        // klíčové slovo: větší, barevné, "dopadne" s překmitem a krátce se zatřese
+        const hit = spring({frame: f - w.start + 1, fps, config: {damping: 7, stiffness: 420, mass: 0.5}});
+        const shake = w.hl && said && f - w.start < 8 ? Math.sin((f - w.start) * 2.6) * (8 - (f - w.start)) * 0.9 : 0;
+        const fs = w.hl ? size * 1.3 : size;
+        const sc = w.hl ? (said ? 0.6 + 0.4 * hit : 0.85) : active ? 1.03 : 1;
         return (
           <span
             key={`${gi}-${i}`}
@@ -72,15 +78,15 @@ export const Captions: React.FC<{groups: CapGroup[]; accent: string; top?: numbe
               display: 'inline-block',
               fontFamily: HEAD_FONT,
               fontWeight: 900,
-              fontSize: size,
+              fontSize: fs,
               lineHeight: 1.08,
               textTransform: 'uppercase',
               color: w.hl ? accent : '#FFFFFF',
-              WebkitTextStroke: `${Math.round(size * 0.15)}px #14100c`,
+              WebkitTextStroke: `${Math.round(fs * 0.15)}px #14100c`,
               paintOrder: 'stroke fill',
-              textShadow: '0 8px 0 rgba(20,16,12,0.55)',
-              transform: `scale(${active ? 1.02 + 0.06 * Math.max(0, 1 - Math.abs(wp - 1) * 4) : 1}) rotate(${active ? (i % 2 ? 1.5 : -1.5) : 0}deg)`,
-              opacity: f >= w.start - 1 ? 1 : 0.55,
+              textShadow: w.hl ? `0 9px 0 rgba(20,16,12,0.6), 0 0 34px ${accent}66` : '0 8px 0 rgba(20,16,12,0.55)',
+              transform: `translate(${shake}px, ${-Math.abs(shake) * 0.4}px) scale(${sc}) rotate(${w.hl ? (i % 2 ? 3 : -3) : active ? (i % 2 ? 1.5 : -1.5) : 0}deg)`,
+              opacity: said ? 1 : 0.5,
             }}
           >
             {w.text}
@@ -313,6 +319,100 @@ export const InfoCard: React.FC<{v: Visual; dur: number; lang: Lang; accent: str
           nextLabel=""
         />
       </div>
+    </div>
+  );
+};
+
+
+/* ======================= ZÁVĚREČNÁ KARTA „SLEDUJ“ ======================= */
+
+const END: Record<Lang, {big: string; sub: string; btn: string; done: string; next: string}> = {
+  cs: {big: 'SLEDUJ', sub: 'ať ti neuteče další díl', btn: 'Sledovat', done: 'Sleduješ', next: 'příště'},
+  en: {big: 'FOLLOW', sub: "so you don't miss the next one", btn: 'Follow', done: 'Following', next: 'next up'},
+  ro: {big: 'URMĂREȘTE', sub: 'ca să nu ratezi următorul', btn: 'Urmărește', done: 'Urmărești', next: 'urmează'},
+};
+
+/** Konec videa: profilovka, velké SLEDUJ, tlačítko, které se samo "ťukne", a upoutávka na další díl. */
+export const EndCard: React.FC<{lang: Lang; accent: string; dur: number; nextTitle?: string | null; avatar: string; tapAt: number}> = ({lang, accent, dur, nextTitle, avatar, tapAt}) => {
+  const f = useCurrentFrame();
+  const {fps} = useVideoConfig();
+  const L = END[lang];
+  const sp = (d: number, damping = 11) => spring({frame: f - d, fps, config: {damping, stiffness: 230, mass: 0.6}});
+  const av = sp(1, 9);
+  const big = sp(5);
+  const sub = sp(9);
+  const btn = sp(12);
+  const nx = sp(16);
+  const tapped = f >= tapAt;
+  const press = Math.max(0, 1 - Math.abs(f - tapAt) / 4);
+  const out = interpolate(f, [dur - 4, dur], [1, 0], clamp);
+  const arrow = ease(f, tapAt - 14, tapAt - 2);
+  const seed = Math.floor(f / 4) % 3;
+  const ring = 1 + Math.max(0, Math.sin(f * 0.18)) * 0.04;
+  return (
+    <div style={{position: 'absolute', inset: 0, display: 'flex', flexDirection: 'column', alignItems: 'center', paddingTop: 330, opacity: out}}>
+      <div style={{width: 300, height: 300, borderRadius: '50%', padding: 10, background: `conic-gradient(${accent}, #ff5fb0, #4fd8ff, ${accent})`, transform: `scale(${av * ring}) rotate(${(1 - av) * -20}deg)`, boxShadow: `0 0 60px ${accent}66`}}>
+        <Img src={avatar} style={{width: '100%', height: '100%', borderRadius: '50%', objectFit: 'cover', border: '6px solid #14100c'}} />
+      </div>
+      <div
+        style={{
+          marginTop: 34,
+          fontFamily: HEAD_FONT,
+          fontWeight: 900,
+          fontSize: L.big.length > 7 ? 112 : 140,
+          lineHeight: 1,
+          color: '#FFFFFF',
+          WebkitTextStroke: '18px #14100c',
+          paintOrder: 'stroke fill',
+          textShadow: '0 12px 0 rgba(20,16,12,0.5)',
+          transform: `scale(${2 - big}) rotate(${(1 - big) * 8 - 2}deg)`,
+          opacity: Math.min(1, big * 2),
+        }}
+      >
+        {L.big}
+      </div>
+      <div style={{marginTop: 12, fontFamily: HAND_FONT, fontWeight: 800, fontSize: 60, color: accent, WebkitTextStroke: '11px #14100c', paintOrder: 'stroke fill', transform: `scale(${sub}) rotate(-3deg)`, textAlign: 'center', maxWidth: 900}}>
+        {L.sub}
+      </div>
+      <div style={{position: 'relative', marginTop: 44}}>
+        <div
+          style={{
+            padding: '26px 64px',
+            borderRadius: 999,
+            background: tapped ? '#2fcf7a' : '#ff3b5c',
+            color: '#FFFFFF',
+            fontFamily: HEAD_FONT,
+            fontWeight: 900,
+            fontSize: 62,
+            boxShadow: `0 14px 0 rgba(20,16,12,0.45), 0 0 50px ${tapped ? '#2fcf7a' : '#ff3b5c'}88`,
+            transform: `scale(${btn * (1 - press * 0.12) + (tapped ? Math.max(0, 1 - (f - tapAt) / 10) * 0.12 : 0)})`,
+            whiteSpace: 'nowrap',
+          }}
+        >
+          {tapped ? '✓ ' : '+ '}
+          {tapped ? L.done : L.btn}
+        </div>
+        {/* ručně nakreslená šipka, která na tlačítko "ukáže" */}
+        <svg width={260} height={220} style={{position: 'absolute', right: -210, top: -150, overflow: 'visible'}}>
+          <defs>
+            <filter id="endWob">
+              <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="2" seed={seed} />
+              <feDisplacementMap in="SourceGraphic" scale="6" />
+            </filter>
+          </defs>
+          <g filter="url(#endWob)" fill="none" strokeLinecap="round" strokeLinejoin="round">
+            <path d="M210 20 C 230 110, 150 170, 40 170" stroke="#14100c" strokeWidth={18} opacity={0.5} pathLength={1} strokeDasharray={1} strokeDashoffset={1 - arrow} />
+            <path d="M210 20 C 230 110, 150 170, 40 170" stroke="#FFFFFF" strokeWidth={10} pathLength={1} strokeDasharray={1} strokeDashoffset={1 - arrow} />
+            <path d="M74 140 L40 170 L80 196" stroke="#FFFFFF" strokeWidth={10} opacity={arrow > 0.9 ? 1 : 0} />
+          </g>
+        </svg>
+      </div>
+      {nextTitle ? (
+        <div style={{marginTop: 56, textAlign: 'center', transform: `translateY(${(1 - nx) * 40}px)`, opacity: Math.min(1, nx * 1.5), maxWidth: 940}}>
+          <span style={{fontFamily: HAND_FONT, fontWeight: 800, fontSize: 48, color: '#FFFFFF', WebkitTextStroke: '9px #14100c', paintOrder: 'stroke fill'}}>{L.next}: </span>
+          <span style={{fontFamily: HEAD_FONT, fontWeight: 900, fontSize: 52, color: accent, WebkitTextStroke: '10px #14100c', paintOrder: 'stroke fill'}}>{nextTitle}</span>
+        </div>
+      ) : null}
     </div>
   );
 };

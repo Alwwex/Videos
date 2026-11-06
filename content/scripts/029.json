@@ -24,6 +24,11 @@
     "en": "IN SPACE A CANDLE BURNS AS A BALL",
     "ro": "ÎN SPAȚIU LUMÂNAREA ARDE CA O BILĂ"
   },
+  "outro": {
+    "cs": "*Sleduj* nás pro další vesmírné šílenosti.",
+    "en": "*Follow* for more space madness.",
+    "ro": "*Urmărește-ne* pentru alte nebunii din spațiu."
+  },
   "scenes": [
     {
       "narration": {

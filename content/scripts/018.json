@@ -24,6 +24,11 @@
     "en": "DO CATS BREAK PHYSICS?",
     "ro": "PISICA ÎNCALCĂ FIZICA?"
   },
+  "outro": {
+    "cs": "Dej *sledovat* a pošli to kámošovi, co to neví.",
+    "en": "*Follow*, and send this to a friend who doesn't know.",
+    "ro": "*Urmărește-ne* și trimite asta unui prieten."
+  },
   "scenes": [
     {
       "narration": {
